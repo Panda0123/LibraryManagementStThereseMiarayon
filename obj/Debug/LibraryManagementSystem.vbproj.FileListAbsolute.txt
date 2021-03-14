@@ -1,0 +1,15 @@
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe.config
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.xml
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Form1.resources
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Resources.resources
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbproj.GenerateResource.cache
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.xml
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbproj.CopyComplete
