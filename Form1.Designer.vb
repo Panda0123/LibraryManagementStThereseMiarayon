@@ -22,19 +22,23 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_black = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -43,7 +47,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(497, 26)
+        Me.PictureBox1.Location = New System.Drawing.Point(177, 17)
         Me.PictureBox1.MaximumSize = New System.Drawing.Size(290, 264)
         Me.PictureBox1.MinimumSize = New System.Drawing.Size(290, 264)
         Me.PictureBox1.Name = "PictureBox1"
@@ -69,16 +73,16 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.ShapeContainer1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1877, 422)
+        Me.Panel1.Size = New System.Drawing.Size(1877, 1010)
         Me.Panel1.TabIndex = 3
         '
         'PictureBox3
@@ -99,26 +103,14 @@ Partial Class Form1
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Font = New System.Drawing.Font("Maiandra GD", 19.2!)
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(540, 318)
+        Me.TextBox1.Location = New System.Drawing.Point(538, 318)
         Me.TextBox1.MaximumSize = New System.Drawing.Size(740, 39)
         Me.TextBox1.MinimumSize = New System.Drawing.Size(740, 39)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(740, 39)
         Me.TextBox1.TabIndex = 3
         Me.TextBox1.Text = "Search Book...."
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 22.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(793, 94)
-        Me.Label1.MaximumSize = New System.Drawing.Size(599, 180)
-        Me.Label1.MinimumSize = New System.Drawing.Size(599, 180)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(599, 180)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "ST. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TextBox1.Visible = False
         '
         'ShapeContainer1
         '
@@ -126,7 +118,7 @@ Partial Class Form1
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_black, Me.btn_white})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1877, 422)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1877, 1010)
         Me.ShapeContainer1.TabIndex = 5
         Me.ShapeContainer1.TabStop = False
         '
@@ -154,12 +146,35 @@ Partial Class Form1
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(153, 74)
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 22.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(656, 101)
+        Me.Label1.MaximumSize = New System.Drawing.Size(599, 180)
+        Me.Label1.MinimumSize = New System.Drawing.Size(599, 180)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(599, 180)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "ST. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Location = New System.Drawing.Point(640, 516)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox4.TabIndex = 6
+        Me.PictureBox4.TabStop = False
+        '
         'Form1
         '
+        Me.AccessibleName = "Panel1_Paint"
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1877, 1010)
+        Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
@@ -174,6 +189,7 @@ Partial Class Form1
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -187,4 +203,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_black As PowerPacks.RectangleShape
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents PictureBox4 As PictureBox
 End Class

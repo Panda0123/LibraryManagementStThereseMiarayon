@@ -1,11 +1,14 @@
 ﻿Public Class Form1
 
+    Dim newPos As Point
     Public Sub New()
 
         ' This call is required by the designer.
         InitializeComponent()
         btn_black.Hide()
         ' Add any initialization after the InitializeComponent() call.
+
+
 
     End Sub
 
@@ -24,4 +27,29 @@
     End Sub
 
 
+
 End Class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
