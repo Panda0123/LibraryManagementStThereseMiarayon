@@ -42,6 +42,11 @@ LibraryManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.pic_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.pngtree_fashion_search_box_image_1310125">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
