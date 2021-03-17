@@ -13,3 +13,7 @@ C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryMa
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbproj.CopyComplete
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.Design.dll
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.dll
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.mainScreen.resources
