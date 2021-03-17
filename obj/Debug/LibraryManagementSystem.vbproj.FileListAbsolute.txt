@@ -3,7 +3,6 @@ C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryMa
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.xml
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
-C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Form1.resources
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Resources.resources
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbproj.GenerateResource.cache
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.vbproj.CoreCompileInputs.cache
@@ -16,4 +15,4 @@ C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryMa
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.Design.dll
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.dll
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.mainScreen.resources
+C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Main.resources
