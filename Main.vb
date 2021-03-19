@@ -1,11 +1,26 @@
 ﻿Public Class Main
-
+    Public bookDP As List(Of bookDisplay)
     Dim newPos As Point
     Public Sub New()
         InitializeComponent()
+        bookDP = New List(Of bookDisplay)
         btn_blk.Hide()
+
         searchTextBox.SelectionStart = 0
+
+        FlowLayoutPanel1.Controls.Clear()
+
+        FlowLayoutPanel1.WrapContents = False
+
+
+        bookDP.Add(New bookDisplay) 'sample only
+        bookDP.Add(New bookDisplay) 'sample only
+        bookDP.Add(New bookDisplay) 'sample only
+        displayBookvb.loadBooks(bookDP)
+
     End Sub
+
+
 
 
 
@@ -35,6 +50,16 @@
 
 
 
+        For Each book In bookDP
+            book.Anchor = Anchor.Left
+            book.Anchor = Anchor.Right
+            FlowLayoutPanel1.Controls.Add(book)
+        Next
+
+
+
+
+
 
     End Sub
 
@@ -45,6 +70,8 @@
         End If
 
     End Sub
+
+
 End Class
 
 
