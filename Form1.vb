@@ -32,9 +32,6 @@
             searchTextBox.Text = ""
             searchTextBox.ForeColor = Color.FromArgb(0, 0, 0)
         End If
-        BookInterface.TopLevel = False
-        Panel2.Controls.Add(BookInterface)
-        BookInterface.Show()
 
 
 
@@ -48,8 +45,6 @@
         End If
 
     End Sub
-
-
 End Class
 
 

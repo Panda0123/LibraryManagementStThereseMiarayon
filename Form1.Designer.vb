@@ -42,7 +42,6 @@ Partial Class Main
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -169,7 +168,6 @@ Partial Class Main
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.leftMainScreenPanel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -181,11 +179,10 @@ Partial Class Main
         '
         'Panel2
         '
-        Me.Panel2.AutoSize = True
-        Me.Panel2.Location = New System.Drawing.Point(377, 75)
+        Me.Panel2.Location = New System.Drawing.Point(376, 8)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1049, 365)
+        Me.Panel2.Size = New System.Drawing.Size(1050, 432)
         Me.Panel2.TabIndex = 12
         '
         'PictureBox1
@@ -317,16 +314,6 @@ Partial Class Main
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(144, 75)
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(389, 10)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(191, 35)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "Search Results for "
-        '
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
@@ -348,7 +335,6 @@ Partial Class Main
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -377,5 +363,4 @@ Partial Class Main
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents btn_white As PowerPacks.RectangleShape
     Friend WithEvents btn_blk As PowerPacks.RectangleShape
-    Friend WithEvents Label2 As Label
 End Class

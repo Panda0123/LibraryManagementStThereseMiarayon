@@ -16,4 +16,3 @@ C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFram
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.dll
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.Main.resources
-C:\Users\Lance Parantar\source\repos\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.BookInterface.resources
