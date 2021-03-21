@@ -6,6 +6,7 @@
     Private Publisher As String
     Private Status As String
 
+
     '  Public Sub New(Title As String, author As List(Of String), img As Image, Language As String, Publisher As String, Status As String)
 
     ' This call is required by the designer.
