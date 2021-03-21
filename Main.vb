@@ -12,18 +12,12 @@
 
         FlowLayoutPanel1.WrapContents = False
 
-
         bookDP.Add(New bookDisplay) 'sample only
         bookDP.Add(New bookDisplay) 'sample only
         bookDP.Add(New bookDisplay) 'sample only
         displayBookvb.loadBooks(bookDP)
 
     End Sub
-
-
-
-
-
 
     Private Sub btn_blk_mouseLeave(sender As Object, e As EventArgs) Handles btn_blk.MouseLeave
         btn_white.Visible = True
@@ -56,11 +50,6 @@
             FlowLayoutPanel1.Controls.Add(book)
         Next
 
-
-
-
-
-
     End Sub
 
     Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs) Handles searchTextBox.MouseLeave
@@ -70,7 +59,6 @@
         End If
 
     End Sub
-
 
 End Class
 

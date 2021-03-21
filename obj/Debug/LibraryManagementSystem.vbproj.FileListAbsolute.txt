@@ -35,3 +35,22 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.exe.config
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.exe
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.xml
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Design.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Fonts.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookDisplay.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Main.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Resources.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.GenerateResource.cache
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.CoreCompileInputs.cache
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.CopyComplete
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources

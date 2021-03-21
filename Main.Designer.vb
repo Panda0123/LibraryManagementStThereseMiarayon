@@ -32,6 +32,7 @@ Partial Class Main
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
         Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -42,7 +43,6 @@ Partial Class Main
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,13 +56,13 @@ Partial Class Main
         '
         'leftMainScreenPanel
         '
+        Me.leftMainScreenPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.leftMainScreenPanel.AutoScroll = True
         Me.leftMainScreenPanel.Controls.Add(Me.scrollablePanel)
-        Me.leftMainScreenPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.leftMainScreenPanel.Location = New System.Drawing.Point(0, 0)
-        Me.leftMainScreenPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.leftMainScreenPanel.Name = "leftMainScreenPanel"
-        Me.leftMainScreenPanel.Size = New System.Drawing.Size(369, 442)
+        Me.leftMainScreenPanel.Size = New System.Drawing.Size(295, 353)
         Me.leftMainScreenPanel.TabIndex = 11
         '
         'scrollablePanel
@@ -73,20 +73,19 @@ Partial Class Main
         Me.scrollablePanel.Controls.Add(Me.RadioButtonNewlyAdded)
         Me.scrollablePanel.Controls.Add(Me.RadioButtonPublicationDate)
         Me.scrollablePanel.Controls.Add(Me.pictureBoxRectangle)
-        Me.scrollablePanel.Location = New System.Drawing.Point(4, 0)
-        Me.scrollablePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.scrollablePanel.Location = New System.Drawing.Point(3, 0)
         Me.scrollablePanel.Name = "scrollablePanel"
-        Me.scrollablePanel.Size = New System.Drawing.Size(331, 1094)
+        Me.scrollablePanel.Size = New System.Drawing.Size(265, 875)
         Me.scrollablePanel.TabIndex = 0
         '
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(2, 234)
+        Me.PictureBox4.Location = New System.Drawing.Point(2, 187)
         Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(322, 376)
+        Me.PictureBox4.Size = New System.Drawing.Size(258, 301)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 12
         Me.PictureBox4.TabStop = False
@@ -98,10 +97,9 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadioButtonTitle.AutoSize = True
         Me.RadioButtonTitle.Font = New System.Drawing.Font("Sitka Display", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonTitle.Location = New System.Drawing.Point(25, 154)
-        Me.RadioButtonTitle.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonTitle.Location = New System.Drawing.Point(20, 123)
         Me.RadioButtonTitle.Name = "RadioButtonTitle"
-        Me.RadioButtonTitle.Size = New System.Drawing.Size(170, 43)
+        Me.RadioButtonTitle.Size = New System.Drawing.Size(133, 34)
         Me.RadioButtonTitle.TabIndex = 11
         Me.RadioButtonTitle.TabStop = True
         Me.RadioButtonTitle.Text = "Sort By Title"
@@ -114,10 +112,9 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadioButtonAuthor.AutoSize = True
         Me.RadioButtonAuthor.Font = New System.Drawing.Font("Sitka Display", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonAuthor.Location = New System.Drawing.Point(25, 104)
-        Me.RadioButtonAuthor.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonAuthor.Location = New System.Drawing.Point(20, 83)
         Me.RadioButtonAuthor.Name = "RadioButtonAuthor"
-        Me.RadioButtonAuthor.Size = New System.Drawing.Size(195, 43)
+        Me.RadioButtonAuthor.Size = New System.Drawing.Size(154, 34)
         Me.RadioButtonAuthor.TabIndex = 11
         Me.RadioButtonAuthor.TabStop = True
         Me.RadioButtonAuthor.Text = "Sort By Author"
@@ -130,10 +127,9 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadioButtonNewlyAdded.AutoSize = True
         Me.RadioButtonNewlyAdded.Font = New System.Drawing.Font("Sitka Display", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonNewlyAdded.Location = New System.Drawing.Point(25, 4)
-        Me.RadioButtonNewlyAdded.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonNewlyAdded.Location = New System.Drawing.Point(20, 3)
         Me.RadioButtonNewlyAdded.Name = "RadioButtonNewlyAdded"
-        Me.RadioButtonNewlyAdded.Size = New System.Drawing.Size(261, 43)
+        Me.RadioButtonNewlyAdded.Size = New System.Drawing.Size(204, 34)
         Me.RadioButtonNewlyAdded.TabIndex = 11
         Me.RadioButtonNewlyAdded.TabStop = True
         Me.RadioButtonNewlyAdded.Text = "Sort By Newly Added"
@@ -146,10 +142,9 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadioButtonPublicationDate.AutoSize = True
         Me.RadioButtonPublicationDate.Font = New System.Drawing.Font("Sitka Display", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonPublicationDate.Location = New System.Drawing.Point(25, 54)
-        Me.RadioButtonPublicationDate.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonPublicationDate.Location = New System.Drawing.Point(20, 43)
         Me.RadioButtonPublicationDate.Name = "RadioButtonPublicationDate"
-        Me.RadioButtonPublicationDate.Size = New System.Drawing.Size(296, 43)
+        Me.RadioButtonPublicationDate.Size = New System.Drawing.Size(229, 34)
         Me.RadioButtonPublicationDate.TabIndex = 11
         Me.RadioButtonPublicationDate.TabStop = True
         Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
@@ -162,7 +157,7 @@ Partial Class Main
         Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
         Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
         Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
-        Me.pictureBoxRectangle.Size = New System.Drawing.Size(322, 206)
+        Me.pictureBoxRectangle.Size = New System.Drawing.Size(258, 165)
         Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pictureBoxRectangle.TabIndex = 10
         Me.pictureBoxRectangle.TabStop = False
@@ -173,11 +168,22 @@ Partial Class Main
         Me.Panel1.Controls.Add(Me.FlowLayoutPanel1)
         Me.Panel1.Controls.Add(Me.leftMainScreenPanel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 315)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Location = New System.Drawing.Point(0, 252)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1441, 444)
+        Me.Panel1.Size = New System.Drawing.Size(1153, 355)
         Me.Panel1.TabIndex = 12
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1151, 353)
+        Me.FlowLayoutPanel1.TabIndex = 0
+        Me.FlowLayoutPanel1.WrapContents = False
         '
         'searchTextBox
         '
@@ -185,10 +191,10 @@ Partial Class Main
         Me.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.searchTextBox.Font = New System.Drawing.Font("Maiandra GD", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchTextBox.Location = New System.Drawing.Point(336, 210)
+        Me.searchTextBox.Location = New System.Drawing.Point(269, 168)
         Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(691, 40)
+        Me.searchTextBox.Size = New System.Drawing.Size(553, 32)
         Me.searchTextBox.TabIndex = 4
         Me.searchTextBox.Text = "Search..."
         '
@@ -199,10 +205,9 @@ Partial Class Main
         Me.advanceSearchLinkLbl.BackColor = System.Drawing.Color.Transparent
         Me.advanceSearchLinkLbl.Font = New System.Drawing.Font("Sitka Subheading", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.advanceSearchLinkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(645, 271)
-        Me.advanceSearchLinkLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(516, 217)
         Me.advanceSearchLinkLbl.Name = "advanceSearchLinkLbl"
-        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(179, 35)
+        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(143, 28)
         Me.advanceSearchLinkLbl.TabIndex = 7
         Me.advanceSearchLinkLbl.TabStop = True
         Me.advanceSearchLinkLbl.Text = "Advance Search"
@@ -211,10 +216,10 @@ Partial Class Main
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(505, 18)
+        Me.Label1.Location = New System.Drawing.Point(404, 14)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(552, 136)
+        Me.Label1.Size = New System.Drawing.Size(442, 109)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -230,9 +235,8 @@ Partial Class Main
         Me.upperMainScreenPanel.Controls.Add(Me.ShapeContainer1)
         Me.upperMainScreenPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.upperMainScreenPanel.Location = New System.Drawing.Point(0, 0)
-        Me.upperMainScreenPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.upperMainScreenPanel.Name = "upperMainScreenPanel"
-        Me.upperMainScreenPanel.Size = New System.Drawing.Size(1441, 315)
+        Me.upperMainScreenPanel.Size = New System.Drawing.Size(1153, 252)
         Me.upperMainScreenPanel.TabIndex = 10
         '
         'PictureBox3
@@ -240,10 +244,10 @@ Partial Class Main
         Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(1055, 204)
+        Me.PictureBox3.Location = New System.Drawing.Point(844, 163)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 49)
+        Me.PictureBox3.Size = New System.Drawing.Size(40, 39)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 6
         Me.PictureBox3.TabStop = False
@@ -253,10 +257,10 @@ Partial Class Main
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(311, 189)
+        Me.PictureBox2.Location = New System.Drawing.Point(249, 151)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(821, 88)
+        Me.PictureBox2.Size = New System.Drawing.Size(657, 70)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 5
         Me.PictureBox2.TabStop = False
@@ -266,10 +270,10 @@ Partial Class Main
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(311, -1)
+        Me.PictureBox1.Location = New System.Drawing.Point(249, -1)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(231, 155)
+        Me.PictureBox1.Size = New System.Drawing.Size(185, 124)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
@@ -280,7 +284,7 @@ Partial Class Main
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1441, 315)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1153, 252)
         Me.ShapeContainer1.TabIndex = 8
         Me.ShapeContainer1.TabStop = False
         '
@@ -291,7 +295,7 @@ Partial Class Main
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1148, 42)
+        Me.btn_blk.Location = New System.Drawing.Point(1004, 10)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(144, 75)
@@ -303,33 +307,22 @@ Partial Class Main
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1147, 42)
+        Me.btn_white.Location = New System.Drawing.Point(1003, 10)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(144, 75)
         '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(369, 0)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1070, 442)
-        Me.FlowLayoutPanel1.TabIndex = 0
-        Me.FlowLayoutPanel1.WrapContents = False
-        '
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1441, 759)
+        Me.ClientSize = New System.Drawing.Size(1153, 607)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.upperMainScreenPanel)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(1457, 796)
+        Me.MinimumSize = New System.Drawing.Size(1169, 645)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
