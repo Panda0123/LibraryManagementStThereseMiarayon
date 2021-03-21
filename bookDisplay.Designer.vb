@@ -29,8 +29,8 @@ Partial Class bookDisplay
         Me.bPublisher = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.bStatus = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.bTitle = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -122,16 +122,6 @@ Partial Class bookDisplay
         Me.bStatus.TabIndex = 5
         Me.bStatus.Text = "Available"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(25, 16)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(154, 161)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'bTitle
         '
         Me.bTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -144,6 +134,17 @@ Partial Class bookDisplay
         Me.bTitle.Size = New System.Drawing.Size(710, 32)
         Me.bTitle.TabIndex = 1
         Me.bTitle.Text = "Star wars: the rise of Skywalker the visual dictionary (2019)"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
+        Me.PictureBox1.Location = New System.Drawing.Point(25, 16)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(154, 161)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'bookDisplay
         '
@@ -159,7 +160,7 @@ Partial Class bookDisplay
         Me.Controls.Add(Me.bAuthor)
         Me.Controls.Add(Me.bTitle)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "bookDisplay"
         Me.Size = New System.Drawing.Size(972, 215)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

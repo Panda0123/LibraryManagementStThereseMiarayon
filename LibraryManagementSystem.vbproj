@@ -189,5 +189,8 @@
     <Folder Include="Utilities\API\" />
     <Folder Include="Utilities\Forms\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addBookBtn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
