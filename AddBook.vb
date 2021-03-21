@@ -1,10 +1,10 @@
 ﻿Public Class AddBook
     'Dim rs As New Resizer
-    Private Sub btn_blk_mouseLeave(sender As Object, e As EventArgs) Handles btn_blk.MouseLeave, RectangleShape1.MouseLeave
+    Private Sub btn_blk_mouseLeave(sender As Object, e As EventArgs) Handles btn_blk.MouseLeave
 
     End Sub
 
-    Private Sub btn_white_mouseHover(sender As Object, e As EventArgs) Handles btn_white.MouseHover, RectangleShape2.MouseHover
+    Private Sub btn_white_mouseHover(sender As Object, e As EventArgs) Handles btn_white.MouseHover
 
     End Sub
 

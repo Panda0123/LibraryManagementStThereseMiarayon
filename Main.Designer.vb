@@ -25,30 +25,30 @@ Partial Class Main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.scrollablePanel = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadioButtonTitle = New System.Windows.Forms.RadioButton()
         Me.RadioButtonAuthor = New System.Windows.Forms.RadioButton()
         Me.RadioButtonNewlyAdded = New System.Windows.Forms.RadioButton()
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
-        Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.upperMainScreenPanel = New System.Windows.Forms.Panel()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.upperMainScreenPanel.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,18 +77,6 @@ Partial Class Main
         Me.scrollablePanel.Name = "scrollablePanel"
         Me.scrollablePanel.Size = New System.Drawing.Size(265, 875)
         Me.scrollablePanel.TabIndex = 0
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(2, 187)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(258, 301)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 12
-        Me.PictureBox4.TabStop = False
         '
         'RadioButtonTitle
         '
@@ -149,18 +137,6 @@ Partial Class Main
         Me.RadioButtonPublicationDate.TabStop = True
         Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
         Me.RadioButtonPublicationDate.UseVisualStyleBackColor = True
-        '
-        'pictureBoxRectangle
-        '
-        Me.pictureBoxRectangle.BackColor = System.Drawing.Color.Transparent
-        Me.pictureBoxRectangle.Image = CType(resources.GetObject("pictureBoxRectangle.Image"), System.Drawing.Image)
-        Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
-        Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
-        Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
-        Me.pictureBoxRectangle.Size = New System.Drawing.Size(258, 165)
-        Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pictureBoxRectangle.TabIndex = 10
-        Me.pictureBoxRectangle.TabStop = False
         '
         'Panel1
         '
@@ -239,6 +215,40 @@ Partial Class Main
         Me.upperMainScreenPanel.Size = New System.Drawing.Size(1153, 252)
         Me.upperMainScreenPanel.TabIndex = 10
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1153, 252)
+        Me.ShapeContainer1.TabIndex = 8
+        Me.ShapeContainer1.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(2, 187)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(258, 301)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 12
+        Me.PictureBox4.TabStop = False
+        '
+        'pictureBoxRectangle
+        '
+        Me.pictureBoxRectangle.BackColor = System.Drawing.Color.Transparent
+        Me.pictureBoxRectangle.Image = CType(resources.GetObject("pictureBoxRectangle.Image"), System.Drawing.Image)
+        Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
+        Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
+        Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
+        Me.pictureBoxRectangle.Size = New System.Drawing.Size(258, 165)
+        Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pictureBoxRectangle.TabIndex = 10
+        Me.pictureBoxRectangle.TabStop = False
+        '
         'PictureBox3
         '
         Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -277,16 +287,6 @@ Partial Class Main
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1153, 252)
-        Me.ShapeContainer1.TabIndex = 8
-        Me.ShapeContainer1.TabStop = False
         '
         'btn_blk
         '
@@ -330,11 +330,11 @@ Partial Class Main
         Me.leftMainScreenPanel.ResumeLayout(False)
         Me.scrollablePanel.ResumeLayout(False)
         Me.scrollablePanel.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.upperMainScreenPanel.ResumeLayout(False)
         Me.upperMainScreenPanel.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
