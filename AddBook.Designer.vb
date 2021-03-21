@@ -52,6 +52,8 @@ Partial Class AddBook
         Me.summaryTxtBx = New System.Windows.Forms.RichTextBox()
         Me.bkPicBx = New System.Windows.Forms.PictureBox()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,7 +154,7 @@ Partial Class AddBook
         Me.TopPanel.Controls.Add(Me.ShapeContainer2)
         Me.TopPanel.Location = New System.Drawing.Point(0, -5)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(1153, 143)
+        Me.TopPanel.Size = New System.Drawing.Size(1153, 145)
         Me.TopPanel.TabIndex = 2
         '
         'TitleLogoSearchPanel
@@ -165,7 +167,7 @@ Partial Class AddBook
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(406, 6)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(406, 7)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(465, 137)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(465, 137)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
@@ -177,8 +179,8 @@ Partial Class AddBook
         Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1153, 143)
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1, Me.btn_blk, Me.btn_white})
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1153, 145)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -189,7 +191,7 @@ Partial Class AddBook
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1925, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1639, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -201,7 +203,7 @@ Partial Class AddBook
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1923, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1637, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -215,7 +217,7 @@ Partial Class AddBook
         Me.Panel1.Controls.Add(Me.LeftSidePanel)
         Me.Panel1.Location = New System.Drawing.Point(0, 141)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1153, 657)
+        Me.Panel1.Size = New System.Drawing.Size(1153, 825)
         Me.Panel1.TabIndex = 3
         '
         'MainPanel
@@ -229,12 +231,13 @@ Partial Class AddBook
         Me.MainPanel.Controls.Add(Me.ImageSummaryPanel)
         Me.MainPanel.Location = New System.Drawing.Point(185, 5)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(939, 618)
+        Me.MainPanel.Size = New System.Drawing.Size(939, 786)
         Me.MainPanel.TabIndex = 1
         '
         'Panel2
         '
-        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.OrangeRed
         Me.Panel2.Controls.Add(Me.TextBox4)
@@ -249,7 +252,7 @@ Partial Class AddBook
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(20, 285)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(897, 310)
+        Me.Panel2.Size = New System.Drawing.Size(897, 481)
         Me.Panel2.TabIndex = 1
         '
         'TextBox4
@@ -421,6 +424,30 @@ Partial Class AddBook
         Me.LeftSidePanel.Size = New System.Drawing.Size(153, 519)
         Me.LeftSidePanel.TabIndex = 0
         '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RectangleShape1.BackgroundImage = CType(resources.GetObject("RectangleShape1.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.White
+        Me.RectangleShape1.CornerRadius = 20
+        Me.RectangleShape1.Location = New System.Drawing.Point(1048, 14)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.SelectionColor = System.Drawing.Color.White
+        Me.RectangleShape1.Size = New System.Drawing.Size(72, 45)
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RectangleShape2.BackgroundImage = CType(resources.GetObject("RectangleShape2.BackgroundImage"), System.Drawing.Image)
+        Me.RectangleShape2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.White
+        Me.RectangleShape2.CornerRadius = 20
+        Me.RectangleShape2.Location = New System.Drawing.Point(1048, 14)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.SelectionColor = System.Drawing.Color.White
+        Me.RectangleShape2.Size = New System.Drawing.Size(72, 45)
+        '
         'AddBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -480,4 +507,6 @@ Partial Class AddBook
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
 End Class
