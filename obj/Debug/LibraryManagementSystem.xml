@@ -27,7 +27,22 @@ LibraryManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.addIcon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.AdminIcon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.bookPng">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.borrowBtn">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -67,12 +82,22 @@ LibraryManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.recordsBtn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.Rectangle_22">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.Rectangle_86">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.reserveBtn">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

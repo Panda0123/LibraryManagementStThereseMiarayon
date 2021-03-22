@@ -3,13 +3,9 @@
     Private Sub btn_blk_mouseLeave(sender As Object, e As EventArgs) Handles btn_blk.MouseLeave
 
     End Sub
-
     Private Sub btn_white_mouseHover(sender As Object, e As EventArgs) Handles btn_white.MouseHover
 
     End Sub
-
-
-
 
     'Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     '    rs.FindAllControls(Me)

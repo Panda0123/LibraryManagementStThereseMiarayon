@@ -195,5 +195,20 @@
   <ItemGroup>
     <None Include="Resources\AdminIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookPng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrowBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recordsBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserveBtn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
