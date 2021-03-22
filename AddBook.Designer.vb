@@ -27,12 +27,22 @@ Partial Class AddBook
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TopPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MainPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.MetroButton5 = New MetroFramework.Controls.MetroButton()
@@ -79,74 +89,64 @@ Partial Class AddBook
         Me.titleTxtBx = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ImageSummaryPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.summaryTxtBx = New System.Windows.Forms.RichTextBox()
+        Me.bkPicBx = New System.Windows.Forms.PictureBox()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.bkPicBx = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.Panel10 = New System.Windows.Forms.Panel()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.TopPanel.SuspendLayout()
-        Me.TitleLogoSearchPanel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.MainPanel.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.PublicationInformationPanel.SuspendLayout()
-        Me.ImageSummaryPanel.SuspendLayout()
-        Me.LeftSidePanel.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        Me.Panel9.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TitleLogoSearchPanel.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.MainPanel.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.PublicationInformationPanel.SuspendLayout()
+        Me.ImageSummaryPanel.SuspendLayout()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LeftSidePanel.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel6.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'advanceSearchLinkLbl
@@ -200,10 +200,21 @@ Partial Class AddBook
         Me.TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
         Me.TopPanel.Controls.Add(Me.PictureBox7)
         Me.TopPanel.Controls.Add(Me.ShapeContainer2)
-        Me.TopPanel.Location = New System.Drawing.Point(0, 2)
+        Me.TopPanel.Location = New System.Drawing.Point(0, 0)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(1155, 134)
+        Me.TopPanel.Size = New System.Drawing.Size(1135, 127)
         Me.TopPanel.TabIndex = 2
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
+        Me.PictureBox16.Location = New System.Drawing.Point(1068, 11)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(37, 34)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox16.TabIndex = 3
+        Me.PictureBox16.TabStop = False
         '
         'TitleLogoSearchPanel
         '
@@ -217,12 +228,84 @@ Partial Class AddBook
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(419, 5)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(409, 1)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(465, 137)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(465, 137)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
         Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(465, 137)
         Me.TitleLogoSearchPanel.TabIndex = 1
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
+        Me.PictureBox8.Location = New System.Drawing.Point(399, 77)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(24, 25)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 12
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(35, 72)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(402, 39)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 6
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Location = New System.Drawing.Point(375, 81)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(29, 19)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Location = New System.Drawing.Point(35, 75)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(378, 36)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(35, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(81, 67)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox7.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
+        Me.PictureBox7.Location = New System.Drawing.Point(1278, 7)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(50, 42)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 2
+        Me.PictureBox7.TabStop = False
         '
         'ShapeContainer2
         '
@@ -230,7 +313,7 @@ Partial Class AddBook
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1155, 134)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1135, 127)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -240,7 +323,7 @@ Partial Class AddBook
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1411, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1391, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -251,7 +334,7 @@ Partial Class AddBook
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1409, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1389, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -264,9 +347,9 @@ Partial Class AddBook
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.MainPanel)
         Me.Panel1.Controls.Add(Me.LeftSidePanel)
-        Me.Panel1.Location = New System.Drawing.Point(0, 140)
+        Me.Panel1.Location = New System.Drawing.Point(0, 130)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1155, 1479)
+        Me.Panel1.Size = New System.Drawing.Size(1135, 1475)
         Me.Panel1.TabIndex = 3
         '
         'MainPanel
@@ -283,8 +366,38 @@ Partial Class AddBook
         Me.MainPanel.Controls.Add(Me.ImageSummaryPanel)
         Me.MainPanel.Location = New System.Drawing.Point(201, 5)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(922, 1423)
+        Me.MainPanel.Size = New System.Drawing.Size(902, 1419)
         Me.MainPanel.TabIndex = 1
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox6.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
+        Me.PictureBox6.Location = New System.Drawing.Point(544, 1374)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(260, 41)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 4
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox5.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
+        Me.PictureBox5.Location = New System.Drawing.Point(121, 1374)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(260, 41)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 3
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Location = New System.Drawing.Point(212, 1444)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(148, 22)
+        Me.PictureBox4.TabIndex = 2
+        Me.PictureBox4.TabStop = False
         '
         'Panel2
         '
@@ -314,7 +427,7 @@ Partial Class AddBook
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(20, 285)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(880, 1086)
+        Me.Panel2.Size = New System.Drawing.Size(860, 1082)
         Me.Panel2.TabIndex = 1
         '
         'Panel4
@@ -339,7 +452,7 @@ Partial Class AddBook
         Me.Panel4.Controls.Add(Me.TextBox11)
         Me.Panel4.Location = New System.Drawing.Point(20, 781)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(817, 291)
+        Me.Panel4.Size = New System.Drawing.Size(797, 291)
         Me.Panel4.TabIndex = 88
         '
         'MetroButton5
@@ -519,7 +632,7 @@ Partial Class AddBook
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(19, 389)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(818, 31)
+        Me.ComboBox2.Size = New System.Drawing.Size(798, 31)
         Me.ComboBox2.TabIndex = 85
         '
         'Panel3
@@ -534,7 +647,7 @@ Partial Class AddBook
         Me.Panel3.Controls.Add(Me.TextBox10)
         Me.Panel3.Location = New System.Drawing.Point(19, 645)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(817, 89)
+        Me.Panel3.Size = New System.Drawing.Size(797, 89)
         Me.Panel3.TabIndex = 84
         '
         'Label14
@@ -559,7 +672,7 @@ Partial Class AddBook
         Me.TextBox9.ForeColor = System.Drawing.Color.Black
         Me.TextBox9.Location = New System.Drawing.Point(215, 45)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(556, 28)
+        Me.TextBox9.Size = New System.Drawing.Size(536, 28)
         Me.TextBox9.TabIndex = 85
         '
         'Label15
@@ -611,7 +724,7 @@ Partial Class AddBook
         Me.PublicationInformationPanel.Controls.Add(Me.TextBox5)
         Me.PublicationInformationPanel.Location = New System.Drawing.Point(20, 455)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(817, 150)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(797, 150)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'Label12
@@ -636,7 +749,7 @@ Partial Class AddBook
         Me.TextBox7.ForeColor = System.Drawing.Color.Black
         Me.TextBox7.Location = New System.Drawing.Point(41, 102)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(729, 28)
+        Me.TextBox7.Size = New System.Drawing.Size(709, 28)
         Me.TextBox7.TabIndex = 87
         '
         'Label11
@@ -661,7 +774,7 @@ Partial Class AddBook
         Me.TextBox6.ForeColor = System.Drawing.Color.Black
         Me.TextBox6.Location = New System.Drawing.Point(215, 45)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(555, 28)
+        Me.TextBox6.Size = New System.Drawing.Size(535, 28)
         Me.TextBox6.TabIndex = 85
         '
         'Label10
@@ -719,7 +832,7 @@ Partial Class AddBook
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(19, 327)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(818, 31)
+        Me.ComboBox1.Size = New System.Drawing.Size(798, 31)
         Me.ComboBox1.TabIndex = 79
         '
         'TextBox4
@@ -730,7 +843,7 @@ Partial Class AddBook
         Me.TextBox4.ForeColor = System.Drawing.Color.Black
         Me.TextBox4.Location = New System.Drawing.Point(19, 267)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(818, 28)
+        Me.TextBox4.Size = New System.Drawing.Size(798, 28)
         Me.TextBox4.TabIndex = 78
         '
         'Label6
@@ -753,7 +866,7 @@ Partial Class AddBook
         Me.TextBox3.ForeColor = System.Drawing.Color.Black
         Me.TextBox3.Location = New System.Drawing.Point(19, 210)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(818, 28)
+        Me.TextBox3.Size = New System.Drawing.Size(798, 28)
         Me.TextBox3.TabIndex = 76
         '
         'Label3
@@ -776,7 +889,7 @@ Partial Class AddBook
         Me.TextBox2.ForeColor = System.Drawing.Color.Black
         Me.TextBox2.Location = New System.Drawing.Point(19, 149)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(818, 28)
+        Me.TextBox2.Size = New System.Drawing.Size(798, 28)
         Me.TextBox2.TabIndex = 74
         '
         'Label7
@@ -799,7 +912,7 @@ Partial Class AddBook
         Me.TextBox1.ForeColor = System.Drawing.Color.Black
         Me.TextBox1.Location = New System.Drawing.Point(19, 92)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(818, 28)
+        Me.TextBox1.Size = New System.Drawing.Size(798, 28)
         Me.TextBox1.TabIndex = 72
         '
         'Label4
@@ -822,7 +935,7 @@ Partial Class AddBook
         Me.titleTxtBx.ForeColor = System.Drawing.Color.Black
         Me.titleTxtBx.Location = New System.Drawing.Point(19, 32)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(818, 28)
+        Me.titleTxtBx.Size = New System.Drawing.Size(798, 28)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
@@ -848,8 +961,29 @@ Partial Class AddBook
         Me.ImageSummaryPanel.Controls.Add(Me.bkPicBx)
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(22, 16)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(878, 247)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(858, 247)
         Me.ImageSummaryPanel.TabIndex = 0
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.Image = Global.LibraryManagementSystem.My.Resources.Resources.addImageBtn__1_
+        Me.PictureBox17.Location = New System.Drawing.Point(96, 100)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(30, 27)
+        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox17.TabIndex = 2
+        Me.PictureBox17.TabStop = False
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.White
+        Me.Label29.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(65, 130)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(98, 28)
+        Me.Label29.TabIndex = 2
+        Me.Label29.Text = "Add Image"
         '
         'Label5
         '
@@ -869,9 +1003,21 @@ Partial Class AddBook
         Me.summaryTxtBx.BackColor = System.Drawing.Color.White
         Me.summaryTxtBx.Location = New System.Drawing.Point(263, 31)
         Me.summaryTxtBx.Name = "summaryTxtBx"
-        Me.summaryTxtBx.Size = New System.Drawing.Size(584, 207)
+        Me.summaryTxtBx.Size = New System.Drawing.Size(564, 207)
         Me.summaryTxtBx.TabIndex = 1
         Me.summaryTxtBx.Text = ""
+        '
+        'bkPicBx
+        '
+        Me.bkPicBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.bkPicBx.BackColor = System.Drawing.Color.White
+        Me.bkPicBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.bkPicBx.Location = New System.Drawing.Point(17, 5)
+        Me.bkPicBx.Name = "bkPicBx"
+        Me.bkPicBx.Size = New System.Drawing.Size(199, 233)
+        Me.bkPicBx.TabIndex = 0
+        Me.bkPicBx.TabStop = False
         '
         'LeftSidePanel
         '
@@ -886,75 +1032,6 @@ Partial Class AddBook
         Me.LeftSidePanel.Name = "LeftSidePanel"
         Me.LeftSidePanel.Size = New System.Drawing.Size(190, 519)
         Me.LeftSidePanel.TabIndex = 0
-        '
-        'Panel5
-        '
-        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel5.BackColor = System.Drawing.Color.White
-        Me.Panel5.Controls.Add(Me.Label23)
-        Me.Panel5.Controls.Add(Me.PictureBox10)
-        Me.Panel5.Location = New System.Drawing.Point(3, 23)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(188, 42)
-        Me.Panel5.TabIndex = 1
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.BackColor = System.Drawing.Color.White
-        Me.Label23.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(77, 6)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(93, 28)
-        Me.Label23.TabIndex = 1
-        Me.Label23.Text = "View Book"
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BackColor = System.Drawing.Color.White
-        Me.Panel6.Controls.Add(Me.Label24)
-        Me.Panel6.Controls.Add(Me.PictureBox11)
-        Me.Panel6.Location = New System.Drawing.Point(3, 119)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(188, 42)
-        Me.Panel6.TabIndex = 2
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.White
-        Me.Label24.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(77, 6)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(84, 28)
-        Me.Label24.TabIndex = 1
-        Me.Label24.Text = "Borrower"
-        '
-        'Panel7
-        '
-        Me.Panel7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel7.BackColor = System.Drawing.Color.White
-        Me.Panel7.Controls.Add(Me.Label25)
-        Me.Panel7.Controls.Add(Me.PictureBox12)
-        Me.Panel7.Location = New System.Drawing.Point(3, 167)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(188, 42)
-        Me.Panel7.TabIndex = 3
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.BackColor = System.Drawing.Color.White
-        Me.Label25.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(75, 6)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(108, 28)
-        Me.Label25.TabIndex = 1
-        Me.Label25.Text = "Reservations"
         '
         'Panel8
         '
@@ -979,6 +1056,49 @@ Partial Class AddBook
         Me.Label26.TabIndex = 1
         Me.Label26.Text = "Add"
         '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
+        Me.PictureBox13.Location = New System.Drawing.Point(54, 13)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(20, 16)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 0
+        Me.PictureBox13.TabStop = False
+        '
+        'Panel7
+        '
+        Me.Panel7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel7.BackColor = System.Drawing.Color.White
+        Me.Panel7.Controls.Add(Me.Label25)
+        Me.Panel7.Controls.Add(Me.PictureBox12)
+        Me.Panel7.Location = New System.Drawing.Point(3, 167)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(188, 42)
+        Me.Panel7.TabIndex = 3
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.White
+        Me.Label25.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(75, 6)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(108, 28)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Reservations"
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.LibraryManagementSystem.My.Resources.Resources.reserveBtn
+        Me.PictureBox12.Location = New System.Drawing.Point(53, 13)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(20, 16)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox12.TabIndex = 0
+        Me.PictureBox12.TabStop = False
+        '
         'Panel9
         '
         Me.Panel9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -991,6 +1111,16 @@ Partial Class AddBook
         Me.Panel9.Size = New System.Drawing.Size(188, 42)
         Me.Panel9.TabIndex = 5
         '
+        'PictureBox14
+        '
+        Me.PictureBox14.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
+        Me.PictureBox14.Location = New System.Drawing.Point(54, 15)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(20, 16)
+        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox14.TabIndex = 0
+        Me.PictureBox14.TabStop = False
+        '
         'Label27
         '
         Me.Label27.AutoSize = True
@@ -1000,6 +1130,39 @@ Partial Class AddBook
         Me.Label27.Size = New System.Drawing.Size(71, 28)
         Me.Label27.TabIndex = 1
         Me.Label27.Text = "Records"
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.White
+        Me.Panel6.Controls.Add(Me.Label24)
+        Me.Panel6.Controls.Add(Me.PictureBox11)
+        Me.Panel6.Location = New System.Drawing.Point(3, 119)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(188, 42)
+        Me.Panel6.TabIndex = 2
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.White
+        Me.Label24.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(77, 6)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(84, 28)
+        Me.Label24.TabIndex = 1
+        Me.Label24.Text = "Borrower"
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.LibraryManagementSystem.My.Resources.Resources.borrowBtn
+        Me.PictureBox11.Location = New System.Drawing.Point(46, 7)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(34, 27)
+        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox11.TabIndex = 0
+        Me.PictureBox11.TabStop = False
         '
         'Panel10
         '
@@ -1013,6 +1176,16 @@ Partial Class AddBook
         Me.Panel10.Size = New System.Drawing.Size(188, 42)
         Me.Panel10.TabIndex = 4
         '
+        'PictureBox15
+        '
+        Me.PictureBox15.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
+        Me.PictureBox15.Location = New System.Drawing.Point(49, 11)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(25, 20)
+        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox15.TabIndex = 0
+        Me.PictureBox15.TabStop = False
+        '
         'Label28
         '
         Me.Label28.AutoSize = True
@@ -1024,118 +1197,28 @@ Partial Class AddBook
         Me.Label28.TabIndex = 1
         Me.Label28.Text = "Collections"
         '
-        'Label29
+        'Panel5
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.BackColor = System.Drawing.Color.White
-        Me.Label29.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(65, 130)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(98, 28)
-        Me.Label29.TabIndex = 2
-        Me.Label29.Text = "Add Image"
+        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.White
+        Me.Panel5.Controls.Add(Me.Label23)
+        Me.Panel5.Controls.Add(Me.PictureBox10)
+        Me.Panel5.Location = New System.Drawing.Point(3, 23)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(188, 42)
+        Me.Panel5.TabIndex = 1
         '
-        'PictureBox6
+        'Label23
         '
-        Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox6.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.PictureBox6.Location = New System.Drawing.Point(554, 1376)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(260, 41)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 4
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox5.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.PictureBox5.Location = New System.Drawing.Point(131, 1376)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(260, 41)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 3
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Location = New System.Drawing.Point(212, 1444)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(148, 22)
-        Me.PictureBox4.TabIndex = 2
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.Image = Global.LibraryManagementSystem.My.Resources.Resources.addImageBtn__1_
-        Me.PictureBox17.Location = New System.Drawing.Point(96, 100)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(30, 27)
-        Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox17.TabIndex = 2
-        Me.PictureBox17.TabStop = False
-        '
-        'bkPicBx
-        '
-        Me.bkPicBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.bkPicBx.BackColor = System.Drawing.Color.White
-        Me.bkPicBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.bkPicBx.Location = New System.Drawing.Point(17, 5)
-        Me.bkPicBx.Name = "bkPicBx"
-        Me.bkPicBx.Size = New System.Drawing.Size(199, 233)
-        Me.bkPicBx.TabIndex = 0
-        Me.bkPicBx.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
-        Me.PictureBox13.Location = New System.Drawing.Point(54, 13)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(20, 16)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox13.TabIndex = 0
-        Me.PictureBox13.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Image = Global.LibraryManagementSystem.My.Resources.Resources.reserveBtn
-        Me.PictureBox12.Location = New System.Drawing.Point(53, 13)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(20, 16)
-        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox12.TabIndex = 0
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox14
-        '
-        Me.PictureBox14.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
-        Me.PictureBox14.Location = New System.Drawing.Point(54, 15)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(20, 16)
-        Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox14.TabIndex = 0
-        Me.PictureBox14.TabStop = False
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Image = Global.LibraryManagementSystem.My.Resources.Resources.borrowBtn
-        Me.PictureBox11.Location = New System.Drawing.Point(46, 7)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(34, 27)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox11.TabIndex = 0
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.PictureBox15.Location = New System.Drawing.Point(49, 11)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(25, 20)
-        Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox15.TabIndex = 0
-        Me.PictureBox15.TabStop = False
+        Me.Label23.AutoSize = True
+        Me.Label23.BackColor = System.Drawing.Color.White
+        Me.Label23.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(77, 6)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(93, 28)
+        Me.Label23.TabIndex = 1
+        Me.Label23.Text = "View Book"
         '
         'PictureBox10
         '
@@ -1146,89 +1229,6 @@ Partial Class AddBook
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 0
         Me.PictureBox10.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1088, 11)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(37, 34)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox16.TabIndex = 3
-        Me.PictureBox16.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(399, 77)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(24, 25)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(35, 72)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(402, 39)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 6
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(375, 81)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(29, 19)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(35, 75)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(378, 36)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(35, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(81, 67)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox7.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox7.Location = New System.Drawing.Point(1298, 7)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(50, 42)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 2
-        Me.PictureBox7.TabStop = False
         '
         'AddBook
         '
@@ -1245,10 +1245,20 @@ Partial Class AddBook
         Me.Text = "AddBook"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TopPanel.ResumeLayout(False)
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.MainPanel.ResumeLayout(False)
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -1259,37 +1269,27 @@ Partial Class AddBook
         Me.PublicationInformationPanel.PerformLayout()
         Me.ImageSummaryPanel.ResumeLayout(False)
         Me.ImageSummaryPanel.PerformLayout()
-        Me.LeftSidePanel.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        Me.Panel9.ResumeLayout(False)
-        Me.Panel9.PerformLayout()
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel10.PerformLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LeftSidePanel.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

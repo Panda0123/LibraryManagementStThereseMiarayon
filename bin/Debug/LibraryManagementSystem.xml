@@ -32,11 +32,6 @@ LibraryManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:LibraryManagementSystem.My.Resources.Resources.addImageBtn">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.addImageBtn__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
