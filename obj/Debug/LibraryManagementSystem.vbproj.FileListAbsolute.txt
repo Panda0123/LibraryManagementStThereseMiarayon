@@ -35,3 +35,5 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.login.resources

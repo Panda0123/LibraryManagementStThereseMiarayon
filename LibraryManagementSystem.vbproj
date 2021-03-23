@@ -63,6 +63,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -91,6 +92,18 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="displayBookvb.vb" />
+    <Compile Include="advanceSearch.Designer.vb">
+      <DependentUpon>advanceSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="advanceSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,10 +127,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="utils.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="bookDisplay.resx">
       <DependentUpon>bookDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advanceSearch.resx">
+      <DependentUpon>advanceSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -175,6 +195,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pic 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In Dialog Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polygon3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

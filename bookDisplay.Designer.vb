@@ -22,6 +22,7 @@ Partial Class bookDisplay
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bookDisplay))
         Me.bTitle = New System.Windows.Forms.Label()
         Me.bAuthor = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -31,6 +32,8 @@ Partial Class bookDisplay
         Me.Label5 = New System.Windows.Forms.Label()
         Me.bStatus = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,7 +45,7 @@ Partial Class bookDisplay
         Me.bTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.bTitle.Location = New System.Drawing.Point(276, 20)
         Me.bTitle.Name = "bTitle"
-        Me.bTitle.Size = New System.Drawing.Size(896, 41)
+        Me.bTitle.Size = New System.Drawing.Size(866, 40)
         Me.bTitle.TabIndex = 1
         Me.bTitle.Text = "Star wars: the rise of Skywalker the visual dictionary (2019)"
         '
@@ -108,7 +111,7 @@ Partial Class bookDisplay
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(81, 221)
+        Me.Label5.Location = New System.Drawing.Point(62, 221)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 29)
         Me.Label5.TabIndex = 5
@@ -121,7 +124,7 @@ Partial Class bookDisplay
         Me.bStatus.AutoSize = True
         Me.bStatus.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bStatus.ForeColor = System.Drawing.Color.Lime
-        Me.bStatus.Location = New System.Drawing.Point(155, 221)
+        Me.bStatus.Location = New System.Drawing.Point(136, 221)
         Me.bStatus.Name = "bStatus"
         Me.bStatus.Size = New System.Drawing.Size(84, 29)
         Me.bStatus.TabIndex = 5
@@ -129,7 +132,7 @@ Partial Class bookDisplay
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(33, 20)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(206, 198)
@@ -137,10 +140,31 @@ Partial Class bookDisplay
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1600, 265)
+        Me.ShapeContainer1.TabIndex = 6
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.RectangleShape1.CornerRadius = 20
+        Me.RectangleShape1.Location = New System.Drawing.Point(6, 4)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(1550, 253)
+        '
         'bookDisplay
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.Controls.Add(Me.bPublisher)
         Me.Controls.Add(Me.bStatus)
@@ -151,8 +175,9 @@ Partial Class bookDisplay
         Me.Controls.Add(Me.bAuthor)
         Me.Controls.Add(Me.bTitle)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "bookDisplay"
-        Me.Size = New System.Drawing.Size(1296, 265)
+        Me.Size = New System.Drawing.Size(1600, 265)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -168,4 +193,6 @@ Partial Class bookDisplay
     Friend WithEvents bPublisher As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents bStatus As Label
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
 End Class

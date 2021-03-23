@@ -22,6 +22,11 @@ LibraryManagementSystem
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.Log_In_Dialog_Box">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.Login_Button">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -42,6 +47,11 @@ LibraryManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.padlock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.pic_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -52,7 +62,22 @@ LibraryManagementSystem
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.Polygon_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.Polygon3">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.Rectangle_22">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.Rectangle_5">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -73,6 +98,16 @@ LibraryManagementSystem
 </summary>
 </member>
 <member name="P:LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.user__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:LibraryManagementSystem.My.Resources.Resources.Username">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
