@@ -19,7 +19,7 @@
 
     Public Sub dropDownAnimationNewTitle(panel As Panel, tailObj1 As Button, tailObj2 As Button, tailObj3 As Button)
         Main.Timer1.Start()
-        panel.Location = New Point(Main.newTitleBtn.Location.X, Main.newTitleBtn.Location.Y + 55)
+        panel.Location = New Point(Main.newTitleBtn.Location.X, Main.newTitleBtn.Location.Y + 40)
         If Not panel.Height = 0 Then
             panel.Height = 0
             Main.authPanel.Location = New Point(Main.authBtn.Location.X, Main.authBtn.Location.Y - 77)
@@ -36,7 +36,7 @@
 
     Public Sub dropDownAnimationauthBtn(panel As Panel, tailObj1 As Button, tailObj2 As Button)
         Main.Timer2.Start()
-        panel.Location = New Point(Main.authBtn.Location.X, Main.authBtn.Location.Y + 55)
+        panel.Location = New Point(Main.authBtn.Location.X, Main.authBtn.Location.Y + 40)
         If Not panel.Height = 0 Then
             panel.Height = 0
             Main.pbPanel.Location = New Point(Main.pbBtn.Location.X, Main.pbBtn.Location.Y - 77)
@@ -51,7 +51,7 @@
 
     Public Sub dropDownAnimationpy(panel As Panel, tailObj1 As Button)
         Main.Timer3.Start()
-        panel.Location = New Point(Main.pbBtn.Location.X, Main.pbBtn.Location.Y + 55)
+        panel.Location = New Point(Main.pbBtn.Location.X, Main.pbBtn.Location.Y + 40)
         If Not panel.Height = 0 Then
             panel.Height = 0
             Main.pubPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
@@ -63,7 +63,7 @@
 
     Public Sub dropDownAnimationpub(panel As Panel)
         Main.Timer4.Start()
-        panel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y + 55)
+        panel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y + 40)
         If Not panel.Height = 0 Then
             panel.Height = 0
             Main.Timer4.Enabled = False

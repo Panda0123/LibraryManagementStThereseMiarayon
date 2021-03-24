@@ -30,12 +30,10 @@
     End Sub
 
     Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs) Handles searchTextBox.MouseHover, searchTextBox.Click, searchTextBox.KeyPress
-
         If searchTextBox.Text.Equals("Search...") Then
             searchTextBox.Text = ""
             searchTextBox.ForeColor = Color.FromArgb(0, 0, 0)
         End If
-
 
         ' sample search
         For Each book In bookDP
@@ -43,12 +41,6 @@
             book.Anchor = Anchor.Right
             FlowLayoutPanel1.Controls.Add(book)
         Next
-
-
-
-
-
-
     End Sub
 
     Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs) Handles searchTextBox.MouseLeave
@@ -56,7 +48,6 @@
             searchTextBox.Text = "Search..."
             searchTextBox.ForeColor = Color.FromArgb(119, 117, 117)
         End If
-
     End Sub
 
 
@@ -87,6 +78,27 @@
         utils.dropDownAnimationpub(pubPanel)
     End Sub
 
+
+
+
+    Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
+        loginBtn.ForeColor = Color.FromArgb(0, 54, 99)
+        login.ShowDialog()
+    End Sub
+
+    Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
+        advanceSearch.ShowDialog()
+    End Sub
+
+
+
+
+    Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs) Handles loginBtn.MouseLeave
+        loginBtn.ForeColor = Color.FromArgb(0, 0, 0)
+    End Sub
+
+
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         newTitlePanel.Height = 127
 
@@ -99,15 +111,6 @@
         pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
 
         Timer1.Stop()
-    End Sub
-
-
-    Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
-        loginBtn.ForeColor = Color.FromArgb(0, 54, 99)
-        login.Show()
-    End Sub
-    Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs) Handles loginBtn.MouseLeave
-        loginBtn.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -133,10 +136,6 @@
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
         pubPanel.Height = 127
         Timer4.Stop()
-    End Sub
-
-    Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
-        advanceSearch.Show()
     End Sub
 End Class
 

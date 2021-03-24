@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class advanceSearch
-    Inherits System.Windows.Forms.Form
+    Inherits MetroFramework.Forms.MetroForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -31,11 +31,11 @@ Partial Class advanceSearch
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.titleSearch = New System.Windows.Forms.TextBox()
+        Me.authorSearch = New System.Windows.Forms.TextBox()
+        Me.classificationSearch = New System.Windows.Forms.TextBox()
+        Me.publisherSearch = New System.Windows.Forms.TextBox()
+        Me.ISBNsearch = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -46,6 +46,10 @@ Partial Class advanceSearch
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.loginBtnLoginForm = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,58 +143,60 @@ Partial Class advanceSearch
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(295, 528)
+        Me.ComboBox2.MaxDropDownItems = 4
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(493, 41)
         Me.ComboBox2.TabIndex = 4
         '
-        'TextBox1
+        'titleSearch
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(295, 152)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(493, 34)
-        Me.TextBox1.TabIndex = 6
+        Me.titleSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.titleSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.titleSearch.Location = New System.Drawing.Point(295, 152)
+        Me.titleSearch.Name = "titleSearch"
+        Me.titleSearch.Size = New System.Drawing.Size(493, 34)
+        Me.titleSearch.TabIndex = 6
         '
-        'TextBox2
+        'authorSearch
         '
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(295, 225)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(493, 34)
-        Me.TextBox2.TabIndex = 6
+        Me.authorSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.authorSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorSearch.Location = New System.Drawing.Point(295, 225)
+        Me.authorSearch.Name = "authorSearch"
+        Me.authorSearch.Size = New System.Drawing.Size(493, 34)
+        Me.authorSearch.TabIndex = 6
         '
-        'TextBox3
+        'classificationSearch
         '
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox3.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(295, 309)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(493, 34)
-        Me.TextBox3.TabIndex = 6
+        Me.classificationSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.classificationSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.classificationSearch.Location = New System.Drawing.Point(295, 309)
+        Me.classificationSearch.Name = "classificationSearch"
+        Me.classificationSearch.Size = New System.Drawing.Size(493, 34)
+        Me.classificationSearch.TabIndex = 6
         '
-        'TextBox4
+        'publisherSearch
         '
-        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox4.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(295, 384)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(493, 34)
-        Me.TextBox4.TabIndex = 6
+        Me.publisherSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.publisherSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.publisherSearch.Location = New System.Drawing.Point(295, 384)
+        Me.publisherSearch.Name = "publisherSearch"
+        Me.publisherSearch.Size = New System.Drawing.Size(493, 34)
+        Me.publisherSearch.TabIndex = 6
         '
-        'TextBox5
+        'ISBNsearch
         '
-        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox5.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(295, 463)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(493, 34)
-        Me.TextBox5.TabIndex = 6
+        Me.ISBNsearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ISBNsearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ISBNsearch.Location = New System.Drawing.Point(295, 463)
+        Me.ISBNsearch.Name = "ISBNsearch"
+        Me.ISBNsearch.Size = New System.Drawing.Size(493, 34)
+        Me.ISBNsearch.TabIndex = 6
         '
         'Label9
         '
@@ -276,7 +282,7 @@ Partial Class advanceSearch
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Sitka Subheading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(490, 607)
+        Me.Label10.Location = New System.Drawing.Point(483, 602)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(47, 40)
         Me.Label10.TabIndex = 3
@@ -292,19 +298,78 @@ Partial Class advanceSearch
         Me.PictureBox8.TabIndex = 5
         Me.PictureBox8.TabStop = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(257, 602)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(172, 34)
+        Me.TextBox1.TabIndex = 7
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(589, 602)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(172, 34)
+        Me.TextBox2.TabIndex = 7
+        '
+        'loginBtnLoginForm
+        '
+        Me.loginBtnLoginForm.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.loginBtnLoginForm.BackColor = System.Drawing.Color.White
+        Me.loginBtnLoginForm.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.loginBtnLoginForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.loginBtnLoginForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.loginBtnLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.loginBtnLoginForm.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loginBtnLoginForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.loginBtnLoginForm.Location = New System.Drawing.Point(295, 682)
+        Me.loginBtnLoginForm.Name = "loginBtnLoginForm"
+        Me.loginBtnLoginForm.Size = New System.Drawing.Size(215, 52)
+        Me.loginBtnLoginForm.TabIndex = 16
+        Me.loginBtnLoginForm.Text = "Search"
+        Me.loginBtnLoginForm.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.loginBtnLoginForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.loginBtnLoginForm.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(524, 682)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(215, 52)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "Clear"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'advanceSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(964, 748)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.loginBtnLoginForm)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ISBNsearch)
+        Me.Controls.Add(Me.publisherSearch)
+        Me.Controls.Add(Me.classificationSearch)
+        Me.Controls.Add(Me.authorSearch)
+        Me.Controls.Add(Me.titleSearch)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
@@ -324,11 +389,12 @@ Partial Class advanceSearch
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.HelpButton = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Movable = False
         Me.Name = "advanceSearch"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "loginForm"
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -357,13 +423,17 @@ Partial Class advanceSearch
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents titleSearch As TextBox
+    Friend WithEvents authorSearch As TextBox
+    Friend WithEvents classificationSearch As TextBox
+    Friend WithEvents publisherSearch As TextBox
+    Friend WithEvents ISBNsearch As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents loginBtnLoginForm As Button
+    Friend WithEvents Button1 As Button
 End Class
