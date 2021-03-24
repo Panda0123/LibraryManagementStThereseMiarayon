@@ -214,5 +214,8 @@
   <ItemGroup>
     <None Include="Resources\Polygon3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 18.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

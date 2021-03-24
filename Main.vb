@@ -78,7 +78,7 @@
     Private Sub pbBtn_Click(sender As Object, e As EventArgs) Handles pbBtn.Click
         pb_click += 1
         utils.clickAnimation(pbBtn, pb_click)
-        utils.dropDownAnimationpy(pyPanel, publisherBtn)
+        utils.dropDownAnimationpy(pbPanel, publisherBtn)
     End Sub
 
     Private Sub publisherBtn_Click(sender As Object, e As EventArgs) Handles publisherBtn.Click
@@ -89,9 +89,15 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         newTitlePanel.Height = 127
+
         authBtn.Location = New Point(authBtn.Location.X, authBtn.Location.Y + 127)
         pbBtn.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 127)
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
+
+        authPanel.Location = New Point(authBtn.Location.X, authBtn.Location.Y + 55)
+        pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 55)
+        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
+
         Timer1.Stop()
     End Sub
 
@@ -106,20 +112,31 @@
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         authPanel.Height = 127
+
         pbBtn.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 127)
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
+        pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 55)
+        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
+
         Timer2.Stop()
     End Sub
 
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
-        pyPanel.Height = 127
+        pbPanel.Height = 127
+
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
+        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
+
         Timer3.Stop()
     End Sub
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
         pubPanel.Height = 127
-        Timer3.Stop()
+        Timer4.Stop()
+    End Sub
+
+    Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
+        advanceSearch.Show()
     End Sub
 End Class
 

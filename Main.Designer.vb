@@ -26,6 +26,14 @@ Partial Class Main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.scrollablePanel = New System.Windows.Forms.Panel()
+        Me.pubPanel = New System.Windows.Forms.Panel()
+        Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel11 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel12 = New System.Windows.Forms.LinkLabel()
+        Me.pbPanel = New System.Windows.Forms.Panel()
+        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel9 = New System.Windows.Forms.LinkLabel()
         Me.authPanel = New System.Windows.Forms.Panel()
         Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
@@ -46,18 +54,14 @@ Partial Class Main
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.pyPanel = New System.Windows.Forms.Panel()
-        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel9 = New System.Windows.Forms.LinkLabel()
-        Me.pubPanel = New System.Windows.Forms.Panel()
-        Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel11 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel12 = New System.Windows.Forms.LinkLabel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -69,13 +73,13 @@ Partial Class Main
         Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
+        Me.pubPanel.SuspendLayout()
+        Me.pbPanel.SuspendLayout()
         Me.authPanel.SuspendLayout()
         Me.newTitlePanel.SuspendLayout()
         Me.mainPanel.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.upperMainScreenPanel.SuspendLayout()
-        Me.pyPanel.SuspendLayout()
-        Me.pubPanel.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,7 +103,7 @@ Partial Class Main
         'scrollablePanel
         '
         Me.scrollablePanel.Controls.Add(Me.pubPanel)
-        Me.scrollablePanel.Controls.Add(Me.pyPanel)
+        Me.scrollablePanel.Controls.Add(Me.pbPanel)
         Me.scrollablePanel.Controls.Add(Me.authPanel)
         Me.scrollablePanel.Controls.Add(Me.newTitlePanel)
         Me.scrollablePanel.Controls.Add(Me.publisherBtn)
@@ -117,6 +121,90 @@ Partial Class Main
         Me.scrollablePanel.Name = "scrollablePanel"
         Me.scrollablePanel.Size = New System.Drawing.Size(331, 1094)
         Me.scrollablePanel.TabIndex = 0
+        '
+        'pubPanel
+        '
+        Me.pubPanel.Controls.Add(Me.LinkLabel10)
+        Me.pubPanel.Controls.Add(Me.LinkLabel11)
+        Me.pubPanel.Controls.Add(Me.LinkLabel12)
+        Me.pubPanel.Location = New System.Drawing.Point(47, 469)
+        Me.pubPanel.Name = "pubPanel"
+        Me.pubPanel.Size = New System.Drawing.Size(254, 0)
+        Me.pubPanel.TabIndex = 17
+        '
+        'LinkLabel10
+        '
+        Me.LinkLabel10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.LinkLabel10.AutoSize = True
+        Me.LinkLabel10.Location = New System.Drawing.Point(12, -44)
+        Me.LinkLabel10.Name = "LinkLabel10"
+        Me.LinkLabel10.Size = New System.Drawing.Size(85, 17)
+        Me.LinkLabel10.TabIndex = 2
+        Me.LinkLabel10.TabStop = True
+        Me.LinkLabel10.Text = "LinkLabel10"
+        '
+        'LinkLabel11
+        '
+        Me.LinkLabel11.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LinkLabel11.AutoSize = True
+        Me.LinkLabel11.Location = New System.Drawing.Point(12, -16)
+        Me.LinkLabel11.Name = "LinkLabel11"
+        Me.LinkLabel11.Size = New System.Drawing.Size(85, 17)
+        Me.LinkLabel11.TabIndex = 1
+        Me.LinkLabel11.TabStop = True
+        Me.LinkLabel11.Text = "LinkLabel11"
+        '
+        'LinkLabel12
+        '
+        Me.LinkLabel12.AutoSize = True
+        Me.LinkLabel12.Location = New System.Drawing.Point(12, 11)
+        Me.LinkLabel12.Name = "LinkLabel12"
+        Me.LinkLabel12.Size = New System.Drawing.Size(85, 17)
+        Me.LinkLabel12.TabIndex = 0
+        Me.LinkLabel12.TabStop = True
+        Me.LinkLabel12.Text = "LinkLabel12"
+        '
+        'pbPanel
+        '
+        Me.pbPanel.Controls.Add(Me.LinkLabel7)
+        Me.pbPanel.Controls.Add(Me.LinkLabel8)
+        Me.pbPanel.Controls.Add(Me.LinkLabel9)
+        Me.pbPanel.Location = New System.Drawing.Point(47, 417)
+        Me.pbPanel.Name = "pbPanel"
+        Me.pbPanel.Size = New System.Drawing.Size(254, 0)
+        Me.pbPanel.TabIndex = 16
+        '
+        'LinkLabel7
+        '
+        Me.LinkLabel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.LinkLabel7.AutoSize = True
+        Me.LinkLabel7.Location = New System.Drawing.Point(12, -44)
+        Me.LinkLabel7.Name = "LinkLabel7"
+        Me.LinkLabel7.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel7.TabIndex = 2
+        Me.LinkLabel7.TabStop = True
+        Me.LinkLabel7.Text = "LinkLabel7"
+        '
+        'LinkLabel8
+        '
+        Me.LinkLabel8.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LinkLabel8.AutoSize = True
+        Me.LinkLabel8.Location = New System.Drawing.Point(12, -16)
+        Me.LinkLabel8.Name = "LinkLabel8"
+        Me.LinkLabel8.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel8.TabIndex = 1
+        Me.LinkLabel8.TabStop = True
+        Me.LinkLabel8.Text = "LinkLabel8"
+        '
+        'LinkLabel9
+        '
+        Me.LinkLabel9.AutoSize = True
+        Me.LinkLabel9.Location = New System.Drawing.Point(12, 11)
+        Me.LinkLabel9.Name = "LinkLabel9"
+        Me.LinkLabel9.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel9.TabIndex = 0
+        Me.LinkLabel9.TabStop = True
+        Me.LinkLabel9.Text = "LinkLabel9"
         '
         'authPanel
         '
@@ -273,6 +361,7 @@ Partial Class Main
         Me.mainPanel.Controls.Add(Me.FlowLayoutPanel1)
         Me.mainPanel.Controls.Add(Me.upperMainScreenPanel)
         Me.mainPanel.Controls.Add(Me.leftMainScreenPanel)
+        Me.mainPanel.Controls.Add(Me.ShapeContainer1)
         Me.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.mainPanel.Location = New System.Drawing.Point(0, 0)
         Me.mainPanel.Margin = New System.Windows.Forms.Padding(4)
@@ -379,6 +468,55 @@ Partial Class Main
         Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1, Me.RectangleShape3})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1439, 757)
+        Me.ShapeContainer1.TabIndex = 15
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.White
+        Me.RectangleShape2.CornerRadius = 41
+        Me.RectangleShape2.FillColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.RectangleShape2.FillGradientColor = System.Drawing.Color.White
+        Me.RectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.BackwardDiagonal
+        Me.RectangleShape2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.RectangleShape2.Location = New System.Drawing.Point(-160, 386)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.SelectionColor = System.Drawing.Color.White
+        Me.RectangleShape2.Size = New System.Drawing.Size(245, 171)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.White
+        Me.RectangleShape1.CornerRadius = 41
+        Me.RectangleShape1.FillColor = System.Drawing.Color.White
+        Me.RectangleShape1.FillGradientColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.RectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.BackwardDiagonal
+        Me.RectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.RectangleShape1.Location = New System.Drawing.Point(156, 393)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.SelectionColor = System.Drawing.Color.White
+        Me.RectangleShape1.Size = New System.Drawing.Size(339, 314)
+        '
+        'RectangleShape3
+        '
+        Me.RectangleShape3.BorderColor = System.Drawing.Color.White
+        Me.RectangleShape3.CornerRadius = 41
+        Me.RectangleShape3.FillColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.RectangleShape3.FillGradientColor = System.Drawing.Color.White
+        Me.RectangleShape3.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.ForwardDiagonal
+        Me.RectangleShape3.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
+        Me.RectangleShape3.Location = New System.Drawing.Point(-228, 604)
+        Me.RectangleShape3.Name = "RectangleShape3"
+        Me.RectangleShape3.SelectionColor = System.Drawing.Color.White
+        Me.RectangleShape3.Size = New System.Drawing.Size(339, 314)
+        '
         'Timer1
         '
         '
@@ -390,90 +528,6 @@ Partial Class Main
         '
         'Timer4
         '
-        '
-        'pyPanel
-        '
-        Me.pyPanel.Controls.Add(Me.LinkLabel7)
-        Me.pyPanel.Controls.Add(Me.LinkLabel8)
-        Me.pyPanel.Controls.Add(Me.LinkLabel9)
-        Me.pyPanel.Location = New System.Drawing.Point(47, 417)
-        Me.pyPanel.Name = "pyPanel"
-        Me.pyPanel.Size = New System.Drawing.Size(254, 0)
-        Me.pyPanel.TabIndex = 16
-        '
-        'LinkLabel7
-        '
-        Me.LinkLabel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel7.AutoSize = True
-        Me.LinkLabel7.Location = New System.Drawing.Point(12, -44)
-        Me.LinkLabel7.Name = "LinkLabel7"
-        Me.LinkLabel7.Size = New System.Drawing.Size(77, 17)
-        Me.LinkLabel7.TabIndex = 2
-        Me.LinkLabel7.TabStop = True
-        Me.LinkLabel7.Text = "LinkLabel7"
-        '
-        'LinkLabel8
-        '
-        Me.LinkLabel8.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel8.AutoSize = True
-        Me.LinkLabel8.Location = New System.Drawing.Point(12, -16)
-        Me.LinkLabel8.Name = "LinkLabel8"
-        Me.LinkLabel8.Size = New System.Drawing.Size(77, 17)
-        Me.LinkLabel8.TabIndex = 1
-        Me.LinkLabel8.TabStop = True
-        Me.LinkLabel8.Text = "LinkLabel8"
-        '
-        'LinkLabel9
-        '
-        Me.LinkLabel9.AutoSize = True
-        Me.LinkLabel9.Location = New System.Drawing.Point(12, 11)
-        Me.LinkLabel9.Name = "LinkLabel9"
-        Me.LinkLabel9.Size = New System.Drawing.Size(77, 17)
-        Me.LinkLabel9.TabIndex = 0
-        Me.LinkLabel9.TabStop = True
-        Me.LinkLabel9.Text = "LinkLabel9"
-        '
-        'pubPanel
-        '
-        Me.pubPanel.Controls.Add(Me.LinkLabel10)
-        Me.pubPanel.Controls.Add(Me.LinkLabel11)
-        Me.pubPanel.Controls.Add(Me.LinkLabel12)
-        Me.pubPanel.Location = New System.Drawing.Point(47, 469)
-        Me.pubPanel.Name = "pubPanel"
-        Me.pubPanel.Size = New System.Drawing.Size(254, 0)
-        Me.pubPanel.TabIndex = 17
-        '
-        'LinkLabel10
-        '
-        Me.LinkLabel10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel10.AutoSize = True
-        Me.LinkLabel10.Location = New System.Drawing.Point(12, -44)
-        Me.LinkLabel10.Name = "LinkLabel10"
-        Me.LinkLabel10.Size = New System.Drawing.Size(85, 17)
-        Me.LinkLabel10.TabIndex = 2
-        Me.LinkLabel10.TabStop = True
-        Me.LinkLabel10.Text = "LinkLabel10"
-        '
-        'LinkLabel11
-        '
-        Me.LinkLabel11.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel11.AutoSize = True
-        Me.LinkLabel11.Location = New System.Drawing.Point(12, -16)
-        Me.LinkLabel11.Name = "LinkLabel11"
-        Me.LinkLabel11.Size = New System.Drawing.Size(85, 17)
-        Me.LinkLabel11.TabIndex = 1
-        Me.LinkLabel11.TabStop = True
-        Me.LinkLabel11.Text = "LinkLabel11"
-        '
-        'LinkLabel12
-        '
-        Me.LinkLabel12.AutoSize = True
-        Me.LinkLabel12.Location = New System.Drawing.Point(12, 11)
-        Me.LinkLabel12.Name = "LinkLabel12"
-        Me.LinkLabel12.Size = New System.Drawing.Size(85, 17)
-        Me.LinkLabel12.TabIndex = 0
-        Me.LinkLabel12.TabStop = True
-        Me.LinkLabel12.Text = "LinkLabel12"
         '
         'PictureBox3
         '
@@ -635,6 +689,10 @@ Partial Class Main
         Me.leftMainScreenPanel.ResumeLayout(False)
         Me.scrollablePanel.ResumeLayout(False)
         Me.scrollablePanel.PerformLayout()
+        Me.pubPanel.ResumeLayout(False)
+        Me.pubPanel.PerformLayout()
+        Me.pbPanel.ResumeLayout(False)
+        Me.pbPanel.PerformLayout()
         Me.authPanel.ResumeLayout(False)
         Me.authPanel.PerformLayout()
         Me.newTitlePanel.ResumeLayout(False)
@@ -643,10 +701,6 @@ Partial Class Main
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.upperMainScreenPanel.ResumeLayout(False)
         Me.upperMainScreenPanel.PerformLayout()
-        Me.pyPanel.ResumeLayout(False)
-        Me.pyPanel.PerformLayout()
-        Me.pubPanel.ResumeLayout(False)
-        Me.pubPanel.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -689,7 +743,7 @@ Partial Class Main
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents LinkLabel5 As LinkLabel
     Friend WithEvents LinkLabel6 As LinkLabel
-    Friend WithEvents pyPanel As Panel
+    Friend WithEvents pbPanel As Panel
     Friend WithEvents LinkLabel7 As LinkLabel
     Friend WithEvents LinkLabel8 As LinkLabel
     Friend WithEvents LinkLabel9 As LinkLabel
@@ -698,4 +752,8 @@ Partial Class Main
     Friend WithEvents LinkLabel11 As LinkLabel
     Friend WithEvents LinkLabel12 As LinkLabel
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape3 As PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
 End Class

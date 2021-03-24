@@ -109,6 +109,7 @@ Partial Class login
         'RectangleShape3
         '
         Me.RectangleShape3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RectangleShape3.BorderColor = System.Drawing.Color.White
         Me.RectangleShape3.CornerRadius = 41
         Me.RectangleShape3.FillColor = System.Drawing.Color.White
         Me.RectangleShape3.FillGradientColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
@@ -121,6 +122,7 @@ Partial Class login
         'RectangleShape2
         '
         Me.RectangleShape2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.White
         Me.RectangleShape2.CornerRadius = 41
         Me.RectangleShape2.FillColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.RectangleShape2.FillGradientColor = System.Drawing.Color.White
@@ -133,6 +135,7 @@ Partial Class login
         'RectangleShape1
         '
         Me.RectangleShape1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.White
         Me.RectangleShape1.CornerRadius = 41
         Me.RectangleShape1.FillColor = System.Drawing.Color.White
         Me.RectangleShape1.FillGradientColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
@@ -185,6 +188,7 @@ Partial Class login
         'RectangleShape4
         '
         Me.RectangleShape4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RectangleShape4.BorderColor = System.Drawing.Color.White
         Me.RectangleShape4.CornerRadius = 41
         Me.RectangleShape4.FillColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.RectangleShape4.FillGradientColor = System.Drawing.Color.White
