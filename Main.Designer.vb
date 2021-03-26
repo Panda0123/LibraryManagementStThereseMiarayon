@@ -39,6 +39,8 @@ Partial Class Main
         Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
         Me.newTitlePanel = New System.Windows.Forms.Panel()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.publisherBtn = New System.Windows.Forms.Button()
         Me.pbBtn = New System.Windows.Forms.Button()
@@ -51,6 +53,9 @@ Partial Class Main
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
         Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.mainPanel = New System.Windows.Forms.Panel()
+        Me.PageNumLabel = New System.Windows.Forms.Label()
+        Me.Button_Back = New System.Windows.Forms.LinkLabel()
+        Me.LinkLabel13 = New System.Windows.Forms.LinkLabel()
         Me.loginBtn = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.upperMainScreenPanel = New System.Windows.Forms.Panel()
@@ -68,8 +73,6 @@ Partial Class Main
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
         Me.pubPanel.SuspendLayout()
@@ -87,15 +90,14 @@ Partial Class Main
         '
         'leftMainScreenPanel
         '
-        Me.leftMainScreenPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.leftMainScreenPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.leftMainScreenPanel.AutoScroll = True
         Me.leftMainScreenPanel.Controls.Add(Me.scrollablePanel)
         Me.leftMainScreenPanel.Location = New System.Drawing.Point(275, 316)
         Me.leftMainScreenPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.leftMainScreenPanel.Name = "leftMainScreenPanel"
-        Me.leftMainScreenPanel.Size = New System.Drawing.Size(390, 442)
+        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 442)
         Me.leftMainScreenPanel.TabIndex = 11
         '
         'scrollablePanel
@@ -136,7 +138,7 @@ Partial Class Main
         Me.LinkLabel10.AutoSize = True
         Me.LinkLabel10.Location = New System.Drawing.Point(12, -44)
         Me.LinkLabel10.Name = "LinkLabel10"
-        Me.LinkLabel10.Size = New System.Drawing.Size(85, 17)
+        Me.LinkLabel10.Size = New System.Drawing.Size(118, 25)
         Me.LinkLabel10.TabIndex = 2
         Me.LinkLabel10.TabStop = True
         Me.LinkLabel10.Text = "LinkLabel10"
@@ -147,7 +149,7 @@ Partial Class Main
         Me.LinkLabel11.AutoSize = True
         Me.LinkLabel11.Location = New System.Drawing.Point(12, -16)
         Me.LinkLabel11.Name = "LinkLabel11"
-        Me.LinkLabel11.Size = New System.Drawing.Size(85, 17)
+        Me.LinkLabel11.Size = New System.Drawing.Size(115, 25)
         Me.LinkLabel11.TabIndex = 1
         Me.LinkLabel11.TabStop = True
         Me.LinkLabel11.Text = "LinkLabel11"
@@ -157,7 +159,7 @@ Partial Class Main
         Me.LinkLabel12.AutoSize = True
         Me.LinkLabel12.Location = New System.Drawing.Point(12, 11)
         Me.LinkLabel12.Name = "LinkLabel12"
-        Me.LinkLabel12.Size = New System.Drawing.Size(85, 17)
+        Me.LinkLabel12.Size = New System.Drawing.Size(116, 25)
         Me.LinkLabel12.TabIndex = 0
         Me.LinkLabel12.TabStop = True
         Me.LinkLabel12.Text = "LinkLabel12"
@@ -178,7 +180,7 @@ Partial Class Main
         Me.LinkLabel7.AutoSize = True
         Me.LinkLabel7.Location = New System.Drawing.Point(12, -44)
         Me.LinkLabel7.Name = "LinkLabel7"
-        Me.LinkLabel7.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel7.Size = New System.Drawing.Size(107, 25)
         Me.LinkLabel7.TabIndex = 2
         Me.LinkLabel7.TabStop = True
         Me.LinkLabel7.Text = "LinkLabel7"
@@ -189,7 +191,7 @@ Partial Class Main
         Me.LinkLabel8.AutoSize = True
         Me.LinkLabel8.Location = New System.Drawing.Point(12, -16)
         Me.LinkLabel8.Name = "LinkLabel8"
-        Me.LinkLabel8.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel8.Size = New System.Drawing.Size(108, 25)
         Me.LinkLabel8.TabIndex = 1
         Me.LinkLabel8.TabStop = True
         Me.LinkLabel8.Text = "LinkLabel8"
@@ -199,7 +201,7 @@ Partial Class Main
         Me.LinkLabel9.AutoSize = True
         Me.LinkLabel9.Location = New System.Drawing.Point(12, 11)
         Me.LinkLabel9.Name = "LinkLabel9"
-        Me.LinkLabel9.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel9.Size = New System.Drawing.Size(108, 25)
         Me.LinkLabel9.TabIndex = 0
         Me.LinkLabel9.TabStop = True
         Me.LinkLabel9.Text = "LinkLabel9"
@@ -220,7 +222,7 @@ Partial Class Main
         Me.LinkLabel4.AutoSize = True
         Me.LinkLabel4.Location = New System.Drawing.Point(12, -44)
         Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel4.Size = New System.Drawing.Size(108, 25)
         Me.LinkLabel4.TabIndex = 2
         Me.LinkLabel4.TabStop = True
         Me.LinkLabel4.Text = "LinkLabel4"
@@ -231,7 +233,7 @@ Partial Class Main
         Me.LinkLabel5.AutoSize = True
         Me.LinkLabel5.Location = New System.Drawing.Point(12, -16)
         Me.LinkLabel5.Name = "LinkLabel5"
-        Me.LinkLabel5.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel5.Size = New System.Drawing.Size(107, 25)
         Me.LinkLabel5.TabIndex = 1
         Me.LinkLabel5.TabStop = True
         Me.LinkLabel5.Text = "LinkLabel5"
@@ -241,7 +243,7 @@ Partial Class Main
         Me.LinkLabel6.AutoSize = True
         Me.LinkLabel6.Location = New System.Drawing.Point(12, 11)
         Me.LinkLabel6.Name = "LinkLabel6"
-        Me.LinkLabel6.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabel6.Size = New System.Drawing.Size(108, 25)
         Me.LinkLabel6.TabIndex = 0
         Me.LinkLabel6.TabStop = True
         Me.LinkLabel6.Text = "LinkLabel6"
@@ -256,16 +258,49 @@ Partial Class Main
         Me.newTitlePanel.Size = New System.Drawing.Size(254, 0)
         Me.newTitlePanel.TabIndex = 14
         '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabel3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LinkLabel3.AutoSize = True
+        Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.LinkLabel3.Location = New System.Drawing.Point(12, 22)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(102, 35)
+        Me.LinkLabel3.TabIndex = 0
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Last Year"
+        Me.LinkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.LinkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LinkLabel2.AutoSize = True
+        Me.LinkLabel2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.LinkLabel2.Location = New System.Drawing.Point(12, -17)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(166, 35)
+        Me.LinkLabel2.TabIndex = 0
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Last Six Months"
+        Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.LinkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.LinkLabel1.Location = New System.Drawing.Point(12, -63)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(186, 33)
+        Me.LinkLabel1.Size = New System.Drawing.Size(191, 35)
         Me.LinkLabel1.TabIndex = 0
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Last Three Months"
@@ -442,17 +477,61 @@ Partial Class Main
         'mainPanel
         '
         Me.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.mainPanel.Controls.Add(Me.PageNumLabel)
+        Me.mainPanel.Controls.Add(Me.Button_Back)
+        Me.mainPanel.Controls.Add(Me.LinkLabel13)
         Me.mainPanel.Controls.Add(Me.loginBtn)
         Me.mainPanel.Controls.Add(Me.FlowLayoutPanel1)
         Me.mainPanel.Controls.Add(Me.upperMainScreenPanel)
         Me.mainPanel.Controls.Add(Me.leftMainScreenPanel)
         Me.mainPanel.Controls.Add(Me.ShapeContainer1)
         Me.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.mainPanel.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mainPanel.Location = New System.Drawing.Point(0, 0)
         Me.mainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.mainPanel.Name = "mainPanel"
         Me.mainPanel.Size = New System.Drawing.Size(1441, 759)
         Me.mainPanel.TabIndex = 12
+        '
+        'PageNumLabel
+        '
+        Me.PageNumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.PageNumLabel.AutoSize = True
+        Me.PageNumLabel.Location = New System.Drawing.Point(1023, 717)
+        Me.PageNumLabel.Name = "PageNumLabel"
+        Me.PageNumLabel.Size = New System.Drawing.Size(67, 25)
+        Me.PageNumLabel.TabIndex = 0
+        Me.PageNumLabel.Text = "Page 1"
+        '
+        'Button_Back
+        '
+        Me.Button_Back.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.Button_Back.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Button_Back.AutoSize = True
+        Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.Button_Back.Location = New System.Drawing.Point(876, 717)
+        Me.Button_Back.Name = "Button_Back"
+        Me.Button_Back.Size = New System.Drawing.Size(87, 25)
+        Me.Button_Back.TabIndex = 16
+        Me.Button_Back.TabStop = True
+        Me.Button_Back.Text = "Previous"
+        '
+        'LinkLabel13
+        '
+        Me.LinkLabel13.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.LinkLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.LinkLabel13.AutoSize = True
+        Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.LinkLabel13.Location = New System.Drawing.Point(1154, 717)
+        Me.LinkLabel13.Name = "LinkLabel13"
+        Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
+        Me.LinkLabel13.TabIndex = 16
+        Me.LinkLabel13.TabStop = True
+        Me.LinkLabel13.Text = "Next"
         '
         'loginBtn
         '
@@ -482,7 +561,7 @@ Partial Class Main
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(641, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(798, 757)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(798, 708)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
         '
@@ -640,36 +719,6 @@ Partial Class Main
         'Timer4
         '
         '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(12, -17)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(160, 33)
-        Me.LinkLabel2.TabIndex = 0
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Last Six Months"
-        Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        '
-        'LinkLabel3
-        '
-        Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.LinkLabel3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(12, 22)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(99, 33)
-        Me.LinkLabel3.TabIndex = 0
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "Last Year"
-        Me.LinkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        '
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
@@ -679,7 +728,7 @@ Partial Class Main
         Me.ClientSize = New System.Drawing.Size(1441, 759)
         Me.Controls.Add(Me.mainPanel)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(1457, 796)
+        Me.MinimumSize = New System.Drawing.Size(1169, 645)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
@@ -698,6 +747,7 @@ Partial Class Main
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mainPanel.ResumeLayout(False)
+        Me.mainPanel.PerformLayout()
         Me.upperMainScreenPanel.ResumeLayout(False)
         Me.upperMainScreenPanel.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -752,4 +802,7 @@ Partial Class Main
     Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents Button_Back As LinkLabel
+    Friend WithEvents LinkLabel13 As LinkLabel
+    Friend WithEvents PageNumLabel As Label
 End Class

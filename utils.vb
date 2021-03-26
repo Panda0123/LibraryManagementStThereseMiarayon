@@ -29,9 +29,7 @@
             tailObj2.Location = New Point(tailObj2.Location.X, tailObj2.Location.Y - 127)
             tailObj3.Location = New Point(tailObj3.Location.X, tailObj3.Location.Y - 127)
             Main.Timer1.Enabled = False
-
         End If
-
     End Sub
 
     Public Sub dropDownAnimationauthBtn(panel As Panel, tailObj1 As Button, tailObj2 As Button)
@@ -44,9 +42,7 @@
             tailObj1.Location = New Point(tailObj1.Location.X, tailObj1.Location.Y - 127)
             tailObj2.Location = New Point(tailObj2.Location.X, tailObj2.Location.Y - 127)
             Main.Timer2.Enabled = False
-
         End If
-        authOpen = True
     End Sub
 
     Public Sub dropDownAnimationpy(panel As Panel, tailObj1 As Button)
@@ -58,7 +54,6 @@
             tailObj1.Location = New Point(tailObj1.Location.X, tailObj1.Location.Y - 127)
             Main.Timer3.Enabled = False
         End If
-        pbOpen = True
     End Sub
 
     Public Sub dropDownAnimationpub(panel As Panel)
@@ -68,7 +63,6 @@
             panel.Height = 0
             Main.Timer4.Enabled = False
         End If
-        pubOpen = True
     End Sub
 
 
