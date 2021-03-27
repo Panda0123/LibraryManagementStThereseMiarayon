@@ -48,12 +48,23 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -75,32 +86,37 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
+    <Compile Include="bookDisplay.Designer.vb">
+      <DependentUpon>bookDisplay.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-=======
-    <Compile Include="Book.Designer.vb">
-      <DependentUpon>Book.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Book.vb">
+    <Compile Include="bookDisplay.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BookDisplay.vb" />
+    <Compile Include="displayBookvb.vb" />
+    <Compile Include="advanceSearch.Designer.vb">
+      <DependentUpon>advanceSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="advanceSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
->>>>>>> Stashed changes
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -112,18 +128,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="utils.vb" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-=======
-    <EmbeddedResource Include="Book.resx">
-      <DependentUpon>Book.vb</DependentUpon>
+    <EmbeddedResource Include="bookDisplay.resx">
+      <DependentUpon>bookDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advanceSearch.resx">
+      <DependentUpon>advanceSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
->>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -133,6 +151,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -145,6 +164,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Login Button.png" />
   </ItemGroup>
   <ItemGroup>
@@ -162,8 +182,6 @@
   <ItemGroup>
     <None Include="Resources\St. Therese School of Miarayon_logo.png" />
   </ItemGroup>
-<<<<<<< Updated upstream
-=======
   <ItemGroup>
     <None Include="Resources\pngtree-fashion-search-box-image_1310125.jpg" />
   </ItemGroup>
@@ -180,8 +198,25 @@
     <None Include="Resources\pic 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pic 11.png" />
+    <None Include="Resources\Rectangle 5.png" />
   </ItemGroup>
->>>>>>> Stashed changes
+  <ItemGroup>
+    <None Include="Resources\Log In Dialog Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polygon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 18.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
