@@ -43,7 +43,7 @@ Partial Class bookDisplay
         Me.bTitle.AutoSize = True
         Me.bTitle.Font = New System.Drawing.Font("Maiandra GD", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bTitle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.bTitle.Location = New System.Drawing.Point(245, 39)
+        Me.bTitle.Location = New System.Drawing.Point(245, 81)
         Me.bTitle.Name = "bTitle"
         Me.bTitle.Size = New System.Drawing.Size(866, 40)
         Me.bTitle.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class bookDisplay
         Me.bAuthor.AutoSize = True
         Me.bAuthor.Font = New System.Drawing.Font("Maiandra GD", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bAuthor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.bAuthor.Location = New System.Drawing.Point(246, 80)
+        Me.bAuthor.Location = New System.Drawing.Point(246, 122)
         Me.bAuthor.Name = "bAuthor"
         Me.bAuthor.Size = New System.Drawing.Size(174, 34)
         Me.bAuthor.TabIndex = 2
@@ -66,7 +66,7 @@ Partial Class bookDisplay
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(249, 140)
+        Me.Label1.Location = New System.Drawing.Point(249, 182)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(95, 29)
         Me.Label1.TabIndex = 3
@@ -77,7 +77,7 @@ Partial Class bookDisplay
         Me.bLanguage.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bLanguage.AutoSize = True
         Me.bLanguage.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bLanguage.Location = New System.Drawing.Point(350, 140)
+        Me.bLanguage.Location = New System.Drawing.Point(350, 182)
         Me.bLanguage.Name = "bLanguage"
         Me.bLanguage.Size = New System.Drawing.Size(72, 29)
         Me.bLanguage.TabIndex = 4
@@ -88,7 +88,7 @@ Partial Class bookDisplay
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(249, 177)
+        Me.Label3.Location = New System.Drawing.Point(249, 219)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(94, 29)
         Me.Label3.TabIndex = 5
@@ -99,7 +99,7 @@ Partial Class bookDisplay
         Me.bPublisher.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bPublisher.AutoSize = True
         Me.bPublisher.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bPublisher.Location = New System.Drawing.Point(350, 177)
+        Me.bPublisher.Location = New System.Drawing.Point(350, 219)
         Me.bPublisher.Name = "bPublisher"
         Me.bPublisher.Size = New System.Drawing.Size(427, 29)
         Me.bPublisher.TabIndex = 5
@@ -146,7 +146,7 @@ Partial Class bookDisplay
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1245, 293)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1245, 376)
         Me.ShapeContainer1.TabIndex = 6
         Me.ShapeContainer1.TabStop = False
         '
@@ -159,7 +159,7 @@ Partial Class bookDisplay
         Me.RectangleShape1.CornerRadius = 20
         Me.RectangleShape1.Location = New System.Drawing.Point(5, 4)
         Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(1230, 276)
+        Me.RectangleShape1.Size = New System.Drawing.Size(1230, 359)
         '
         'bookDisplay
         '
@@ -177,7 +177,7 @@ Partial Class bookDisplay
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "bookDisplay"
-        Me.Size = New System.Drawing.Size(1245, 293)
+        Me.Size = New System.Drawing.Size(1245, 376)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

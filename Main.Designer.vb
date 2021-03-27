@@ -97,7 +97,7 @@ Partial Class Main
         Me.leftMainScreenPanel.Location = New System.Drawing.Point(275, 316)
         Me.leftMainScreenPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.leftMainScreenPanel.Name = "leftMainScreenPanel"
-        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 442)
+        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 428)
         Me.leftMainScreenPanel.TabIndex = 11
         '
         'scrollablePanel
@@ -357,7 +357,7 @@ Partial Class Main
         Me.authBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.authBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
         Me.authBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.authBtn.Location = New System.Drawing.Point(25, 304)
+        Me.authBtn.Location = New System.Drawing.Point(25, 307)
         Me.authBtn.Name = "authBtn"
         Me.authBtn.Size = New System.Drawing.Size(276, 52)
         Me.authBtn.TabIndex = 13
@@ -377,7 +377,7 @@ Partial Class Main
         Me.newTitleBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.newTitleBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
         Me.newTitleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.newTitleBtn.Location = New System.Drawing.Point(25, 254)
+        Me.newTitleBtn.Location = New System.Drawing.Point(25, 260)
         Me.newTitleBtn.Name = "newTitleBtn"
         Me.newTitleBtn.Size = New System.Drawing.Size(276, 52)
         Me.newTitleBtn.TabIndex = 13
@@ -490,14 +490,14 @@ Partial Class Main
         Me.mainPanel.Location = New System.Drawing.Point(0, 0)
         Me.mainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.mainPanel.Name = "mainPanel"
-        Me.mainPanel.Size = New System.Drawing.Size(1441, 759)
+        Me.mainPanel.Size = New System.Drawing.Size(1152, 745)
         Me.mainPanel.TabIndex = 12
         '
         'PageNumLabel
         '
         Me.PageNumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PageNumLabel.AutoSize = True
-        Me.PageNumLabel.Location = New System.Drawing.Point(1023, 717)
+        Me.PageNumLabel.Location = New System.Drawing.Point(879, 703)
         Me.PageNumLabel.Name = "PageNumLabel"
         Me.PageNumLabel.Size = New System.Drawing.Size(67, 25)
         Me.PageNumLabel.TabIndex = 0
@@ -511,7 +511,7 @@ Partial Class Main
         Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Button_Back.Location = New System.Drawing.Point(876, 717)
+        Me.Button_Back.Location = New System.Drawing.Point(732, 703)
         Me.Button_Back.Name = "Button_Back"
         Me.Button_Back.Size = New System.Drawing.Size(87, 25)
         Me.Button_Back.TabIndex = 16
@@ -526,7 +526,7 @@ Partial Class Main
         Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel13.Location = New System.Drawing.Point(1154, 717)
+        Me.LinkLabel13.Location = New System.Drawing.Point(1010, 703)
         Me.LinkLabel13.Name = "LinkLabel13"
         Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
         Me.LinkLabel13.TabIndex = 16
@@ -543,7 +543,7 @@ Partial Class Main
         Me.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.loginBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.loginBtn.Location = New System.Drawing.Point(22, 330)
+        Me.loginBtn.Location = New System.Drawing.Point(22, 331)
         Me.loginBtn.Name = "loginBtn"
         Me.loginBtn.Size = New System.Drawing.Size(215, 52)
         Me.loginBtn.TabIndex = 14
@@ -558,10 +558,11 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(641, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(798, 708)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(509, 694)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
         '
@@ -664,7 +665,7 @@ Partial Class Main
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1, Me.RectangleShape3})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1439, 757)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1150, 743)
         Me.ShapeContainer1.TabIndex = 15
         Me.ShapeContainer1.TabStop = False
         '
@@ -725,7 +726,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1441, 759)
+        Me.ClientSize = New System.Drawing.Size(1152, 745)
         Me.Controls.Add(Me.mainPanel)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(1169, 645)

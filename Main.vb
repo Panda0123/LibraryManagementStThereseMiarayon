@@ -146,9 +146,9 @@
         pbBtn.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 127)
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
 
-        authPanel.Location = New Point(authBtn.Location.X, authBtn.Location.Y + 55)
-        pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 55)
-        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
+        authPanel.Location = New Point(authBtn.Location.X, authBtn.Location.Y + 45)
+        pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 45)
+        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
 
         Timer1.Stop()
     End Sub
@@ -158,8 +158,8 @@
 
         pbBtn.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 127)
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
-        pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 55)
-        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
+        pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 45)
+        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
 
         Timer2.Stop()
     End Sub
@@ -168,7 +168,7 @@
         pbPanel.Height = 127
 
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
-        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 55)
+        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
 
         Timer3.Stop()
     End Sub
