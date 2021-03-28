@@ -54,3 +54,7 @@ G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\ob
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Book.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.login.resources

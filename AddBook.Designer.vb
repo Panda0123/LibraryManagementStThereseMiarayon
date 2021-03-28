@@ -156,9 +156,10 @@ Partial Class AddBook
         Me.advanceSearchLinkLbl.BackColor = System.Drawing.Color.Transparent
         Me.advanceSearchLinkLbl.Font = New System.Drawing.Font("Sitka Subheading", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.advanceSearchLinkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(164, 103)
+        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(219, 127)
+        Me.advanceSearchLinkLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.advanceSearchLinkLbl.Name = "advanceSearchLinkLbl"
-        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(117, 27)
+        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(156, 33)
         Me.advanceSearchLinkLbl.TabIndex = 11
         Me.advanceSearchLinkLbl.TabStop = True
         Me.advanceSearchLinkLbl.Text = "Advance Search"
@@ -170,10 +171,10 @@ Partial Class AddBook
         Me.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.searchTextBox.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchTextBox.Location = New System.Drawing.Point(52, 78)
-        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
+        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(262, 21)
+        Me.searchTextBox.Size = New System.Drawing.Size(349, 26)
         Me.searchTextBox.TabIndex = 8
         Me.searchTextBox.Text = "Search..."
         '
@@ -183,35 +184,35 @@ Partial Class AddBook
         Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(109, 5)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(145, 6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 60)
+        Me.Label1.Size = New System.Drawing.Size(393, 74)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'TopPanel
         '
-        Me.TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TopPanel.BackColor = System.Drawing.Color.White
         Me.TopPanel.Controls.Add(Me.PictureBox16)
         Me.TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
         Me.TopPanel.Controls.Add(Me.PictureBox7)
         Me.TopPanel.Controls.Add(Me.ShapeContainer2)
+        Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(1135, 127)
+        Me.TopPanel.Size = New System.Drawing.Size(2412, 195)
         Me.TopPanel.TabIndex = 2
         '
         'PictureBox16
         '
         Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1068, 11)
+        Me.PictureBox16.Location = New System.Drawing.Point(2899, 18)
+        Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(37, 34)
+        Me.PictureBox16.Size = New System.Drawing.Size(49, 42)
         Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox16.TabIndex = 3
         Me.PictureBox16.TabStop = False
@@ -228,11 +229,12 @@ Partial Class AddBook
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(409, 1)
-        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(465, 137)
-        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(465, 137)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(1241, 25)
+        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
+        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
-        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(465, 137)
+        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.TabIndex = 1
         '
         'PictureBox8
@@ -240,9 +242,10 @@ Partial Class AddBook
         Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(399, 77)
+        Me.PictureBox8.Location = New System.Drawing.Point(532, 95)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(24, 25)
+        Me.PictureBox8.Size = New System.Drawing.Size(32, 31)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 12
         Me.PictureBox8.TabStop = False
@@ -253,10 +256,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(35, 72)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox9.Location = New System.Drawing.Point(47, 89)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(402, 39)
+        Me.PictureBox9.Size = New System.Drawing.Size(536, 48)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 6
         Me.PictureBox9.TabStop = False
@@ -264,10 +267,10 @@ Partial Class AddBook
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(375, 81)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Location = New System.Drawing.Point(500, 100)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(29, 19)
+        Me.PictureBox3.Size = New System.Drawing.Size(39, 23)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 10
         Me.PictureBox3.TabStop = False
@@ -276,10 +279,10 @@ Partial Class AddBook
         '
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(35, 75)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Location = New System.Drawing.Point(47, 92)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(378, 36)
+        Me.PictureBox2.Size = New System.Drawing.Size(504, 44)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
@@ -288,10 +291,10 @@ Partial Class AddBook
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(35, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Location = New System.Drawing.Point(47, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(81, 67)
+        Me.PictureBox1.Size = New System.Drawing.Size(108, 82)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
@@ -300,9 +303,10 @@ Partial Class AddBook
         '
         Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox7.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox7.Location = New System.Drawing.Point(1278, 7)
+        Me.PictureBox7.Location = New System.Drawing.Point(3249, 11)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(50, 42)
+        Me.PictureBox7.Size = New System.Drawing.Size(67, 52)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox7.TabIndex = 2
         Me.PictureBox7.TabStop = False
@@ -313,7 +317,7 @@ Partial Class AddBook
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1135, 127)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(2412, 195)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -323,7 +327,7 @@ Partial Class AddBook
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1391, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1544, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -334,7 +338,7 @@ Partial Class AddBook
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1389, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1542, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -347,9 +351,10 @@ Partial Class AddBook
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.MainPanel)
         Me.Panel1.Controls.Add(Me.LeftSidePanel)
-        Me.Panel1.Location = New System.Drawing.Point(0, 130)
+        Me.Panel1.Location = New System.Drawing.Point(0, 250)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1135, 1475)
+        Me.Panel1.Size = New System.Drawing.Size(2901, 2836)
         Me.Panel1.TabIndex = 3
         '
         'MainPanel
@@ -364,18 +369,20 @@ Partial Class AddBook
         Me.MainPanel.Controls.Add(Me.PictureBox4)
         Me.MainPanel.Controls.Add(Me.Panel2)
         Me.MainPanel.Controls.Add(Me.ImageSummaryPanel)
-        Me.MainPanel.Location = New System.Drawing.Point(201, 5)
+        Me.MainPanel.Location = New System.Drawing.Point(268, 6)
+        Me.MainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(902, 1419)
+        Me.MainPanel.Size = New System.Drawing.Size(2590, 2767)
         Me.MainPanel.TabIndex = 1
         '
         'PictureBox6
         '
         Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox6.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.PictureBox6.Location = New System.Drawing.Point(544, 1374)
+        Me.PictureBox6.Location = New System.Drawing.Point(1419, 2201)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(260, 41)
+        Me.PictureBox6.Size = New System.Drawing.Size(347, 50)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 4
         Me.PictureBox6.TabStop = False
@@ -384,18 +391,20 @@ Partial Class AddBook
         '
         Me.PictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox5.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.PictureBox5.Location = New System.Drawing.Point(121, 1374)
+        Me.PictureBox5.Location = New System.Drawing.Point(855, 2201)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(260, 41)
+        Me.PictureBox5.Size = New System.Drawing.Size(347, 50)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 3
         Me.PictureBox5.TabStop = False
         '
         'PictureBox4
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(212, 1444)
+        Me.PictureBox4.Location = New System.Drawing.Point(283, 1777)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(148, 22)
+        Me.PictureBox4.Size = New System.Drawing.Size(197, 27)
         Me.PictureBox4.TabIndex = 2
         Me.PictureBox4.TabStop = False
         '
@@ -425,9 +434,10 @@ Partial Class AddBook
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.titleTxtBx)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Location = New System.Drawing.Point(20, 285)
+        Me.Panel2.Location = New System.Drawing.Point(27, 351)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(860, 1082)
+        Me.Panel2.Size = New System.Drawing.Size(2535, 2353)
         Me.Panel2.TabIndex = 1
         '
         'Panel4
@@ -450,25 +460,28 @@ Partial Class AddBook
         Me.Panel4.Controls.Add(Me.TextBox8)
         Me.Panel4.Controls.Add(Me.Label18)
         Me.Panel4.Controls.Add(Me.TextBox11)
-        Me.Panel4.Location = New System.Drawing.Point(20, 781)
+        Me.Panel4.Location = New System.Drawing.Point(27, 961)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(797, 291)
+        Me.Panel4.Size = New System.Drawing.Size(2450, 358)
         Me.Panel4.TabIndex = 88
         '
         'MetroButton5
         '
-        Me.MetroButton5.Location = New System.Drawing.Point(564, 186)
+        Me.MetroButton5.Location = New System.Drawing.Point(752, 229)
+        Me.MetroButton5.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton5.Name = "MetroButton5"
-        Me.MetroButton5.Size = New System.Drawing.Size(96, 32)
+        Me.MetroButton5.Size = New System.Drawing.Size(128, 39)
         Me.MetroButton5.TabIndex = 95
         Me.MetroButton5.Text = "Remove"
         Me.MetroButton5.UseSelectable = True
         '
         'MetroButton4
         '
-        Me.MetroButton4.Location = New System.Drawing.Point(564, 224)
+        Me.MetroButton4.Location = New System.Drawing.Point(752, 276)
+        Me.MetroButton4.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton4.Name = "MetroButton4"
-        Me.MetroButton4.Size = New System.Drawing.Size(96, 32)
+        Me.MetroButton4.Size = New System.Drawing.Size(128, 39)
         Me.MetroButton4.TabIndex = 94
         Me.MetroButton4.Text = "Update"
         Me.MetroButton4.UseSelectable = True
@@ -476,9 +489,10 @@ Partial Class AddBook
         'MetroButton3
         '
         Me.MetroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MetroButton3.Location = New System.Drawing.Point(444, 186)
+        Me.MetroButton3.Location = New System.Drawing.Point(592, 229)
+        Me.MetroButton3.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton3.Name = "MetroButton3"
-        Me.MetroButton3.Size = New System.Drawing.Size(96, 32)
+        Me.MetroButton3.Size = New System.Drawing.Size(128, 39)
         Me.MetroButton3.TabIndex = 93
         Me.MetroButton3.Text = "Add"
         Me.MetroButton3.UseSelectable = True
@@ -487,19 +501,19 @@ Partial Class AddBook
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(388, 144)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label22.Location = New System.Drawing.Point(517, 177)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(62, 23)
+        Me.Label22.Size = New System.Drawing.Size(79, 29)
         Me.Label22.TabIndex = 90
         Me.Label22.Text = "Number"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'MetroButton1
         '
-        Me.MetroButton1.Location = New System.Drawing.Point(444, 224)
+        Me.MetroButton1.Location = New System.Drawing.Point(592, 276)
+        Me.MetroButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.MetroButton1.Name = "MetroButton1"
-        Me.MetroButton1.Size = New System.Drawing.Size(96, 32)
+        Me.MetroButton1.Size = New System.Drawing.Size(128, 39)
         Me.MetroButton1.TabIndex = 92
         Me.MetroButton1.Text = "Get"
         Me.MetroButton1.UseSelectable = True
@@ -508,19 +522,19 @@ Partial Class AddBook
         '
         Me.TextBox13.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox13.ForeColor = System.Drawing.Color.Black
-        Me.TextBox13.Location = New System.Drawing.Point(454, 142)
+        Me.TextBox13.Location = New System.Drawing.Point(605, 175)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(204, 28)
+        Me.TextBox13.Size = New System.Drawing.Size(271, 33)
         Me.TextBox13.TabIndex = 91
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(51, 9)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label21.Location = New System.Drawing.Point(68, 11)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(81, 23)
+        Me.Label21.Size = New System.Drawing.Size(102, 29)
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Author List"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -529,11 +543,11 @@ Partial Class AddBook
         '
         Me.authorsText.BackColor = System.Drawing.Color.White
         Me.authorsText.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.authorsText.Location = New System.Drawing.Point(51, 29)
-        Me.authorsText.Margin = New System.Windows.Forms.Padding(2)
+        Me.authorsText.Location = New System.Drawing.Point(68, 36)
+        Me.authorsText.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.authorsText.Name = "authorsText"
         Me.authorsText.ReadOnly = True
-        Me.authorsText.Size = New System.Drawing.Size(311, 286)
+        Me.authorsText.Size = New System.Drawing.Size(415, 352)
         Me.authorsText.TabIndex = 88
         Me.authorsText.Text = ""
         '
@@ -541,10 +555,9 @@ Partial Class AddBook
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(374, 109)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Location = New System.Drawing.Point(499, 134)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(77, 23)
+        Me.Label20.Size = New System.Drawing.Size(98, 29)
         Me.Label20.TabIndex = 86
         Me.Label20.Text = "Last Name"
         Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -553,19 +566,19 @@ Partial Class AddBook
         '
         Me.TextBox12.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox12.ForeColor = System.Drawing.Color.Black
-        Me.TextBox12.Location = New System.Drawing.Point(454, 106)
+        Me.TextBox12.Location = New System.Drawing.Point(605, 130)
+        Me.TextBox12.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(204, 28)
+        Me.TextBox12.Size = New System.Drawing.Size(271, 33)
         Me.TextBox12.TabIndex = 87
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(358, 71)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Location = New System.Drawing.Point(477, 87)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(94, 23)
+        Me.Label17.Size = New System.Drawing.Size(120, 29)
         Me.Label17.TabIndex = 84
         Me.Label17.Text = "Middle Initial"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -574,19 +587,19 @@ Partial Class AddBook
         '
         Me.TextBox8.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox8.ForeColor = System.Drawing.Color.Black
-        Me.TextBox8.Location = New System.Drawing.Point(454, 68)
+        Me.TextBox8.Location = New System.Drawing.Point(605, 84)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(204, 28)
+        Me.TextBox8.Size = New System.Drawing.Size(271, 33)
         Me.TextBox8.TabIndex = 85
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(370, 30)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label18.Location = New System.Drawing.Point(493, 37)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(80, 23)
+        Me.Label18.Size = New System.Drawing.Size(102, 29)
         Me.Label18.TabIndex = 83
         Me.Label18.Text = "First Name"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -595,19 +608,19 @@ Partial Class AddBook
         '
         Me.TextBox11.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox11.ForeColor = System.Drawing.Color.Black
-        Me.TextBox11.Location = New System.Drawing.Point(454, 28)
+        Me.TextBox11.Location = New System.Drawing.Point(605, 34)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(204, 28)
+        Me.TextBox11.Size = New System.Drawing.Size(271, 33)
         Me.TextBox11.TabIndex = 83
         '
         'Label19
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(17, 754)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label19.Location = New System.Drawing.Point(23, 928)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(76, 28)
+        Me.Label19.Size = New System.Drawing.Size(95, 35)
         Me.Label19.TabIndex = 87
         Me.Label19.Text = "Authors"
         Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -616,10 +629,9 @@ Partial Class AddBook
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(16, 362)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Location = New System.Drawing.Point(21, 446)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(159, 24)
+        Me.Label13.Size = New System.Drawing.Size(205, 32)
         Me.Label13.TabIndex = 86
         Me.Label13.Text = "Shelf Name/Number"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -630,9 +642,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox2.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(19, 389)
+        Me.ComboBox2.Location = New System.Drawing.Point(25, 479)
+        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(798, 31)
+        Me.ComboBox2.Size = New System.Drawing.Size(2451, 37)
         Me.ComboBox2.TabIndex = 85
         '
         'Panel3
@@ -645,9 +658,10 @@ Partial Class AddBook
         Me.Panel3.Controls.Add(Me.TextBox9)
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.TextBox10)
-        Me.Panel3.Location = New System.Drawing.Point(19, 645)
+        Me.Panel3.Location = New System.Drawing.Point(25, 794)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(797, 89)
+        Me.Panel3.Size = New System.Drawing.Size(2450, 109)
         Me.Panel3.TabIndex = 84
         '
         'Label14
@@ -656,10 +670,9 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(211, 22)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Location = New System.Drawing.Point(281, 27)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(47, 23)
+        Me.Label14.Size = New System.Drawing.Size(60, 29)
         Me.Label14.TabIndex = 84
         Me.Label14.Text = "Name"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -670,9 +683,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox9.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox9.ForeColor = System.Drawing.Color.Black
-        Me.TextBox9.Location = New System.Drawing.Point(215, 45)
+        Me.TextBox9.Location = New System.Drawing.Point(287, 55)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(536, 28)
+        Me.TextBox9.Size = New System.Drawing.Size(2101, 33)
         Me.TextBox9.TabIndex = 85
         '
         'Label15
@@ -681,10 +695,9 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(37, 22)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label15.Location = New System.Drawing.Point(49, 27)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(38, 23)
+        Me.Label15.Size = New System.Drawing.Size(49, 29)
         Me.Label15.TabIndex = 83
         Me.Label15.Text = "Year"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -693,19 +706,19 @@ Partial Class AddBook
         '
         Me.TextBox10.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox10.ForeColor = System.Drawing.Color.Black
-        Me.TextBox10.Location = New System.Drawing.Point(41, 45)
+        Me.TextBox10.Location = New System.Drawing.Point(55, 55)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(107, 28)
+        Me.TextBox10.Size = New System.Drawing.Size(141, 33)
         Me.TextBox10.TabIndex = 83
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(15, 618)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label16.Location = New System.Drawing.Point(20, 761)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(176, 24)
+        Me.Label16.Size = New System.Drawing.Size(224, 32)
         Me.Label16.TabIndex = 83
         Me.Label16.Text = "Copyright Information"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -722,9 +735,10 @@ Partial Class AddBook
         Me.PublicationInformationPanel.Controls.Add(Me.TextBox6)
         Me.PublicationInformationPanel.Controls.Add(Me.Label10)
         Me.PublicationInformationPanel.Controls.Add(Me.TextBox5)
-        Me.PublicationInformationPanel.Location = New System.Drawing.Point(20, 455)
+        Me.PublicationInformationPanel.Location = New System.Drawing.Point(27, 560)
+        Me.PublicationInformationPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(797, 150)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(2450, 184)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'Label12
@@ -733,10 +747,9 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(37, 79)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Location = New System.Drawing.Point(49, 97)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(60, 23)
+        Me.Label12.Size = New System.Drawing.Size(77, 29)
         Me.Label12.TabIndex = 86
         Me.Label12.Text = "Address"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -747,9 +760,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox7.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.ForeColor = System.Drawing.Color.Black
-        Me.TextBox7.Location = New System.Drawing.Point(41, 102)
+        Me.TextBox7.Location = New System.Drawing.Point(55, 126)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(709, 28)
+        Me.TextBox7.Size = New System.Drawing.Size(2332, 33)
         Me.TextBox7.TabIndex = 87
         '
         'Label11
@@ -758,10 +772,9 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(211, 22)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Location = New System.Drawing.Point(281, 27)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(47, 23)
+        Me.Label11.Size = New System.Drawing.Size(60, 29)
         Me.Label11.TabIndex = 84
         Me.Label11.Text = "Name"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -772,9 +785,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox6.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.TextBox6.Location = New System.Drawing.Point(215, 45)
+        Me.TextBox6.Location = New System.Drawing.Point(287, 55)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(535, 28)
+        Me.TextBox6.Size = New System.Drawing.Size(2100, 33)
         Me.TextBox6.TabIndex = 85
         '
         'Label10
@@ -783,10 +797,9 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(37, 22)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Location = New System.Drawing.Point(49, 27)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 23)
+        Me.Label10.Size = New System.Drawing.Size(131, 29)
         Me.Label10.TabIndex = 83
         Me.Label10.Text = "Published Date"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -795,19 +808,19 @@ Partial Class AddBook
         '
         Me.TextBox5.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.ForeColor = System.Drawing.Color.Black
-        Me.TextBox5.Location = New System.Drawing.Point(41, 45)
+        Me.TextBox5.Location = New System.Drawing.Point(55, 55)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(107, 28)
+        Me.TextBox5.Size = New System.Drawing.Size(141, 33)
         Me.TextBox5.TabIndex = 83
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(16, 430)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(21, 529)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(186, 24)
+        Me.Label9.Size = New System.Drawing.Size(236, 32)
         Me.Label9.TabIndex = 81
         Me.Label9.Text = "Publication Information"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -816,10 +829,9 @@ Partial Class AddBook
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(16, 300)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(21, 369)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(108, 24)
+        Me.Label8.Size = New System.Drawing.Size(139, 32)
         Me.Label8.TabIndex = 80
         Me.Label8.Text = "Classification"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -830,9 +842,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(19, 327)
+        Me.ComboBox1.Location = New System.Drawing.Point(25, 402)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(798, 31)
+        Me.ComboBox1.Size = New System.Drawing.Size(2451, 37)
         Me.ComboBox1.TabIndex = 79
         '
         'TextBox4
@@ -841,19 +854,19 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox4.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.TextBox4.Location = New System.Drawing.Point(19, 267)
+        Me.TextBox4.Location = New System.Drawing.Point(25, 329)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(798, 28)
+        Me.TextBox4.Size = New System.Drawing.Size(2451, 33)
         Me.TextBox4.TabIndex = 78
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(16, 243)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(21, 299)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 24)
+        Me.Label6.Size = New System.Drawing.Size(105, 32)
         Me.Label6.TabIndex = 77
         Me.Label6.Text = "Language"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -864,19 +877,19 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(19, 210)
+        Me.TextBox3.Location = New System.Drawing.Point(25, 258)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(798, 28)
+        Me.TextBox3.Size = New System.Drawing.Size(2451, 33)
         Me.TextBox3.TabIndex = 76
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(15, 184)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(20, 226)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 24)
+        Me.Label3.Size = New System.Drawing.Size(97, 32)
         Me.Label3.TabIndex = 75
         Me.Label3.Text = "Quantity"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -887,19 +900,19 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(19, 149)
+        Me.TextBox2.Location = New System.Drawing.Point(25, 183)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(798, 28)
+        Me.TextBox2.Size = New System.Drawing.Size(2451, 33)
         Me.TextBox2.TabIndex = 74
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(15, 126)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(20, 155)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 24)
+        Me.Label7.Size = New System.Drawing.Size(83, 32)
         Me.Label7.TabIndex = 73
         Me.Label7.Text = "Edition"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -910,19 +923,19 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(19, 92)
+        Me.TextBox1.Location = New System.Drawing.Point(25, 113)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(798, 28)
+        Me.TextBox1.Size = New System.Drawing.Size(2451, 33)
         Me.TextBox1.TabIndex = 72
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(16, 69)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(21, 85)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 24)
+        Me.Label4.Size = New System.Drawing.Size(62, 32)
         Me.Label4.TabIndex = 71
         Me.Label4.Text = "ISBN"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -933,19 +946,19 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.titleTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.titleTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.titleTxtBx.Location = New System.Drawing.Point(19, 32)
+        Me.titleTxtBx.Location = New System.Drawing.Point(25, 39)
+        Me.titleTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(798, 28)
+        Me.titleTxtBx.Size = New System.Drawing.Size(2451, 33)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(15, 9)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(20, 11)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 24)
+        Me.Label2.Size = New System.Drawing.Size(58, 32)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Title"
         '
@@ -959,17 +972,19 @@ Partial Class AddBook
         Me.ImageSummaryPanel.Controls.Add(Me.Label5)
         Me.ImageSummaryPanel.Controls.Add(Me.summaryTxtBx)
         Me.ImageSummaryPanel.Controls.Add(Me.bkPicBx)
-        Me.ImageSummaryPanel.Location = New System.Drawing.Point(22, 16)
+        Me.ImageSummaryPanel.Location = New System.Drawing.Point(29, 20)
+        Me.ImageSummaryPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(858, 247)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(2532, 304)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'PictureBox17
         '
         Me.PictureBox17.Image = Global.LibraryManagementSystem.My.Resources.Resources.addImageBtn__1_
-        Me.PictureBox17.Location = New System.Drawing.Point(96, 100)
+        Me.PictureBox17.Location = New System.Drawing.Point(128, 123)
+        Me.PictureBox17.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(30, 27)
+        Me.PictureBox17.Size = New System.Drawing.Size(40, 33)
         Me.PictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox17.TabIndex = 2
         Me.PictureBox17.TabStop = False
@@ -979,9 +994,10 @@ Partial Class AddBook
         Me.Label29.AutoSize = True
         Me.Label29.BackColor = System.Drawing.Color.White
         Me.Label29.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(65, 130)
+        Me.Label29.Location = New System.Drawing.Point(87, 160)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(98, 28)
+        Me.Label29.Size = New System.Drawing.Size(124, 35)
         Me.Label29.TabIndex = 2
         Me.Label29.Text = "Add Image"
         '
@@ -989,10 +1005,9 @@ Partial Class AddBook
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(259, 0)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(345, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 28)
+        Me.Label5.Size = New System.Drawing.Size(115, 35)
         Me.Label5.TabIndex = 73
         Me.Label5.Text = "Summary"
         '
@@ -1001,9 +1016,10 @@ Partial Class AddBook
         Me.summaryTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.summaryTxtBx.BackColor = System.Drawing.Color.White
-        Me.summaryTxtBx.Location = New System.Drawing.Point(263, 31)
+        Me.summaryTxtBx.Location = New System.Drawing.Point(351, 38)
+        Me.summaryTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.summaryTxtBx.Name = "summaryTxtBx"
-        Me.summaryTxtBx.Size = New System.Drawing.Size(564, 207)
+        Me.summaryTxtBx.Size = New System.Drawing.Size(2139, 254)
         Me.summaryTxtBx.TabIndex = 1
         Me.summaryTxtBx.Text = ""
         '
@@ -1013,9 +1029,10 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.bkPicBx.BackColor = System.Drawing.Color.White
         Me.bkPicBx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.bkPicBx.Location = New System.Drawing.Point(17, 5)
+        Me.bkPicBx.Location = New System.Drawing.Point(23, 6)
+        Me.bkPicBx.Margin = New System.Windows.Forms.Padding(4)
         Me.bkPicBx.Name = "bkPicBx"
-        Me.bkPicBx.Size = New System.Drawing.Size(199, 233)
+        Me.bkPicBx.Size = New System.Drawing.Size(265, 286)
         Me.bkPicBx.TabIndex = 0
         Me.bkPicBx.TabStop = False
         '
@@ -1028,9 +1045,10 @@ Partial Class AddBook
         Me.LeftSidePanel.Controls.Add(Me.Panel6)
         Me.LeftSidePanel.Controls.Add(Me.Panel10)
         Me.LeftSidePanel.Controls.Add(Me.Panel5)
-        Me.LeftSidePanel.Location = New System.Drawing.Point(13, 5)
+        Me.LeftSidePanel.Location = New System.Drawing.Point(17, 6)
+        Me.LeftSidePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.LeftSidePanel.Name = "LeftSidePanel"
-        Me.LeftSidePanel.Size = New System.Drawing.Size(190, 519)
+        Me.LeftSidePanel.Size = New System.Drawing.Size(253, 639)
         Me.LeftSidePanel.TabIndex = 0
         '
         'Panel8
@@ -1041,27 +1059,30 @@ Partial Class AddBook
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel8.Controls.Add(Me.Label26)
         Me.Panel8.Controls.Add(Me.PictureBox13)
-        Me.Panel8.Location = New System.Drawing.Point(3, 70)
+        Me.Panel8.Location = New System.Drawing.Point(4, 86)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(188, 42)
+        Me.Panel8.Size = New System.Drawing.Size(250, 51)
         Me.Panel8.TabIndex = 6
         '
         'Label26
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(78, 6)
+        Me.Label26.Location = New System.Drawing.Point(104, 7)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(41, 28)
+        Me.Label26.Size = New System.Drawing.Size(52, 35)
         Me.Label26.TabIndex = 1
         Me.Label26.Text = "Add"
         '
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
-        Me.PictureBox13.Location = New System.Drawing.Point(54, 13)
+        Me.PictureBox13.Location = New System.Drawing.Point(72, 16)
+        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(20, 16)
+        Me.PictureBox13.Size = New System.Drawing.Size(27, 20)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox13.TabIndex = 0
         Me.PictureBox13.TabStop = False
@@ -1073,9 +1094,10 @@ Partial Class AddBook
         Me.Panel7.BackColor = System.Drawing.Color.White
         Me.Panel7.Controls.Add(Me.Label25)
         Me.Panel7.Controls.Add(Me.PictureBox12)
-        Me.Panel7.Location = New System.Drawing.Point(3, 167)
+        Me.Panel7.Location = New System.Drawing.Point(4, 206)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(188, 42)
+        Me.Panel7.Size = New System.Drawing.Size(251, 52)
         Me.Panel7.TabIndex = 3
         '
         'Label25
@@ -1083,18 +1105,20 @@ Partial Class AddBook
         Me.Label25.AutoSize = True
         Me.Label25.BackColor = System.Drawing.Color.White
         Me.Label25.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(75, 6)
+        Me.Label25.Location = New System.Drawing.Point(100, 7)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(108, 28)
+        Me.Label25.Size = New System.Drawing.Size(135, 35)
         Me.Label25.TabIndex = 1
         Me.Label25.Text = "Reservations"
         '
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.LibraryManagementSystem.My.Resources.Resources.reserveBtn
-        Me.PictureBox12.Location = New System.Drawing.Point(53, 13)
+        Me.PictureBox12.Location = New System.Drawing.Point(71, 16)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(20, 16)
+        Me.PictureBox12.Size = New System.Drawing.Size(27, 20)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox12.TabIndex = 0
         Me.PictureBox12.TabStop = False
@@ -1106,17 +1130,19 @@ Partial Class AddBook
         Me.Panel9.BackColor = System.Drawing.Color.White
         Me.Panel9.Controls.Add(Me.PictureBox14)
         Me.Panel9.Controls.Add(Me.Label27)
-        Me.Panel9.Location = New System.Drawing.Point(3, 263)
+        Me.Panel9.Location = New System.Drawing.Point(4, 324)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(188, 42)
+        Me.Panel9.Size = New System.Drawing.Size(251, 52)
         Me.Panel9.TabIndex = 5
         '
         'PictureBox14
         '
         Me.PictureBox14.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
-        Me.PictureBox14.Location = New System.Drawing.Point(54, 15)
+        Me.PictureBox14.Location = New System.Drawing.Point(72, 18)
+        Me.PictureBox14.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(20, 16)
+        Me.PictureBox14.Size = New System.Drawing.Size(27, 20)
         Me.PictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox14.TabIndex = 0
         Me.PictureBox14.TabStop = False
@@ -1125,9 +1151,10 @@ Partial Class AddBook
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(81, 6)
+        Me.Label27.Location = New System.Drawing.Point(108, 7)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(71, 28)
+        Me.Label27.Size = New System.Drawing.Size(90, 35)
         Me.Label27.TabIndex = 1
         Me.Label27.Text = "Records"
         '
@@ -1138,9 +1165,10 @@ Partial Class AddBook
         Me.Panel6.BackColor = System.Drawing.Color.White
         Me.Panel6.Controls.Add(Me.Label24)
         Me.Panel6.Controls.Add(Me.PictureBox11)
-        Me.Panel6.Location = New System.Drawing.Point(3, 119)
+        Me.Panel6.Location = New System.Drawing.Point(4, 146)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(188, 42)
+        Me.Panel6.Size = New System.Drawing.Size(251, 52)
         Me.Panel6.TabIndex = 2
         '
         'Label24
@@ -1148,18 +1176,20 @@ Partial Class AddBook
         Me.Label24.AutoSize = True
         Me.Label24.BackColor = System.Drawing.Color.White
         Me.Label24.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(77, 6)
+        Me.Label24.Location = New System.Drawing.Point(103, 7)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(84, 28)
+        Me.Label24.Size = New System.Drawing.Size(104, 35)
         Me.Label24.TabIndex = 1
         Me.Label24.Text = "Borrower"
         '
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.LibraryManagementSystem.My.Resources.Resources.borrowBtn
-        Me.PictureBox11.Location = New System.Drawing.Point(46, 7)
+        Me.PictureBox11.Location = New System.Drawing.Point(61, 9)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(34, 27)
+        Me.PictureBox11.Size = New System.Drawing.Size(45, 33)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox11.TabIndex = 0
         Me.PictureBox11.TabStop = False
@@ -1171,17 +1201,19 @@ Partial Class AddBook
         Me.Panel10.BackColor = System.Drawing.Color.White
         Me.Panel10.Controls.Add(Me.PictureBox15)
         Me.Panel10.Controls.Add(Me.Label28)
-        Me.Panel10.Location = New System.Drawing.Point(3, 215)
+        Me.Panel10.Location = New System.Drawing.Point(4, 265)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(188, 42)
+        Me.Panel10.Size = New System.Drawing.Size(251, 52)
         Me.Panel10.TabIndex = 4
         '
         'PictureBox15
         '
         Me.PictureBox15.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.PictureBox15.Location = New System.Drawing.Point(49, 11)
+        Me.PictureBox15.Location = New System.Drawing.Point(65, 14)
+        Me.PictureBox15.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(25, 20)
+        Me.PictureBox15.Size = New System.Drawing.Size(33, 25)
         Me.PictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox15.TabIndex = 0
         Me.PictureBox15.TabStop = False
@@ -1191,9 +1223,10 @@ Partial Class AddBook
         Me.Label28.AutoSize = True
         Me.Label28.BackColor = System.Drawing.Color.White
         Me.Label28.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(77, 6)
+        Me.Label28.Location = New System.Drawing.Point(103, 7)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(95, 28)
+        Me.Label28.Size = New System.Drawing.Size(118, 35)
         Me.Label28.TabIndex = 1
         Me.Label28.Text = "Collections"
         '
@@ -1204,9 +1237,10 @@ Partial Class AddBook
         Me.Panel5.BackColor = System.Drawing.Color.White
         Me.Panel5.Controls.Add(Me.Label23)
         Me.Panel5.Controls.Add(Me.PictureBox10)
-        Me.Panel5.Location = New System.Drawing.Point(3, 23)
+        Me.Panel5.Location = New System.Drawing.Point(4, 28)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(188, 42)
+        Me.Panel5.Size = New System.Drawing.Size(251, 52)
         Me.Panel5.TabIndex = 1
         '
         'Label23
@@ -1214,32 +1248,35 @@ Partial Class AddBook
         Me.Label23.AutoSize = True
         Me.Label23.BackColor = System.Drawing.Color.White
         Me.Label23.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(77, 6)
+        Me.Label23.Location = New System.Drawing.Point(103, 7)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(93, 28)
+        Me.Label23.Size = New System.Drawing.Size(114, 35)
         Me.Label23.TabIndex = 1
         Me.Label23.Text = "View Book"
         '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.PictureBox10.Location = New System.Drawing.Point(49, 11)
+        Me.PictureBox10.Location = New System.Drawing.Point(65, 14)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(25, 20)
+        Me.PictureBox10.Size = New System.Drawing.Size(33, 25)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 0
         Me.PictureBox10.TabStop = False
         '
         'AddBook
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1153, 606)
+        Me.ClientSize = New System.Drawing.Size(2433, 1192)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TopPanel)
-        Me.MinimumSize = New System.Drawing.Size(1169, 645)
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MinimumSize = New System.Drawing.Size(1553, 783)
         Me.Name = "AddBook"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AddBook"

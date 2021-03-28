@@ -7,6 +7,10 @@
 
     End Sub
 
+    Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
     'Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     '    rs.FindAllControls(Me)
     'End Sub
