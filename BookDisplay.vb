@@ -13,23 +13,6 @@
         'PictureBox1.Image = rm.GetObject("pic 1")
     End Sub
 
-    Private Sub bStatus_Click(sender As Object, e As EventArgs) Handles bStatus.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub bAuthor_Click(sender As Object, e As EventArgs) Handles bAuthor.Click
-
-    End Sub
-
-    Private Sub bTitle_Click(sender As Object, e As EventArgs) Handles bTitle.Click
-
-    End Sub
-
-
 
     '  Public Sub New(Title As String, author As List(Of String), img As Image, Language As String, Publisher As String, Status As String)
 
