@@ -25,7 +25,11 @@
         For x As Integer = 1 To 12
             Dim book As New bookDisplay
             bookDP.Add(book)
-            If x <= BooksPerPage Then FlowLayoutPanel1.Controls.Add(book) 'add the first page of books when adding them to the List
+            If x <= BooksPerPage Then
+                book.Label2.Text = x.ToString
+                FlowLayoutPanel1.Controls.Add(book) 'add the first page of books when adding them to the List
+
+            End If
         Next
     End Sub
 
@@ -59,7 +63,9 @@
 
         'add the books for the Page to the FlowLayoutPanel
         For i As Integer = (PageIndex * BooksPerPage) To endpage
+            bookDP(i).Label2.Text = i.ToString
             FlowLayoutPanel1.Controls.Add(bookDP(i))
+
         Next
 
         PageNumLabel.Text = "Page " & (PageIndex + 1).ToString 'set the text to the Page Number
