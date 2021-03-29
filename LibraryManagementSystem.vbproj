@@ -147,7 +147,9 @@
     <Compile Include="viewBook.Designer.vb">
       <DependentUpon>viewBook.vb</DependentUpon>
     </Compile>
-    <Compile Include="viewBook.vb" />
+    <Compile Include="viewBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
@@ -226,6 +228,7 @@
     <None Include="Resources\pic 1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="NewFolder1\" />
     <Folder Include="Utilities\Forms\" />
   </ItemGroup>
   <ItemGroup>

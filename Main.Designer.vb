@@ -45,13 +45,10 @@ Partial Class Main
         Me.publisherBtn = New System.Windows.Forms.Button()
         Me.pbBtn = New System.Windows.Forms.Button()
         Me.authBtn = New System.Windows.Forms.Button()
-        Me.newTitleBtn = New System.Windows.Forms.Button()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadioButtonTitle = New System.Windows.Forms.RadioButton()
         Me.RadioButtonAuthor = New System.Windows.Forms.RadioButton()
         Me.RadioButtonNewlyAdded = New System.Windows.Forms.RadioButton()
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
-        Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.mainPanel = New System.Windows.Forms.Panel()
         Me.PageNumLabel = New System.Windows.Forms.Label()
         Me.Button_Back = New System.Windows.Forms.LinkLabel()
@@ -59,12 +56,9 @@ Partial Class Main
         Me.loginBtn = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.upperMainScreenPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
@@ -73,19 +67,25 @@ Partial Class Main
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.newTitleBtn = New System.Windows.Forms.Button()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
         Me.pubPanel.SuspendLayout()
         Me.pbPanel.SuspendLayout()
         Me.authPanel.SuspendLayout()
         Me.newTitlePanel.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mainPanel.SuspendLayout()
         Me.upperMainScreenPanel.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'leftMainScreenPanel
@@ -366,38 +366,6 @@ Partial Class Main
         Me.authBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.authBtn.UseVisualStyleBackColor = False
         '
-        'newTitleBtn
-        '
-        Me.newTitleBtn.BackColor = System.Drawing.Color.White
-        Me.newTitleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.newTitleBtn.FlatAppearance.BorderSize = 0
-        Me.newTitleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.newTitleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.newTitleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.newTitleBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.newTitleBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
-        Me.newTitleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.newTitleBtn.Location = New System.Drawing.Point(25, 260)
-        Me.newTitleBtn.Name = "newTitleBtn"
-        Me.newTitleBtn.Size = New System.Drawing.Size(276, 52)
-        Me.newTitleBtn.TabIndex = 13
-        Me.newTitleBtn.Text = "New Titles"
-        Me.newTitleBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.newTitleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.newTitleBtn.UseVisualStyleBackColor = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(2, 234)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(322, 930)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 12
-        Me.PictureBox4.TabStop = False
-        '
         'RadioButtonTitle
         '
         Me.RadioButtonTitle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -461,18 +429,6 @@ Partial Class Main
         Me.RadioButtonPublicationDate.TabStop = True
         Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
         Me.RadioButtonPublicationDate.UseVisualStyleBackColor = True
-        '
-        'pictureBoxRectangle
-        '
-        Me.pictureBoxRectangle.BackColor = System.Drawing.Color.Transparent
-        Me.pictureBoxRectangle.Image = CType(resources.GetObject("pictureBoxRectangle.Image"), System.Drawing.Image)
-        Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
-        Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
-        Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
-        Me.pictureBoxRectangle.Size = New System.Drawing.Size(322, 206)
-        Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pictureBoxRectangle.TabIndex = 10
-        Me.pictureBoxRectangle.TabStop = False
         '
         'mainPanel
         '
@@ -579,19 +535,6 @@ Partial Class Main
         Me.upperMainScreenPanel.Size = New System.Drawing.Size(630, 308)
         Me.upperMainScreenPanel.TabIndex = 10
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(567, 188)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 49)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
-        '
         'advanceSearchLinkLbl
         '
         Me.advanceSearchLinkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
@@ -620,19 +563,6 @@ Partial Class Main
         Me.searchTextBox.TabIndex = 4
         Me.searchTextBox.Text = "Search..."
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(7, 173)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(624, 88)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -644,19 +574,6 @@ Partial Class Main
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(-15, -5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(231, 155)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'ShapeContainer1
         '
@@ -719,6 +636,89 @@ Partial Class Main
         'Timer4
         '
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(567, 188)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(50, 49)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 6
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(7, 173)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(624, 88)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(-15, -5)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(231, 155)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'newTitleBtn
+        '
+        Me.newTitleBtn.BackColor = System.Drawing.Color.White
+        Me.newTitleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.newTitleBtn.FlatAppearance.BorderSize = 0
+        Me.newTitleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.newTitleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.newTitleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.newTitleBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.newTitleBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
+        Me.newTitleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.newTitleBtn.Location = New System.Drawing.Point(25, 260)
+        Me.newTitleBtn.Name = "newTitleBtn"
+        Me.newTitleBtn.Size = New System.Drawing.Size(276, 52)
+        Me.newTitleBtn.TabIndex = 13
+        Me.newTitleBtn.Text = "New Titles"
+        Me.newTitleBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.newTitleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.newTitleBtn.UseVisualStyleBackColor = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(2, 234)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(322, 930)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 12
+        Me.PictureBox4.TabStop = False
+        '
+        'pictureBoxRectangle
+        '
+        Me.pictureBoxRectangle.BackColor = System.Drawing.Color.Transparent
+        Me.pictureBoxRectangle.Image = CType(resources.GetObject("pictureBoxRectangle.Image"), System.Drawing.Image)
+        Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
+        Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
+        Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
+        Me.pictureBoxRectangle.Size = New System.Drawing.Size(322, 206)
+        Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pictureBoxRectangle.TabIndex = 10
+        Me.pictureBoxRectangle.TabStop = False
+        '
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
@@ -744,8 +744,6 @@ Partial Class Main
         Me.authPanel.PerformLayout()
         Me.newTitlePanel.ResumeLayout(False)
         Me.newTitlePanel.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mainPanel.ResumeLayout(False)
         Me.mainPanel.PerformLayout()
         Me.upperMainScreenPanel.ResumeLayout(False)
@@ -753,6 +751,8 @@ Partial Class Main
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
