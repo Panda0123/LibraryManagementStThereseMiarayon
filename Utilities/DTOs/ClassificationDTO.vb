@@ -1,5 +1,5 @@
-﻿Public Class ClassificationDTO
-    Property id As Int64
-    Property name As String
+﻿'Public Class ClassificationDTO
+'    Property id As Int64
+'    Property name As String
 
-End Class
+'End Class

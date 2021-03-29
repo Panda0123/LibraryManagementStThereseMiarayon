@@ -235,5 +235,17 @@
   <ItemGroup>
     <None Include="Resources\x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\Log In Dialog Box.png" />
+    <Content Include="Resources\padlock.png" />
+    <Content Include="Resources\pic 11.png" />
+    <Content Include="Resources\Polygon 2.png" />
+    <Content Include="Resources\Polygon3.png" />
+    <Content Include="Resources\Rectangle 18.png" />
+    <Content Include="Resources\Rectangle 5.png" />
+    <Content Include="Resources\user %281%29.png" />
+    <Content Include="Resources\Username.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
