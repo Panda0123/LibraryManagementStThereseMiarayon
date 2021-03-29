@@ -63,7 +63,9 @@
 
         'add the books for the Page to the FlowLayoutPanel
         For i As Integer = (PageIndex * BooksPerPage) To endpage
+            bookDP(i).Label2.Text = i.ToString
             FlowLayoutPanel1.Controls.Add(bookDP(i))
+
         Next
 
         PageNumLabel.Text = "Page " & (PageIndex + 1).ToString 'set the text to the Page Number
