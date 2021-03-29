@@ -4,7 +4,7 @@
     Private auth_click As Integer = 0
     Private pb_click As Integer = 0
     Private pub_click As Integer = 0
-
+    Dim advanceS_click As Integer = 0
     Private PageIndex As Integer = 0
     Private BooksPerPage As Integer = 6 'number of books shown on each page
 
@@ -72,8 +72,6 @@
     End Sub
 
 
-
-
     Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs) Handles searchTextBox.MouseHover, searchTextBox.Click, searchTextBox.KeyPress
         If searchTextBox.Text.Equals("Search...") Then
             searchTextBox.Text = ""
@@ -133,7 +131,15 @@
     End Sub
 
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
-        advanceSearch.ShowDialog()
+        advanceS_click += 1
+        If advanceS_click = 1 Then
+            advanceSearch.ShowDialog()
+        ElseIf advanceSearch.Visible Then
+            advanceSearch.Close()
+            advanceS_click = 0
+        End If
+
+
     End Sub
 
 

@@ -202,14 +202,14 @@ Partial Class AddBook
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
         Me.TopPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(1283, 195)
+        Me.TopPanel.Size = New System.Drawing.Size(1319, 195)
         Me.TopPanel.TabIndex = 2
         '
         'PictureBox16
         '
         Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1770, 18)
+        Me.PictureBox16.Location = New System.Drawing.Point(1806, 18)
         Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(49, 42)
@@ -229,7 +229,7 @@ Partial Class AddBook
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(676, 25)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(407, 26)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -303,7 +303,7 @@ Partial Class AddBook
         '
         Me.PictureBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox7.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox7.Location = New System.Drawing.Point(2120, 11)
+        Me.PictureBox7.Location = New System.Drawing.Point(2156, 11)
         Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(67, 52)
@@ -317,7 +317,7 @@ Partial Class AddBook
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1283, 195)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1319, 195)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -354,7 +354,7 @@ Partial Class AddBook
         Me.Panel1.Location = New System.Drawing.Point(0, 250)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1709, 2836)
+        Me.Panel1.Size = New System.Drawing.Size(1724, 2836)
         Me.Panel1.TabIndex = 3
         '
         'MainPanel
@@ -372,14 +372,14 @@ Partial Class AddBook
         Me.MainPanel.Location = New System.Drawing.Point(268, 6)
         Me.MainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(1398, 2767)
+        Me.MainPanel.Size = New System.Drawing.Size(1413, 2767)
         Me.MainPanel.TabIndex = 1
         '
         'PictureBox6
         '
         Me.PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox6.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.PictureBox6.Location = New System.Drawing.Point(823, 2201)
+        Me.PictureBox6.Location = New System.Drawing.Point(830, 2201)
         Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(347, 50)
@@ -391,7 +391,7 @@ Partial Class AddBook
         '
         Me.PictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox5.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.PictureBox5.Location = New System.Drawing.Point(259, 2201)
+        Me.PictureBox5.Location = New System.Drawing.Point(266, 2201)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(347, 50)
@@ -437,7 +437,7 @@ Partial Class AddBook
         Me.Panel2.Location = New System.Drawing.Point(27, 351)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1343, 2353)
+        Me.Panel2.Size = New System.Drawing.Size(1358, 2353)
         Me.Panel2.TabIndex = 1
         '
         'Panel4
@@ -463,7 +463,7 @@ Partial Class AddBook
         Me.Panel4.Location = New System.Drawing.Point(27, 961)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1258, 358)
+        Me.Panel4.Size = New System.Drawing.Size(1273, 358)
         Me.Panel4.TabIndex = 88
         '
         'MetroButton5
@@ -645,7 +645,7 @@ Partial Class AddBook
         Me.ComboBox2.Location = New System.Drawing.Point(25, 479)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(1259, 37)
+        Me.ComboBox2.Size = New System.Drawing.Size(1274, 37)
         Me.ComboBox2.TabIndex = 85
         '
         'Panel3
@@ -661,7 +661,7 @@ Partial Class AddBook
         Me.Panel3.Location = New System.Drawing.Point(25, 794)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1258, 109)
+        Me.Panel3.Size = New System.Drawing.Size(1273, 109)
         Me.Panel3.TabIndex = 84
         '
         'Label14
@@ -686,7 +686,7 @@ Partial Class AddBook
         Me.TextBox9.Location = New System.Drawing.Point(287, 55)
         Me.TextBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(909, 33)
+        Me.TextBox9.Size = New System.Drawing.Size(924, 33)
         Me.TextBox9.TabIndex = 85
         '
         'Label15
@@ -738,7 +738,7 @@ Partial Class AddBook
         Me.PublicationInformationPanel.Location = New System.Drawing.Point(27, 560)
         Me.PublicationInformationPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(1258, 184)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(1273, 184)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'Label12
@@ -763,7 +763,7 @@ Partial Class AddBook
         Me.TextBox7.Location = New System.Drawing.Point(55, 126)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(1140, 33)
+        Me.TextBox7.Size = New System.Drawing.Size(1155, 33)
         Me.TextBox7.TabIndex = 87
         '
         'Label11
@@ -788,7 +788,7 @@ Partial Class AddBook
         Me.TextBox6.Location = New System.Drawing.Point(287, 55)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(908, 33)
+        Me.TextBox6.Size = New System.Drawing.Size(923, 33)
         Me.TextBox6.TabIndex = 85
         '
         'Label10
@@ -845,7 +845,7 @@ Partial Class AddBook
         Me.ComboBox1.Location = New System.Drawing.Point(25, 402)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(1259, 37)
+        Me.ComboBox1.Size = New System.Drawing.Size(1274, 37)
         Me.ComboBox1.TabIndex = 79
         '
         'TextBox4
@@ -857,7 +857,7 @@ Partial Class AddBook
         Me.TextBox4.Location = New System.Drawing.Point(25, 329)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(1259, 33)
+        Me.TextBox4.Size = New System.Drawing.Size(1274, 33)
         Me.TextBox4.TabIndex = 78
         '
         'Label6
@@ -880,7 +880,7 @@ Partial Class AddBook
         Me.TextBox3.Location = New System.Drawing.Point(25, 258)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(1259, 33)
+        Me.TextBox3.Size = New System.Drawing.Size(1274, 33)
         Me.TextBox3.TabIndex = 76
         '
         'Label3
@@ -903,7 +903,7 @@ Partial Class AddBook
         Me.TextBox2.Location = New System.Drawing.Point(25, 183)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(1259, 33)
+        Me.TextBox2.Size = New System.Drawing.Size(1274, 33)
         Me.TextBox2.TabIndex = 74
         '
         'Label7
@@ -926,7 +926,7 @@ Partial Class AddBook
         Me.TextBox1.Location = New System.Drawing.Point(25, 113)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(1259, 33)
+        Me.TextBox1.Size = New System.Drawing.Size(1274, 33)
         Me.TextBox1.TabIndex = 72
         '
         'Label4
@@ -949,7 +949,7 @@ Partial Class AddBook
         Me.titleTxtBx.Location = New System.Drawing.Point(25, 39)
         Me.titleTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(1259, 33)
+        Me.titleTxtBx.Size = New System.Drawing.Size(1274, 33)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
@@ -975,7 +975,7 @@ Partial Class AddBook
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(29, 20)
         Me.ImageSummaryPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1340, 304)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1355, 304)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'PictureBox17
@@ -1019,7 +1019,7 @@ Partial Class AddBook
         Me.summaryTxtBx.Location = New System.Drawing.Point(351, 38)
         Me.summaryTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.summaryTxtBx.Name = "summaryTxtBx"
-        Me.summaryTxtBx.Size = New System.Drawing.Size(947, 254)
+        Me.summaryTxtBx.Size = New System.Drawing.Size(962, 254)
         Me.summaryTxtBx.TabIndex = 1
         Me.summaryTxtBx.Text = ""
         '
@@ -1268,11 +1268,12 @@ Partial Class AddBook
         '
         'AddBook
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit
         Me.AutoScroll = True
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1304, 598)
+        Me.ClientSize = New System.Drawing.Size(1340, 668)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TopPanel)
         Me.Margin = New System.Windows.Forms.Padding(4)
