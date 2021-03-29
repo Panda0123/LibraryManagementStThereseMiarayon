@@ -244,7 +244,7 @@ Partial Class viewBook
         '
         'PictureBox4
         '
-        Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_11
+        Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
         Me.PictureBox4.Location = New System.Drawing.Point(47, 28)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(269, 258)
