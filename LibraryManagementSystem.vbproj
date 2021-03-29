@@ -58,6 +58,9 @@
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -120,6 +123,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\APIClientController\AuthorController.vb" />
+    <Compile Include="Utilities\APIClientController\BookController.vb" />
+    <Compile Include="Utilities\APIClientController\CategoryController.vb" />
+    <Compile Include="Utilities\APIClientController\HTTPRequestController.vb" />
+    <Compile Include="Utilities\APIClientController\ImageController.vb" />
+    <Compile Include="Utilities\DTOs\AuthorDTO.vb" />
+    <Compile Include="Utilities\DTOs\BookDetailsDTO.vb" />
+    <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
@@ -186,7 +197,6 @@
     <None Include="Resources\pic 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Utilities\API\" />
     <Folder Include="Utilities\Forms\" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +225,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\addImageBtn %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
