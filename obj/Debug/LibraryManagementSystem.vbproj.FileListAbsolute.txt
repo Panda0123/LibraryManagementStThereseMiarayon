@@ -63,3 +63,29 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Book.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.login.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.viewBook.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.exe.config
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.exe
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.pdb
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.xml
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Design.dll
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.dll
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Fonts.dll
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Book.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookDisplay.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.IssueBook.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.login.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Main.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Resources.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.viewBook.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.GenerateResource.cache
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.CoreCompileInputs.cache
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.CopyComplete
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb

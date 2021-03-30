@@ -96,11 +96,15 @@
     <Compile Include="advanceSearch.Designer.vb">
       <DependentUpon>advanceSearch.vb</DependentUpon>
     </Compile>
-    <Compile Include="advanceSearch.vb" />
+    <Compile Include="advanceSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Book.Designer.vb">
       <DependentUpon>Book.vb</DependentUpon>
     </Compile>
-    <Compile Include="Book.vb" />
+    <Compile Include="Book.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="bookDisplay.Designer.vb">
       <DependentUpon>bookDisplay.vb</DependentUpon>
     </Compile>
@@ -111,7 +115,9 @@
     <Compile Include="login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
     </Compile>
-    <Compile Include="login.vb" />
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
