@@ -15,6 +15,10 @@ Public Class AddBook
     Private Sub addImgBtn_click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
     '    Private selectedBook As BookDetailsDTO
     '    Private classifications As List(Of ClassificationDTO)
     '    Private classificationNames As New List(Of String)

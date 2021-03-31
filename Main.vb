@@ -139,7 +139,7 @@
 
 
 
-    Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs) Handles loginBtn.MouseLeave
+    Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs)
         loginBtn.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
 

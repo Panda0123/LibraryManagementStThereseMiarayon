@@ -265,7 +265,7 @@ Partial Class viewBook
         '
         'MoreInformation_Btn
         '
-        Me.MoreInformation_Btn.BackColor = System.Drawing.SystemColors.Control
+        Me.MoreInformation_Btn.BackColor = System.Drawing.Color.White
         Me.MoreInformation_Btn.FlatAppearance.BorderSize = 0
         Me.MoreInformation_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MoreInformation_Btn.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -279,7 +279,7 @@ Partial Class viewBook
         '
         'Location_Btn
         '
-        Me.Location_Btn.BackColor = System.Drawing.SystemColors.Control
+        Me.Location_Btn.BackColor = System.Drawing.Color.White
         Me.Location_Btn.FlatAppearance.BorderSize = 0
         Me.Location_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Location_Btn.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -293,7 +293,7 @@ Partial Class viewBook
         '
         'Btn_Details
         '
-        Me.Btn_Details.BackColor = System.Drawing.SystemColors.Control
+        Me.Btn_Details.BackColor = System.Drawing.Color.White
         Me.Btn_Details.FlatAppearance.BorderSize = 0
         Me.Btn_Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Details.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

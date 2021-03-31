@@ -24,7 +24,6 @@ Partial Class AddBook
     Private Sub InitializeComponent()
         Dim TopPanel As System.Windows.Forms.Panel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AddBook))
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
@@ -121,7 +120,6 @@ Partial Class AddBook
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         TopPanel = New System.Windows.Forms.Panel()
         TopPanel.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleLogoSearchPanel.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,23 +161,14 @@ Partial Class AddBook
         TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         TopPanel.BackColor = System.Drawing.Color.White
-        TopPanel.Controls.Add(Me.PictureBox4)
         TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
         TopPanel.Controls.Add(Me.PictureBox16)
         TopPanel.Controls.Add(Me.ShapeContainer2)
         TopPanel.Location = New System.Drawing.Point(0, -2)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1642, 185)
+        TopPanel.Size = New System.Drawing.Size(1330, 185)
         TopPanel.TabIndex = 2
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Location = New System.Drawing.Point(287, 17)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox4.TabIndex = 4
-        Me.PictureBox4.TabStop = False
         '
         'TitleLogoSearchPanel
         '
@@ -193,7 +182,7 @@ Partial Class AddBook
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(585, 5)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(669, 6)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -309,7 +298,7 @@ Partial Class AddBook
         '
         Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1526, 14)
+        Me.PictureBox16.Location = New System.Drawing.Point(1782, 18)
         Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(49, 42)
@@ -323,7 +312,7 @@ Partial Class AddBook
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1642, 185)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1330, 185)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -333,7 +322,7 @@ Partial Class AddBook
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1726, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1414, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -344,7 +333,7 @@ Partial Class AddBook
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1724, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1412, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -360,7 +349,7 @@ Partial Class AddBook
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1642, 1809)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1330, 1809)
         Me.backgrounPanel.TabIndex = 3
         '
         'MainPanel
@@ -378,14 +367,14 @@ Partial Class AddBook
         Me.MainPanel.Location = New System.Drawing.Point(268, 6)
         Me.MainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(1331, 1740)
+        Me.MainPanel.Size = New System.Drawing.Size(1226, 1740)
         Me.MainPanel.TabIndex = 1
         '
         'savePcBx
         '
         Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
-        Me.savePcBx.Location = New System.Drawing.Point(580, 1687)
+        Me.savePcBx.Location = New System.Drawing.Point(663, 2109)
         Me.savePcBx.Margin = New System.Windows.Forms.Padding(4)
         Me.savePcBx.Name = "savePcBx"
         Me.savePcBx.Size = New System.Drawing.Size(193, 50)
@@ -398,7 +387,7 @@ Partial Class AddBook
         '
         Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.cancelPcBx.Location = New System.Drawing.Point(789, 1689)
+        Me.cancelPcBx.Location = New System.Drawing.Point(924, 2111)
         Me.cancelPcBx.Margin = New System.Windows.Forms.Padding(4)
         Me.cancelPcBx.Name = "cancelPcBx"
         Me.cancelPcBx.Size = New System.Drawing.Size(347, 50)
@@ -410,7 +399,7 @@ Partial Class AddBook
         '
         Me.addBookBtn.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.addBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.addBookBtn.Location = New System.Drawing.Point(216, 1689)
+        Me.addBookBtn.Location = New System.Drawing.Point(208, 2111)
         Me.addBookBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.addBookBtn.Name = "addBookBtn"
         Me.addBookBtn.Size = New System.Drawing.Size(347, 50)
@@ -447,7 +436,7 @@ Partial Class AddBook
         Me.Panel2.Location = New System.Drawing.Point(27, 351)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1276, 1326)
+        Me.Panel2.Size = New System.Drawing.Size(1469, 1658)
         Me.Panel2.TabIndex = 1
         '
         'shelfTxtBx
@@ -459,7 +448,7 @@ Partial Class AddBook
         Me.shelfTxtBx.Location = New System.Drawing.Point(25, 479)
         Me.shelfTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.shelfTxtBx.Name = "shelfTxtBx"
-        Me.shelfTxtBx.Size = New System.Drawing.Size(1192, 33)
+        Me.shelfTxtBx.Size = New System.Drawing.Size(1364, 33)
         Me.shelfTxtBx.TabIndex = 89
         '
         'Panel4
@@ -487,7 +476,7 @@ Partial Class AddBook
         Me.Panel4.Location = New System.Drawing.Point(27, 961)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1191, 358)
+        Me.Panel4.Size = New System.Drawing.Size(1363, 448)
         Me.Panel4.TabIndex = 88
         '
         'Panel11
@@ -508,7 +497,7 @@ Partial Class AddBook
         '
         Me.authorsMNameLbl.AutoSize = True
         Me.authorsMNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsMNameLbl.Location = New System.Drawing.Point(217, 7)
+        Me.authorsMNameLbl.Location = New System.Drawing.Point(217, 8)
         Me.authorsMNameLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.authorsMNameLbl.Name = "authorsMNameLbl"
         Me.authorsMNameLbl.Size = New System.Drawing.Size(44, 29)
@@ -519,7 +508,7 @@ Partial Class AddBook
         '
         Me.authorsLNameLbl.AutoSize = True
         Me.authorsLNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsLNameLbl.Location = New System.Drawing.Point(351, 7)
+        Me.authorsLNameLbl.Location = New System.Drawing.Point(352, 8)
         Me.authorsLNameLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.authorsLNameLbl.Name = "authorsLNameLbl"
         Me.authorsLNameLbl.Size = New System.Drawing.Size(38, 29)
@@ -530,7 +519,7 @@ Partial Class AddBook
         '
         Me.authorsNumLbl.AutoSize = True
         Me.authorsNumLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsNumLbl.Location = New System.Drawing.Point(0, 6)
+        Me.authorsNumLbl.Location = New System.Drawing.Point(0, 7)
         Me.authorsNumLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.authorsNumLbl.Name = "authorsNumLbl"
         Me.authorsNumLbl.Size = New System.Drawing.Size(42, 29)
@@ -541,7 +530,7 @@ Partial Class AddBook
         '
         Me.authorsFNameLbl.AutoSize = True
         Me.authorsFNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsFNameLbl.Location = New System.Drawing.Point(71, 7)
+        Me.authorsFNameLbl.Location = New System.Drawing.Point(72, 8)
         Me.authorsFNameLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.authorsFNameLbl.Name = "authorsFNameLbl"
         Me.authorsFNameLbl.Size = New System.Drawing.Size(38, 29)
@@ -741,7 +730,7 @@ Partial Class AddBook
         Me.Panel3.Location = New System.Drawing.Point(25, 794)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1191, 109)
+        Me.Panel3.Size = New System.Drawing.Size(1363, 136)
         Me.Panel3.TabIndex = 84
         '
         'copyrightYearDTPckr
@@ -753,10 +742,10 @@ Partial Class AddBook
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(56, 55)
         Me.copyrightYearDTPckr.Margin = New System.Windows.Forms.Padding(4)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 27)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
-        Me.copyrightYearDTPckr.Size = New System.Drawing.Size(88, 25)
+        Me.copyrightYearDTPckr.Size = New System.Drawing.Size(88, 27)
         Me.copyrightYearDTPckr.TabIndex = 88
         '
         'Label14
@@ -781,7 +770,7 @@ Partial Class AddBook
         Me.copyrightNameTxtBx.Location = New System.Drawing.Point(287, 55)
         Me.copyrightNameTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.copyrightNameTxtBx.Name = "copyrightNameTxtBx"
-        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(842, 33)
+        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(927, 33)
         Me.copyrightNameTxtBx.TabIndex = 85
         '
         'Label15
@@ -823,7 +812,7 @@ Partial Class AddBook
         Me.PublicationInformationPanel.Location = New System.Drawing.Point(27, 560)
         Me.PublicationInformationPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(1191, 184)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(1363, 230)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'publishedDatePicker
@@ -835,10 +824,10 @@ Partial Class AddBook
         Me.publishedDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.publishedDatePicker.Location = New System.Drawing.Point(55, 55)
         Me.publishedDatePicker.Margin = New System.Windows.Forms.Padding(4)
-        Me.publishedDatePicker.MinimumSize = New System.Drawing.Size(4, 29)
+        Me.publishedDatePicker.MinimumSize = New System.Drawing.Size(0, 30)
         Me.publishedDatePicker.Name = "publishedDatePicker"
         Me.publishedDatePicker.ShowCheckBox = True
-        Me.publishedDatePicker.Size = New System.Drawing.Size(185, 29)
+        Me.publishedDatePicker.Size = New System.Drawing.Size(185, 30)
         Me.publishedDatePicker.TabIndex = 7
         '
         'Label12
@@ -863,7 +852,7 @@ Partial Class AddBook
         Me.publisherAddrTxtBx.Location = New System.Drawing.Point(55, 126)
         Me.publisherAddrTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.publisherAddrTxtBx.Name = "publisherAddrTxtBx"
-        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(1073, 33)
+        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(1215, 33)
         Me.publisherAddrTxtBx.TabIndex = 87
         '
         'Label11
@@ -888,7 +877,7 @@ Partial Class AddBook
         Me.publisherNameTxtBx.Location = New System.Drawing.Point(287, 55)
         Me.publisherNameTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.publisherNameTxtBx.Name = "publisherNameTxtBx"
-        Me.publisherNameTxtBx.Size = New System.Drawing.Size(841, 33)
+        Me.publisherNameTxtBx.Size = New System.Drawing.Size(925, 33)
         Me.publisherNameTxtBx.TabIndex = 85
         '
         'Label10
@@ -935,7 +924,7 @@ Partial Class AddBook
         Me.classificationCmbBx.Location = New System.Drawing.Point(25, 402)
         Me.classificationCmbBx.Margin = New System.Windows.Forms.Padding(4)
         Me.classificationCmbBx.Name = "classificationCmbBx"
-        Me.classificationCmbBx.Size = New System.Drawing.Size(1192, 37)
+        Me.classificationCmbBx.Size = New System.Drawing.Size(1364, 37)
         Me.classificationCmbBx.TabIndex = 79
         '
         'languageTxtBx
@@ -947,7 +936,7 @@ Partial Class AddBook
         Me.languageTxtBx.Location = New System.Drawing.Point(25, 329)
         Me.languageTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.languageTxtBx.Name = "languageTxtBx"
-        Me.languageTxtBx.Size = New System.Drawing.Size(1192, 33)
+        Me.languageTxtBx.Size = New System.Drawing.Size(1364, 33)
         Me.languageTxtBx.TabIndex = 78
         '
         'Label6
@@ -970,7 +959,7 @@ Partial Class AddBook
         Me.quantityTxtBx.Location = New System.Drawing.Point(25, 258)
         Me.quantityTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.quantityTxtBx.Name = "quantityTxtBx"
-        Me.quantityTxtBx.Size = New System.Drawing.Size(1192, 30)
+        Me.quantityTxtBx.Size = New System.Drawing.Size(1364, 30)
         Me.quantityTxtBx.TabIndex = 76
         '
         'Label3
@@ -993,7 +982,7 @@ Partial Class AddBook
         Me.editionTxtBx.Location = New System.Drawing.Point(25, 183)
         Me.editionTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.editionTxtBx.Name = "editionTxtBx"
-        Me.editionTxtBx.Size = New System.Drawing.Size(1192, 30)
+        Me.editionTxtBx.Size = New System.Drawing.Size(1364, 30)
         Me.editionTxtBx.TabIndex = 74
         '
         'Label7
@@ -1016,7 +1005,7 @@ Partial Class AddBook
         Me.isbnTxtBx.Location = New System.Drawing.Point(25, 113)
         Me.isbnTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.isbnTxtBx.Name = "isbnTxtBx"
-        Me.isbnTxtBx.Size = New System.Drawing.Size(1192, 30)
+        Me.isbnTxtBx.Size = New System.Drawing.Size(1364, 30)
         Me.isbnTxtBx.TabIndex = 72
         '
         'Label4
@@ -1039,7 +1028,7 @@ Partial Class AddBook
         Me.titleTxtBx.Location = New System.Drawing.Point(25, 39)
         Me.titleTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(1192, 33)
+        Me.titleTxtBx.Size = New System.Drawing.Size(1364, 33)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
@@ -1063,7 +1052,7 @@ Partial Class AddBook
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(29, 20)
         Me.ImageSummaryPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1273, 304)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1465, 380)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'Panel1
@@ -1076,7 +1065,7 @@ Partial Class AddBook
         Me.Panel1.Location = New System.Drawing.Point(24, 15)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(272, 278)
+        Me.Panel1.Size = New System.Drawing.Size(340, 348)
         Me.Panel1.TabIndex = 75
         '
         'removeImgBtn
@@ -1104,7 +1093,7 @@ Partial Class AddBook
         Me.bkPicBx.Location = New System.Drawing.Point(4, 4)
         Me.bkPicBx.Margin = New System.Windows.Forms.Padding(4)
         Me.bkPicBx.Name = "bkPicBx"
-        Me.bkPicBx.Size = New System.Drawing.Size(262, 274)
+        Me.bkPicBx.Size = New System.Drawing.Size(328, 343)
         Me.bkPicBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.bkPicBx.TabIndex = 0
         Me.bkPicBx.TabStop = False
@@ -1128,7 +1117,7 @@ Partial Class AddBook
         Me.summaryRichTxtBx.Location = New System.Drawing.Point(351, 38)
         Me.summaryRichTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
-        Me.summaryRichTxtBx.Size = New System.Drawing.Size(880, 254)
+        Me.summaryRichTxtBx.Size = New System.Drawing.Size(974, 318)
         Me.summaryRichTxtBx.TabIndex = 1
         Me.summaryRichTxtBx.Text = ""
         '
@@ -1379,7 +1368,6 @@ Partial Class AddBook
         Me.Text = "AddBook"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         TopPanel.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1524,5 +1512,4 @@ Partial Class AddBook
     Friend WithEvents savePcBx As PictureBox
     Friend WithEvents removeImgBtn As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox4 As PictureBox
 End Class
