@@ -46,6 +46,15 @@ Partial Class IssueBook
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -72,15 +81,6 @@ Partial Class IssueBook
         Me.labelStatus = New System.Windows.Forms.Label()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.TitleLogoSearchPanel.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -234,7 +234,6 @@ Partial Class IssueBook
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(3, 189)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
@@ -248,8 +247,8 @@ Partial Class IssueBook
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.SplitContainer1.Size = New System.Drawing.Size(1616, 785)
-        Me.SplitContainer1.SplitterDistance = 961
+        Me.SplitContainer1.Size = New System.Drawing.Size(1616, 661)
+        Me.SplitContainer1.SplitterDistance = 984
         Me.SplitContainer1.TabIndex = 1
         '
         'GroupBox2
@@ -259,7 +258,7 @@ Partial Class IssueBook
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(0, 321)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(961, 319)
+        Me.GroupBox2.Size = New System.Drawing.Size(984, 319)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Issue Details"
@@ -308,7 +307,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(955, 282)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(978, 282)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'Label1
@@ -316,7 +315,7 @@ Partial Class IssueBook
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(81, 7)
+        Me.Label1.Location = New System.Drawing.Point(87, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(150, 25)
         Me.Label1.TabIndex = 1
@@ -327,7 +326,7 @@ Partial Class IssueBook
         Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(93, 47)
+        Me.Label14.Location = New System.Drawing.Point(99, 47)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(138, 25)
         Me.Label14.TabIndex = 2
@@ -338,7 +337,7 @@ Partial Class IssueBook
         Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(98, 87)
+        Me.Label15.Location = New System.Drawing.Point(104, 87)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(133, 25)
         Me.Label15.TabIndex = 3
@@ -349,7 +348,7 @@ Partial Class IssueBook
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(76, 127)
+        Me.Label16.Location = New System.Drawing.Point(82, 127)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(155, 25)
         Me.Label16.TabIndex = 4
@@ -360,7 +359,7 @@ Partial Class IssueBook
         Me.Label18.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(508, 7)
+        Me.Label18.Location = New System.Drawing.Point(524, 7)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(114, 25)
         Me.Label18.TabIndex = 6
@@ -371,7 +370,7 @@ Partial Class IssueBook
         Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(458, 87)
+        Me.Label21.Location = New System.Drawing.Point(474, 87)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(164, 25)
         Me.Label21.TabIndex = 9
@@ -380,34 +379,124 @@ Partial Class IssueBook
         'TextBox5
         '
         Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox5.Location = New System.Drawing.Point(237, 6)
+        Me.TextBox5.Location = New System.Drawing.Point(243, 6)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(178, 28)
+        Me.TextBox5.Size = New System.Drawing.Size(183, 28)
         Me.TextBox5.TabIndex = 12
         '
         'TextBox12
         '
         Me.TextBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox12.Location = New System.Drawing.Point(237, 46)
+        Me.TextBox12.Location = New System.Drawing.Point(243, 46)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(178, 28)
+        Me.TextBox12.Size = New System.Drawing.Size(183, 28)
         Me.TextBox12.TabIndex = 13
         '
         'TextBox13
         '
         Me.TextBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox13.Location = New System.Drawing.Point(237, 86)
+        Me.TextBox13.Location = New System.Drawing.Point(243, 86)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(178, 28)
+        Me.TextBox13.Size = New System.Drawing.Size(183, 28)
         Me.TextBox13.TabIndex = 14
         '
         'TextBox14
         '
         Me.TextBox14.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox14.Location = New System.Drawing.Point(237, 126)
+        Me.TextBox14.Location = New System.Drawing.Point(243, 126)
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(178, 28)
+        Me.TextBox14.Size = New System.Drawing.Size(183, 28)
         Me.TextBox14.TabIndex = 15
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox18.Location = New System.Drawing.Point(644, 86)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.ReadOnly = True
+        Me.TextBox18.Size = New System.Drawing.Size(331, 28)
+        Me.TextBox18.TabIndex = 20
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox2.Location = New System.Drawing.Point(644, 3)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
+        Me.TableLayoutPanel2.SetRowSpan(Me.RichTextBox2, 2)
+        Me.RichTextBox2.Size = New System.Drawing.Size(331, 74)
+        Me.RichTextBox2.TabIndex = 22
+        Me.RichTextBox2.Text = ""
+        '
+        'DateTimePicker1
+        '
+        Me.TableLayoutPanel2.SetColumnSpan(Me.DateTimePicker1, 2)
+        Me.DateTimePicker1.Enabled = False
+        Me.DateTimePicker1.Location = New System.Drawing.Point(243, 203)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(328, 28)
+        Me.DateTimePicker1.TabIndex = 24
+        '
+        'DateTimePicker2
+        '
+        Me.TableLayoutPanel2.SetColumnSpan(Me.DateTimePicker2, 2)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(243, 243)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(328, 28)
+        Me.DateTimePicker2.TabIndex = 25
+        '
+        'Label17
+        '
+        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(79, 207)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(158, 25)
+        Me.Label17.TabIndex = 26
+        Me.Label17.Text = "ISSUING DATE:"
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(119, 247)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(118, 25)
+        Me.Label19.TabIndex = 27
+        Me.Label19.Text = "DUE DATE:"
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(644, 167)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(91, 25)
+        Me.Label20.TabIndex = 28
+        Me.Label20.Text = "Controls:"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button1.Location = New System.Drawing.Point(731, 203)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(244, 34)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "ISSUE"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Button2.Location = New System.Drawing.Point(731, 243)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(244, 34)
+        Me.Button2.TabIndex = 30
+        Me.Button2.Text = "ISSUE NEW"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -416,7 +505,7 @@ Partial Class IssueBook
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(961, 321)
+        Me.GroupBox1.Size = New System.Drawing.Size(984, 321)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Book Details"
@@ -467,7 +556,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(955, 284)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(978, 284)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Label2
@@ -475,7 +564,7 @@ Partial Class IssueBook
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(125, 7)
+        Me.Label2.Location = New System.Drawing.Point(131, 7)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(106, 25)
         Me.Label2.TabIndex = 1
@@ -486,7 +575,7 @@ Partial Class IssueBook
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(158, 47)
+        Me.Label3.Location = New System.Drawing.Point(164, 47)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 25)
         Me.Label3.TabIndex = 2
@@ -497,7 +586,7 @@ Partial Class IssueBook
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(103, 87)
+        Me.Label5.Location = New System.Drawing.Point(109, 87)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(128, 25)
         Me.Label5.TabIndex = 3
@@ -508,7 +597,7 @@ Partial Class IssueBook
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(36, 127)
+        Me.Label6.Location = New System.Drawing.Point(42, 127)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(195, 25)
         Me.Label6.TabIndex = 4
@@ -519,7 +608,7 @@ Partial Class IssueBook
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(109, 167)
+        Me.Label7.Location = New System.Drawing.Point(115, 167)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(122, 25)
         Me.Label7.TabIndex = 5
@@ -530,7 +619,7 @@ Partial Class IssueBook
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(551, 7)
+        Me.Label8.Location = New System.Drawing.Point(568, 7)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(130, 25)
         Me.Label8.TabIndex = 6
@@ -541,7 +630,7 @@ Partial Class IssueBook
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(103, 249)
+        Me.Label9.Location = New System.Drawing.Point(109, 249)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(128, 25)
         Me.Label9.TabIndex = 7
@@ -552,7 +641,7 @@ Partial Class IssueBook
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(617, 47)
+        Me.Label10.Location = New System.Drawing.Point(634, 47)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 25)
         Me.Label10.TabIndex = 8
@@ -563,7 +652,7 @@ Partial Class IssueBook
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(591, 87)
+        Me.Label11.Location = New System.Drawing.Point(608, 87)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(90, 25)
         Me.Label11.TabIndex = 9
@@ -574,7 +663,7 @@ Partial Class IssueBook
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(578, 127)
+        Me.Label12.Location = New System.Drawing.Point(595, 127)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(103, 25)
         Me.Label12.TabIndex = 10
@@ -585,7 +674,7 @@ Partial Class IssueBook
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(583, 167)
+        Me.Label13.Location = New System.Drawing.Point(600, 167)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(98, 25)
         Me.Label13.TabIndex = 11
@@ -594,89 +683,89 @@ Partial Class IssueBook
         'TextBox1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(237, 6)
+        Me.TextBox1.Location = New System.Drawing.Point(243, 6)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(257, 28)
+        Me.TextBox1.Size = New System.Drawing.Size(263, 28)
         Me.TextBox1.TabIndex = 12
         '
         'TextBox2
         '
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(237, 46)
+        Me.TextBox2.Location = New System.Drawing.Point(243, 46)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(257, 28)
+        Me.TextBox2.Size = New System.Drawing.Size(263, 28)
         Me.TextBox2.TabIndex = 13
         '
         'TextBox3
         '
         Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Location = New System.Drawing.Point(237, 86)
+        Me.TextBox3.Location = New System.Drawing.Point(243, 86)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(257, 28)
+        Me.TextBox3.Size = New System.Drawing.Size(263, 28)
         Me.TextBox3.TabIndex = 14
         '
         'TextBox4
         '
         Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Location = New System.Drawing.Point(237, 126)
+        Me.TextBox4.Location = New System.Drawing.Point(243, 126)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(257, 28)
+        Me.TextBox4.Size = New System.Drawing.Size(263, 28)
         Me.TextBox4.TabIndex = 15
         '
         'TextBox6
         '
         Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox6.Location = New System.Drawing.Point(237, 248)
+        Me.TextBox6.Location = New System.Drawing.Point(243, 248)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(257, 28)
+        Me.TextBox6.Size = New System.Drawing.Size(263, 28)
         Me.TextBox6.TabIndex = 17
         '
         'TextBox7
         '
         Me.TextBox7.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox7.Location = New System.Drawing.Point(687, 6)
+        Me.TextBox7.Location = New System.Drawing.Point(704, 6)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(265, 28)
+        Me.TextBox7.Size = New System.Drawing.Size(271, 28)
         Me.TextBox7.TabIndex = 18
         '
         'TextBox8
         '
         Me.TextBox8.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox8.Location = New System.Drawing.Point(687, 46)
+        Me.TextBox8.Location = New System.Drawing.Point(704, 46)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(265, 28)
+        Me.TextBox8.Size = New System.Drawing.Size(271, 28)
         Me.TextBox8.TabIndex = 19
         '
         'TextBox9
         '
         Me.TextBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox9.Location = New System.Drawing.Point(687, 86)
+        Me.TextBox9.Location = New System.Drawing.Point(704, 86)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(265, 28)
+        Me.TextBox9.Size = New System.Drawing.Size(271, 28)
         Me.TextBox9.TabIndex = 20
         '
         'TextBox10
         '
         Me.TextBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox10.Location = New System.Drawing.Point(687, 126)
+        Me.TextBox10.Location = New System.Drawing.Point(704, 126)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(265, 28)
+        Me.TextBox10.Size = New System.Drawing.Size(271, 28)
         Me.TextBox10.TabIndex = 21
         '
         'RichTextBox1
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Location = New System.Drawing.Point(237, 163)
+        Me.RichTextBox1.Location = New System.Drawing.Point(243, 163)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.RichTextBox1, 2)
-        Me.RichTextBox1.Size = New System.Drawing.Size(257, 74)
+        Me.RichTextBox1.Size = New System.Drawing.Size(263, 74)
         Me.RichTextBox1.TabIndex = 23
         Me.RichTextBox1.Text = ""
         '
@@ -685,7 +774,7 @@ Partial Class IssueBook
         Me.labelStatus.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelStatus.AutoSize = True
         Me.labelStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelStatus.Location = New System.Drawing.Point(581, 207)
+        Me.labelStatus.Location = New System.Drawing.Point(598, 207)
         Me.labelStatus.Name = "labelStatus"
         Me.labelStatus.Size = New System.Drawing.Size(100, 25)
         Me.labelStatus.TabIndex = 24
@@ -694,110 +783,20 @@ Partial Class IssueBook
         'TextBox15
         '
         Me.TextBox15.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox15.Location = New System.Drawing.Point(687, 206)
+        Me.TextBox15.Location = New System.Drawing.Point(704, 206)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(265, 28)
+        Me.TextBox15.Size = New System.Drawing.Size(271, 28)
         Me.TextBox15.TabIndex = 25
         '
         'TextBox11
         '
         Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox11.Location = New System.Drawing.Point(687, 166)
+        Me.TextBox11.Location = New System.Drawing.Point(704, 166)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(265, 28)
+        Me.TextBox11.Size = New System.Drawing.Size(271, 28)
         Me.TextBox11.TabIndex = 22
-        '
-        'DateTimePicker1
-        '
-        Me.TableLayoutPanel2.SetColumnSpan(Me.DateTimePicker1, 2)
-        Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Location = New System.Drawing.Point(237, 203)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(328, 28)
-        Me.DateTimePicker1.TabIndex = 24
-        '
-        'DateTimePicker2
-        '
-        Me.TableLayoutPanel2.SetColumnSpan(Me.DateTimePicker2, 2)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(237, 243)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(328, 28)
-        Me.DateTimePicker2.TabIndex = 25
-        '
-        'Label17
-        '
-        Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(73, 207)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(158, 25)
-        Me.Label17.TabIndex = 26
-        Me.Label17.Text = "ISSUING DATE:"
-        '
-        'Label19
-        '
-        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(113, 247)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(118, 25)
-        Me.Label19.TabIndex = 27
-        Me.Label19.Text = "DUE DATE:"
-        '
-        'RichTextBox2
-        '
-        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox2.Location = New System.Drawing.Point(628, 3)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.ReadOnly = True
-        Me.TableLayoutPanel2.SetRowSpan(Me.RichTextBox2, 2)
-        Me.RichTextBox2.Size = New System.Drawing.Size(324, 74)
-        Me.RichTextBox2.TabIndex = 22
-        Me.RichTextBox2.Text = ""
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox18.Location = New System.Drawing.Point(628, 86)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(324, 28)
-        Me.TextBox18.TabIndex = 20
-        '
-        'Label20
-        '
-        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(628, 167)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(91, 25)
-        Me.Label20.TabIndex = 28
-        Me.Label20.Text = "Controls:"
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button2.Location = New System.Drawing.Point(708, 243)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(244, 34)
-        Me.Button2.TabIndex = 30
-        Me.Button2.Text = "ISSUE NEW"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Button1.Location = New System.Drawing.Point(708, 203)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(244, 34)
-        Me.Button1.TabIndex = 29
-        Me.Button1.Text = "ISSUE"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'IssueBook
         '
@@ -805,10 +804,10 @@ Partial Class IssueBook
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(1622, 977)
+        Me.ClientSize = New System.Drawing.Size(1622, 853)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.Panel1)
-        Me.MinimumSize = New System.Drawing.Size(1640, 1024)
+        Me.MinimumSize = New System.Drawing.Size(1640, 900)
         Me.Name = "IssueBook"
         Me.Padding = New System.Windows.Forms.Padding(3)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
