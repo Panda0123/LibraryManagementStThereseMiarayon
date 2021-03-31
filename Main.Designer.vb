@@ -45,20 +45,26 @@ Partial Class Main
         Me.publisherBtn = New System.Windows.Forms.Button()
         Me.pbBtn = New System.Windows.Forms.Button()
         Me.authBtn = New System.Windows.Forms.Button()
+        Me.newTitleBtn = New System.Windows.Forms.Button()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadioButtonTitle = New System.Windows.Forms.RadioButton()
         Me.RadioButtonAuthor = New System.Windows.Forms.RadioButton()
         Me.RadioButtonNewlyAdded = New System.Windows.Forms.RadioButton()
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
+        Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.mainPanel = New System.Windows.Forms.Panel()
+        Me.loginBtn = New System.Windows.Forms.Button()
         Me.PageNumLabel = New System.Windows.Forms.Label()
         Me.Button_Back = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel13 = New System.Windows.Forms.LinkLabel()
-        Me.loginBtn = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.upperMainScreenPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
@@ -67,25 +73,19 @@ Partial Class Main
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.newTitleBtn = New System.Windows.Forms.Button()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
         Me.pubPanel.SuspendLayout()
         Me.pbPanel.SuspendLayout()
         Me.authPanel.SuspendLayout()
         Me.newTitlePanel.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.mainPanel.SuspendLayout()
         Me.upperMainScreenPanel.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'leftMainScreenPanel
@@ -97,7 +97,7 @@ Partial Class Main
         Me.leftMainScreenPanel.Location = New System.Drawing.Point(275, 316)
         Me.leftMainScreenPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.leftMainScreenPanel.Name = "leftMainScreenPanel"
-        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 874)
+        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 635)
         Me.leftMainScreenPanel.TabIndex = 11
         '
         'scrollablePanel
@@ -116,10 +116,10 @@ Partial Class Main
         Me.scrollablePanel.Controls.Add(Me.RadioButtonNewlyAdded)
         Me.scrollablePanel.Controls.Add(Me.RadioButtonPublicationDate)
         Me.scrollablePanel.Controls.Add(Me.pictureBoxRectangle)
-        Me.scrollablePanel.Location = New System.Drawing.Point(4, 0)
+        Me.scrollablePanel.Location = New System.Drawing.Point(3, 0)
         Me.scrollablePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.scrollablePanel.Name = "scrollablePanel"
-        Me.scrollablePanel.Size = New System.Drawing.Size(331, 1094)
+        Me.scrollablePanel.Size = New System.Drawing.Size(265, 875)
         Me.scrollablePanel.TabIndex = 0
         '
         'pubPanel
@@ -366,6 +366,38 @@ Partial Class Main
         Me.authBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.authBtn.UseVisualStyleBackColor = False
         '
+        'newTitleBtn
+        '
+        Me.newTitleBtn.BackColor = System.Drawing.Color.White
+        Me.newTitleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.newTitleBtn.FlatAppearance.BorderSize = 0
+        Me.newTitleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
+        Me.newTitleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.newTitleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.newTitleBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.newTitleBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
+        Me.newTitleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.newTitleBtn.Location = New System.Drawing.Point(25, 260)
+        Me.newTitleBtn.Name = "newTitleBtn"
+        Me.newTitleBtn.Size = New System.Drawing.Size(276, 52)
+        Me.newTitleBtn.TabIndex = 13
+        Me.newTitleBtn.Text = "New Titles"
+        Me.newTitleBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.newTitleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.newTitleBtn.UseVisualStyleBackColor = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(2, 234)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(322, 930)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 12
+        Me.PictureBox4.TabStop = False
+        '
         'RadioButtonTitle
         '
         Me.RadioButtonTitle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -430,13 +462,25 @@ Partial Class Main
         Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
         Me.RadioButtonPublicationDate.UseVisualStyleBackColor = True
         '
+        'pictureBoxRectangle
+        '
+        Me.pictureBoxRectangle.BackColor = System.Drawing.Color.Transparent
+        Me.pictureBoxRectangle.Image = CType(resources.GetObject("pictureBoxRectangle.Image"), System.Drawing.Image)
+        Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
+        Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
+        Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
+        Me.pictureBoxRectangle.Size = New System.Drawing.Size(322, 206)
+        Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pictureBoxRectangle.TabIndex = 10
+        Me.pictureBoxRectangle.TabStop = False
+        '
         'mainPanel
         '
         Me.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.mainPanel.Controls.Add(Me.loginBtn)
         Me.mainPanel.Controls.Add(Me.PageNumLabel)
         Me.mainPanel.Controls.Add(Me.Button_Back)
         Me.mainPanel.Controls.Add(Me.LinkLabel13)
-        Me.mainPanel.Controls.Add(Me.loginBtn)
         Me.mainPanel.Controls.Add(Me.FlowLayoutPanel1)
         Me.mainPanel.Controls.Add(Me.upperMainScreenPanel)
         Me.mainPanel.Controls.Add(Me.leftMainScreenPanel)
@@ -446,14 +490,28 @@ Partial Class Main
         Me.mainPanel.Location = New System.Drawing.Point(0, 0)
         Me.mainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.mainPanel.Name = "mainPanel"
-        Me.mainPanel.Size = New System.Drawing.Size(1811, 1191)
+        Me.mainPanel.Size = New System.Drawing.Size(1448, 952)
         Me.mainPanel.TabIndex = 12
+        '
+        'loginBtn
+        '
+        Me.loginBtn.BackColor = System.Drawing.Color.White
+        Me.loginBtn.FlatAppearance.BorderSize = 0
+        Me.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.loginBtn.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loginBtn.Location = New System.Drawing.Point(0, 320)
+        Me.loginBtn.Name = "loginBtn"
+        Me.loginBtn.Size = New System.Drawing.Size(272, 57)
+        Me.loginBtn.TabIndex = 17
+        Me.loginBtn.Text = "Log In"
+        Me.loginBtn.UseVisualStyleBackColor = False
+        Me.loginBtn.UseWaitCursor = True
         '
         'PageNumLabel
         '
         Me.PageNumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PageNumLabel.AutoSize = True
-        Me.PageNumLabel.Location = New System.Drawing.Point(1208, 1149)
+        Me.PageNumLabel.Location = New System.Drawing.Point(1027, 910)
         Me.PageNumLabel.Name = "PageNumLabel"
         Me.PageNumLabel.Size = New System.Drawing.Size(67, 25)
         Me.PageNumLabel.TabIndex = 0
@@ -467,7 +525,7 @@ Partial Class Main
         Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Button_Back.Location = New System.Drawing.Point(1061, 1149)
+        Me.Button_Back.Location = New System.Drawing.Point(880, 910)
         Me.Button_Back.Name = "Button_Back"
         Me.Button_Back.Size = New System.Drawing.Size(87, 25)
         Me.Button_Back.TabIndex = 16
@@ -482,31 +540,12 @@ Partial Class Main
         Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel13.Location = New System.Drawing.Point(1339, 1149)
+        Me.LinkLabel13.Location = New System.Drawing.Point(1158, 910)
         Me.LinkLabel13.Name = "LinkLabel13"
         Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
         Me.LinkLabel13.TabIndex = 16
         Me.LinkLabel13.TabStop = True
         Me.LinkLabel13.Text = "Next"
-        '
-        'loginBtn
-        '
-        Me.loginBtn.BackColor = System.Drawing.Color.White
-        Me.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.loginBtn.FlatAppearance.BorderSize = 0
-        Me.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.loginBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.loginBtn.Location = New System.Drawing.Point(22, 331)
-        Me.loginBtn.Name = "loginBtn"
-        Me.loginBtn.Size = New System.Drawing.Size(215, 52)
-        Me.loginBtn.TabIndex = 14
-        Me.loginBtn.Text = "Log In"
-        Me.loginBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.loginBtn.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel1
         '
@@ -517,7 +556,7 @@ Partial Class Main
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(641, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1168, 1140)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(805, 901)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
         '
@@ -534,6 +573,19 @@ Partial Class Main
         Me.upperMainScreenPanel.Name = "upperMainScreenPanel"
         Me.upperMainScreenPanel.Size = New System.Drawing.Size(630, 308)
         Me.upperMainScreenPanel.TabIndex = 10
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(567, 188)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(50, 49)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 6
+        Me.PictureBox3.TabStop = False
         '
         'advanceSearchLinkLbl
         '
@@ -563,6 +615,19 @@ Partial Class Main
         Me.searchTextBox.TabIndex = 4
         Me.searchTextBox.Text = "Search..."
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(7, 173)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(624, 88)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 5
+        Me.PictureBox2.TabStop = False
+        '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -575,13 +640,26 @@ Partial Class Main
         Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(-15, -5)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(231, 155)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1, Me.RectangleShape3})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1809, 1189)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1446, 950)
         Me.ShapeContainer1.TabIndex = 15
         Me.ShapeContainer1.TabStop = False
         '
@@ -636,96 +714,13 @@ Partial Class Main
         'Timer4
         '
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(567, 188)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 49)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(7, 173)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(624, 88)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(-15, -5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(231, 155)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'newTitleBtn
-        '
-        Me.newTitleBtn.BackColor = System.Drawing.Color.White
-        Me.newTitleBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.newTitleBtn.FlatAppearance.BorderSize = 0
-        Me.newTitleBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray
-        Me.newTitleBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.newTitleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.newTitleBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.newTitleBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
-        Me.newTitleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.newTitleBtn.Location = New System.Drawing.Point(25, 260)
-        Me.newTitleBtn.Name = "newTitleBtn"
-        Me.newTitleBtn.Size = New System.Drawing.Size(276, 52)
-        Me.newTitleBtn.TabIndex = 13
-        Me.newTitleBtn.Text = "New Titles"
-        Me.newTitleBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.newTitleBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.newTitleBtn.UseVisualStyleBackColor = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(2, 234)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(322, 930)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 12
-        Me.PictureBox4.TabStop = False
-        '
-        'pictureBoxRectangle
-        '
-        Me.pictureBoxRectangle.BackColor = System.Drawing.Color.Transparent
-        Me.pictureBoxRectangle.Image = CType(resources.GetObject("pictureBoxRectangle.Image"), System.Drawing.Image)
-        Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
-        Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
-        Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
-        Me.pictureBoxRectangle.Size = New System.Drawing.Size(322, 206)
-        Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pictureBoxRectangle.TabIndex = 10
-        Me.pictureBoxRectangle.TabStop = False
-        '
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1811, 1191)
+        Me.ClientSize = New System.Drawing.Size(1448, 952)
         Me.Controls.Add(Me.mainPanel)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(1169, 645)
@@ -744,6 +739,8 @@ Partial Class Main
         Me.authPanel.PerformLayout()
         Me.newTitlePanel.ResumeLayout(False)
         Me.newTitlePanel.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.mainPanel.ResumeLayout(False)
         Me.mainPanel.PerformLayout()
         Me.upperMainScreenPanel.ResumeLayout(False)
@@ -751,8 +748,6 @@ Partial Class Main
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureBoxRectangle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -782,7 +777,6 @@ Partial Class Main
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Timer4 As Timer
-    Friend WithEvents loginBtn As Button
     Friend WithEvents authPanel As Panel
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents LinkLabel5 As LinkLabel
@@ -805,4 +799,5 @@ Partial Class Main
     Friend WithEvents Button_Back As LinkLabel
     Friend WithEvents LinkLabel13 As LinkLabel
     Friend WithEvents PageNumLabel As Label
+    Friend WithEvents loginBtn As Button
 End Class
