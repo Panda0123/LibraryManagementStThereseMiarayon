@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -123,14 +123,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Utilities\APIClientController\AdminController.vb" />
     <Compile Include="Utilities\APIClientController\AuthorController.vb" />
     <Compile Include="Utilities\APIClientController\BookController.vb" />
     <Compile Include="Utilities\APIClientController\CategoryController.vb" />
     <Compile Include="Utilities\APIClientController\HTTPRequestController.vb" />
     <Compile Include="Utilities\APIClientController\ImageController.vb" />
+    <Compile Include="Utilities\Authorization.vb" />
     <Compile Include="Utilities\DTOs\AuthorDTO.vb" />
     <Compile Include="Utilities\DTOs\BookDetailsDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
+    <Compile Include="Utilities\Forms\TemporaryLogin.Designer.vb">
+      <DependentUpon>TemporaryLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Forms\TemporaryLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
@@ -147,6 +155,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\Forms\TemporaryLogin.resx">
+      <DependentUpon>TemporaryLogin.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -197,7 +208,7 @@
     <None Include="Resources\pic 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Utilities\Forms\" />
+    <None Include="Resources\addHover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\addBookBtn.png" />
@@ -234,6 +245,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canceHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save2Hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

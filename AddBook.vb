@@ -19,20 +19,15 @@ Public Class AddBook
             classificationNames.Add(classificationDto.name)
         Next
         classificationCmbBx.DataSource = classificationNames
-        populate(1)
-    End Sub
-
-    Private Sub btn_blk_mouseLeave(sender As Object, e As EventArgs) Handles btn_blk.MouseLeave
-
-    End Sub
-    Private Sub btn_white_mouseHover(sender As Object, e As EventArgs) Handles btn_white.MouseHover
-
+        populate(4)
+        'empty()
     End Sub
 
     '  EVENT HANDLERS
 
     ' books
-    Private Sub addBookBtn_Click(sender As Object, e As EventArgs) Handles addBookBtn.Click
+    Private Sub addBookBtn_Click(sender As Object, e As EventArgs) Handles addHoverPcBx.Click
+
         Dim newBook As New BookDetailsDTO
 
         newBook.title = titleTxtBx.Text
@@ -86,15 +81,18 @@ Public Class AddBook
             uploadImage(response + ext)  ' upload the image
         End If
 
+        MessageBox.Show("Successfully added book!")
+        empty()
         populate(response)
     End Sub
 
-    Private Sub savePcBx_Click(sender As Object, e As EventArgs) Handles savePcBx.Click
+
+    Private Sub savePcBx_Click(sender As Object, e As EventArgs) Handles saveHoverPcBx.Click
+
         Dim attrs As New Dictionary(Of String, String)
         If String.Compare(selectedBook.title.Trim, selectedBook.title) <> 0 Then
             attrs.Add("title", selectedBook.title.Trim)
         End If
-        ' TODO: check if isbn already exist first or check it after user typed it
         If String.Compare(isbnTxtBx.Text.Trim, selectedBook.isbn) <> 0 Then
             attrs.Add("isbn", isbnTxtBx.Text.Trim)
         End If
@@ -174,7 +172,6 @@ Public Class AddBook
             Next
         End If
 
-        ' TODO FINSIGH IMAGE SHIT
         ' image
         Dim uploadImg As Boolean = False
         Dim removeImg As Boolean = False
@@ -208,8 +205,12 @@ Public Class AddBook
         ElseIf removeImg Then
             ImageController.removeImage(selectedBook.image)
         End If
-
+        MessageBox.Show("Successfully updated!")
         populate(selectedBook.bookId)
+    End Sub
+
+    Private Sub cancelHoverBtn_Click(sender As Object, e As EventArgs) Handles cancelHoverPcBx.Click
+        Me.Close()
     End Sub
 
 
@@ -287,10 +288,10 @@ Public Class AddBook
         End If
     End Sub
 
-    ' IMAGE HANDLER
+    ' image
     Private Sub addImgBtn_click(sender As Object, e As EventArgs) Handles bkPicBx.Click
         Dim fileDialog = New OpenFileDialog()
-        fileDialog.Filter = "Picture Files (*)|*.bmp;*.jpg"
+        fileDialog.Filter = "Picture Files (*)|*.bmp;*.jpg;*.png"
 
         If fileDialog.ShowDialog = Windows.Forms.DialogResult.OK Then
             imgFlName = fileDialog.FileName
@@ -305,8 +306,87 @@ Public Class AddBook
         removeImgBtn.Visible = False
     End Sub
 
+    ' elements
+    Private Sub panel_mouseLeave(sender As Object, e As EventArgs) Handles SidePanel1.MouseLeave, SidePanel2.MouseLeave,
+        SidePanel3.MouseLeave, SidePanel4.MouseLeave, SidePanel5.MouseLeave, SidePanel6.MouseLeave
+        If sender.Equals(SidePanel1) Then
+            SidePanel1.BackColor = Color.White
+            SidePanel1.BorderStyle = BorderStyle.None
+        ElseIf sender.Equals(SidePanel2) Then
+            SidePanel2.BackColor = Color.White
+            SidePanel2.BorderStyle = BorderStyle.FixedSingle
+        ElseIf sender.Equals(SidePanel3) Then
+            SidePanel3.BackColor = Color.White
+            SidePanel3.BorderStyle = BorderStyle.None
+        ElseIf sender.Equals(SidePanel4) Then
+            SidePanel4.BackColor = Color.White
+            SidePanel4.BorderStyle = BorderStyle.None
+        ElseIf sender.Equals(SidePanel5) Then
+            SidePanel5.BackColor = Color.White
+            SidePanel5.BorderStyle = BorderStyle.None
+        ElseIf sender.Equals(SidePanel6) Then
+            SidePanel6.BackColor = Color.White
+            SidePanel6.BorderStyle = BorderStyle.None
+        End If
+    End Sub
 
-    ' HELPER FUNCTIONS
+    Private Sub panel_mouseHover(sender As Object,
+            e As EventArgs) Handles SidePanel1.MouseHover, SideLabel1.MouseHover, SidePcBx1.MouseHover,
+            SidePanel2.MouseHover, SideLabel2.MouseHover, SidePcBx2.MouseHover,
+            SidePanel3.MouseHover, SideLabel3.MouseHover, SidePcBx3.MouseHover,
+            SidePanel4.MouseHover, SideLabel4.MouseHover, SidePcBx4.MouseHover,
+            SidePanel5.MouseHover, SideLabel5.MouseHover, SidePcBx5.MouseHover,
+            SidePanel6.MouseHover, SideLabel6.MouseHover, SidePcBx6.MouseHover
+        If sender.Equals(SidePanel1) Or sender.Equals(SideLabel1) Or sender.Equals(SidePcBx1) Then
+            SidePanel1.BackColor = Color.LightGray
+            SidePanel1.BorderStyle = BorderStyle.FixedSingle
+        ElseIf sender.Equals(SidePanel2) Or sender.Equals(SideLabel2) Or sender.Equals(SidePcBx2) Then
+            SidePanel2.BackColor = Color.LightGray
+            SidePanel2.BorderStyle = BorderStyle.FixedSingle
+        ElseIf sender.Equals(SidePanel3) Or sender.Equals(SideLabel3) Or sender.Equals(SidePcBx3) Then
+            SidePanel3.BackColor = Color.LightGray
+            SidePanel3.BorderStyle = BorderStyle.FixedSingle
+        ElseIf sender.Equals(SidePanel4) Or sender.Equals(SideLabel4) Or sender.Equals(SidePcBx4) Then
+            SidePanel4.BackColor = Color.LightGray
+            SidePanel4.BorderStyle = BorderStyle.FixedSingle
+        ElseIf sender.Equals(SidePanel5) Or sender.Equals(SideLabel5) Or sender.Equals(SidePcBx5) Then
+            SidePanel5.BackColor = Color.LightGray
+            SidePanel5.BorderStyle = BorderStyle.FixedSingle
+        ElseIf sender.Equals(SidePanel6) Or sender.Equals(SideLabel6) Or sender.Equals(SidePcBx6) Then
+            SidePanel6.BackColor = Color.LightGray
+            SidePanel6.BorderStyle = BorderStyle.FixedSingle
+        End If
+    End Sub
+
+    Private Sub cancelPcBx_Hover(sender As Object, e As EventArgs) Handles cancelPcBx.MouseHover
+        cancelHoverPcBx.Visible = True
+        cancelPcBx.Visible = False
+    End Sub
+    Private Sub cancelHoverPcBx_Hover(sender As Object, e As EventArgs) Handles cancelHoverPcBx.MouseLeave
+        cancelHoverPcBx.Visible = False
+        cancelPcBx.Visible = True
+    End Sub
+
+    Private Sub savePcBx_Hover(sender As Object, e As EventArgs) Handles savePcBx.MouseHover
+        saveHoverPcBx.Visible = True
+        savePcBx.Visible = False
+    End Sub
+
+    Private Sub saveHoverPcBx_Hover(sender As Object, e As EventArgs) Handles saveHoverPcBx.MouseLeave
+        saveHoverPcBx.Visible = False
+        savePcBx.Visible = True
+    End Sub
+    Private Sub addPcBx_Hover(sender As Object, e As EventArgs) Handles addPcBx.MouseHover
+        addHoverPcBx.Visible = True
+        addPcBx.Visible = False
+    End Sub
+
+    Private Sub addHoverPcBx_Hover(sender As Object, e As EventArgs) Handles addHoverPcBx.MouseLeave
+        addHoverPcBx.Visible = False
+        addPcBx.Visible = True
+    End Sub
+
+    ' HELPER FUNCTIONS/SUBS
     Private Sub populate(bookId As String)
 
         selectedBook = BookController.getBook(bookId)
@@ -316,7 +396,6 @@ Public Class AddBook
         languageTxtBx.Text = selectedBook.language
         editionTxtBx.Text = selectedBook.edition
         'numAvailableLbl.Text = selectedBook.numAvailable
-
 
         publisherNameTxtBx.Text = selectedBook.publisherName
         publisherAddrTxtBx.Text = selectedBook.publisherAddress
@@ -357,12 +436,57 @@ Public Class AddBook
             removeImgBtn.Visible = False
             System.Diagnostics.Debug.WriteLine("tae" + " " + selectedBook.image)
         End If
+        addPcBx.Visible = False
+        savePcBx.Visible = True
+    End Sub
+
+    Private Sub empty()
+
+        selectedBook = Nothing
+        titleTxtBx.Text = String.Empty
+        isbnTxtBx.Text = String.Empty
+        quantityTxtBx.Text = String.Empty
+        languageTxtBx.Text = String.Empty
+        editionTxtBx.Text = String.Empty
+        'numAvailableLbl.Text = selectedBook.numAvailable
+
+        publisherNameTxtBx.Text = String.Empty
+        publisherAddrTxtBx.Text = String.Empty
+
+        publishedDatePicker.Value = Date.Now()
+        publishedDatePicker.Checked = True
+
+        classificationCmbBx.SelectedIndex = 0
+        copyrightNameTxtBx.Text = String.Empty
+        copyrightYearDTPckr.Value = Date.Now()
+        copyrightYearDTPckr.Checked = True
+
+        shelfTxtBx.Text = String.Empty
+        summaryRichTxtBx.Text = String.Empty
+
+        authors = New List(Of AuthorDTO)
+
+        bkPicBx.Image = My.Resources.default_book
+        removeImgBtn.Visible = False
+
+
+        savePcBx.Visible = False
+        addPcBx.Visible = True
+
+
+        selectedBook = Nothing
+
+        numAuthor = 0
+        authorsTxt = String.Empty
+        selectedAuthorNum = 0
+        imgFlName = String.Empty
+
+        populateAuthors()
     End Sub
 
 
     Private Sub populateAuthors()
         numAuthor = 1
-        Dim padding As Int16 = 20
         Dim outputNum As String = "No." + vbCrLf
         Dim outputFN As String = "FN" + vbCrLf
         Dim outputMN As String = "MN" + vbCrLf
@@ -400,7 +524,5 @@ Public Class AddBook
         Dim imgRetuned = ImageController.getImage(flNm)
         bkPicBx.Image = imgRetuned
     End Sub
-
-
 
 End Class

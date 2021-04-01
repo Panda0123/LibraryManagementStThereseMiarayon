@@ -3,7 +3,6 @@ Imports System.Net
 Imports System.Text
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
-Imports WindowsApp1.HttpRequestController
 
 Module AuthorController
 
@@ -12,14 +11,14 @@ Module AuthorController
 
 
     Public Function getAuthors() As List(Of AuthorDTO)
-        Dim response As String = HttpRequestController.HttpRequestGet(URL)
+        Dim response As String = HttpRequestController.HttpRequestGet(URL + "/all")
         Dim output = JsonConvert.DeserializeObject(Of List(Of AuthorDTO))(response)
 
         Return output
     End Function
 
     Public Function getAuthor(authorId As String) As AuthorDTO
-        Dim newURL As String = URL + "/" + authorId
+        Dim newURL As String = URL + "/all/" + authorId
 
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)
         Return JsonConvert.DeserializeObject(Of AuthorDTO)(response)
@@ -38,13 +37,13 @@ Module AuthorController
     End Function
 
     Sub addAuthor(mes As String)
-        HttpRequestController.HttpRequestPost(URL, mes)
+        HttpRequestController.HttpRequestPost(URL + "/admin", mes, Authorization.authToken)
     End Sub
 
     Function findAuthorByName(attrs As Dictionary(Of
             String, String))
 
-        Dim newUrl As String = URL + "/q?"
+        Dim newUrl As String = URL + "/all/q?"
 
         For Each key As String In attrs.Keys
             newUrl = newUrl + key + "=" + attrs.Item(key) + "&"
@@ -57,7 +56,7 @@ Module AuthorController
     Sub updateAuthor(id As String, attrs As Dictionary(Of
             String, String))
 
-        Dim newUrl As String = URL + "/" + id + "/?"
+        Dim newUrl As String = URL + "/admin/" + id + "/?"
 
         For Each key As String In attrs.Keys
             newUrl = newUrl + key + "=" + attrs.Item(key) + "&"
@@ -66,8 +65,8 @@ Module AuthorController
     End Sub
 
     Sub deleteAuthor(id As String)
-        Dim newURL As String = URL + "/" + id
-        HttpRequestController.HttpRequestDelete(newURL)
+        Dim newURL As String = URL + "/admin/" + id
+        HttpRequestController.HttpRequestDelete(newURL, Authorization.authToken)
     End Sub
 End Module
 
