@@ -1,22 +1,24 @@
 ﻿'Imports System.Globalization
-Public Class AddBook
-    Private Sub savePcBx_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub addBookBtn_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub removeImgBtn_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub addImgBtn_click(sender As Object, e As EventArgs)
-
-    End Sub
-
+Public Class adminView
+    Public adminbookDP As New List(Of bookControlAdmin)
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For i As Integer = 0 To 5
+            Dim book As New bookControlAdmin
+            adminbookDP.Add(book)
+            bookDisp.Controls.Add(book)
+        Next
+    End Sub
+
+
+    Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
+        bookDisp.Visible = True
+        MainPanel.Visible = False
+    End Sub
+
+
+    Private Sub bokkAddBtn_Click(sender As Object, e As EventArgs) Handles bokkAddBtn.Click
+        bookDisp.Visible = False
+        MainPanel.Visible = True
 
     End Sub
     '    Private selectedBook As BookDetailsDTO

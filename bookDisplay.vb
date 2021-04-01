@@ -13,6 +13,10 @@
         'PictureBox1.Image = rm.GetObject("pic 1")
     End Sub
 
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        viewBook.ShowDialog()
+    End Sub
+
 
     '  Public Sub New(Title As String, author As List(Of String), img As Image, Language As String, Publisher As String, Status As String)
 

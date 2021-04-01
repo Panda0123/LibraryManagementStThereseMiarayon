@@ -4,9 +4,11 @@
     Private Sub loginBtnLoginForm_Click(sender As Object, e As EventArgs) Handles loginBtnLoginForm.Click
         loginBtnLoginForm.ForeColor = Color.FromArgb(0, 54, 99)
         If userNameTxtbox.Text.Equals(username) And pass.Equals(passTxtBox.Text) Then
-            AddBook.Show()
+            adminView.Show()
             Me.Close()
+            Main.Close()
         End If
+
     End Sub
 
         Private Sub loginBtnLoginForm_mouseLeave(sender As Object, e As EventArgs) Handles loginBtnLoginForm.MouseLeave

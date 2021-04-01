@@ -1,5 +1,5 @@
 ﻿Public Class Main
-    Public bookDP As List(Of bookDisplay)
+    Public bookDP As New List(Of bookDisplay)
     Private newTitle_click As Integer = 0
     Private auth_click As Integer = 0
     Private pb_click As Integer = 0
@@ -10,27 +10,22 @@
 
     Public Sub New()
         InitializeComponent()
-        bookDP = New List(Of bookDisplay)
         searchTextBox.SelectionStart = 0
         FlowLayoutPanel1.Controls.Clear()
         FlowLayoutPanel1.WrapContents = False
-
-        ' loop here
-        ' bookDP.Add(New bookDisplay)
-        displayBookvb.loadBooks(bookDP)
-
-    End Sub
-
-    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For x As Integer = 1 To 12
             Dim book As New bookDisplay
             bookDP.Add(book)
             If x <= BooksPerPage Then
                 book.Label2.Text = x.ToString
                 FlowLayoutPanel1.Controls.Add(book) 'add the first page of books when adding them to the List
-
             End If
         Next
+
+    End Sub
+
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
     Private Sub Button_Back_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Button_Back.LinkClicked
@@ -184,7 +179,9 @@
         Timer4.Stop()
     End Sub
 
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
 
+    End Sub
 End Class
 
 

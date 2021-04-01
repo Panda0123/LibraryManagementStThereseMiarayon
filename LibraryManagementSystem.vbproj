@@ -87,10 +87,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBook.Designer.vb">
-      <DependentUpon>AddBook.vb</DependentUpon>
+    <Compile Include="adminView.Designer.vb">
+      <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddBook.vb">
+    <Compile Include="adminView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="advanceSearch.Designer.vb">
@@ -99,10 +99,10 @@
     <Compile Include="advanceSearch.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Book.Designer.vb">
-      <DependentUpon>Book.vb</DependentUpon>
+    <Compile Include="bookControlAdmin.Designer.vb">
+      <DependentUpon>bookControlAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Book.vb">
+    <Compile Include="bookControlAdmin.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="bookDisplay.Designer.vb">
@@ -112,6 +112,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="displayBookvb.vb" />
+    <Compile Include="IssueBook.Designer.vb">
+      <DependentUpon>IssueBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IssueBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="login.Designer.vb">
       <DependentUpon>login.vb</DependentUpon>
     </Compile>
@@ -149,7 +155,7 @@
     <Compile Include="Utilities\DTOs\AuthorDTO.vb" />
     <Compile Include="Utilities\DTOs\BookDetailsDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
-    <Compile Include="utils.vb" />
+    <Compile Include="Utilities\methods\utils.vb" />
     <Compile Include="viewBook.Designer.vb">
       <DependentUpon>viewBook.vb</DependentUpon>
     </Compile>
@@ -158,17 +164,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddBook.resx">
-      <DependentUpon>AddBook.vb</DependentUpon>
+    <EmbeddedResource Include="adminView.resx">
+      <DependentUpon>adminView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="advanceSearch.resx">
       <DependentUpon>advanceSearch.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Book.resx">
-      <DependentUpon>Book.vb</DependentUpon>
+    <EmbeddedResource Include="bookControlAdmin.resx">
+      <DependentUpon>bookControlAdmin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bookDisplay.resx">
       <DependentUpon>bookDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IssueBook.resx">
+      <DependentUpon>IssueBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -275,6 +284,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\cancel.png" />
+    <None Include="Resources\icons8-reserve-24.png" />
+    <None Include="Resources\icons8-reserve-96.png" />
+    <None Include="Resources\icons8-reserve-48.png" />
+    <None Include="Resources\icons8-borrow-book-64.png" />
     <Content Include="Resources\Log In Dialog Box.png" />
     <Content Include="Resources\padlock.png" />
     <Content Include="Resources\pic 11.png" />

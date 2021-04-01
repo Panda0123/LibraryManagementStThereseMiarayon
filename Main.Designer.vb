@@ -119,7 +119,7 @@ Partial Class Main
         Me.scrollablePanel.Location = New System.Drawing.Point(3, 0)
         Me.scrollablePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.scrollablePanel.Name = "scrollablePanel"
-        Me.scrollablePanel.Size = New System.Drawing.Size(265, 875)
+        Me.scrollablePanel.Size = New System.Drawing.Size(331, 875)
         Me.scrollablePanel.TabIndex = 0
         '
         'pubPanel
