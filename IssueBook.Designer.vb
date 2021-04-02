@@ -37,7 +37,6 @@ Partial Class IssueBook
         Me.textBoxPublisher = New System.Windows.Forms.TextBox()
         Me.textBoxPubDate = New System.Windows.Forms.TextBox()
         Me.textBoxLanguage = New System.Windows.Forms.TextBox()
-        Me.labelControlsReturn = New System.Windows.Forms.Label()
         Me.labelShelfID = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -57,6 +56,7 @@ Partial Class IssueBook
         Me.labelCategory = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.buttonBorrow = New System.Windows.Forms.Button()
+        Me.textBoxVolume = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -76,7 +76,6 @@ Partial Class IssueBook
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
@@ -88,6 +87,7 @@ Partial Class IssueBook
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.buttonReserve = New System.Windows.Forms.Button()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.groupBorrowerDetails = New System.Windows.Forms.GroupBox()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -108,7 +108,6 @@ Partial Class IssueBook
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.groupBoxBookDetails = New System.Windows.Forms.GroupBox()
-        Me.textBoxVolume = New System.Windows.Forms.TextBox()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -193,7 +192,6 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxPublisher, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxPubDate, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxLanguage, 1, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.labelControlsReturn, 3, 7)
         Me.TableLayoutPanel1.Controls.Add(Me.labelShelfID, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label9, 0, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 9)
@@ -337,17 +335,6 @@ Partial Class IssueBook
         Me.textBoxLanguage.ReadOnly = True
         Me.textBoxLanguage.Size = New System.Drawing.Size(225, 29)
         Me.textBoxLanguage.TabIndex = 17
-        '
-        'labelControlsReturn
-        '
-        Me.labelControlsReturn.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.labelControlsReturn.AutoSize = True
-        Me.labelControlsReturn.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelControlsReturn.Location = New System.Drawing.Point(601, 285)
-        Me.labelControlsReturn.Name = "labelControlsReturn"
-        Me.labelControlsReturn.Size = New System.Drawing.Size(88, 29)
-        Me.labelControlsReturn.TabIndex = 26
-        Me.labelControlsReturn.Text = "Controls:"
         '
         'labelShelfID
         '
@@ -549,6 +536,16 @@ Partial Class IssueBook
         Me.buttonBorrow.TabIndex = 36
         Me.buttonBorrow.Text = "BORROW BOOK"
         Me.buttonBorrow.UseVisualStyleBackColor = True
+        '
+        'textBoxVolume
+        '
+        Me.textBoxVolume.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.textBoxVolume.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBoxVolume.Location = New System.Drawing.Point(601, 165)
+        Me.textBoxVolume.Name = "textBoxVolume"
+        Me.textBoxVolume.ReadOnly = True
+        Me.textBoxVolume.Size = New System.Drawing.Size(246, 29)
+        Me.textBoxVolume.TabIndex = 37
         '
         'TabPage2
         '
@@ -799,16 +796,6 @@ Partial Class IssueBook
         Me.TextBox16.Size = New System.Drawing.Size(246, 29)
         Me.TextBox16.TabIndex = 22
         '
-        'TextBox17
-        '
-        Me.TextBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox17.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(601, 165)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(246, 29)
-        Me.TextBox17.TabIndex = 21
-        '
         'TextBox18
         '
         Me.TextBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -925,6 +912,16 @@ Partial Class IssueBook
         Me.buttonReserve.TabIndex = 36
         Me.buttonReserve.Text = "RESERVE BOOK"
         Me.buttonReserve.UseVisualStyleBackColor = True
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox17.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox17.Location = New System.Drawing.Point(601, 165)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.ReadOnly = True
+        Me.TextBox17.Size = New System.Drawing.Size(246, 29)
+        Me.TextBox17.TabIndex = 21
         '
         'groupBorrowerDetails
         '
@@ -1174,16 +1171,6 @@ Partial Class IssueBook
         Me.groupBoxBookDetails.TabStop = False
         Me.groupBoxBookDetails.Text = "Issue Details"
         '
-        'textBoxVolume
-        '
-        Me.textBoxVolume.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.textBoxVolume.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxVolume.Location = New System.Drawing.Point(601, 165)
-        Me.textBoxVolume.Name = "textBoxVolume"
-        Me.textBoxVolume.ReadOnly = True
-        Me.textBoxVolume.Size = New System.Drawing.Size(246, 29)
-        Me.textBoxVolume.TabIndex = 37
-        '
         'IssueBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1303,7 +1290,6 @@ Partial Class IssueBook
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Button4 As Button
-    Friend WithEvents labelControlsReturn As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents buttonReserve As Button
     Friend WithEvents buttonBorrow As Button
