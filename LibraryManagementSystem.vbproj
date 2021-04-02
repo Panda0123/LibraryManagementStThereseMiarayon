@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBook.Designer.vb">
+      <DependentUpon>AddBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="adminView.Designer.vb">
       <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
@@ -162,6 +168,8 @@
       <DependentUpon>viewBook.vb</DependentUpon>
     </Compile>
     <Compile Include="viewBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utilities\Forms\TemporaryLogin.Designer.vb">
       <DependentUpon>TemporaryLogin.vb</DependentUpon>
     </Compile>
@@ -170,6 +178,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddBook.resx">
+      <DependentUpon>AddBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.vb</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +210,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewBook.resx">
       <DependentUpon>viewBook.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utilities\Forms\TemporaryLogin.resx">
       <DependentUpon>TemporaryLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -251,8 +263,6 @@
     <None Include="Resources\pic 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
-    <Folder Include="Utilities\Forms\" />
     <None Include="Resources\addHover.png" />
   </ItemGroup>
   <ItemGroup>
@@ -310,6 +320,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\save2Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
