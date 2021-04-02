@@ -48,9 +48,6 @@ Partial Class adminView
         Me.bokkAddBtn = New System.Windows.Forms.Button()
         Me.viewBookBtn = New System.Windows.Forms.Button()
         Me.MainPanel = New System.Windows.Forms.Panel()
-        Me.savePcBx = New System.Windows.Forms.PictureBox()
-        Me.cancelPcBx = New System.Windows.Forms.PictureBox()
-        Me.addBookBtn = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.shelfTxtBx = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -121,9 +118,6 @@ Partial Class adminView
         Me.backgrounPanel.SuspendLayout()
         Me.LeftSidePanel.SuspendLayout()
         Me.MainPanel.SuspendLayout()
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addBookBtn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel11.SuspendLayout()
@@ -478,9 +472,6 @@ Partial Class adminView
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MainPanel.BackColor = System.Drawing.Color.White
         Me.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.MainPanel.Controls.Add(Me.savePcBx)
-        Me.MainPanel.Controls.Add(Me.cancelPcBx)
-        Me.MainPanel.Controls.Add(Me.addBookBtn)
         Me.MainPanel.Controls.Add(Me.Panel2)
         Me.MainPanel.Controls.Add(Me.ImageSummaryPanel)
         Me.MainPanel.Location = New System.Drawing.Point(318, 6)
@@ -1268,9 +1259,6 @@ Partial Class adminView
         Me.backgrounPanel.ResumeLayout(False)
         Me.LeftSidePanel.ResumeLayout(False)
         Me.MainPanel.ResumeLayout(False)
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addBookBtn, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
@@ -1347,7 +1335,7 @@ Partial Class adminView
     Friend WithEvents updateAuthorBtn As MetroFramework.Controls.MetroButton
     Friend WithEvents addAuthorBtn As MetroFramework.Controls.MetroButton
     Friend WithEvents getAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents addBookBtn As PictureBox
+    Friend WithEvents addPcBx As PictureBox
     Friend WithEvents cancelPcBx As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
