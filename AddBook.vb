@@ -13,13 +13,13 @@ Public Class AddBook
     Private imgFlName As String = ""
 
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        classifications = CategoryController.getCategories()
-        classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
-        For Each classificationDto As ClassificationDTO In classifications
-            classificationNames.Add(classificationDto.name)
-        Next
-        classificationCmbBx.DataSource = classificationNames
-        populate(4)
+        'classifications = CategoryController.getCategories()
+        'classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
+        'For Each classificationDto As ClassificationDTO In classifications
+        '    classificationNames.Add(classificationDto.name)
+        'Next
+        'classificationCmbBx.DataSource = classificationNames
+        'populate(4)
         'empty()
     End Sub
 
