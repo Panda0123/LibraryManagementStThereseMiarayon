@@ -505,7 +505,6 @@ Partial Class Main
         Me.loginBtn.TabIndex = 17
         Me.loginBtn.Text = "Log In"
         Me.loginBtn.UseVisualStyleBackColor = False
-        Me.loginBtn.UseWaitCursor = True
         '
         'PageNumLabel
         '
