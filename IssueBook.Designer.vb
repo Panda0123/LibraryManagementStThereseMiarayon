@@ -48,7 +48,6 @@ Partial Class IssueBook
         Me.labelStatus = New System.Windows.Forms.Label()
         Me.textBoxStatus = New System.Windows.Forms.TextBox()
         Me.textBoxEdition = New System.Windows.Forms.TextBox()
-        Me.buttonIssueBook = New System.Windows.Forms.Button()
         Me.labelShelfID = New System.Windows.Forms.Label()
         Me.groupBorrowerDetails = New System.Windows.Forms.GroupBox()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
@@ -180,7 +179,6 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxPubDate, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxLanguage, 1, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.labelControlsReturn, 3, 7)
-        Me.TableLayoutPanel1.Controls.Add(Me.buttonIssueBook, 3, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.labelShelfID, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label9, 0, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 9)
@@ -189,7 +187,6 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 1, 9)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxStatus, 3, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxEdition, 3, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.textBoxVolume, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxSeries, 3, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxISBN, 3, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxCategory, 3, 1)
@@ -200,6 +197,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.labelISBN, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.labelCategory, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.textBoxVolume, 3, 8)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
@@ -449,17 +447,6 @@ Partial Class IssueBook
         Me.textBoxEdition.ReadOnly = True
         Me.textBoxEdition.Size = New System.Drawing.Size(246, 29)
         Me.textBoxEdition.TabIndex = 22
-        '
-        'buttonIssueBook
-        '
-        Me.buttonIssueBook.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.buttonIssueBook.Location = New System.Drawing.Point(601, 323)
-        Me.buttonIssueBook.Name = "buttonIssueBook"
-        Me.TableLayoutPanel1.SetRowSpan(Me.buttonIssueBook, 2)
-        Me.buttonIssueBook.Size = New System.Drawing.Size(246, 74)
-        Me.buttonIssueBook.TabIndex = 27
-        Me.buttonIssueBook.Text = "BORROW BOOK"
-        Me.buttonIssueBook.UseVisualStyleBackColor = True
         '
         'labelShelfID
         '
@@ -1247,7 +1234,6 @@ Partial Class IssueBook
     Friend WithEvents groupBoxBookDetails As GroupBox
     Friend WithEvents labelStatus As Label
     Friend WithEvents textBoxStatus As TextBox
-    Friend WithEvents buttonIssueBook As Button
     Friend WithEvents labelShelfID As Label
     Friend WithEvents groupBorrowerDetails As GroupBox
     Friend WithEvents SplitContainer2 As SplitContainer

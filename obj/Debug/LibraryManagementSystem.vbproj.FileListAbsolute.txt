@@ -69,12 +69,9 @@ D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.dll
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Fonts.dll
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
-D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
-D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
-D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Book.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookDisplay.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.IssueBook.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.login.resources
@@ -90,3 +87,5 @@ D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManageme
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.IssueBook.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookControlAdmin.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookControlAdmin.resources
