@@ -53,10 +53,10 @@ Partial Class Main
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
         Me.pictureBoxRectangle = New System.Windows.Forms.PictureBox()
         Me.mainPanel = New System.Windows.Forms.Panel()
+        Me.loginBtn = New System.Windows.Forms.Button()
         Me.PageNumLabel = New System.Windows.Forms.Label()
         Me.Button_Back = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel13 = New System.Windows.Forms.LinkLabel()
-        Me.loginBtn = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.upperMainScreenPanel = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -97,7 +97,7 @@ Partial Class Main
         Me.leftMainScreenPanel.Location = New System.Drawing.Point(275, 316)
         Me.leftMainScreenPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.leftMainScreenPanel.Name = "leftMainScreenPanel"
-        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 874)
+        Me.leftMainScreenPanel.Size = New System.Drawing.Size(359, 635)
         Me.leftMainScreenPanel.TabIndex = 11
         '
         'scrollablePanel
@@ -116,10 +116,10 @@ Partial Class Main
         Me.scrollablePanel.Controls.Add(Me.RadioButtonNewlyAdded)
         Me.scrollablePanel.Controls.Add(Me.RadioButtonPublicationDate)
         Me.scrollablePanel.Controls.Add(Me.pictureBoxRectangle)
-        Me.scrollablePanel.Location = New System.Drawing.Point(4, 0)
+        Me.scrollablePanel.Location = New System.Drawing.Point(3, 0)
         Me.scrollablePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.scrollablePanel.Name = "scrollablePanel"
-        Me.scrollablePanel.Size = New System.Drawing.Size(331, 1094)
+        Me.scrollablePanel.Size = New System.Drawing.Size(331, 875)
         Me.scrollablePanel.TabIndex = 0
         '
         'pubPanel
@@ -477,10 +477,10 @@ Partial Class Main
         'mainPanel
         '
         Me.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.mainPanel.Controls.Add(Me.loginBtn)
         Me.mainPanel.Controls.Add(Me.PageNumLabel)
         Me.mainPanel.Controls.Add(Me.Button_Back)
         Me.mainPanel.Controls.Add(Me.LinkLabel13)
-        Me.mainPanel.Controls.Add(Me.loginBtn)
         Me.mainPanel.Controls.Add(Me.FlowLayoutPanel1)
         Me.mainPanel.Controls.Add(Me.upperMainScreenPanel)
         Me.mainPanel.Controls.Add(Me.leftMainScreenPanel)
@@ -490,14 +490,28 @@ Partial Class Main
         Me.mainPanel.Location = New System.Drawing.Point(0, 0)
         Me.mainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.mainPanel.Name = "mainPanel"
-        Me.mainPanel.Size = New System.Drawing.Size(1811, 1191)
+        Me.mainPanel.Size = New System.Drawing.Size(1448, 952)
         Me.mainPanel.TabIndex = 12
+        '
+        'loginBtn
+        '
+        Me.loginBtn.BackColor = System.Drawing.Color.White
+        Me.loginBtn.FlatAppearance.BorderSize = 0
+        Me.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.loginBtn.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.loginBtn.Location = New System.Drawing.Point(0, 320)
+        Me.loginBtn.Name = "loginBtn"
+        Me.loginBtn.Size = New System.Drawing.Size(272, 57)
+        Me.loginBtn.TabIndex = 17
+        Me.loginBtn.Text = "Log In"
+        Me.loginBtn.UseVisualStyleBackColor = False
+        Me.loginBtn.UseWaitCursor = True
         '
         'PageNumLabel
         '
         Me.PageNumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PageNumLabel.AutoSize = True
-        Me.PageNumLabel.Location = New System.Drawing.Point(1208, 1149)
+        Me.PageNumLabel.Location = New System.Drawing.Point(1027, 910)
         Me.PageNumLabel.Name = "PageNumLabel"
         Me.PageNumLabel.Size = New System.Drawing.Size(67, 25)
         Me.PageNumLabel.TabIndex = 0
@@ -511,7 +525,7 @@ Partial Class Main
         Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Button_Back.Location = New System.Drawing.Point(1061, 1149)
+        Me.Button_Back.Location = New System.Drawing.Point(880, 910)
         Me.Button_Back.Name = "Button_Back"
         Me.Button_Back.Size = New System.Drawing.Size(87, 25)
         Me.Button_Back.TabIndex = 16
@@ -526,31 +540,12 @@ Partial Class Main
         Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel13.Location = New System.Drawing.Point(1339, 1149)
+        Me.LinkLabel13.Location = New System.Drawing.Point(1158, 910)
         Me.LinkLabel13.Name = "LinkLabel13"
         Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
         Me.LinkLabel13.TabIndex = 16
         Me.LinkLabel13.TabStop = True
         Me.LinkLabel13.Text = "Next"
-        '
-        'loginBtn
-        '
-        Me.loginBtn.BackColor = System.Drawing.Color.White
-        Me.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.loginBtn.FlatAppearance.BorderSize = 0
-        Me.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.loginBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.loginBtn.Location = New System.Drawing.Point(22, 331)
-        Me.loginBtn.Name = "loginBtn"
-        Me.loginBtn.Size = New System.Drawing.Size(215, 52)
-        Me.loginBtn.TabIndex = 14
-        Me.loginBtn.Text = "Log In"
-        Me.loginBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.loginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.loginBtn.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel1
         '
@@ -561,7 +556,7 @@ Partial Class Main
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(641, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1168, 1140)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(805, 901)
         Me.FlowLayoutPanel1.TabIndex = 0
         Me.FlowLayoutPanel1.WrapContents = False
         '
@@ -650,7 +645,7 @@ Partial Class Main
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(-20, -5)
+        Me.PictureBox1.Location = New System.Drawing.Point(-15, -5)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(231, 155)
@@ -664,7 +659,7 @@ Partial Class Main
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1, Me.RectangleShape3})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1809, 1189)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1446, 950)
         Me.ShapeContainer1.TabIndex = 15
         Me.ShapeContainer1.TabStop = False
         '
@@ -725,7 +720,7 @@ Partial Class Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1811, 1191)
+        Me.ClientSize = New System.Drawing.Size(1448, 952)
         Me.Controls.Add(Me.mainPanel)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(1169, 645)
@@ -782,7 +777,6 @@ Partial Class Main
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Timer4 As Timer
-    Friend WithEvents loginBtn As Button
     Friend WithEvents authPanel As Panel
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents LinkLabel5 As LinkLabel
@@ -805,4 +799,5 @@ Partial Class Main
     Friend WithEvents Button_Back As LinkLabel
     Friend WithEvents LinkLabel13 As LinkLabel
     Friend WithEvents PageNumLabel As Label
+    Friend WithEvents loginBtn As Button
 End Class
