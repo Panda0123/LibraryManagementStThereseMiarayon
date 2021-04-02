@@ -108,6 +108,7 @@ Partial Class IssueBook
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.groupBoxBookDetails = New System.Windows.Forms.GroupBox()
+        Me.textBoxVolume = New System.Windows.Forms.TextBox()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -212,6 +213,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.labelCategory, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.buttonBorrow, 3, 8)
+        Me.TableLayoutPanel1.Controls.Add(Me.textBoxVolume, 3, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
@@ -586,7 +588,6 @@ Partial Class IssueBook
         Me.TableLayoutPanel3.Controls.Add(Me.DateTimePicker3, 1, 8)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox15, 3, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox16, 3, 5)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox17, 3, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox18, 3, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox19, 3, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox20, 3, 1)
@@ -598,6 +599,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel3.Controls.Add(Me.Label24, 2, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Button4, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.buttonReserve, 3, 8)
+        Me.TableLayoutPanel3.Controls.Add(Me.TextBox17, 3, 4)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
@@ -1172,6 +1174,16 @@ Partial Class IssueBook
         Me.groupBoxBookDetails.TabStop = False
         Me.groupBoxBookDetails.Text = "Issue Details"
         '
+        'textBoxVolume
+        '
+        Me.textBoxVolume.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.textBoxVolume.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBoxVolume.Location = New System.Drawing.Point(601, 165)
+        Me.textBoxVolume.Name = "textBoxVolume"
+        Me.textBoxVolume.ReadOnly = True
+        Me.textBoxVolume.Size = New System.Drawing.Size(246, 29)
+        Me.textBoxVolume.TabIndex = 37
+        '
         'IssueBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -1295,4 +1307,5 @@ Partial Class IssueBook
     Friend WithEvents Label15 As Label
     Friend WithEvents buttonReserve As Button
     Friend WithEvents buttonBorrow As Button
+    Friend WithEvents textBoxVolume As TextBox
 End Class
