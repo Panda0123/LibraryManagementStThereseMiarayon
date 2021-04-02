@@ -21,6 +21,18 @@ Public Class adminView
         MainPanel.Visible = True
 
     End Sub
+
+    Private Sub recordsBtn_Click(sender As Object, e As EventArgs) Handles recordsBtn.Click
+
+    End Sub
+
+    Private Sub collectionsBtn_Click(sender As Object, e As EventArgs) Handles collectionsBtn.Click
+
+    End Sub
+
+    Private Sub reservationBtn_Click(sender As Object, e As EventArgs) Handles reservationBtn.Click
+
+    End Sub
     '    Private selectedBook As BookDetailsDTO
     '    Private classifications As List(Of ClassificationDTO)
     '    Private classificationNames As New List(Of String)
