@@ -1,10 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class AddBook
-    Inherits System.Windows.Forms.Form
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class AddBookUserControl
+    Inherits System.Windows.Forms.UserControl
 
-    ' tae
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    'UserControl overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,18 +20,9 @@ Partial Class AddBook
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TopPanel = New System.Windows.Forms.Panel()
-        Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
-        Me.searchTextBox = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
-        Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.backgrounPanel = New System.Windows.Forms.Panel()
-        Me.MainPanel = New System.Windows.Forms.Panel()
+        Me.layoutPanel = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.shelfTxtBx = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -56,14 +46,20 @@ Partial Class AddBook
         Me.authorMNameTxtBx = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.authorFNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.cancelPcBx = New System.Windows.Forms.PictureBox()
+        Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
+        Me.addPcBx = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.copyrightYearDTPckr = New MetroFramework.Controls.MetroDateTime()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.copyrightNameTxtBx = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.savePcBx = New System.Windows.Forms.PictureBox()
         Me.PublicationInformationPanel = New System.Windows.Forms.Panel()
         Me.publishedDatePicker = New MetroFramework.Controls.MetroDateTime()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -86,221 +82,45 @@ Partial Class AddBook
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ImageSummaryPanel = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
-        Me.LeftSidePanel = New System.Windows.Forms.Panel()
-        Me.SidePanel2 = New System.Windows.Forms.Panel()
-        Me.SideLabel2 = New System.Windows.Forms.Label()
-        Me.SidePanel4 = New System.Windows.Forms.Panel()
-        Me.SideLabel4 = New System.Windows.Forms.Label()
-        Me.SidePanel6 = New System.Windows.Forms.Panel()
-        Me.SideLabel6 = New System.Windows.Forms.Label()
-        Me.SidePanel3 = New System.Windows.Forms.Panel()
-        Me.SideLabel3 = New System.Windows.Forms.Label()
-        Me.SidePanel5 = New System.Windows.Forms.Panel()
-        Me.SideLabel5 = New System.Windows.Forms.Label()
-        Me.SidePanel1 = New System.Windows.Forms.Panel()
-        Me.SideLabel1 = New System.Windows.Forms.Label()
         Me.removeImgBtn = New System.Windows.Forms.PictureBox()
         Me.bkPicBx = New System.Windows.Forms.PictureBox()
-        Me.cancelPcBx = New System.Windows.Forms.PictureBox()
-        Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.addPcBx = New System.Windows.Forms.PictureBox()
-        Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.savePcBx = New System.Windows.Forms.PictureBox()
-        Me.SidePcBx2 = New System.Windows.Forms.PictureBox()
-        Me.SidePcBx4 = New System.Windows.Forms.PictureBox()
-        Me.SidePcBx6 = New System.Windows.Forms.PictureBox()
-        Me.SidePcBx3 = New System.Windows.Forms.PictureBox()
-        Me.SidePcBx5 = New System.Windows.Forms.PictureBox()
-        Me.SidePcBx1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.TopPanel.SuspendLayout()
-        Me.TitleLogoSearchPanel.SuspendLayout()
-        Me.backgrounPanel.SuspendLayout()
-        Me.MainPanel.SuspendLayout()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
+        Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel11.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.PublicationInformationPanel.SuspendLayout()
-        Me.ImageSummaryPanel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.LeftSidePanel.SuspendLayout()
-        Me.SidePanel2.SuspendLayout()
-        Me.SidePanel4.SuspendLayout()
-        Me.SidePanel6.SuspendLayout()
-        Me.SidePanel3.SuspendLayout()
-        Me.SidePanel5.SuspendLayout()
-        Me.SidePanel1.SuspendLayout()
-        CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SidePcBx2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SidePcBx4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SidePcBx6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SidePcBx3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SidePcBx5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SidePcBx1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PublicationInformationPanel.SuspendLayout()
+        Me.ImageSummaryPanel.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TopPanel
+        'layoutPanel
         '
-        Me.TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.layoutPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TopPanel.BackColor = System.Drawing.Color.White
-        Me.TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
-        Me.TopPanel.Controls.Add(Me.PictureBox16)
-        Me.TopPanel.Controls.Add(Me.ShapeContainer2)
-        Me.TopPanel.Location = New System.Drawing.Point(0, 0)
-        Me.TopPanel.MinimumSize = New System.Drawing.Size(1207, 150)
-        Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(1207, 150)
-        Me.TopPanel.TabIndex = 2
-        '
-        'TitleLogoSearchPanel
-        '
-        Me.TitleLogoSearchPanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TitleLogoSearchPanel.BackColor = System.Drawing.Color.White
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox8)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.searchTextBox)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox9)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.Label1)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.advanceSearchLinkLbl)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(426, 4)
-        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(465, 137)
-        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(465, 137)
-        Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
-        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(465, 137)
-        Me.TitleLogoSearchPanel.TabIndex = 1
-        '
-        'searchTextBox
-        '
-        Me.searchTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.searchTextBox.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchTextBox.Location = New System.Drawing.Point(52, 78)
-        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(262, 21)
-        Me.searchTextBox.TabIndex = 8
-        Me.searchTextBox.Text = "Search..."
-        '
-        'Label1
-        '
-        Me.Label1.AccessibleRole = System.Windows.Forms.AccessibleRole.Client
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(109, 5)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 60)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'advanceSearchLinkLbl
-        '
-        Me.advanceSearchLinkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.advanceSearchLinkLbl.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.advanceSearchLinkLbl.BackColor = System.Drawing.Color.Transparent
-        Me.advanceSearchLinkLbl.Font = New System.Drawing.Font("Sitka Subheading", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.advanceSearchLinkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(164, 103)
-        Me.advanceSearchLinkLbl.Name = "advanceSearchLinkLbl"
-        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(117, 27)
-        Me.advanceSearchLinkLbl.TabIndex = 11
-        Me.advanceSearchLinkLbl.TabStop = True
-        Me.advanceSearchLinkLbl.Text = "Advance Search"
-        '
-        'ShapeContainer2
-        '
-        Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1207, 150)
-        Me.ShapeContainer2.TabIndex = 0
-        Me.ShapeContainer2.TabStop = False
-        '
-        'btn_blk
-        '
-        Me.btn_blk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_blk.BorderColor = System.Drawing.Color.White
-        Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1291, 7)
-        Me.btn_blk.Name = "btn_blk"
-        Me.btn_blk.SelectionColor = System.Drawing.Color.White
-        Me.btn_blk.Size = New System.Drawing.Size(70, 60)
-        '
-        'btn_white
-        '
-        Me.btn_white.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_white.BorderColor = System.Drawing.Color.White
-        Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1289, 11)
-        Me.btn_white.Name = "btn_white"
-        Me.btn_white.SelectionColor = System.Drawing.Color.White
-        Me.btn_white.Size = New System.Drawing.Size(70, 55)
-        '
-        'backgrounPanel
-        '
-        Me.backgrounPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.backgrounPanel.BackColor = System.Drawing.Color.White
-        Me.backgrounPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.backgrounPanel.Controls.Add(Me.MainPanel)
-        Me.backgrounPanel.Controls.Add(Me.LeftSidePanel)
-        Me.backgrounPanel.Location = New System.Drawing.Point(0, 153)
-        Me.backgrounPanel.MinimumSize = New System.Drawing.Size(1207, 1467)
-        Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1207, 1467)
-        Me.backgrounPanel.TabIndex = 3
-        '
-        'MainPanel
-        '
-        Me.MainPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MainPanel.BackColor = System.Drawing.Color.White
-        Me.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.MainPanel.Controls.Add(Me.Panel2)
-        Me.MainPanel.Controls.Add(Me.ImageSummaryPanel)
-        Me.MainPanel.Controls.Add(Me.cancelPcBx)
-        Me.MainPanel.Controls.Add(Me.cancelHoverPcBx)
-        Me.MainPanel.Controls.Add(Me.addHoverPcBx)
-        Me.MainPanel.Controls.Add(Me.addPcBx)
-        Me.MainPanel.Controls.Add(Me.saveHoverPcBx)
-        Me.MainPanel.Controls.Add(Me.savePcBx)
-        Me.MainPanel.Location = New System.Drawing.Point(201, 5)
-        Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(974, 1411)
-        Me.MainPanel.TabIndex = 1
+        Me.layoutPanel.BackColor = System.Drawing.Color.White
+        Me.layoutPanel.Controls.Add(Me.Panel2)
+        Me.layoutPanel.Controls.Add(Me.ImageSummaryPanel)
+        Me.layoutPanel.Controls.Add(Me.cancelPcBx)
+        Me.layoutPanel.Controls.Add(Me.cancelHoverPcBx)
+        Me.layoutPanel.Controls.Add(Me.addHoverPcBx)
+        Me.layoutPanel.Controls.Add(Me.addPcBx)
+        Me.layoutPanel.Controls.Add(Me.savePcBx)
+        Me.layoutPanel.Controls.Add(Me.saveHoverPcBx)
+        Me.layoutPanel.Location = New System.Drawing.Point(3, 3)
+        Me.layoutPanel.Name = "layoutPanel"
+        Me.layoutPanel.Size = New System.Drawing.Size(1050, 1444)
+        Me.layoutPanel.TabIndex = 2
         '
         'Panel2
         '
@@ -308,6 +128,7 @@ Partial Class AddBook
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.shelfTxtBx)
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.Label19)
@@ -330,7 +151,7 @@ Partial Class AddBook
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(20, 285)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(932, 1074)
+        Me.Panel2.Size = New System.Drawing.Size(1010, 1103)
         Me.Panel2.TabIndex = 1
         '
         'shelfTxtBx
@@ -341,7 +162,7 @@ Partial Class AddBook
         Me.shelfTxtBx.ForeColor = System.Drawing.Color.Black
         Me.shelfTxtBx.Location = New System.Drawing.Point(19, 389)
         Me.shelfTxtBx.Name = "shelfTxtBx"
-        Me.shelfTxtBx.Size = New System.Drawing.Size(870, 28)
+        Me.shelfTxtBx.Size = New System.Drawing.Size(946, 28)
         Me.shelfTxtBx.TabIndex = 89
         '
         'Panel4
@@ -368,7 +189,7 @@ Partial Class AddBook
         Me.Panel4.Controls.Add(Me.authorFNameTxtBx)
         Me.Panel4.Location = New System.Drawing.Point(20, 781)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(869, 291)
+        Me.Panel4.Size = New System.Drawing.Size(945, 291)
         Me.Panel4.TabIndex = 88
         '
         'Panel11
@@ -577,6 +398,29 @@ Partial Class AddBook
         Me.authorFNameTxtBx.Size = New System.Drawing.Size(204, 28)
         Me.authorFNameTxtBx.TabIndex = 83
         '
+        'cancelPcBx
+        '
+        Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
+        Me.cancelPcBx.Location = New System.Drawing.Point(619, 1403)
+        Me.cancelPcBx.Name = "cancelPcBx"
+        Me.cancelPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.cancelPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.cancelPcBx.TabIndex = 4
+        Me.cancelPcBx.TabStop = False
+        '
+        'cancelHoverPcBx
+        '
+        Me.cancelHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cancelHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.canceHover
+        Me.cancelHoverPcBx.Location = New System.Drawing.Point(619, 1403)
+        Me.cancelHoverPcBx.Name = "cancelHoverPcBx"
+        Me.cancelHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.cancelHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.cancelHoverPcBx.TabIndex = 5
+        Me.cancelHoverPcBx.TabStop = False
+        Me.cancelHoverPcBx.Visible = False
+        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -601,6 +445,29 @@ Partial Class AddBook
         Me.Label13.Text = "Shelf Name/Number"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'addHoverPcBx
+        '
+        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
+        Me.addHoverPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.addHoverPcBx.Name = "addHoverPcBx"
+        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.addHoverPcBx.TabIndex = 4
+        Me.addHoverPcBx.TabStop = False
+        Me.addHoverPcBx.Visible = False
+        '
+        'addPcBx
+        '
+        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
+        Me.addPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.addPcBx.Name = "addPcBx"
+        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.addPcBx.TabIndex = 3
+        Me.addPcBx.TabStop = False
+        '
         'Panel3
         '
         Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -613,7 +480,7 @@ Partial Class AddBook
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Location = New System.Drawing.Point(19, 645)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(869, 89)
+        Me.Panel3.Size = New System.Drawing.Size(945, 89)
         Me.Panel3.TabIndex = 84
         '
         'copyrightYearDTPckr
@@ -624,7 +491,7 @@ Partial Class AddBook
         Me.copyrightYearDTPckr.FontSize = MetroFramework.MetroDateTimeSize.Small
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(42, 45)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
         Me.copyrightYearDTPckr.Size = New System.Drawing.Size(67, 25)
@@ -652,7 +519,7 @@ Partial Class AddBook
         Me.copyrightNameTxtBx.ForeColor = System.Drawing.Color.Black
         Me.copyrightNameTxtBx.Location = New System.Drawing.Point(215, 45)
         Me.copyrightNameTxtBx.Name = "copyrightNameTxtBx"
-        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(608, 28)
+        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(684, 28)
         Me.copyrightNameTxtBx.TabIndex = 85
         '
         'Label15
@@ -669,6 +536,18 @@ Partial Class AddBook
         Me.Label15.Text = "Year"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'saveHoverPcBx
+        '
+        Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.saveHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save2Hover
+        Me.saveHoverPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.saveHoverPcBx.Name = "saveHoverPcBx"
+        Me.saveHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.saveHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.saveHoverPcBx.TabIndex = 6
+        Me.saveHoverPcBx.TabStop = False
+        Me.saveHoverPcBx.Visible = False
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -680,6 +559,18 @@ Partial Class AddBook
         Me.Label16.TabIndex = 83
         Me.Label16.Text = "Copyright Information"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'savePcBx
+        '
+        Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
+        Me.savePcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.savePcBx.Name = "savePcBx"
+        Me.savePcBx.Size = New System.Drawing.Size(260, 41)
+        Me.savePcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.savePcBx.TabIndex = 5
+        Me.savePcBx.TabStop = False
+        Me.savePcBx.Visible = False
         '
         'PublicationInformationPanel
         '
@@ -695,7 +586,7 @@ Partial Class AddBook
         Me.PublicationInformationPanel.Controls.Add(Me.Label10)
         Me.PublicationInformationPanel.Location = New System.Drawing.Point(20, 455)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(869, 150)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(945, 150)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'publishedDatePicker
@@ -734,7 +625,7 @@ Partial Class AddBook
         Me.publisherAddrTxtBx.ForeColor = System.Drawing.Color.Black
         Me.publisherAddrTxtBx.Location = New System.Drawing.Point(41, 102)
         Me.publisherAddrTxtBx.Name = "publisherAddrTxtBx"
-        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(781, 28)
+        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(857, 28)
         Me.publisherAddrTxtBx.TabIndex = 87
         '
         'Label11
@@ -759,7 +650,7 @@ Partial Class AddBook
         Me.publisherNameTxtBx.ForeColor = System.Drawing.Color.Black
         Me.publisherNameTxtBx.Location = New System.Drawing.Point(215, 45)
         Me.publisherNameTxtBx.Name = "publisherNameTxtBx"
-        Me.publisherNameTxtBx.Size = New System.Drawing.Size(607, 28)
+        Me.publisherNameTxtBx.Size = New System.Drawing.Size(683, 28)
         Me.publisherNameTxtBx.TabIndex = 85
         '
         'Label10
@@ -808,7 +699,7 @@ Partial Class AddBook
         Me.classificationCmbBx.FormattingEnabled = True
         Me.classificationCmbBx.Location = New System.Drawing.Point(19, 327)
         Me.classificationCmbBx.Name = "classificationCmbBx"
-        Me.classificationCmbBx.Size = New System.Drawing.Size(870, 31)
+        Me.classificationCmbBx.Size = New System.Drawing.Size(946, 31)
         Me.classificationCmbBx.TabIndex = 79
         '
         'languageTxtBx
@@ -819,7 +710,7 @@ Partial Class AddBook
         Me.languageTxtBx.ForeColor = System.Drawing.Color.Black
         Me.languageTxtBx.Location = New System.Drawing.Point(19, 267)
         Me.languageTxtBx.Name = "languageTxtBx"
-        Me.languageTxtBx.Size = New System.Drawing.Size(870, 28)
+        Me.languageTxtBx.Size = New System.Drawing.Size(946, 28)
         Me.languageTxtBx.TabIndex = 78
         '
         'Label6
@@ -842,7 +733,7 @@ Partial Class AddBook
         Me.quantityTxtBx.ForeColor = System.Drawing.Color.Black
         Me.quantityTxtBx.Location = New System.Drawing.Point(19, 210)
         Me.quantityTxtBx.Name = "quantityTxtBx"
-        Me.quantityTxtBx.Size = New System.Drawing.Size(870, 26)
+        Me.quantityTxtBx.Size = New System.Drawing.Size(946, 26)
         Me.quantityTxtBx.TabIndex = 76
         '
         'Label3
@@ -865,7 +756,7 @@ Partial Class AddBook
         Me.editionTxtBx.ForeColor = System.Drawing.Color.Black
         Me.editionTxtBx.Location = New System.Drawing.Point(19, 149)
         Me.editionTxtBx.Name = "editionTxtBx"
-        Me.editionTxtBx.Size = New System.Drawing.Size(870, 26)
+        Me.editionTxtBx.Size = New System.Drawing.Size(946, 26)
         Me.editionTxtBx.TabIndex = 74
         '
         'Label7
@@ -888,7 +779,7 @@ Partial Class AddBook
         Me.isbnTxtBx.ForeColor = System.Drawing.Color.Black
         Me.isbnTxtBx.Location = New System.Drawing.Point(19, 92)
         Me.isbnTxtBx.Name = "isbnTxtBx"
-        Me.isbnTxtBx.Size = New System.Drawing.Size(870, 26)
+        Me.isbnTxtBx.Size = New System.Drawing.Size(946, 26)
         Me.isbnTxtBx.TabIndex = 72
         '
         'Label4
@@ -911,7 +802,7 @@ Partial Class AddBook
         Me.titleTxtBx.ForeColor = System.Drawing.Color.Black
         Me.titleTxtBx.Location = New System.Drawing.Point(19, 32)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(870, 28)
+        Me.titleTxtBx.Size = New System.Drawing.Size(946, 28)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
@@ -935,7 +826,7 @@ Partial Class AddBook
         Me.ImageSummaryPanel.Controls.Add(Me.summaryRichTxtBx)
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(22, 16)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(930, 247)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1008, 247)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'Panel1
@@ -949,182 +840,6 @@ Partial Class AddBook
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(204, 226)
         Me.Panel1.TabIndex = 75
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(259, 0)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 28)
-        Me.Label5.TabIndex = 73
-        Me.Label5.Text = "Summary"
-        '
-        'summaryRichTxtBx
-        '
-        Me.summaryRichTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.summaryRichTxtBx.BackColor = System.Drawing.Color.White
-        Me.summaryRichTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.summaryRichTxtBx.Location = New System.Drawing.Point(263, 31)
-        Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
-        Me.summaryRichTxtBx.Size = New System.Drawing.Size(636, 207)
-        Me.summaryRichTxtBx.TabIndex = 1
-        Me.summaryRichTxtBx.Text = ""
-        '
-        'LeftSidePanel
-        '
-        Me.LeftSidePanel.BackColor = System.Drawing.Color.White
-        Me.LeftSidePanel.Controls.Add(Me.SidePanel2)
-        Me.LeftSidePanel.Controls.Add(Me.SidePanel4)
-        Me.LeftSidePanel.Controls.Add(Me.SidePanel6)
-        Me.LeftSidePanel.Controls.Add(Me.SidePanel3)
-        Me.LeftSidePanel.Controls.Add(Me.SidePanel5)
-        Me.LeftSidePanel.Controls.Add(Me.SidePanel1)
-        Me.LeftSidePanel.Location = New System.Drawing.Point(13, 5)
-        Me.LeftSidePanel.Name = "LeftSidePanel"
-        Me.LeftSidePanel.Size = New System.Drawing.Size(190, 519)
-        Me.LeftSidePanel.TabIndex = 0
-        '
-        'SidePanel2
-        '
-        Me.SidePanel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SidePanel2.BackColor = System.Drawing.Color.White
-        Me.SidePanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SidePanel2.Controls.Add(Me.SideLabel2)
-        Me.SidePanel2.Controls.Add(Me.SidePcBx2)
-        Me.SidePanel2.Location = New System.Drawing.Point(3, 70)
-        Me.SidePanel2.Name = "SidePanel2"
-        Me.SidePanel2.Size = New System.Drawing.Size(188, 42)
-        Me.SidePanel2.TabIndex = 6
-        '
-        'SideLabel2
-        '
-        Me.SideLabel2.AutoSize = True
-        Me.SideLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.SideLabel2.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SideLabel2.Location = New System.Drawing.Point(78, 6)
-        Me.SideLabel2.Name = "SideLabel2"
-        Me.SideLabel2.Size = New System.Drawing.Size(41, 28)
-        Me.SideLabel2.TabIndex = 1
-        Me.SideLabel2.Text = "Add"
-        '
-        'SidePanel4
-        '
-        Me.SidePanel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SidePanel4.BackColor = System.Drawing.Color.White
-        Me.SidePanel4.Controls.Add(Me.SideLabel4)
-        Me.SidePanel4.Controls.Add(Me.SidePcBx4)
-        Me.SidePanel4.Location = New System.Drawing.Point(3, 167)
-        Me.SidePanel4.Name = "SidePanel4"
-        Me.SidePanel4.Size = New System.Drawing.Size(188, 42)
-        Me.SidePanel4.TabIndex = 3
-        '
-        'SideLabel4
-        '
-        Me.SideLabel4.AutoSize = True
-        Me.SideLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.SideLabel4.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SideLabel4.Location = New System.Drawing.Point(75, 6)
-        Me.SideLabel4.Name = "SideLabel4"
-        Me.SideLabel4.Size = New System.Drawing.Size(108, 28)
-        Me.SideLabel4.TabIndex = 1
-        Me.SideLabel4.Text = "Reservations"
-        '
-        'SidePanel6
-        '
-        Me.SidePanel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SidePanel6.BackColor = System.Drawing.Color.White
-        Me.SidePanel6.Controls.Add(Me.SidePcBx6)
-        Me.SidePanel6.Controls.Add(Me.SideLabel6)
-        Me.SidePanel6.Location = New System.Drawing.Point(3, 263)
-        Me.SidePanel6.Name = "SidePanel6"
-        Me.SidePanel6.Size = New System.Drawing.Size(188, 42)
-        Me.SidePanel6.TabIndex = 5
-        '
-        'SideLabel6
-        '
-        Me.SideLabel6.AutoSize = True
-        Me.SideLabel6.BackColor = System.Drawing.Color.Transparent
-        Me.SideLabel6.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SideLabel6.Location = New System.Drawing.Point(81, 6)
-        Me.SideLabel6.Name = "SideLabel6"
-        Me.SideLabel6.Size = New System.Drawing.Size(71, 28)
-        Me.SideLabel6.TabIndex = 1
-        Me.SideLabel6.Text = "Records"
-        '
-        'SidePanel3
-        '
-        Me.SidePanel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SidePanel3.BackColor = System.Drawing.Color.White
-        Me.SidePanel3.Controls.Add(Me.SideLabel3)
-        Me.SidePanel3.Controls.Add(Me.SidePcBx3)
-        Me.SidePanel3.Location = New System.Drawing.Point(3, 119)
-        Me.SidePanel3.Name = "SidePanel3"
-        Me.SidePanel3.Size = New System.Drawing.Size(188, 42)
-        Me.SidePanel3.TabIndex = 2
-        '
-        'SideLabel3
-        '
-        Me.SideLabel3.AutoSize = True
-        Me.SideLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.SideLabel3.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SideLabel3.Location = New System.Drawing.Point(77, 6)
-        Me.SideLabel3.Name = "SideLabel3"
-        Me.SideLabel3.Size = New System.Drawing.Size(84, 28)
-        Me.SideLabel3.TabIndex = 1
-        Me.SideLabel3.Text = "Borrower"
-        '
-        'SidePanel5
-        '
-        Me.SidePanel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SidePanel5.BackColor = System.Drawing.Color.White
-        Me.SidePanel5.Controls.Add(Me.SidePcBx5)
-        Me.SidePanel5.Controls.Add(Me.SideLabel5)
-        Me.SidePanel5.Location = New System.Drawing.Point(3, 215)
-        Me.SidePanel5.Name = "SidePanel5"
-        Me.SidePanel5.Size = New System.Drawing.Size(188, 42)
-        Me.SidePanel5.TabIndex = 4
-        '
-        'SideLabel5
-        '
-        Me.SideLabel5.AutoSize = True
-        Me.SideLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.SideLabel5.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SideLabel5.Location = New System.Drawing.Point(77, 6)
-        Me.SideLabel5.Name = "SideLabel5"
-        Me.SideLabel5.Size = New System.Drawing.Size(95, 28)
-        Me.SideLabel5.TabIndex = 1
-        Me.SideLabel5.Text = "Collections"
-        '
-        'SidePanel1
-        '
-        Me.SidePanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SidePanel1.BackColor = System.Drawing.Color.White
-        Me.SidePanel1.Controls.Add(Me.SideLabel1)
-        Me.SidePanel1.Controls.Add(Me.SidePcBx1)
-        Me.SidePanel1.Location = New System.Drawing.Point(3, 23)
-        Me.SidePanel1.Name = "SidePanel1"
-        Me.SidePanel1.Size = New System.Drawing.Size(188, 42)
-        Me.SidePanel1.TabIndex = 1
-        '
-        'SideLabel1
-        '
-        Me.SideLabel1.AutoSize = True
-        Me.SideLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.SideLabel1.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SideLabel1.Location = New System.Drawing.Point(77, 6)
-        Me.SideLabel1.Name = "SideLabel1"
-        Me.SideLabel1.Size = New System.Drawing.Size(93, 28)
-        Me.SideLabel1.TabIndex = 1
-        Me.SideLabel1.Text = "View Book"
         '
         'removeImgBtn
         '
@@ -1155,374 +870,125 @@ Partial Class AddBook
         Me.bkPicBx.TabIndex = 0
         Me.bkPicBx.TabStop = False
         '
-        'cancelPcBx
+        'Label5
         '
-        Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.cancelPcBx.Location = New System.Drawing.Point(580, 1370)
-        Me.cancelPcBx.Name = "cancelPcBx"
-        Me.cancelPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.cancelPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.cancelPcBx.TabIndex = 4
-        Me.cancelPcBx.TabStop = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(259, 0)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(90, 28)
+        Me.Label5.TabIndex = 73
+        Me.Label5.Text = "Summary"
         '
-        'cancelHoverPcBx
+        'summaryRichTxtBx
         '
-        Me.cancelHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cancelHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.canceHover
-        Me.cancelHoverPcBx.Location = New System.Drawing.Point(580, 1370)
-        Me.cancelHoverPcBx.Name = "cancelHoverPcBx"
-        Me.cancelHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.cancelHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.cancelHoverPcBx.TabIndex = 5
-        Me.cancelHoverPcBx.TabStop = False
-        Me.cancelHoverPcBx.Visible = False
-        '
-        'addHoverPcBx
-        '
-        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
-        Me.addHoverPcBx.Location = New System.Drawing.Point(150, 1370)
-        Me.addHoverPcBx.Name = "addHoverPcBx"
-        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addHoverPcBx.TabIndex = 4
-        Me.addHoverPcBx.TabStop = False
-        Me.addHoverPcBx.Visible = False
-        '
-        'addPcBx
-        '
-        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.addPcBx.Location = New System.Drawing.Point(150, 1370)
-        Me.addPcBx.Name = "addPcBx"
-        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addPcBx.TabIndex = 3
-        Me.addPcBx.TabStop = False
-        '
-        'saveHoverPcBx
-        '
-        Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.saveHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save2Hover
-        Me.saveHoverPcBx.Location = New System.Drawing.Point(150, 1370)
-        Me.saveHoverPcBx.Name = "saveHoverPcBx"
-        Me.saveHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.saveHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.saveHoverPcBx.TabIndex = 6
-        Me.saveHoverPcBx.TabStop = False
-        Me.saveHoverPcBx.Visible = False
-        '
-        'savePcBx
-        '
-        Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
-        Me.savePcBx.Location = New System.Drawing.Point(150, 1370)
-        Me.savePcBx.Name = "savePcBx"
-        Me.savePcBx.Size = New System.Drawing.Size(260, 41)
-        Me.savePcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.savePcBx.TabIndex = 5
-        Me.savePcBx.TabStop = False
-        Me.savePcBx.Visible = False
-        '
-        'SidePcBx2
-        '
-        Me.SidePcBx2.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
-        Me.SidePcBx2.Location = New System.Drawing.Point(54, 13)
-        Me.SidePcBx2.Name = "SidePcBx2"
-        Me.SidePcBx2.Size = New System.Drawing.Size(20, 16)
-        Me.SidePcBx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SidePcBx2.TabIndex = 0
-        Me.SidePcBx2.TabStop = False
-        '
-        'SidePcBx4
-        '
-        Me.SidePcBx4.Image = Global.LibraryManagementSystem.My.Resources.Resources.reserveBtn
-        Me.SidePcBx4.Location = New System.Drawing.Point(53, 13)
-        Me.SidePcBx4.Name = "SidePcBx4"
-        Me.SidePcBx4.Size = New System.Drawing.Size(20, 16)
-        Me.SidePcBx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SidePcBx4.TabIndex = 0
-        Me.SidePcBx4.TabStop = False
-        '
-        'SidePcBx6
-        '
-        Me.SidePcBx6.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
-        Me.SidePcBx6.Location = New System.Drawing.Point(54, 15)
-        Me.SidePcBx6.Name = "SidePcBx6"
-        Me.SidePcBx6.Size = New System.Drawing.Size(20, 16)
-        Me.SidePcBx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SidePcBx6.TabIndex = 0
-        Me.SidePcBx6.TabStop = False
-        '
-        'SidePcBx3
-        '
-        Me.SidePcBx3.Image = Global.LibraryManagementSystem.My.Resources.Resources.borrowBtn
-        Me.SidePcBx3.Location = New System.Drawing.Point(46, 7)
-        Me.SidePcBx3.Name = "SidePcBx3"
-        Me.SidePcBx3.Size = New System.Drawing.Size(34, 27)
-        Me.SidePcBx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SidePcBx3.TabIndex = 0
-        Me.SidePcBx3.TabStop = False
-        '
-        'SidePcBx5
-        '
-        Me.SidePcBx5.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.SidePcBx5.Location = New System.Drawing.Point(49, 11)
-        Me.SidePcBx5.Name = "SidePcBx5"
-        Me.SidePcBx5.Size = New System.Drawing.Size(25, 20)
-        Me.SidePcBx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SidePcBx5.TabIndex = 0
-        Me.SidePcBx5.TabStop = False
-        '
-        'SidePcBx1
-        '
-        Me.SidePcBx1.BackColor = System.Drawing.Color.Transparent
-        Me.SidePcBx1.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.SidePcBx1.Location = New System.Drawing.Point(49, 11)
-        Me.SidePcBx1.Name = "SidePcBx1"
-        Me.SidePcBx1.Size = New System.Drawing.Size(25, 20)
-        Me.SidePcBx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SidePcBx1.TabIndex = 0
-        Me.SidePcBx1.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.summaryRichTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(399, 77)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(24, 25)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
+        Me.summaryRichTxtBx.BackColor = System.Drawing.Color.White
+        Me.summaryRichTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.summaryRichTxtBx.Location = New System.Drawing.Point(263, 31)
+        Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
+        Me.summaryRichTxtBx.Size = New System.Drawing.Size(714, 207)
+        Me.summaryRichTxtBx.TabIndex = 1
+        Me.summaryRichTxtBx.Text = ""
         '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = Global.LibraryManagementSystem.My.Resources.Resources.Search
-        Me.PictureBox9.Location = New System.Drawing.Point(35, 72)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(402, 39)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 6
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(375, 81)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(29, 19)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(35, 75)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(378, 36)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(35, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(81, 67)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1120, 11)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(37, 34)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox16.TabIndex = 3
-        Me.PictureBox16.TabStop = False
-        '
-        'AddBook
+        'AddBookUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1221, 606)
-        Me.Controls.Add(Me.backgrounPanel)
-        Me.Controls.Add(Me.TopPanel)
-        Me.MinimumSize = New System.Drawing.Size(1220, 643)
-        Me.Name = "AddBook"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AddBook"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.TopPanel.ResumeLayout(False)
-        Me.TitleLogoSearchPanel.ResumeLayout(False)
-        Me.TitleLogoSearchPanel.PerformLayout()
-        Me.backgrounPanel.ResumeLayout(False)
-        Me.MainPanel.ResumeLayout(False)
+        Me.Controls.Add(Me.layoutPanel)
+        Me.Name = "AddBookUserControl"
+        Me.Size = New System.Drawing.Size(1054, 1450)
+        Me.layoutPanel.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
+        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PublicationInformationPanel.ResumeLayout(False)
         Me.PublicationInformationPanel.PerformLayout()
         Me.ImageSummaryPanel.ResumeLayout(False)
         Me.ImageSummaryPanel.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        Me.LeftSidePanel.ResumeLayout(False)
-        Me.SidePanel2.ResumeLayout(False)
-        Me.SidePanel2.PerformLayout()
-        Me.SidePanel4.ResumeLayout(False)
-        Me.SidePanel4.PerformLayout()
-        Me.SidePanel6.ResumeLayout(False)
-        Me.SidePanel6.PerformLayout()
-        Me.SidePanel3.ResumeLayout(False)
-        Me.SidePanel3.PerformLayout()
-        Me.SidePanel5.ResumeLayout(False)
-        Me.SidePanel5.PerformLayout()
-        Me.SidePanel1.ResumeLayout(False)
-        Me.SidePanel1.PerformLayout()
         CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SidePcBx2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SidePcBx4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SidePcBx6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SidePcBx3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SidePcBx5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SidePcBx1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents advanceSearchLinkLbl As LinkLabel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents searchTextBox As TextBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
-    Friend WithEvents btn_blk As PowerPacks.RectangleShape
-    Friend WithEvents btn_white As PowerPacks.RectangleShape
-    Friend WithEvents TitleLogoSearchPanel As Panel
-    Friend WithEvents backgrounPanel As Panel
-    Friend WithEvents LeftSidePanel As Panel
-    Friend WithEvents MainPanel As Panel
-    Friend WithEvents ImageSummaryPanel As Panel
-    Friend WithEvents bkPicBx As PictureBox
-    Friend WithEvents summaryRichTxtBx As RichTextBox
+
+    Friend WithEvents layoutPanel As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents titleTxtBx As TextBox
-    Friend WithEvents isbnTxtBx As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents editionTxtBx As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents quantityTxtBx As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents languageTxtBx As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents classificationCmbBx As ComboBox
+    Friend WithEvents shelfTxtBx As TextBox
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents authorsMNameLbl As Label
+    Friend WithEvents authorsLNameLbl As Label
+    Friend WithEvents authorsNumLbl As Label
+    Friend WithEvents authorsFNameLbl As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents selectedAuthorLbl As Label
+    Friend WithEvents removeAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents updateAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents addAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents Label22 As Label
+    Friend WithEvents getAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents authorNumTxtBx As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents authorLNameTxtBx As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents authorMNameTxtBx As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents authorFNameTxtBx As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents copyrightYearDTPckr As MetroFramework.Controls.MetroDateTime
+    Friend WithEvents Label14 As Label
+    Friend WithEvents copyrightNameTxtBx As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
     Friend WithEvents PublicationInformationPanel As Panel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents publishedDatePicker As MetroFramework.Controls.MetroDateTime
     Friend WithEvents Label12 As Label
     Friend WithEvents publisherAddrTxtBx As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents publisherNameTxtBx As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Label14 As Label
-    Friend WithEvents copyrightNameTxtBx As TextBox
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label18 As Label
-    Friend WithEvents authorFNameTxtBx As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents authorLNameTxtBx As TextBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents authorMNameTxtBx As TextBox
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents authorNumTxtBx As TextBox
-    Friend WithEvents removeAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents updateAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents addAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents getAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents addPcBx As PictureBox
-    Friend WithEvents cancelPcBx As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents SidePcBx1 As PictureBox
-    Friend WithEvents SidePanel1 As Panel
-    Friend WithEvents SideLabel1 As Label
-    Friend WithEvents SidePanel3 As Panel
-    Friend WithEvents SideLabel3 As Label
-    Friend WithEvents SidePcBx3 As PictureBox
-    Friend WithEvents SidePanel4 As Panel
-    Friend WithEvents SideLabel4 As Label
-    Friend WithEvents SidePcBx4 As PictureBox
-    Friend WithEvents SidePanel2 As Panel
-    Friend WithEvents SideLabel2 As Label
-    Friend WithEvents SidePcBx2 As PictureBox
-    Friend WithEvents SidePanel6 As Panel
-    Friend WithEvents SidePcBx6 As PictureBox
-    Friend WithEvents SideLabel6 As Label
-    Friend WithEvents SidePanel5 As Panel
-    Friend WithEvents SidePcBx5 As PictureBox
-    Friend WithEvents SideLabel5 As Label
-    Friend WithEvents PictureBox16 As PictureBox
-    Friend WithEvents publishedDatePicker As MetroFramework.Controls.MetroDateTime
-    Friend WithEvents copyrightYearDTPckr As MetroFramework.Controls.MetroDateTime
-    Friend WithEvents Label30 As Label
-    Friend WithEvents selectedAuthorLbl As Label
-    Friend WithEvents authorsNumLbl As Label
-    Friend WithEvents authorsLNameLbl As Label
-    Friend WithEvents authorsMNameLbl As Label
-    Friend WithEvents authorsFNameLbl As Label
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents shelfTxtBx As TextBox
-    Friend WithEvents savePcBx As PictureBox
-    Friend WithEvents removeImgBtn As PictureBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents classificationCmbBx As ComboBox
+    Friend WithEvents languageTxtBx As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents quantityTxtBx As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents editionTxtBx As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents isbnTxtBx As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents titleTxtBx As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ImageSummaryPanel As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents removeImgBtn As PictureBox
+    Friend WithEvents bkPicBx As PictureBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents summaryRichTxtBx As RichTextBox
+    Friend WithEvents cancelPcBx As PictureBox
     Friend WithEvents cancelHoverPcBx As PictureBox
-    Friend WithEvents saveHoverPcBx As PictureBox
     Friend WithEvents addHoverPcBx As PictureBox
-    Friend WithEvents TopPanel As Panel
+    Friend WithEvents addPcBx As PictureBox
+    Friend WithEvents saveHoverPcBx As PictureBox
+    Friend WithEvents savePcBx As PictureBox
 End Class
-
