@@ -1,31 +1,48 @@
-﻿Public Class Main
+﻿Imports System.Globalization
+Public Class Main
     Public bookDP As New List(Of bookDisplay)
     Private newTitle_click As Integer = 0
     Private auth_click As Integer = 0
     Private pb_click As Integer = 0
     Private pub_click As Integer = 0
+    Private sortBy As String = "DateAdded"  ' defeault is date added
+    Private provider As CultureInfo = CultureInfo.InvariantCulture
+    Private numPage As Integer = 1
+    Private totalResult As Integer = 0
 
     Private PageIndex As Integer = 0
-    Private BooksPerPage As Integer = 6 'number of books shown on each page
+    Private BooksPerPage As Integer = 3 'number of books shown on each page
 
     Public Sub New()
         InitializeComponent()
         searchTextBox.SelectionStart = 0
         FlowLayoutPanel1.Controls.Clear()
         FlowLayoutPanel1.WrapContents = False
-        For x As Integer = 0 To 12
-            Dim book As New bookDisplay
-            bookDP.Add(book)
-            If x <= BooksPerPage Then
-                book.Label2.Text = x.ToString
-                FlowLayoutPanel1.Controls.Add(book) 'add the first page of books when adding them to the List
-            End If
-        Next
 
+        'For x As Integer = 1 To 12
+        '    Dim book As New bookDisplay
+        '    bookDP.Add(book)
+        '    If x <= BooksPerPage Then
+        '        book.Label2.Text = x.ToString
+        '        FlowLayoutPanel1.Controls.Add(book) 'add the first page of books when adding them to the List
+        '    End If
+        'Next
+
+        initializeResult()
     End Sub
 
-    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub initializeResult()
+        ' setup number of pages depending on BooksPerPage and TotalResult
 
+        totalResult = BookController.getNumBkResult
+        PageIndex = 0
+        Dim displayResults As List(Of bookDisplay) = getBookDisplayResults()
+        For Each bkDisplay As bookDisplay In displayResults
+            FlowLayoutPanel1.Controls.Add(bkDisplay) 'add the first page of books when adding them to the List
+        Next
+
+        ' separatethread
+        loadImage(displayResults)
     End Sub
 
     Private Sub Button_Back_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Button_Back.LinkClicked
@@ -178,7 +195,46 @@
         pubPanel.Height = 127
         Timer4.Stop()
     End Sub
+    Private Function getBookDisplayResults() As List(Of bookDisplay)
+        Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, sortBy)
+        Dim bkDisplays As New List(Of bookDisplay)
 
+        For Each bkDTO As BookDetailsDTO In bkDTOs
+            Dim bkDisplay As bookDisplay = New bookDisplay()
+            Dim title = bkDTO.title + If(bkDTO.publishedDate Is Nothing,
+                "",
+                "(" + Date.ParseExact(bkDTO.publishedDate, "yyyy-MM-dd", provider).Year.ToString() + ")")
+            bkDisplay.bTitle.Text = title
+            'author
+            Dim authorsDisplay = String.Empty
+            Dim authors = bkDTO.authors
+            If authors.Count <> 0 Then
+                authorsDisplay = authorsDisplay + authors(0).f_name + " " + authors(0).m_name + " " + authors(0).l_name + " "
+                For idx As Integer = 1 To authors.Count - 1
+                    authorsDisplay = authorsDisplay + ", " + authors(idx).f_name + " " + authors(idx).m_name + " " + authors(idx).l_name + " "
+                Next
+            End If
+            bkDisplay.bAuthor.Text = authorsDisplay
+            bkDisplay.bLanguage.Text = bkDTO.language
+            Dim publisher = If(bkDTO.publisherAddress Is Nothing, "", "[" + bkDTO.publisherAddress + "]") + If(bkDTO.publisherName Is Nothing, "", " : " + bkDTO.publisherName)
+            publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
+            bkDisplay.bPublisher.Text = publisher
+            bkDisplay.imageName = bkDTO.image
+            bkDisplays.Add(bkDisplay)
+        Next
+        Return bkDisplays
+    End Function
+
+    Private Sub loadImage(bkDisplays As List(Of bookDisplay))
+        For Each bkDisplay As bookDisplay In bkDisplays
+            If String.Compare(bkDisplay.imageName, "empty") <> 0 Then
+                ' TODO: separate thread or process
+                bkDisplay.PictureBox1.Image = getImage(bkDisplay.imageName)
+            Else
+                bkDisplay.PictureBox1.Image = My.Resources.default_book
+            End If
+        Next
+    End Sub
 
 End Class
 

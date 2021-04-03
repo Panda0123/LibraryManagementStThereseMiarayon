@@ -5,6 +5,7 @@
     Private Langauge As String
     Private Publisher As String
     Private Status As String
+    Public imageName As String
 
     Private Sub bookDisplay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Dim rm As Resources.ResourceManager

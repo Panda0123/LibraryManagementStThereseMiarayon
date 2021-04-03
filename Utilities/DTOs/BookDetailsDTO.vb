@@ -2,6 +2,7 @@
     Property bookId As Int64
     Property title As String
     Property publishedDate As String
+    Property dateAdded As String
     Property language As String
     Property edition As Int16
     Property isbn As String
