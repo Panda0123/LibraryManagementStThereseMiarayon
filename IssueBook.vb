@@ -1,4 +1,9 @@
 ﻿Public Class IssueBook
+    Private Sub buttonReturnBook_Click(sender As Object, e As EventArgs) Handles buttonReturnBook.Click
+        Dim dialog As DialogResult
+        dialog = MessageBox.Show("Confirm book RETURN?", "RETURN book", MessageBoxButtons.YesNo)
+    End Sub
+
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -21,6 +26,7 @@
     End Sub
 
     Private Sub TabPage5_Click(sender As Object, e As EventArgs) Handles TabPage5.Click
+
 
     End Sub
 End Class
