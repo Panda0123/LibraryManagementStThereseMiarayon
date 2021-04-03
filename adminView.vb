@@ -2,6 +2,7 @@
 Public Class adminView
     Public adminbookDP As New List(Of bookControlAdmin)
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'sample
         For i As Integer = 0 To 5
             Dim book As New bookControlAdmin
             adminbookDP.Add(book)
@@ -30,7 +31,7 @@ Public Class adminView
 
     End Sub
 
-    Private Sub reservationBtn_Click(sender As Object, e As EventArgs) Handles reservationBtn.Click
+    Private Sub reservationBtn_Click(sender As Object, e As EventArgs)
 
     End Sub
     '    Private selectedBook As BookDetailsDTO
