@@ -177,7 +177,9 @@
         Timer4.Stop()
     End Sub
 
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
 
 

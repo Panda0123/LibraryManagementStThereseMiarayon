@@ -1,7 +1,5 @@
 ﻿'Imports System.Globalization
 Public Class adminView
-
-
     Dim viewBookuserCtl As New viewBookUserControl
     Dim addBookuserCtl As New addBookUserControl
     Dim recorduserCtl As New recordsUserControl
@@ -34,6 +32,16 @@ Public Class adminView
         viewBookPanel.Visible = False
         addBookPanel.Visible = False
         recordsPanel.Visible = True
+    End Sub
+
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles signOutBtn.LinkClicked
+
+        Main.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
 

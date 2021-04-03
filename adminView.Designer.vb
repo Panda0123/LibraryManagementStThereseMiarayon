@@ -24,7 +24,6 @@ Partial Class adminView
     Private Sub InitializeComponent()
         Dim TopPanel As System.Windows.Forms.Panel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
@@ -34,7 +33,6 @@ Partial Class adminView
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
@@ -47,16 +45,15 @@ Partial Class adminView
         Me.viewBookPanel = New System.Windows.Forms.Panel()
         Me.recordsPanel = New System.Windows.Forms.Panel()
         Me.addBookPanel = New System.Windows.Forms.Panel()
+        Me.signOutBtn = New System.Windows.Forms.LinkLabel()
         TopPanel = New System.Windows.Forms.Panel()
         TopPanel.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleLogoSearchPanel.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.backgrounPanel.SuspendLayout()
         Me.LeftSidePanel.SuspendLayout()
         Me.SuspendLayout()
@@ -65,25 +62,16 @@ Partial Class adminView
         '
         TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        TopPanel.AutoSize = True
         TopPanel.BackColor = System.Drawing.Color.White
-        TopPanel.Controls.Add(Me.PictureBox4)
+        TopPanel.Controls.Add(Me.signOutBtn)
         TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
-        TopPanel.Controls.Add(Me.PictureBox16)
         TopPanel.Controls.Add(Me.ShapeContainer2)
         TopPanel.Location = New System.Drawing.Point(0, -2)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1285, 185)
+        TopPanel.Size = New System.Drawing.Size(1264, 185)
         TopPanel.TabIndex = 2
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Location = New System.Drawing.Point(288, 18)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox4.TabIndex = 4
-        Me.PictureBox4.TabStop = False
         '
         'TitleLogoSearchPanel
         '
@@ -97,7 +85,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(405, 5)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(395, 5)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -210,25 +198,13 @@ Partial Class adminView
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'PictureBox16
-        '
-        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1169, 14)
-        Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(49, 42)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox16.TabIndex = 3
-        Me.PictureBox16.TabStop = False
-        '
         'ShapeContainer2
         '
         Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1285, 185)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1264, 185)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -238,7 +214,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1432, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1411, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -249,7 +225,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1430, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1409, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -267,7 +243,7 @@ Partial Class adminView
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1708, 1810)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1687, 1810)
         Me.backgrounPanel.TabIndex = 3
         '
         'LeftSidePanel
@@ -381,13 +357,29 @@ Partial Class adminView
         Me.addBookPanel.Size = New System.Drawing.Size(1418, 1740)
         Me.addBookPanel.TabIndex = 1
         '
+        'signOutBtn
+        '
+        Me.signOutBtn.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.signOutBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.signOutBtn.AutoSize = True
+        Me.signOutBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.signOutBtn.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.signOutBtn.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.signOutBtn.Location = New System.Drawing.Point(1123, 47)
+        Me.signOutBtn.Name = "signOutBtn"
+        Me.signOutBtn.Size = New System.Drawing.Size(120, 40)
+        Me.signOutBtn.TabIndex = 20
+        Me.signOutBtn.TabStop = True
+        Me.signOutBtn.Text = "Sign Out"
+        '
         'adminView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1847, 746)
+        Me.ClientSize = New System.Drawing.Size(1826, 746)
         Me.Controls.Add(Me.backgrounPanel)
         Me.Controls.Add(TopPanel)
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -397,7 +389,7 @@ Partial Class adminView
         Me.Text = "AddBook"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         TopPanel.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        TopPanel.PerformLayout()
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -405,10 +397,10 @@ Partial Class adminView
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.backgrounPanel.ResumeLayout(False)
         Me.LeftSidePanel.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents advanceSearchLinkLbl As LinkLabel
@@ -428,13 +420,12 @@ Partial Class adminView
     Friend WithEvents cancelPcBx As PictureBox
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox16 As PictureBox
     Friend WithEvents savePcBx As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents viewBookBtn As Button
     Friend WithEvents bokkAddBtn As Button
     Friend WithEvents recordsBtn As Button
     Friend WithEvents collectionsBtn As Button
     Friend WithEvents viewBookPanel As Panel
     Friend WithEvents recordsPanel As Panel
+    Friend WithEvents signOutBtn As LinkLabel
 End Class
