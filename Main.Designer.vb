@@ -611,7 +611,7 @@ Partial Class Main
         Me.searchTextBox.Location = New System.Drawing.Point(35, 194)
         Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(510, 40)
+        Me.searchTextBox.Size = New System.Drawing.Size(488, 40)
         Me.searchTextBox.TabIndex = 4
         Me.searchTextBox.Text = "Search..."
         '
