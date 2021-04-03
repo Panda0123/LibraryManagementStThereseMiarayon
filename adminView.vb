@@ -21,6 +21,10 @@ Public Class adminView
         MainPanel.Visible = True
 
     End Sub
+
+    Private Sub bookDisp_Paint(sender As Object, e As PaintEventArgs) Handles bookDisp.Paint
+
+    End Sub
     '    Private selectedBook As BookDetailsDTO
     '    Private classifications As List(Of ClassificationDTO)
     '    Private classificationNames As New List(Of String)
