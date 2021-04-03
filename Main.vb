@@ -13,7 +13,7 @@
         searchTextBox.SelectionStart = 0
         FlowLayoutPanel1.Controls.Clear()
         FlowLayoutPanel1.WrapContents = False
-        For x As Integer = 1 To 12
+        For x As Integer = 0 To 12
             Dim book As New bookDisplay
             bookDP.Add(book)
             If x <= BooksPerPage Then
@@ -179,9 +179,7 @@
         Timer4.Stop()
     End Sub
 
-    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
 
-    End Sub
 End Class
 
 
