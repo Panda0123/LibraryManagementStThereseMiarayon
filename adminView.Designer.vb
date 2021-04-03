@@ -134,29 +134,12 @@ Partial Class adminView
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Cover_Column = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.Status_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BorrowDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DueDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Title_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ShelfID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button_Column = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReserveDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Complete_Column = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
@@ -250,12 +233,8 @@ Partial Class adminView
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.TabPage5.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1663,82 +1642,10 @@ Partial Class adminView
         '
         Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel5.Controls.Add(Me.DataGridView1)
         Me.Panel5.Location = New System.Drawing.Point(1, 67)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1303, 655)
         Me.Panel5.TabIndex = 1
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cover_Column, Me.Status_Column, Me.BorrowDate_Column, Me.DueDate_Column, Me.Title_Column, Me.ShelfID_Column, Me.ID_Column, Me.Button_Column})
-        Me.DataGridView1.Location = New System.Drawing.Point(1, 9)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1303, 646)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Cover_Column
-        '
-        Me.Cover_Column.HeaderText = "Cover"
-        Me.Cover_Column.MinimumWidth = 6
-        Me.Cover_Column.Name = "Cover_Column"
-        Me.Cover_Column.Width = 125
-        '
-        'Status_Column
-        '
-        Me.Status_Column.HeaderText = "Status"
-        Me.Status_Column.MinimumWidth = 6
-        Me.Status_Column.Name = "Status_Column"
-        Me.Status_Column.Width = 125
-        '
-        'BorrowDate_Column
-        '
-        Me.BorrowDate_Column.HeaderText = "Borrow Date"
-        Me.BorrowDate_Column.MinimumWidth = 6
-        Me.BorrowDate_Column.Name = "BorrowDate_Column"
-        Me.BorrowDate_Column.Width = 125
-        '
-        'DueDate_Column
-        '
-        Me.DueDate_Column.HeaderText = "Due Date"
-        Me.DueDate_Column.MinimumWidth = 6
-        Me.DueDate_Column.Name = "DueDate_Column"
-        Me.DueDate_Column.Width = 125
-        '
-        'Title_Column
-        '
-        Me.Title_Column.HeaderText = "Title"
-        Me.Title_Column.MinimumWidth = 6
-        Me.Title_Column.Name = "Title_Column"
-        Me.Title_Column.Width = 250
-        '
-        'ShelfID_Column
-        '
-        Me.ShelfID_Column.HeaderText = "Shelf ID"
-        Me.ShelfID_Column.MinimumWidth = 6
-        Me.ShelfID_Column.Name = "ShelfID_Column"
-        Me.ShelfID_Column.Width = 125
-        '
-        'ID_Column
-        '
-        Me.ID_Column.HeaderText = "ID No."
-        Me.ID_Column.MinimumWidth = 6
-        Me.ID_Column.Name = "ID_Column"
-        Me.ID_Column.Width = 125
-        '
-        'Button_Column
-        '
-        Me.Button_Column.HeaderText = "Check In"
-        Me.Button_Column.MinimumWidth = 6
-        Me.Button_Column.Name = "Button_Column"
-        Me.Button_Column.Text = "Check In"
-        Me.Button_Column.UseColumnTextForButtonValue = True
-        Me.Button_Column.Width = 125
         '
         'Panel6
         '
@@ -1792,7 +1699,7 @@ Partial Class adminView
         Me.TabPage5.Location = New System.Drawing.Point(4, 38)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1325, 1195)
+        Me.TabPage5.Size = New System.Drawing.Size(1304, 1195)
         Me.TabPage5.TabIndex = 2
         Me.TabPage5.Text = "Reserve List"
         '
@@ -1800,75 +1707,10 @@ Partial Class adminView
         '
         Me.Panel7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel7.Controls.Add(Me.DataGridView2)
         Me.Panel7.Location = New System.Drawing.Point(1, 67)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1324, 669)
+        Me.Panel7.Size = New System.Drawing.Size(1303, 669)
         Me.Panel7.TabIndex = 2
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn1, Me.DataGridViewTextBoxColumn1, Me.ReserveDate_Column, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.Complete_Column})
-        Me.DataGridView2.Location = New System.Drawing.Point(1, 9)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(1325, 646)
-        Me.DataGridView2.TabIndex = 0
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.HeaderText = "Cover"
-        Me.DataGridViewImageColumn1.MinimumWidth = 6
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Width = 125
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Status"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 125
-        '
-        'ReserveDate_Column
-        '
-        Me.ReserveDate_Column.HeaderText = "Reserve Date"
-        Me.ReserveDate_Column.MinimumWidth = 6
-        Me.ReserveDate_Column.Name = "ReserveDate_Column"
-        Me.ReserveDate_Column.Width = 125
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Title"
-        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.Width = 250
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Shelf ID"
-        Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.Width = 125
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.HeaderText = "ID No."
-        Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.Width = 125
-        '
-        'Complete_Column
-        '
-        Me.Complete_Column.HeaderText = "Complete"
-        Me.Complete_Column.MinimumWidth = 6
-        Me.Complete_Column.Name = "Complete_Column"
-        Me.Complete_Column.Text = "Complete"
-        Me.Complete_Column.UseColumnTextForButtonValue = True
-        Me.Complete_Column.Width = 125
         '
         'Panel8
         '
@@ -2715,13 +2557,9 @@ Partial Class adminView
         Me.TableLayoutPanel3.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         Me.TabPage5.ResumeLayout(False)
-        Me.Panel7.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2897,29 +2735,12 @@ Partial Class adminView
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Cover_Column As DataGridViewImageColumn
-    Friend WithEvents Status_Column As DataGridViewTextBoxColumn
-    Friend WithEvents BorrowDate_Column As DataGridViewTextBoxColumn
-    Friend WithEvents DueDate_Column As DataGridViewTextBoxColumn
-    Friend WithEvents Title_Column As DataGridViewTextBoxColumn
-    Friend WithEvents ShelfID_Column As DataGridViewTextBoxColumn
-    Friend WithEvents ID_Column As DataGridViewTextBoxColumn
-    Friend WithEvents Button_Column As DataGridViewButtonColumn
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents TextBox22 As TextBox
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents DataGridViewImageColumn1 As DataGridViewImageColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ReserveDate_Column As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents Complete_Column As DataGridViewButtonColumn
     Friend WithEvents Panel8 As Panel
     Friend WithEvents Button5 As Button
     Friend WithEvents TextBox21 As TextBox
