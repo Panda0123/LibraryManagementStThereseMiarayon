@@ -1,39 +1,44 @@
 ﻿'Imports System.Globalization
 Public Class adminView
-    Public adminbookDP As New List(Of bookControlAdmin)
-    Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'sample
-        For i As Integer = 0 To 5
-            Dim book As New bookControlAdmin
-            adminbookDP.Add(book)
-            bookDisp.Controls.Add(book)
-        Next
+
+
+    Dim viewBookuserCtl As New viewBookUserControl
+    Dim addBookuserCtl As New addBookUserControl
+    Dim recorduserCtl As New recordsUserControl
+
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        ' Add any initialization after the InitializeComponent() call.
+
+        viewBookPanel.Controls.Add(viewBookuserCtl)
+        addBookPanel.Controls.Add(addBookuserCtl)
+        recordsPanel.Controls.Add(recorduserCtl)
     End Sub
 
-
     Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
-        bookDisp.Visible = True
-        MainPanel.Visible = False
+        viewBookPanel.Visible = True
+        addBookPanel.Visible = False
+        recordsPanel.Visible = False
     End Sub
 
 
     Private Sub bokkAddBtn_Click(sender As Object, e As EventArgs) Handles bokkAddBtn.Click
-        bookDisp.Visible = False
-        MainPanel.Visible = True
-
+        viewBookPanel.Visible = False
+        addBookPanel.Visible = True
+        recordsPanel.Visible = False
     End Sub
 
     Private Sub recordsBtn_Click(sender As Object, e As EventArgs) Handles recordsBtn.Click
-
+        viewBookPanel.Visible = False
+        addBookPanel.Visible = False
+        recordsPanel.Visible = True
     End Sub
 
-    Private Sub collectionsBtn_Click(sender As Object, e As EventArgs) Handles collectionsBtn.Click
 
-    End Sub
 
-    Private Sub reservationBtn_Click(sender As Object, e As EventArgs)
 
-    End Sub
     '    Private selectedBook As BookDetailsDTO
     '    Private classifications As List(Of ClassificationDTO)
     '    Private classificationNames As New List(Of String)

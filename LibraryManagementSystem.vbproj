@@ -93,6 +93,12 @@
     <Compile Include="AddBook.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User Controls\addBookUserControl.Designer.vb">
+      <DependentUpon>addBookUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\addBookUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="adminView.Designer.vb">
       <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
@@ -105,16 +111,16 @@
     <Compile Include="advanceSearch.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bookControlAdmin.Designer.vb">
+    <Compile Include="User Controls\bookControlAdmin.Designer.vb">
       <DependentUpon>bookControlAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="bookControlAdmin.vb">
+    <Compile Include="User Controls\bookControlAdmin.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="bookDisplay.Designer.vb">
+    <Compile Include="User Controls\bookDisplay.Designer.vb">
       <DependentUpon>bookDisplay.vb</DependentUpon>
     </Compile>
-    <Compile Include="bookDisplay.vb">
+    <Compile Include="User Controls\bookDisplay.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="displayBookvb.vb" />
@@ -153,6 +159,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="User Controls\recordsUserControl.Designer.vb">
+      <DependentUpon>recordsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\recordsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utilities\APIClientController\AdminController.vb" />
     <Compile Include="Utilities\APIClientController\AuthorController.vb" />
     <Compile Include="Utilities\APIClientController\BookController.vb" />
@@ -176,10 +188,19 @@
     <Compile Include="Utilities\Forms\TemporaryLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User Controls\viewBookUserControl.Designer.vb">
+      <DependentUpon>viewBookUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\viewBookUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\addBookUserControl.resx">
+      <DependentUpon>addBookUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.vb</DependentUpon>
@@ -187,10 +208,10 @@
     <EmbeddedResource Include="advanceSearch.resx">
       <DependentUpon>advanceSearch.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bookControlAdmin.resx">
+    <EmbeddedResource Include="User Controls\bookControlAdmin.resx">
       <DependentUpon>bookControlAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bookDisplay.resx">
+    <EmbeddedResource Include="User Controls\bookDisplay.resx">
       <DependentUpon>bookDisplay.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueBook.resx">
@@ -208,11 +229,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\recordsUserControl.resx">
+      <DependentUpon>recordsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewBook.resx">
       <DependentUpon>viewBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utilities\Forms\TemporaryLogin.resx">
       <DependentUpon>TemporaryLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\viewBookUserControl.resx">
+      <DependentUpon>viewBookUserControl.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
