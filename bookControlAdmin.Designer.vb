@@ -155,7 +155,7 @@ Partial Class bookControlAdmin
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(1139, 228)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1406, 228)
         Me.ShapeContainer1.TabIndex = 17
         Me.ShapeContainer1.TabStop = False
         '
@@ -167,18 +167,18 @@ Partial Class bookControlAdmin
         Me.RectangleShape1.CornerRadius = 20
         Me.RectangleShape1.Location = New System.Drawing.Point(19, 12)
         Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(1105, 205)
+        Me.RectangleShape1.Size = New System.Drawing.Size(1372, 205)
         '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(673, 178)
+        Me.LinkLabel1.Location = New System.Drawing.Point(842, 167)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(98, 29)
+        Me.LinkLabel1.Size = New System.Drawing.Size(114, 33)
         Me.LinkLabel1.TabIndex = 18
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Check Out"
@@ -187,12 +187,12 @@ Partial Class bookControlAdmin
         '
         Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(787, 178)
+        Me.LinkLabel2.Location = New System.Drawing.Point(979, 167)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(78, 29)
+        Me.LinkLabel2.Size = New System.Drawing.Size(93, 33)
         Me.LinkLabel2.TabIndex = 19
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Reserve"
@@ -201,12 +201,12 @@ Partial Class bookControlAdmin
         '
         Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(975, 92)
+        Me.LinkLabel3.Location = New System.Drawing.Point(1172, 92)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(102, 29)
+        Me.LinkLabel3.Size = New System.Drawing.Size(137, 39)
         Me.LinkLabel3.TabIndex = 18
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "View Book"
@@ -229,7 +229,7 @@ Partial Class bookControlAdmin
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "bookControlAdmin"
-        Me.Size = New System.Drawing.Size(1139, 228)
+        Me.Size = New System.Drawing.Size(1406, 228)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
