@@ -89,3 +89,27 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookControlAdmin.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookControlAdmin.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.exe.config
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.exe
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.pdb
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\LibraryManagementSystem.xml
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Design.dll
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.dll
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookControlAdmin.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookDisplay.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.IssueBook.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.login.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Main.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Resources.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.viewBook.resources
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.GenerateResource.cache
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbproj.CopyComplete
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
+C:\Users\Bambam\Documents\GitHub\Mon-Branch\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
