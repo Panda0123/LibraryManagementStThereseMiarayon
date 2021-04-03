@@ -13,17 +13,26 @@ Public Class adminView
     Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
         bookDisp.Visible = True
         MainPanel.Visible = False
+        recordsDisplay.Visible = False
+
     End Sub
 
 
     Private Sub bokkAddBtn_Click(sender As Object, e As EventArgs) Handles bokkAddBtn.Click
         bookDisp.Visible = False
         MainPanel.Visible = True
+        recordsDisplay.Visible = False
 
     End Sub
 
     Private Sub bookDisp_Paint(sender As Object, e As PaintEventArgs) Handles bookDisp.Paint
 
+    End Sub
+
+    Private Sub recordsBtn_Click(sender As Object, e As EventArgs) Handles recordsBtn.Click
+        bookDisp.Visible = False
+        MainPanel.Visible = False
+        recordsDisplay.Visible = True
     End Sub
     '    Private selectedBook As BookDetailsDTO
     '    Private classifications As List(Of ClassificationDTO)
