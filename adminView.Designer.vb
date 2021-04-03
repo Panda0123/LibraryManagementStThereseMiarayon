@@ -24,16 +24,29 @@ Partial Class adminView
     Private Sub InitializeComponent()
         Dim TopPanel As System.Windows.Forms.Panel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.backgrounPanel = New System.Windows.Forms.Panel()
         Me.bookDisp = New System.Windows.Forms.FlowLayoutPanel()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
+        Me.borrowersBtn = New System.Windows.Forms.Button()
+        Me.recordsBtn = New System.Windows.Forms.Button()
+        Me.collectionsBtn = New System.Windows.Forms.Button()
+        Me.reservationBtn = New System.Windows.Forms.Button()
+        Me.bokkAddBtn = New System.Windows.Forms.Button()
+        Me.viewBookBtn = New System.Windows.Forms.Button()
         Me.MainPanel = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.shelfTxtBx = New System.Windows.Forms.TextBox()
@@ -88,26 +101,20 @@ Partial Class adminView
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ImageSummaryPanel = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
-        Me.borrowersBtn = New System.Windows.Forms.Button()
-        Me.recordsBtn = New System.Windows.Forms.Button()
-        Me.collectionsBtn = New System.Windows.Forms.Button()
-        Me.reservationBtn = New System.Windows.Forms.Button()
-        Me.bokkAddBtn = New System.Windows.Forms.Button()
-        Me.viewBookBtn = New System.Windows.Forms.Button()
         Me.removeImgBtn = New System.Windows.Forms.PictureBox()
         Me.bkPicBx = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
         TopPanel = New System.Windows.Forms.Panel()
         TopPanel.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TitleLogoSearchPanel.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.backgrounPanel.SuspendLayout()
         Me.LeftSidePanel.SuspendLayout()
         Me.MainPanel.SuspendLayout()
@@ -120,13 +127,6 @@ Partial Class adminView
         Me.Panel1.SuspendLayout()
         CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TopPanel
@@ -140,8 +140,17 @@ Partial Class adminView
         TopPanel.Controls.Add(Me.ShapeContainer2)
         TopPanel.Location = New System.Drawing.Point(0, -2)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1179, 148)
+        TopPanel.Size = New System.Drawing.Size(1145, 148)
         TopPanel.TabIndex = 2
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Location = New System.Drawing.Point(230, 14)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(80, 40)
+        Me.PictureBox4.TabIndex = 4
+        Me.PictureBox4.TabStop = False
         '
         'TitleLogoSearchPanel
         '
@@ -155,12 +164,24 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(400, 4)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(383, 4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
         Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.TabIndex = 1
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
+        Me.PictureBox8.Location = New System.Drawing.Point(426, 76)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(26, 25)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 12
+        Me.PictureBox8.TabStop = False
         '
         'searchTextBox
         '
@@ -170,11 +191,25 @@ Partial Class adminView
         Me.searchTextBox.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
         Me.searchTextBox.Location = New System.Drawing.Point(55, 77)
-        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
         Me.searchTextBox.Size = New System.Drawing.Size(279, 21)
         Me.searchTextBox.TabIndex = 8
         Me.searchTextBox.Text = "Search..."
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(38, 71)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(429, 38)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 6
+        Me.PictureBox9.TabStop = False
         '
         'Label1
         '
@@ -204,13 +239,59 @@ Partial Class adminView
         Me.advanceSearchLinkLbl.TabStop = True
         Me.advanceSearchLinkLbl.Text = "Advance Search"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Location = New System.Drawing.Point(400, 80)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(31, 18)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Location = New System.Drawing.Point(38, 74)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(403, 35)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(38, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(86, 66)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
+        Me.PictureBox16.Location = New System.Drawing.Point(1052, 11)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(39, 34)
+        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox16.TabIndex = 3
+        Me.PictureBox16.TabStop = False
+        '
         'ShapeContainer2
         '
         Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1179, 148)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1145, 148)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -220,7 +301,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1284, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1267, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -231,7 +312,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1282, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1265, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -247,7 +328,7 @@ Partial Class adminView
         Me.backgrounPanel.Controls.Add(Me.MainPanel)
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 149)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1356, 1448)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1322, 1448)
         Me.backgrounPanel.TabIndex = 3
         '
         'bookDisp
@@ -258,9 +339,9 @@ Partial Class adminView
         Me.bookDisp.AutoScroll = True
         Me.bookDisp.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.bookDisp.Location = New System.Drawing.Point(254, 5)
-        Me.bookDisp.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.bookDisp.Margin = New System.Windows.Forms.Padding(2)
         Me.bookDisp.Name = "bookDisp"
-        Me.bookDisp.Size = New System.Drawing.Size(1107, 1392)
+        Me.bookDisp.Size = New System.Drawing.Size(1073, 1392)
         Me.bookDisp.TabIndex = 6
         Me.bookDisp.WrapContents = False
         '
@@ -278,6 +359,114 @@ Partial Class adminView
         Me.LeftSidePanel.Size = New System.Drawing.Size(234, 511)
         Me.LeftSidePanel.TabIndex = 0
         '
+        'borrowersBtn
+        '
+        Me.borrowersBtn.BackColor = System.Drawing.Color.White
+        Me.borrowersBtn.FlatAppearance.BorderSize = 0
+        Me.borrowersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.borrowersBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.borrowersBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_borrow_book_64
+        Me.borrowersBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.borrowersBtn.Location = New System.Drawing.Point(8, 118)
+        Me.borrowersBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.borrowersBtn.Name = "borrowersBtn"
+        Me.borrowersBtn.Size = New System.Drawing.Size(211, 59)
+        Me.borrowersBtn.TabIndex = 10
+        Me.borrowersBtn.Text = " Borrowers"
+        Me.borrowersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.borrowersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.borrowersBtn.UseVisualStyleBackColor = False
+        '
+        'recordsBtn
+        '
+        Me.recordsBtn.BackColor = System.Drawing.Color.White
+        Me.recordsBtn.FlatAppearance.BorderSize = 0
+        Me.recordsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.recordsBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.recordsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
+        Me.recordsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.recordsBtn.Location = New System.Drawing.Point(19, 284)
+        Me.recordsBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.recordsBtn.Name = "recordsBtn"
+        Me.recordsBtn.Size = New System.Drawing.Size(166, 46)
+        Me.recordsBtn.TabIndex = 12
+        Me.recordsBtn.Text = "    Records"
+        Me.recordsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.recordsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.recordsBtn.UseVisualStyleBackColor = False
+        '
+        'collectionsBtn
+        '
+        Me.collectionsBtn.BackColor = System.Drawing.Color.White
+        Me.collectionsBtn.FlatAppearance.BorderSize = 0
+        Me.collectionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.collectionsBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.collectionsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
+        Me.collectionsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.collectionsBtn.Location = New System.Drawing.Point(22, 233)
+        Me.collectionsBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.collectionsBtn.Name = "collectionsBtn"
+        Me.collectionsBtn.Size = New System.Drawing.Size(166, 46)
+        Me.collectionsBtn.TabIndex = 13
+        Me.collectionsBtn.Text = "   Collections"
+        Me.collectionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.collectionsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.collectionsBtn.UseVisualStyleBackColor = False
+        '
+        'reservationBtn
+        '
+        Me.reservationBtn.BackColor = System.Drawing.Color.White
+        Me.reservationBtn.FlatAppearance.BorderSize = 0
+        Me.reservationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.reservationBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reservationBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_reserve_48
+        Me.reservationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.reservationBtn.Location = New System.Drawing.Point(14, 182)
+        Me.reservationBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.reservationBtn.Name = "reservationBtn"
+        Me.reservationBtn.Size = New System.Drawing.Size(181, 46)
+        Me.reservationBtn.TabIndex = 11
+        Me.reservationBtn.Text = "   Reservations"
+        Me.reservationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.reservationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.reservationBtn.UseVisualStyleBackColor = False
+        '
+        'bokkAddBtn
+        '
+        Me.bokkAddBtn.BackColor = System.Drawing.Color.White
+        Me.bokkAddBtn.FlatAppearance.BorderSize = 0
+        Me.bokkAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.bokkAddBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bokkAddBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
+        Me.bokkAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.bokkAddBtn.Location = New System.Drawing.Point(17, 68)
+        Me.bokkAddBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.bokkAddBtn.Name = "bokkAddBtn"
+        Me.bokkAddBtn.Size = New System.Drawing.Size(166, 46)
+        Me.bokkAddBtn.TabIndex = 9
+        Me.bokkAddBtn.Text = "   Add"
+        Me.bokkAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.bokkAddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.bokkAddBtn.UseVisualStyleBackColor = False
+        '
+        'viewBookBtn
+        '
+        Me.viewBookBtn.BackColor = System.Drawing.Color.White
+        Me.viewBookBtn.FlatAppearance.BorderSize = 0
+        Me.viewBookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.viewBookBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.viewBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
+        Me.viewBookBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.viewBookBtn.Location = New System.Drawing.Point(18, 17)
+        Me.viewBookBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.viewBookBtn.Name = "viewBookBtn"
+        Me.viewBookBtn.Size = New System.Drawing.Size(166, 46)
+        Me.viewBookBtn.TabIndex = 8
+        Me.viewBookBtn.Text = "   View Book"
+        Me.viewBookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.viewBookBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.viewBookBtn.UseVisualStyleBackColor = False
+        '
         'MainPanel
         '
         Me.MainPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -289,7 +478,7 @@ Partial Class adminView
         Me.MainPanel.Controls.Add(Me.ImageSummaryPanel)
         Me.MainPanel.Location = New System.Drawing.Point(254, 5)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(1107, 1392)
+        Me.MainPanel.Size = New System.Drawing.Size(1073, 1392)
         Me.MainPanel.TabIndex = 1
         '
         'Panel2
@@ -320,7 +509,7 @@ Partial Class adminView
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(22, 281)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1063, 1061)
+        Me.Panel2.Size = New System.Drawing.Size(1029, 1061)
         Me.Panel2.TabIndex = 1
         '
         'shelfTxtBx
@@ -331,7 +520,7 @@ Partial Class adminView
         Me.shelfTxtBx.ForeColor = System.Drawing.Color.Black
         Me.shelfTxtBx.Location = New System.Drawing.Point(20, 383)
         Me.shelfTxtBx.Name = "shelfTxtBx"
-        Me.shelfTxtBx.Size = New System.Drawing.Size(997, 28)
+        Me.shelfTxtBx.Size = New System.Drawing.Size(963, 28)
         Me.shelfTxtBx.TabIndex = 89
         '
         'Panel4
@@ -358,7 +547,7 @@ Partial Class adminView
         Me.Panel4.Controls.Add(Me.authorFNameTxtBx)
         Me.Panel4.Location = New System.Drawing.Point(22, 769)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(995, 287)
+        Me.Panel4.Size = New System.Drawing.Size(961, 287)
         Me.Panel4.TabIndex = 88
         '
         'Panel11
@@ -603,7 +792,7 @@ Partial Class adminView
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Location = New System.Drawing.Point(20, 635)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(995, 88)
+        Me.Panel3.Size = New System.Drawing.Size(961, 88)
         Me.Panel3.TabIndex = 84
         '
         'copyrightYearDTPckr
@@ -642,7 +831,7 @@ Partial Class adminView
         Me.copyrightNameTxtBx.ForeColor = System.Drawing.Color.Black
         Me.copyrightNameTxtBx.Location = New System.Drawing.Point(230, 44)
         Me.copyrightNameTxtBx.Name = "copyrightNameTxtBx"
-        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(717, 28)
+        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(683, 28)
         Me.copyrightNameTxtBx.TabIndex = 85
         '
         'Label15
@@ -685,7 +874,7 @@ Partial Class adminView
         Me.PublicationInformationPanel.Controls.Add(Me.Label10)
         Me.PublicationInformationPanel.Location = New System.Drawing.Point(22, 448)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(995, 148)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(961, 148)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'publishedDatePicker
@@ -724,7 +913,7 @@ Partial Class adminView
         Me.publisherAddrTxtBx.ForeColor = System.Drawing.Color.Black
         Me.publisherAddrTxtBx.Location = New System.Drawing.Point(44, 101)
         Me.publisherAddrTxtBx.Name = "publisherAddrTxtBx"
-        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(901, 28)
+        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(867, 28)
         Me.publisherAddrTxtBx.TabIndex = 87
         '
         'Label11
@@ -749,7 +938,7 @@ Partial Class adminView
         Me.publisherNameTxtBx.ForeColor = System.Drawing.Color.Black
         Me.publisherNameTxtBx.Location = New System.Drawing.Point(230, 44)
         Me.publisherNameTxtBx.Name = "publisherNameTxtBx"
-        Me.publisherNameTxtBx.Size = New System.Drawing.Size(716, 28)
+        Me.publisherNameTxtBx.Size = New System.Drawing.Size(682, 28)
         Me.publisherNameTxtBx.TabIndex = 85
         '
         'Label10
@@ -798,7 +987,7 @@ Partial Class adminView
         Me.classificationCmbBx.FormattingEnabled = True
         Me.classificationCmbBx.Location = New System.Drawing.Point(20, 322)
         Me.classificationCmbBx.Name = "classificationCmbBx"
-        Me.classificationCmbBx.Size = New System.Drawing.Size(997, 31)
+        Me.classificationCmbBx.Size = New System.Drawing.Size(963, 31)
         Me.classificationCmbBx.TabIndex = 79
         '
         'languageTxtBx
@@ -809,7 +998,7 @@ Partial Class adminView
         Me.languageTxtBx.ForeColor = System.Drawing.Color.Black
         Me.languageTxtBx.Location = New System.Drawing.Point(20, 263)
         Me.languageTxtBx.Name = "languageTxtBx"
-        Me.languageTxtBx.Size = New System.Drawing.Size(997, 28)
+        Me.languageTxtBx.Size = New System.Drawing.Size(963, 28)
         Me.languageTxtBx.TabIndex = 78
         '
         'Label6
@@ -832,7 +1021,7 @@ Partial Class adminView
         Me.quantityTxtBx.ForeColor = System.Drawing.Color.Black
         Me.quantityTxtBx.Location = New System.Drawing.Point(20, 206)
         Me.quantityTxtBx.Name = "quantityTxtBx"
-        Me.quantityTxtBx.Size = New System.Drawing.Size(997, 26)
+        Me.quantityTxtBx.Size = New System.Drawing.Size(963, 26)
         Me.quantityTxtBx.TabIndex = 76
         '
         'Label3
@@ -855,7 +1044,7 @@ Partial Class adminView
         Me.editionTxtBx.ForeColor = System.Drawing.Color.Black
         Me.editionTxtBx.Location = New System.Drawing.Point(20, 146)
         Me.editionTxtBx.Name = "editionTxtBx"
-        Me.editionTxtBx.Size = New System.Drawing.Size(997, 26)
+        Me.editionTxtBx.Size = New System.Drawing.Size(963, 26)
         Me.editionTxtBx.TabIndex = 74
         '
         'Label7
@@ -878,7 +1067,7 @@ Partial Class adminView
         Me.isbnTxtBx.ForeColor = System.Drawing.Color.Black
         Me.isbnTxtBx.Location = New System.Drawing.Point(20, 90)
         Me.isbnTxtBx.Name = "isbnTxtBx"
-        Me.isbnTxtBx.Size = New System.Drawing.Size(997, 26)
+        Me.isbnTxtBx.Size = New System.Drawing.Size(963, 26)
         Me.isbnTxtBx.TabIndex = 72
         '
         'Label4
@@ -901,7 +1090,7 @@ Partial Class adminView
         Me.titleTxtBx.ForeColor = System.Drawing.Color.Black
         Me.titleTxtBx.Location = New System.Drawing.Point(20, 31)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(997, 28)
+        Me.titleTxtBx.Size = New System.Drawing.Size(963, 28)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
@@ -925,7 +1114,7 @@ Partial Class adminView
         Me.ImageSummaryPanel.Controls.Add(Me.summaryRichTxtBx)
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(23, 16)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1061, 243)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1027, 243)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'Panel1
@@ -939,137 +1128,6 @@ Partial Class adminView
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(218, 222)
         Me.Panel1.TabIndex = 75
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(276, 0)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(90, 28)
-        Me.Label5.TabIndex = 73
-        Me.Label5.Text = "Summary"
-        '
-        'summaryRichTxtBx
-        '
-        Me.summaryRichTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.summaryRichTxtBx.BackColor = System.Drawing.Color.White
-        Me.summaryRichTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.summaryRichTxtBx.Location = New System.Drawing.Point(281, 30)
-        Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
-        Me.summaryRichTxtBx.Size = New System.Drawing.Size(747, 204)
-        Me.summaryRichTxtBx.TabIndex = 1
-        Me.summaryRichTxtBx.Text = ""
-        '
-        'borrowersBtn
-        '
-        Me.borrowersBtn.BackColor = System.Drawing.Color.White
-        Me.borrowersBtn.FlatAppearance.BorderSize = 0
-        Me.borrowersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.borrowersBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.borrowersBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_borrow_book_64
-        Me.borrowersBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.borrowersBtn.Location = New System.Drawing.Point(8, 118)
-        Me.borrowersBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.borrowersBtn.Name = "borrowersBtn"
-        Me.borrowersBtn.Size = New System.Drawing.Size(211, 59)
-        Me.borrowersBtn.TabIndex = 10
-        Me.borrowersBtn.Text = " Borrowers"
-        Me.borrowersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.borrowersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.borrowersBtn.UseVisualStyleBackColor = False
-        '
-        'recordsBtn
-        '
-        Me.recordsBtn.BackColor = System.Drawing.Color.White
-        Me.recordsBtn.FlatAppearance.BorderSize = 0
-        Me.recordsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.recordsBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.recordsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
-        Me.recordsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.recordsBtn.Location = New System.Drawing.Point(19, 284)
-        Me.recordsBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.recordsBtn.Name = "recordsBtn"
-        Me.recordsBtn.Size = New System.Drawing.Size(166, 46)
-        Me.recordsBtn.TabIndex = 12
-        Me.recordsBtn.Text = "    Records"
-        Me.recordsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.recordsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.recordsBtn.UseVisualStyleBackColor = False
-        '
-        'collectionsBtn
-        '
-        Me.collectionsBtn.BackColor = System.Drawing.Color.White
-        Me.collectionsBtn.FlatAppearance.BorderSize = 0
-        Me.collectionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.collectionsBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.collectionsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.collectionsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.collectionsBtn.Location = New System.Drawing.Point(22, 233)
-        Me.collectionsBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.collectionsBtn.Name = "collectionsBtn"
-        Me.collectionsBtn.Size = New System.Drawing.Size(166, 46)
-        Me.collectionsBtn.TabIndex = 13
-        Me.collectionsBtn.Text = "   Collections"
-        Me.collectionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.collectionsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.collectionsBtn.UseVisualStyleBackColor = False
-        '
-        'reservationBtn
-        '
-        Me.reservationBtn.BackColor = System.Drawing.Color.White
-        Me.reservationBtn.FlatAppearance.BorderSize = 0
-        Me.reservationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.reservationBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.reservationBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_reserve_48
-        Me.reservationBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.reservationBtn.Location = New System.Drawing.Point(14, 182)
-        Me.reservationBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.reservationBtn.Name = "reservationBtn"
-        Me.reservationBtn.Size = New System.Drawing.Size(181, 46)
-        Me.reservationBtn.TabIndex = 11
-        Me.reservationBtn.Text = "   Reservations"
-        Me.reservationBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.reservationBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.reservationBtn.UseVisualStyleBackColor = False
-        '
-        'bokkAddBtn
-        '
-        Me.bokkAddBtn.BackColor = System.Drawing.Color.White
-        Me.bokkAddBtn.FlatAppearance.BorderSize = 0
-        Me.bokkAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bokkAddBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bokkAddBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
-        Me.bokkAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bokkAddBtn.Location = New System.Drawing.Point(17, 68)
-        Me.bokkAddBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.bokkAddBtn.Name = "bokkAddBtn"
-        Me.bokkAddBtn.Size = New System.Drawing.Size(166, 46)
-        Me.bokkAddBtn.TabIndex = 9
-        Me.bokkAddBtn.Text = "   Add"
-        Me.bokkAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.bokkAddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.bokkAddBtn.UseVisualStyleBackColor = False
-        '
-        'viewBookBtn
-        '
-        Me.viewBookBtn.BackColor = System.Drawing.Color.White
-        Me.viewBookBtn.FlatAppearance.BorderSize = 0
-        Me.viewBookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.viewBookBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.viewBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
-        Me.viewBookBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.viewBookBtn.Location = New System.Drawing.Point(18, 17)
-        Me.viewBookBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.viewBookBtn.Name = "viewBookBtn"
-        Me.viewBookBtn.Size = New System.Drawing.Size(166, 46)
-        Me.viewBookBtn.TabIndex = 8
-        Me.viewBookBtn.Text = "   View Book"
-        Me.viewBookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.viewBookBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.viewBookBtn.UseVisualStyleBackColor = False
         '
         'removeImgBtn
         '
@@ -1099,86 +1157,28 @@ Partial Class adminView
         Me.bkPicBx.TabIndex = 0
         Me.bkPicBx.TabStop = False
         '
-        'PictureBox4
+        'Label5
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(230, 14)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(80, 40)
-        Me.PictureBox4.TabIndex = 4
-        Me.PictureBox4.TabStop = False
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(276, 0)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(90, 28)
+        Me.Label5.TabIndex = 73
+        Me.Label5.Text = "Summary"
         '
-        'PictureBox8
+        'summaryRichTxtBx
         '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.summaryRichTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(426, 76)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(26, 25)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(38, 71)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(429, 38)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 6
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(400, 80)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(31, 18)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(38, 74)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(403, 35)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(38, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(86, 66)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1086, 11)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(39, 34)
-        Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox16.TabIndex = 3
-        Me.PictureBox16.TabStop = False
+        Me.summaryRichTxtBx.BackColor = System.Drawing.Color.White
+        Me.summaryRichTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.summaryRichTxtBx.Location = New System.Drawing.Point(281, 30)
+        Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
+        Me.summaryRichTxtBx.Size = New System.Drawing.Size(713, 204)
+        Me.summaryRichTxtBx.TabIndex = 1
+        Me.summaryRichTxtBx.Text = ""
         '
         'adminView
         '
@@ -1195,8 +1195,15 @@ Partial Class adminView
         Me.Text = "AddBook"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         TopPanel.ResumeLayout(False)
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.backgrounPanel.ResumeLayout(False)
         Me.LeftSidePanel.ResumeLayout(False)
         Me.MainPanel.ResumeLayout(False)
@@ -1215,13 +1222,6 @@ Partial Class adminView
         Me.Panel1.ResumeLayout(False)
         CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

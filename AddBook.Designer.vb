@@ -696,7 +696,7 @@ Partial Class AddBook
         Me.copyrightYearDTPckr.FontSize = MetroFramework.MetroDateTimeSize.Small
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(42, 45)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
         Me.copyrightYearDTPckr.Size = New System.Drawing.Size(67, 25)
@@ -778,7 +778,7 @@ Partial Class AddBook
         Me.publishedDatePicker.CustomFormat = "MMMM yyyy"
         Me.publishedDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.publishedDatePicker.Location = New System.Drawing.Point(41, 45)
-        Me.publishedDatePicker.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.publishedDatePicker.MinimumSize = New System.Drawing.Size(4, 29)
         Me.publishedDatePicker.Name = "publishedDatePicker"
         Me.publishedDatePicker.ShowCheckBox = True
         Me.publishedDatePicker.Size = New System.Drawing.Size(140, 29)
