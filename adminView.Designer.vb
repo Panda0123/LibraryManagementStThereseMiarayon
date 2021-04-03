@@ -147,7 +147,7 @@ Partial Class adminView
         TopPanel.Location = New System.Drawing.Point(0, -2)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1453, 185)
+        TopPanel.Size = New System.Drawing.Size(1495, 185)
         TopPanel.TabIndex = 2
         '
         'PictureBox4
@@ -170,7 +170,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(490, 5)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(511, 5)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -286,7 +286,7 @@ Partial Class adminView
         '
         Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1337, 14)
+        Me.PictureBox16.Location = New System.Drawing.Point(1379, 14)
         Me.PictureBox16.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(49, 42)
@@ -300,7 +300,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1453, 185)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1495, 185)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -310,7 +310,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1558, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1600, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -321,7 +321,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1556, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1598, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -338,7 +338,7 @@ Partial Class adminView
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1674, 1809)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1716, 1809)
         Me.backgrounPanel.TabIndex = 3
         '
         'bookDisp
@@ -350,7 +350,7 @@ Partial Class adminView
         Me.bookDisp.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.bookDisp.Location = New System.Drawing.Point(318, 6)
         Me.bookDisp.Name = "bookDisp"
-        Me.bookDisp.Size = New System.Drawing.Size(1384, 1740)
+        Me.bookDisp.Size = New System.Drawing.Size(1405, 1740)
         Me.bookDisp.TabIndex = 6
         Me.bookDisp.WrapContents = False
         '
@@ -486,14 +486,14 @@ Partial Class adminView
         Me.MainPanel.Location = New System.Drawing.Point(318, 6)
         Me.MainPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(1363, 1740)
+        Me.MainPanel.Size = New System.Drawing.Size(1405, 1740)
         Me.MainPanel.TabIndex = 1
         '
         'savePcBx
         '
         Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
-        Me.savePcBx.Location = New System.Drawing.Point(596, 1687)
+        Me.savePcBx.Location = New System.Drawing.Point(617, 1687)
         Me.savePcBx.Margin = New System.Windows.Forms.Padding(4)
         Me.savePcBx.Name = "savePcBx"
         Me.savePcBx.Size = New System.Drawing.Size(193, 50)
@@ -506,7 +506,7 @@ Partial Class adminView
         '
         Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.cancelPcBx.Location = New System.Drawing.Point(805, 1689)
+        Me.cancelPcBx.Location = New System.Drawing.Point(826, 1689)
         Me.cancelPcBx.Margin = New System.Windows.Forms.Padding(4)
         Me.cancelPcBx.Name = "cancelPcBx"
         Me.cancelPcBx.Size = New System.Drawing.Size(347, 50)
@@ -518,7 +518,7 @@ Partial Class adminView
         '
         Me.addBookBtn.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.addBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.addBookBtn.Location = New System.Drawing.Point(232, 1689)
+        Me.addBookBtn.Location = New System.Drawing.Point(253, 1689)
         Me.addBookBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.addBookBtn.Name = "addBookBtn"
         Me.addBookBtn.Size = New System.Drawing.Size(347, 50)
@@ -555,7 +555,7 @@ Partial Class adminView
         Me.Panel2.Location = New System.Drawing.Point(27, 351)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1308, 1326)
+        Me.Panel2.Size = New System.Drawing.Size(1350, 1326)
         Me.Panel2.TabIndex = 1
         '
         'shelfTxtBx
@@ -567,7 +567,7 @@ Partial Class adminView
         Me.shelfTxtBx.Location = New System.Drawing.Point(25, 479)
         Me.shelfTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.shelfTxtBx.Name = "shelfTxtBx"
-        Me.shelfTxtBx.Size = New System.Drawing.Size(1224, 33)
+        Me.shelfTxtBx.Size = New System.Drawing.Size(1266, 33)
         Me.shelfTxtBx.TabIndex = 89
         '
         'Panel4
@@ -595,7 +595,7 @@ Partial Class adminView
         Me.Panel4.Location = New System.Drawing.Point(27, 961)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1223, 358)
+        Me.Panel4.Size = New System.Drawing.Size(1265, 358)
         Me.Panel4.TabIndex = 88
         '
         'Panel11
@@ -849,7 +849,7 @@ Partial Class adminView
         Me.Panel3.Location = New System.Drawing.Point(25, 794)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1223, 109)
+        Me.Panel3.Size = New System.Drawing.Size(1265, 109)
         Me.Panel3.TabIndex = 84
         '
         'copyrightYearDTPckr
@@ -889,7 +889,7 @@ Partial Class adminView
         Me.copyrightNameTxtBx.Location = New System.Drawing.Point(287, 55)
         Me.copyrightNameTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.copyrightNameTxtBx.Name = "copyrightNameTxtBx"
-        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(874, 33)
+        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(916, 33)
         Me.copyrightNameTxtBx.TabIndex = 85
         '
         'Label15
@@ -931,7 +931,7 @@ Partial Class adminView
         Me.PublicationInformationPanel.Location = New System.Drawing.Point(27, 560)
         Me.PublicationInformationPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(1223, 184)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(1265, 184)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'publishedDatePicker
@@ -971,7 +971,7 @@ Partial Class adminView
         Me.publisherAddrTxtBx.Location = New System.Drawing.Point(55, 126)
         Me.publisherAddrTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.publisherAddrTxtBx.Name = "publisherAddrTxtBx"
-        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(1105, 33)
+        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(1147, 33)
         Me.publisherAddrTxtBx.TabIndex = 87
         '
         'Label11
@@ -996,7 +996,7 @@ Partial Class adminView
         Me.publisherNameTxtBx.Location = New System.Drawing.Point(287, 55)
         Me.publisherNameTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.publisherNameTxtBx.Name = "publisherNameTxtBx"
-        Me.publisherNameTxtBx.Size = New System.Drawing.Size(873, 33)
+        Me.publisherNameTxtBx.Size = New System.Drawing.Size(915, 33)
         Me.publisherNameTxtBx.TabIndex = 85
         '
         'Label10
@@ -1043,7 +1043,7 @@ Partial Class adminView
         Me.classificationCmbBx.Location = New System.Drawing.Point(25, 402)
         Me.classificationCmbBx.Margin = New System.Windows.Forms.Padding(4)
         Me.classificationCmbBx.Name = "classificationCmbBx"
-        Me.classificationCmbBx.Size = New System.Drawing.Size(1224, 37)
+        Me.classificationCmbBx.Size = New System.Drawing.Size(1266, 37)
         Me.classificationCmbBx.TabIndex = 79
         '
         'languageTxtBx
@@ -1055,7 +1055,7 @@ Partial Class adminView
         Me.languageTxtBx.Location = New System.Drawing.Point(25, 329)
         Me.languageTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.languageTxtBx.Name = "languageTxtBx"
-        Me.languageTxtBx.Size = New System.Drawing.Size(1224, 33)
+        Me.languageTxtBx.Size = New System.Drawing.Size(1266, 33)
         Me.languageTxtBx.TabIndex = 78
         '
         'Label6
@@ -1078,7 +1078,7 @@ Partial Class adminView
         Me.quantityTxtBx.Location = New System.Drawing.Point(25, 258)
         Me.quantityTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.quantityTxtBx.Name = "quantityTxtBx"
-        Me.quantityTxtBx.Size = New System.Drawing.Size(1224, 30)
+        Me.quantityTxtBx.Size = New System.Drawing.Size(1266, 30)
         Me.quantityTxtBx.TabIndex = 76
         '
         'Label3
@@ -1101,7 +1101,7 @@ Partial Class adminView
         Me.editionTxtBx.Location = New System.Drawing.Point(25, 183)
         Me.editionTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.editionTxtBx.Name = "editionTxtBx"
-        Me.editionTxtBx.Size = New System.Drawing.Size(1224, 30)
+        Me.editionTxtBx.Size = New System.Drawing.Size(1266, 30)
         Me.editionTxtBx.TabIndex = 74
         '
         'Label7
@@ -1124,7 +1124,7 @@ Partial Class adminView
         Me.isbnTxtBx.Location = New System.Drawing.Point(25, 113)
         Me.isbnTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.isbnTxtBx.Name = "isbnTxtBx"
-        Me.isbnTxtBx.Size = New System.Drawing.Size(1224, 30)
+        Me.isbnTxtBx.Size = New System.Drawing.Size(1266, 30)
         Me.isbnTxtBx.TabIndex = 72
         '
         'Label4
@@ -1147,7 +1147,7 @@ Partial Class adminView
         Me.titleTxtBx.Location = New System.Drawing.Point(25, 39)
         Me.titleTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(1224, 33)
+        Me.titleTxtBx.Size = New System.Drawing.Size(1266, 33)
         Me.titleTxtBx.TabIndex = 31
         '
         'Label2
@@ -1171,7 +1171,7 @@ Partial Class adminView
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(29, 20)
         Me.ImageSummaryPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1305, 304)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1347, 304)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'Panel1
@@ -1236,7 +1236,7 @@ Partial Class adminView
         Me.summaryRichTxtBx.Location = New System.Drawing.Point(351, 38)
         Me.summaryRichTxtBx.Margin = New System.Windows.Forms.Padding(4)
         Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
-        Me.summaryRichTxtBx.Size = New System.Drawing.Size(912, 254)
+        Me.summaryRichTxtBx.Size = New System.Drawing.Size(954, 254)
         Me.summaryRichTxtBx.TabIndex = 1
         Me.summaryRichTxtBx.Text = ""
         '
