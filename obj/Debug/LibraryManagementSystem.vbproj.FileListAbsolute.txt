@@ -53,7 +53,6 @@ G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\ob
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
-G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
