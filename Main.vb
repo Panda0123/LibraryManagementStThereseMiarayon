@@ -24,9 +24,7 @@
 
     End Sub
 
-    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
     Private Sub Button_Back_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Button_Back.LinkClicked
         LoadPage(False) 'false indicates to go back a page
@@ -179,7 +177,9 @@
         Timer4.Stop()
     End Sub
 
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
 
 

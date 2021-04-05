@@ -47,6 +47,12 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>download-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -93,6 +99,12 @@
     <Compile Include="AddBook.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User Controls\addBookUserControl.Designer.vb">
+      <DependentUpon>addBookUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\addBookUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="adminView.Designer.vb">
       <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
@@ -105,19 +117,19 @@
     <Compile Include="advanceSearch.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bookControlAdmin.Designer.vb">
+    <Compile Include="User Controls\bookControlAdmin.Designer.vb">
       <DependentUpon>bookControlAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="bookControlAdmin.vb">
+    <Compile Include="User Controls\bookControlAdmin.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="bookDisplay.Designer.vb">
+    <Compile Include="User Controls\bookDisplay.Designer.vb">
       <DependentUpon>bookDisplay.vb</DependentUpon>
     </Compile>
-    <Compile Include="bookDisplay.vb">
+    <Compile Include="User Controls\bookDisplay.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="displayBookvb.vb" />
+    <Compile Include="Utilities\displayBookvb.vb" />
     <Compile Include="IssueBook.Designer.vb">
       <DependentUpon>IssueBook.vb</DependentUpon>
     </Compile>
@@ -153,6 +165,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="User Controls\recordsUserControl.Designer.vb">
+      <DependentUpon>recordsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\recordsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utilities\APIClientController\AdminController.vb" />
     <Compile Include="Utilities\APIClientController\AuthorController.vb" />
     <Compile Include="Utilities\APIClientController\BookController.vb" />
@@ -176,10 +194,19 @@
     <Compile Include="Utilities\Forms\TemporaryLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User Controls\viewBookUserControl.Designer.vb">
+      <DependentUpon>viewBookUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\viewBookUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\addBookUserControl.resx">
+      <DependentUpon>addBookUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.vb</DependentUpon>
@@ -187,10 +214,10 @@
     <EmbeddedResource Include="advanceSearch.resx">
       <DependentUpon>advanceSearch.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bookControlAdmin.resx">
+    <EmbeddedResource Include="User Controls\bookControlAdmin.resx">
       <DependentUpon>bookControlAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bookDisplay.resx">
+    <EmbeddedResource Include="User Controls\bookDisplay.resx">
       <DependentUpon>bookDisplay.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueBook.resx">
@@ -208,15 +235,22 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\recordsUserControl.resx">
+      <DependentUpon>recordsUserControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewBook.resx">
       <DependentUpon>viewBook.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utilities\Forms\TemporaryLogin.resx">
       <DependentUpon>TemporaryLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\viewBookUserControl.resx">
+      <DependentUpon>viewBookUserControl.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -302,6 +336,8 @@
     <None Include="Resources\x.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="book.ico" />
+    <Content Include="download-removebg-preview.ico" />
     <Content Include="Resources\cancel.png" />
     <None Include="Resources\icons8-reserve-24.png" />
     <None Include="Resources\icons8-reserve-96.png" />
