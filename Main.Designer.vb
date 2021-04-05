@@ -721,11 +721,12 @@ Partial Class Main
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1448, 952)
         Me.Controls.Add(Me.mainPanel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MinimumSize = New System.Drawing.Size(1169, 645)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Library Management"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.leftMainScreenPanel.ResumeLayout(False)
         Me.scrollablePanel.ResumeLayout(False)

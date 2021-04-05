@@ -39,7 +39,6 @@ Public Class adminView
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles signOutBtn.LinkClicked
-
         Main.Show()
         Me.Close()
     End Sub

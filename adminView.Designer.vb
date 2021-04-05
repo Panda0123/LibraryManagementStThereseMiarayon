@@ -386,11 +386,11 @@ Partial Class adminView
         Me.Controls.Add(Me.signOutBtn)
         Me.Controls.Add(Me.backgrounPanel)
         Me.Controls.Add(TopPanel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(1553, 781)
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AddBook"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.backgrounPanel.ResumeLayout(False)
         Me.LeftSidePanel.ResumeLayout(False)
