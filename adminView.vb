@@ -13,6 +13,10 @@ Public Class adminView
         viewBookPanel.Controls.Add(viewBookuserCtl)
         addBookPanel.Controls.Add(addBookuserCtl)
         recordsPanel.Controls.Add(recorduserCtl)
+
+        viewBookPanel.Visible = True
+        addBookPanel.Visible = False
+        recordsPanel.Visible = False
     End Sub
 
     Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
@@ -41,6 +45,10 @@ Public Class adminView
     End Sub
 
     Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub viewBookPanel_Paint(sender As Object, e As PaintEventArgs) Handles viewBookPanel.Paint
 
     End Sub
 

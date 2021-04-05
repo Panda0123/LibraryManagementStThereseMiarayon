@@ -123,7 +123,7 @@
     <Compile Include="User Controls\bookDisplay.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="displayBookvb.vb" />
+    <Compile Include="Utilities\displayBookvb.vb" />
     <Compile Include="IssueBook.Designer.vb">
       <DependentUpon>IssueBook.vb</DependentUpon>
     </Compile>
