@@ -475,4 +475,7 @@ Public Class AddBookUserControl
         bkPicBx.Image = imgRetuned
     End Sub
 
+    Private Sub layoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles layoutPanel.Paint
+
+    End Sub
 End Class

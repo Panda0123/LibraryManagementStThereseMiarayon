@@ -26,40 +26,15 @@ Partial Class AddBookUserControl
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.shelfTxtBx = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.authorsMNameLbl = New System.Windows.Forms.Label()
-        Me.authorsLNameLbl = New System.Windows.Forms.Label()
-        Me.authorsNumLbl = New System.Windows.Forms.Label()
-        Me.authorsFNameLbl = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.selectedAuthorLbl = New System.Windows.Forms.Label()
-        Me.removeAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.updateAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.addAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.getAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.authorNumTxtBx = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.authorLNameTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.authorMNameTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.authorFNameTxtBx = New System.Windows.Forms.TextBox()
-        Me.cancelPcBx = New System.Windows.Forms.PictureBox()
-        Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.addPcBx = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.copyrightYearDTPckr = New MetroFramework.Controls.MetroDateTime()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.copyrightNameTxtBx = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.savePcBx = New System.Windows.Forms.PictureBox()
         Me.PublicationInformationPanel = New System.Windows.Forms.Panel()
         Me.publishedDatePicker = New MetroFramework.Controls.MetroDateTime()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -86,22 +61,47 @@ Partial Class AddBookUserControl
         Me.bkPicBx = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
+        Me.cancelPcBx = New System.Windows.Forms.PictureBox()
+        Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
+        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
+        Me.addPcBx = New System.Windows.Forms.PictureBox()
+        Me.savePcBx = New System.Windows.Forms.PictureBox()
+        Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
+        Me.selectedAuthorLbl = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.updateAuthorBtn = New MetroFramework.Controls.MetroButton()
+        Me.removeAuthorBtn = New MetroFramework.Controls.MetroButton()
+        Me.getAuthorBtn = New MetroFramework.Controls.MetroButton()
+        Me.addAuthorBtn = New MetroFramework.Controls.MetroButton()
+        Me.authorNumTxtBx = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.authorLNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.authorMNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.authorFNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.authorsFNameLbl = New System.Windows.Forms.Label()
+        Me.authorsNumLbl = New System.Windows.Forms.Label()
+        Me.authorsLNameLbl = New System.Windows.Forms.Label()
+        Me.authorsMNameLbl = New System.Windows.Forms.Label()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel11.SuspendLayout()
-        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
-        CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PublicationInformationPanel.SuspendLayout()
         Me.ImageSummaryPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel11.SuspendLayout()
         Me.SuspendLayout()
         '
         'layoutPanel
@@ -120,7 +120,7 @@ Partial Class AddBookUserControl
         Me.layoutPanel.Location = New System.Drawing.Point(3, 3)
         Me.layoutPanel.Name = "layoutPanel"
         Me.layoutPanel.Size = New System.Drawing.Size(1050, 1444)
-        Me.layoutPanel.TabIndex = 2
+        Me.layoutPanel.TabIndex = 0
         '
         'Panel2
         '
@@ -152,7 +152,7 @@ Partial Class AddBookUserControl
         Me.Panel2.Location = New System.Drawing.Point(20, 285)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1010, 1103)
-        Me.Panel2.TabIndex = 1
+        Me.Panel2.TabIndex = 0
         '
         'shelfTxtBx
         '
@@ -163,7 +163,7 @@ Partial Class AddBookUserControl
         Me.shelfTxtBx.Location = New System.Drawing.Point(19, 389)
         Me.shelfTxtBx.Name = "shelfTxtBx"
         Me.shelfTxtBx.Size = New System.Drawing.Size(946, 28)
-        Me.shelfTxtBx.TabIndex = 89
+        Me.shelfTxtBx.TabIndex = 6
         '
         'Panel4
         '
@@ -192,137 +192,6 @@ Partial Class AddBookUserControl
         Me.Panel4.Size = New System.Drawing.Size(945, 291)
         Me.Panel4.TabIndex = 88
         '
-        'Panel11
-        '
-        Me.Panel11.AutoScroll = True
-        Me.Panel11.BackColor = System.Drawing.Color.White
-        Me.Panel11.Controls.Add(Me.authorsMNameLbl)
-        Me.Panel11.Controls.Add(Me.authorsLNameLbl)
-        Me.Panel11.Controls.Add(Me.authorsNumLbl)
-        Me.Panel11.Controls.Add(Me.authorsFNameLbl)
-        Me.Panel11.Location = New System.Drawing.Point(37, 44)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(388, 213)
-        Me.Panel11.TabIndex = 102
-        '
-        'authorsMNameLbl
-        '
-        Me.authorsMNameLbl.AutoSize = True
-        Me.authorsMNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsMNameLbl.Location = New System.Drawing.Point(163, 6)
-        Me.authorsMNameLbl.Name = "authorsMNameLbl"
-        Me.authorsMNameLbl.Size = New System.Drawing.Size(35, 23)
-        Me.authorsMNameLbl.TabIndex = 100
-        Me.authorsMNameLbl.Text = "MN"
-        '
-        'authorsLNameLbl
-        '
-        Me.authorsLNameLbl.AutoSize = True
-        Me.authorsLNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsLNameLbl.Location = New System.Drawing.Point(263, 6)
-        Me.authorsLNameLbl.Name = "authorsLNameLbl"
-        Me.authorsLNameLbl.Size = New System.Drawing.Size(30, 23)
-        Me.authorsLNameLbl.TabIndex = 101
-        Me.authorsLNameLbl.Text = "LN"
-        '
-        'authorsNumLbl
-        '
-        Me.authorsNumLbl.AutoSize = True
-        Me.authorsNumLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsNumLbl.Location = New System.Drawing.Point(0, 5)
-        Me.authorsNumLbl.Name = "authorsNumLbl"
-        Me.authorsNumLbl.Size = New System.Drawing.Size(33, 23)
-        Me.authorsNumLbl.TabIndex = 98
-        Me.authorsNumLbl.Text = "No."
-        '
-        'authorsFNameLbl
-        '
-        Me.authorsFNameLbl.AutoSize = True
-        Me.authorsFNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsFNameLbl.Location = New System.Drawing.Point(53, 6)
-        Me.authorsFNameLbl.Name = "authorsFNameLbl"
-        Me.authorsFNameLbl.Size = New System.Drawing.Size(30, 23)
-        Me.authorsFNameLbl.TabIndex = 99
-        Me.authorsFNameLbl.Text = "FN"
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(535, 18)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(114, 23)
-        Me.Label30.TabIndex = 96
-        Me.Label30.Text = "Selected Author:"
-        '
-        'selectedAuthorLbl
-        '
-        Me.selectedAuthorLbl.AutoSize = True
-        Me.selectedAuthorLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.selectedAuthorLbl.Location = New System.Drawing.Point(648, 23)
-        Me.selectedAuthorLbl.Name = "selectedAuthorLbl"
-        Me.selectedAuthorLbl.Size = New System.Drawing.Size(41, 16)
-        Me.selectedAuthorLbl.TabIndex = 97
-        Me.selectedAuthorLbl.Text = "None"
-        '
-        'removeAuthorBtn
-        '
-        Me.removeAuthorBtn.Location = New System.Drawing.Point(636, 202)
-        Me.removeAuthorBtn.Name = "removeAuthorBtn"
-        Me.removeAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.removeAuthorBtn.TabIndex = 95
-        Me.removeAuthorBtn.Text = "Remove"
-        Me.removeAuthorBtn.UseSelectable = True
-        '
-        'updateAuthorBtn
-        '
-        Me.updateAuthorBtn.Location = New System.Drawing.Point(636, 240)
-        Me.updateAuthorBtn.Name = "updateAuthorBtn"
-        Me.updateAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.updateAuthorBtn.TabIndex = 94
-        Me.updateAuthorBtn.Text = "Update"
-        Me.updateAuthorBtn.UseSelectable = True
-        '
-        'addAuthorBtn
-        '
-        Me.addAuthorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.addAuthorBtn.Location = New System.Drawing.Point(516, 202)
-        Me.addAuthorBtn.Name = "addAuthorBtn"
-        Me.addAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.addAuthorBtn.TabIndex = 93
-        Me.addAuthorBtn.Text = "Add"
-        Me.addAuthorBtn.UseSelectable = True
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(460, 160)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(62, 23)
-        Me.Label22.TabIndex = 90
-        Me.Label22.Text = "Number"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'getAuthorBtn
-        '
-        Me.getAuthorBtn.Location = New System.Drawing.Point(516, 240)
-        Me.getAuthorBtn.Name = "getAuthorBtn"
-        Me.getAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.getAuthorBtn.TabIndex = 92
-        Me.getAuthorBtn.Text = "Get"
-        Me.getAuthorBtn.UseSelectable = True
-        '
-        'authorNumTxtBx
-        '
-        Me.authorNumTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorNumTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorNumTxtBx.Location = New System.Drawing.Point(526, 158)
-        Me.authorNumTxtBx.Name = "authorNumTxtBx"
-        Me.authorNumTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorNumTxtBx.TabIndex = 91
-        '
         'Label21
         '
         Me.Label21.AutoSize = True
@@ -334,92 +203,6 @@ Partial Class AddBookUserControl
         Me.Label21.TabIndex = 89
         Me.Label21.Text = "Author List"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(446, 125)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(77, 23)
-        Me.Label20.TabIndex = 86
-        Me.Label20.Text = "Last Name"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorLNameTxtBx
-        '
-        Me.authorLNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorLNameTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorLNameTxtBx.Location = New System.Drawing.Point(526, 122)
-        Me.authorLNameTxtBx.Name = "authorLNameTxtBx"
-        Me.authorLNameTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorLNameTxtBx.TabIndex = 87
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(430, 87)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(94, 23)
-        Me.Label17.TabIndex = 84
-        Me.Label17.Text = "Middle Initial"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorMNameTxtBx
-        '
-        Me.authorMNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorMNameTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorMNameTxtBx.Location = New System.Drawing.Point(526, 84)
-        Me.authorMNameTxtBx.Name = "authorMNameTxtBx"
-        Me.authorMNameTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorMNameTxtBx.TabIndex = 85
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(442, 46)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(80, 23)
-        Me.Label18.TabIndex = 83
-        Me.Label18.Text = "First Name"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorFNameTxtBx
-        '
-        Me.authorFNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorFNameTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorFNameTxtBx.Location = New System.Drawing.Point(526, 44)
-        Me.authorFNameTxtBx.Name = "authorFNameTxtBx"
-        Me.authorFNameTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorFNameTxtBx.TabIndex = 83
-        '
-        'cancelPcBx
-        '
-        Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.cancelPcBx.Location = New System.Drawing.Point(619, 1403)
-        Me.cancelPcBx.Name = "cancelPcBx"
-        Me.cancelPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.cancelPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.cancelPcBx.TabIndex = 4
-        Me.cancelPcBx.TabStop = False
-        '
-        'cancelHoverPcBx
-        '
-        Me.cancelHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.cancelHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.canceHover
-        Me.cancelHoverPcBx.Location = New System.Drawing.Point(619, 1403)
-        Me.cancelHoverPcBx.Name = "cancelHoverPcBx"
-        Me.cancelHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.cancelHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.cancelHoverPcBx.TabIndex = 5
-        Me.cancelHoverPcBx.TabStop = False
-        Me.cancelHoverPcBx.Visible = False
         '
         'Label19
         '
@@ -445,29 +228,6 @@ Partial Class AddBookUserControl
         Me.Label13.Text = "Shelf Name/Number"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'addHoverPcBx
-        '
-        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
-        Me.addHoverPcBx.Location = New System.Drawing.Point(190, 1403)
-        Me.addHoverPcBx.Name = "addHoverPcBx"
-        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addHoverPcBx.TabIndex = 4
-        Me.addHoverPcBx.TabStop = False
-        Me.addHoverPcBx.Visible = False
-        '
-        'addPcBx
-        '
-        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.addPcBx.Location = New System.Drawing.Point(190, 1403)
-        Me.addPcBx.Name = "addPcBx"
-        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addPcBx.TabIndex = 3
-        Me.addPcBx.TabStop = False
-        '
         'Panel3
         '
         Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -491,11 +251,11 @@ Partial Class AddBookUserControl
         Me.copyrightYearDTPckr.FontSize = MetroFramework.MetroDateTimeSize.Small
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(42, 45)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 25)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
         Me.copyrightYearDTPckr.Size = New System.Drawing.Size(67, 25)
-        Me.copyrightYearDTPckr.TabIndex = 88
+        Me.copyrightYearDTPckr.TabIndex = 0
         '
         'Label14
         '
@@ -520,7 +280,7 @@ Partial Class AddBookUserControl
         Me.copyrightNameTxtBx.Location = New System.Drawing.Point(215, 45)
         Me.copyrightNameTxtBx.Name = "copyrightNameTxtBx"
         Me.copyrightNameTxtBx.Size = New System.Drawing.Size(684, 28)
-        Me.copyrightNameTxtBx.TabIndex = 85
+        Me.copyrightNameTxtBx.TabIndex = 1
         '
         'Label15
         '
@@ -536,18 +296,6 @@ Partial Class AddBookUserControl
         Me.Label15.Text = "Year"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'saveHoverPcBx
-        '
-        Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.saveHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save2Hover
-        Me.saveHoverPcBx.Location = New System.Drawing.Point(190, 1403)
-        Me.saveHoverPcBx.Name = "saveHoverPcBx"
-        Me.saveHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.saveHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.saveHoverPcBx.TabIndex = 6
-        Me.saveHoverPcBx.TabStop = False
-        Me.saveHoverPcBx.Visible = False
-        '
         'Label16
         '
         Me.Label16.AutoSize = True
@@ -559,18 +307,6 @@ Partial Class AddBookUserControl
         Me.Label16.TabIndex = 83
         Me.Label16.Text = "Copyright Information"
         Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'savePcBx
-        '
-        Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
-        Me.savePcBx.Location = New System.Drawing.Point(190, 1403)
-        Me.savePcBx.Name = "savePcBx"
-        Me.savePcBx.Size = New System.Drawing.Size(260, 41)
-        Me.savePcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.savePcBx.TabIndex = 5
-        Me.savePcBx.TabStop = False
-        Me.savePcBx.Visible = False
         '
         'PublicationInformationPanel
         '
@@ -601,7 +337,7 @@ Partial Class AddBookUserControl
         Me.publishedDatePicker.Name = "publishedDatePicker"
         Me.publishedDatePicker.ShowCheckBox = True
         Me.publishedDatePicker.Size = New System.Drawing.Size(140, 29)
-        Me.publishedDatePicker.TabIndex = 7
+        Me.publishedDatePicker.TabIndex = 0
         '
         'Label12
         '
@@ -626,7 +362,7 @@ Partial Class AddBookUserControl
         Me.publisherAddrTxtBx.Location = New System.Drawing.Point(41, 102)
         Me.publisherAddrTxtBx.Name = "publisherAddrTxtBx"
         Me.publisherAddrTxtBx.Size = New System.Drawing.Size(857, 28)
-        Me.publisherAddrTxtBx.TabIndex = 87
+        Me.publisherAddrTxtBx.TabIndex = 2
         '
         'Label11
         '
@@ -651,7 +387,7 @@ Partial Class AddBookUserControl
         Me.publisherNameTxtBx.Location = New System.Drawing.Point(215, 45)
         Me.publisherNameTxtBx.Name = "publisherNameTxtBx"
         Me.publisherNameTxtBx.Size = New System.Drawing.Size(683, 28)
-        Me.publisherNameTxtBx.TabIndex = 85
+        Me.publisherNameTxtBx.TabIndex = 1
         '
         'Label10
         '
@@ -700,7 +436,7 @@ Partial Class AddBookUserControl
         Me.classificationCmbBx.Location = New System.Drawing.Point(19, 327)
         Me.classificationCmbBx.Name = "classificationCmbBx"
         Me.classificationCmbBx.Size = New System.Drawing.Size(946, 31)
-        Me.classificationCmbBx.TabIndex = 79
+        Me.classificationCmbBx.TabIndex = 5
         '
         'languageTxtBx
         '
@@ -711,7 +447,7 @@ Partial Class AddBookUserControl
         Me.languageTxtBx.Location = New System.Drawing.Point(19, 267)
         Me.languageTxtBx.Name = "languageTxtBx"
         Me.languageTxtBx.Size = New System.Drawing.Size(946, 28)
-        Me.languageTxtBx.TabIndex = 78
+        Me.languageTxtBx.TabIndex = 4
         '
         'Label6
         '
@@ -734,7 +470,7 @@ Partial Class AddBookUserControl
         Me.quantityTxtBx.Location = New System.Drawing.Point(19, 210)
         Me.quantityTxtBx.Name = "quantityTxtBx"
         Me.quantityTxtBx.Size = New System.Drawing.Size(946, 26)
-        Me.quantityTxtBx.TabIndex = 76
+        Me.quantityTxtBx.TabIndex = 3
         '
         'Label3
         '
@@ -757,7 +493,7 @@ Partial Class AddBookUserControl
         Me.editionTxtBx.Location = New System.Drawing.Point(19, 149)
         Me.editionTxtBx.Name = "editionTxtBx"
         Me.editionTxtBx.Size = New System.Drawing.Size(946, 26)
-        Me.editionTxtBx.TabIndex = 74
+        Me.editionTxtBx.TabIndex = 2
         '
         'Label7
         '
@@ -780,7 +516,7 @@ Partial Class AddBookUserControl
         Me.isbnTxtBx.Location = New System.Drawing.Point(19, 92)
         Me.isbnTxtBx.Name = "isbnTxtBx"
         Me.isbnTxtBx.Size = New System.Drawing.Size(946, 26)
-        Me.isbnTxtBx.TabIndex = 72
+        Me.isbnTxtBx.TabIndex = 1
         '
         'Label4
         '
@@ -803,7 +539,7 @@ Partial Class AddBookUserControl
         Me.titleTxtBx.Location = New System.Drawing.Point(19, 32)
         Me.titleTxtBx.Name = "titleTxtBx"
         Me.titleTxtBx.Size = New System.Drawing.Size(946, 28)
-        Me.titleTxtBx.TabIndex = 31
+        Me.titleTxtBx.TabIndex = 0
         '
         'Label2
         '
@@ -839,7 +575,7 @@ Partial Class AddBookUserControl
         Me.Panel1.Location = New System.Drawing.Point(18, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(204, 226)
-        Me.Panel1.TabIndex = 75
+        Me.Panel1.TabIndex = 0
         '
         'removeImgBtn
         '
@@ -893,6 +629,270 @@ Partial Class AddBookUserControl
         Me.summaryRichTxtBx.TabIndex = 1
         Me.summaryRichTxtBx.Text = ""
         '
+        'cancelPcBx
+        '
+        Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
+        Me.cancelPcBx.Location = New System.Drawing.Point(619, 1403)
+        Me.cancelPcBx.Name = "cancelPcBx"
+        Me.cancelPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.cancelPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.cancelPcBx.TabIndex = 4
+        Me.cancelPcBx.TabStop = False
+        '
+        'cancelHoverPcBx
+        '
+        Me.cancelHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.cancelHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.canceHover
+        Me.cancelHoverPcBx.Location = New System.Drawing.Point(619, 1403)
+        Me.cancelHoverPcBx.Name = "cancelHoverPcBx"
+        Me.cancelHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.cancelHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.cancelHoverPcBx.TabIndex = 5
+        Me.cancelHoverPcBx.TabStop = False
+        Me.cancelHoverPcBx.Visible = False
+        '
+        'addHoverPcBx
+        '
+        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
+        Me.addHoverPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.addHoverPcBx.Name = "addHoverPcBx"
+        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.addHoverPcBx.TabIndex = 4
+        Me.addHoverPcBx.TabStop = False
+        Me.addHoverPcBx.Visible = False
+        '
+        'addPcBx
+        '
+        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
+        Me.addPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.addPcBx.Name = "addPcBx"
+        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.addPcBx.TabIndex = 3
+        Me.addPcBx.TabStop = False
+        '
+        'savePcBx
+        '
+        Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
+        Me.savePcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.savePcBx.Name = "savePcBx"
+        Me.savePcBx.Size = New System.Drawing.Size(260, 41)
+        Me.savePcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.savePcBx.TabIndex = 5
+        Me.savePcBx.TabStop = False
+        Me.savePcBx.Visible = False
+        '
+        'saveHoverPcBx
+        '
+        Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.saveHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save2Hover
+        Me.saveHoverPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.saveHoverPcBx.Name = "saveHoverPcBx"
+        Me.saveHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.saveHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.saveHoverPcBx.TabIndex = 6
+        Me.saveHoverPcBx.TabStop = False
+        Me.saveHoverPcBx.Visible = False
+        '
+        'selectedAuthorLbl
+        '
+        Me.selectedAuthorLbl.AutoSize = True
+        Me.selectedAuthorLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.selectedAuthorLbl.Location = New System.Drawing.Point(648, 23)
+        Me.selectedAuthorLbl.Name = "selectedAuthorLbl"
+        Me.selectedAuthorLbl.Size = New System.Drawing.Size(41, 16)
+        Me.selectedAuthorLbl.TabIndex = 97
+        Me.selectedAuthorLbl.Text = "None"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(535, 18)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(114, 23)
+        Me.Label30.TabIndex = 96
+        Me.Label30.Text = "Selected Author:"
+        '
+        'updateAuthorBtn
+        '
+        Me.updateAuthorBtn.Location = New System.Drawing.Point(636, 240)
+        Me.updateAuthorBtn.Name = "updateAuthorBtn"
+        Me.updateAuthorBtn.Size = New System.Drawing.Size(96, 32)
+        Me.updateAuthorBtn.TabIndex = 8
+        Me.updateAuthorBtn.Text = "Update"
+        Me.updateAuthorBtn.UseSelectable = True
+        '
+        'removeAuthorBtn
+        '
+        Me.removeAuthorBtn.Location = New System.Drawing.Point(636, 202)
+        Me.removeAuthorBtn.Name = "removeAuthorBtn"
+        Me.removeAuthorBtn.Size = New System.Drawing.Size(96, 32)
+        Me.removeAuthorBtn.TabIndex = 6
+        Me.removeAuthorBtn.Text = "Remove"
+        Me.removeAuthorBtn.UseSelectable = True
+        '
+        'getAuthorBtn
+        '
+        Me.getAuthorBtn.Location = New System.Drawing.Point(516, 240)
+        Me.getAuthorBtn.Name = "getAuthorBtn"
+        Me.getAuthorBtn.Size = New System.Drawing.Size(96, 32)
+        Me.getAuthorBtn.TabIndex = 7
+        Me.getAuthorBtn.Text = "Get"
+        Me.getAuthorBtn.UseSelectable = True
+        '
+        'addAuthorBtn
+        '
+        Me.addAuthorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.addAuthorBtn.Location = New System.Drawing.Point(516, 202)
+        Me.addAuthorBtn.Name = "addAuthorBtn"
+        Me.addAuthorBtn.Size = New System.Drawing.Size(96, 32)
+        Me.addAuthorBtn.TabIndex = 5
+        Me.addAuthorBtn.Text = "Add"
+        Me.addAuthorBtn.UseSelectable = True
+        '
+        'authorNumTxtBx
+        '
+        Me.authorNumTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorNumTxtBx.ForeColor = System.Drawing.Color.Black
+        Me.authorNumTxtBx.Location = New System.Drawing.Point(526, 158)
+        Me.authorNumTxtBx.Name = "authorNumTxtBx"
+        Me.authorNumTxtBx.Size = New System.Drawing.Size(204, 28)
+        Me.authorNumTxtBx.TabIndex = 4
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(460, 160)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(62, 23)
+        Me.Label22.TabIndex = 90
+        Me.Label22.Text = "Number"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'authorLNameTxtBx
+        '
+        Me.authorLNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorLNameTxtBx.ForeColor = System.Drawing.Color.Black
+        Me.authorLNameTxtBx.Location = New System.Drawing.Point(526, 122)
+        Me.authorLNameTxtBx.Name = "authorLNameTxtBx"
+        Me.authorLNameTxtBx.Size = New System.Drawing.Size(204, 28)
+        Me.authorLNameTxtBx.TabIndex = 3
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(446, 125)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(77, 23)
+        Me.Label20.TabIndex = 86
+        Me.Label20.Text = "Last Name"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'authorMNameTxtBx
+        '
+        Me.authorMNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorMNameTxtBx.ForeColor = System.Drawing.Color.Black
+        Me.authorMNameTxtBx.Location = New System.Drawing.Point(526, 84)
+        Me.authorMNameTxtBx.Name = "authorMNameTxtBx"
+        Me.authorMNameTxtBx.Size = New System.Drawing.Size(204, 28)
+        Me.authorMNameTxtBx.TabIndex = 2
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(430, 87)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(94, 23)
+        Me.Label17.TabIndex = 84
+        Me.Label17.Text = "Middle Initial"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'authorFNameTxtBx
+        '
+        Me.authorFNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorFNameTxtBx.ForeColor = System.Drawing.Color.Black
+        Me.authorFNameTxtBx.Location = New System.Drawing.Point(526, 44)
+        Me.authorFNameTxtBx.Name = "authorFNameTxtBx"
+        Me.authorFNameTxtBx.Size = New System.Drawing.Size(204, 28)
+        Me.authorFNameTxtBx.TabIndex = 1
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(442, 46)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(80, 23)
+        Me.Label18.TabIndex = 83
+        Me.Label18.Text = "First Name"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'authorsFNameLbl
+        '
+        Me.authorsFNameLbl.AutoSize = True
+        Me.authorsFNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorsFNameLbl.Location = New System.Drawing.Point(53, 6)
+        Me.authorsFNameLbl.Name = "authorsFNameLbl"
+        Me.authorsFNameLbl.Size = New System.Drawing.Size(30, 23)
+        Me.authorsFNameLbl.TabIndex = 99
+        Me.authorsFNameLbl.Text = "FN"
+        '
+        'authorsNumLbl
+        '
+        Me.authorsNumLbl.AutoSize = True
+        Me.authorsNumLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorsNumLbl.Location = New System.Drawing.Point(0, 5)
+        Me.authorsNumLbl.Name = "authorsNumLbl"
+        Me.authorsNumLbl.Size = New System.Drawing.Size(33, 23)
+        Me.authorsNumLbl.TabIndex = 98
+        Me.authorsNumLbl.Text = "No."
+        '
+        'authorsLNameLbl
+        '
+        Me.authorsLNameLbl.AutoSize = True
+        Me.authorsLNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorsLNameLbl.Location = New System.Drawing.Point(263, 6)
+        Me.authorsLNameLbl.Name = "authorsLNameLbl"
+        Me.authorsLNameLbl.Size = New System.Drawing.Size(30, 23)
+        Me.authorsLNameLbl.TabIndex = 101
+        Me.authorsLNameLbl.Text = "LN"
+        '
+        'authorsMNameLbl
+        '
+        Me.authorsMNameLbl.AutoSize = True
+        Me.authorsMNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorsMNameLbl.Location = New System.Drawing.Point(163, 6)
+        Me.authorsMNameLbl.Name = "authorsMNameLbl"
+        Me.authorsMNameLbl.Size = New System.Drawing.Size(35, 23)
+        Me.authorsMNameLbl.TabIndex = 100
+        Me.authorsMNameLbl.Text = "MN"
+        '
+        'Panel11
+        '
+        Me.Panel11.AutoScroll = True
+        Me.Panel11.BackColor = System.Drawing.Color.White
+        Me.Panel11.Controls.Add(Me.authorsMNameLbl)
+        Me.Panel11.Controls.Add(Me.authorsLNameLbl)
+        Me.Panel11.Controls.Add(Me.authorsNumLbl)
+        Me.Panel11.Controls.Add(Me.authorsFNameLbl)
+        Me.Panel11.Location = New System.Drawing.Point(37, 44)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(388, 213)
+        Me.Panel11.TabIndex = 0
+        '
         'AddBookUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -906,16 +906,8 @@ Partial Class AddBookUserControl
         Me.Panel2.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel11.PerformLayout()
-        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PublicationInformationPanel.ResumeLayout(False)
         Me.PublicationInformationPanel.PerformLayout()
         Me.ImageSummaryPanel.ResumeLayout(False)
@@ -923,6 +915,14 @@ Partial Class AddBookUserControl
         Me.Panel1.ResumeLayout(False)
         CType(Me.removeImgBtn, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -931,26 +931,7 @@ Partial Class AddBookUserControl
     Friend WithEvents Panel2 As Panel
     Friend WithEvents shelfTxtBx As TextBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents authorsMNameLbl As Label
-    Friend WithEvents authorsLNameLbl As Label
-    Friend WithEvents authorsNumLbl As Label
-    Friend WithEvents authorsFNameLbl As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents selectedAuthorLbl As Label
-    Friend WithEvents removeAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents updateAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents addAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents Label22 As Label
-    Friend WithEvents getAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents authorNumTxtBx As TextBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents authorLNameTxtBx As TextBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents authorMNameTxtBx As TextBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents authorFNameTxtBx As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Panel3 As Panel
@@ -991,4 +972,23 @@ Partial Class AddBookUserControl
     Friend WithEvents addPcBx As PictureBox
     Friend WithEvents saveHoverPcBx As PictureBox
     Friend WithEvents savePcBx As PictureBox
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents authorsMNameLbl As Label
+    Friend WithEvents authorsLNameLbl As Label
+    Friend WithEvents authorsNumLbl As Label
+    Friend WithEvents authorsFNameLbl As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents selectedAuthorLbl As Label
+    Friend WithEvents removeAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents updateAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents addAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents Label22 As Label
+    Friend WithEvents getAuthorBtn As MetroFramework.Controls.MetroButton
+    Friend WithEvents authorNumTxtBx As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents authorLNameTxtBx As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents authorMNameTxtBx As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents authorFNameTxtBx As TextBox
 End Class

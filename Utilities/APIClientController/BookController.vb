@@ -8,8 +8,14 @@ Module BookController
         Return responseDct
     End Function
 
-    Public Function getBooksPaginationSortBy(pageNum As Integer, pageSize As Integer, by As String) As List(Of BookDetailsDTO)
-        Dim newURL = URL + "/all/pagination/sortBy" + by + "/?pageNum=" + pageNum.ToString() + "&pageSize=" + pageSize.ToString()
+    Public Function getBooksPaginationSortBy(pageNum As Integer, pageSize As Integer, by As String, searchKey As String) As List(Of BookDetailsDTO)
+        Dim newURL = URL
+
+        If String.Compare(searchKey, String.Empty) = 0 Then
+            newURL += "/all/pagination/?pageNum=" + pageNum.ToString() + "&pageSize=" + pageSize.ToString() + "&sortBy=" + by
+        Else
+            newURL += "/all/pagination/?pageNum=" + pageNum.ToString() + "&pageSize=" + pageSize.ToString() + "&sortBy=" + by + "&searchKey=" + searchKey
+        End If
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)
         Dim responseDct As List(Of BookDetailsDTO) = JsonConvert.DeserializeObject(Of List(Of BookDetailsDTO))(response)
         Return responseDct
@@ -21,8 +27,14 @@ Module BookController
         Return JsonConvert.DeserializeObject(Of BookDetailsDTO)(response)
     End Function
 
-    Public Function getNumBkResult() As Integer
-        Dim newURL = URL + "/all/numBooks"
+    Public Function getNumBkResult(searchKey As String) As Integer
+        Dim newURL = URL
+        If String.Compare(searchKey, String.Empty) = 0 Then
+            newURL += "/all/numBooks"
+        Else
+            newURL += "/all/numBooks/?searchKey=" + searchKey
+        End If
+
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)
         Dim responseInt As Integer = JsonConvert.DeserializeObject(Of Integer)(response)
         Return responseInt

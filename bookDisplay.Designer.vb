@@ -24,7 +24,7 @@ Partial Class bookDisplay
     Private Sub InitializeComponent()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.coverPcBx = New System.Windows.Forms.PictureBox()
         Me.bTitle = New System.Windows.Forms.Label()
         Me.bAuthor = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,9 +33,8 @@ Partial Class bookDisplay
         Me.Label5 = New System.Windows.Forms.Label()
         Me.bStatus = New System.Windows.Forms.Label()
         Me.bPublisher = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ShapeContainer1
@@ -59,16 +58,16 @@ Partial Class bookDisplay
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(925, 163)
         '
-        'PictureBox1
+        'coverPcBx
         '
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
-        Me.PictureBox1.Location = New System.Drawing.Point(35, 31)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(170, 134)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.coverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
+        Me.coverPcBx.Location = New System.Drawing.Point(35, 31)
+        Me.coverPcBx.Margin = New System.Windows.Forms.Padding(2)
+        Me.coverPcBx.Name = "coverPcBx"
+        Me.coverPcBx.Size = New System.Drawing.Size(170, 134)
+        Me.coverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.coverPcBx.TabIndex = 0
+        Me.coverPcBx.TabStop = False
         '
         'bTitle
         '
@@ -177,16 +176,6 @@ Partial Class bookDisplay
         Me.bPublisher.TabIndex = 5
         Me.bPublisher.Text = "Solon, Ohio : Findaway World, LLC, [2020] ℗2020"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(832, 97)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Label2"
-        '
         'LinkLabel3
         '
         Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
@@ -194,7 +183,7 @@ Partial Class bookDisplay
         Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(668, 97)
+        Me.LinkLabel3.Location = New System.Drawing.Point(811, 79)
         Me.LinkLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel3.Name = "LinkLabel3"
         Me.LinkLabel3.Size = New System.Drawing.Size(111, 32)
@@ -207,7 +196,6 @@ Partial Class bookDisplay
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.Controls.Add(Me.LinkLabel3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.bPublisher)
         Me.Controls.Add(Me.bStatus)
         Me.Controls.Add(Me.Label5)
@@ -216,19 +204,19 @@ Partial Class bookDisplay
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.bAuthor)
         Me.Controls.Add(Me.bTitle)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.coverPcBx)
         Me.Controls.Add(Me.ShapeContainer1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "bookDisplay"
         Me.Size = New System.Drawing.Size(969, 187)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents coverPcBx As PictureBox
     Friend WithEvents bTitle As Label
     Friend WithEvents bAuthor As Label
     Friend WithEvents Label1 As Label
@@ -237,6 +225,5 @@ Partial Class bookDisplay
     Friend WithEvents Label5 As Label
     Friend WithEvents bStatus As Label
     Friend WithEvents bPublisher As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents LinkLabel3 As LinkLabel
 End Class

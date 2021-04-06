@@ -5,13 +5,18 @@ Public Class Main
     Private auth_click As Integer = 0
     Private pb_click As Integer = 0
     Private pub_click As Integer = 0
+    Private radio_click As Integer = 0
+
     Private sortBy As String = "DateAdded"  ' defeault is date added
     Private provider As CultureInfo = CultureInfo.InvariantCulture
     Private numPage As Integer = 1
     Private totalResult As Integer = 0
+    Private searchKey As String = String.Empty
 
     Private PageIndex As Integer = 0
     Private BooksPerPage As Integer = 3 'number of books shown on each page
+
+    Private viewBook As New viewBook
 
     Public Sub New()
         InitializeComponent()
@@ -19,30 +24,11 @@ Public Class Main
         FlowLayoutPanel1.Controls.Clear()
         FlowLayoutPanel1.WrapContents = False
 
-        'For x As Integer = 1 To 12
-        '    Dim book As New bookDisplay
-        '    bookDP.Add(book)
-        '    If x <= BooksPerPage Then
-        '        book.Label2.Text = x.ToString
-        '        FlowLayoutPanel1.Controls.Add(book) 'add the first page of books when adding them to the List
-        '    End If
-        'Next
-
-        initializeResult()
-    End Sub
-
-    Public Sub initializeResult()
-        ' setup number of pages depending on BooksPerPage and TotalResult
-
-        totalResult = BookController.getNumBkResult
-        PageIndex = 0
-        Dim displayResults As List(Of bookDisplay) = getBookDisplayResults()
-        For Each bkDisplay As bookDisplay In displayResults
-            FlowLayoutPanel1.Controls.Add(bkDisplay) 'add the first page of books when adding them to the List
+        For x As Integer = 1 To BooksPerPage
+            bookDP.Add(New bookDisplay(viewBook))
         Next
 
-        ' separatethread
-        loadImage(displayResults)
+        initializeResult()
     End Sub
 
     Private Sub Button_Back_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Button_Back.LinkClicked
@@ -52,8 +38,6 @@ Public Class Main
     Private Sub LinkLabel13_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel13.LinkClicked
         LoadPage(True) 'true indicates to go forward a page
     End Sub
-
-
     Private Sub LoadPage(ByVal pgNext As Boolean)
 
         'make sure there is another page before adding 1 to the PageIndex
@@ -75,16 +59,13 @@ Public Class Main
 
         'add the books for the Page to the FlowLayoutPanel
         For i As Integer = (PageIndex * BooksPerPage) To endpage
-            bookDP(i).Label2.Text = i.ToString
+            'bookDP(i).Label2.Text = i.ToString
             FlowLayoutPanel1.Controls.Add(bookDP(i))
 
         Next
 
         PageNumLabel.Text = "Page " & (PageIndex + 1).ToString 'set the text to the Page Number
     End Sub
-
-
-
 
     Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs) Handles searchTextBox.MouseHover, searchTextBox.Click, searchTextBox.KeyPress
         If searchTextBox.Text.Equals("Search...") Then
@@ -105,6 +86,7 @@ Public Class Main
         If searchTextBox.Text.Equals("") Then
             searchTextBox.Text = "Search..."
             searchTextBox.ForeColor = Color.FromArgb(119, 117, 117)
+            searchKey = String.Empty
         End If
     End Sub
 
@@ -114,8 +96,6 @@ Public Class Main
         newTitle_click += 1
         utils.clickAnimation(newTitleBtn, newTitle_click)
         utils.dropDownAnimationNewTitle(newTitlePanel, authBtn, pbBtn, publisherBtn)
-
-
     End Sub
 
     Private Sub authBtn_Click(sender As Object, e As EventArgs) Handles authBtn.Click
@@ -147,8 +127,6 @@ Public Class Main
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
         advanceSearch.ShowDialog()
     End Sub
-
-
 
 
     Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs)
@@ -195,69 +173,69 @@ Public Class Main
         pubPanel.Height = 127
         Timer4.Stop()
     End Sub
-    Private Function getBookDisplayResults() As List(Of bookDisplay)
-        Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, sortBy)
-        Dim bkDisplays As New List(Of bookDisplay)
 
-        For Each bkDTO As BookDetailsDTO In bkDTOs
-            Dim bkDisplay As bookDisplay = New bookDisplay()
-            Dim title = bkDTO.title + If(bkDTO.publishedDate Is Nothing,
-                "",
-                "(" + Date.ParseExact(bkDTO.publishedDate, "yyyy-MM-dd", provider).Year.ToString() + ")")
-            bkDisplay.bTitle.Text = title
-            'author
-            Dim authorsDisplay = String.Empty
-            Dim authors = bkDTO.authors
-            If authors.Count <> 0 Then
-                authorsDisplay = authorsDisplay + authors(0).f_name + " " + authors(0).m_name + " " + authors(0).l_name + " "
-                For idx As Integer = 1 To authors.Count - 1
-                    authorsDisplay = authorsDisplay + ", " + authors(idx).f_name + " " + authors(idx).m_name + " " + authors(idx).l_name + " "
-                Next
-            End If
-            bkDisplay.bAuthor.Text = authorsDisplay
-            bkDisplay.bLanguage.Text = bkDTO.language
-            Dim publisher = If(bkDTO.publisherAddress Is Nothing, "", "[" + bkDTO.publisherAddress + "]") + If(bkDTO.publisherName Is Nothing, "", " : " + bkDTO.publisherName)
-            publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
-            bkDisplay.bPublisher.Text = publisher
-            bkDisplay.imageName = bkDTO.image
-            bkDisplays.Add(bkDisplay)
+
+    ' RadioButton Event Handlers
+    Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonNewlyAdded.CheckedChanged, RadioButtonPublicationDate.CheckedChanged, RadioButtonTitle.CheckedChanged
+        radio_click += 1
+        If sender.Equals(RadioButtonNewlyAdded) Then
+            sortBy = "DateAdded"
+        ElseIf sender.Equals(RadioButtonPublicationDate) Then
+            sortBy = "PublishedDate"
+        ElseIf sender.Equals(RadioButtonTitle) Then
+            sortBy = "Title"
+        End If
+
+        If radio_click = 2 Then
+            radio_click = 0
+            ' execute sort
+            initializeResult()
+        End If
+    End Sub
+
+    ' results
+    Public Sub initializeResult() Handles searchPcBx.Click
+        FlowLayoutPanel1.Controls.Clear()
+
+        If Not searchTextBox.Text.Equals("Search...") Then
+            searchKey = searchTextBox.Text.Replace(" ", "+")
+        End If
+        totalResult = BookController.getNumBkResult(searchKey)
+        numPage = totalResult / BooksPerPage
+
+        PageIndex = 0
+        Select Case sortBy
+            Case "DateAdded"
+                RadioButtonNewlyAdded.Checked = True
+            Case "PublishedDate"
+                RadioButtonPublicationDate.Checked = True
+            Case "Title"
+                RadioButtonTitle.Checked = True
+        End Select
+        radio_click = 0
+
+        setBookDisplayResults()
+        loadImage()
+    End Sub
+
+
+    Private Sub setBookDisplayResults()
+        Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, sortBy, searchKey)
+
+        For idx As Integer = 0 To bkDTOs.Count - 1
+            bookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
+            FlowLayoutPanel1.Controls.Add(bookDP.Item(idx))
         Next
-        Return bkDisplays
-    End Function
+    End Sub
 
-    Private Sub loadImage(bkDisplays As List(Of bookDisplay))
-        For Each bkDisplay As bookDisplay In bkDisplays
+    Private Sub loadImage()
+        For Each bkDisplay As bookDisplay In FlowLayoutPanel1.Controls
             If String.Compare(bkDisplay.imageName, "empty") <> 0 Then
-                ' TODO: separate thread or process
-                bkDisplay.PictureBox1.Image = getImage(bkDisplay.imageName)
+                bkDisplay.coverPcBx.Image = getImage(bkDisplay.imageName)
             Else
-                bkDisplay.PictureBox1.Image = My.Resources.default_book
+                bkDisplay.coverPcBx.Image = My.Resources.default_book
             End If
         Next
     End Sub
 
 End Class
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
