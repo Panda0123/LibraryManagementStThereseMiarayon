@@ -99,6 +99,12 @@
     <Compile Include="AddBook.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User Controls\addBookUserControl.Designer.vb">
       <DependentUpon>addBookUserControl.vb</DependentUpon>
     </Compile>
@@ -204,6 +210,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\addBookUserControl.resx">
       <DependentUpon>addBookUserControl.vb</DependentUpon>

@@ -22,41 +22,212 @@ Partial Class adminView
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
         Dim TopPanel As System.Windows.Forms.Panel
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
+        Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.searchTextBox = New System.Windows.Forms.TextBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.signOutBtn = New System.Windows.Forms.LinkLabel()
         Me.backgrounPanel = New System.Windows.Forms.Panel()
+        Me.addBookPanel = New System.Windows.Forms.Panel()
+        Me.recordsPanel = New System.Windows.Forms.Panel()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
         Me.recordsBtn = New System.Windows.Forms.Button()
         Me.collectionsBtn = New System.Windows.Forms.Button()
         Me.bokkAddBtn = New System.Windows.Forms.Button()
         Me.viewBookBtn = New System.Windows.Forms.Button()
         Me.viewBookPanel = New System.Windows.Forms.Panel()
-        Me.recordsPanel = New System.Windows.Forms.Panel()
-        Me.addBookPanel = New System.Windows.Forms.Panel()
-        Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.searchTextBox = New System.Windows.Forms.TextBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         TopPanel = New System.Windows.Forms.Panel()
+        TopPanel.SuspendLayout()
+        Me.TitleLogoSearchPanel.SuspendLayout()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.backgrounPanel.SuspendLayout()
         Me.LeftSidePanel.SuspendLayout()
-        Me.TitleLogoSearchPanel.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        TopPanel.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'TopPanel
+        '
+        TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        TopPanel.AutoSize = True
+        TopPanel.BackColor = System.Drawing.Color.White
+        TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
+        TopPanel.Controls.Add(Me.ShapeContainer2)
+        TopPanel.Location = New System.Drawing.Point(301, 0)
+        TopPanel.Margin = New System.Windows.Forms.Padding(4)
+        TopPanel.Name = "TopPanel"
+        TopPanel.Size = New System.Drawing.Size(1277, 197)
+        TopPanel.TabIndex = 2
+        '
+        'TitleLogoSearchPanel
+        '
+        Me.TitleLogoSearchPanel.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TitleLogoSearchPanel.BackColor = System.Drawing.Color.White
+        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox8)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.searchTextBox)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox9)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.Label1)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.advanceSearchLinkLbl)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(342, 24)
+        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
+        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
+        Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
+        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(620, 169)
+        Me.TitleLogoSearchPanel.TabIndex = 1
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
+        Me.PictureBox8.Location = New System.Drawing.Point(532, 95)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(32, 31)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 12
+        Me.PictureBox8.TabStop = False
+        '
+        'searchTextBox
+        '
+        Me.searchTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.searchTextBox.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
+        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.searchTextBox.Name = "searchTextBox"
+        Me.searchTextBox.Size = New System.Drawing.Size(349, 26)
+        Me.searchTextBox.TabIndex = 8
+        Me.searchTextBox.Text = "Search..."
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(48, 89)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(536, 48)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 6
+        Me.PictureBox9.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AccessibleRole = System.Windows.Forms.AccessibleRole.Client
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(145, 6)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(392, 74)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'advanceSearchLinkLbl
+        '
+        Me.advanceSearchLinkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.advanceSearchLinkLbl.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.advanceSearchLinkLbl.BackColor = System.Drawing.Color.Transparent
+        Me.advanceSearchLinkLbl.Font = New System.Drawing.Font("Sitka Subheading", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.advanceSearchLinkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(219, 128)
+        Me.advanceSearchLinkLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.advanceSearchLinkLbl.Name = "advanceSearchLinkLbl"
+        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(156, 32)
+        Me.advanceSearchLinkLbl.TabIndex = 11
+        Me.advanceSearchLinkLbl.TabStop = True
+        Me.advanceSearchLinkLbl.Text = "Advance Search"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Location = New System.Drawing.Point(500, 100)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(39, 22)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Location = New System.Drawing.Point(48, 92)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(504, 44)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 9
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(48, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(108, 82)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'ShapeContainer2
+        '
+        Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer2.Name = "ShapeContainer2"
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1277, 197)
+        Me.ShapeContainer2.TabIndex = 0
+        Me.ShapeContainer2.TabStop = False
+        '
+        'btn_blk
+        '
+        Me.btn_blk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_blk.BorderColor = System.Drawing.Color.White
+        Me.btn_blk.CornerRadius = 20
+        Me.btn_blk.Location = New System.Drawing.Point(1424, 7)
+        Me.btn_blk.Name = "btn_blk"
+        Me.btn_blk.SelectionColor = System.Drawing.Color.White
+        Me.btn_blk.Size = New System.Drawing.Size(70, 60)
+        '
+        'btn_white
+        '
+        Me.btn_white.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btn_white.BorderColor = System.Drawing.Color.White
+        Me.btn_white.CornerRadius = 20
+        Me.btn_white.Location = New System.Drawing.Point(1422, 11)
+        Me.btn_white.Name = "btn_white"
+        Me.btn_white.SelectionColor = System.Drawing.Color.White
+        Me.btn_white.Size = New System.Drawing.Size(70, 55)
         '
         'signOutBtn
         '
@@ -87,8 +258,28 @@ Partial Class adminView
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1792, 1810)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1750, 1810)
         Me.backgrounPanel.TabIndex = 3
+        '
+        'addBookPanel
+        '
+        Me.addBookPanel.BackColor = System.Drawing.Color.White
+        Me.addBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.addBookPanel.Location = New System.Drawing.Point(318, 6)
+        Me.addBookPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.addBookPanel.Name = "addBookPanel"
+        Me.addBookPanel.Size = New System.Drawing.Size(1473, 1740)
+        Me.addBookPanel.TabIndex = 1
+        '
+        'recordsPanel
+        '
+        Me.recordsPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.recordsPanel.Location = New System.Drawing.Point(318, 6)
+        Me.recordsPanel.Name = "recordsPanel"
+        Me.recordsPanel.Size = New System.Drawing.Size(1681, 950)
+        Me.recordsPanel.TabIndex = 0
         '
         'LeftSidePanel
         '
@@ -182,199 +373,8 @@ Partial Class adminView
         Me.viewBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.viewBookPanel.Location = New System.Drawing.Point(318, 6)
         Me.viewBookPanel.Name = "viewBookPanel"
-        Me.viewBookPanel.Size = New System.Drawing.Size(1473, 1803)
+        Me.viewBookPanel.Size = New System.Drawing.Size(1431, 1803)
         Me.viewBookPanel.TabIndex = 2
-        '
-        'recordsPanel
-        '
-        Me.recordsPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.recordsPanel.Location = New System.Drawing.Point(318, 6)
-        Me.recordsPanel.Name = "recordsPanel"
-        Me.recordsPanel.Size = New System.Drawing.Size(1723, 950)
-        Me.recordsPanel.TabIndex = 0
-        '
-        'addBookPanel
-        '
-        Me.addBookPanel.BackColor = System.Drawing.Color.White
-        Me.addBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.addBookPanel.Location = New System.Drawing.Point(318, 6)
-        Me.addBookPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.addBookPanel.Name = "addBookPanel"
-        Me.addBookPanel.Size = New System.Drawing.Size(1473, 1740)
-        Me.addBookPanel.TabIndex = 1
-        '
-        'TitleLogoSearchPanel
-        '
-        Me.TitleLogoSearchPanel.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TitleLogoSearchPanel.BackColor = System.Drawing.Color.White
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox8)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.searchTextBox)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox9)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.Label1)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.advanceSearchLinkLbl)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(363, 24)
-        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
-        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
-        Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
-        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(620, 169)
-        Me.TitleLogoSearchPanel.TabIndex = 1
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 82)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(48, 92)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(504, 44)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 9
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(500, 100)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(39, 22)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
-        'advanceSearchLinkLbl
-        '
-        Me.advanceSearchLinkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.advanceSearchLinkLbl.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.advanceSearchLinkLbl.BackColor = System.Drawing.Color.Transparent
-        Me.advanceSearchLinkLbl.Font = New System.Drawing.Font("Sitka Subheading", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.advanceSearchLinkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(219, 128)
-        Me.advanceSearchLinkLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.advanceSearchLinkLbl.Name = "advanceSearchLinkLbl"
-        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(156, 32)
-        Me.advanceSearchLinkLbl.TabIndex = 11
-        Me.advanceSearchLinkLbl.TabStop = True
-        Me.advanceSearchLinkLbl.Text = "Advance Search"
-        '
-        'Label1
-        '
-        Me.Label1.AccessibleRole = System.Windows.Forms.AccessibleRole.Client
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(145, 6)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(392, 74)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(48, 89)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(536, 48)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 6
-        Me.PictureBox9.TabStop = False
-        '
-        'searchTextBox
-        '
-        Me.searchTextBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.searchTextBox.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
-        Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
-        Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(349, 26)
-        Me.searchTextBox.TabIndex = 8
-        Me.searchTextBox.Text = "Search..."
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(532, 95)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(32, 31)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
-        '
-        'TopPanel
-        '
-        TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        TopPanel.AutoSize = True
-        TopPanel.BackColor = System.Drawing.Color.White
-        TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
-        TopPanel.Controls.Add(Me.ShapeContainer2)
-        TopPanel.Location = New System.Drawing.Point(301, 0)
-        TopPanel.Margin = New System.Windows.Forms.Padding(4)
-        TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1319, 197)
-        TopPanel.TabIndex = 2
-        '
-        'ShapeContainer2
-        '
-        Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
-        Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1319, 197)
-        Me.ShapeContainer2.TabIndex = 0
-        Me.ShapeContainer2.TabStop = False
-        '
-        'btn_blk
-        '
-        Me.btn_blk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_blk.BorderColor = System.Drawing.Color.White
-        Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1466, 7)
-        Me.btn_blk.Name = "btn_blk"
-        Me.btn_blk.SelectionColor = System.Drawing.Color.White
-        Me.btn_blk.Size = New System.Drawing.Size(70, 60)
-        '
-        'btn_white
-        '
-        Me.btn_white.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btn_white.BorderColor = System.Drawing.Color.White
-        Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1464, 11)
-        Me.btn_white.Name = "btn_white"
-        Me.btn_white.SelectionColor = System.Drawing.Color.White
-        Me.btn_white.Size = New System.Drawing.Size(70, 55)
         '
         'adminView
         '
@@ -392,16 +392,16 @@ Partial Class adminView
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.backgrounPanel.ResumeLayout(False)
-        Me.LeftSidePanel.ResumeLayout(False)
+        TopPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        TopPanel.ResumeLayout(False)
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.backgrounPanel.ResumeLayout(False)
+        Me.LeftSidePanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
