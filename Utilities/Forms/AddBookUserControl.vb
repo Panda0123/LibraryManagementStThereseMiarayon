@@ -6,21 +6,23 @@ Public Class AddBookUserControl
     Private classificationNames As New List(Of String)
     Private provider As CultureInfo = CultureInfo.InvariantCulture
 
-    Private numAuthor As Integer
     Private authors As New List(Of AuthorDTO)
-    Private authorsTxt As String
-    Private selectedAuthorNum As Integer
+    Private copies As New List(Of BookCopyDTO)
+    Private prevCopies As New List(Of BookCopyDTO)
     Private imgFlName As String = ""
+    Private status As New List(Of String)({"Available", "Not Available"})
 
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'classifications = CategoryController.getCategories()
-        'classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
-        'For Each classificationDto As ClassificationDTO In classifications
-        '    classificationNames.Add(classificationDto.name)
-        'Next
-        'classificationCmbBx.DataSource = classificationNames
-        'populate(4)
-        'empty()
+        classifications = CategoryController.getCategories()
+        classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
+        For Each classificationDto As ClassificationDTO In classifications
+            classificationNames.Add(classificationDto.name)
+        Next
+        classificationCmbBx.DataSource = classificationNames
+        ' copiesDataGridView.Columns.Data
+        ' populate(4)
+        ' setAuthors()
+        empty()
     End Sub
 
     '  EVENT HANDLERS
@@ -32,8 +34,7 @@ Public Class AddBookUserControl
 
         newBook.title = titleTxtBx.Text
         newBook.isbn = isbnTxtBx.Text
-        ' TODO: check if isbn already exist first or check it after user typed it
-        newBook.quantity = quantityTxtBx.Text
+        ' TODO: check if same to the size of the copydatagridview
         newBook.language = languageTxtBx.Text
         newBook.summary = summaryRichTxtBx.Text
         newBook.edition = editionTxtBx.Text
@@ -73,7 +74,11 @@ Public Class AddBookUserControl
             newBook.image = "empty"
         End If
 
+        setAuthors()
         newBook.authors = authors
+        setCopies()
+        newBook.copies = copies
+        newBook.quantity = copies.Count
         Dim response = BookController.addNewBook(newBook)
         selectedBook = newBook
 
@@ -95,9 +100,6 @@ Public Class AddBookUserControl
         End If
         If String.Compare(isbnTxtBx.Text.Trim, selectedBook.isbn) <> 0 Then
             attrs.Add("isbn", isbnTxtBx.Text.Trim)
-        End If
-        If String.Compare(quantityTxtBx.Text.Trim, selectedBook.quantity.ToString) <> 0 Then
-            attrs.Add("quantity", quantityTxtBx.Text.Trim)
         End If
         If String.Compare(languageTxtBx.Text.Trim, selectedBook.language) <> 0 Then
             attrs.Add("language", languageTxtBx.Text.Trim)
@@ -159,7 +161,10 @@ Public Class AddBookUserControl
             End If
         End If
 
-        ' check if there is changes on the authors
+        ' check if there is changes in authors
+        ' authorsDataGrid.ClearSelection()
+        authorsDataGrid.CurrentCell = Nothing
+        setAuthors()
         Dim updateAuthor As Boolean = False
         If authors.Count <> selectedBook.authors.Count Then
             updateAuthor = True
@@ -167,6 +172,22 @@ Public Class AddBookUserControl
             For Each author As AuthorDTO In authors
                 If Not selectedBook.authors.Contains(author) Then
                     updateAuthor = True
+                    Exit For
+                End If
+            Next
+        End If
+
+
+        ' check if there is changes in copies
+        copiesDataGridView.CurrentCell = Nothing
+        setCopies()
+        Dim updateCopies As Boolean = False
+        If copies.Count <> prevCopies.Count Then
+            updateCopies = True
+        Else
+            For Each copy As BookCopyDTO In copies
+                If Not prevCopies.Contains(copy) Then
+                    updateCopies = True
                     Exit For
                 End If
             Next
@@ -200,6 +221,10 @@ Public Class AddBookUserControl
             BookController.updateAuthorOfBook(selectedBook.bookId, authors)
         End If
 
+        If updateCopies Then
+            CopyController.updateCopiesOfBook(selectedBook.bookId, copies)
+        End If
+
         If uploadImg Then
             uploadImage(selectedBook.image)  ' upload the image
         ElseIf removeImg Then
@@ -213,80 +238,70 @@ Public Class AddBookUserControl
         ' TODO: go back to previous selected tab?
     End Sub
 
-
     ' authors
-    Private Sub addAuthorBtn_Click(sender As Object, e As EventArgs) Handles addAuthorBtn.Click
-        Dim newAuthor As New AuthorDTO
-        Dim f_name = authorFNameTxtBx.Text.Trim
-        Dim m_name = authorMNameTxtBx.Text.Trim
-        Dim l_name = authorLNameTxtBx.Text.Trim
-        Dim attrs As New Dictionary(Of String, String)
+    Private Sub setAuthors()
+        authors.Clear()
+        'For Each row As DataGridViewRow In authorsDataGrid.Rows - 1
+        For idx As Integer = 0 To authorsDataGrid.Rows.Count - 2
+            Dim newAuthor As New AuthorDTO
+            Dim f_name = authorsDataGrid.Item(0, idx).Value.ToString().Trim
+            Dim m_name = authorsDataGrid.Item(1, idx).Value.ToString().Trim
+            Dim l_name = authorsDataGrid.Item(2, idx).Value.ToString().Trim
+            Dim attrs As New Dictionary(Of String, String)
 
-        If String.Compare(f_name, "") <> 0 Then
-            attrs.Add("fName", f_name)
-        End If
+            If f_name.Equals("") AndAlso m_name.Equals("") AndAlso l_name.Equals("") Then
+                Continue For
+            End If
 
-        If String.Compare(m_name, "") <> 0 Then
-            attrs.Add("mName", m_name)
-        End If
+            If String.Compare(f_name, "") <> 0 Then
+                attrs.Add("fName", f_name)
+            End If
 
-        If String.Compare(f_name, "") <> 0 Then
-            attrs.Add("lName", l_name)
-        End If
+            If String.Compare(m_name, "") <> 0 Then
+                attrs.Add("mName", m_name)
+            End If
 
-        Dim prevAuthor = AuthorController.findAuthorByName(attrs)
+            If String.Compare(f_name, "") <> 0 Then
+                attrs.Add("lName", l_name)
+            End If
 
-        If prevAuthor.id <> -1 Then
-            newAuthor = prevAuthor
-        Else
-            newAuthor.id = -1
-            newAuthor.f_name = f_name
-            newAuthor.m_name = m_name
-            newAuthor.l_name = l_name
-        End If
+            Dim prevAuthor = AuthorController.findAuthorByName(attrs)
 
-        authors.Add(newAuthor)
-        populateAuthors()
-    End Sub
-
-    Private Sub getAuthorBtn_Click(sender As Object, e As EventArgs) Handles getAuthorBtn.Click
-        selectedAuthorNum = Integer.Parse(authorNumTxtBx.Text)
-        If selectedAuthorNum < numAuthor And selectedAuthorNum > 0 Then
-            Dim selectedAuthor As AuthorDTO = selectedBook.authors.Item(selectedAuthorNum - 1)
-            authorFNameTxtBx.Text = selectedAuthor.f_name
-            authorMNameTxtBx.Text = selectedAuthor.m_name
-            authorLNameTxtBx.Text = selectedAuthor.l_name
-            selectedAuthorLbl.Text = authorNumTxtBx.Text
-        Else
-            MessageBox.Show("Author Number does not exist", "Warning", MessageBoxButtons.OK)
-            authorFNameTxtBx.Text = ""
-            authorMNameTxtBx.Text = ""
-            authorLNameTxtBx.Text = ""
-            selectedAuthorLbl.Text = "None"
+            If prevAuthor.id <> -1 Then
+                newAuthor = prevAuthor
+            Else
+                newAuthor.id = -1
+                newAuthor.f_name = f_name
+                newAuthor.m_name = m_name
+                newAuthor.l_name = l_name
+            End If
+            authors.Add(newAuthor)
+        Next
+        If authors.Count = 0 Then
+            ' no author of the book
+            authors.Add(New AuthorDTO(-1, Nothing, Nothing, Nothing))
         End If
     End Sub
 
-    Private Sub removeAuthorBtn_Click(sender As Object, e As EventArgs) Handles removeAuthorBtn.Click
-        If selectedAuthorNum < numAuthor And selectedAuthorNum > 0 Then
-            authors.RemoveAt(selectedAuthorNum - 1)
-            authorFNameTxtBx.Text = ""
-            authorMNameTxtBx.Text = ""
-            authorLNameTxtBx.Text = ""
-            numAuthor -= 1
-            populateAuthors()
-        End If
+    Private Sub setCopies()
+        copies.Clear()
+
+        For idx As Integer = 0 To copiesDataGridView.Rows.Count - 2
+            Dim copy As New BookCopyDTO
+            copy.id = -1
+            copy.copy_num = copiesDataGridView.Item(0, idx).Value.ToString().Trim
+            copy.status = copiesDataGridView.Item(1, idx).Value.ToString().Trim
+            If copy.copy_num.Equals("") Then
+                Continue For
+            End If
+            If copies.Contains(copy) Then
+                MessageBox.Show("Failed: Instances contain same Copy #")
+            Else
+                copies.Add(copy)
+            End If
+        Next
     End Sub
 
-    Private Sub updateAuthorBtn_Click(sender As Object, e As EventArgs) Handles updateAuthorBtn.Click
-
-        If selectedAuthorNum < numAuthor And selectedAuthorNum > 0 Then
-            Dim selectedAuthor As AuthorDTO = selectedBook.authors.Item(selectedAuthorNum - 1)
-            selectedAuthor.f_name = authorFNameTxtBx.Text
-            selectedAuthor.m_name = authorMNameTxtBx.Text
-            selectedAuthor.l_name = authorLNameTxtBx.Text
-            populateAuthors()
-        End If
-    End Sub
 
     ' image
     Private Sub addImgBtn_click(sender As Object, e As EventArgs) Handles bkPicBx.Click
@@ -306,8 +321,167 @@ Public Class AddBookUserControl
         removeImgBtn.Visible = False
     End Sub
 
+
+    ' HELPER FUNCTIONS/SUBS
+    Private Sub populate(bookId As String)
+
+        selectedBook = BookController.getBook(bookId)
+        titleTxtBx.Text = selectedBook.title
+        isbnTxtBx.Text = selectedBook.isbn
+        languageTxtBx.Text = selectedBook.language
+        editionTxtBx.Text = selectedBook.edition
+        'numAvailableLbl.Text = selectedBook.numAvailable
+
+        publisherNameTxtBx.Text = selectedBook.publisherName
+        publisherAddrTxtBx.Text = selectedBook.publisherAddress
+        If selectedBook.publishedDate <> Nothing Then
+            publishedDatePicker.Value = Date.ParseExact(selectedBook.publishedDate, "yyyy-MM-dd", provider)
+        Else
+            publishedDatePicker.Value = publishedDatePicker.MinDate
+            publishedDatePicker.Checked = False
+        End If
+
+        classificationCmbBx.SelectedIndex = selectedBook.categoryId - 1
+        copyrightNameTxtBx.Text = selectedBook.copyrightName
+        If selectedBook.copyrightYear <> 0 Then
+            copyrightYearDTPckr.Value = Date.ParseExact(selectedBook.copyrightYear, "yyyy", provider)
+
+        Else
+            copyrightYearDTPckr.Value = copyrightYearDTPckr.MinDate
+            copyrightYearDTPckr.Checked = False
+        End If
+
+        shelfTxtBx.Text = selectedBook.shelfName
+        summaryRichTxtBx.Text = selectedBook.summary
+        ' authors
+        authors = New List(Of AuthorDTO)
+        For Each author As AuthorDTO In selectedBook.authors
+            authors.Add(New AuthorDTO(author.id, author.f_name, author.m_name, author.l_name))
+            ' removeAuthorBtn.Visible = True
+        Next
+        populateAuthors()
+
+        ' load copies
+        ' TODO: separate thread
+        copies = CopyController.getCopies(selectedBook.bookId)
+        prevCopies.AddRange(copies)  ' created a copy to check if there is difference when saving later on 
+        populateCopies()
+        quantityLbl.Text = copiesDataGridView.Rows.Count - 1
+        If String.Compare(selectedBook.image, "empty") <> 0 Then
+            ' TODO: separate thread or process
+            bkPicBx.Image = getImage(selectedBook.image)
+            removeImgBtn.Visible = True
+        Else
+            bkPicBx.Image = My.Resources.default_book
+            removeImgBtn.Visible = False
+        End If
+        addPcBx.Visible = False
+        savePcBx.Visible = True
+    End Sub
+
+    Private Sub populateAuthors()
+        authorsDataGrid.Rows.Clear()
+        For Each author In authors
+            authorsDataGrid.Rows.Add({author.f_name, author.m_name, author.l_name})
+        Next
+    End Sub
+
+    Private Sub populateCopies()
+        copiesDataGridView.Rows.Clear()
+        For Each copy In copies
+            copiesDataGridView.Rows.Add({copy.copy_num, copy.status})
+            'copiesDataGridView.Rows.Add({copy.copy_num, "Not Available"})
+        Next
+    End Sub
+
+    Private Sub uploadImage(flNm As String)
+        bkPicBx.Image.Dispose()
+        Dim res As String = ImageController.uploadImage(imgFlName, flNm)
+        bkPicBx.Image = Image.FromFile(imgFlName)
+    End Sub
+
+    Private Sub loadImage(flNm As String)
+        Dim imgRetuned = ImageController.getImage(flNm)
+        bkPicBx.Image = imgRetuned
+    End Sub
+
+    Private Sub empty()
+
+        selectedBook = Nothing
+        titleTxtBx.Text = String.Empty
+        isbnTxtBx.Text = String.Empty
+        languageTxtBx.Text = String.Empty
+        editionTxtBx.Text = String.Empty
+
+        publisherNameTxtBx.Text = String.Empty
+        publisherAddrTxtBx.Text = String.Empty
+
+        publishedDatePicker.Value = Date.Now()
+        publishedDatePicker.Checked = True
+
+        classificationCmbBx.SelectedIndex = 0
+        copyrightNameTxtBx.Text = String.Empty
+        copyrightYearDTPckr.Value = Date.Now()
+        copyrightYearDTPckr.Checked = True
+
+        shelfTxtBx.Text = String.Empty
+        summaryRichTxtBx.Text = String.Empty
+
+        authors.Clear()
+        authorsDataGrid.Rows.Clear()
+        copies.Clear()
+        copiesDataGridView.Rows.Clear()
+        copiesDataGridView.Rows.Add({1, status.Item(0)})
+
+        bkPicBx.Image = My.Resources.default_book
+        removeImgBtn.Visible = False
+
+
+        savePcBx.Visible = False
+        addPcBx.Visible = True
+
+
+        selectedBook = Nothing
+
+        imgFlName = String.Empty
+
+        populateAuthors()
+    End Sub
     ' elements
 
+    Private Sub authorsDataGrid_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
+                                           Handles authorsDataGrid.CellContentClick
+        Dim senderGrid = DirectCast(sender, DataGridView)
+
+        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso
+       e.RowIndex >= 0 Then
+            If (e.ColumnIndex = 3) Then
+                ' delete clicked
+                authorsDataGrid.Rows.RemoveAt(e.RowIndex)
+            End If
+        End If
+    End Sub
+    Private Sub copiesDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
+                                           Handles copiesDataGridView.CellContentClick
+        Dim senderGrid = DirectCast(sender, DataGridView)
+
+        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso
+       e.RowIndex >= 0 Then
+            If (e.ColumnIndex = 2) Then
+                ' delete clicked
+                copiesDataGridView.Rows.RemoveAt(e.RowIndex)
+                quantityLbl.Text = copiesDataGridView.Rows.Count() - 1
+            End If
+        End If
+    End Sub
+
+    Private Sub copiesDataGridView_CellChanged(sender As Object, e As EventArgs) Handles copiesDataGridView.CellLeave
+        quantityLbl.Text = copiesDataGridView.Rows.Count - 1
+    End Sub
+    Private Sub copiesDataGridView_DefaultValuesNeeded(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowEventArgs) Handles copiesDataGridView.DefaultValuesNeeded
+        ' copiesDataGridView.Rows.Item(1).Cells.Item(1).Cell
+        e.Row.Cells("statusCol").Value = "Available"
+    End Sub
     Private Sub cancelPcBx_Hover(sender As Object, e As EventArgs) Handles cancelPcBx.MouseHover
         cancelHoverPcBx.Visible = True
         cancelPcBx.Visible = False
@@ -336,146 +510,7 @@ Public Class AddBookUserControl
         addPcBx.Visible = True
     End Sub
 
-    ' HELPER FUNCTIONS/SUBS
-    Private Sub populate(bookId As String)
-
-        selectedBook = BookController.getBook(bookId)
-        titleTxtBx.Text = selectedBook.title
-        isbnTxtBx.Text = selectedBook.isbn
-        quantityTxtBx.Text = selectedBook.quantity
-        languageTxtBx.Text = selectedBook.language
-        editionTxtBx.Text = selectedBook.edition
-        'numAvailableLbl.Text = selectedBook.numAvailable
-
-        publisherNameTxtBx.Text = selectedBook.publisherName
-        publisherAddrTxtBx.Text = selectedBook.publisherAddress
-        If selectedBook.publishedDate <> Nothing Then
-            publishedDatePicker.Value = Date.ParseExact(selectedBook.publishedDate, "yyyy-MM-dd", provider)
-        Else
-            publishedDatePicker.Value = publishedDatePicker.MinDate
-            publishedDatePicker.Checked = False
-        End If
-
-        classificationCmbBx.SelectedIndex = selectedBook.categoryId - 1
-        copyrightNameTxtBx.Text = selectedBook.copyrightName
-        If selectedBook.copyrightYear <> 0 Then
-            copyrightYearDTPckr.Value = Date.ParseExact(selectedBook.copyrightYear, "yyyy", provider)
-
-        Else
-            copyrightYearDTPckr.Value = copyrightYearDTPckr.MinDate
-            copyrightYearDTPckr.Checked = False
-        End If
-
-        shelfTxtBx.Text = selectedBook.shelfName
-        summaryRichTxtBx.Text = selectedBook.summary
-
-        authors = New List(Of AuthorDTO)
-        For Each author As AuthorDTO In selectedBook.authors
-            authors.Add(New AuthorDTO(author.id, author.f_name, author.m_name, author.l_name))
-            removeAuthorBtn.Visible = True
-        Next
-        populateAuthors()
-
-        If String.Compare(selectedBook.image, "empty") <> 0 Then
-            ' TODO: separate thread or process
-            bkPicBx.Image = getImage(selectedBook.image)
-            removeImgBtn.Visible = True
-            System.Diagnostics.Debug.WriteLine("tae")
-        Else
-            bkPicBx.Image = My.Resources.default_book
-            removeImgBtn.Visible = False
-            System.Diagnostics.Debug.WriteLine("tae" + " " + selectedBook.image)
-        End If
-        addPcBx.Visible = False
-        savePcBx.Visible = True
-    End Sub
-
-    Private Sub empty()
-
-        selectedBook = Nothing
-        titleTxtBx.Text = String.Empty
-        isbnTxtBx.Text = String.Empty
-        quantityTxtBx.Text = String.Empty
-        languageTxtBx.Text = String.Empty
-        editionTxtBx.Text = String.Empty
-        'numAvailableLbl.Text = selectedBook.numAvailable
-
-        publisherNameTxtBx.Text = String.Empty
-        publisherAddrTxtBx.Text = String.Empty
-
-        publishedDatePicker.Value = Date.Now()
-        publishedDatePicker.Checked = True
-
-        classificationCmbBx.SelectedIndex = 0
-        copyrightNameTxtBx.Text = String.Empty
-        copyrightYearDTPckr.Value = Date.Now()
-        copyrightYearDTPckr.Checked = True
-
-        shelfTxtBx.Text = String.Empty
-        summaryRichTxtBx.Text = String.Empty
-
-        authors = New List(Of AuthorDTO)
-
-        bkPicBx.Image = My.Resources.default_book
-        removeImgBtn.Visible = False
-
-
-        savePcBx.Visible = False
-        addPcBx.Visible = True
-
-
-        selectedBook = Nothing
-
-        numAuthor = 0
-        authorsTxt = String.Empty
-        selectedAuthorNum = 0
-        imgFlName = String.Empty
-
-        populateAuthors()
-    End Sub
-
-
-    Private Sub populateAuthors()
-        numAuthor = 1
-        Dim outputNum As String = "No." + vbCrLf
-        Dim outputFN As String = "FN" + vbCrLf
-        Dim outputMN As String = "MN" + vbCrLf
-        Dim outputLN As String = "LN" + vbCrLf
-
-        For Each author In authors
-            outputNum += numAuthor.ToString() + vbCrLf
-            outputFN += author.f_name.Trim + vbCrLf
-            outputMN += author.m_name.Trim + vbCrLf
-            outputLN += author.l_name.Trim + vbCrLf
-            numAuthor += 1
-        Next
-        authorsNumLbl.Text = outputNum
-        authorsFNameLbl.Text = outputFN
-        authorsMNameLbl.Text = outputMN
-        authorsLNameLbl.Text = outputLN
-        resetAuthorSelection()
-    End Sub
-
-    Private Sub resetAuthorSelection()
-        authorNumTxtBx.Text = String.Empty
-        authorFNameTxtBx.Text = String.Empty
-        authorMNameTxtBx.Text = String.Empty
-        authorLNameTxtBx.Text = String.Empty
-        selectedAuthorLbl.Text = "None"
-    End Sub
-
-    Private Sub uploadImage(flNm As String)
-        bkPicBx.Image.Dispose()
-        Dim res As String = ImageController.uploadImage(imgFlName, flNm)
-        bkPicBx.Image = Image.FromFile(imgFlName)
-    End Sub
-
-    Private Sub loadImage(flNm As String)
-        Dim imgRetuned = ImageController.getImage(flNm)
-        bkPicBx.Image = imgRetuned
-    End Sub
-
     Private Sub layoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles layoutPanel.Paint
-
+        'timerClearDataGrid.Enabled = True
     End Sub
 End Class

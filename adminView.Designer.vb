@@ -67,7 +67,7 @@ Partial Class adminView
         TopPanel.Controls.Add(Me.ShapeContainer2)
         TopPanel.Location = New System.Drawing.Point(0, 1)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1375, 148)
+        TopPanel.Size = New System.Drawing.Size(1358, 148)
         TopPanel.TabIndex = 2
         '
         'TitleLogoSearchPanel
@@ -82,7 +82,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(497, 4)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(489, 4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
@@ -196,7 +196,7 @@ Partial Class adminView
         '
         Me.PictureBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox16.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox16.Location = New System.Drawing.Point(1282, 11)
+        Me.PictureBox16.Location = New System.Drawing.Point(1265, 11)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(39, 34)
         Me.PictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -209,7 +209,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1375, 148)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1358, 148)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -219,7 +219,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1132, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1115, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -230,7 +230,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1130, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1113, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -245,7 +245,7 @@ Partial Class adminView
         Me.backgrounPanel.Controls.Add(Me.LeftSidePanel)
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 146)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1375, 1454)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1003, 1655)
         Me.backgrounPanel.TabIndex = 3
         '
         'mainPanel
@@ -256,7 +256,7 @@ Partial Class adminView
         Me.mainPanel.BackColor = System.Drawing.Color.White
         Me.mainPanel.Location = New System.Drawing.Point(254, 3)
         Me.mainPanel.Name = "mainPanel"
-        Me.mainPanel.Size = New System.Drawing.Size(1116, 916)
+        Me.mainPanel.Size = New System.Drawing.Size(648, 1253)
         Me.mainPanel.TabIndex = 1
         '
         'LeftSidePanel

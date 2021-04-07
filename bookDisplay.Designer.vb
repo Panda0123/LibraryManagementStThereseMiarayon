@@ -88,12 +88,12 @@ Partial Class bookDisplay
         Me.bAuthor.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bAuthor.AutoSize = True
-        Me.bAuthor.Font = New System.Drawing.Font("Maiandra GD", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bAuthor.Font = New System.Drawing.Font("Maiandra GD", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bAuthor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.bAuthor.Location = New System.Drawing.Point(210, 49)
         Me.bAuthor.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.bAuthor.Name = "bAuthor"
-        Me.bAuthor.Size = New System.Drawing.Size(135, 26)
+        Me.bAuthor.Size = New System.Drawing.Size(102, 19)
         Me.bAuthor.TabIndex = 2
         Me.bAuthor.Text = "Adcock, F. E."
         '

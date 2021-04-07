@@ -1,6 +1,8 @@
 ﻿Imports System.Globalization
 
 Public Class viewBook
+    Private copies As List(Of BookCopyDTO)
+    'Private dataGridRows As List()
     Private Sub Location_Btn_Click(sender As Object, e As EventArgs) Handles Location_Btn.Click
         'LocationPage.Location = New Point(364, 0)
         'DetailsPage.Visible = False
@@ -45,8 +47,7 @@ Public Class viewBook
         titleSmallLbl.Text = bkDTO.title
 
         ' authors
-
-        Dim authorsDisplay = String.Empty
+        Dim authorsDisplay = "by "
         Dim authors = bkDTO.authors
         If authors.Count <> 0 Then
             authorsDisplay = authorsDisplay + authors(0).f_name + " " + authors(0).m_name + " " + authors(0).l_name + " "
@@ -84,14 +85,62 @@ Public Class viewBook
         shelfLocationLbl.Text = If(bkDTO.shelfName Is Nothing, "", bkDTO.shelfName)
         ' collection
         collectionLbl.Text = bkDTO.categoryName
-        'status
-        ' TODO: get status
 
-        ' number of Books
+        ' copies
+        copies = CopyController.getCopies(bkDTO.bookId)
+        copies.Sort(Function(x, y) x.copy_num.CompareTo(y.copy_num))
+        setCopies()
+
+        ' quantity, reserved, borrowed
         NumberOfBooksNO.Text = bkDTO.quantity
+        Dim numberOfBorrowed As Integer = 0
+        Dim numberOfReserved As Integer = 0
+        Dim numberOfAvailable As Integer = 0
+        For Each copy As BookCopyDTO In copies
+            If copy.status.Equals("Borrowed") Then
+                numberOfBorrowed += 1
+            ElseIf copy.status.Equals("Reserved") Then
+                numberOfReserved += 1
+            End If
+        Next
+        ReservedNO.Text = numberOfReserved
+        BorrowedNO.Text = numberOfBorrowed
+        ' numberOfAvailable = bkDTO.quantity - numberOfBorrowed - numberOfReserved
+        AvailabeNO.Text = bkDTO.numAvailable
 
+        'status
+        If bkDTO.numAvailable = 0 Then
+            mainStatusLbl.Text = "Not Available"
+            mainStatusLbl.ForeColor = Color.Red
+        Else
+            mainStatusLbl.Text = "Available"
+            mainStatusLbl.ForeColor = Color.Lime
+        End If
     End Sub
 
+    Private Sub setCopies()
+        copiesDataGridView.Rows.Clear()
+        For Each copy As BookCopyDTO In copies
+            copiesDataGridView.Rows.Add({copy.copy_num, copy.status})
+        Next
+    End Sub
+    Private Sub copiesDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
+                                           Handles copiesDataGridView.CellContentClick
+        Dim senderGrid = DirectCast(sender, DataGridView)
+
+        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso
+       e.RowIndex >= 0 Then
+            'TODO - Button Clicked - Execute Code Here
+            ' copiesDataGridView.Rows.Item(e.RowIndex)
+            If (e.ColumnIndex = 2) Then
+                ' checkout clicked
+                System.Diagnostics.Debug.WriteLine(copiesDataGridView.Item(0, e.RowIndex).Value.ToString + "Checkout")
+            ElseIf (e.ColumnIndex = 3) Then
+                ' reserved clicked
+                System.Diagnostics.Debug.WriteLine(copiesDataGridView.Item(0, e.RowIndex).Value.ToString + "Reserved")
+            End If
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -140,4 +189,5 @@ Public Class viewBook
 
     Private Sub MoreInfoPage_Paint(sender As Object, e As PaintEventArgs) Handles MoreInfoPage.Paint
     End Sub
+
 End Class

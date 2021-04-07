@@ -22,10 +22,30 @@ Partial Class AddBookUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.layoutPanel = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.quantityLbl = New System.Windows.Forms.Label()
+        Me.copiesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.copyNumCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.copiesDeleteCol = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.shelfTxtBx = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.authorsDataGrid = New System.Windows.Forms.DataGridView()
+        Me.authorFirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.authorMiddleName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.authorLastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.deleteCol = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -47,8 +67,6 @@ Partial Class AddBookUserControl
         Me.classificationCmbBx = New System.Windows.Forms.ComboBox()
         Me.languageTxtBx = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.quantityTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.editionTxtBx = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.isbnTxtBx = New System.Windows.Forms.TextBox()
@@ -64,31 +82,16 @@ Partial Class AddBookUserControl
         Me.cancelPcBx = New System.Windows.Forms.PictureBox()
         Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.addPcBx = New System.Windows.Forms.PictureBox()
-        Me.savePcBx = New System.Windows.Forms.PictureBox()
         Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.selectedAuthorLbl = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.updateAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.removeAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.getAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.addAuthorBtn = New MetroFramework.Controls.MetroButton()
-        Me.authorNumTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.authorLNameTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.authorMNameTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.authorFNameTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.authorsFNameLbl = New System.Windows.Forms.Label()
-        Me.authorsNumLbl = New System.Windows.Forms.Label()
-        Me.authorsLNameLbl = New System.Windows.Forms.Label()
-        Me.authorsMNameLbl = New System.Windows.Forms.Label()
-        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.savePcBx = New System.Windows.Forms.PictureBox()
+        Me.addPcBx = New System.Windows.Forms.PictureBox()
+        Me.timerClearDataGrid = New System.Windows.Forms.Timer(Me.components)
         Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.authorsDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.PublicationInformationPanel.SuspendLayout()
         Me.ImageSummaryPanel.SuspendLayout()
@@ -98,10 +101,9 @@ Partial Class AddBookUserControl
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel11.SuspendLayout()
+        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'layoutPanel
@@ -114,12 +116,12 @@ Partial Class AddBookUserControl
         Me.layoutPanel.Controls.Add(Me.cancelPcBx)
         Me.layoutPanel.Controls.Add(Me.cancelHoverPcBx)
         Me.layoutPanel.Controls.Add(Me.addHoverPcBx)
-        Me.layoutPanel.Controls.Add(Me.addPcBx)
-        Me.layoutPanel.Controls.Add(Me.savePcBx)
         Me.layoutPanel.Controls.Add(Me.saveHoverPcBx)
+        Me.layoutPanel.Controls.Add(Me.savePcBx)
+        Me.layoutPanel.Controls.Add(Me.addPcBx)
         Me.layoutPanel.Location = New System.Drawing.Point(3, 3)
         Me.layoutPanel.Name = "layoutPanel"
-        Me.layoutPanel.Size = New System.Drawing.Size(1050, 1444)
+        Me.layoutPanel.Size = New System.Drawing.Size(1016, 1648)
         Me.layoutPanel.TabIndex = 0
         '
         'Panel2
@@ -129,6 +131,8 @@ Partial Class AddBookUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Controls.Add(Me.shelfTxtBx)
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.Label19)
@@ -141,8 +145,6 @@ Partial Class AddBookUserControl
         Me.Panel2.Controls.Add(Me.classificationCmbBx)
         Me.Panel2.Controls.Add(Me.languageTxtBx)
         Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Controls.Add(Me.quantityTxtBx)
-        Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.editionTxtBx)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Controls.Add(Me.isbnTxtBx)
@@ -151,8 +153,117 @@ Partial Class AddBookUserControl
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(20, 285)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1010, 1103)
+        Me.Panel2.Size = New System.Drawing.Size(976, 1306)
         Me.Panel2.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(17, 1023)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(65, 28)
+        Me.Label1.TabIndex = 92
+        Me.Label1.Text = "Copies"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.White
+        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel5.Controls.Add(Me.quantityLbl)
+        Me.Panel5.Controls.Add(Me.copiesDataGridView)
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Location = New System.Drawing.Point(19, 1054)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(911, 238)
+        Me.Panel5.TabIndex = 91
+        '
+        'quantityLbl
+        '
+        Me.quantityLbl.AutoSize = True
+        Me.quantityLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.quantityLbl.Location = New System.Drawing.Point(66, 38)
+        Me.quantityLbl.Name = "quantityLbl"
+        Me.quantityLbl.Size = New System.Drawing.Size(19, 20)
+        Me.quantityLbl.TabIndex = 91
+        Me.quantityLbl.Text = "1"
+        '
+        'copiesDataGridView
+        '
+        Me.copiesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.copiesDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.copiesDataGridView.BackgroundColor = System.Drawing.Color.White
+        Me.copiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.copiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.copiesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.copiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.copiesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.copyNumCol, Me.statusCol, Me.copiesDeleteCol})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.copiesDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.copiesDataGridView.Location = New System.Drawing.Point(180, 14)
+        Me.copiesDataGridView.Name = "copiesDataGridView"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.copiesDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.copiesDataGridView.ShowEditingIcon = False
+        Me.copiesDataGridView.Size = New System.Drawing.Size(349, 209)
+        Me.copiesDataGridView.TabIndex = 90
+        '
+        'copyNumCol
+        '
+        Me.copyNumCol.HeaderText = "Copy #"
+        Me.copyNumCol.Name = "copyNumCol"
+        Me.copyNumCol.Width = 72
+        '
+        'statusCol
+        '
+        Me.statusCol.HeaderText = "Status"
+        Me.statusCol.Name = "statusCol"
+        Me.statusCol.ReadOnly = True
+        Me.statusCol.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.statusCol.Width = 68
+        '
+        'copiesDeleteCol
+        '
+        Me.copiesDeleteCol.HeaderText = "Control"
+        Me.copiesDeleteCol.Name = "copiesDeleteCol"
+        Me.copiesDeleteCol.Text = "Delete"
+        Me.copiesDeleteCol.UseColumnTextForButtonValue = True
+        Me.copiesDeleteCol.Width = 56
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(41, 14)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(73, 24)
+        Me.Label3.TabIndex = 75
+        Me.Label3.Text = "Quantity"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'shelfTxtBx
         '
@@ -160,9 +271,9 @@ Partial Class AddBookUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.shelfTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.shelfTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.shelfTxtBx.Location = New System.Drawing.Point(19, 389)
+        Me.shelfTxtBx.Location = New System.Drawing.Point(19, 327)
         Me.shelfTxtBx.Name = "shelfTxtBx"
-        Me.shelfTxtBx.Size = New System.Drawing.Size(946, 28)
+        Me.shelfTxtBx.Size = New System.Drawing.Size(912, 28)
         Me.shelfTxtBx.TabIndex = 6
         '
         'Panel4
@@ -171,26 +282,79 @@ Partial Class AddBookUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.Panel11)
-        Me.Panel4.Controls.Add(Me.Label30)
-        Me.Panel4.Controls.Add(Me.selectedAuthorLbl)
-        Me.Panel4.Controls.Add(Me.removeAuthorBtn)
-        Me.Panel4.Controls.Add(Me.updateAuthorBtn)
-        Me.Panel4.Controls.Add(Me.addAuthorBtn)
-        Me.Panel4.Controls.Add(Me.Label22)
-        Me.Panel4.Controls.Add(Me.getAuthorBtn)
-        Me.Panel4.Controls.Add(Me.authorNumTxtBx)
+        Me.Panel4.Controls.Add(Me.authorsDataGrid)
         Me.Panel4.Controls.Add(Me.Label21)
-        Me.Panel4.Controls.Add(Me.Label20)
-        Me.Panel4.Controls.Add(Me.authorLNameTxtBx)
-        Me.Panel4.Controls.Add(Me.Label17)
-        Me.Panel4.Controls.Add(Me.authorMNameTxtBx)
-        Me.Panel4.Controls.Add(Me.Label18)
-        Me.Panel4.Controls.Add(Me.authorFNameTxtBx)
-        Me.Panel4.Location = New System.Drawing.Point(20, 781)
+        Me.Panel4.Location = New System.Drawing.Point(20, 719)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(945, 291)
+        Me.Panel4.Size = New System.Drawing.Size(911, 291)
         Me.Panel4.TabIndex = 88
+        '
+        'authorsDataGrid
+        '
+        Me.authorsDataGrid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.authorsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.authorsDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.authorsDataGrid.BackgroundColor = System.Drawing.Color.White
+        Me.authorsDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.authorsDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.authorsDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.authorsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.authorsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.authorFirstName, Me.authorMiddleName, Me.authorLastName, Me.deleteCol})
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.authorsDataGrid.DefaultCellStyle = DataGridViewCellStyle5
+        Me.authorsDataGrid.Location = New System.Drawing.Point(44, 36)
+        Me.authorsDataGrid.Name = "authorsDataGrid"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.authorsDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.authorsDataGrid.ShowEditingIcon = False
+        Me.authorsDataGrid.Size = New System.Drawing.Size(841, 236)
+        Me.authorsDataGrid.TabIndex = 90
+        '
+        'authorFirstName
+        '
+        Me.authorFirstName.HeaderText = "First Name"
+        Me.authorFirstName.Name = "authorFirstName"
+        Me.authorFirstName.Width = 95
+        '
+        'authorMiddleName
+        '
+        Me.authorMiddleName.HeaderText = "Middle Name"
+        Me.authorMiddleName.Name = "authorMiddleName"
+        Me.authorMiddleName.Width = 108
+        '
+        'authorLastName
+        '
+        Me.authorLastName.HeaderText = "Last Name"
+        Me.authorLastName.Name = "authorLastName"
+        Me.authorLastName.Width = 92
+        '
+        'deleteCol
+        '
+        Me.deleteCol.HeaderText = "Control"
+        Me.deleteCol.Name = "deleteCol"
+        Me.deleteCol.Text = "Delete"
+        Me.deleteCol.UseColumnTextForButtonValue = True
+        Me.deleteCol.Width = 56
         '
         'Label21
         '
@@ -208,7 +372,7 @@ Partial Class AddBookUserControl
         '
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(17, 754)
+        Me.Label19.Location = New System.Drawing.Point(17, 692)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(76, 28)
@@ -220,7 +384,7 @@ Partial Class AddBookUserControl
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(16, 362)
+        Me.Label13.Location = New System.Drawing.Point(16, 300)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(159, 24)
@@ -238,9 +402,9 @@ Partial Class AddBookUserControl
         Me.Panel3.Controls.Add(Me.Label14)
         Me.Panel3.Controls.Add(Me.copyrightNameTxtBx)
         Me.Panel3.Controls.Add(Me.Label15)
-        Me.Panel3.Location = New System.Drawing.Point(19, 645)
+        Me.Panel3.Location = New System.Drawing.Point(19, 583)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(945, 89)
+        Me.Panel3.Size = New System.Drawing.Size(911, 89)
         Me.Panel3.TabIndex = 84
         '
         'copyrightYearDTPckr
@@ -251,7 +415,7 @@ Partial Class AddBookUserControl
         Me.copyrightYearDTPckr.FontSize = MetroFramework.MetroDateTimeSize.Small
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(42, 45)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
         Me.copyrightYearDTPckr.Size = New System.Drawing.Size(67, 25)
@@ -279,7 +443,7 @@ Partial Class AddBookUserControl
         Me.copyrightNameTxtBx.ForeColor = System.Drawing.Color.Black
         Me.copyrightNameTxtBx.Location = New System.Drawing.Point(215, 45)
         Me.copyrightNameTxtBx.Name = "copyrightNameTxtBx"
-        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(684, 28)
+        Me.copyrightNameTxtBx.Size = New System.Drawing.Size(650, 28)
         Me.copyrightNameTxtBx.TabIndex = 1
         '
         'Label15
@@ -300,7 +464,7 @@ Partial Class AddBookUserControl
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(15, 618)
+        Me.Label16.Location = New System.Drawing.Point(15, 556)
         Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(176, 24)
@@ -320,9 +484,9 @@ Partial Class AddBookUserControl
         Me.PublicationInformationPanel.Controls.Add(Me.Label11)
         Me.PublicationInformationPanel.Controls.Add(Me.publisherNameTxtBx)
         Me.PublicationInformationPanel.Controls.Add(Me.Label10)
-        Me.PublicationInformationPanel.Location = New System.Drawing.Point(20, 455)
+        Me.PublicationInformationPanel.Location = New System.Drawing.Point(20, 393)
         Me.PublicationInformationPanel.Name = "PublicationInformationPanel"
-        Me.PublicationInformationPanel.Size = New System.Drawing.Size(945, 150)
+        Me.PublicationInformationPanel.Size = New System.Drawing.Size(911, 150)
         Me.PublicationInformationPanel.TabIndex = 82
         '
         'publishedDatePicker
@@ -333,7 +497,7 @@ Partial Class AddBookUserControl
         Me.publishedDatePicker.CustomFormat = "MMMM yyyy"
         Me.publishedDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.publishedDatePicker.Location = New System.Drawing.Point(41, 45)
-        Me.publishedDatePicker.MinimumSize = New System.Drawing.Size(0, 29)
+        Me.publishedDatePicker.MinimumSize = New System.Drawing.Size(4, 29)
         Me.publishedDatePicker.Name = "publishedDatePicker"
         Me.publishedDatePicker.ShowCheckBox = True
         Me.publishedDatePicker.Size = New System.Drawing.Size(140, 29)
@@ -361,7 +525,7 @@ Partial Class AddBookUserControl
         Me.publisherAddrTxtBx.ForeColor = System.Drawing.Color.Black
         Me.publisherAddrTxtBx.Location = New System.Drawing.Point(41, 102)
         Me.publisherAddrTxtBx.Name = "publisherAddrTxtBx"
-        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(857, 28)
+        Me.publisherAddrTxtBx.Size = New System.Drawing.Size(823, 28)
         Me.publisherAddrTxtBx.TabIndex = 2
         '
         'Label11
@@ -386,7 +550,7 @@ Partial Class AddBookUserControl
         Me.publisherNameTxtBx.ForeColor = System.Drawing.Color.Black
         Me.publisherNameTxtBx.Location = New System.Drawing.Point(215, 45)
         Me.publisherNameTxtBx.Name = "publisherNameTxtBx"
-        Me.publisherNameTxtBx.Size = New System.Drawing.Size(683, 28)
+        Me.publisherNameTxtBx.Size = New System.Drawing.Size(649, 28)
         Me.publisherNameTxtBx.TabIndex = 1
         '
         'Label10
@@ -407,7 +571,7 @@ Partial Class AddBookUserControl
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(16, 430)
+        Me.Label9.Location = New System.Drawing.Point(16, 368)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(186, 24)
@@ -419,7 +583,7 @@ Partial Class AddBookUserControl
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(16, 300)
+        Me.Label8.Location = New System.Drawing.Point(16, 238)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(108, 24)
@@ -433,9 +597,9 @@ Partial Class AddBookUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.classificationCmbBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.classificationCmbBx.FormattingEnabled = True
-        Me.classificationCmbBx.Location = New System.Drawing.Point(19, 327)
+        Me.classificationCmbBx.Location = New System.Drawing.Point(19, 265)
         Me.classificationCmbBx.Name = "classificationCmbBx"
-        Me.classificationCmbBx.Size = New System.Drawing.Size(946, 31)
+        Me.classificationCmbBx.Size = New System.Drawing.Size(912, 31)
         Me.classificationCmbBx.TabIndex = 5
         '
         'languageTxtBx
@@ -444,45 +608,22 @@ Partial Class AddBookUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.languageTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.languageTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.languageTxtBx.Location = New System.Drawing.Point(19, 267)
+        Me.languageTxtBx.Location = New System.Drawing.Point(19, 205)
         Me.languageTxtBx.Name = "languageTxtBx"
-        Me.languageTxtBx.Size = New System.Drawing.Size(946, 28)
+        Me.languageTxtBx.Size = New System.Drawing.Size(912, 28)
         Me.languageTxtBx.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(16, 243)
+        Me.Label6.Location = New System.Drawing.Point(16, 181)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(80, 24)
         Me.Label6.TabIndex = 77
         Me.Label6.Text = "Language"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'quantityTxtBx
-        '
-        Me.quantityTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.quantityTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.quantityTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.quantityTxtBx.Location = New System.Drawing.Point(19, 210)
-        Me.quantityTxtBx.Name = "quantityTxtBx"
-        Me.quantityTxtBx.Size = New System.Drawing.Size(946, 26)
-        Me.quantityTxtBx.TabIndex = 3
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Sitka Display", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(15, 184)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 24)
-        Me.Label3.TabIndex = 75
-        Me.Label3.Text = "Quantity"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'editionTxtBx
         '
@@ -492,7 +633,7 @@ Partial Class AddBookUserControl
         Me.editionTxtBx.ForeColor = System.Drawing.Color.Black
         Me.editionTxtBx.Location = New System.Drawing.Point(19, 149)
         Me.editionTxtBx.Name = "editionTxtBx"
-        Me.editionTxtBx.Size = New System.Drawing.Size(946, 26)
+        Me.editionTxtBx.Size = New System.Drawing.Size(912, 26)
         Me.editionTxtBx.TabIndex = 2
         '
         'Label7
@@ -515,7 +656,7 @@ Partial Class AddBookUserControl
         Me.isbnTxtBx.ForeColor = System.Drawing.Color.Black
         Me.isbnTxtBx.Location = New System.Drawing.Point(19, 92)
         Me.isbnTxtBx.Name = "isbnTxtBx"
-        Me.isbnTxtBx.Size = New System.Drawing.Size(946, 26)
+        Me.isbnTxtBx.Size = New System.Drawing.Size(912, 26)
         Me.isbnTxtBx.TabIndex = 1
         '
         'Label4
@@ -538,7 +679,7 @@ Partial Class AddBookUserControl
         Me.titleTxtBx.ForeColor = System.Drawing.Color.Black
         Me.titleTxtBx.Location = New System.Drawing.Point(19, 32)
         Me.titleTxtBx.Name = "titleTxtBx"
-        Me.titleTxtBx.Size = New System.Drawing.Size(946, 28)
+        Me.titleTxtBx.Size = New System.Drawing.Size(912, 28)
         Me.titleTxtBx.TabIndex = 0
         '
         'Label2
@@ -562,7 +703,7 @@ Partial Class AddBookUserControl
         Me.ImageSummaryPanel.Controls.Add(Me.summaryRichTxtBx)
         Me.ImageSummaryPanel.Location = New System.Drawing.Point(22, 16)
         Me.ImageSummaryPanel.Name = "ImageSummaryPanel"
-        Me.ImageSummaryPanel.Size = New System.Drawing.Size(1008, 247)
+        Me.ImageSummaryPanel.Size = New System.Drawing.Size(974, 247)
         Me.ImageSummaryPanel.TabIndex = 0
         '
         'Panel1
@@ -625,7 +766,7 @@ Partial Class AddBookUserControl
         Me.summaryRichTxtBx.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.summaryRichTxtBx.Location = New System.Drawing.Point(263, 31)
         Me.summaryRichTxtBx.Name = "summaryRichTxtBx"
-        Me.summaryRichTxtBx.Size = New System.Drawing.Size(714, 207)
+        Me.summaryRichTxtBx.Size = New System.Drawing.Size(680, 207)
         Me.summaryRichTxtBx.TabIndex = 1
         Me.summaryRichTxtBx.Text = ""
         '
@@ -633,7 +774,7 @@ Partial Class AddBookUserControl
         '
         Me.cancelPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cancelPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.cancel
-        Me.cancelPcBx.Location = New System.Drawing.Point(619, 1403)
+        Me.cancelPcBx.Location = New System.Drawing.Point(587, 1604)
         Me.cancelPcBx.Name = "cancelPcBx"
         Me.cancelPcBx.Size = New System.Drawing.Size(260, 41)
         Me.cancelPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -644,7 +785,7 @@ Partial Class AddBookUserControl
         '
         Me.cancelHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cancelHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.canceHover
-        Me.cancelHoverPcBx.Location = New System.Drawing.Point(619, 1403)
+        Me.cancelHoverPcBx.Location = New System.Drawing.Point(587, 1604)
         Me.cancelHoverPcBx.Name = "cancelHoverPcBx"
         Me.cancelHoverPcBx.Size = New System.Drawing.Size(260, 41)
         Me.cancelHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -656,7 +797,7 @@ Partial Class AddBookUserControl
         '
         Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
-        Me.addHoverPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.addHoverPcBx.Location = New System.Drawing.Point(166, 1604)
         Me.addHoverPcBx.Name = "addHoverPcBx"
         Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
         Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -664,34 +805,11 @@ Partial Class AddBookUserControl
         Me.addHoverPcBx.TabStop = False
         Me.addHoverPcBx.Visible = False
         '
-        'addPcBx
-        '
-        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.addPcBx.Location = New System.Drawing.Point(190, 1403)
-        Me.addPcBx.Name = "addPcBx"
-        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addPcBx.TabIndex = 3
-        Me.addPcBx.TabStop = False
-        '
-        'savePcBx
-        '
-        Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
-        Me.savePcBx.Location = New System.Drawing.Point(190, 1403)
-        Me.savePcBx.Name = "savePcBx"
-        Me.savePcBx.Size = New System.Drawing.Size(260, 41)
-        Me.savePcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.savePcBx.TabIndex = 5
-        Me.savePcBx.TabStop = False
-        Me.savePcBx.Visible = False
-        '
         'saveHoverPcBx
         '
         Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.saveHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save2Hover
-        Me.saveHoverPcBx.Location = New System.Drawing.Point(190, 1403)
+        Me.saveHoverPcBx.Location = New System.Drawing.Point(166, 1604)
         Me.saveHoverPcBx.Name = "saveHoverPcBx"
         Me.saveHoverPcBx.Size = New System.Drawing.Size(260, 41)
         Me.saveHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -699,199 +817,28 @@ Partial Class AddBookUserControl
         Me.saveHoverPcBx.TabStop = False
         Me.saveHoverPcBx.Visible = False
         '
-        'selectedAuthorLbl
+        'savePcBx
         '
-        Me.selectedAuthorLbl.AutoSize = True
-        Me.selectedAuthorLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.selectedAuthorLbl.Location = New System.Drawing.Point(648, 23)
-        Me.selectedAuthorLbl.Name = "selectedAuthorLbl"
-        Me.selectedAuthorLbl.Size = New System.Drawing.Size(41, 16)
-        Me.selectedAuthorLbl.TabIndex = 97
-        Me.selectedAuthorLbl.Text = "None"
+        Me.savePcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.savePcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.save
+        Me.savePcBx.Location = New System.Drawing.Point(166, 1604)
+        Me.savePcBx.Name = "savePcBx"
+        Me.savePcBx.Size = New System.Drawing.Size(260, 41)
+        Me.savePcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.savePcBx.TabIndex = 5
+        Me.savePcBx.TabStop = False
+        Me.savePcBx.Visible = False
         '
-        'Label30
+        'addPcBx
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(535, 18)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(114, 23)
-        Me.Label30.TabIndex = 96
-        Me.Label30.Text = "Selected Author:"
-        '
-        'updateAuthorBtn
-        '
-        Me.updateAuthorBtn.Location = New System.Drawing.Point(636, 240)
-        Me.updateAuthorBtn.Name = "updateAuthorBtn"
-        Me.updateAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.updateAuthorBtn.TabIndex = 8
-        Me.updateAuthorBtn.Text = "Update"
-        Me.updateAuthorBtn.UseSelectable = True
-        '
-        'removeAuthorBtn
-        '
-        Me.removeAuthorBtn.Location = New System.Drawing.Point(636, 202)
-        Me.removeAuthorBtn.Name = "removeAuthorBtn"
-        Me.removeAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.removeAuthorBtn.TabIndex = 6
-        Me.removeAuthorBtn.Text = "Remove"
-        Me.removeAuthorBtn.UseSelectable = True
-        '
-        'getAuthorBtn
-        '
-        Me.getAuthorBtn.Location = New System.Drawing.Point(516, 240)
-        Me.getAuthorBtn.Name = "getAuthorBtn"
-        Me.getAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.getAuthorBtn.TabIndex = 7
-        Me.getAuthorBtn.Text = "Get"
-        Me.getAuthorBtn.UseSelectable = True
-        '
-        'addAuthorBtn
-        '
-        Me.addAuthorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.addAuthorBtn.Location = New System.Drawing.Point(516, 202)
-        Me.addAuthorBtn.Name = "addAuthorBtn"
-        Me.addAuthorBtn.Size = New System.Drawing.Size(96, 32)
-        Me.addAuthorBtn.TabIndex = 5
-        Me.addAuthorBtn.Text = "Add"
-        Me.addAuthorBtn.UseSelectable = True
-        '
-        'authorNumTxtBx
-        '
-        Me.authorNumTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorNumTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorNumTxtBx.Location = New System.Drawing.Point(526, 158)
-        Me.authorNumTxtBx.Name = "authorNumTxtBx"
-        Me.authorNumTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorNumTxtBx.TabIndex = 4
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(460, 160)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(62, 23)
-        Me.Label22.TabIndex = 90
-        Me.Label22.Text = "Number"
-        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorLNameTxtBx
-        '
-        Me.authorLNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorLNameTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorLNameTxtBx.Location = New System.Drawing.Point(526, 122)
-        Me.authorLNameTxtBx.Name = "authorLNameTxtBx"
-        Me.authorLNameTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorLNameTxtBx.TabIndex = 3
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(446, 125)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(77, 23)
-        Me.Label20.TabIndex = 86
-        Me.Label20.Text = "Last Name"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorMNameTxtBx
-        '
-        Me.authorMNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorMNameTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorMNameTxtBx.Location = New System.Drawing.Point(526, 84)
-        Me.authorMNameTxtBx.Name = "authorMNameTxtBx"
-        Me.authorMNameTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorMNameTxtBx.TabIndex = 2
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(430, 87)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(94, 23)
-        Me.Label17.TabIndex = 84
-        Me.Label17.Text = "Middle Initial"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorFNameTxtBx
-        '
-        Me.authorFNameTxtBx.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorFNameTxtBx.ForeColor = System.Drawing.Color.Black
-        Me.authorFNameTxtBx.Location = New System.Drawing.Point(526, 44)
-        Me.authorFNameTxtBx.Name = "authorFNameTxtBx"
-        Me.authorFNameTxtBx.Size = New System.Drawing.Size(204, 28)
-        Me.authorFNameTxtBx.TabIndex = 1
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(442, 46)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(80, 23)
-        Me.Label18.TabIndex = 83
-        Me.Label18.Text = "First Name"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'authorsFNameLbl
-        '
-        Me.authorsFNameLbl.AutoSize = True
-        Me.authorsFNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsFNameLbl.Location = New System.Drawing.Point(53, 6)
-        Me.authorsFNameLbl.Name = "authorsFNameLbl"
-        Me.authorsFNameLbl.Size = New System.Drawing.Size(30, 23)
-        Me.authorsFNameLbl.TabIndex = 99
-        Me.authorsFNameLbl.Text = "FN"
-        '
-        'authorsNumLbl
-        '
-        Me.authorsNumLbl.AutoSize = True
-        Me.authorsNumLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsNumLbl.Location = New System.Drawing.Point(0, 5)
-        Me.authorsNumLbl.Name = "authorsNumLbl"
-        Me.authorsNumLbl.Size = New System.Drawing.Size(33, 23)
-        Me.authorsNumLbl.TabIndex = 98
-        Me.authorsNumLbl.Text = "No."
-        '
-        'authorsLNameLbl
-        '
-        Me.authorsLNameLbl.AutoSize = True
-        Me.authorsLNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsLNameLbl.Location = New System.Drawing.Point(263, 6)
-        Me.authorsLNameLbl.Name = "authorsLNameLbl"
-        Me.authorsLNameLbl.Size = New System.Drawing.Size(30, 23)
-        Me.authorsLNameLbl.TabIndex = 101
-        Me.authorsLNameLbl.Text = "LN"
-        '
-        'authorsMNameLbl
-        '
-        Me.authorsMNameLbl.AutoSize = True
-        Me.authorsMNameLbl.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authorsMNameLbl.Location = New System.Drawing.Point(163, 6)
-        Me.authorsMNameLbl.Name = "authorsMNameLbl"
-        Me.authorsMNameLbl.Size = New System.Drawing.Size(35, 23)
-        Me.authorsMNameLbl.TabIndex = 100
-        Me.authorsMNameLbl.Text = "MN"
-        '
-        'Panel11
-        '
-        Me.Panel11.AutoScroll = True
-        Me.Panel11.BackColor = System.Drawing.Color.White
-        Me.Panel11.Controls.Add(Me.authorsMNameLbl)
-        Me.Panel11.Controls.Add(Me.authorsLNameLbl)
-        Me.Panel11.Controls.Add(Me.authorsNumLbl)
-        Me.Panel11.Controls.Add(Me.authorsFNameLbl)
-        Me.Panel11.Location = New System.Drawing.Point(37, 44)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(388, 213)
-        Me.Panel11.TabIndex = 0
+        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
+        Me.addPcBx.Location = New System.Drawing.Point(166, 1604)
+        Me.addPcBx.Name = "addPcBx"
+        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.addPcBx.TabIndex = 3
+        Me.addPcBx.TabStop = False
         '
         'AddBookUserControl
         '
@@ -900,12 +847,16 @@ Partial Class AddBookUserControl
         Me.AutoScroll = True
         Me.Controls.Add(Me.layoutPanel)
         Me.Name = "AddBookUserControl"
-        Me.Size = New System.Drawing.Size(1054, 1450)
+        Me.Size = New System.Drawing.Size(1020, 1655)
         Me.layoutPanel.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.authorsDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.PublicationInformationPanel.ResumeLayout(False)
@@ -918,11 +869,9 @@ Partial Class AddBookUserControl
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel11.PerformLayout()
+        CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -952,7 +901,6 @@ Partial Class AddBookUserControl
     Friend WithEvents classificationCmbBx As ComboBox
     Friend WithEvents languageTxtBx As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents quantityTxtBx As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents editionTxtBx As TextBox
     Friend WithEvents Label7 As Label
@@ -972,23 +920,17 @@ Partial Class AddBookUserControl
     Friend WithEvents addPcBx As PictureBox
     Friend WithEvents saveHoverPcBx As PictureBox
     Friend WithEvents savePcBx As PictureBox
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents authorsMNameLbl As Label
-    Friend WithEvents authorsLNameLbl As Label
-    Friend WithEvents authorsNumLbl As Label
-    Friend WithEvents authorsFNameLbl As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents selectedAuthorLbl As Label
-    Friend WithEvents removeAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents updateAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents addAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents Label22 As Label
-    Friend WithEvents getAuthorBtn As MetroFramework.Controls.MetroButton
-    Friend WithEvents authorNumTxtBx As TextBox
-    Friend WithEvents Label20 As Label
-    Friend WithEvents authorLNameTxtBx As TextBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents authorMNameTxtBx As TextBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents authorFNameTxtBx As TextBox
+    Friend WithEvents authorsDataGrid As DataGridView
+    Friend WithEvents timerClearDataGrid As Timer
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents copiesDataGridView As DataGridView
+    Friend WithEvents quantityLbl As Label
+    Friend WithEvents authorFirstName As DataGridViewTextBoxColumn
+    Friend WithEvents authorMiddleName As DataGridViewTextBoxColumn
+    Friend WithEvents authorLastName As DataGridViewTextBoxColumn
+    Friend WithEvents deleteCol As DataGridViewButtonColumn
+    Friend WithEvents copyNumCol As DataGridViewTextBoxColumn
+    Friend WithEvents statusCol As DataGridViewTextBoxColumn
+    Friend WithEvents copiesDeleteCol As DataGridViewButtonColumn
 End Class

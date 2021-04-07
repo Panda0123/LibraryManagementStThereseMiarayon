@@ -60,5 +60,4 @@ Module BookController
         Dim mes = JsonConvert.SerializeObject(authors)
         HttpRequestController.HttpRequestPut(newUrl, mes, Authorization.authToken)
     End Sub
-
 End Module

@@ -151,12 +151,14 @@
     <Compile Include="Utilities\APIClientController\AuthorController.vb" />
     <Compile Include="Utilities\APIClientController\BookController.vb" />
     <Compile Include="Utilities\APIClientController\CategoryController.vb" />
+    <Compile Include="Utilities\APIClientController\CopyController.vb" />
     <Compile Include="Utilities\APIClientController\HTTPRequestController.vb" />
     <Compile Include="Utilities\APIClientController\ImageController.vb" />
     <Compile Include="Utilities\Authorization.vb" />
     <Compile Include="Utilities\DTOs\AuthorDTO.vb" />
     <Compile Include="Utilities\DTOs\BookDetailsDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
+    <Compile Include="Utilities\DTOs\BookCopyDTO.vb" />
     <Compile Include="Utilities\Forms\AddBookUserControl.Designer.vb">
       <DependentUpon>AddBookUserControl.vb</DependentUpon>
     </Compile>

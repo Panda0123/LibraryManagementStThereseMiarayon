@@ -25,5 +25,6 @@
     Property summary As String
 
     Property authors As List(Of AuthorDTO)
+    Property copies As List(Of BookCopyDTO)
 
 End Class

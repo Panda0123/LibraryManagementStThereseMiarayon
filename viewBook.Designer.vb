@@ -65,11 +65,7 @@ Partial Class viewBook
         Me.Label52 = New System.Windows.Forms.Label()
         Me.MoreInfoPage = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.copyNum = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.checkOutCol = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.reserveCol = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.copiesDataGridView = New System.Windows.Forms.DataGridView()
         Me.summaryRchTxtBx = New System.Windows.Forms.RichTextBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -94,12 +90,16 @@ Partial Class viewBook
         Me.AvailabeNO = New System.Windows.Forms.Label()
         Me.NumberOfBooksNO = New System.Windows.Forms.Label()
         Me.NumberOfBooks = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.mainStatusLbl = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.DetailsPanel = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.abstractRichTxtBx = New System.Windows.Forms.RichTextBox()
+        Me.copy_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.checkOutCol = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.reserveCol = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TitlePanel.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,7 +107,7 @@ Partial Class viewBook
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MoreInfoPage.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -137,12 +137,12 @@ Partial Class viewBook
         'authorsLbl
         '
         Me.authorsLbl.AutoSize = True
-        Me.authorsLbl.Font = New System.Drawing.Font("Sitka Display", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorsLbl.Font = New System.Drawing.Font("Sitka Display", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.authorsLbl.ForeColor = System.Drawing.Color.DarkCyan
         Me.authorsLbl.Location = New System.Drawing.Point(0, 85)
         Me.authorsLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.authorsLbl.Name = "authorsLbl"
-        Me.authorsLbl.Size = New System.Drawing.Size(331, 50)
+        Me.authorsLbl.Size = New System.Drawing.Size(181, 28)
         Me.authorsLbl.TabIndex = 29
         Me.authorsLbl.Text = "by Andrew Hamburg" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -586,7 +586,7 @@ Partial Class viewBook
         '
         Me.MoreInfoPage.BackColor = System.Drawing.Color.White
         Me.MoreInfoPage.Controls.Add(Me.Label10)
-        Me.MoreInfoPage.Controls.Add(Me.DataGridView1)
+        Me.MoreInfoPage.Controls.Add(Me.copiesDataGridView)
         Me.MoreInfoPage.Controls.Add(Me.summaryRchTxtBx)
         Me.MoreInfoPage.Controls.Add(Me.Label39)
         Me.MoreInfoPage.Controls.Add(Me.Label40)
@@ -613,46 +613,20 @@ Partial Class viewBook
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "Copies"
         '
-        'DataGridView1
+        'copiesDataGridView
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.copyNum, Me.statusCol, Me.checkOutCol, Me.reserveCol})
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 174)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(913, 391)
-        Me.DataGridView1.TabIndex = 30
-        '
-        'copyNum
-        '
-        Me.copyNum.HeaderText = "Copy #"
-        Me.copyNum.Name = "copyNum"
-        Me.copyNum.ReadOnly = True
-        Me.copyNum.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'statusCol
-        '
-        Me.statusCol.HeaderText = "Status"
-        Me.statusCol.Name = "statusCol"
-        Me.statusCol.ReadOnly = True
-        Me.statusCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'checkOutCol
-        '
-        Me.checkOutCol.HeaderText = "Checkout"
-        Me.checkOutCol.Name = "checkOutCol"
-        Me.checkOutCol.ReadOnly = True
-        '
-        'reserveCol
-        '
-        Me.reserveCol.HeaderText = "Reserve"
-        Me.reserveCol.Name = "reserveCol"
-        Me.reserveCol.ReadOnly = True
+        Me.copiesDataGridView.AllowUserToAddRows = False
+        Me.copiesDataGridView.AllowUserToDeleteRows = False
+        Me.copiesDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.copiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.copiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.copiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.copiesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.copy_num, Me.statusCol, Me.checkOutCol, Me.reserveCol})
+        Me.copiesDataGridView.Location = New System.Drawing.Point(20, 174)
+        Me.copiesDataGridView.Name = "copiesDataGridView"
+        Me.copiesDataGridView.ReadOnly = True
+        Me.copiesDataGridView.Size = New System.Drawing.Size(913, 391)
+        Me.copiesDataGridView.TabIndex = 30
         '
         'summaryRchTxtBx
         '
@@ -746,7 +720,7 @@ Partial Class viewBook
         Me.Panel1.Controls.Add(Me.coverPcBx)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.mainStatusLbl)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -916,7 +890,7 @@ Partial Class viewBook
         '
         Me.AvailabeNO.AutoSize = True
         Me.AvailabeNO.Font = New System.Drawing.Font("Sitka Display", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AvailabeNO.Location = New System.Drawing.Point(66, 30)
+        Me.AvailabeNO.Location = New System.Drawing.Point(69, 30)
         Me.AvailabeNO.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.AvailabeNO.Name = "AvailabeNO"
         Me.AvailabeNO.Size = New System.Drawing.Size(25, 20)
@@ -945,20 +919,20 @@ Partial Class viewBook
         Me.NumberOfBooks.TabIndex = 0
         Me.NumberOfBooks.Text = "Number of Books:"
         '
-        'Label2
+        'mainStatusLbl
         '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.mainStatusLbl.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Lime
-        Me.Label2.Location = New System.Drawing.Point(130, 247)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 28)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Available"
+        Me.mainStatusLbl.AutoSize = True
+        Me.mainStatusLbl.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mainStatusLbl.ForeColor = System.Drawing.Color.Lime
+        Me.mainStatusLbl.Location = New System.Drawing.Point(130, 247)
+        Me.mainStatusLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.mainStatusLbl.Name = "mainStatusLbl"
+        Me.mainStatusLbl.Size = New System.Drawing.Size(81, 28)
+        Me.mainStatusLbl.TabIndex = 8
+        Me.mainStatusLbl.Text = "Available"
         '
         'Label3
         '
@@ -1039,6 +1013,36 @@ Partial Class viewBook
         Me.abstractRichTxtBx.TabIndex = 28
         Me.abstractRichTxtBx.Text = resources.GetString("abstractRichTxtBx.Text")
         '
+        'copy_num
+        '
+        Me.copy_num.HeaderText = "Copy #"
+        Me.copy_num.Name = "copy_num"
+        Me.copy_num.ReadOnly = True
+        Me.copy_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'statusCol
+        '
+        Me.statusCol.HeaderText = "Status"
+        Me.statusCol.Name = "statusCol"
+        Me.statusCol.ReadOnly = True
+        Me.statusCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'checkOutCol
+        '
+        Me.checkOutCol.HeaderText = "Checkout"
+        Me.checkOutCol.Name = "checkOutCol"
+        Me.checkOutCol.ReadOnly = True
+        Me.checkOutCol.Text = "Checkout"
+        Me.checkOutCol.UseColumnTextForButtonValue = True
+        '
+        'reserveCol
+        '
+        Me.reserveCol.HeaderText = "Reserve"
+        Me.reserveCol.Name = "reserveCol"
+        Me.reserveCol.ReadOnly = True
+        Me.reserveCol.Text = "Reserve"
+        Me.reserveCol.UseColumnTextForButtonValue = True
+        '
         'viewBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1061,7 +1065,7 @@ Partial Class viewBook
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MoreInfoPage.ResumeLayout(False)
         Me.MoreInfoPage.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -1140,17 +1144,17 @@ Partial Class viewBook
     Friend WithEvents AvailabeNO As Label
     Friend WithEvents NumberOfBooksNO As Label
     Friend WithEvents NumberOfBooks As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents mainStatusLbl As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents leftMainScreenPanel As Panel
     Friend WithEvents DetailsPanel As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents abstractRichTxtBx As RichTextBox
     Friend WithEvents collectionLbl As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents copiesDataGridView As DataGridView
     Friend WithEvents Label10 As Label
     Friend WithEvents editBtn As Button
-    Friend WithEvents copyNum As DataGridViewTextBoxColumn
+    Friend WithEvents copy_num As DataGridViewTextBoxColumn
     Friend WithEvents statusCol As DataGridViewTextBoxColumn
     Friend WithEvents checkOutCol As DataGridViewButtonColumn
     Friend WithEvents reserveCol As DataGridViewButtonColumn
