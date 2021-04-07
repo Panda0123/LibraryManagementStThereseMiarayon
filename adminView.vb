@@ -3,6 +3,7 @@ Public Class adminView
     Dim viewBookuserCtl As New viewBookUserControl
     Dim addBookuserCtl As New addBookUserControl
     Dim recorduserCtl As New recordsUserControl
+    Dim collectionsuserCtl As New collectionsUserControl
 
     Public Sub New()
 
@@ -14,15 +15,22 @@ Public Class adminView
         addBookPanel.Controls.Add(addBookuserCtl)
         recordsPanel.Controls.Add(recorduserCtl)
 
+
+        collectionsPanel.Controls.Add(collectionsuserCtl)
+
+
+
         viewBookPanel.Visible = True
         addBookPanel.Visible = False
         recordsPanel.Visible = False
+        collectionsPanel.Visible = False
     End Sub
 
     Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
         viewBookPanel.Visible = True
         addBookPanel.Visible = False
         recordsPanel.Visible = False
+        collectionsPanel.Visible = False
     End Sub
 
 
@@ -30,12 +38,21 @@ Public Class adminView
         viewBookPanel.Visible = False
         addBookPanel.Visible = True
         recordsPanel.Visible = False
+        collectionsPanel.Visible = False
     End Sub
 
     Private Sub recordsBtn_Click(sender As Object, e As EventArgs) Handles recordsBtn.Click
         viewBookPanel.Visible = False
         addBookPanel.Visible = False
         recordsPanel.Visible = True
+        collectionsPanel.Visible = False
+    End Sub
+
+    Private Sub collectionsBtn_Click(sender As Object, e As EventArgs) Handles collectionsBtn.Click
+        viewBookPanel.Visible = False
+        addBookPanel.Visible = False
+        recordsPanel.Visible = False
+        collectionsPanel.Visible = True
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles signOutBtn.LinkClicked
@@ -43,13 +60,11 @@ Public Class adminView
         Me.Close()
     End Sub
 
-    Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub collectionsPanel_Paint(sender As Object, e As PaintEventArgs) Handles collectionsPanel.Paint
 
     End Sub
 
-    Private Sub viewBookPanel_Paint(sender As Object, e As PaintEventArgs) Handles viewBookPanel.Paint
 
-    End Sub
 
 
 

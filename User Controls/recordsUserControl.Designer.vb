@@ -108,7 +108,7 @@ Partial Class recordsUserControl
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1714, 646)
+        Me.DataGridView1.Size = New System.Drawing.Size(1714, 1338)
         Me.DataGridView1.TabIndex = 0
         '
         'Cover_Column
@@ -209,7 +209,7 @@ Partial Class recordsUserControl
         Me.TabPage4.Location = New System.Drawing.Point(4, 38)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(757, 722)
+        Me.TabPage4.Size = New System.Drawing.Size(1715, 1458)
         Me.TabPage4.TabIndex = 1
         Me.TabPage4.Text = "Return List"
         '
@@ -221,7 +221,7 @@ Partial Class recordsUserControl
         Me.TabPage5.Location = New System.Drawing.Point(4, 38)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(757, 722)
+        Me.TabPage5.Size = New System.Drawing.Size(1715, 1458)
         Me.TabPage5.TabIndex = 2
         Me.TabPage5.Text = "Reserve List"
         '
@@ -245,7 +245,7 @@ Partial Class recordsUserControl
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(757, 646)
+        Me.DataGridView2.Size = New System.Drawing.Size(1065, 646)
         Me.DataGridView2.TabIndex = 0
         '
         'DataGridViewImageColumn1

@@ -38,6 +38,7 @@ Partial Class adminView
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.signOutBtn = New System.Windows.Forms.LinkLabel()
         Me.backgrounPanel = New System.Windows.Forms.Panel()
+        Me.collectionsPanel = New System.Windows.Forms.Panel()
         Me.addBookPanel = New System.Windows.Forms.Panel()
         Me.recordsPanel = New System.Windows.Forms.Panel()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
@@ -69,7 +70,7 @@ Partial Class adminView
         TopPanel.Location = New System.Drawing.Point(301, 0)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1277, 197)
+        TopPanel.Size = New System.Drawing.Size(1235, 197)
         TopPanel.TabIndex = 2
         '
         'TitleLogoSearchPanel
@@ -84,7 +85,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(342, 24)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(321, 24)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -203,7 +204,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1277, 197)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1235, 197)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -213,7 +214,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1424, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1403, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -224,7 +225,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1422, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1401, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -251,6 +252,7 @@ Partial Class adminView
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.backgrounPanel.BackColor = System.Drawing.Color.White
         Me.backgrounPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.backgrounPanel.Controls.Add(Me.collectionsPanel)
         Me.backgrounPanel.Controls.Add(Me.addBookPanel)
         Me.backgrounPanel.Controls.Add(Me.recordsPanel)
         Me.backgrounPanel.Controls.Add(Me.LeftSidePanel)
@@ -258,8 +260,18 @@ Partial Class adminView
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1750, 1810)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1796, 1810)
         Me.backgrounPanel.TabIndex = 3
+        '
+        'collectionsPanel
+        '
+        Me.collectionsPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.collectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.collectionsPanel.Location = New System.Drawing.Point(318, 6)
+        Me.collectionsPanel.Name = "collectionsPanel"
+        Me.collectionsPanel.Size = New System.Drawing.Size(1540, 1740)
+        Me.collectionsPanel.TabIndex = 3
         '
         'addBookPanel
         '
@@ -278,7 +290,7 @@ Partial Class adminView
         Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.recordsPanel.Location = New System.Drawing.Point(318, 6)
         Me.recordsPanel.Name = "recordsPanel"
-        Me.recordsPanel.Size = New System.Drawing.Size(1681, 950)
+        Me.recordsPanel.Size = New System.Drawing.Size(1727, 950)
         Me.recordsPanel.TabIndex = 0
         '
         'LeftSidePanel
@@ -373,7 +385,7 @@ Partial Class adminView
         Me.viewBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.viewBookPanel.Location = New System.Drawing.Point(318, 6)
         Me.viewBookPanel.Name = "viewBookPanel"
-        Me.viewBookPanel.Size = New System.Drawing.Size(1431, 1803)
+        Me.viewBookPanel.Size = New System.Drawing.Size(1477, 1803)
         Me.viewBookPanel.TabIndex = 2
         '
         'adminView
@@ -431,4 +443,5 @@ Partial Class adminView
     Friend WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
     Friend WithEvents btn_blk As PowerPacks.RectangleShape
     Friend WithEvents btn_white As PowerPacks.RectangleShape
+    Friend WithEvents collectionsPanel As Panel
 End Class

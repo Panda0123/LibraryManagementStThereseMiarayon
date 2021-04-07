@@ -135,6 +135,12 @@
     <Compile Include="User Controls\bookDisplay.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="User Controls\collectionsUserControl.Designer.vb">
+      <DependentUpon>collectionsUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\collectionsUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Utilities\displayBookvb.vb" />
     <Compile Include="IssueBook.Designer.vb">
       <DependentUpon>IssueBook.vb</DependentUpon>
@@ -243,6 +249,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\collectionsUserControl.resx">
+      <DependentUpon>collectionsUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\recordsUserControl.resx">
       <DependentUpon>recordsUserControl.vb</DependentUpon>
