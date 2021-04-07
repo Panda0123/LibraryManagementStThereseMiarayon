@@ -1,7 +1,7 @@
 ﻿'Imports System.Globalization
 Public Class adminView
     Dim viewBookuserCtl As New viewBookUserControl
-    Dim addBookuserCtl As New addBookUserControl
+    Dim addBookuserCtl As New AddBookUserControl
     Dim recorduserCtl As New recordsUserControl
     Dim collectionsuserCtl As New collectionsUserControl
 

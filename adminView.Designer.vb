@@ -70,7 +70,7 @@ Partial Class adminView
         TopPanel.Location = New System.Drawing.Point(301, 0)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1235, 197)
+        TopPanel.Size = New System.Drawing.Size(1218, 197)
         TopPanel.TabIndex = 2
         '
         'TitleLogoSearchPanel
@@ -85,12 +85,12 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(321, 24)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(313, 24)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
-        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(496, 135)
+        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.TabIndex = 1
         '
         'PictureBox8
@@ -202,7 +202,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1235, 197)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1218, 197)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -212,7 +212,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1403, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1386, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -223,7 +223,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1401, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1384, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -239,7 +239,7 @@ Partial Class adminView
         Me.signOutBtn.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.signOutBtn.Location = New System.Drawing.Point(1672, 9)
         Me.signOutBtn.Name = "signOutBtn"
-        Me.signOutBtn.Size = New System.Drawing.Size(120, 40)
+        Me.signOutBtn.Size = New System.Drawing.Size(95, 32)
         Me.signOutBtn.TabIndex = 20
         Me.signOutBtn.TabStop = True
         Me.signOutBtn.Text = "Sign Out"
@@ -258,7 +258,7 @@ Partial Class adminView
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1796, 1810)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1779, 1810)
         Me.backgrounPanel.TabIndex = 3
         '
         'collectionsPanel
@@ -268,7 +268,7 @@ Partial Class adminView
         Me.collectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.collectionsPanel.Location = New System.Drawing.Point(318, 6)
         Me.collectionsPanel.Name = "collectionsPanel"
-        Me.collectionsPanel.Size = New System.Drawing.Size(1540, 1740)
+        Me.collectionsPanel.Size = New System.Drawing.Size(1523, 1740)
         Me.collectionsPanel.TabIndex = 3
         '
         'addBookPanel
@@ -288,7 +288,7 @@ Partial Class adminView
         Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.recordsPanel.Location = New System.Drawing.Point(318, 6)
         Me.recordsPanel.Name = "recordsPanel"
-        Me.recordsPanel.Size = New System.Drawing.Size(1727, 950)
+        Me.recordsPanel.Size = New System.Drawing.Size(1710, 950)
         Me.recordsPanel.TabIndex = 0
         '
         'LeftSidePanel
@@ -384,7 +384,7 @@ Partial Class adminView
         Me.viewBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.viewBookPanel.Location = New System.Drawing.Point(318, 6)
         Me.viewBookPanel.Name = "viewBookPanel"
-        Me.viewBookPanel.Size = New System.Drawing.Size(1477, 1803)
+        Me.viewBookPanel.Size = New System.Drawing.Size(1460, 1803)
         Me.viewBookPanel.TabIndex = 2
         '
         'adminView
@@ -412,7 +412,6 @@ Partial Class adminView
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.backgrounPanel.ResumeLayout(False)
-        Me.backgrounPanel.PerformLayout()
         Me.LeftSidePanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
