@@ -969,7 +969,7 @@ Partial Class IssueBook
         Me.labelTitle.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelTitle.Location = New System.Drawing.Point(348, 45)
         Me.labelTitle.Name = "labelTitle"
-        Me.labelTitle.Size = New System.Drawing.Size(68, 29)
+        Me.labelTitle.Size = New System.Drawing.Size(54, 23)
         Me.labelTitle.TabIndex = 2
         Me.labelTitle.Text = "TITLE:"
         '
@@ -980,7 +980,7 @@ Partial Class IssueBook
         Me.labelPublisher.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelPublisher.Location = New System.Drawing.Point(301, 85)
         Me.labelPublisher.Name = "labelPublisher"
-        Me.labelPublisher.Size = New System.Drawing.Size(115, 29)
+        Me.labelPublisher.Size = New System.Drawing.Size(91, 23)
         Me.labelPublisher.TabIndex = 3
         Me.labelPublisher.Text = "PUBLISHER:"
         '
@@ -991,7 +991,7 @@ Partial Class IssueBook
         Me.labelPubDate.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelPubDate.Location = New System.Drawing.Point(243, 125)
         Me.labelPubDate.Name = "labelPubDate"
-        Me.labelPubDate.Size = New System.Drawing.Size(173, 29)
+        Me.labelPubDate.Size = New System.Drawing.Size(138, 23)
         Me.labelPubDate.TabIndex = 4
         Me.labelPubDate.Text = "PUBLISHING DATE:"
         '
@@ -1002,7 +1002,7 @@ Partial Class IssueBook
         Me.labelAuthor.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelAuthor.Location = New System.Drawing.Point(306, 165)
         Me.labelAuthor.Name = "labelAuthor"
-        Me.labelAuthor.Size = New System.Drawing.Size(110, 29)
+        Me.labelAuthor.Size = New System.Drawing.Size(87, 23)
         Me.labelAuthor.TabIndex = 5
         Me.labelAuthor.Text = "AUTHOR/S:"
         '
@@ -1013,7 +1013,7 @@ Partial Class IssueBook
         Me.labelLanguage.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelLanguage.Location = New System.Drawing.Point(303, 245)
         Me.labelLanguage.Name = "labelLanguage"
-        Me.labelLanguage.Size = New System.Drawing.Size(113, 29)
+        Me.labelLanguage.Size = New System.Drawing.Size(89, 23)
         Me.labelLanguage.TabIndex = 7
         Me.labelLanguage.Text = "LANGUAGE:"
         '
@@ -1116,7 +1116,7 @@ Partial Class IssueBook
         Me.labelStatus.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelStatus.Location = New System.Drawing.Point(1102, 245)
         Me.labelStatus.Name = "labelStatus"
-        Me.labelStatus.Size = New System.Drawing.Size(83, 29)
+        Me.labelStatus.Size = New System.Drawing.Size(65, 23)
         Me.labelStatus.TabIndex = 24
         Me.labelStatus.Text = "STATUS:"
         '
@@ -1155,7 +1155,7 @@ Partial Class IssueBook
         '
         'IssueBook
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange

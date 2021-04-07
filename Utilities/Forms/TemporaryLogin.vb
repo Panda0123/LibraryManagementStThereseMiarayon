@@ -10,7 +10,7 @@
             Return
         End If
         Authorization.authToken = authToken
-        AddBook.Show()
+        adminView.Show()
         Me.Close()
     End Sub
 
