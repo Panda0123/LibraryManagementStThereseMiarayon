@@ -321,7 +321,7 @@ Partial Class Main
         Me.publisherBtn.Name = "publisherBtn"
         Me.publisherBtn.Size = New System.Drawing.Size(276, 52)
         Me.publisherBtn.TabIndex = 13
-        Me.publisherBtn.Text = "Publisher"
+        Me.publisherBtn.Text = "Classification"
         Me.publisherBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.publisherBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.publisherBtn.UseVisualStyleBackColor = False
