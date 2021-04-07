@@ -22,6 +22,13 @@
             End If
         Next
 
+        'Year
+        For year As Integer = 1900 To DateAndTime.Today.Year Step 5
+            beforeYear.Items.Add(year)
+            afterYear.Items.Add(year)
+        Next
+
+
     End Sub
 
 
@@ -115,7 +122,7 @@
     Private Sub publisherBtn_Click(sender As Object, e As EventArgs) Handles publisherBtn.Click
         pub_click += 1
         utils.clickAnimation(publisherBtn, pub_click)
-        utils.dropDownAnimationpub(pubPanel)
+        utils.dropDownAnimationpub(classPanel)
     End Sub
 
 
@@ -147,7 +154,7 @@
 
         authPanel.Location = New Point(authBtn.Location.X, authBtn.Location.Y + 45)
         pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 45)
-        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
+        classPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
 
         Timer1.Stop()
     End Sub
@@ -158,7 +165,7 @@
         pbBtn.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 127)
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
         pbPanel.Location = New Point(pbBtn.Location.X, pbBtn.Location.Y + 45)
-        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
+        classPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
 
         Timer2.Stop()
     End Sub
@@ -167,17 +174,21 @@
         pbPanel.Height = 127
 
         publisherBtn.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 127)
-        pubPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
+        classPanel.Location = New Point(publisherBtn.Location.X, publisherBtn.Location.Y + 45)
 
         Timer3.Stop()
     End Sub
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
-        pubPanel.Height = 127
+        classPanel.Height = 127
         Timer4.Stop()
     End Sub
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles beforeYear.SelectedIndexChanged
 
     End Sub
 End Class

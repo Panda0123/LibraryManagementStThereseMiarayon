@@ -24,7 +24,7 @@
             panel.Height = 0
             Main.authPanel.Location = New Point(Main.authBtn.Location.X, Main.authBtn.Location.Y - 77)
             Main.pbPanel.Location = New Point(Main.pbBtn.Location.X, Main.pbBtn.Location.Y - 77)
-            Main.pubPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
+            Main.classPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
             tailObj1.Location = New Point(tailObj1.Location.X, tailObj1.Location.Y - 127)
             tailObj2.Location = New Point(tailObj2.Location.X, tailObj2.Location.Y - 127)
             tailObj3.Location = New Point(tailObj3.Location.X, tailObj3.Location.Y - 127)
@@ -38,7 +38,7 @@
         If Not panel.Height = 0 Then
             panel.Height = 0
             Main.pbPanel.Location = New Point(Main.pbBtn.Location.X, Main.pbBtn.Location.Y - 77)
-            Main.pubPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
+            Main.classPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
             tailObj1.Location = New Point(tailObj1.Location.X, tailObj1.Location.Y - 127)
             tailObj2.Location = New Point(tailObj2.Location.X, tailObj2.Location.Y - 127)
             Main.Timer2.Enabled = False
@@ -50,7 +50,7 @@
         panel.Location = New Point(Main.pbBtn.Location.X, Main.pbBtn.Location.Y + 40)
         If Not panel.Height = 0 Then
             panel.Height = 0
-            Main.pubPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
+            Main.classPanel.Location = New Point(Main.publisherBtn.Location.X, Main.publisherBtn.Location.Y - 77)
             tailObj1.Location = New Point(tailObj1.Location.X, tailObj1.Location.Y - 127)
             Main.Timer3.Enabled = False
         End If

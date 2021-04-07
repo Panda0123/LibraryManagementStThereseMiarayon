@@ -26,18 +26,9 @@ Partial Class Main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.scrollablePanel = New System.Windows.Forms.Panel()
-        Me.pubPanel = New System.Windows.Forms.Panel()
-        Me.LinkLabel10 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel11 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel12 = New System.Windows.Forms.LinkLabel()
+        Me.classPanel = New System.Windows.Forms.Panel()
         Me.pbPanel = New System.Windows.Forms.Panel()
-        Me.LinkLabel7 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel8 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel9 = New System.Windows.Forms.LinkLabel()
         Me.authPanel = New System.Windows.Forms.Panel()
-        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
         Me.newTitlePanel = New System.Windows.Forms.Panel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
@@ -73,9 +64,17 @@ Partial Class Main
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.beforeYear = New System.Windows.Forms.ComboBox()
+        Me.afterYear = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.searchYear = New System.Windows.Forms.LinkLabel()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.searchClassification = New System.Windows.Forms.LinkLabel()
+        Me.searchAuth = New System.Windows.Forms.LinkLabel()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
-        Me.pubPanel.SuspendLayout()
+        Me.classPanel.SuspendLayout()
         Me.pbPanel.SuspendLayout()
         Me.authPanel.SuspendLayout()
         Me.newTitlePanel.SuspendLayout()
@@ -102,7 +101,7 @@ Partial Class Main
         '
         'scrollablePanel
         '
-        Me.scrollablePanel.Controls.Add(Me.pubPanel)
+        Me.scrollablePanel.Controls.Add(Me.classPanel)
         Me.scrollablePanel.Controls.Add(Me.pbPanel)
         Me.scrollablePanel.Controls.Add(Me.authPanel)
         Me.scrollablePanel.Controls.Add(Me.newTitlePanel)
@@ -122,131 +121,36 @@ Partial Class Main
         Me.scrollablePanel.Size = New System.Drawing.Size(331, 875)
         Me.scrollablePanel.TabIndex = 0
         '
-        'pubPanel
+        'classPanel
         '
-        Me.pubPanel.Controls.Add(Me.LinkLabel10)
-        Me.pubPanel.Controls.Add(Me.LinkLabel11)
-        Me.pubPanel.Controls.Add(Me.LinkLabel12)
-        Me.pubPanel.Location = New System.Drawing.Point(47, 469)
-        Me.pubPanel.Name = "pubPanel"
-        Me.pubPanel.Size = New System.Drawing.Size(254, 0)
-        Me.pubPanel.TabIndex = 17
-        '
-        'LinkLabel10
-        '
-        Me.LinkLabel10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel10.AutoSize = True
-        Me.LinkLabel10.Location = New System.Drawing.Point(12, -44)
-        Me.LinkLabel10.Name = "LinkLabel10"
-        Me.LinkLabel10.Size = New System.Drawing.Size(118, 25)
-        Me.LinkLabel10.TabIndex = 2
-        Me.LinkLabel10.TabStop = True
-        Me.LinkLabel10.Text = "LinkLabel10"
-        '
-        'LinkLabel11
-        '
-        Me.LinkLabel11.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel11.AutoSize = True
-        Me.LinkLabel11.Location = New System.Drawing.Point(12, -16)
-        Me.LinkLabel11.Name = "LinkLabel11"
-        Me.LinkLabel11.Size = New System.Drawing.Size(115, 25)
-        Me.LinkLabel11.TabIndex = 1
-        Me.LinkLabel11.TabStop = True
-        Me.LinkLabel11.Text = "LinkLabel11"
-        '
-        'LinkLabel12
-        '
-        Me.LinkLabel12.AutoSize = True
-        Me.LinkLabel12.Location = New System.Drawing.Point(12, 11)
-        Me.LinkLabel12.Name = "LinkLabel12"
-        Me.LinkLabel12.Size = New System.Drawing.Size(116, 25)
-        Me.LinkLabel12.TabIndex = 0
-        Me.LinkLabel12.TabStop = True
-        Me.LinkLabel12.Text = "LinkLabel12"
+        Me.classPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.classPanel.Controls.Add(Me.searchClassification)
+        Me.classPanel.Controls.Add(Me.ComboBox2)
+        Me.classPanel.Location = New System.Drawing.Point(47, 469)
+        Me.classPanel.Name = "classPanel"
+        Me.classPanel.Size = New System.Drawing.Size(254, 0)
+        Me.classPanel.TabIndex = 17
         '
         'pbPanel
         '
-        Me.pbPanel.Controls.Add(Me.LinkLabel7)
-        Me.pbPanel.Controls.Add(Me.LinkLabel8)
-        Me.pbPanel.Controls.Add(Me.LinkLabel9)
-        Me.pbPanel.Location = New System.Drawing.Point(47, 417)
+        Me.pbPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbPanel.Controls.Add(Me.searchYear)
+        Me.pbPanel.Controls.Add(Me.Label2)
+        Me.pbPanel.Controls.Add(Me.afterYear)
+        Me.pbPanel.Controls.Add(Me.beforeYear)
+        Me.pbPanel.Location = New System.Drawing.Point(22, 417)
         Me.pbPanel.Name = "pbPanel"
-        Me.pbPanel.Size = New System.Drawing.Size(254, 0)
+        Me.pbPanel.Size = New System.Drawing.Size(299, 0)
         Me.pbPanel.TabIndex = 16
-        '
-        'LinkLabel7
-        '
-        Me.LinkLabel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel7.AutoSize = True
-        Me.LinkLabel7.Location = New System.Drawing.Point(12, -44)
-        Me.LinkLabel7.Name = "LinkLabel7"
-        Me.LinkLabel7.Size = New System.Drawing.Size(107, 25)
-        Me.LinkLabel7.TabIndex = 2
-        Me.LinkLabel7.TabStop = True
-        Me.LinkLabel7.Text = "LinkLabel7"
-        '
-        'LinkLabel8
-        '
-        Me.LinkLabel8.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel8.AutoSize = True
-        Me.LinkLabel8.Location = New System.Drawing.Point(12, -16)
-        Me.LinkLabel8.Name = "LinkLabel8"
-        Me.LinkLabel8.Size = New System.Drawing.Size(108, 25)
-        Me.LinkLabel8.TabIndex = 1
-        Me.LinkLabel8.TabStop = True
-        Me.LinkLabel8.Text = "LinkLabel8"
-        '
-        'LinkLabel9
-        '
-        Me.LinkLabel9.AutoSize = True
-        Me.LinkLabel9.Location = New System.Drawing.Point(12, 11)
-        Me.LinkLabel9.Name = "LinkLabel9"
-        Me.LinkLabel9.Size = New System.Drawing.Size(108, 25)
-        Me.LinkLabel9.TabIndex = 0
-        Me.LinkLabel9.TabStop = True
-        Me.LinkLabel9.Text = "LinkLabel9"
         '
         'authPanel
         '
-        Me.authPanel.Controls.Add(Me.LinkLabel4)
-        Me.authPanel.Controls.Add(Me.LinkLabel5)
-        Me.authPanel.Controls.Add(Me.LinkLabel6)
+        Me.authPanel.Controls.Add(Me.searchAuth)
+        Me.authPanel.Controls.Add(Me.ComboBox1)
         Me.authPanel.Location = New System.Drawing.Point(47, 359)
         Me.authPanel.Name = "authPanel"
         Me.authPanel.Size = New System.Drawing.Size(254, 0)
         Me.authPanel.TabIndex = 15
-        '
-        'LinkLabel4
-        '
-        Me.LinkLabel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel4.AutoSize = True
-        Me.LinkLabel4.Location = New System.Drawing.Point(12, -44)
-        Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(108, 25)
-        Me.LinkLabel4.TabIndex = 2
-        Me.LinkLabel4.TabStop = True
-        Me.LinkLabel4.Text = "LinkLabel4"
-        '
-        'LinkLabel5
-        '
-        Me.LinkLabel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel5.AutoSize = True
-        Me.LinkLabel5.Location = New System.Drawing.Point(12, -16)
-        Me.LinkLabel5.Name = "LinkLabel5"
-        Me.LinkLabel5.Size = New System.Drawing.Size(107, 25)
-        Me.LinkLabel5.TabIndex = 1
-        Me.LinkLabel5.TabStop = True
-        Me.LinkLabel5.Text = "LinkLabel5"
-        '
-        'LinkLabel6
-        '
-        Me.LinkLabel6.AutoSize = True
-        Me.LinkLabel6.Location = New System.Drawing.Point(12, 11)
-        Me.LinkLabel6.Name = "LinkLabel6"
-        Me.LinkLabel6.Size = New System.Drawing.Size(108, 25)
-        Me.LinkLabel6.TabIndex = 0
-        Me.LinkLabel6.TabStop = True
-        Me.LinkLabel6.Text = "LinkLabel6"
         '
         'newTitlePanel
         '
@@ -713,6 +617,95 @@ Partial Class Main
         'Timer4
         '
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Sitka Small", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Lance Parantar", "Jamsed Cabili", "Danijel Carlos", "Monaxy Inson", "Philaxy Espiaers"})
+        Me.ComboBox1.Location = New System.Drawing.Point(7, 42)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(244, 37)
+        Me.ComboBox1.TabIndex = 0
+        '
+        'beforeYear
+        '
+        Me.beforeYear.FormattingEnabled = True
+        Me.beforeYear.Location = New System.Drawing.Point(0, 42)
+        Me.beforeYear.Name = "beforeYear"
+        Me.beforeYear.Size = New System.Drawing.Size(121, 33)
+        Me.beforeYear.TabIndex = 0
+        '
+        'afterYear
+        '
+        Me.afterYear.FormattingEnabled = True
+        Me.afterYear.Location = New System.Drawing.Point(175, 42)
+        Me.afterYear.Name = "afterYear"
+        Me.afterYear.Size = New System.Drawing.Size(121, 33)
+        Me.afterYear.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(131, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(36, 25)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "TO"
+        '
+        'searchYear
+        '
+        Me.searchYear.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.searchYear.AutoSize = True
+        Me.searchYear.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchYear.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.searchYear.LinkColor = System.Drawing.Color.Black
+        Me.searchYear.Location = New System.Drawing.Point(101, 88)
+        Me.searchYear.Name = "searchYear"
+        Me.searchYear.Size = New System.Drawing.Size(97, 35)
+        Me.searchYear.TabIndex = 2
+        Me.searchYear.TabStop = True
+        Me.searchYear.Text = "Search"
+        Me.searchYear.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Generalities", "Science", "Math", "Bio"})
+        Me.ComboBox2.Location = New System.Drawing.Point(3, 40)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(246, 33)
+        Me.ComboBox2.TabIndex = 0
+        '
+        'searchClassification
+        '
+        Me.searchClassification.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.searchClassification.AutoSize = True
+        Me.searchClassification.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchClassification.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.searchClassification.LinkColor = System.Drawing.Color.Black
+        Me.searchClassification.Location = New System.Drawing.Point(73, 76)
+        Me.searchClassification.Name = "searchClassification"
+        Me.searchClassification.Size = New System.Drawing.Size(97, 35)
+        Me.searchClassification.TabIndex = 3
+        Me.searchClassification.TabStop = True
+        Me.searchClassification.Text = "Search"
+        Me.searchClassification.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
+        'searchAuth
+        '
+        Me.searchAuth.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.searchAuth.AutoSize = True
+        Me.searchAuth.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchAuth.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.searchAuth.LinkColor = System.Drawing.Color.Black
+        Me.searchAuth.Location = New System.Drawing.Point(81, 82)
+        Me.searchAuth.Name = "searchAuth"
+        Me.searchAuth.Size = New System.Drawing.Size(97, 35)
+        Me.searchAuth.TabIndex = 3
+        Me.searchAuth.TabStop = True
+        Me.searchAuth.Text = "Search"
+        Me.searchAuth.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
@@ -731,8 +724,8 @@ Partial Class Main
         Me.leftMainScreenPanel.ResumeLayout(False)
         Me.scrollablePanel.ResumeLayout(False)
         Me.scrollablePanel.PerformLayout()
-        Me.pubPanel.ResumeLayout(False)
-        Me.pubPanel.PerformLayout()
+        Me.classPanel.ResumeLayout(False)
+        Me.classPanel.PerformLayout()
         Me.pbPanel.ResumeLayout(False)
         Me.pbPanel.PerformLayout()
         Me.authPanel.ResumeLayout(False)
@@ -778,17 +771,8 @@ Partial Class Main
     Friend WithEvents Timer3 As Timer
     Friend WithEvents Timer4 As Timer
     Friend WithEvents authPanel As Panel
-    Friend WithEvents LinkLabel4 As LinkLabel
-    Friend WithEvents LinkLabel5 As LinkLabel
-    Friend WithEvents LinkLabel6 As LinkLabel
     Friend WithEvents pbPanel As Panel
-    Friend WithEvents LinkLabel7 As LinkLabel
-    Friend WithEvents LinkLabel8 As LinkLabel
-    Friend WithEvents LinkLabel9 As LinkLabel
-    Friend WithEvents pubPanel As Panel
-    Friend WithEvents LinkLabel10 As LinkLabel
-    Friend WithEvents LinkLabel11 As LinkLabel
-    Friend WithEvents LinkLabel12 As LinkLabel
+    Friend WithEvents classPanel As Panel
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape3 As PowerPacks.RectangleShape
@@ -800,4 +784,12 @@ Partial Class Main
     Friend WithEvents LinkLabel13 As LinkLabel
     Friend WithEvents PageNumLabel As Label
     Friend WithEvents loginBtn As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents afterYear As ComboBox
+    Friend WithEvents beforeYear As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents searchYear As LinkLabel
+    Friend WithEvents searchClassification As LinkLabel
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents searchAuth As LinkLabel
 End Class
