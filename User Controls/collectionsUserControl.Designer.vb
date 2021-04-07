@@ -51,7 +51,7 @@ Partial Class collectionsUserControl
         Me.bookListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
         Me.bookListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.bookListView.Font = New System.Drawing.Font("Sitka Subheading", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bookListView.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.bookListView.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.bookListView.GridLines = True
         Me.bookListView.HideSelection = False
         Me.bookListView.Location = New System.Drawing.Point(0, 214)
@@ -110,7 +110,7 @@ Partial Class collectionsUserControl
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 49)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "sample"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'CheckBox1

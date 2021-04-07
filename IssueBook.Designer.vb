@@ -825,11 +825,11 @@ Partial Class IssueBook
         Me.labelShelfID.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelShelfID.AutoSize = True
         Me.labelShelfID.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelShelfID.Location = New System.Drawing.Point(320, 5)
+        Me.labelShelfID.Location = New System.Drawing.Point(329, 5)
         Me.labelShelfID.Name = "labelShelfID"
-        Me.labelShelfID.Size = New System.Drawing.Size(96, 29)
+        Me.labelShelfID.Size = New System.Drawing.Size(87, 29)
         Me.labelShelfID.TabIndex = 29
-        Me.labelShelfID.Text = "SHELF ID:"
+        Me.labelShelfID.Text = "COPY ID:"
         '
         'Label9
         '

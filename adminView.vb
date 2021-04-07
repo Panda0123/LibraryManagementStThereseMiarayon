@@ -1,4 +1,4 @@
-﻿'Imports System.Globalization
+﻿Imports DevExpress.XtraBars.Docking
 Public Class adminView
     Dim viewBookuserCtl As New viewBookUserControl
     Dim addBookuserCtl As New addBookUserControl
@@ -24,6 +24,10 @@ Public Class adminView
         addBookPanel.Visible = False
         recordsPanel.Visible = False
         collectionsPanel.Visible = False
+
+
+
+
     End Sub
 
     Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
@@ -60,9 +64,12 @@ Public Class adminView
         Me.Close()
     End Sub
 
-    Private Sub collectionsPanel_Paint(sender As Object, e As PaintEventArgs) Handles collectionsPanel.Paint
 
-    End Sub
+
+
+
+
+
 
 
 
