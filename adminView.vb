@@ -10,8 +10,10 @@ Public Class adminView
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
+    End Sub
 
-        switchPanel(viewBookuserCtl)
+    Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        viewBookBtn.PerformClick()
     End Sub
 
     Private Sub openUserControl_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click, bokkAddBtn.Click,
@@ -42,6 +44,8 @@ Public Class adminView
             Case collectionsBtn.Name
                 switchPanel(collectionsuserCtl)
             Case signOutBtn.Name
+                'Smooth Exit
+                Me.Hide()
                 Main.Show()
                 Me.Close()
         End Select
@@ -53,7 +57,6 @@ Public Class adminView
         backgroundPanel.Controls.Add(userControlPanel)
         userControlPanel.Show()
     End Sub
-
 
 
 

@@ -42,8 +42,8 @@ Partial Class adminView
         Me.backgroundPanel = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.highlightPanel = New System.Windows.Forms.Panel()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
+        Me.highlightPanel = New System.Windows.Forms.Panel()
         Me.signOutBtn = New System.Windows.Forms.Button()
         Me.recordsBtn = New System.Windows.Forms.Button()
         Me.collectionsBtn = New System.Windows.Forms.Button()
@@ -68,6 +68,7 @@ Partial Class adminView
         'TopPanel
         '
         TopPanel.BackColor = System.Drawing.Color.White
+        TopPanel.Controls.Add(Me.signOutBtn)
         TopPanel.Controls.Add(Me.Panel3)
         TopPanel.Controls.Add(Me.Panel2)
         TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
@@ -287,19 +288,10 @@ Partial Class adminView
         Me.SplitContainer1.SplitterDistance = 233
         Me.SplitContainer1.TabIndex = 21
         '
-        'highlightPanel
-        '
-        Me.highlightPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.highlightPanel.Location = New System.Drawing.Point(0, 0)
-        Me.highlightPanel.Name = "highlightPanel"
-        Me.highlightPanel.Size = New System.Drawing.Size(8, 73)
-        Me.highlightPanel.TabIndex = 0
-        '
         'LeftSidePanel
         '
         Me.LeftSidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.LeftSidePanel.Controls.Add(Me.highlightPanel)
-        Me.LeftSidePanel.Controls.Add(Me.signOutBtn)
         Me.LeftSidePanel.Controls.Add(Me.recordsBtn)
         Me.LeftSidePanel.Controls.Add(Me.collectionsBtn)
         Me.LeftSidePanel.Controls.Add(Me.bokkAddBtn)
@@ -312,19 +304,27 @@ Partial Class adminView
         Me.LeftSidePanel.Size = New System.Drawing.Size(233, 565)
         Me.LeftSidePanel.TabIndex = 1
         '
+        'highlightPanel
+        '
+        Me.highlightPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.highlightPanel.Location = New System.Drawing.Point(0, 0)
+        Me.highlightPanel.Name = "highlightPanel"
+        Me.highlightPanel.Size = New System.Drawing.Size(8, 73)
+        Me.highlightPanel.TabIndex = 0
+        '
         'signOutBtn
         '
-        Me.signOutBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
-        Me.signOutBtn.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.signOutBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.signOutBtn.BackColor = System.Drawing.Color.White
         Me.signOutBtn.FlatAppearance.BorderSize = 0
         Me.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.signOutBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.signOutBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.signOutBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.logout
         Me.signOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.signOutBtn.Location = New System.Drawing.Point(8, 492)
+        Me.signOutBtn.Location = New System.Drawing.Point(1515, 11)
         Me.signOutBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.signOutBtn.Name = "signOutBtn"
-        Me.signOutBtn.Size = New System.Drawing.Size(225, 73)
+        Me.signOutBtn.Size = New System.Drawing.Size(149, 58)
         Me.signOutBtn.TabIndex = 21
         Me.signOutBtn.Text = " Sign Out"
         Me.signOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
