@@ -13,6 +13,7 @@
         searchTextBox.SelectionStart = 0
         FlowLayoutPanel1.Controls.Clear()
         FlowLayoutPanel1.WrapContents = False
+        'sample only
         For x As Integer = 0 To 12
             Dim book As New bookDisplay
             bookDP.Add(book)
@@ -30,7 +31,6 @@
 
 
     End Sub
-
 
 
     Private Sub Button_Back_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Button_Back.LinkClicked
@@ -102,15 +102,12 @@
         newTitle_click += 1
         utils.clickAnimation(newTitleBtn, newTitle_click)
         utils.dropDownAnimationNewTitle(newTitlePanel, authBtn, pbBtn, publisherBtn)
-
-
     End Sub
 
     Private Sub authBtn_Click(sender As Object, e As EventArgs) Handles authBtn.Click
         auth_click += 1
         utils.clickAnimation(authBtn, auth_click)
         utils.dropDownAnimationauthBtn(authPanel, pbBtn, publisherBtn)
-
     End Sub
 
     Private Sub pbBtn_Click(sender As Object, e As EventArgs) Handles pbBtn.Click
@@ -129,15 +126,12 @@
 
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
         loginBtn.ForeColor = Color.FromArgb(0, 54, 99)
-        login.ShowDialog()
+        login.Show()
     End Sub
 
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
-        advanceSearch.ShowDialog()
+        advanceSearch.Show()
     End Sub
-
-
-
 
     Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs)
         loginBtn.ForeColor = Color.FromArgb(0, 0, 0)
