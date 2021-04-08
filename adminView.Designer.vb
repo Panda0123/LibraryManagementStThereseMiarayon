@@ -25,6 +25,7 @@ Partial Class adminView
         Me.components = New System.ComponentModel.Container()
         Dim TopPanel As System.Windows.Forms.Panel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
+        Me.signOutBtn = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
@@ -44,7 +45,6 @@ Partial Class adminView
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
         Me.highlightPanel = New System.Windows.Forms.Panel()
-        Me.signOutBtn = New System.Windows.Forms.Button()
         Me.recordsBtn = New System.Windows.Forms.Button()
         Me.collectionsBtn = New System.Windows.Forms.Button()
         Me.bokkAddBtn = New System.Windows.Forms.Button()
@@ -79,6 +79,24 @@ Partial Class adminView
         TopPanel.Name = "TopPanel"
         TopPanel.Size = New System.Drawing.Size(1673, 181)
         TopPanel.TabIndex = 2
+        '
+        'signOutBtn
+        '
+        Me.signOutBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.signOutBtn.BackColor = System.Drawing.Color.White
+        Me.signOutBtn.FlatAppearance.BorderSize = 0
+        Me.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.signOutBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.signOutBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.logout
+        Me.signOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.signOutBtn.Location = New System.Drawing.Point(1515, 11)
+        Me.signOutBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.signOutBtn.Name = "signOutBtn"
+        Me.signOutBtn.Size = New System.Drawing.Size(149, 58)
+        Me.signOutBtn.TabIndex = 21
+        Me.signOutBtn.Text = " Sign Out"
+        Me.signOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.signOutBtn.UseVisualStyleBackColor = False
         '
         'Panel3
         '
@@ -312,24 +330,6 @@ Partial Class adminView
         Me.highlightPanel.Size = New System.Drawing.Size(8, 73)
         Me.highlightPanel.TabIndex = 0
         '
-        'signOutBtn
-        '
-        Me.signOutBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.signOutBtn.BackColor = System.Drawing.Color.White
-        Me.signOutBtn.FlatAppearance.BorderSize = 0
-        Me.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.signOutBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.signOutBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.logout
-        Me.signOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.signOutBtn.Location = New System.Drawing.Point(1515, 11)
-        Me.signOutBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.signOutBtn.Name = "signOutBtn"
-        Me.signOutBtn.Size = New System.Drawing.Size(149, 58)
-        Me.signOutBtn.TabIndex = 21
-        Me.signOutBtn.Text = " Sign Out"
-        Me.signOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.signOutBtn.UseVisualStyleBackColor = False
-        '
         'recordsBtn
         '
         Me.recordsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
@@ -427,6 +427,7 @@ Partial Class adminView
         Me.MinimumSize = New System.Drawing.Size(1553, 781)
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Administrator View"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         TopPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.ResumeLayout(False)

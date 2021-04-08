@@ -13,6 +13,7 @@ Public Class adminView
     End Sub
 
     Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Set default user control view
         viewBookBtn.PerformClick()
     End Sub
 
