@@ -11,9 +11,7 @@
         bookListView.Items.Add(newItem)
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
-    End Sub
 
     Private Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles bookListView.ColumnWidthChanging
         e.Cancel = True
