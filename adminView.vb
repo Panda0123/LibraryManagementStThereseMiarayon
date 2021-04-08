@@ -1,4 +1,4 @@
-﻿Imports DevExpress.XtraBars.Docking
+﻿
 Public Class adminView
     Dim viewBookuserCtl As New viewBookUserControl
     Dim addBookuserCtl As New addBookUserControl
@@ -25,7 +25,7 @@ Public Class adminView
         recordsPanel.Visible = False
         collectionsPanel.Visible = False
 
-
+        LeftSidePanel.Location = New Point(4, Me.VerticalScroll.Value)
 
 
     End Sub
@@ -63,6 +63,19 @@ Public Class adminView
         Main.Show()
         Me.Close()
     End Sub
+
+
+
+    Private Sub adminView_scroll(sender As Object, e As EventArgs) Handles Me.Scroll
+        LeftSidePanel.Location = New Point(4, Me.VerticalScroll.Value)
+    End Sub
+
+
+    Private Sub adminView_mouseWheel(sender As Object, e As EventArgs) Handles Me.MouseWheel
+        LeftSidePanel.Location = New Point(4, Me.VerticalScroll.Value)
+    End Sub
+
+
 
 
 

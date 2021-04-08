@@ -27,8 +27,16 @@ Partial Class Main
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.scrollablePanel = New System.Windows.Forms.Panel()
         Me.classPanel = New System.Windows.Forms.Panel()
+        Me.searchClassification = New System.Windows.Forms.LinkLabel()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.pbPanel = New System.Windows.Forms.Panel()
+        Me.searchYear = New System.Windows.Forms.LinkLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.afterYear = New System.Windows.Forms.ComboBox()
+        Me.beforeYear = New System.Windows.Forms.ComboBox()
         Me.authPanel = New System.Windows.Forms.Panel()
+        Me.searchAuth = New System.Windows.Forms.LinkLabel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.newTitlePanel = New System.Windows.Forms.Panel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
@@ -64,14 +72,6 @@ Partial Class Main
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.beforeYear = New System.Windows.Forms.ComboBox()
-        Me.afterYear = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.searchYear = New System.Windows.Forms.LinkLabel()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.searchClassification = New System.Windows.Forms.LinkLabel()
-        Me.searchAuth = New System.Windows.Forms.LinkLabel()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
         Me.classPanel.SuspendLayout()
@@ -128,8 +128,32 @@ Partial Class Main
         Me.classPanel.Controls.Add(Me.ComboBox2)
         Me.classPanel.Location = New System.Drawing.Point(47, 469)
         Me.classPanel.Name = "classPanel"
-        Me.classPanel.Size = New System.Drawing.Size(254, 0)
+        Me.classPanel.Size = New System.Drawing.Size(398, 0)
         Me.classPanel.TabIndex = 17
+        '
+        'searchClassification
+        '
+        Me.searchClassification.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.searchClassification.AutoSize = True
+        Me.searchClassification.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchClassification.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.searchClassification.LinkColor = System.Drawing.Color.Black
+        Me.searchClassification.Location = New System.Drawing.Point(73, 76)
+        Me.searchClassification.Name = "searchClassification"
+        Me.searchClassification.Size = New System.Drawing.Size(97, 35)
+        Me.searchClassification.TabIndex = 3
+        Me.searchClassification.TabStop = True
+        Me.searchClassification.Text = "Search"
+        Me.searchClassification.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Generalities", "Science", "Math", "Bio"})
+        Me.ComboBox2.Location = New System.Drawing.Point(3, 40)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(246, 33)
+        Me.ComboBox2.TabIndex = 0
         '
         'pbPanel
         '
@@ -143,6 +167,46 @@ Partial Class Main
         Me.pbPanel.Size = New System.Drawing.Size(299, 0)
         Me.pbPanel.TabIndex = 16
         '
+        'searchYear
+        '
+        Me.searchYear.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.searchYear.AutoSize = True
+        Me.searchYear.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchYear.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.searchYear.LinkColor = System.Drawing.Color.Black
+        Me.searchYear.Location = New System.Drawing.Point(101, 88)
+        Me.searchYear.Name = "searchYear"
+        Me.searchYear.Size = New System.Drawing.Size(97, 35)
+        Me.searchYear.TabIndex = 2
+        Me.searchYear.TabStop = True
+        Me.searchYear.Text = "Search"
+        Me.searchYear.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(131, 48)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(36, 25)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "TO"
+        '
+        'afterYear
+        '
+        Me.afterYear.FormattingEnabled = True
+        Me.afterYear.Location = New System.Drawing.Point(175, 42)
+        Me.afterYear.Name = "afterYear"
+        Me.afterYear.Size = New System.Drawing.Size(121, 33)
+        Me.afterYear.TabIndex = 0
+        '
+        'beforeYear
+        '
+        Me.beforeYear.FormattingEnabled = True
+        Me.beforeYear.Location = New System.Drawing.Point(0, 42)
+        Me.beforeYear.Name = "beforeYear"
+        Me.beforeYear.Size = New System.Drawing.Size(121, 33)
+        Me.beforeYear.TabIndex = 0
+        '
         'authPanel
         '
         Me.authPanel.Controls.Add(Me.searchAuth)
@@ -151,6 +215,31 @@ Partial Class Main
         Me.authPanel.Name = "authPanel"
         Me.authPanel.Size = New System.Drawing.Size(254, 0)
         Me.authPanel.TabIndex = 15
+        '
+        'searchAuth
+        '
+        Me.searchAuth.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.searchAuth.AutoSize = True
+        Me.searchAuth.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchAuth.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.searchAuth.LinkColor = System.Drawing.Color.Black
+        Me.searchAuth.Location = New System.Drawing.Point(81, 82)
+        Me.searchAuth.Name = "searchAuth"
+        Me.searchAuth.Size = New System.Drawing.Size(97, 35)
+        Me.searchAuth.TabIndex = 3
+        Me.searchAuth.TabStop = True
+        Me.searchAuth.Text = "Search"
+        Me.searchAuth.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Sitka Small", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Lance Parantar", "Jamsed Cabili", "Danijel Carlos", "Monaxy Inson", "Philaxy Espiaers"})
+        Me.ComboBox1.Location = New System.Drawing.Point(7, 42)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(244, 37)
+        Me.ComboBox1.TabIndex = 0
         '
         'newTitlePanel
         '
@@ -616,95 +705,6 @@ Partial Class Main
         '
         'Timer4
         '
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.Font = New System.Drawing.Font("Sitka Small", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Lance Parantar", "Jamsed Cabili", "Danijel Carlos", "Monaxy Inson", "Philaxy Espiaers"})
-        Me.ComboBox1.Location = New System.Drawing.Point(7, 42)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(244, 37)
-        Me.ComboBox1.TabIndex = 0
-        '
-        'beforeYear
-        '
-        Me.beforeYear.FormattingEnabled = True
-        Me.beforeYear.Location = New System.Drawing.Point(0, 42)
-        Me.beforeYear.Name = "beforeYear"
-        Me.beforeYear.Size = New System.Drawing.Size(121, 33)
-        Me.beforeYear.TabIndex = 0
-        '
-        'afterYear
-        '
-        Me.afterYear.FormattingEnabled = True
-        Me.afterYear.Location = New System.Drawing.Point(175, 42)
-        Me.afterYear.Name = "afterYear"
-        Me.afterYear.Size = New System.Drawing.Size(121, 33)
-        Me.afterYear.TabIndex = 0
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(131, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(36, 25)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "TO"
-        '
-        'searchYear
-        '
-        Me.searchYear.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.searchYear.AutoSize = True
-        Me.searchYear.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchYear.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.searchYear.LinkColor = System.Drawing.Color.Black
-        Me.searchYear.Location = New System.Drawing.Point(101, 88)
-        Me.searchYear.Name = "searchYear"
-        Me.searchYear.Size = New System.Drawing.Size(97, 35)
-        Me.searchYear.TabIndex = 2
-        Me.searchYear.TabStop = True
-        Me.searchYear.Text = "Search"
-        Me.searchYear.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Generalities", "Science", "Math", "Bio"})
-        Me.ComboBox2.Location = New System.Drawing.Point(3, 40)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(246, 33)
-        Me.ComboBox2.TabIndex = 0
-        '
-        'searchClassification
-        '
-        Me.searchClassification.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.searchClassification.AutoSize = True
-        Me.searchClassification.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchClassification.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.searchClassification.LinkColor = System.Drawing.Color.Black
-        Me.searchClassification.Location = New System.Drawing.Point(73, 76)
-        Me.searchClassification.Name = "searchClassification"
-        Me.searchClassification.Size = New System.Drawing.Size(97, 35)
-        Me.searchClassification.TabIndex = 3
-        Me.searchClassification.TabStop = True
-        Me.searchClassification.Text = "Search"
-        Me.searchClassification.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        '
-        'searchAuth
-        '
-        Me.searchAuth.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.searchAuth.AutoSize = True
-        Me.searchAuth.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchAuth.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.searchAuth.LinkColor = System.Drawing.Color.Black
-        Me.searchAuth.Location = New System.Drawing.Point(81, 82)
-        Me.searchAuth.Name = "searchAuth"
-        Me.searchAuth.Size = New System.Drawing.Size(97, 35)
-        Me.searchAuth.TabIndex = 3
-        Me.searchAuth.TabStop = True
-        Me.searchAuth.Text = "Search"
-        Me.searchAuth.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         '
         'Main
         '
