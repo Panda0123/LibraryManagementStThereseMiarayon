@@ -89,7 +89,6 @@ D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManageme
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.IssueBook.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.bookControlAdmin.resources
-G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.TemporaryLogin.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBook.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.TemporaryLogin.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.viewBookUserControl.resources

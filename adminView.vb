@@ -17,9 +17,6 @@ Public Class adminView
 
 
         collectionsPanel.Controls.Add(collectionsuserCtl)
-
-
-
         viewBookPanel.Visible = True
         addBookPanel.Visible = False
         recordsPanel.Visible = False
@@ -56,11 +53,17 @@ Public Class adminView
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles signOutBtn.LinkClicked
+        Authorization.authToken = String.Empty
         Main.Show()
         Me.Close()
     End Sub
 
-    Private Sub collectionsPanel_Paint(sender As Object, e As PaintEventArgs) Handles collectionsPanel.Paint
-
+    Private Sub searchPcBx_Click(sender As Object, e As EventArgs) Handles searchPcBx.Click
+        viewBookBtn_Click(Nothing, Nothing)
+        viewBookuserCtl.setSearch(searchTextBox.Text)
     End Sub
+
+    Private Sub collectionsPanel_Paint(sender As Object, e As PaintEventArgs) Handles collectionsPanel.Paint
+    End Sub
+
 End Class

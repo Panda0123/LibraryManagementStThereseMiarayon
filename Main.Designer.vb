@@ -55,8 +55,8 @@ Partial Class Main
         Me.mainPanel = New System.Windows.Forms.Panel()
         Me.loginBtn = New System.Windows.Forms.Button()
         Me.PageNumLabel = New System.Windows.Forms.Label()
-        Me.Button_Back = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel13 = New System.Windows.Forms.LinkLabel()
+        Me.prevLnkLbl = New System.Windows.Forms.LinkLabel()
+        Me.nextLnkLbl = New System.Windows.Forms.LinkLabel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.upperMainScreenPanel = New System.Windows.Forms.Panel()
         Me.searchPcBx = New System.Windows.Forms.PictureBox()
@@ -493,8 +493,8 @@ Partial Class Main
         Me.mainPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.mainPanel.Controls.Add(Me.loginBtn)
         Me.mainPanel.Controls.Add(Me.PageNumLabel)
-        Me.mainPanel.Controls.Add(Me.Button_Back)
-        Me.mainPanel.Controls.Add(Me.LinkLabel13)
+        Me.mainPanel.Controls.Add(Me.prevLnkLbl)
+        Me.mainPanel.Controls.Add(Me.nextLnkLbl)
         Me.mainPanel.Controls.Add(Me.FlowLayoutPanel1)
         Me.mainPanel.Controls.Add(Me.upperMainScreenPanel)
         Me.mainPanel.Controls.Add(Me.leftMainScreenPanel)
@@ -531,37 +531,37 @@ Partial Class Main
         Me.PageNumLabel.TabIndex = 0
         Me.PageNumLabel.Text = "Page 1"
         '
-        'Button_Back
+        'prevLnkLbl
         '
-        Me.Button_Back.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.Button_Back.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Button_Back.AutoSize = True
-        Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Button_Back.Location = New System.Drawing.Point(704, 728)
-        Me.Button_Back.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Button_Back.Name = "Button_Back"
-        Me.Button_Back.Size = New System.Drawing.Size(70, 20)
-        Me.Button_Back.TabIndex = 16
-        Me.Button_Back.TabStop = True
-        Me.Button_Back.Text = "Previous"
+        Me.prevLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.prevLnkLbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.prevLnkLbl.AutoSize = True
+        Me.prevLnkLbl.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prevLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.prevLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.prevLnkLbl.Location = New System.Drawing.Point(704, 728)
+        Me.prevLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.prevLnkLbl.Name = "prevLnkLbl"
+        Me.prevLnkLbl.Size = New System.Drawing.Size(70, 20)
+        Me.prevLnkLbl.TabIndex = 16
+        Me.prevLnkLbl.TabStop = True
+        Me.prevLnkLbl.Text = "Previous"
         '
-        'LinkLabel13
+        'nextLnkLbl
         '
-        Me.LinkLabel13.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.LinkLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.LinkLabel13.AutoSize = True
-        Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel13.Location = New System.Drawing.Point(926, 728)
-        Me.LinkLabel13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LinkLabel13.Name = "LinkLabel13"
-        Me.LinkLabel13.Size = New System.Drawing.Size(43, 20)
-        Me.LinkLabel13.TabIndex = 16
-        Me.LinkLabel13.TabStop = True
-        Me.LinkLabel13.Text = "Next"
+        Me.nextLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.nextLnkLbl.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.nextLnkLbl.AutoSize = True
+        Me.nextLnkLbl.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nextLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.nextLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.nextLnkLbl.Location = New System.Drawing.Point(926, 728)
+        Me.nextLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.nextLnkLbl.Name = "nextLnkLbl"
+        Me.nextLnkLbl.Size = New System.Drawing.Size(43, 20)
+        Me.nextLnkLbl.TabIndex = 16
+        Me.nextLnkLbl.TabStop = True
+        Me.nextLnkLbl.Text = "Next"
         '
         'FlowLayoutPanel1
         '
@@ -812,8 +812,8 @@ Partial Class Main
     Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
     Friend WithEvents LinkLabel3 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
-    Friend WithEvents Button_Back As LinkLabel
-    Friend WithEvents LinkLabel13 As LinkLabel
+    Friend WithEvents prevLnkLbl As LinkLabel
+    Friend WithEvents nextLnkLbl As LinkLabel
     Friend WithEvents PageNumLabel As Label
     Friend WithEvents loginBtn As Button
 End Class

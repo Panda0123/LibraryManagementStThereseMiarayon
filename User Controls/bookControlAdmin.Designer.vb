@@ -30,13 +30,13 @@ Partial Class bookControlAdmin
         Me.Label1 = New System.Windows.Forms.Label()
         Me.bAuthor = New System.Windows.Forms.Label()
         Me.bTitle = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.coverPcBx = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bPublisher
@@ -146,16 +146,16 @@ Partial Class bookControlAdmin
         Me.bTitle.TabIndex = 9
         Me.bTitle.Text = "Star wars: the rise of Skywalker the visual dictionary (2019)"
         '
-        'PictureBox1
+        'coverPcBx
         '
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
-        Me.PictureBox1.Location = New System.Drawing.Point(22, 23)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(158, 136)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
+        Me.coverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.pic_1
+        Me.coverPcBx.Location = New System.Drawing.Point(22, 23)
+        Me.coverPcBx.Margin = New System.Windows.Forms.Padding(2)
+        Me.coverPcBx.Name = "coverPcBx"
+        Me.coverPcBx.Size = New System.Drawing.Size(158, 136)
+        Me.coverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.coverPcBx.TabIndex = 8
+        Me.coverPcBx.TabStop = False
         '
         'ShapeContainer1
         '
@@ -237,12 +237,12 @@ Partial Class bookControlAdmin
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.bAuthor)
         Me.Controls.Add(Me.bTitle)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.coverPcBx)
         Me.Controls.Add(Me.ShapeContainer1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "bookControlAdmin"
         Me.Size = New System.Drawing.Size(1054, 185)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -256,7 +256,7 @@ Partial Class bookControlAdmin
     Friend WithEvents Label1 As Label
     Friend WithEvents bAuthor As Label
     Friend WithEvents bTitle As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents coverPcBx As PictureBox
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
     Friend WithEvents LinkLabel1 As LinkLabel

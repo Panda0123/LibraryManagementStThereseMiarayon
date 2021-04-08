@@ -14,7 +14,7 @@ Public Class Main
     Private searchKey As String = String.Empty
 
     Private PageIndex As Integer = 0
-    Private BooksPerPage As Integer = 3 'number of books shown on each page
+    Private BooksPerPage As Integer = 2 'number of books shown on each page
 
     Private viewBook As New viewBook
 
@@ -28,15 +28,24 @@ Public Class Main
             bookDP.Add(New bookDisplay(viewBook))
         Next
 
+        setResult()
         initializeResult()
     End Sub
 
-    Private Sub Button_Back_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Button_Back.LinkClicked
-        LoadPage(False) 'false indicates to go back a page
+    Private Sub prevLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles prevLnkLbl.LinkClicked
+        ' LoadPage(False) 'false indicates to go back a page
+        If PageIndex > 0 Then
+            PageIndex -= 1
+            initializeResult()
+        End If
     End Sub
 
-    Private Sub LinkLabel13_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel13.LinkClicked
-        LoadPage(True) 'true indicates to go forward a page
+    Private Sub nextLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles nextLnkLbl.LinkClicked
+        ' LoadPage(True) 'true indicates to go forward a page
+        If PageIndex + 1 < numPage Then
+            PageIndex += 1
+            initializeResult()
+        End If
     End Sub
     Private Sub LoadPage(ByVal pgNext As Boolean)
 
@@ -116,9 +125,6 @@ Public Class Main
         utils.clickAnimation(publisherBtn, pub_click)
         utils.dropDownAnimationpub(pubPanel)
     End Sub
-
-
-
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
         loginBtn.ForeColor = Color.FromArgb(0, 54, 99)
         login.ShowDialog()
@@ -132,8 +138,6 @@ Public Class Main
     Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs)
         loginBtn.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
-
-
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         newTitlePanel.Height = 127
@@ -195,17 +199,24 @@ Public Class Main
         End If
     End Sub
 
-    ' results
-    Public Sub initializeResult() Handles searchPcBx.Click
-        FlowLayoutPanel1.Controls.Clear()
+    Public Sub serchPcBx_Clicked(sender As Object, e As EventArgs) Handles searchPcBx.Click
+        setResult()
+        initializeResult()
+    End Sub
 
+    ' results
+    Private Sub setResult()
         If Not searchTextBox.Text.Equals("Search...") Then
             searchKey = searchTextBox.Text.Replace(" ", "+")
         End If
         totalResult = BookController.getNumBkResult(searchKey)
+        Debug.WriteLine(totalResult.ToString)
         numPage = totalResult / BooksPerPage
-
+        Debug.WriteLine(numPage.ToString)
         PageIndex = 0
+    End Sub
+    Public Sub initializeResult()
+        FlowLayoutPanel1.Controls.Clear()
         Select Case sortBy
             Case "DateAdded"
                 RadioButtonNewlyAdded.Checked = True
@@ -218,12 +229,11 @@ Public Class Main
 
         setBookDisplayResults()
         loadImage()
+        setPaginationControls()
     End Sub
-
 
     Private Sub setBookDisplayResults()
         Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, sortBy, searchKey)
-
         For idx As Integer = 0 To bkDTOs.Count - 1
             bookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
             FlowLayoutPanel1.Controls.Add(bookDP.Item(idx))
@@ -238,6 +248,21 @@ Public Class Main
                 bkDisplay.coverPcBx.Image = My.Resources.default_book
             End If
         Next
+    End Sub
+
+    Private Sub setPaginationControls()
+        If PageIndex + 1 >= numPage Then
+            nextLnkLbl.Visible = False
+        Else
+            nextLnkLbl.Visible = True
+        End If
+
+        If PageIndex <= 0 Then
+            prevLnkLbl.Visible = False
+        Else
+            prevLnkLbl.Visible = True
+        End If
+        PageNumLabel.Text = "Page " & (1 + PageIndex).ToString 'set the text to the Page Number
     End Sub
 
 End Class

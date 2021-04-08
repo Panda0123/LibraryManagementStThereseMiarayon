@@ -105,8 +105,8 @@ Public Class viewBook
         Next
         ReservedNO.Text = numberOfReserved
         BorrowedNO.Text = numberOfBorrowed
-        ' numberOfAvailable = bkDTO.quantity - numberOfBorrowed - numberOfReserved
-        AvailabeNO.Text = bkDTO.numAvailable
+        numberOfAvailable = bkDTO.quantity - numberOfBorrowed - numberOfReserved
+        AvailabeNO.Text = numberOfAvailable
 
         'status
         If bkDTO.numAvailable = 0 Then

@@ -25,7 +25,7 @@ Partial Class adminView
         Dim TopPanel As System.Windows.Forms.Panel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.searchPcBx = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -50,7 +50,7 @@ Partial Class adminView
         TopPanel = New System.Windows.Forms.Panel()
         TopPanel.SuspendLayout()
         Me.TitleLogoSearchPanel.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,14 +70,14 @@ Partial Class adminView
         TopPanel.Location = New System.Drawing.Point(301, 0)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1218, 197)
+        TopPanel.Size = New System.Drawing.Size(1150, 197)
         TopPanel.TabIndex = 2
         '
         'TitleLogoSearchPanel
         '
         Me.TitleLogoSearchPanel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TitleLogoSearchPanel.BackColor = System.Drawing.Color.White
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox8)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.searchPcBx)
         Me.TitleLogoSearchPanel.Controls.Add(Me.searchTextBox)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox9)
         Me.TitleLogoSearchPanel.Controls.Add(Me.Label1)
@@ -85,7 +85,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(313, 24)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(279, 24)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -93,17 +93,17 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.TabIndex = 1
         '
-        'PictureBox8
+        'searchPcBx
         '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.searchPcBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(426, 76)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(26, 25)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
+        Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
+        Me.searchPcBx.Location = New System.Drawing.Point(426, 76)
+        Me.searchPcBx.Name = "searchPcBx"
+        Me.searchPcBx.Size = New System.Drawing.Size(26, 25)
+        Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.searchPcBx.TabIndex = 12
+        Me.searchPcBx.TabStop = False
         '
         'searchTextBox
         '
@@ -202,7 +202,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1218, 197)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1150, 197)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -212,7 +212,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1386, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1352, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -223,7 +223,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1384, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1350, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -258,7 +258,7 @@ Partial Class adminView
         Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
         Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1779, 1810)
+        Me.backgrounPanel.Size = New System.Drawing.Size(1711, 1810)
         Me.backgrounPanel.TabIndex = 3
         '
         'collectionsPanel
@@ -268,7 +268,7 @@ Partial Class adminView
         Me.collectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.collectionsPanel.Location = New System.Drawing.Point(318, 6)
         Me.collectionsPanel.Name = "collectionsPanel"
-        Me.collectionsPanel.Size = New System.Drawing.Size(1523, 1740)
+        Me.collectionsPanel.Size = New System.Drawing.Size(1455, 1740)
         Me.collectionsPanel.TabIndex = 3
         '
         'addBookPanel
@@ -288,7 +288,7 @@ Partial Class adminView
         Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.recordsPanel.Location = New System.Drawing.Point(318, 6)
         Me.recordsPanel.Name = "recordsPanel"
-        Me.recordsPanel.Size = New System.Drawing.Size(1710, 950)
+        Me.recordsPanel.Size = New System.Drawing.Size(1642, 950)
         Me.recordsPanel.TabIndex = 0
         '
         'LeftSidePanel
@@ -384,7 +384,7 @@ Partial Class adminView
         Me.viewBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.viewBookPanel.Location = New System.Drawing.Point(318, 6)
         Me.viewBookPanel.Name = "viewBookPanel"
-        Me.viewBookPanel.Size = New System.Drawing.Size(1460, 1803)
+        Me.viewBookPanel.Size = New System.Drawing.Size(1392, 1803)
         Me.viewBookPanel.TabIndex = 2
         '
         'adminView
@@ -406,7 +406,7 @@ Partial Class adminView
         TopPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -431,7 +431,7 @@ Partial Class adminView
     Friend WithEvents recordsPanel As Panel
     Friend WithEvents signOutBtn As LinkLabel
     Friend WithEvents TitleLogoSearchPanel As Panel
-    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents searchPcBx As PictureBox
     Friend WithEvents searchTextBox As TextBox
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label1 As Label

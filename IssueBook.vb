@@ -1,5 +1,6 @@
 ﻿Public Class IssueBook
     'Private Sub IssueBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim userDTO As UserDTO
 
     'End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -27,6 +28,10 @@
     End Sub
 
     Private Sub IssueBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 End Class
