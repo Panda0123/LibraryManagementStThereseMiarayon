@@ -6,7 +6,7 @@
     Private pub_click As Integer = 0
 
     Private PageIndex As Integer = 0
-    Private BooksPerPage As Integer = 6 'number of books shown on each page
+    Private BooksPerPage As Integer = 5 'number of books shown on each page
 
     Public Sub New()
         InitializeComponent()
@@ -74,7 +74,7 @@
 
 
 
-    Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs) Handles searchTextBox.MouseHover, searchTextBox.Click, searchTextBox.KeyPress
+    Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs)
         If searchTextBox.Text.Equals("Search...") Then
             searchTextBox.Text = ""
             searchTextBox.ForeColor = Color.FromArgb(0, 0, 0)
@@ -89,7 +89,7 @@
 
     End Sub
 
-    Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs) Handles searchTextBox.MouseLeave
+    Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs)
         If searchTextBox.Text.Equals("") Then
             searchTextBox.Text = "Search..."
             searchTextBox.ForeColor = Color.FromArgb(119, 117, 117)
@@ -97,31 +97,29 @@
     End Sub
 
 
-
-    Private Sub newTitleBtn_Click(sender As Object, e As EventArgs) Handles newTitleBtn.Click
+    Private Sub newTitleBtn_Click_1(sender As Object, e As EventArgs) Handles newTitleBtn.Click
         newTitle_click += 1
         utils.clickAnimation(newTitleBtn, newTitle_click)
         utils.dropDownAnimationNewTitle(newTitlePanel, authBtn, pbBtn, publisherBtn)
     End Sub
 
-    Private Sub authBtn_Click(sender As Object, e As EventArgs) Handles authBtn.Click
+    Private Sub authBtn_Click_1(sender As Object, e As EventArgs) Handles authBtn.Click
         auth_click += 1
         utils.clickAnimation(authBtn, auth_click)
         utils.dropDownAnimationauthBtn(authPanel, pbBtn, publisherBtn)
     End Sub
 
-    Private Sub pbBtn_Click(sender As Object, e As EventArgs) Handles pbBtn.Click
+    Private Sub pbBtn_Click_1(sender As Object, e As EventArgs) Handles pbBtn.Click
         pb_click += 1
         utils.clickAnimation(pbBtn, pb_click)
         utils.dropDownAnimationpy(pbPanel, publisherBtn)
     End Sub
 
-    Private Sub publisherBtn_Click(sender As Object, e As EventArgs) Handles publisherBtn.Click
+    Private Sub publisherBtn_Click_1(sender As Object, e As EventArgs) Handles publisherBtn.Click
         pub_click += 1
         utils.clickAnimation(publisherBtn, pub_click)
         utils.dropDownAnimationpub(classPanel)
     End Sub
-
 
 
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
@@ -136,8 +134,6 @@
     Private Sub loginBtn_mouseLeave(sender As Object, e As EventArgs)
         loginBtn.ForeColor = Color.FromArgb(0, 0, 0)
     End Sub
-
-
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         newTitlePanel.Height = 127
@@ -182,9 +178,7 @@
 
     End Sub
 
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles beforeYear.SelectedIndexChanged
 
-    End Sub
 End Class
 
 
