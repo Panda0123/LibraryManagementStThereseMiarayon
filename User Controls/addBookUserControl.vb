@@ -2,6 +2,7 @@
 
 Public Class AddBookUserControl
     Private selectedBook As BookDetailsDTO
+    Private adminView As adminView
     Private classifications As List(Of ClassificationDTO)
     Private classificationNames As New List(Of String)
     Private provider As CultureInfo = CultureInfo.InvariantCulture
@@ -10,16 +11,28 @@ Public Class AddBookUserControl
     Private copies As New List(Of BookCopyDTO)
     Private prevCopies As New List(Of BookCopyDTO)
     Private imgFlName As String = ""
-    Private status As New List(Of String)({"Available", "Not Available"})
+    Private status As New List(Of String)({"Available", "Borrowed", "Reserved"})
+
+    Public Sub New(ByRef adminView As adminView)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        Me.adminView = adminView
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
 
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        classifications = CategoryController.getCategories()
-        classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
-        For Each classificationDto As ClassificationDTO In classifications
-            classificationNames.Add(classificationDto.name)
-        Next
-        classificationCmbBx.DataSource = classificationNames
-        ' populate(4)
+        If IsNothing(classifications) Then
+            classifications = CategoryController.getCategories()
+            classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
+            For Each classificationDto As ClassificationDTO In classifications
+                classificationNames.Add(classificationDto.name)
+            Next
+            classificationCmbBx.DataSource = classificationNames
+        End If
+        ' populate(1)
         ' setAuthors()
         empty()
     End Sub
@@ -36,7 +49,7 @@ Public Class AddBookUserControl
         ' TODO: check if same to the size of the copydatagridview
         newBook.language = languageTxtBx.Text
         newBook.summary = summaryRichTxtBx.Text
-        newBook.edition = editionTxtBx.Text
+        newBook.edition = If(editionTxtBx.Text.Equals(""), 0, editionTxtBx.Text)
 
         If publishedDatePicker.Checked Then
             newBook.publishedDate = publishedDatePicker.Value.ToString("yyyy-MM-dd")
@@ -68,13 +81,15 @@ Public Class AddBookUserControl
             hasImg = True
             Dim strt = imgFlName.LastIndexOf(".")
             ext = imgFlName.Substring(strt, imgFlName.Length - strt)
-            newBook.image = "new" + ext ' TODO: set the server to set its image attrs to its id
+            newBook.imageName = "new" + ext ' TODO: set the server to set its image attrs to its id
         Else
-            newBook.image = "empty"
+            newBook.imageName = "empty"
         End If
 
+        authorsDataGrid.CurrentCell = Nothing
         setAuthors()
         newBook.authors = authors
+        copiesDataGridView.CurrentCell = Nothing
         setCopies()
         newBook.copies = copies
         newBook.quantity = copies.Count
@@ -88,6 +103,7 @@ Public Class AddBookUserControl
         MessageBox.Show("Successfully added book!")
         empty()
         populate(response)
+        adminView.viewBookuserCtl.initializeResult()
     End Sub
 
 
@@ -176,7 +192,6 @@ Public Class AddBookUserControl
             Next
         End If
 
-
         ' check if there is changes in copies
         copiesDataGridView.CurrentCell = Nothing
         setCopies()
@@ -201,12 +216,12 @@ Public Class AddBookUserControl
             uploadImg = True
             Dim strt = imgFlName.LastIndexOf(".")
             ext = imgFlName.Substring(strt, imgFlName.Length - strt)
-            selectedBook.image = selectedBook.bookId.ToString + ext
-            attrs.Add("image", selectedBook.image)
+            selectedBook.imageName = selectedBook.bookId.ToString + ext
+            attrs.Add("imageName", selectedBook.imageName)
         Else
-            If String.Compare(selectedBook.image, "empty") <> 0 Then
+            If String.Compare(selectedBook.imageName, "empty") <> 0 Then
                 removeImg = True
-                attrs.Add("image", "empty")
+                attrs.Add("imageName", "empty")
             End If
         End If
 
@@ -216,7 +231,6 @@ Public Class AddBookUserControl
         End If
 
         If updateAuthor Then
-            ' request for update author possible on another thread
             BookController.updateAuthorOfBook(selectedBook.bookId, authors)
         End If
 
@@ -225,16 +239,18 @@ Public Class AddBookUserControl
         End If
 
         If uploadImg Then
-            uploadImage(selectedBook.image)  ' upload the image
+            uploadImage(selectedBook.imageName)  ' upload the image
         ElseIf removeImg Then
-            ImageController.removeImage(selectedBook.image)
+            ImageController.removeImage(selectedBook.imageName)
         End If
         MessageBox.Show("Successfully updated!")
         populate(selectedBook.bookId)
+        adminView.viewBookuserCtl.initializeResult()
     End Sub
 
     Private Sub cancelHoverBtn_Click(sender As Object, e As EventArgs) Handles cancelHoverPcBx.Click
         ' TODO: go back to previous selected tab?
+        empty()
     End Sub
 
     ' authors
@@ -323,8 +339,12 @@ Public Class AddBookUserControl
 
     ' HELPER FUNCTIONS/SUBS
     Private Sub populate(bookId As String)
-
         selectedBook = BookController.getBook(bookId)
+        setSelectedBook(selectedBook)
+    End Sub
+
+    Public Sub setSelectedBook(ByRef selectedBook As BookDetailsDTO)
+        Me.selectedBook = selectedBook
         titleTxtBx.Text = selectedBook.title
         isbnTxtBx.Text = selectedBook.isbn
         languageTxtBx.Text = selectedBook.language
@@ -362,21 +382,33 @@ Public Class AddBookUserControl
 
         ' load copies
         ' TODO: separate thread
-        copies = CopyController.getCopies(selectedBook.bookId)
+        If IsNothing(selectedBook.copies) Then
+            copies = CopyController.getCopies(selectedBook.bookId)
+        Else
+            copies = selectedBook.copies
+        End If
         prevCopies.AddRange(copies)  ' created a copy to check if there is difference when saving later on 
         populateCopies()
         quantityLbl.Text = copiesDataGridView.Rows.Count - 1
-        If String.Compare(selectedBook.image, "empty") <> 0 Then
-            ' TODO: separate thread or process
-            bkPicBx.Image = getImage(selectedBook.image)
+
+        ' image
+        Dim img As Image
+        If String.Compare(selectedBook.imageName, "empty") <> 0 Then
+            If IsNothing(selectedBook.image) Then
+                img = getImage(selectedBook.imageName)
+            Else
+                img = selectedBook.image
+            End If
             removeImgBtn.Visible = True
         Else
-            bkPicBx.Image = My.Resources.default_book
+            img = My.Resources.default_book
             removeImgBtn.Visible = False
         End If
+        bkPicBx.Image = img
         addPcBx.Visible = False
         savePcBx.Visible = True
     End Sub
+
 
     Private Sub populateAuthors()
         authorsDataGrid.Rows.Clear()

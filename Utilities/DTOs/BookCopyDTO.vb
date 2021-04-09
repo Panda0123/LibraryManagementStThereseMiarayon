@@ -4,8 +4,7 @@
     Property id As Int64
     Property copy_num As Int32
     Property status As String
-
-
+    Property title As String
     Public Sub New()
 
     End Sub

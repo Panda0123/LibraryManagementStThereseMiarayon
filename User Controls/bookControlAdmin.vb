@@ -2,13 +2,21 @@
 Public Class bookControlAdmin
 
     Private bkDTO As BookDetailsDTO
-    Private viewBook As New viewBook
+    Private viewBook As viewBook
+    Private issueBook As IssueBook
     Private provider As CultureInfo = CultureInfo.InvariantCulture
     Public imageName As String = ""
+    Private adminView As adminView
 
-    Public Sub New(ByRef viewBook As viewBook)
+    'Public Sub New(ByRef viewBook As viewBook, ByRef issueBook As IssueBook)
+    '    InitializeComponent()
+    '    Me.viewBook = viewBook
+    '    Me.issueBook = issueBook
+    'End Sub
+    Public Sub New(ByRef viewBook As viewBook, ByRef adminView As adminView)
         InitializeComponent()
-        viewBook = viewBook
+        Me.viewBook = viewBook
+        Me.adminView = adminView
     End Sub
 
     Public Sub setBkDTO(ByRef bkDTO As BookDetailsDTO)
@@ -32,13 +40,41 @@ Public Class bookControlAdmin
         Dim publisher = If(bkDTO.publisherAddress Is Nothing, "", "[" + bkDTO.publisherAddress + "]") + If(bkDTO.publisherName Is Nothing, "", " : " + bkDTO.publisherName)
         ' publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
         bPublisher.Text = publisher
-        imageName = bkDTO.image
+        imageName = bkDTO.imageName
+
+        If IsNothing(bkDTO.copies) Then
+            bkDTO.copies = CopyController.getCopies(bkDTO.bookId)
+        End If
+
+        If bkDTO.copies.Any(Function(x) x.status.Equals("Available")) Then
+            bStatus.Text = "Available"
+            bStatus.ForeColor = Color.Lime
+        Else
+            bStatus.Text = "Unavailable"
+            bStatus.ForeColor = Color.Red
+        End If
     End Sub
 
 
-    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+    Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles viewBookLnkLbl.LinkClicked
         viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider)
+        viewBook.setAdminView(adminView)
         Me.viewBook.ShowDialog()
     End Sub
 
+    Private Sub bookControlAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub checkOutLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles checkOutLnkLbl.LinkClicked
+        Dim issueBk As New IssueBook(Nothing)
+        issueBk.setBookDetailsDTOBorrow(Me.bkDTO, provider, Me.coverPcBx.Image, 0)
+        issueBk.ShowDialog()
+    End Sub
+
+    Private Sub reserveLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles reserveLnkLbl.LinkClicked
+        Dim issueBk As New IssueBook(Nothing)
+        issueBk.setBookDetailsDTOReservation(Me.bkDTO, provider, Me.coverPcBx.Image, 0)
+        issueBk.ShowDialog()
+    End Sub
 End Class

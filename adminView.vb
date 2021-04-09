@@ -1,7 +1,7 @@
 ﻿'Imports System.Globalization
 Public Class adminView
-    Dim viewBookuserCtl As New viewBookUserControl
-    Dim addBookuserCtl As New AddBookUserControl
+    Public viewBookuserCtl As New viewBookUserControl(Me)
+    Public addBookuserCtl As New AddBookUserControl(Me)
     Dim recorduserCtl As New recordsUserControl
     Dim collectionsuserCtl As New collectionsUserControl
 
@@ -14,9 +14,8 @@ Public Class adminView
         viewBookPanel.Controls.Add(viewBookuserCtl)
         addBookPanel.Controls.Add(addBookuserCtl)
         recordsPanel.Controls.Add(recorduserCtl)
-
-
         collectionsPanel.Controls.Add(collectionsuserCtl)
+
         viewBookPanel.Visible = True
         addBookPanel.Visible = False
         recordsPanel.Visible = False
@@ -25,13 +24,14 @@ Public Class adminView
 
     Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click
         viewBookPanel.Visible = True
+        viewBookuserCtl.initializeResult()
         addBookPanel.Visible = False
         recordsPanel.Visible = False
         collectionsPanel.Visible = False
     End Sub
 
 
-    Private Sub bokkAddBtn_Click(sender As Object, e As EventArgs) Handles bokkAddBtn.Click
+    Public Sub bokkAddBtn_Click(sender As Object, e As EventArgs) Handles bokkAddBtn.Click
         viewBookPanel.Visible = False
         addBookPanel.Visible = True
         recordsPanel.Visible = False
@@ -41,6 +41,7 @@ Public Class adminView
     Private Sub recordsBtn_Click(sender As Object, e As EventArgs) Handles recordsBtn.Click
         viewBookPanel.Visible = False
         addBookPanel.Visible = False
+        recorduserCtl.onLoad(Nothing, Nothing)
         recordsPanel.Visible = True
         collectionsPanel.Visible = False
     End Sub

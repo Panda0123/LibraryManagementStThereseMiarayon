@@ -190,10 +190,12 @@
     <Compile Include="Utilities\DTOs\BorrowDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
     <Compile Include="Utilities\DTOs\BookCopyDTO.vb" />
+    <Compile Include="Utilities\DTOs\CollectionDTO.vb" />
     <Compile Include="Utilities\DTOs\ReservationDTO.vb" />
     <Compile Include="Utilities\DTOs\SectionDTO.vb" />
     <Compile Include="Utilities\DTOs\UserDTO.vb" />
     <Compile Include="Utilities\methods\utils.vb" />
+    <Compile Include="Utilities\APIClientController\UserController.vb" />
     <Compile Include="viewBook.Designer.vb">
       <DependentUpon>viewBook.vb</DependentUpon>
     </Compile>

@@ -66,6 +66,10 @@ Partial Class viewBook
         Me.MoreInfoPage = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.copiesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.copy_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.checkOutCol = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.reserveCol = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.summaryRchTxtBx = New System.Windows.Forms.RichTextBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -96,10 +100,6 @@ Partial Class viewBook
         Me.DetailsPanel = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.abstractRichTxtBx = New System.Windows.Forms.RichTextBox()
-        Me.copy_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.checkOutCol = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.reserveCol = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TitlePanel.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -628,6 +628,36 @@ Partial Class viewBook
         Me.copiesDataGridView.Size = New System.Drawing.Size(913, 391)
         Me.copiesDataGridView.TabIndex = 30
         '
+        'copy_num
+        '
+        Me.copy_num.HeaderText = "Copy #"
+        Me.copy_num.Name = "copy_num"
+        Me.copy_num.ReadOnly = True
+        Me.copy_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'statusCol
+        '
+        Me.statusCol.HeaderText = "Status"
+        Me.statusCol.Name = "statusCol"
+        Me.statusCol.ReadOnly = True
+        Me.statusCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'checkOutCol
+        '
+        Me.checkOutCol.HeaderText = "Checkout"
+        Me.checkOutCol.Name = "checkOutCol"
+        Me.checkOutCol.ReadOnly = True
+        Me.checkOutCol.Text = "Checkout"
+        Me.checkOutCol.UseColumnTextForButtonValue = True
+        '
+        'reserveCol
+        '
+        Me.reserveCol.HeaderText = "Reserve"
+        Me.reserveCol.Name = "reserveCol"
+        Me.reserveCol.ReadOnly = True
+        Me.reserveCol.Text = "Reserve"
+        Me.reserveCol.UseColumnTextForButtonValue = True
+        '
         'summaryRchTxtBx
         '
         Me.summaryRchTxtBx.BackColor = System.Drawing.Color.White
@@ -759,7 +789,7 @@ Partial Class viewBook
         Me.editBtn.FlatAppearance.BorderSize = 0
         Me.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.editBtn.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.editBtn.Location = New System.Drawing.Point(-1, 146)
+        Me.editBtn.Location = New System.Drawing.Point(-1, 143)
         Me.editBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.editBtn.Name = "editBtn"
         Me.editBtn.Size = New System.Drawing.Size(224, 47)
@@ -789,7 +819,7 @@ Partial Class viewBook
         Me.Location_Btn.FlatAppearance.BorderSize = 0
         Me.Location_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Location_Btn.Font = New System.Drawing.Font("Sitka Display", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Location_Btn.Location = New System.Drawing.Point(-1, 49)
+        Me.Location_Btn.Location = New System.Drawing.Point(-1, 46)
         Me.Location_Btn.Margin = New System.Windows.Forms.Padding(2)
         Me.Location_Btn.Name = "Location_Btn"
         Me.Location_Btn.Size = New System.Drawing.Size(224, 50)
@@ -1012,36 +1042,6 @@ Partial Class viewBook
         Me.abstractRichTxtBx.Size = New System.Drawing.Size(887, 128)
         Me.abstractRichTxtBx.TabIndex = 28
         Me.abstractRichTxtBx.Text = resources.GetString("abstractRichTxtBx.Text")
-        '
-        'copy_num
-        '
-        Me.copy_num.HeaderText = "Copy #"
-        Me.copy_num.Name = "copy_num"
-        Me.copy_num.ReadOnly = True
-        Me.copy_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'statusCol
-        '
-        Me.statusCol.HeaderText = "Status"
-        Me.statusCol.Name = "statusCol"
-        Me.statusCol.ReadOnly = True
-        Me.statusCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'checkOutCol
-        '
-        Me.checkOutCol.HeaderText = "Checkout"
-        Me.checkOutCol.Name = "checkOutCol"
-        Me.checkOutCol.ReadOnly = True
-        Me.checkOutCol.Text = "Checkout"
-        Me.checkOutCol.UseColumnTextForButtonValue = True
-        '
-        'reserveCol
-        '
-        Me.reserveCol.HeaderText = "Reserve"
-        Me.reserveCol.Name = "reserveCol"
-        Me.reserveCol.ReadOnly = True
-        Me.reserveCol.Text = "Reserve"
-        Me.reserveCol.UseColumnTextForButtonValue = True
         '
         'viewBook
         '

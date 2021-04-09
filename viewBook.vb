@@ -2,6 +2,9 @@
 
 Public Class viewBook
     Private copies As List(Of BookCopyDTO)
+    Private bkDTO As BookDetailsDTO
+    Private provider As CultureInfo
+    Private adminView As adminView
     'Private dataGridRows As List()
     Private Sub Location_Btn_Click(sender As Object, e As EventArgs) Handles Location_Btn.Click
         'LocationPage.Location = New Point(364, 0)
@@ -37,6 +40,8 @@ Public Class viewBook
     End Sub
 
     Public Sub setBkDTO(ByRef bkDTO As BookDetailsDTO, ByRef image As Image, ByRef provider As CultureInfo)
+        Me.bkDTO = bkDTO
+        Me.provider = provider
         coverPcBx.Image = image
         ' summary
         summaryRchTxtBx.Text = bkDTO.summary
@@ -87,12 +92,18 @@ Public Class viewBook
         collectionLbl.Text = bkDTO.categoryName
 
         ' copies
-        copies = CopyController.getCopies(bkDTO.bookId)
-        copies.Sort(Function(x, y) x.copy_num.CompareTo(y.copy_num))
+
+        If IsNothing(bkDTO.copies) Then
+            copies = CopyController.getCopies(bkDTO.bookId)
+            copies.Sort(Function(x, y) x.copy_num.CompareTo(y.copy_num))
+            bkDTO.copies = copies
+        Else
+            copies = bkDTO.copies
+        End If
         setCopies()
 
-        ' quantity, reserved, borrowed
-        NumberOfBooksNO.Text = bkDTO.quantity
+            ' quantity, reserved, borrowed
+            NumberOfBooksNO.Text = bkDTO.quantity
         Dim numberOfBorrowed As Integer = 0
         Dim numberOfReserved As Integer = 0
         Dim numberOfAvailable As Integer = 0
@@ -118,7 +129,7 @@ Public Class viewBook
         End If
     End Sub
 
-    Private Sub setCopies()
+    Public Sub setCopies()
         copiesDataGridView.Rows.Clear()
         For Each copy As BookCopyDTO In copies
             copiesDataGridView.Rows.Add({copy.copy_num, copy.status})
@@ -134,15 +145,28 @@ Public Class viewBook
             ' copiesDataGridView.Rows.Item(e.RowIndex)
             If (e.ColumnIndex = 2) Then
                 ' checkout clicked
-                System.Diagnostics.Debug.WriteLine(copiesDataGridView.Item(0, e.RowIndex).Value.ToString + "Checkout")
+                Dim issueBk As New IssueBook(Me)
+                issueBk.setBookDetailsDTOBorrow(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex)
+                issueBk.ShowDialog()
             ElseIf (e.ColumnIndex = 3) Then
                 ' reserved clicked
-                System.Diagnostics.Debug.WriteLine(copiesDataGridView.Item(0, e.RowIndex).Value.ToString + "Reserved")
+                Dim issueBk As New IssueBook(Me)
+                issueBk.setBookDetailsDTOReservation(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex)
+                issueBk.ShowDialog()
             End If
         End If
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Btn_Details_Click(Nothing, Nothing)
+        If Authorization.authToken.Equals(String.Empty) Then
+            editBtn.Enabled = False
+            copiesDataGridView.Columns.Item(2).Visible = False
+            copiesDataGridView.Columns.Item(3).Visible = False
+        Else
+            editBtn.Enabled = True
+            copiesDataGridView.Columns.Item(2).Visible = True
+            copiesDataGridView.Columns.Item(3).Visible = True
+        End If
     End Sub
 
     Private Sub editBtn_MouseLeave(sender As Object, e As EventArgs) Handles editBtn.MouseLeave
@@ -189,5 +213,13 @@ Public Class viewBook
 
     Private Sub MoreInfoPage_Paint(sender As Object, e As PaintEventArgs) Handles MoreInfoPage.Paint
     End Sub
-
+    Private Sub editBtn_Click(sender As Object, e As EventArgs) Handles editBtn.Click
+        Me.bkDTO.image = coverPcBx.Image
+        Me.adminView.bokkAddBtn_Click(Nothing, Nothing)
+        Me.adminView.addBookuserCtl.setSelectedBook(Me.bkDTO)
+        Me.Close()
+    End Sub
+    Public Sub setAdminView(ByRef adminView As adminView)
+        Me.adminView = adminView
+    End Sub
 End Class

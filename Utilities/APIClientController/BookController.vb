@@ -52,7 +52,6 @@ Module BookController
             newUrl = newUrl + key + "=" + attrs.Item(key) + "&"
         Next
         HttpRequestController.HttpRequestPut(newUrl, Authorization.authToken)
-
     End Sub
 
     Public Sub updateAuthorOfBook(id As String, authors As List(Of AuthorDTO))
@@ -60,4 +59,42 @@ Module BookController
         Dim mes = JsonConvert.SerializeObject(authors)
         HttpRequestController.HttpRequestPut(newUrl, mes, Authorization.authToken)
     End Sub
+
+    Public Function addBorrow(newBorrow As BorrowDTO) As String
+        Dim mes = JsonConvert.SerializeObject(newBorrow)
+        Dim response = HttpRequestController.HttpRequestPost(URL + "/admin/borrow", mes, Authorization.authToken)
+        Return JsonConvert.DeserializeObject(Of String)(response)
+    End Function
+
+    Public Function addReservation(newReservation As ReservationDTO) As String
+        Dim mes = JsonConvert.SerializeObject(newReservation)
+        Dim response = HttpRequestController.HttpRequestPost(URL + "/admin/reservation", mes, Authorization.authToken)
+        Return JsonConvert.DeserializeObject(Of String)(response)
+    End Function
+
+    Public Function getAllBorrow() As List(Of BorrowDTO)
+        Dim newUrl = URL + "/all/borrow"
+        Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
+        Return JsonConvert.DeserializeObject(Of List(Of BorrowDTO))(response)
+    End Function
+
+    Public Function getAllReservation() As List(Of ReservationDTO)
+        Dim newUrl = URL + "/all/reservation"
+        Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
+        Return JsonConvert.DeserializeObject(Of List(Of ReservationDTO))(response)
+    End Function
+    Public Sub deleteBorrow(ByRef borrowId As Long)
+        Dim newUrl = URL + "/admin/borrow/" + borrowId.ToString
+        HttpRequestController.HttpRequestDelete(newUrl, Authorization.authToken)
+    End Sub
+    Public Sub deleteReservation(ByRef reservationId As Long)
+        Dim newUrl = URL + "/admin/reservation/" + reservationId.ToString()
+        HttpRequestController.HttpRequestDelete(newUrl, Authorization.authToken)
+    End Sub
+
+    Public Function getBookCollection() As List(Of CollectionDTO)
+        Dim newUrl = URL + "/all/collection"
+        Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
+        Return JsonConvert.DeserializeObject(Of List(Of CollectionDTO))(response)
+    End Function
 End Module

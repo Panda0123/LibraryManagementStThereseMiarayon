@@ -1,7 +1,22 @@
 ﻿Public Class collectionsUserControl
+    Dim collections As List(Of CollectionDTO)
 
+    Private Sub MyBaseLoad(sender As Object, e As EventArgs) Handles Me.Load
+        collections = BookController.getBookCollection()
+        setCollection(collections)
+    End Sub
 
+    Private Sub setCollection(ByRef collectionsLt As List(Of CollectionDTO))
+        bookListView.Items.Clear()
 
+        For Each collection In collectionsLt
+            Dim newItem As New ListViewItem(collection.title)
+            newItem.SubItems.Add(collection.isbn)
+            newItem.SubItems.Add(collection.language)
+            newItem.SubItems.Add(collection.classification)
+            bookListView.Items.Add(newItem)
+        Next
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'sample only
         Dim newItem As New ListViewItem("Sample")

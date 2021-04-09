@@ -10,11 +10,11 @@
 
     Private viewBook As New viewBook
 
-    Public Sub New()
+    Public Sub New(adminView)
         InitializeComponent()
 
         For x As Integer = 1 To BooksPerPage
-            adminbookDP.Add(New bookControlAdmin(viewBook))
+            adminbookDP.Add(New bookControlAdmin(viewBook, adminView))
         Next
 
         setResult()
@@ -25,22 +25,17 @@
         If Not key.Equals("Search...") Then
             Me.searchKey = key.Replace(" ", "+")
         End If
-        totalResult = BookController.getNumBkResult(searchKey)
-        numPage = totalResult / BooksPerPage
         setResult()
         initializeResult()
     End Sub
 
-    Private Sub setResult()
+    Public Sub setResult()
         PageIndex = 0
         totalResult = BookController.getNumBkResult(searchKey)
         numPage = totalResult / BooksPerPage
     End Sub
-    Private Sub initializeResult()
+    Public Sub initializeResult()
         bookDisplayFlowPanel.Controls.Clear()
-
-        totalResult = BookController.getNumBkResult(searchKey)
-        numPage = totalResult / BooksPerPage
 
         setBookDisplayResults()
         loadImage()

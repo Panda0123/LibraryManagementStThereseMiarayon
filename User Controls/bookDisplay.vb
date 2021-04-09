@@ -32,7 +32,19 @@ Public Class bookDisplay
         Dim publisher = If(bkDTO.publisherAddress Is Nothing, "", "[" + bkDTO.publisherAddress + "]") + If(bkDTO.publisherName Is Nothing, "", " : " + bkDTO.publisherName)
         ' publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
         bPublisher.Text = publisher
-        imageName = bkDTO.image
+        imageName = bkDTO.imageName
+
+        If IsNothing(bkDTO.copies) Then
+            bkDTO.copies = CopyController.getCopies(bkDTO.bookId)
+        End If
+
+        If bkDTO.copies.Any(Function(x) x.status.Equals("Available")) Then
+            bStatus.Text = "Available"
+            bStatus.ForeColor = Color.Lime
+        Else
+            bStatus.Text = "Unavailable"
+            bStatus.ForeColor = Color.Red
+        End If
     End Sub
 
 

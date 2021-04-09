@@ -34,20 +34,19 @@ Partial Class IssueBook
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.titleReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.publisherReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.publisherDateReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.languageReserveTxtBx = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.authorsReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.reserveDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.statusReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.editionReserveTxtBx = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
-        Me.TextBox19 = New System.Windows.Forms.TextBox()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.isbnReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.categoryReserveTxtBx = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -57,32 +56,32 @@ Partial Class IssueBook
         Me.Button4 = New System.Windows.Forms.Button()
         Me.buttonReserve = New System.Windows.Forms.Button()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.copyNumReserveCmbBx = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.groupBorrowerDetails = New System.Windows.Forms.GroupBox()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.bookPcBx = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.textBoxId = New System.Windows.Forms.TextBox()
+        Me.fNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.mNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.lNameTxtBx = New System.Windows.Forms.TextBox()
+        Me.addressTxtBx = New System.Windows.Forms.TextBox()
+        Me.sectionTxtBx = New System.Windows.Forms.TextBox()
+        Me.userTypeTxtBx = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.searchUserIdBtn = New System.Windows.Forms.Button()
         Me.labelCategory = New System.Windows.Forms.Label()
         Me.textBoxPublisher = New System.Windows.Forms.TextBox()
         Me.textBoxPubDate = New System.Windows.Forms.TextBox()
         Me.textBoxLanguage = New System.Windows.Forms.TextBox()
         Me.labelShelfID = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.textBoxShelfID = New System.Windows.Forms.TextBox()
         Me.textBoxTitle = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -94,9 +93,9 @@ Partial Class IssueBook
         Me.labelAuthor = New System.Windows.Forms.Label()
         Me.labelLanguage = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.textBoxAuthors = New System.Windows.Forms.TextBox()
+        Me.issueDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.dueDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.textBoxStatus = New System.Windows.Forms.TextBox()
         Me.textBoxEdition = New System.Windows.Forms.TextBox()
         Me.textBoxSeries = New System.Windows.Forms.TextBox()
@@ -106,6 +105,7 @@ Partial Class IssueBook
         Me.labelEdition = New System.Windows.Forms.Label()
         Me.labelVolume = New System.Windows.Forms.Label()
         Me.labelSeries = New System.Windows.Forms.Label()
+        Me.copyNumCmbBx = New System.Windows.Forms.ComboBox()
         Me.TabPage2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.groupBorrowerDetails.SuspendLayout()
@@ -113,7 +113,7 @@ Partial Class IssueBook
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bookPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -145,6 +145,7 @@ Partial Class IssueBook
         Me.Button2.TabIndex = 35
         Me.Button2.Text = "Search"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'buttonBorrow
         '
@@ -197,20 +198,19 @@ Partial Class IssueBook
         Me.TableLayoutPanel3.Controls.Add(Me.Label12, 0, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.Label13, 0, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.Label14, 0, 6)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox9, 1, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox10, 1, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox11, 1, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox12, 1, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox13, 1, 6)
+        Me.TableLayoutPanel3.Controls.Add(Me.titleReserveTxtBx, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.publisherReserveTxtBx, 1, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.publisherDateReserveTxtBx, 1, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.languageReserveTxtBx, 1, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.Label16, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Label17, 0, 8)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox14, 1, 4)
-        Me.TableLayoutPanel3.Controls.Add(Me.DateTimePicker3, 1, 8)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox15, 3, 6)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox16, 3, 5)
+        Me.TableLayoutPanel3.Controls.Add(Me.authorsReserveTxtBx, 1, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.reserveDateTimePicker, 1, 8)
+        Me.TableLayoutPanel3.Controls.Add(Me.statusReserveTxtBx, 3, 6)
+        Me.TableLayoutPanel3.Controls.Add(Me.editionReserveTxtBx, 3, 5)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox18, 3, 3)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox19, 3, 2)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox20, 3, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.isbnReserveTxtBx, 3, 2)
+        Me.TableLayoutPanel3.Controls.Add(Me.categoryReserveTxtBx, 3, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.Label19, 2, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.Label20, 2, 5)
         Me.TableLayoutPanel3.Controls.Add(Me.Label21, 2, 4)
@@ -220,6 +220,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel3.Controls.Add(Me.Button4, 2, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.buttonReserve, 3, 8)
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox17, 3, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.copyNumReserveCmbBx, 1, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
@@ -295,65 +296,56 @@ Partial Class IssueBook
         Me.Label14.TabIndex = 7
         Me.Label14.Text = "LANGUAGE:"
         '
-        'TextBox9
+        'titleReserveTxtBx
         '
-        Me.TextBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox9.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(422, 7)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(452, 25)
-        Me.TextBox9.TabIndex = 12
+        Me.titleReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.titleReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.titleReserveTxtBx.Location = New System.Drawing.Point(422, 47)
+        Me.titleReserveTxtBx.Name = "titleReserveTxtBx"
+        Me.titleReserveTxtBx.ReadOnly = True
+        Me.titleReserveTxtBx.Size = New System.Drawing.Size(452, 25)
+        Me.titleReserveTxtBx.TabIndex = 13
         '
-        'TextBox10
+        'publisherReserveTxtBx
         '
-        Me.TextBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox10.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(422, 47)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(452, 25)
-        Me.TextBox10.TabIndex = 13
+        Me.publisherReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.publisherReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.publisherReserveTxtBx.Location = New System.Drawing.Point(422, 87)
+        Me.publisherReserveTxtBx.Name = "publisherReserveTxtBx"
+        Me.publisherReserveTxtBx.ReadOnly = True
+        Me.publisherReserveTxtBx.Size = New System.Drawing.Size(452, 25)
+        Me.publisherReserveTxtBx.TabIndex = 14
         '
-        'TextBox11
+        'publisherDateReserveTxtBx
         '
-        Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox11.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(422, 87)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(452, 25)
-        Me.TextBox11.TabIndex = 14
+        Me.publisherDateReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.publisherDateReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.publisherDateReserveTxtBx.Location = New System.Drawing.Point(422, 127)
+        Me.publisherDateReserveTxtBx.Name = "publisherDateReserveTxtBx"
+        Me.publisherDateReserveTxtBx.ReadOnly = True
+        Me.publisherDateReserveTxtBx.Size = New System.Drawing.Size(452, 25)
+        Me.publisherDateReserveTxtBx.TabIndex = 15
         '
-        'TextBox12
+        'languageReserveTxtBx
         '
-        Me.TextBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox12.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(422, 127)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.ReadOnly = True
-        Me.TextBox12.Size = New System.Drawing.Size(452, 25)
-        Me.TextBox12.TabIndex = 15
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox13.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(422, 247)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(452, 25)
-        Me.TextBox13.TabIndex = 17
+        Me.languageReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.languageReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.languageReserveTxtBx.Location = New System.Drawing.Point(422, 247)
+        Me.languageReserveTxtBx.Name = "languageReserveTxtBx"
+        Me.languageReserveTxtBx.ReadOnly = True
+        Me.languageReserveTxtBx.Size = New System.Drawing.Size(452, 25)
+        Me.languageReserveTxtBx.TabIndex = 17
         '
         'Label16
         '
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(339, 8)
+        Me.Label16.Location = New System.Drawing.Point(356, 8)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(77, 23)
+        Me.Label16.Size = New System.Drawing.Size(60, 23)
         Me.Label16.TabIndex = 29
-        Me.Label16.Text = "SHELF ID:"
+        Me.Label16.Text = "Copy #:"
         '
         'Label17
         '
@@ -366,47 +358,47 @@ Partial Class IssueBook
         Me.Label17.TabIndex = 30
         Me.Label17.Text = "RESERVE DATE:"
         '
-        'TextBox14
+        'authorsReserveTxtBx
         '
-        Me.TextBox14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox14.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(422, 163)
-        Me.TextBox14.Multiline = True
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.ReadOnly = True
-        Me.TableLayoutPanel3.SetRowSpan(Me.TextBox14, 2)
-        Me.TextBox14.Size = New System.Drawing.Size(452, 74)
-        Me.TextBox14.TabIndex = 32
+        Me.authorsReserveTxtBx.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.authorsReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authorsReserveTxtBx.Location = New System.Drawing.Point(422, 163)
+        Me.authorsReserveTxtBx.Multiline = True
+        Me.authorsReserveTxtBx.Name = "authorsReserveTxtBx"
+        Me.authorsReserveTxtBx.ReadOnly = True
+        Me.TableLayoutPanel3.SetRowSpan(Me.authorsReserveTxtBx, 2)
+        Me.authorsReserveTxtBx.Size = New System.Drawing.Size(452, 74)
+        Me.authorsReserveTxtBx.TabIndex = 32
         '
-        'DateTimePicker3
+        'reserveDateTimePicker
         '
-        Me.DateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TableLayoutPanel3.SetColumnSpan(Me.DateTimePicker3, 2)
-        Me.DateTimePicker3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Location = New System.Drawing.Point(422, 327)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(347, 25)
-        Me.DateTimePicker3.TabIndex = 33
+        Me.reserveDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TableLayoutPanel3.SetColumnSpan(Me.reserveDateTimePicker, 2)
+        Me.reserveDateTimePicker.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reserveDateTimePicker.Location = New System.Drawing.Point(422, 327)
+        Me.reserveDateTimePicker.Name = "reserveDateTimePicker"
+        Me.reserveDateTimePicker.Size = New System.Drawing.Size(347, 25)
+        Me.reserveDateTimePicker.TabIndex = 33
         '
-        'TextBox15
+        'statusReserveTxtBx
         '
-        Me.TextBox15.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox15.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(1191, 247)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(491, 25)
-        Me.TextBox15.TabIndex = 25
+        Me.statusReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.statusReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.statusReserveTxtBx.Location = New System.Drawing.Point(1191, 247)
+        Me.statusReserveTxtBx.Name = "statusReserveTxtBx"
+        Me.statusReserveTxtBx.ReadOnly = True
+        Me.statusReserveTxtBx.Size = New System.Drawing.Size(491, 25)
+        Me.statusReserveTxtBx.TabIndex = 25
         '
-        'TextBox16
+        'editionReserveTxtBx
         '
-        Me.TextBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox16.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(1191, 207)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.ReadOnly = True
-        Me.TextBox16.Size = New System.Drawing.Size(491, 25)
-        Me.TextBox16.TabIndex = 22
+        Me.editionReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.editionReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.editionReserveTxtBx.Location = New System.Drawing.Point(1191, 207)
+        Me.editionReserveTxtBx.Name = "editionReserveTxtBx"
+        Me.editionReserveTxtBx.ReadOnly = True
+        Me.editionReserveTxtBx.Size = New System.Drawing.Size(491, 25)
+        Me.editionReserveTxtBx.TabIndex = 22
         '
         'TextBox18
         '
@@ -418,25 +410,25 @@ Partial Class IssueBook
         Me.TextBox18.Size = New System.Drawing.Size(491, 25)
         Me.TextBox18.TabIndex = 20
         '
-        'TextBox19
+        'isbnReserveTxtBx
         '
-        Me.TextBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox19.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(1191, 87)
-        Me.TextBox19.Name = "TextBox19"
-        Me.TextBox19.ReadOnly = True
-        Me.TextBox19.Size = New System.Drawing.Size(491, 25)
-        Me.TextBox19.TabIndex = 19
+        Me.isbnReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.isbnReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.isbnReserveTxtBx.Location = New System.Drawing.Point(1191, 87)
+        Me.isbnReserveTxtBx.Name = "isbnReserveTxtBx"
+        Me.isbnReserveTxtBx.ReadOnly = True
+        Me.isbnReserveTxtBx.Size = New System.Drawing.Size(491, 25)
+        Me.isbnReserveTxtBx.TabIndex = 19
         '
-        'TextBox20
+        'categoryReserveTxtBx
         '
-        Me.TextBox20.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox20.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(1191, 47)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.ReadOnly = True
-        Me.TextBox20.Size = New System.Drawing.Size(491, 25)
-        Me.TextBox20.TabIndex = 18
+        Me.categoryReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.categoryReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.categoryReserveTxtBx.Location = New System.Drawing.Point(1191, 47)
+        Me.categoryReserveTxtBx.Name = "categoryReserveTxtBx"
+        Me.categoryReserveTxtBx.ReadOnly = True
+        Me.categoryReserveTxtBx.Size = New System.Drawing.Size(491, 25)
+        Me.categoryReserveTxtBx.TabIndex = 18
         '
         'Label19
         '
@@ -540,12 +532,21 @@ Partial Class IssueBook
         Me.TextBox17.Size = New System.Drawing.Size(491, 25)
         Me.TextBox17.TabIndex = 21
         '
+        'copyNumReserveCmbBx
+        '
+        Me.copyNumReserveCmbBx.Font = New System.Drawing.Font("Verdana", 11.25!)
+        Me.copyNumReserveCmbBx.FormattingEnabled = True
+        Me.copyNumReserveCmbBx.Location = New System.Drawing.Point(422, 3)
+        Me.copyNumReserveCmbBx.Name = "copyNumReserveCmbBx"
+        Me.copyNumReserveCmbBx.Size = New System.Drawing.Size(452, 26)
+        Me.copyNumReserveCmbBx.TabIndex = 37
+        '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(945, 48)
+        Me.Label7.Location = New System.Drawing.Point(939, 48)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(89, 23)
         Me.Label7.TabIndex = 10
@@ -572,26 +573,26 @@ Partial Class IssueBook
         '
         'SplitContainer2.Panel1
         '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.PictureBox4)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.bookPcBx)
         '
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.TableLayoutPanel2)
         Me.SplitContainer2.Size = New System.Drawing.Size(1693, 293)
-        Me.SplitContainer2.SplitterDistance = 275
+        Me.SplitContainer2.SplitterDistance = 284
         Me.SplitContainer2.TabIndex = 0
         '
-        'PictureBox4
+        'bookPcBx
         '
-        Me.PictureBox4.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(275, 293)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 0
-        Me.PictureBox4.TabStop = False
+        Me.bookPcBx.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.bookPcBx.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bookPcBx.Image = CType(resources.GetObject("bookPcBx.Image"), System.Drawing.Image)
+        Me.bookPcBx.Location = New System.Drawing.Point(0, 0)
+        Me.bookPcBx.Name = "bookPcBx"
+        Me.bookPcBx.Size = New System.Drawing.Size(284, 293)
+        Me.bookPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.bookPcBx.TabIndex = 0
+        Me.bookPcBx.TabStop = False
         '
         'TableLayoutPanel2
         '
@@ -605,16 +606,16 @@ Partial Class IssueBook
         Me.TableLayoutPanel2.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label5, 0, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.Label6, 0, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox1, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox2, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox3, 1, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox4, 1, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox7, 1, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox6, 3, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox5, 3, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.textBoxId, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.fNameTxtBx, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.mNameTxtBx, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.lNameTxtBx, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.addressTxtBx, 1, 4)
+        Me.TableLayoutPanel2.Controls.Add(Me.sectionTxtBx, 3, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.userTypeTxtBx, 3, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label8, 2, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 2, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.searchUserIdBtn, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
@@ -627,7 +628,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1414, 293)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1405, 293)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'Label1
@@ -635,7 +636,7 @@ Partial Class IssueBook
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(267, 8)
+        Me.Label1.Location = New System.Drawing.Point(265, 8)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(92, 23)
         Me.Label1.TabIndex = 0
@@ -646,7 +647,7 @@ Partial Class IssueBook
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(262, 48)
+        Me.Label2.Location = New System.Drawing.Point(260, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 23)
         Me.Label2.TabIndex = 1
@@ -657,7 +658,7 @@ Partial Class IssueBook
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(247, 88)
+        Me.Label3.Location = New System.Drawing.Point(245, 88)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(112, 23)
         Me.Label3.TabIndex = 2
@@ -668,7 +669,7 @@ Partial Class IssueBook
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(267, 128)
+        Me.Label5.Location = New System.Drawing.Point(265, 128)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(92, 23)
         Me.Label5.TabIndex = 3
@@ -679,105 +680,99 @@ Partial Class IssueBook
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(282, 168)
+        Me.Label6.Location = New System.Drawing.Point(280, 168)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 23)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "ADDRESS:"
         '
-        'TextBox1
+        'textBoxId
         '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(365, 7)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(369, 25)
-        Me.TextBox1.TabIndex = 5
+        Me.textBoxId.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.textBoxId.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBoxId.Location = New System.Drawing.Point(363, 7)
+        Me.textBoxId.Name = "textBoxId"
+        Me.textBoxId.Size = New System.Drawing.Size(367, 25)
+        Me.textBoxId.TabIndex = 5
         '
-        'TextBox2
+        'fNameTxtBx
         '
-        Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(365, 47)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(369, 25)
-        Me.TextBox2.TabIndex = 6
+        Me.fNameTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.fNameTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fNameTxtBx.Location = New System.Drawing.Point(363, 47)
+        Me.fNameTxtBx.Name = "fNameTxtBx"
+        Me.fNameTxtBx.Size = New System.Drawing.Size(367, 25)
+        Me.fNameTxtBx.TabIndex = 6
         '
-        'TextBox3
+        'mNameTxtBx
         '
-        Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(365, 87)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(369, 25)
-        Me.TextBox3.TabIndex = 7
+        Me.mNameTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.mNameTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mNameTxtBx.Location = New System.Drawing.Point(363, 87)
+        Me.mNameTxtBx.Name = "mNameTxtBx"
+        Me.mNameTxtBx.Size = New System.Drawing.Size(367, 25)
+        Me.mNameTxtBx.TabIndex = 7
         '
-        'TextBox4
+        'lNameTxtBx
         '
-        Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox4.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(365, 127)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(369, 25)
-        Me.TextBox4.TabIndex = 8
+        Me.lNameTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lNameTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lNameTxtBx.Location = New System.Drawing.Point(363, 127)
+        Me.lNameTxtBx.Name = "lNameTxtBx"
+        Me.lNameTxtBx.Size = New System.Drawing.Size(367, 25)
+        Me.lNameTxtBx.TabIndex = 8
         '
-        'TextBox7
+        'addressTxtBx
         '
-        Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox7, 2)
-        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox7.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(365, 163)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TableLayoutPanel2.SetRowSpan(Me.TextBox7, 2)
-        Me.TextBox7.Size = New System.Drawing.Size(669, 74)
-        Me.TextBox7.TabIndex = 14
+        Me.TableLayoutPanel2.SetColumnSpan(Me.addressTxtBx, 2)
+        Me.addressTxtBx.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.addressTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addressTxtBx.Location = New System.Drawing.Point(363, 163)
+        Me.addressTxtBx.Multiline = True
+        Me.addressTxtBx.Name = "addressTxtBx"
+        Me.TableLayoutPanel2.SetRowSpan(Me.addressTxtBx, 2)
+        Me.addressTxtBx.Size = New System.Drawing.Size(665, 74)
+        Me.addressTxtBx.TabIndex = 14
         '
-        'TextBox6
+        'sectionTxtBx
         '
-        Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox6.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(1040, 87)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(371, 25)
-        Me.TextBox6.TabIndex = 13
+        Me.sectionTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.sectionTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sectionTxtBx.Location = New System.Drawing.Point(1034, 87)
+        Me.sectionTxtBx.Name = "sectionTxtBx"
+        Me.sectionTxtBx.Size = New System.Drawing.Size(368, 25)
+        Me.sectionTxtBx.TabIndex = 13
         '
-        'TextBox5
+        'userTypeTxtBx
         '
-        Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox5.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(1040, 47)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(371, 25)
-        Me.TextBox5.TabIndex = 12
+        Me.userTypeTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.userTypeTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.userTypeTxtBx.Location = New System.Drawing.Point(1034, 47)
+        Me.userTypeTxtBx.Name = "userTypeTxtBx"
+        Me.userTypeTxtBx.Size = New System.Drawing.Size(368, 25)
+        Me.userTypeTxtBx.TabIndex = 12
         '
         'Label8
         '
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(960, 88)
+        Me.Label8.Location = New System.Drawing.Point(954, 88)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(74, 23)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "SECTION:"
         '
-        'Button1
+        'searchUserIdBtn
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(740, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 34)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.searchUserIdBtn.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.searchUserIdBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchUserIdBtn.Location = New System.Drawing.Point(736, 3)
+        Me.searchUserIdBtn.Name = "searchUserIdBtn"
+        Me.searchUserIdBtn.Size = New System.Drawing.Size(93, 34)
+        Me.searchUserIdBtn.TabIndex = 15
+        Me.searchUserIdBtn.Text = "Search"
+        Me.searchUserIdBtn.UseVisualStyleBackColor = True
         '
         'labelCategory
         '
@@ -825,11 +820,11 @@ Partial Class IssueBook
         Me.labelShelfID.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelShelfID.AutoSize = True
         Me.labelShelfID.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelShelfID.Location = New System.Drawing.Point(339, 8)
+        Me.labelShelfID.Location = New System.Drawing.Point(356, 8)
         Me.labelShelfID.Name = "labelShelfID"
-        Me.labelShelfID.Size = New System.Drawing.Size(77, 23)
+        Me.labelShelfID.Size = New System.Drawing.Size(60, 23)
         Me.labelShelfID.TabIndex = 29
-        Me.labelShelfID.Text = "SHELF ID:"
+        Me.labelShelfID.Text = "Copy #:"
         '
         'Label9
         '
@@ -841,15 +836,6 @@ Partial Class IssueBook
         Me.Label9.Size = New System.Drawing.Size(104, 23)
         Me.Label9.TabIndex = 30
         Me.Label9.Text = "ISSUED DATE:"
-        '
-        'textBoxShelfID
-        '
-        Me.textBoxShelfID.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.textBoxShelfID.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxShelfID.Location = New System.Drawing.Point(422, 7)
-        Me.textBoxShelfID.Name = "textBoxShelfID"
-        Me.textBoxShelfID.Size = New System.Drawing.Size(452, 25)
-        Me.textBoxShelfID.TabIndex = 12
         '
         'textBoxTitle
         '
@@ -917,7 +903,6 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.labelPubDate, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.labelAuthor, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.labelLanguage, 0, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.textBoxShelfID, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxTitle, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxPublisher, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxPubDate, 1, 3)
@@ -925,9 +910,9 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.labelShelfID, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label9, 0, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 9)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox8, 1, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 8)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 1, 9)
+        Me.TableLayoutPanel1.Controls.Add(Me.textBoxAuthors, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.issueDateTimePicker, 1, 8)
+        Me.TableLayoutPanel1.Controls.Add(Me.dueDateTimePicker, 1, 9)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxStatus, 3, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxEdition, 3, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxSeries, 3, 3)
@@ -942,6 +927,7 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.Button2, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.buttonBorrow, 3, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxVolume, 3, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.copyNumCmbBx, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
@@ -1028,36 +1014,36 @@ Partial Class IssueBook
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "DUE DATE:"
         '
-        'TextBox8
+        'textBoxAuthors
         '
-        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox8.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(422, 163)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TableLayoutPanel1.SetRowSpan(Me.TextBox8, 2)
-        Me.TextBox8.Size = New System.Drawing.Size(452, 74)
-        Me.TextBox8.TabIndex = 32
+        Me.textBoxAuthors.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.textBoxAuthors.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBoxAuthors.Location = New System.Drawing.Point(422, 163)
+        Me.textBoxAuthors.Multiline = True
+        Me.textBoxAuthors.Name = "textBoxAuthors"
+        Me.textBoxAuthors.ReadOnly = True
+        Me.TableLayoutPanel1.SetRowSpan(Me.textBoxAuthors, 2)
+        Me.textBoxAuthors.Size = New System.Drawing.Size(452, 74)
+        Me.textBoxAuthors.TabIndex = 32
         '
-        'DateTimePicker1
+        'issueDateTimePicker
         '
-        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DateTimePicker1, 2)
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(422, 327)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(347, 25)
-        Me.DateTimePicker1.TabIndex = 33
+        Me.issueDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.TableLayoutPanel1.SetColumnSpan(Me.issueDateTimePicker, 2)
+        Me.issueDateTimePicker.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.issueDateTimePicker.Location = New System.Drawing.Point(422, 327)
+        Me.issueDateTimePicker.Name = "issueDateTimePicker"
+        Me.issueDateTimePicker.Size = New System.Drawing.Size(347, 25)
+        Me.issueDateTimePicker.TabIndex = 33
         '
-        'DateTimePicker2
+        'dueDateTimePicker
         '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DateTimePicker2, 2)
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(422, 363)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(347, 25)
-        Me.DateTimePicker2.TabIndex = 34
+        Me.TableLayoutPanel1.SetColumnSpan(Me.dueDateTimePicker, 2)
+        Me.dueDateTimePicker.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dueDateTimePicker.Location = New System.Drawing.Point(422, 363)
+        Me.dueDateTimePicker.Name = "dueDateTimePicker"
+        Me.dueDateTimePicker.Size = New System.Drawing.Size(347, 25)
+        Me.dueDateTimePicker.TabIndex = 34
         '
         'textBoxStatus
         '
@@ -1153,6 +1139,15 @@ Partial Class IssueBook
         Me.labelSeries.TabIndex = 9
         Me.labelSeries.Text = "SERIES:"
         '
+        'copyNumCmbBx
+        '
+        Me.copyNumCmbBx.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.copyNumCmbBx.FormattingEnabled = True
+        Me.copyNumCmbBx.Location = New System.Drawing.Point(422, 3)
+        Me.copyNumCmbBx.Name = "copyNumCmbBx"
+        Me.copyNumCmbBx.Size = New System.Drawing.Size(452, 26)
+        Me.copyNumCmbBx.TabIndex = 38
+        '
         'IssueBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1177,7 +1172,7 @@ Partial Class IssueBook
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bookPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
@@ -1202,7 +1197,6 @@ Partial Class IssueBook
     Friend WithEvents labelPubDate As Label
     Friend WithEvents labelAuthor As Label
     Friend WithEvents labelLanguage As Label
-    Friend WithEvents textBoxShelfID As TextBox
     Friend WithEvents textBoxTitle As TextBox
     Friend WithEvents textBoxPublisher As TextBox
     Friend WithEvents textBoxPubDate As TextBox
@@ -1210,9 +1204,9 @@ Partial Class IssueBook
     Friend WithEvents labelShelfID As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents textBoxAuthors As TextBox
+    Friend WithEvents issueDateTimePicker As DateTimePicker
+    Friend WithEvents dueDateTimePicker As DateTimePicker
     Friend WithEvents textBoxStatus As TextBox
     Friend WithEvents textBoxEdition As TextBox
     Friend WithEvents textBoxSeries As TextBox
@@ -1231,20 +1225,19 @@ Partial Class IssueBook
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents titleReserveTxtBx As TextBox
+    Friend WithEvents publisherReserveTxtBx As TextBox
+    Friend WithEvents publisherDateReserveTxtBx As TextBox
+    Friend WithEvents languageReserveTxtBx As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents DateTimePicker3 As DateTimePicker
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents authorsReserveTxtBx As TextBox
+    Friend WithEvents reserveDateTimePicker As DateTimePicker
+    Friend WithEvents statusReserveTxtBx As TextBox
+    Friend WithEvents editionReserveTxtBx As TextBox
     Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents TextBox20 As TextBox
+    Friend WithEvents isbnReserveTxtBx As TextBox
+    Friend WithEvents categoryReserveTxtBx As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
@@ -1257,23 +1250,25 @@ Partial Class IssueBook
     Friend WithEvents Label7 As Label
     Friend WithEvents groupBorrowerDetails As GroupBox
     Friend WithEvents SplitContainer2 As SplitContainer
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents bookPcBx As PictureBox
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents textBoxId As TextBox
+    Friend WithEvents fNameTxtBx As TextBox
+    Friend WithEvents mNameTxtBx As TextBox
+    Friend WithEvents lNameTxtBx As TextBox
+    Friend WithEvents addressTxtBx As TextBox
+    Friend WithEvents sectionTxtBx As TextBox
+    Friend WithEvents userTypeTxtBx As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents searchUserIdBtn As Button
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents copyNumCmbBx As ComboBox
+    Friend WithEvents copyNumReserveCmbBx As ComboBox
 End Class

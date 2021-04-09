@@ -127,11 +127,13 @@ Public Class Main
     End Sub
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
         loginBtn.ForeColor = Color.FromArgb(0, 54, 99)
-        login.ShowDialog()
+        Dim lgIn As New login
+        lgIn.ShowDialog()
     End Sub
 
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
-        advanceSearch.ShowDialog()
+        Dim advSearch = New advanceSearch
+        advSearch.ShowDialog()
     End Sub
 
 

@@ -33,9 +33,9 @@ Partial Class bookControlAdmin
         Me.coverPcBx = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.checkOutLnkLbl = New System.Windows.Forms.LinkLabel()
+        Me.reserveLnkLbl = New System.Windows.Forms.LinkLabel()
+        Me.viewBookLnkLbl = New System.Windows.Forms.LinkLabel()
         CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -177,58 +177,58 @@ Partial Class bookControlAdmin
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(1020, 162)
         '
-        'LinkLabel1
+        'checkOutLnkLbl
         '
-        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(632, 136)
-        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(94, 28)
-        Me.LinkLabel1.TabIndex = 18
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Check Out"
+        Me.checkOutLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.checkOutLnkLbl.AutoSize = True
+        Me.checkOutLnkLbl.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.checkOutLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.checkOutLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.checkOutLnkLbl.Location = New System.Drawing.Point(632, 136)
+        Me.checkOutLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.checkOutLnkLbl.Name = "checkOutLnkLbl"
+        Me.checkOutLnkLbl.Size = New System.Drawing.Size(94, 28)
+        Me.checkOutLnkLbl.TabIndex = 18
+        Me.checkOutLnkLbl.TabStop = True
+        Me.checkOutLnkLbl.Text = "Check Out"
         '
-        'LinkLabel2
+        'reserveLnkLbl
         '
-        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(734, 136)
-        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(76, 28)
-        Me.LinkLabel2.TabIndex = 19
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Reserve"
+        Me.reserveLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.reserveLnkLbl.AutoSize = True
+        Me.reserveLnkLbl.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reserveLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.reserveLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.reserveLnkLbl.Location = New System.Drawing.Point(734, 136)
+        Me.reserveLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.reserveLnkLbl.Name = "reserveLnkLbl"
+        Me.reserveLnkLbl.Size = New System.Drawing.Size(76, 28)
+        Me.reserveLnkLbl.TabIndex = 19
+        Me.reserveLnkLbl.TabStop = True
+        Me.reserveLnkLbl.Text = "Reserve"
         '
-        'LinkLabel3
+        'viewBookLnkLbl
         '
-        Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(879, 75)
-        Me.LinkLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(111, 32)
-        Me.LinkLabel3.TabIndex = 18
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "View Book"
+        Me.viewBookLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.viewBookLnkLbl.AutoSize = True
+        Me.viewBookLnkLbl.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.viewBookLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.viewBookLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.viewBookLnkLbl.Location = New System.Drawing.Point(879, 75)
+        Me.viewBookLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.viewBookLnkLbl.Name = "viewBookLnkLbl"
+        Me.viewBookLnkLbl.Size = New System.Drawing.Size(111, 32)
+        Me.viewBookLnkLbl.TabIndex = 18
+        Me.viewBookLnkLbl.TabStop = True
+        Me.viewBookLnkLbl.Text = "View Book"
         '
         'bookControlAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.LinkLabel3)
-        Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.viewBookLnkLbl)
+        Me.Controls.Add(Me.reserveLnkLbl)
+        Me.Controls.Add(Me.checkOutLnkLbl)
         Me.Controls.Add(Me.bPublisher)
         Me.Controls.Add(Me.bStatus)
         Me.Controls.Add(Me.Label5)
@@ -259,7 +259,7 @@ Partial Class bookControlAdmin
     Friend WithEvents coverPcBx As PictureBox
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
-    Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents checkOutLnkLbl As LinkLabel
+    Friend WithEvents reserveLnkLbl As LinkLabel
+    Friend WithEvents viewBookLnkLbl As LinkLabel
 End Class
