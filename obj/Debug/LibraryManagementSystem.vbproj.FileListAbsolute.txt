@@ -103,3 +103,4 @@ D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManageme
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.recordsUserControl.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.TemporaryLogin.resources
 D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.viewBookUserControl.resources
+D:\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
