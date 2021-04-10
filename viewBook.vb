@@ -5,6 +5,7 @@ Public Class viewBook
     Private bkDTO As BookDetailsDTO
     Private provider As CultureInfo
     Private adminView As adminView
+    Private bookControlAdmin As bookControlAdmin
     'Private dataGridRows As List()
     Private Sub Location_Btn_Click(sender As Object, e As EventArgs) Handles Location_Btn.Click
         'LocationPage.Location = New Point(364, 0)
@@ -39,9 +40,12 @@ Public Class viewBook
         MoreInformation_Btn.BackColor = Color.Gray
     End Sub
 
-    Public Sub setBkDTO(ByRef bkDTO As BookDetailsDTO, ByRef image As Image, ByRef provider As CultureInfo)
+    Public Sub setBkDTO(ByRef bkDTO As BookDetailsDTO, ByRef image As Image, ByRef provider As CultureInfo, ByRef bookControlAdmin As bookControlAdmin, ByRef adminView As adminView)
         Me.bkDTO = bkDTO
         Me.provider = provider
+        Me.bookControlAdmin = bookControlAdmin
+        Me.adminView = adminView
+
         coverPcBx.Image = image
         ' summary
         summaryRchTxtBx.Text = bkDTO.summary
@@ -92,6 +96,12 @@ Public Class viewBook
         collectionLbl.Text = bkDTO.categoryName
 
         ' copies
+        setCopies()
+
+    End Sub
+
+    Public Sub setCopies()
+        copiesDataGridView.Rows.Clear()
 
         If IsNothing(bkDTO.copies) Then
             copies = CopyController.getCopies(bkDTO.bookId)
@@ -100,41 +110,40 @@ Public Class viewBook
         Else
             copies = bkDTO.copies
         End If
-        setCopies()
 
-            ' quantity, reserved, borrowed
-            NumberOfBooksNO.Text = bkDTO.quantity
+        ' quantity, reserved, borrowed
+        NumberOfBooksNO.Text = bkDTO.quantity
         Dim numberOfBorrowed As Integer = 0
         Dim numberOfReserved As Integer = 0
         Dim numberOfAvailable As Integer = 0
         For Each copy As BookCopyDTO In copies
+            copiesDataGridView.Rows.Add({copy.copy_num, copy.status})
             If copy.status.Equals("Borrowed") Then
                 numberOfBorrowed += 1
             ElseIf copy.status.Equals("Reserved") Then
                 numberOfReserved += 1
             End If
         Next
+
         ReservedNO.Text = numberOfReserved
         BorrowedNO.Text = numberOfBorrowed
         numberOfAvailable = bkDTO.quantity - numberOfBorrowed - numberOfReserved
         AvailabeNO.Text = numberOfAvailable
 
         'status
-        If bkDTO.numAvailable = 0 Then
+        If numberOfAvailable = 0 Then
             mainStatusLbl.Text = "Not Available"
             mainStatusLbl.ForeColor = Color.Red
+            statusLbl.Text = "Not Available"
+            statusLbl.ForeColor = Color.Red
         Else
             mainStatusLbl.Text = "Available"
             mainStatusLbl.ForeColor = Color.Lime
+            statusLbl.Text = "Available"
+            statusLbl.ForeColor = Color.Lime
         End If
     End Sub
 
-    Public Sub setCopies()
-        copiesDataGridView.Rows.Clear()
-        For Each copy As BookCopyDTO In copies
-            copiesDataGridView.Rows.Add({copy.copy_num, copy.status})
-        Next
-    End Sub
     Private Sub copiesDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles copiesDataGridView.CellContentClick
         Dim senderGrid = DirectCast(sender, DataGridView)
@@ -145,12 +154,12 @@ Public Class viewBook
             ' copiesDataGridView.Rows.Item(e.RowIndex)
             If (e.ColumnIndex = 2) Then
                 ' checkout clicked
-                Dim issueBk As New IssueBook(Me)
+                Dim issueBk As New IssueBook(Me, Me.bookControlAdmin)
                 issueBk.setBookDetailsDTOBorrow(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex)
                 issueBk.ShowDialog()
             ElseIf (e.ColumnIndex = 3) Then
                 ' reserved clicked
-                Dim issueBk As New IssueBook(Me)
+                Dim issueBk As New IssueBook(Me, Me.bookControlAdmin)
                 issueBk.setBookDetailsDTOReservation(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex)
                 issueBk.ShowDialog()
             End If
@@ -218,8 +227,5 @@ Public Class viewBook
         Me.adminView.bokkAddBtn.PerformClick()
         Me.adminView.addBookuserCtl.setSelectedBook(Me.bkDTO)
         Me.Close()
-    End Sub
-    Public Sub setAdminView(ByRef adminView As adminView)
-        Me.adminView = adminView
     End Sub
 End Class

@@ -586,7 +586,6 @@ Partial Class viewBook
         '
         Me.MoreInfoPage.BackColor = System.Drawing.Color.White
         Me.MoreInfoPage.Controls.Add(Me.Label10)
-        Me.MoreInfoPage.Controls.Add(Me.copiesDataGridView)
         Me.MoreInfoPage.Controls.Add(Me.summaryRchTxtBx)
         Me.MoreInfoPage.Controls.Add(Me.Label39)
         Me.MoreInfoPage.Controls.Add(Me.Label40)
@@ -595,6 +594,7 @@ Partial Class viewBook
         Me.MoreInfoPage.Controls.Add(Me.PictureBox16)
         Me.MoreInfoPage.Controls.Add(Me.Label42)
         Me.MoreInfoPage.Controls.Add(Me.Label43)
+        Me.MoreInfoPage.Controls.Add(Me.copiesDataGridView)
         Me.MoreInfoPage.Location = New System.Drawing.Point(276, 150)
         Me.MoreInfoPage.Margin = New System.Windows.Forms.Padding(2)
         Me.MoreInfoPage.Name = "MoreInfoPage"

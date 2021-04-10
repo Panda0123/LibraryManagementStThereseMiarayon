@@ -8,11 +8,6 @@ Public Class bookControlAdmin
     Public imageName As String = ""
     Private adminView As adminView
 
-    'Public Sub New(ByRef viewBook As viewBook, ByRef issueBook As IssueBook)
-    '    InitializeComponent()
-    '    Me.viewBook = viewBook
-    '    Me.issueBook = issueBook
-    'End Sub
     Public Sub New(ByRef viewBook As viewBook, ByRef adminView As adminView)
         InitializeComponent()
         Me.viewBook = viewBook
@@ -41,9 +36,13 @@ Public Class bookControlAdmin
         ' publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
         bPublisher.Text = publisher
         imageName = bkDTO.imageName
+        setCopies()
+    End Sub
 
+    Public Sub setCopies()
         If IsNothing(bkDTO.copies) Then
             bkDTO.copies = CopyController.getCopies(bkDTO.bookId)
+            bkDTO.copies.Sort(Function(x, y) x.copy_num.CompareTo(y.copy_num))
         End If
 
         If bkDTO.copies.Any(Function(x) x.status.Equals("Available")) Then
@@ -57,24 +56,21 @@ Public Class bookControlAdmin
 
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles viewBookLnkLbl.LinkClicked
-        viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider)
-        viewBook.setAdminView(adminView)
+        viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider, Me, Me.adminView)
         Me.viewBook.ShowDialog()
     End Sub
 
-    Private Sub bookControlAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub checkOutLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles checkOutLnkLbl.LinkClicked
-        Dim issueBk As New IssueBook(Nothing)
+        Dim issueBk As New IssueBook(Nothing, Me)
         issueBk.setBookDetailsDTOBorrow(Me.bkDTO, provider, Me.coverPcBx.Image, 0)
         issueBk.ShowDialog()
     End Sub
 
     Private Sub reserveLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles reserveLnkLbl.LinkClicked
-        Dim issueBk As New IssueBook(Nothing)
+        Dim issueBk As New IssueBook(Nothing, Me)
         issueBk.setBookDetailsDTOReservation(Me.bkDTO, provider, Me.coverPcBx.Image, 0)
         issueBk.ShowDialog()
     End Sub
+
 End Class

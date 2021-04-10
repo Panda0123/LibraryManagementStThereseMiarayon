@@ -32,8 +32,6 @@ Public Class AddBookUserControl
             Next
             classificationCmbBx.DataSource = classificationNames
         End If
-        ' populate(1)
-        ' setAuthors()
         empty()
     End Sub
 
@@ -46,7 +44,6 @@ Public Class AddBookUserControl
 
         newBook.title = titleTxtBx.Text
         newBook.isbn = isbnTxtBx.Text
-        ' TODO: check if same to the size of the copydatagridview
         newBook.language = languageTxtBx.Text
         newBook.summary = summaryRichTxtBx.Text
         newBook.edition = If(editionTxtBx.Text.Equals(""), 0, editionTxtBx.Text)
@@ -81,7 +78,7 @@ Public Class AddBookUserControl
             hasImg = True
             Dim strt = imgFlName.LastIndexOf(".")
             ext = imgFlName.Substring(strt, imgFlName.Length - strt)
-            newBook.imageName = "new" + ext ' TODO: set the server to set its image attrs to its id
+            newBook.imageName = "new" + ext
         Else
             newBook.imageName = "empty"
         End If
@@ -259,29 +256,19 @@ Public Class AddBookUserControl
         'For Each row As DataGridViewRow In authorsDataGrid.Rows - 1
         For idx As Integer = 0 To authorsDataGrid.Rows.Count - 2
             Dim newAuthor As New AuthorDTO
-            Dim f_name = If(IsNothing(authorsDataGrid.Item(0, idx).Value), Nothing, authorsDataGrid.Item(0, idx).Value.ToString().Trim)
-            Dim m_name = If(IsNothing(authorsDataGrid.Item(1, idx).Value), Nothing, authorsDataGrid.Item(1, idx).Value.ToString().Trim)
-            Dim l_name = If(IsNothing(authorsDataGrid.Item(2, idx).Value), Nothing, authorsDataGrid.Item(2, idx).Value.ToString().Trim)
-            Dim attrs As New Dictionary(Of String, String)
-
+            Dim f_name = If(IsNothing(authorsDataGrid.Item(0, idx).Value), "", authorsDataGrid.Item(0, idx).Value.ToString().Trim)
+            Dim m_name = If(IsNothing(authorsDataGrid.Item(1, idx).Value), "", authorsDataGrid.Item(1, idx).Value.ToString().Trim)
+            Dim l_name = If(IsNothing(authorsDataGrid.Item(2, idx).Value), "", authorsDataGrid.Item(2, idx).Value.ToString().Trim)
             If f_name.Equals("") AndAlso m_name.Equals("") AndAlso l_name.Equals("") Then
                 Continue For
             End If
 
-            If String.Compare(f_name, "") <> 0 Then
-                attrs.Add("fName", f_name)
-            End If
-
-            If String.Compare(m_name, "") <> 0 Then
-                attrs.Add("mName", m_name)
-            End If
-
-            If String.Compare(f_name, "") <> 0 Then
-                attrs.Add("lName", l_name)
-            End If
+            Dim attrs As New Dictionary(Of String, String)
+            attrs.Add("fName", f_name)
+            attrs.Add("mName", m_name)
+            attrs.Add("lName", l_name)
 
             Dim prevAuthor = AuthorController.findAuthorByName(attrs)
-
             If prevAuthor.id <> -1 Then
                 newAuthor = prevAuthor
             Else
@@ -292,6 +279,7 @@ Public Class AddBookUserControl
             End If
             authors.Add(newAuthor)
         Next
+
         If authors.Count = 0 Then
             ' no author of the book
             authors.Add(New AuthorDTO(-1, Nothing, Nothing, Nothing))
@@ -300,7 +288,6 @@ Public Class AddBookUserControl
 
     Private Sub setCopies()
         copies.Clear()
-
         For idx As Integer = 0 To copiesDataGridView.Rows.Count - 2
             Dim copy As New BookCopyDTO
             copy.id = -1

@@ -7,14 +7,16 @@ Public Class IssueBook
     Dim copies As New List(Of BookCopyDTO)
     Dim copyNum As New List(Of Integer)
     Dim viewBook As viewBook
+    Dim bookControlAdmin As bookControlAdmin
 
-    Public Sub New(ByRef viewBook As viewBook)
+    Public Sub New(ByRef viewBook As viewBook, ByRef bookControlAdmin As bookControlAdmin)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
         Me.viewBook = viewBook
+        Me.bookControlAdmin = bookControlAdmin
     End Sub
     'End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
@@ -186,7 +188,7 @@ Public Class IssueBook
         newBorrow.issueDate = issueDateTimePicker.Value.ToString("yyyy-MM-dd")
         newBorrow.dueDate = dueDateTimePicker.Value.ToString("yyyy-MM-dd")
         BookController.addBorrow(newBorrow)
-        updateCopiesOfViewBook()
+        updateCopiesOfChild()
         MessageBox.Show("Book successfully borrowed!!")
         Me.Close()
     End Sub
@@ -202,14 +204,17 @@ Public Class IssueBook
         newReservation.userDTO = Me.userDTO
         newReservation.reservedDate = reserveDateTimePicker.Value.ToString("yyyy-MM-dd")
         BookController.addReservation(newReservation)
-        updateCopiesOfViewBook()
+        updateCopiesOfChild()
         MessageBox.Show("Book successfully reserved!!")
         Me.Close()
     End Sub
 
-    Private Sub updateCopiesOfViewBook()
+    Private Sub updateCopiesOfChild()
         If Not IsNothing(Me.viewBook) Then
             Me.viewBook.setCopies()
+        End If
+        If Not IsNothing(Me.bookControlAdmin) Then
+            Me.bookControlAdmin.setCopies()
         End If
     End Sub
     Private Sub setUser()

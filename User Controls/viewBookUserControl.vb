@@ -1,5 +1,5 @@
 ﻿Public Class viewBookUserControl
-    Public adminbookDP As New List(Of bookControlAdmin)
+    Public adminBookDP As New List(Of bookControlAdmin)
 
     Private numPage As Integer = 1
     Private totalResult As Integer = 0
@@ -10,14 +10,11 @@
 
     Private viewBook As New viewBook
 
-    Private Sub viewBookUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        initializeResult()
-    End Sub
     Public Sub New(adminView)
         InitializeComponent()
 
         For x As Integer = 1 To BooksPerPage
-            adminbookDP.Add(New bookControlAdmin(viewBook, adminView))
+            adminBookDP.Add(New bookControlAdmin(viewBook, adminView))
         Next
 
         setResult()

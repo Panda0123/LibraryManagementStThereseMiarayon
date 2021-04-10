@@ -1,11 +1,21 @@
 ﻿Public Class recordsUserControl
     Dim borrows As List(Of BorrowDTO)
     Dim reservations As List(Of ReservationDTO)
+    Dim adminView As adminView
 
+    Public Sub New(ByRef adminView As adminView)
 
-    Public Sub onLoad(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadBorrow()
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.adminView = adminView
     End Sub
+
+
+    'Public Sub on_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    '    loadBorrow()
+    'End Sub
 
     Public Sub loadBorrow()
         borrows = BookController.getAllBorrow()
@@ -37,7 +47,7 @@
                 BookController.deleteBorrow(copyId)
                 MessageBox.Show("Successfully Check In Borrow.")
                 loadBorrow()
-                borrowListDataGrid.Refresh()
+                adminView.viewBookuserCtl.initializeResult()
             End If
         End If
     End Sub
@@ -52,7 +62,7 @@
                 BookController.deleteReservation(copyId)
                 MessageBox.Show("Successfully Completed Reservation.")
                 loadReserve()
-                reservationListDataGrid.Refresh()
+                adminView.viewBookuserCtl.initializeResult()
             End If
         End If
     End Sub

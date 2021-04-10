@@ -33,9 +33,13 @@ Public Class bookDisplay
         ' publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
         bPublisher.Text = publisher
         imageName = bkDTO.imageName
+        setCopies()
+    End Sub
 
+    Public Sub setCopies()
         If IsNothing(bkDTO.copies) Then
             bkDTO.copies = CopyController.getCopies(bkDTO.bookId)
+            bkDTO.copies.Sort(Function(x, y) x.copy_num.CompareTo(y.copy_num))
         End If
 
         If bkDTO.copies.Any(Function(x) x.status.Equals("Available")) Then
@@ -47,9 +51,8 @@ Public Class bookDisplay
         End If
     End Sub
 
-
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
-        viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider)
+        viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider, Nothing, Nothing)
         Me.viewBook.ShowDialog()
     End Sub
 

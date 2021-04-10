@@ -2,7 +2,7 @@
 Public Class adminView
     Public viewBookuserCtl As New viewBookUserControl(Me)
     Public addBookuserCtl As New AddBookUserControl(Me)
-    Dim recorduserCtl As New recordsUserControl
+    Dim recorduserCtl As New recordsUserControl(Me)
     Dim collectionsuserCtl As New collectionsUserControl
 
     Public Sub New()
@@ -34,13 +34,13 @@ Public Class adminView
         '2. Switching of controls in the RIGHT panel
         Select Case btn.Name
             Case viewBookBtn.Name
-                'viewBookuserCtl.initializeResult()
+                viewBookuserCtl.initializeResult()
                 switchPanel(viewBookuserCtl)
             Case bokkAddBtn.Name
                 switchPanel(addBookuserCtl)
             Case recordsBtn.Name
                 'User_Acount.WindowState = System.Windows.Forms.FormWindowState.Maximized
-                'recorduserCtl.loadBorrow()
+                recorduserCtl.loadBorrow()
                 switchPanel(recorduserCtl)
             Case collectionsBtn.Name
                 switchPanel(collectionsuserCtl)

@@ -115,10 +115,10 @@ Partial Class AddBookUserControl
         Me.layoutPanel.Controls.Add(Me.ImageSummaryPanel)
         Me.layoutPanel.Controls.Add(Me.cancelPcBx)
         Me.layoutPanel.Controls.Add(Me.cancelHoverPcBx)
-        Me.layoutPanel.Controls.Add(Me.addHoverPcBx)
         Me.layoutPanel.Controls.Add(Me.saveHoverPcBx)
         Me.layoutPanel.Controls.Add(Me.savePcBx)
         Me.layoutPanel.Controls.Add(Me.addPcBx)
+        Me.layoutPanel.Controls.Add(Me.addHoverPcBx)
         Me.layoutPanel.Location = New System.Drawing.Point(3, 3)
         Me.layoutPanel.Name = "layoutPanel"
         Me.layoutPanel.Size = New System.Drawing.Size(1016, 1648)
@@ -415,7 +415,7 @@ Partial Class AddBookUserControl
         Me.copyrightYearDTPckr.FontSize = MetroFramework.MetroDateTimeSize.Small
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(42, 45)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 25)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
         Me.copyrightYearDTPckr.Size = New System.Drawing.Size(67, 25)
