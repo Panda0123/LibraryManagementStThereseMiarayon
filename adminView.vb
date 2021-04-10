@@ -72,6 +72,26 @@ Public Class adminView
         End Select
     End Sub
 
+    Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
+        advanceSearch.Show()
+    End Sub
+
+
+
+    Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs) Handles searchTextBox.KeyPress
+        If searchTextBox.Text.Equals("Search...") Then
+            searchTextBox.Text = ""
+            searchTextBox.ForeColor = Color.FromArgb(0, 0, 0)
+        End If
+
+    End Sub
+
+    Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs) Handles searchTextBox.MouseLeave, searchTextBox.LostFocus
+        If searchTextBox.Text.Equals("") Then
+            searchTextBox.Text = "Search..."
+            searchTextBox.ForeColor = Color.FromArgb(119, 117, 117)
+        End If
+    End Sub
 
 
 

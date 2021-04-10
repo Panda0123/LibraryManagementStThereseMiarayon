@@ -48,7 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>download-removebg-preview.ico</ApplicationIcon>
+    <ApplicationIcon>Icon\download-removebg-preview.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -97,12 +97,6 @@
       <DependentUpon>AddBook.vb</DependentUpon>
     </Compile>
     <Compile Include="AddBook.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User Controls\addBookUserControl.Designer.vb">
@@ -189,7 +183,7 @@
     <Compile Include="Utilities\APIClientController\CategoryController.vb" />
     <Compile Include="Utilities\APIClientController\HTTPRequestController.vb" />
     <Compile Include="Utilities\APIClientController\ImageController.vb" />
-    <Compile Include="Utilities\Authorization.vb" />
+    <Compile Include="Utilities\methods\Authorization.vb" />
     <Compile Include="Utilities\DTOs\AuthorDTO.vb" />
     <Compile Include="Utilities\DTOs\BookDetailsDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
@@ -216,9 +210,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AddBook.resx">
       <DependentUpon>AddBook.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\addBookUserControl.resx">
       <DependentUpon>addBookUserControl.vb</DependentUpon>
@@ -354,8 +345,8 @@
     <None Include="Resources\x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="book.ico" />
-    <Content Include="download-removebg-preview.ico" />
+    <Content Include="Icon\book.ico" />
+    <Content Include="Icon\download-removebg-preview.ico" />
     <None Include="Resources\add.png" />
     <Content Include="Resources\cancel.png" />
     <None Include="Resources\icons8-reserve-24.png" />
@@ -381,8 +372,6 @@
   <ItemGroup>
     <None Include="Resources\save2Hover.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

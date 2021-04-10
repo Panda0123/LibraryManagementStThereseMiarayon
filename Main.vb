@@ -58,7 +58,7 @@
             FlowLayoutPanel1.Controls.RemoveAt(i)
         Next
 
-        'when going forward, make sure there Is 6 more books in the list. If Not then get the number of books left in the list.
+        'when going forward, make sure there Is 5 more books in the list. If Not then get the number of books left in the list.
         Dim endpage As Integer = Math.Min(((PageIndex * BooksPerPage) + BooksPerPage) - 1, bookDP.Count - 1)
 
         'add the books for the Page to the FlowLayoutPanel
@@ -74,22 +74,15 @@
 
 
 
-    Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs)
+    Private Sub searchTextBox_mouseEnter(sender As Object, e As EventArgs) Handles searchTextBox.KeyPress
         If searchTextBox.Text.Equals("Search...") Then
             searchTextBox.Text = ""
             searchTextBox.ForeColor = Color.FromArgb(0, 0, 0)
         End If
 
-        ' sample search
-        ' For Each book In bookDP
-        ' book.Anchor = Anchor.Left
-        ' book.Anchor = Anchor.Right
-        'FlowLayoutPanel1.Controls.Add(book)
-        '  Next
-
     End Sub
 
-    Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs)
+    Private Sub searchTextBox_mouseLeave(sender As Object, e As EventArgs) Handles searchTextBox.MouseLeave, searchTextBox.LostFocus
         If searchTextBox.Text.Equals("") Then
             searchTextBox.Text = "Search..."
             searchTextBox.ForeColor = Color.FromArgb(119, 117, 117)
@@ -172,10 +165,6 @@
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
         classPanel.Height = 127
         Timer4.Stop()
-    End Sub
-
-    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
 

@@ -161,7 +161,7 @@ Partial Class adminView
         Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
         Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(349, 26)
+        Me.searchTextBox.Size = New System.Drawing.Size(445, 26)
         Me.searchTextBox.TabIndex = 8
         Me.searchTextBox.Text = "Search..."
         '

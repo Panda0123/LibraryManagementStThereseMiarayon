@@ -1,9 +1,4 @@
 ﻿Module utils
-    Public authOpen As Boolean = False
-    Public pbOpen As Boolean = False
-    Public pubOpen As Boolean = False
-
-
 
     'Custiom Animation
     'create an illusinary animation for changing arrow key and drop down

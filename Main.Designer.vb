@@ -43,12 +43,6 @@ Partial Class Main
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.scrollablePanel = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.RadioButtonTitle = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonAuthor = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonNewlyAdded = New System.Windows.Forms.RadioButton()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.classPanel = New System.Windows.Forms.Panel()
@@ -70,6 +64,12 @@ Partial Class Main
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.publisherBtn = New System.Windows.Forms.Button()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.RadioButtonTitle = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonAuthor = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonNewlyAdded = New System.Windows.Forms.RadioButton()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
@@ -85,12 +85,12 @@ Partial Class Main
         Me.Panel3.SuspendLayout()
         Me.leftMainScreenPanel.SuspendLayout()
         Me.scrollablePanel.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.classPanel.SuspendLayout()
         Me.pbPanel.SuspendLayout()
         Me.authPanel.SuspendLayout()
         Me.newTitlePanel.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'mainPanel
@@ -148,7 +148,7 @@ Partial Class Main
         Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
         Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(349, 26)
+        Me.searchTextBox.Size = New System.Drawing.Size(443, 26)
         Me.searchTextBox.TabIndex = 8
         Me.searchTextBox.Text = "Search..."
         '
@@ -279,7 +279,7 @@ Partial Class Main
         Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Button_Back.Location = New System.Drawing.Point(196, 18)
+        Me.Button_Back.Location = New System.Drawing.Point(416, 14)
         Me.Button_Back.Name = "Button_Back"
         Me.Button_Back.Size = New System.Drawing.Size(87, 25)
         Me.Button_Back.TabIndex = 20
@@ -290,7 +290,7 @@ Partial Class Main
         '
         Me.PageNumLabel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PageNumLabel.AutoSize = True
-        Me.PageNumLabel.Location = New System.Drawing.Point(322, 25)
+        Me.PageNumLabel.Location = New System.Drawing.Point(558, 20)
         Me.PageNumLabel.Name = "PageNumLabel"
         Me.PageNumLabel.Size = New System.Drawing.Size(53, 17)
         Me.PageNumLabel.TabIndex = 17
@@ -304,7 +304,7 @@ Partial Class Main
         Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel13.Location = New System.Drawing.Point(414, 19)
+        Me.LinkLabel13.Location = New System.Drawing.Point(674, 13)
         Me.LinkLabel13.Name = "LinkLabel13"
         Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
         Me.LinkLabel13.TabIndex = 21
@@ -344,88 +344,6 @@ Partial Class Main
         Me.scrollablePanel.Name = "scrollablePanel"
         Me.scrollablePanel.Size = New System.Drawing.Size(331, 1175)
         Me.scrollablePanel.TabIndex = 0
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.White
-        Me.Panel4.Controls.Add(Me.RadioButtonTitle)
-        Me.Panel4.Controls.Add(Me.RadioButtonPublicationDate)
-        Me.Panel4.Controls.Add(Me.RadioButtonAuthor)
-        Me.Panel4.Controls.Add(Me.RadioButtonNewlyAdded)
-        Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Location = New System.Drawing.Point(7, 3)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(313, 181)
-        Me.Panel4.TabIndex = 0
-        '
-        'RadioButtonTitle
-        '
-        Me.RadioButtonTitle.AutoSize = True
-        Me.RadioButtonTitle.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButtonTitle.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonTitle.Location = New System.Drawing.Point(0, 131)
-        Me.RadioButtonTitle.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButtonTitle.Name = "RadioButtonTitle"
-        Me.RadioButtonTitle.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
-        Me.RadioButtonTitle.Size = New System.Drawing.Size(313, 42)
-        Me.RadioButtonTitle.TabIndex = 11
-        Me.RadioButtonTitle.TabStop = True
-        Me.RadioButtonTitle.Text = "Sort By Title"
-        Me.RadioButtonTitle.UseVisualStyleBackColor = True
-        '
-        'RadioButtonPublicationDate
-        '
-        Me.RadioButtonPublicationDate.AutoSize = True
-        Me.RadioButtonPublicationDate.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButtonPublicationDate.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonPublicationDate.Location = New System.Drawing.Point(0, 89)
-        Me.RadioButtonPublicationDate.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButtonPublicationDate.Name = "RadioButtonPublicationDate"
-        Me.RadioButtonPublicationDate.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
-        Me.RadioButtonPublicationDate.Size = New System.Drawing.Size(313, 42)
-        Me.RadioButtonPublicationDate.TabIndex = 11
-        Me.RadioButtonPublicationDate.TabStop = True
-        Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
-        Me.RadioButtonPublicationDate.UseVisualStyleBackColor = True
-        '
-        'RadioButtonAuthor
-        '
-        Me.RadioButtonAuthor.AutoSize = True
-        Me.RadioButtonAuthor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButtonAuthor.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonAuthor.Location = New System.Drawing.Point(0, 47)
-        Me.RadioButtonAuthor.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButtonAuthor.Name = "RadioButtonAuthor"
-        Me.RadioButtonAuthor.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
-        Me.RadioButtonAuthor.Size = New System.Drawing.Size(313, 42)
-        Me.RadioButtonAuthor.TabIndex = 11
-        Me.RadioButtonAuthor.TabStop = True
-        Me.RadioButtonAuthor.Text = "Sort By Author"
-        Me.RadioButtonAuthor.UseVisualStyleBackColor = True
-        '
-        'RadioButtonNewlyAdded
-        '
-        Me.RadioButtonNewlyAdded.AutoSize = True
-        Me.RadioButtonNewlyAdded.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButtonNewlyAdded.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonNewlyAdded.Location = New System.Drawing.Point(0, 5)
-        Me.RadioButtonNewlyAdded.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButtonNewlyAdded.Name = "RadioButtonNewlyAdded"
-        Me.RadioButtonNewlyAdded.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
-        Me.RadioButtonNewlyAdded.Size = New System.Drawing.Size(313, 42)
-        Me.RadioButtonNewlyAdded.TabIndex = 11
-        Me.RadioButtonNewlyAdded.TabStop = True
-        Me.RadioButtonNewlyAdded.Text = "Sort By Newly Added"
-        Me.RadioButtonNewlyAdded.UseVisualStyleBackColor = True
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(313, 5)
-        Me.Panel5.TabIndex = 12
         '
         'Panel2
         '
@@ -471,7 +389,7 @@ Partial Class Main
         Me.searchClassification.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchClassification.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.searchClassification.LinkColor = System.Drawing.Color.Black
-        Me.searchClassification.Location = New System.Drawing.Point(73, 76)
+        Me.searchClassification.Location = New System.Drawing.Point(73, 92)
         Me.searchClassification.Name = "searchClassification"
         Me.searchClassification.Size = New System.Drawing.Size(97, 35)
         Me.searchClassification.TabIndex = 3
@@ -526,7 +444,7 @@ Partial Class Main
         Me.searchYear.Font = New System.Drawing.Font("Sitka Small", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchYear.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.searchYear.LinkColor = System.Drawing.Color.Black
-        Me.searchYear.Location = New System.Drawing.Point(76, 83)
+        Me.searchYear.Location = New System.Drawing.Point(83, 89)
         Me.searchYear.Name = "searchYear"
         Me.searchYear.Size = New System.Drawing.Size(97, 35)
         Me.searchYear.TabIndex = 2
@@ -537,7 +455,7 @@ Partial Class Main
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(106, 45)
+        Me.Label2.Location = New System.Drawing.Point(110, 45)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 32)
         Me.Label2.TabIndex = 1
@@ -546,7 +464,7 @@ Partial Class Main
         'afterYear
         '
         Me.afterYear.FormattingEnabled = True
-        Me.afterYear.Location = New System.Drawing.Point(145, 42)
+        Me.afterYear.Location = New System.Drawing.Point(163, 42)
         Me.afterYear.Name = "afterYear"
         Me.afterYear.Size = New System.Drawing.Size(103, 39)
         Me.afterYear.TabIndex = 0
@@ -554,7 +472,7 @@ Partial Class Main
         'beforeYear
         '
         Me.beforeYear.FormattingEnabled = True
-        Me.beforeYear.Location = New System.Drawing.Point(0, 42)
+        Me.beforeYear.Location = New System.Drawing.Point(4, 42)
         Me.beforeYear.Name = "beforeYear"
         Me.beforeYear.Size = New System.Drawing.Size(103, 39)
         Me.beforeYear.TabIndex = 0
@@ -710,6 +628,88 @@ Partial Class Main
         Me.publisherBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.publisherBtn.UseVisualStyleBackColor = False
         '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.White
+        Me.Panel4.Controls.Add(Me.RadioButtonTitle)
+        Me.Panel4.Controls.Add(Me.RadioButtonPublicationDate)
+        Me.Panel4.Controls.Add(Me.RadioButtonAuthor)
+        Me.Panel4.Controls.Add(Me.RadioButtonNewlyAdded)
+        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Location = New System.Drawing.Point(7, 3)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(313, 181)
+        Me.Panel4.TabIndex = 0
+        '
+        'RadioButtonTitle
+        '
+        Me.RadioButtonTitle.AutoSize = True
+        Me.RadioButtonTitle.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadioButtonTitle.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonTitle.Location = New System.Drawing.Point(0, 131)
+        Me.RadioButtonTitle.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonTitle.Name = "RadioButtonTitle"
+        Me.RadioButtonTitle.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
+        Me.RadioButtonTitle.Size = New System.Drawing.Size(313, 42)
+        Me.RadioButtonTitle.TabIndex = 11
+        Me.RadioButtonTitle.TabStop = True
+        Me.RadioButtonTitle.Text = "Sort By Title"
+        Me.RadioButtonTitle.UseVisualStyleBackColor = True
+        '
+        'RadioButtonPublicationDate
+        '
+        Me.RadioButtonPublicationDate.AutoSize = True
+        Me.RadioButtonPublicationDate.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadioButtonPublicationDate.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonPublicationDate.Location = New System.Drawing.Point(0, 89)
+        Me.RadioButtonPublicationDate.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonPublicationDate.Name = "RadioButtonPublicationDate"
+        Me.RadioButtonPublicationDate.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
+        Me.RadioButtonPublicationDate.Size = New System.Drawing.Size(313, 42)
+        Me.RadioButtonPublicationDate.TabIndex = 11
+        Me.RadioButtonPublicationDate.TabStop = True
+        Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
+        Me.RadioButtonPublicationDate.UseVisualStyleBackColor = True
+        '
+        'RadioButtonAuthor
+        '
+        Me.RadioButtonAuthor.AutoSize = True
+        Me.RadioButtonAuthor.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadioButtonAuthor.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonAuthor.Location = New System.Drawing.Point(0, 47)
+        Me.RadioButtonAuthor.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonAuthor.Name = "RadioButtonAuthor"
+        Me.RadioButtonAuthor.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
+        Me.RadioButtonAuthor.Size = New System.Drawing.Size(313, 42)
+        Me.RadioButtonAuthor.TabIndex = 11
+        Me.RadioButtonAuthor.TabStop = True
+        Me.RadioButtonAuthor.Text = "Sort By Author"
+        Me.RadioButtonAuthor.UseVisualStyleBackColor = True
+        '
+        'RadioButtonNewlyAdded
+        '
+        Me.RadioButtonNewlyAdded.AutoSize = True
+        Me.RadioButtonNewlyAdded.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RadioButtonNewlyAdded.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonNewlyAdded.Location = New System.Drawing.Point(0, 5)
+        Me.RadioButtonNewlyAdded.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButtonNewlyAdded.Name = "RadioButtonNewlyAdded"
+        Me.RadioButtonNewlyAdded.Padding = New System.Windows.Forms.Padding(8, 5, 0, 5)
+        Me.RadioButtonNewlyAdded.Size = New System.Drawing.Size(313, 42)
+        Me.RadioButtonNewlyAdded.TabIndex = 11
+        Me.RadioButtonNewlyAdded.TabStop = True
+        Me.RadioButtonNewlyAdded.Text = "Sort By Newly Added"
+        Me.RadioButtonNewlyAdded.UseVisualStyleBackColor = True
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(313, 5)
+        Me.Panel5.TabIndex = 12
+        '
         'Timer1
         '
         '
@@ -752,8 +752,6 @@ Partial Class Main
         Me.leftMainScreenPanel.ResumeLayout(False)
         Me.scrollablePanel.ResumeLayout(False)
         Me.scrollablePanel.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.classPanel.ResumeLayout(False)
         Me.classPanel.PerformLayout()
@@ -763,6 +761,8 @@ Partial Class Main
         Me.authPanel.PerformLayout()
         Me.newTitlePanel.ResumeLayout(False)
         Me.newTitlePanel.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
