@@ -2,10 +2,11 @@
     Property bookId As Int64
     Property title As String
     Property publishedDate As String
+    Property dateAdded As String
     Property language As String
     Property edition As Int16
     Property isbn As String
-    Property image As String
+    Property imageName As String
 
     Property quantity As Int32
     Property numAvailable As Int32
@@ -24,5 +25,7 @@
     Property summary As String
 
     Property authors As List(Of AuthorDTO)
+    Property copies As List(Of BookCopyDTO)
+    Property image As Image
 
 End Class

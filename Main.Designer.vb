@@ -299,7 +299,7 @@ Partial Class Main
         Me.authPanel.Controls.Add(Me.ComboBox1)
         Me.authPanel.Location = New System.Drawing.Point(47, 359)
         Me.authPanel.Name = "authPanel"
-        Me.authPanel.Size = New System.Drawing.Size(254, 0)
+        Me.authPanel.Size = New System.Drawing.Size(203, 0)
         Me.authPanel.TabIndex = 15
         '
         'searchAuth
@@ -332,9 +332,10 @@ Partial Class Main
         Me.newTitlePanel.Controls.Add(Me.LinkLabel3)
         Me.newTitlePanel.Controls.Add(Me.LinkLabel2)
         Me.newTitlePanel.Controls.Add(Me.LinkLabel1)
-        Me.newTitlePanel.Location = New System.Drawing.Point(47, 312)
+        Me.newTitlePanel.Location = New System.Drawing.Point(38, 250)
+        Me.newTitlePanel.Margin = New System.Windows.Forms.Padding(2)
         Me.newTitlePanel.Name = "newTitlePanel"
-        Me.newTitlePanel.Size = New System.Drawing.Size(254, 0)
+        Me.newTitlePanel.Size = New System.Drawing.Size(203, 0)
         Me.newTitlePanel.TabIndex = 14
         '
         'LinkLabel3
@@ -345,9 +346,10 @@ Partial Class Main
         Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(12, 22)
+        Me.LinkLabel3.Location = New System.Drawing.Point(10, 18)
+        Me.LinkLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(102, 35)
+        Me.LinkLabel3.Size = New System.Drawing.Size(82, 28)
         Me.LinkLabel3.TabIndex = 0
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Last Year"
@@ -361,9 +363,10 @@ Partial Class Main
         Me.LinkLabel2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(12, -17)
+        Me.LinkLabel2.Location = New System.Drawing.Point(10, -14)
+        Me.LinkLabel2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(166, 35)
+        Me.LinkLabel2.Size = New System.Drawing.Size(134, 28)
         Me.LinkLabel2.TabIndex = 0
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Last Six Months"
@@ -377,9 +380,10 @@ Partial Class Main
         Me.LinkLabel1.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(12, -63)
+        Me.LinkLabel1.Location = New System.Drawing.Point(10, -50)
+        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(191, 35)
+        Me.LinkLabel1.Size = New System.Drawing.Size(155, 28)
         Me.LinkLabel1.TabIndex = 0
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Last Three Months"
@@ -537,7 +541,7 @@ Partial Class Main
         Me.publisherBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.publisherBtn.Location = New System.Drawing.Point(25, 413)
         Me.publisherBtn.Name = "publisherBtn"
-        Me.publisherBtn.Size = New System.Drawing.Size(276, 52)
+        Me.publisherBtn.Size = New System.Drawing.Size(221, 42)
         Me.publisherBtn.TabIndex = 13
         Me.publisherBtn.Text = "Classification"
         Me.publisherBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -555,9 +559,10 @@ Partial Class Main
         Me.pbBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pbBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
         Me.pbBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.pbBtn.Location = New System.Drawing.Point(25, 359)
+        Me.pbBtn.Location = New System.Drawing.Point(20, 287)
+        Me.pbBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.pbBtn.Name = "pbBtn"
-        Me.pbBtn.Size = New System.Drawing.Size(276, 52)
+        Me.pbBtn.Size = New System.Drawing.Size(221, 42)
         Me.pbBtn.TabIndex = 13
         Me.pbBtn.Text = "Publication Year"
         Me.pbBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -575,9 +580,10 @@ Partial Class Main
         Me.authBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.authBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
         Me.authBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.authBtn.Location = New System.Drawing.Point(25, 307)
+        Me.authBtn.Location = New System.Drawing.Point(20, 246)
+        Me.authBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.authBtn.Name = "authBtn"
-        Me.authBtn.Size = New System.Drawing.Size(276, 52)
+        Me.authBtn.Size = New System.Drawing.Size(221, 42)
         Me.authBtn.TabIndex = 13
         Me.authBtn.Text = "Author"
         Me.authBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -595,9 +601,10 @@ Partial Class Main
         Me.newTitleBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.newTitleBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Polygon3
         Me.newTitleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.newTitleBtn.Location = New System.Drawing.Point(25, 260)
+        Me.newTitleBtn.Location = New System.Drawing.Point(20, 208)
+        Me.newTitleBtn.Margin = New System.Windows.Forms.Padding(2)
         Me.newTitleBtn.Name = "newTitleBtn"
-        Me.newTitleBtn.Size = New System.Drawing.Size(276, 52)
+        Me.newTitleBtn.Size = New System.Drawing.Size(221, 42)
         Me.newTitleBtn.TabIndex = 13
         Me.newTitleBtn.Text = "New Titles"
         Me.newTitleBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -611,7 +618,7 @@ Partial Class Main
         Me.pictureBoxRectangle.Location = New System.Drawing.Point(2, 2)
         Me.pictureBoxRectangle.Margin = New System.Windows.Forms.Padding(2)
         Me.pictureBoxRectangle.Name = "pictureBoxRectangle"
-        Me.pictureBoxRectangle.Size = New System.Drawing.Size(322, 206)
+        Me.pictureBoxRectangle.Size = New System.Drawing.Size(258, 165)
         Me.pictureBoxRectangle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pictureBoxRectangle.TabIndex = 10
         Me.pictureBoxRectangle.TabStop = False
@@ -630,49 +637,18 @@ Partial Class Main
         '
         'PictureBox8
         '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(532, 95)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(32, 31)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(48, 89)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(536, 48)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 6
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(500, 100)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(39, 22)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 10
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(48, 92)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
+        Me.LinkLabel13.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.LinkLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.LinkLabel13.AutoSize = True
+        Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.LinkLabel13.Location = New System.Drawing.Point(1158, 910)
+        Me.LinkLabel13.Name = "LinkLabel13"
+        Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
+        Me.LinkLabel13.TabIndex = 16
+        Me.LinkLabel13.TabStop = True
+        Me.LinkLabel13.Text = "Next"
         Me.PictureBox2.Size = New System.Drawing.Size(504, 44)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 9
@@ -709,14 +685,14 @@ Partial Class Main
         'Main
         '
         Me.AccessibleName = "Panel1_Paint"
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1448, 952)
+        Me.ClientSize = New System.Drawing.Size(1158, 762)
         Me.Controls.Add(Me.mainPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MinimumSize = New System.Drawing.Size(1169, 645)
+        Me.MinimumSize = New System.Drawing.Size(938, 524)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Library Management"
