@@ -356,18 +356,24 @@
   <ItemGroup>
     <Content Include="book.ico" />
     <Content Include="download-removebg-preview.ico" />
+    <None Include="Resources\add.png" />
     <Content Include="Resources\cancel.png" />
     <None Include="Resources\icons8-reserve-24.png" />
     <None Include="Resources\icons8-reserve-96.png" />
     <None Include="Resources\icons8-reserve-48.png" />
     <None Include="Resources\icons8-borrow-book-64.png" />
+    <None Include="Resources\contract.png" />
+    <None Include="Resources\Data-View-Details-icon.png" />
     <Content Include="Resources\Log In Dialog Box.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\log-in.png" />
     <Content Include="Resources\padlock.png" />
     <Content Include="Resources\pic 11.png" />
     <Content Include="Resources\Polygon 2.png" />
     <Content Include="Resources\Polygon3.png" />
     <Content Include="Resources\Rectangle 18.png" />
     <Content Include="Resources\Rectangle 5.png" />
+    <None Include="Resources\server-storage.png" />
     <Content Include="Resources\user %281%29.png" />
     <Content Include="Resources\Username.png" />
     <None Include="Resources\canceHover.png" />

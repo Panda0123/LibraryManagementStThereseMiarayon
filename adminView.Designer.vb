@@ -25,6 +25,9 @@ Partial Class adminView
         Me.components = New System.ComponentModel.Container()
         Dim TopPanel As System.Windows.Forms.Panel
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminView))
+        Me.signOutBtn = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
@@ -37,18 +40,16 @@ Partial Class adminView
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.signOutBtn = New System.Windows.Forms.LinkLabel()
-        Me.backgrounPanel = New System.Windows.Forms.Panel()
-        Me.collectionsPanel = New System.Windows.Forms.Panel()
-        Me.addBookPanel = New System.Windows.Forms.Panel()
-        Me.recordsPanel = New System.Windows.Forms.Panel()
+        Me.backgroundPanel = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
+        Me.highlightPanel = New System.Windows.Forms.Panel()
         Me.recordsBtn = New System.Windows.Forms.Button()
         Me.collectionsBtn = New System.Windows.Forms.Button()
         Me.bokkAddBtn = New System.Windows.Forms.Button()
         Me.viewBookBtn = New System.Windows.Forms.Button()
-        Me.viewBookPanel = New System.Windows.Forms.Panel()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
         TopPanel = New System.Windows.Forms.Panel()
         TopPanel.SuspendLayout()
         Me.TitleLogoSearchPanel.SuspendLayout()
@@ -57,23 +58,62 @@ Partial Class adminView
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.backgrounPanel.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
         Me.LeftSidePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'TopPanel
         '
-        TopPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        TopPanel.AutoSize = True
         TopPanel.BackColor = System.Drawing.Color.White
+        TopPanel.Controls.Add(Me.signOutBtn)
+        TopPanel.Controls.Add(Me.Panel3)
+        TopPanel.Controls.Add(Me.Panel2)
         TopPanel.Controls.Add(Me.TitleLogoSearchPanel)
         TopPanel.Controls.Add(Me.ShapeContainer2)
-        TopPanel.Location = New System.Drawing.Point(301, 0)
+        TopPanel.Dock = System.Windows.Forms.DockStyle.Top
+        TopPanel.Location = New System.Drawing.Point(0, 0)
         TopPanel.Margin = New System.Windows.Forms.Padding(4)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1109, 197)
+        TopPanel.Size = New System.Drawing.Size(1673, 181)
         TopPanel.TabIndex = 2
+        '
+        'signOutBtn
+        '
+        Me.signOutBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.signOutBtn.BackColor = System.Drawing.Color.White
+        Me.signOutBtn.FlatAppearance.BorderSize = 0
+        Me.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.signOutBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.signOutBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.logout
+        Me.signOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.signOutBtn.Location = New System.Drawing.Point(1515, 11)
+        Me.signOutBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.signOutBtn.Name = "signOutBtn"
+        Me.signOutBtn.Size = New System.Drawing.Size(149, 58)
+        Me.signOutBtn.TabIndex = 21
+        Me.signOutBtn.Text = " Sign Out"
+        Me.signOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.signOutBtn.UseVisualStyleBackColor = False
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1673, 5)
+        Me.Panel3.TabIndex = 3
+        '
+        'Panel2
+        '
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 171)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1673, 10)
+        Me.Panel2.TabIndex = 2
         '
         'TitleLogoSearchPanel
         '
@@ -87,7 +127,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(258, 24)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(526, 11)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(620, 169)
@@ -206,7 +246,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1109, 197)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1673, 181)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -216,7 +256,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1319, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1019, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -227,169 +267,152 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1317, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1017, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
         '
-        'signOutBtn
+        'backgroundPanel
         '
-        Me.signOutBtn.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.signOutBtn.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.signOutBtn.AutoSize = True
-        Me.signOutBtn.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.signOutBtn.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.signOutBtn.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.signOutBtn.Location = New System.Drawing.Point(1715, 11)
-        Me.signOutBtn.Name = "signOutBtn"
-        Me.signOutBtn.Size = New System.Drawing.Size(120, 40)
-        Me.signOutBtn.TabIndex = 20
-        Me.signOutBtn.TabStop = True
-        Me.signOutBtn.Text = "Sign Out"
+        Me.backgroundPanel.AutoScroll = True
+        Me.backgroundPanel.BackColor = System.Drawing.SystemColors.Window
+        Me.backgroundPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.backgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.backgroundPanel.Location = New System.Drawing.Point(0, 181)
+        Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.backgroundPanel.Name = "backgroundPanel"
+        Me.backgroundPanel.Size = New System.Drawing.Size(1673, 565)
+        Me.backgroundPanel.TabIndex = 3
         '
-        'backgrounPanel
+        'SplitContainer1
         '
-        Me.backgrounPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.backgrounPanel.BackColor = System.Drawing.Color.White
-        Me.backgrounPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.backgrounPanel.Controls.Add(Me.collectionsPanel)
-        Me.backgrounPanel.Controls.Add(Me.addBookPanel)
-        Me.backgrounPanel.Controls.Add(Me.recordsPanel)
-        Me.backgrounPanel.Controls.Add(Me.LeftSidePanel)
-        Me.backgrounPanel.Controls.Add(Me.viewBookPanel)
-        Me.backgrounPanel.Location = New System.Drawing.Point(0, 186)
-        Me.backgrounPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.backgrounPanel.Name = "backgrounPanel"
-        Me.backgrounPanel.Size = New System.Drawing.Size(1801, 1810)
-        Me.backgrounPanel.TabIndex = 3
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.IsSplitterFixed = True
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
         '
-        'collectionsPanel
+        'SplitContainer1.Panel1
         '
-        Me.collectionsPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.collectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.collectionsPanel.Location = New System.Drawing.Point(318, 6)
-        Me.collectionsPanel.Name = "collectionsPanel"
-        Me.collectionsPanel.Size = New System.Drawing.Size(1545, 1740)
-        Me.collectionsPanel.TabIndex = 3
+        Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.LeftSidePanel)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Panel1)
         '
-        'addBookPanel
+        'SplitContainer1.Panel2
         '
-        Me.addBookPanel.BackColor = System.Drawing.Color.White
-        Me.addBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.addBookPanel.Location = New System.Drawing.Point(318, 6)
-        Me.addBookPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.addBookPanel.Name = "addBookPanel"
-        Me.addBookPanel.Size = New System.Drawing.Size(1473, 1740)
-        Me.addBookPanel.TabIndex = 1
-        '
-        'recordsPanel
-        '
-        Me.recordsPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.recordsPanel.Location = New System.Drawing.Point(318, 6)
-        Me.recordsPanel.Name = "recordsPanel"
-        Me.recordsPanel.Size = New System.Drawing.Size(1732, 950)
-        Me.recordsPanel.TabIndex = 0
+        Me.SplitContainer1.Panel2.Controls.Add(Me.backgroundPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(TopPanel)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1910, 746)
+        Me.SplitContainer1.SplitterDistance = 233
+        Me.SplitContainer1.TabIndex = 21
         '
         'LeftSidePanel
         '
-        Me.LeftSidePanel.BackColor = System.Drawing.Color.White
-        Me.LeftSidePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LeftSidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.LeftSidePanel.Controls.Add(Me.highlightPanel)
         Me.LeftSidePanel.Controls.Add(Me.recordsBtn)
         Me.LeftSidePanel.Controls.Add(Me.collectionsBtn)
         Me.LeftSidePanel.Controls.Add(Me.bokkAddBtn)
         Me.LeftSidePanel.Controls.Add(Me.viewBookBtn)
-        Me.LeftSidePanel.Location = New System.Drawing.Point(4, 6)
-        Me.LeftSidePanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.LeftSidePanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LeftSidePanel.Location = New System.Drawing.Point(0, 181)
+        Me.LeftSidePanel.Margin = New System.Windows.Forms.Padding(0)
         Me.LeftSidePanel.Name = "LeftSidePanel"
-        Me.LeftSidePanel.Size = New System.Drawing.Size(306, 321)
-        Me.LeftSidePanel.TabIndex = 0
+        Me.LeftSidePanel.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
+        Me.LeftSidePanel.Size = New System.Drawing.Size(233, 565)
+        Me.LeftSidePanel.TabIndex = 1
+        '
+        'highlightPanel
+        '
+        Me.highlightPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
+        Me.highlightPanel.Location = New System.Drawing.Point(0, 0)
+        Me.highlightPanel.Name = "highlightPanel"
+        Me.highlightPanel.Size = New System.Drawing.Size(8, 73)
+        Me.highlightPanel.TabIndex = 0
         '
         'recordsBtn
         '
-        Me.recordsBtn.BackColor = System.Drawing.Color.White
+        Me.recordsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.recordsBtn.Dock = System.Windows.Forms.DockStyle.Top
         Me.recordsBtn.FlatAppearance.BorderSize = 0
         Me.recordsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.recordsBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.recordsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.recordsBtn
+        Me.recordsBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.recordsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.contract
         Me.recordsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.recordsBtn.Location = New System.Drawing.Point(22, 147)
-        Me.recordsBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.recordsBtn.Location = New System.Drawing.Point(8, 219)
+        Me.recordsBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.recordsBtn.Name = "recordsBtn"
-        Me.recordsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.recordsBtn.Size = New System.Drawing.Size(225, 73)
         Me.recordsBtn.TabIndex = 12
-        Me.recordsBtn.Text = "    Records"
-        Me.recordsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.recordsBtn.Text = " Records"
         Me.recordsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.recordsBtn.UseVisualStyleBackColor = False
         '
         'collectionsBtn
         '
-        Me.collectionsBtn.BackColor = System.Drawing.Color.White
+        Me.collectionsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.collectionsBtn.Dock = System.Windows.Forms.DockStyle.Top
         Me.collectionsBtn.FlatAppearance.BorderSize = 0
         Me.collectionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.collectionsBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.collectionsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
+        Me.collectionsBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.collectionsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.server_storage
         Me.collectionsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.collectionsBtn.Location = New System.Drawing.Point(22, 219)
-        Me.collectionsBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.collectionsBtn.Location = New System.Drawing.Point(8, 146)
+        Me.collectionsBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.collectionsBtn.Name = "collectionsBtn"
-        Me.collectionsBtn.Size = New System.Drawing.Size(208, 58)
+        Me.collectionsBtn.Size = New System.Drawing.Size(225, 73)
         Me.collectionsBtn.TabIndex = 13
-        Me.collectionsBtn.Text = "   Collections"
-        Me.collectionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.collectionsBtn.Text = " Collections"
+        Me.collectionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.collectionsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.collectionsBtn.UseVisualStyleBackColor = False
         '
         'bokkAddBtn
         '
-        Me.bokkAddBtn.BackColor = System.Drawing.Color.White
+        Me.bokkAddBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.bokkAddBtn.Dock = System.Windows.Forms.DockStyle.Top
         Me.bokkAddBtn.FlatAppearance.BorderSize = 0
         Me.bokkAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.bokkAddBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bokkAddBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.addIcon
+        Me.bokkAddBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bokkAddBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.add
         Me.bokkAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bokkAddBtn.Location = New System.Drawing.Point(21, 85)
-        Me.bokkAddBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.bokkAddBtn.Location = New System.Drawing.Point(8, 73)
+        Me.bokkAddBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.bokkAddBtn.Name = "bokkAddBtn"
-        Me.bokkAddBtn.Size = New System.Drawing.Size(208, 58)
+        Me.bokkAddBtn.Size = New System.Drawing.Size(225, 73)
         Me.bokkAddBtn.TabIndex = 9
-        Me.bokkAddBtn.Text = "   Add"
-        Me.bokkAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.bokkAddBtn.Text = " Add"
+        Me.bokkAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.bokkAddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.bokkAddBtn.UseVisualStyleBackColor = False
         '
         'viewBookBtn
         '
-        Me.viewBookBtn.BackColor = System.Drawing.Color.White
+        Me.viewBookBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.viewBookBtn.Dock = System.Windows.Forms.DockStyle.Top
         Me.viewBookBtn.FlatAppearance.BorderSize = 0
         Me.viewBookBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.viewBookBtn.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.viewBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.bookPng
+        Me.viewBookBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.viewBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Data_View_Details_icon
         Me.viewBookBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.viewBookBtn.Location = New System.Drawing.Point(22, 21)
-        Me.viewBookBtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.viewBookBtn.Location = New System.Drawing.Point(8, 0)
+        Me.viewBookBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.viewBookBtn.Name = "viewBookBtn"
-        Me.viewBookBtn.Size = New System.Drawing.Size(208, 58)
+        Me.viewBookBtn.Size = New System.Drawing.Size(225, 73)
         Me.viewBookBtn.TabIndex = 8
-        Me.viewBookBtn.Text = "   View Book"
-        Me.viewBookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.viewBookBtn.Text = " View Book"
+        Me.viewBookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.viewBookBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.viewBookBtn.UseVisualStyleBackColor = False
         '
-        'viewBookPanel
+        'Panel1
         '
-        Me.viewBookPanel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.viewBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.viewBookPanel.Location = New System.Drawing.Point(318, 6)
-        Me.viewBookPanel.Name = "viewBookPanel"
-        Me.viewBookPanel.Size = New System.Drawing.Size(1482, 1803)
-        Me.viewBookPanel.TabIndex = 2
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(233, 181)
+        Me.Panel1.TabIndex = 2
         '
         'adminView
         '
@@ -398,14 +421,13 @@ Partial Class adminView
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1910, 746)
-        Me.Controls.Add(Me.signOutBtn)
-        Me.Controls.Add(Me.backgrounPanel)
-        Me.Controls.Add(TopPanel)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(1553, 781)
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Administrator View"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         TopPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.ResumeLayout(False)
@@ -415,25 +437,18 @@ Partial Class adminView
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.backgrounPanel.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         Me.LeftSidePanel.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents backgrounPanel As Panel
-    Friend WithEvents LeftSidePanel As Panel
-    Friend WithEvents addBookPanel As Panel
+    Friend WithEvents backgroundPanel As Panel
     Friend WithEvents addPcBx As PictureBox
     Friend WithEvents cancelPcBx As PictureBox
     Friend WithEvents savePcBx As PictureBox
-    Friend WithEvents viewBookBtn As Button
-    Friend WithEvents bokkAddBtn As Button
-    Friend WithEvents recordsBtn As Button
-    Friend WithEvents collectionsBtn As Button
-    Friend WithEvents viewBookPanel As Panel
-    Friend WithEvents recordsPanel As Panel
-    Friend WithEvents signOutBtn As LinkLabel
     Friend WithEvents TitleLogoSearchPanel As Panel
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents searchTextBox As TextBox
@@ -446,6 +461,16 @@ Partial Class adminView
     Friend WithEvents ShapeContainer2 As PowerPacks.ShapeContainer
     Friend WithEvents btn_blk As PowerPacks.RectangleShape
     Friend WithEvents btn_white As PowerPacks.RectangleShape
-    Friend WithEvents collectionsPanel As Panel
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents LeftSidePanel As Panel
+    Friend WithEvents recordsBtn As Button
+    Friend WithEvents collectionsBtn As Button
+    Friend WithEvents bokkAddBtn As Button
+    Friend WithEvents viewBookBtn As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents signOutBtn As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents highlightPanel As Panel
 End Class
