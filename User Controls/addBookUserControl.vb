@@ -20,6 +20,7 @@ Public Class AddBookUserControl
         Me.adminView = adminView
 
         ' Add any initialization after the InitializeComponent() call.
+        AddBook_Load(Nothing, Nothing)
 
     End Sub
 
@@ -209,16 +210,16 @@ Public Class AddBookUserControl
         Dim removeImg As Boolean = False
         Dim ext = ""
 
-        If String.Compare(imgFlName, "") <> 0 Then
-            uploadImg = True
-            Dim strt = imgFlName.LastIndexOf(".")
-            ext = imgFlName.Substring(strt, imgFlName.Length - strt)
-            selectedBook.imageName = selectedBook.bookId.ToString + ext
-            attrs.Add("imageName", selectedBook.imageName)
-        Else
-            If String.Compare(selectedBook.imageName, "empty") <> 0 Then
+        If Not imgFlName.Equals(selectedBook.imageName) Then
+            If imgFlName.Equals("") AndAlso Not selectedBook.imageName.Equals("empty") Then
                 removeImg = True
                 attrs.Add("imageName", "empty")
+            Else
+                uploadImg = True
+                Dim strt = imgFlName.LastIndexOf(".")
+                ext = imgFlName.Substring(strt, imgFlName.Length - strt)
+                selectedBook.imageName = selectedBook.bookId.ToString + ext
+                attrs.Add("imageName", selectedBook.imageName)
             End If
         End If
 
@@ -380,16 +381,17 @@ Public Class AddBookUserControl
 
         ' image
         Dim img As Image
-        If String.Compare(selectedBook.imageName, "empty") <> 0 Then
+        imgFlName = selectedBook.imageName
+        If imgFlName.Equals("empty") Then
+            img = My.Resources.default_book
+            removeImgBtn.Visible = False
+        Else
             If IsNothing(selectedBook.image) Then
-                img = getImage(selectedBook.imageName)
+                img = ImageController.getImage(imgFlName)
             Else
                 img = selectedBook.image
             End If
             removeImgBtn.Visible = True
-        Else
-            img = My.Resources.default_book
-            removeImgBtn.Visible = False
         End If
         bkPicBx.Image = img
         addPcBx.Visible = False
@@ -465,6 +467,7 @@ Public Class AddBookUserControl
 
         populateAuthors()
     End Sub
+
     ' elements
 
     Private Sub authorsDataGrid_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
@@ -528,7 +531,4 @@ Public Class AddBookUserControl
         addPcBx.Visible = True
     End Sub
 
-    Private Sub layoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles layoutPanel.Paint
-        'timerClearDataGrid.Enabled = True
-    End Sub
 End Class

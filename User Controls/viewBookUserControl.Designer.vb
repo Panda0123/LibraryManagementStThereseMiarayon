@@ -44,7 +44,7 @@ Partial Class viewBookUserControl
         '
         Me.PageNumLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.PageNumLabel.AutoSize = True
-        Me.PageNumLabel.Location = New System.Drawing.Point(520, 13)
+        Me.PageNumLabel.Location = New System.Drawing.Point(543, 13)
         Me.PageNumLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.PageNumLabel.Name = "PageNumLabel"
         Me.PageNumLabel.Size = New System.Drawing.Size(41, 13)
@@ -59,7 +59,7 @@ Partial Class viewBookUserControl
         Me.prevLnkLbl.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.prevLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.prevLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.prevLnkLbl.Location = New System.Drawing.Point(403, 8)
+        Me.prevLnkLbl.Location = New System.Drawing.Point(426, 8)
         Me.prevLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.prevLnkLbl.Name = "prevLnkLbl"
         Me.prevLnkLbl.Size = New System.Drawing.Size(70, 20)
@@ -75,7 +75,7 @@ Partial Class viewBookUserControl
         Me.nextLnkLbl.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nextLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.nextLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.nextLnkLbl.Location = New System.Drawing.Point(625, 8)
+        Me.nextLnkLbl.Location = New System.Drawing.Point(648, 8)
         Me.nextLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.nextLnkLbl.Name = "nextLnkLbl"
         Me.nextLnkLbl.Size = New System.Drawing.Size(43, 20)

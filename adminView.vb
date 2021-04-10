@@ -55,9 +55,11 @@ Public Class adminView
 
     'Helper sub for switching view controls in the RIGHT panel view
     Sub switchPanel(ByVal userControlPanel As UserControl)
-        backgroundPanel.Controls.Clear()
-        backgroundPanel.Controls.Add(userControlPanel)
-        userControlPanel.Show()
+        If Not backgroundPanel.Controls.Contains(userControlPanel) Then
+            backgroundPanel.Controls.Clear()
+            backgroundPanel.Controls.Add(userControlPanel)
+            userControlPanel.Show()
+        End If
     End Sub
 
     Private Sub searchPcBx_Click(sender As Object, e As EventArgs) Handles searchPcBx.Click

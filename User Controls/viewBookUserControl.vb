@@ -6,7 +6,7 @@
     Private searchKey As String = String.Empty
 
     Private PageIndex As Integer = 0
-    Private BooksPerPage As Integer = 2 'number of books shown on each page
+    Private BooksPerPage As Integer = 5 'number of books shown on each page
 
     Private viewBook As New viewBook
 
