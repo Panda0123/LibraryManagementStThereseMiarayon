@@ -259,9 +259,9 @@ Public Class AddBookUserControl
         'For Each row As DataGridViewRow In authorsDataGrid.Rows - 1
         For idx As Integer = 0 To authorsDataGrid.Rows.Count - 2
             Dim newAuthor As New AuthorDTO
-            Dim f_name = authorsDataGrid.Item(0, idx).Value.ToString().Trim
-            Dim m_name = authorsDataGrid.Item(1, idx).Value.ToString().Trim
-            Dim l_name = authorsDataGrid.Item(2, idx).Value.ToString().Trim
+            Dim f_name = If(IsNothing(authorsDataGrid.Item(0, idx).Value), Nothing, authorsDataGrid.Item(0, idx).Value.ToString().Trim)
+            Dim m_name = If(IsNothing(authorsDataGrid.Item(1, idx).Value), Nothing, authorsDataGrid.Item(1, idx).Value.ToString().Trim)
+            Dim l_name = If(IsNothing(authorsDataGrid.Item(2, idx).Value), Nothing, authorsDataGrid.Item(2, idx).Value.ToString().Trim)
             Dim attrs As New Dictionary(Of String, String)
 
             If f_name.Equals("") AndAlso m_name.Equals("") AndAlso l_name.Equals("") Then
