@@ -40,7 +40,7 @@ Partial Class adminView
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.btn_blk = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.btn_white = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.backgroundPanel = New System.Windows.Forms.Panel()
+        Me.collectionsPanel = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.LeftSidePanel = New System.Windows.Forms.Panel()
@@ -50,6 +50,9 @@ Partial Class adminView
         Me.bokkAddBtn = New System.Windows.Forms.Button()
         Me.viewBookBtn = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.recordsPanel = New System.Windows.Forms.Panel()
+        Me.addBookPanel = New System.Windows.Forms.Panel()
+        Me.viewBookPanel = New System.Windows.Forms.Panel()
         TopPanel = New System.Windows.Forms.Panel()
         TopPanel.SuspendLayout()
         Me.TitleLogoSearchPanel.SuspendLayout()
@@ -272,17 +275,17 @@ Partial Class adminView
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
         '
-        'backgroundPanel
+        'collectionsPanel
         '
-        Me.backgroundPanel.AutoScroll = True
-        Me.backgroundPanel.BackColor = System.Drawing.SystemColors.Window
-        Me.backgroundPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.backgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.backgroundPanel.Location = New System.Drawing.Point(0, 181)
-        Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(4)
-        Me.backgroundPanel.Name = "backgroundPanel"
-        Me.backgroundPanel.Size = New System.Drawing.Size(1673, 565)
-        Me.backgroundPanel.TabIndex = 3
+        Me.collectionsPanel.AutoScroll = True
+        Me.collectionsPanel.BackColor = System.Drawing.SystemColors.Window
+        Me.collectionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.collectionsPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.collectionsPanel.Location = New System.Drawing.Point(0, 181)
+        Me.collectionsPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.collectionsPanel.Name = "collectionsPanel"
+        Me.collectionsPanel.Size = New System.Drawing.Size(1673, 565)
+        Me.collectionsPanel.TabIndex = 3
         '
         'SplitContainer1
         '
@@ -300,7 +303,10 @@ Partial Class adminView
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.backgroundPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.recordsPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.collectionsPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.addBookPanel)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.viewBookPanel)
         Me.SplitContainer1.Panel2.Controls.Add(TopPanel)
         Me.SplitContainer1.Size = New System.Drawing.Size(1910, 746)
         Me.SplitContainer1.SplitterDistance = 233
@@ -414,6 +420,42 @@ Partial Class adminView
         Me.Panel1.Size = New System.Drawing.Size(233, 181)
         Me.Panel1.TabIndex = 2
         '
+        'recordsPanel
+        '
+        Me.recordsPanel.AutoScroll = True
+        Me.recordsPanel.BackColor = System.Drawing.SystemColors.Window
+        Me.recordsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.recordsPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.recordsPanel.Location = New System.Drawing.Point(0, 181)
+        Me.recordsPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.recordsPanel.Name = "recordsPanel"
+        Me.recordsPanel.Size = New System.Drawing.Size(1673, 565)
+        Me.recordsPanel.TabIndex = 4
+        '
+        'addBookPanel
+        '
+        Me.addBookPanel.AutoScroll = True
+        Me.addBookPanel.BackColor = System.Drawing.SystemColors.Window
+        Me.addBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.addBookPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.addBookPanel.Location = New System.Drawing.Point(0, 181)
+        Me.addBookPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.addBookPanel.Name = "addBookPanel"
+        Me.addBookPanel.Size = New System.Drawing.Size(1673, 565)
+        Me.addBookPanel.TabIndex = 5
+        '
+        'viewBookPanel
+        '
+        Me.viewBookPanel.AutoScroll = True
+        Me.viewBookPanel.BackColor = System.Drawing.SystemColors.Window
+        Me.viewBookPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.viewBookPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.viewBookPanel.Location = New System.Drawing.Point(0, 181)
+        Me.viewBookPanel.Margin = New System.Windows.Forms.Padding(4)
+        Me.viewBookPanel.Name = "viewBookPanel"
+        Me.viewBookPanel.Size = New System.Drawing.Size(1673, 565)
+        Me.viewBookPanel.TabIndex = 6
+        '
         'adminView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -445,7 +487,7 @@ Partial Class adminView
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents backgroundPanel As Panel
+    Friend WithEvents collectionsPanel As Panel
     Friend WithEvents addPcBx As PictureBox
     Friend WithEvents cancelPcBx As PictureBox
     Friend WithEvents savePcBx As PictureBox
@@ -473,4 +515,7 @@ Partial Class adminView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents highlightPanel As Panel
+    Friend WithEvents viewBookPanel As Panel
+    Friend WithEvents addBookPanel As Panel
+    Friend WithEvents recordsPanel As Panel
 End Class
