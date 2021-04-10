@@ -135,13 +135,13 @@ Public Class Main
 
     Private Sub loginBtn_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
         loginBtn.ForeColor = Color.FromArgb(0, 54, 99)
-        login.Show()
+        'login.ShowDialog()
         Dim lgIn As New login
         lgIn.ShowDialog()
     End Sub
 
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
-        advanceSearch.Show()
+        'advanceSearch.Show()
         Dim advSearch = New advanceSearch
         advSearch.ShowDialog()
     End Sub
@@ -194,86 +194,86 @@ Public Class Main
 
     ' RadioButton Event Handlers
     Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonNewlyAdded.CheckedChanged, RadioButtonPublicationDate.CheckedChanged, RadioButtonTitle.CheckedChanged
-    radio_click += 1
-    If sender.Equals(RadioButtonNewlyAdded) Then
-        sortBy = "DateAdded"
-    ElseIf sender.Equals(RadioButtonPublicationDate) Then
-        sortBy = "PublishedDate"
-    ElseIf sender.Equals(RadioButtonTitle) Then
-        sortBy = "Title"
-    End If
-
-    If radio_click = 2 Then
-        radio_click = 0
-        ' execute sort
-        initializeResult()
-    End If
-End Sub
-
-Public Sub serchPcBx_Clicked(sender As Object, e As EventArgs) Handles searchPcBx.Click
-    setResult()
-    initializeResult()
-End Sub
-
-' results
-Private Sub setResult()
-    If Not searchTextBox.Text.Equals("Search...") Then
-        searchKey = searchTextBox.Text.Replace(" ", "+")
-    End If
-    totalResult = BookController.getNumBkResult(searchKey)
-    Debug.WriteLine(totalResult.ToString)
-    numPage = totalResult / BooksPerPage
-    Debug.WriteLine(numPage.ToString)
-    PageIndex = 0
-End Sub
-Public Sub initializeResult()
-    FlowLayoutPanel1.Controls.Clear()
-    Select Case sortBy
-        Case "DateAdded"
-            RadioButtonNewlyAdded.Checked = True
-        Case "PublishedDate"
-            RadioButtonPublicationDate.Checked = True
-        Case "Title"
-            RadioButtonTitle.Checked = True
-    End Select
-    radio_click = 0
-
-    setBookDisplayResults()
-    loadImage()
-    setPaginationControls()
-End Sub
-
-Private Sub setBookDisplayResults()
-    Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, sortBy, searchKey)
-    For idx As Integer = 0 To bkDTOs.Count - 1
-        bookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
-        FlowLayoutPanel1.Controls.Add(bookDP.Item(idx))
-    Next
-End Sub
-
-Private Sub loadImage()
-    For Each bkDisplay As bookDisplay In FlowLayoutPanel1.Controls
-        If String.Compare(bkDisplay.imageName, "empty") <> 0 Then
-            bkDisplay.coverPcBx.Image = getImage(bkDisplay.imageName)
-        Else
-            bkDisplay.coverPcBx.Image = My.Resources.default_book
+        radio_click += 1
+        If sender.Equals(RadioButtonNewlyAdded) Then
+            sortBy = "DateAdded"
+        ElseIf sender.Equals(RadioButtonPublicationDate) Then
+            sortBy = "PublishedDate"
+        ElseIf sender.Equals(RadioButtonTitle) Then
+            sortBy = "Title"
         End If
-    Next
-End Sub
 
-Private Sub setPaginationControls()
-    If PageIndex + 1 >= numPage Then
-        nextLnkLbl.Visible = False
-    Else
-        nextLnkLbl.Visible = True
-    End If
+        If radio_click = 2 Then
+            radio_click = 0
+            ' execute sort
+            initializeResult()
+        End If
+    End Sub
 
-    If PageIndex <= 0 Then
-        prevLnkLbl.Visible = False
-    Else
-        prevLnkLbl.Visible = True
-    End If
-    PageNumLabel.Text = "Page " & (1 + PageIndex).ToString 'set the text to the Page Number
-End Sub
+    Public Sub serchPcBx_Clicked(sender As Object, e As EventArgs) Handles searchPcBx.Click
+        setResult()
+        initializeResult()
+    End Sub
+
+    ' results
+    Private Sub setResult()
+        If Not searchTextBox.Text.Equals("Search...") Then
+            searchKey = searchTextBox.Text.Replace(" ", "+")
+        End If
+        totalResult = BookController.getNumBkResult(searchKey)
+        Debug.WriteLine(totalResult.ToString)
+        numPage = totalResult / BooksPerPage
+        Debug.WriteLine(numPage.ToString)
+        PageIndex = 0
+    End Sub
+    Public Sub initializeResult()
+        FlowLayoutPanel1.Controls.Clear()
+        Select Case sortBy
+            Case "DateAdded"
+                RadioButtonNewlyAdded.Checked = True
+            Case "PublishedDate"
+                RadioButtonPublicationDate.Checked = True
+            Case "Title"
+                RadioButtonTitle.Checked = True
+        End Select
+        radio_click = 0
+
+        setBookDisplayResults()
+        loadImage()
+        setPaginationControls()
+    End Sub
+
+    Private Sub setBookDisplayResults()
+        Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, sortBy, searchKey)
+        For idx As Integer = 0 To bkDTOs.Count - 1
+            bookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
+            FlowLayoutPanel1.Controls.Add(bookDP.Item(idx))
+        Next
+    End Sub
+
+    Private Sub loadImage()
+        For Each bkDisplay As bookDisplay In FlowLayoutPanel1.Controls
+            If String.Compare(bkDisplay.imageName, "empty") <> 0 Then
+                bkDisplay.coverPcBx.Image = getImage(bkDisplay.imageName)
+            Else
+                bkDisplay.coverPcBx.Image = My.Resources.default_book
+            End If
+        Next
+    End Sub
+
+    Private Sub setPaginationControls()
+        If PageIndex + 1 >= numPage Then
+            nextLnkLbl.Visible = False
+        Else
+            nextLnkLbl.Visible = True
+        End If
+
+        If PageIndex <= 0 Then
+            prevLnkLbl.Visible = False
+        Else
+            prevLnkLbl.Visible = True
+        End If
+        PageNumLabel.Text = "Page " & (1 + PageIndex).ToString 'set the text to the Page Number
+    End Sub
 
 End Class

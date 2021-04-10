@@ -38,11 +38,11 @@
     End Sub
 
     Private Sub passTxtBox_TextChanged(sender As Object, e As EventArgs) Handles passTxtBox.MouseHover, passTxtBox.Click, passTxtBox.KeyPress
-            If passTxtBox.Text.Equals("Password") Then
-                passTxtBox.Text = ""
-                passTxtBox.ForeColor = Color.FromArgb(0, 0, 0)
-            End If
-        End Sub
+        If passTxtBox.Text.Equals("Password") Then
+            passTxtBox.Text = ""
+            passTxtBox.ForeColor = Color.FromArgb(0, 0, 0)
+        End If
+    End Sub
 
     Private Sub passTxtBox_mouseLeave(sender As Object, e As EventArgs) Handles passTxtBox.MouseLeave
         If passTxtBox.Text.Equals("") Then
@@ -53,8 +53,6 @@
 
     Private Sub userNameTxtbox_TextChanged_1(sender As Object, e As EventArgs) Handles userNameTxtbox.TextChanged
 
-        End Sub
-
-
+    End Sub
 
 End Class

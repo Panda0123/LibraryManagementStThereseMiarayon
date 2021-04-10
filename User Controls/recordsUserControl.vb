@@ -3,11 +3,11 @@
     Dim reservations As List(Of ReservationDTO)
 
 
-    Public Sub onLoad(sender As Object, e As EventArgs) Handles Me.Load
+    Public Sub onLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         loadBorrow()
     End Sub
 
-    Private Sub loadBorrow()
+    Public Sub loadBorrow()
         borrows = BookController.getAllBorrow()
         setBorrow(borrows)
     End Sub

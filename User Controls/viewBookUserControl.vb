@@ -10,6 +10,9 @@
 
     Private viewBook As New viewBook
 
+    Private Sub viewBookUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        initializeResult()
+    End Sub
     Public Sub New(adminView)
         InitializeComponent()
 

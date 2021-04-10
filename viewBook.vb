@@ -215,7 +215,7 @@ Public Class viewBook
     End Sub
     Private Sub editBtn_Click(sender As Object, e As EventArgs) Handles editBtn.Click
         Me.bkDTO.image = coverPcBx.Image
-        Me.adminView.bokkAddBtn_Click(Nothing, Nothing)
+        Me.adminView.bokkAddBtn.PerformClick()
         Me.adminView.addBookuserCtl.setSelectedBook(Me.bkDTO)
         Me.Close()
     End Sub
