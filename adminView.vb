@@ -8,6 +8,14 @@ Public Class adminView
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
+        backgroundPanel.Controls.Add(addBookuserCtl)
+        backgroundPanel.Controls.Add(viewBookuserCtl)
+        backgroundPanel.Controls.Add(recorduserCtl)
+        backgroundPanel.Controls.Add(collectionsuserCtl)
+        viewBookuserCtl.Hide()
+        recorduserCtl.Hide()
+        addBookuserCtl.Hide()
+        collectionsuserCtl.Hide()
     End Sub
 
     Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,7 +34,7 @@ Public Class adminView
 
         Dim btn As Button = sender
 
-        '1.1. This includes the the blue highlight panel on the LEFT side of the button
+        ' 1.1. This includes the the blue highlight panel on the LEFT side of the button
         btn.BackColor = Color.FromArgb(171, 184, 197)
         highlightPanel.Height = btn.Height
         highlightPanel.Top = btn.Top
@@ -39,27 +47,30 @@ Public Class adminView
             Case bokkAddBtn.Name
                 switchPanel(addBookuserCtl)
             Case recordsBtn.Name
-                'User_Acount.WindowState = System.Windows.Forms.FormWindowState.Maximized
+                '  User_Acount.WindowState = System.Windows.Forms.FormWindowState.Maximized
                 recorduserCtl.loadBorrow()
                 switchPanel(recorduserCtl)
             Case collectionsBtn.Name
                 switchPanel(collectionsuserCtl)
             Case signOutBtn.Name
-                'Smooth Exit
+                ' Smooth Exit
                 Me.Hide()
                 Main.Show()
                 Me.Close()
                 Authorization.authToken = String.Empty
+
         End Select
     End Sub
 
     'Helper sub for switching view controls in the RIGHT panel view
     Sub switchPanel(ByVal userControlPanel As UserControl)
-        If Not backgroundPanel.Controls.Contains(userControlPanel) Then
-            backgroundPanel.Controls.Clear()
-            backgroundPanel.Controls.Add(userControlPanel)
-            userControlPanel.Show()
-        End If
+        For Each ctl As Control In backgroundPanel.Controls
+            If ctl.Equals(userControlPanel) Then
+                ctl.Show()
+            Else
+                ctl.Hide()
+            End If
+        Next
     End Sub
 
     Private Sub searchPcBx_Click(sender As Object, e As EventArgs) Handles searchPcBx.Click
@@ -67,4 +78,11 @@ Public Class adminView
         viewBookuserCtl.setSearch(searchTextBox.Text)
     End Sub
 
+    Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click, bokkAddBtn.Click
+        Dim found As Boolean = False
+
+
+
+
+    End Sub
 End Class
