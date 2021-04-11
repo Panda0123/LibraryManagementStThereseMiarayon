@@ -128,7 +128,7 @@ Partial Class Form1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -139,9 +139,8 @@ Partial Class Form1
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.TabControl1)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1032, 632)
-        Me.SplitContainer1.SplitterDistance = 225
-        Me.SplitContainer1.SplitterWidth = 3
+        Me.SplitContainer1.Size = New System.Drawing.Size(1376, 778)
+        Me.SplitContainer1.SplitterDistance = 276
         Me.SplitContainer1.TabIndex = 0
         '
         'groupBorrowerDetails
@@ -151,10 +150,10 @@ Partial Class Form1
         Me.groupBorrowerDetails.Dock = System.Windows.Forms.DockStyle.Top
         Me.groupBorrowerDetails.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBorrowerDetails.Location = New System.Drawing.Point(0, 0)
-        Me.groupBorrowerDetails.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.groupBorrowerDetails.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.groupBorrowerDetails.Name = "groupBorrowerDetails"
-        Me.groupBorrowerDetails.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.groupBorrowerDetails.Size = New System.Drawing.Size(1032, 266)
+        Me.groupBorrowerDetails.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.groupBorrowerDetails.Size = New System.Drawing.Size(1376, 327)
         Me.groupBorrowerDetails.TabIndex = 3
         Me.groupBorrowerDetails.TabStop = False
         Me.groupBorrowerDetails.Text = "Borrower Details"
@@ -162,8 +161,8 @@ Partial Class Form1
         'SplitContainer2
         '
         Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer2.Location = New System.Drawing.Point(2, 30)
-        Me.SplitContainer2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SplitContainer2.Location = New System.Drawing.Point(3, 36)
+        Me.SplitContainer2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SplitContainer2.Name = "SplitContainer2"
         '
         'SplitContainer2.Panel1
@@ -173,9 +172,8 @@ Partial Class Form1
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.TableLayoutPanel2)
-        Me.SplitContainer2.Size = New System.Drawing.Size(1028, 234)
-        Me.SplitContainer2.SplitterDistance = 167
-        Me.SplitContainer2.SplitterWidth = 3
+        Me.SplitContainer2.Size = New System.Drawing.Size(1370, 289)
+        Me.SplitContainer2.SplitterDistance = 222
         Me.SplitContainer2.TabIndex = 0
         '
         'PictureBox4
@@ -184,9 +182,9 @@ Partial Class Form1
         Me.PictureBox4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
         Me.PictureBox4.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(167, 234)
+        Me.PictureBox4.Size = New System.Drawing.Size(222, 289)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 0
         Me.PictureBox4.TabStop = False
@@ -216,17 +214,17 @@ Partial Class Form1
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 7
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(858, 234)
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1144, 289)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'Label1
@@ -234,10 +232,9 @@ Partial Class Form1
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(126, 4)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(172, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 23)
+        Me.Label1.Size = New System.Drawing.Size(118, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID NUMBER:"
         '
@@ -246,10 +243,9 @@ Partial Class Form1
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(121, 36)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(166, 44)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(97, 23)
+        Me.Label2.Size = New System.Drawing.Size(124, 29)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "FIRST NAME:"
         '
@@ -258,10 +254,9 @@ Partial Class Form1
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(106, 68)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(148, 83)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(112, 23)
+        Me.Label3.Size = New System.Drawing.Size(142, 29)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "MIDDLE NAME:"
         '
@@ -270,10 +265,9 @@ Partial Class Form1
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(126, 100)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(173, 122)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(92, 23)
+        Me.Label5.Size = New System.Drawing.Size(117, 29)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "LAST NAME:"
         '
@@ -282,10 +276,9 @@ Partial Class Form1
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(141, 132)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(193, 161)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(77, 23)
+        Me.Label6.Size = New System.Drawing.Size(97, 29)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "ADDRESS:"
         '
@@ -293,40 +286,40 @@ Partial Class Form1
         '
         Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(222, 3)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(296, 5)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(223, 25)
+        Me.TextBox1.Size = New System.Drawing.Size(297, 29)
         Me.TextBox1.TabIndex = 5
         '
         'TextBox2
         '
         Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox2.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(222, 35)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox2.Location = New System.Drawing.Point(296, 44)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(223, 25)
+        Me.TextBox2.Size = New System.Drawing.Size(297, 29)
         Me.TextBox2.TabIndex = 6
         '
         'TextBox3
         '
         Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(222, 67)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox3.Location = New System.Drawing.Point(296, 83)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(223, 25)
+        Me.TextBox3.Size = New System.Drawing.Size(297, 29)
         Me.TextBox3.TabIndex = 7
         '
         'TextBox4
         '
         Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox4.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(222, 99)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox4.Location = New System.Drawing.Point(296, 122)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(223, 25)
+        Me.TextBox4.Size = New System.Drawing.Size(297, 29)
         Me.TextBox4.TabIndex = 8
         '
         'TextBox7
@@ -334,32 +327,32 @@ Partial Class Form1
         Me.TableLayoutPanel2.SetColumnSpan(Me.TextBox7, 2)
         Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox7.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(222, 130)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox7.Location = New System.Drawing.Point(296, 158)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox7.Multiline = True
         Me.TextBox7.Name = "TextBox7"
         Me.TableLayoutPanel2.SetRowSpan(Me.TextBox7, 2)
-        Me.TextBox7.Size = New System.Drawing.Size(405, 60)
+        Me.TextBox7.Size = New System.Drawing.Size(539, 74)
         Me.TextBox7.TabIndex = 14
         '
         'TextBox6
         '
         Me.TextBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox6.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(631, 67)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox6.Location = New System.Drawing.Point(841, 83)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(225, 25)
+        Me.TextBox6.Size = New System.Drawing.Size(300, 29)
         Me.TextBox6.TabIndex = 13
         '
         'TextBox5
         '
         Me.TextBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox5.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(631, 35)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox5.Location = New System.Drawing.Point(841, 44)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(225, 25)
+        Me.TextBox5.Size = New System.Drawing.Size(300, 29)
         Me.TextBox5.TabIndex = 12
         '
         'Label8
@@ -367,10 +360,9 @@ Partial Class Form1
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(553, 68)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(741, 83)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(74, 23)
+        Me.Label8.Size = New System.Drawing.Size(94, 29)
         Me.Label8.TabIndex = 11
         Me.Label8.Text = "SECTION:"
         '
@@ -379,10 +371,9 @@ Partial Class Form1
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(538, 36)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(722, 44)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(89, 23)
+        Me.Label7.Size = New System.Drawing.Size(113, 29)
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "USER TYPE:"
         '
@@ -390,10 +381,10 @@ Partial Class Form1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(449, 2)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Location = New System.Drawing.Point(599, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(70, 28)
+        Me.Button1.Size = New System.Drawing.Size(93, 34)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
@@ -405,21 +396,21 @@ Partial Class Form1
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TabControl1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1032, 362)
+        Me.TabControl1.Size = New System.Drawing.Size(1376, 446)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.TableLayoutPanel1)
         Me.TabPage1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage1.Location = New System.Drawing.Point(4, 32)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 38)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPage1.Size = New System.Drawing.Size(1024, 326)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage1.Size = New System.Drawing.Size(1368, 404)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Borrow"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -465,23 +456,23 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxVolume, 3, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(2, 2)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 11
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1020, 322)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1362, 400)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'labelTitle
@@ -489,10 +480,9 @@ Partial Class Form1
         Me.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelTitle.AutoSize = True
         Me.labelTitle.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelTitle.Location = New System.Drawing.Point(197, 36)
-        Me.labelTitle.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelTitle.Location = New System.Drawing.Point(267, 44)
         Me.labelTitle.Name = "labelTitle"
-        Me.labelTitle.Size = New System.Drawing.Size(54, 23)
+        Me.labelTitle.Size = New System.Drawing.Size(68, 29)
         Me.labelTitle.TabIndex = 2
         Me.labelTitle.Text = "TITLE:"
         '
@@ -501,10 +491,9 @@ Partial Class Form1
         Me.labelPublisher.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelPublisher.AutoSize = True
         Me.labelPublisher.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelPublisher.Location = New System.Drawing.Point(160, 68)
-        Me.labelPublisher.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelPublisher.Location = New System.Drawing.Point(220, 83)
         Me.labelPublisher.Name = "labelPublisher"
-        Me.labelPublisher.Size = New System.Drawing.Size(91, 23)
+        Me.labelPublisher.Size = New System.Drawing.Size(115, 29)
         Me.labelPublisher.TabIndex = 3
         Me.labelPublisher.Text = "PUBLISHER:"
         '
@@ -513,10 +502,9 @@ Partial Class Form1
         Me.labelPubDate.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelPubDate.AutoSize = True
         Me.labelPubDate.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelPubDate.Location = New System.Drawing.Point(113, 100)
-        Me.labelPubDate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelPubDate.Location = New System.Drawing.Point(162, 122)
         Me.labelPubDate.Name = "labelPubDate"
-        Me.labelPubDate.Size = New System.Drawing.Size(138, 23)
+        Me.labelPubDate.Size = New System.Drawing.Size(173, 29)
         Me.labelPubDate.TabIndex = 4
         Me.labelPubDate.Text = "PUBLISHING DATE:"
         '
@@ -525,10 +513,9 @@ Partial Class Form1
         Me.labelAuthor.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelAuthor.AutoSize = True
         Me.labelAuthor.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelAuthor.Location = New System.Drawing.Point(164, 132)
-        Me.labelAuthor.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelAuthor.Location = New System.Drawing.Point(225, 161)
         Me.labelAuthor.Name = "labelAuthor"
-        Me.labelAuthor.Size = New System.Drawing.Size(87, 23)
+        Me.labelAuthor.Size = New System.Drawing.Size(110, 29)
         Me.labelAuthor.TabIndex = 5
         Me.labelAuthor.Text = "AUTHOR/S:"
         '
@@ -537,10 +524,9 @@ Partial Class Form1
         Me.labelLanguage.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelLanguage.AutoSize = True
         Me.labelLanguage.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelLanguage.Location = New System.Drawing.Point(162, 196)
-        Me.labelLanguage.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelLanguage.Location = New System.Drawing.Point(222, 239)
         Me.labelLanguage.Name = "labelLanguage"
-        Me.labelLanguage.Size = New System.Drawing.Size(89, 23)
+        Me.labelLanguage.Size = New System.Drawing.Size(113, 29)
         Me.labelLanguage.TabIndex = 7
         Me.labelLanguage.Text = "LANGUAGE:"
         '
@@ -548,54 +534,54 @@ Partial Class Form1
         '
         Me.textBoxShelfID.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxShelfID.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxShelfID.Location = New System.Drawing.Point(255, 3)
-        Me.textBoxShelfID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxShelfID.Location = New System.Drawing.Point(341, 5)
+        Me.textBoxShelfID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxShelfID.Name = "textBoxShelfID"
-        Me.textBoxShelfID.Size = New System.Drawing.Size(273, 25)
+        Me.textBoxShelfID.Size = New System.Drawing.Size(364, 29)
         Me.textBoxShelfID.TabIndex = 12
         '
         'textBoxTitle
         '
         Me.textBoxTitle.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxTitle.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxTitle.Location = New System.Drawing.Point(255, 35)
-        Me.textBoxTitle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxTitle.Location = New System.Drawing.Point(341, 44)
+        Me.textBoxTitle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxTitle.Name = "textBoxTitle"
         Me.textBoxTitle.ReadOnly = True
-        Me.textBoxTitle.Size = New System.Drawing.Size(273, 25)
+        Me.textBoxTitle.Size = New System.Drawing.Size(364, 29)
         Me.textBoxTitle.TabIndex = 13
         '
         'textBoxPublisher
         '
         Me.textBoxPublisher.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxPublisher.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxPublisher.Location = New System.Drawing.Point(255, 67)
-        Me.textBoxPublisher.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxPublisher.Location = New System.Drawing.Point(341, 83)
+        Me.textBoxPublisher.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxPublisher.Name = "textBoxPublisher"
         Me.textBoxPublisher.ReadOnly = True
-        Me.textBoxPublisher.Size = New System.Drawing.Size(273, 25)
+        Me.textBoxPublisher.Size = New System.Drawing.Size(364, 29)
         Me.textBoxPublisher.TabIndex = 14
         '
         'textBoxPubDate
         '
         Me.textBoxPubDate.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxPubDate.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxPubDate.Location = New System.Drawing.Point(255, 99)
-        Me.textBoxPubDate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxPubDate.Location = New System.Drawing.Point(341, 122)
+        Me.textBoxPubDate.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxPubDate.Name = "textBoxPubDate"
         Me.textBoxPubDate.ReadOnly = True
-        Me.textBoxPubDate.Size = New System.Drawing.Size(273, 25)
+        Me.textBoxPubDate.Size = New System.Drawing.Size(364, 29)
         Me.textBoxPubDate.TabIndex = 15
         '
         'textBoxLanguage
         '
         Me.textBoxLanguage.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxLanguage.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxLanguage.Location = New System.Drawing.Point(255, 195)
-        Me.textBoxLanguage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxLanguage.Location = New System.Drawing.Point(341, 239)
+        Me.textBoxLanguage.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxLanguage.Name = "textBoxLanguage"
         Me.textBoxLanguage.ReadOnly = True
-        Me.textBoxLanguage.Size = New System.Drawing.Size(273, 25)
+        Me.textBoxLanguage.Size = New System.Drawing.Size(364, 29)
         Me.textBoxLanguage.TabIndex = 17
         '
         'labelShelfID
@@ -603,10 +589,9 @@ Partial Class Form1
         Me.labelShelfID.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelShelfID.AutoSize = True
         Me.labelShelfID.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelShelfID.Location = New System.Drawing.Point(174, 4)
-        Me.labelShelfID.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelShelfID.Location = New System.Drawing.Point(239, 5)
         Me.labelShelfID.Name = "labelShelfID"
-        Me.labelShelfID.Size = New System.Drawing.Size(77, 23)
+        Me.labelShelfID.Size = New System.Drawing.Size(96, 29)
         Me.labelShelfID.TabIndex = 29
         Me.labelShelfID.Text = "SHELF ID:"
         '
@@ -615,10 +600,9 @@ Partial Class Form1
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(147, 260)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(205, 317)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(104, 23)
+        Me.Label9.Size = New System.Drawing.Size(130, 29)
         Me.Label9.TabIndex = 30
         Me.Label9.Text = "ISSUED DATE:"
         '
@@ -627,10 +611,9 @@ Partial Class Form1
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(168, 292)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Location = New System.Drawing.Point(231, 356)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(83, 23)
+        Me.Label10.Size = New System.Drawing.Size(104, 29)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "DUE DATE:"
         '
@@ -638,13 +621,13 @@ Partial Class Form1
         '
         Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox8.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(255, 130)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox8.Location = New System.Drawing.Point(341, 158)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
         Me.TableLayoutPanel1.SetRowSpan(Me.TextBox8, 2)
-        Me.TextBox8.Size = New System.Drawing.Size(273, 60)
+        Me.TextBox8.Size = New System.Drawing.Size(364, 74)
         Me.TextBox8.TabIndex = 32
         '
         'DateTimePicker1
@@ -652,75 +635,75 @@ Partial Class Form1
         Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TableLayoutPanel1.SetColumnSpan(Me.DateTimePicker1, 2)
         Me.DateTimePicker1.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(255, 259)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(341, 317)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(261, 25)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(347, 29)
         Me.DateTimePicker1.TabIndex = 33
         '
         'DateTimePicker2
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.DateTimePicker2, 2)
         Me.DateTimePicker2.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker2.Location = New System.Drawing.Point(255, 290)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(341, 353)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(261, 25)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(347, 29)
         Me.DateTimePicker2.TabIndex = 34
         '
         'textBoxStatus
         '
         Me.textBoxStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxStatus.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxStatus.Location = New System.Drawing.Point(720, 195)
-        Me.textBoxStatus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxStatus.Location = New System.Drawing.Point(962, 239)
+        Me.textBoxStatus.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxStatus.Name = "textBoxStatus"
         Me.textBoxStatus.ReadOnly = True
-        Me.textBoxStatus.Size = New System.Drawing.Size(298, 25)
+        Me.textBoxStatus.Size = New System.Drawing.Size(397, 29)
         Me.textBoxStatus.TabIndex = 25
         '
         'textBoxEdition
         '
         Me.textBoxEdition.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxEdition.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxEdition.Location = New System.Drawing.Point(720, 163)
-        Me.textBoxEdition.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxEdition.Location = New System.Drawing.Point(962, 200)
+        Me.textBoxEdition.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxEdition.Name = "textBoxEdition"
         Me.textBoxEdition.ReadOnly = True
-        Me.textBoxEdition.Size = New System.Drawing.Size(298, 25)
+        Me.textBoxEdition.Size = New System.Drawing.Size(397, 29)
         Me.textBoxEdition.TabIndex = 22
         '
         'textBoxSeries
         '
         Me.textBoxSeries.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxSeries.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxSeries.Location = New System.Drawing.Point(720, 99)
-        Me.textBoxSeries.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxSeries.Location = New System.Drawing.Point(962, 122)
+        Me.textBoxSeries.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxSeries.Name = "textBoxSeries"
         Me.textBoxSeries.ReadOnly = True
-        Me.textBoxSeries.Size = New System.Drawing.Size(298, 25)
+        Me.textBoxSeries.Size = New System.Drawing.Size(397, 29)
         Me.textBoxSeries.TabIndex = 20
         '
         'textBoxISBN
         '
         Me.textBoxISBN.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxISBN.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxISBN.Location = New System.Drawing.Point(720, 67)
-        Me.textBoxISBN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxISBN.Location = New System.Drawing.Point(962, 83)
+        Me.textBoxISBN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxISBN.Name = "textBoxISBN"
         Me.textBoxISBN.ReadOnly = True
-        Me.textBoxISBN.Size = New System.Drawing.Size(298, 25)
+        Me.textBoxISBN.Size = New System.Drawing.Size(397, 29)
         Me.textBoxISBN.TabIndex = 19
         '
         'textBoxCategory
         '
         Me.textBoxCategory.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxCategory.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxCategory.Location = New System.Drawing.Point(720, 35)
-        Me.textBoxCategory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxCategory.Location = New System.Drawing.Point(962, 44)
+        Me.textBoxCategory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxCategory.Name = "textBoxCategory"
         Me.textBoxCategory.ReadOnly = True
-        Me.textBoxCategory.Size = New System.Drawing.Size(298, 25)
+        Me.textBoxCategory.Size = New System.Drawing.Size(397, 29)
         Me.textBoxCategory.TabIndex = 18
         '
         'labelStatus
@@ -728,10 +711,9 @@ Partial Class Form1
         Me.labelStatus.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelStatus.AutoSize = True
         Me.labelStatus.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelStatus.Location = New System.Drawing.Point(651, 196)
-        Me.labelStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelStatus.Location = New System.Drawing.Point(873, 239)
         Me.labelStatus.Name = "labelStatus"
-        Me.labelStatus.Size = New System.Drawing.Size(65, 23)
+        Me.labelStatus.Size = New System.Drawing.Size(83, 29)
         Me.labelStatus.TabIndex = 24
         Me.labelStatus.Text = "STATUS:"
         '
@@ -740,10 +722,9 @@ Partial Class Form1
         Me.labelEdition.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelEdition.AutoSize = True
         Me.labelEdition.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelEdition.Location = New System.Drawing.Point(644, 164)
-        Me.labelEdition.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelEdition.Location = New System.Drawing.Point(865, 200)
         Me.labelEdition.Name = "labelEdition"
-        Me.labelEdition.Size = New System.Drawing.Size(72, 23)
+        Me.labelEdition.Size = New System.Drawing.Size(91, 29)
         Me.labelEdition.TabIndex = 11
         Me.labelEdition.Text = "EDITION:"
         '
@@ -752,10 +733,9 @@ Partial Class Form1
         Me.labelVolume.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelVolume.AutoSize = True
         Me.labelVolume.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelVolume.Location = New System.Drawing.Point(644, 132)
-        Me.labelVolume.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelVolume.Location = New System.Drawing.Point(864, 161)
         Me.labelVolume.Name = "labelVolume"
-        Me.labelVolume.Size = New System.Drawing.Size(72, 23)
+        Me.labelVolume.Size = New System.Drawing.Size(92, 29)
         Me.labelVolume.TabIndex = 10
         Me.labelVolume.Text = "VOLUME:"
         '
@@ -764,10 +744,9 @@ Partial Class Form1
         Me.labelSeries.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelSeries.AutoSize = True
         Me.labelSeries.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelSeries.Location = New System.Drawing.Point(654, 100)
-        Me.labelSeries.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelSeries.Location = New System.Drawing.Point(877, 122)
         Me.labelSeries.Name = "labelSeries"
-        Me.labelSeries.Size = New System.Drawing.Size(62, 23)
+        Me.labelSeries.Size = New System.Drawing.Size(79, 29)
         Me.labelSeries.TabIndex = 9
         Me.labelSeries.Text = "SERIES:"
         '
@@ -776,10 +755,9 @@ Partial Class Form1
         Me.labelISBN.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelISBN.AutoSize = True
         Me.labelISBN.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelISBN.Location = New System.Drawing.Point(670, 68)
-        Me.labelISBN.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelISBN.Location = New System.Drawing.Point(897, 83)
         Me.labelISBN.Name = "labelISBN"
-        Me.labelISBN.Size = New System.Drawing.Size(46, 23)
+        Me.labelISBN.Size = New System.Drawing.Size(59, 29)
         Me.labelISBN.TabIndex = 8
         Me.labelISBN.Text = "ISBN:"
         '
@@ -788,10 +766,9 @@ Partial Class Form1
         Me.labelCategory.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.labelCategory.AutoSize = True
         Me.labelCategory.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelCategory.Location = New System.Drawing.Point(629, 36)
-        Me.labelCategory.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelCategory.Location = New System.Drawing.Point(846, 44)
         Me.labelCategory.Name = "labelCategory"
-        Me.labelCategory.Size = New System.Drawing.Size(87, 23)
+        Me.labelCategory.Size = New System.Drawing.Size(110, 29)
         Me.labelCategory.TabIndex = 6
         Me.labelCategory.Text = "CATEGORY:"
         '
@@ -799,10 +776,10 @@ Partial Class Form1
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(532, 2)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Location = New System.Drawing.Point(711, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(70, 28)
+        Me.Button2.Size = New System.Drawing.Size(93, 34)
         Me.Button2.TabIndex = 35
         Me.Button2.Text = "Search"
         Me.Button2.UseVisualStyleBackColor = True
@@ -814,11 +791,11 @@ Partial Class Form1
         Me.buttonBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.buttonBorrow.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttonBorrow.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.buttonBorrow.Location = New System.Drawing.Point(720, 258)
-        Me.buttonBorrow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.buttonBorrow.Location = New System.Drawing.Point(962, 314)
+        Me.buttonBorrow.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.buttonBorrow.Name = "buttonBorrow"
         Me.TableLayoutPanel1.SetRowSpan(Me.buttonBorrow, 2)
-        Me.buttonBorrow.Size = New System.Drawing.Size(298, 60)
+        Me.buttonBorrow.Size = New System.Drawing.Size(397, 74)
         Me.buttonBorrow.TabIndex = 36
         Me.buttonBorrow.Text = "BORROW BOOK"
         Me.buttonBorrow.UseVisualStyleBackColor = False
@@ -827,22 +804,22 @@ Partial Class Form1
         '
         Me.textBoxVolume.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.textBoxVolume.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxVolume.Location = New System.Drawing.Point(720, 131)
-        Me.textBoxVolume.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.textBoxVolume.Location = New System.Drawing.Point(962, 161)
+        Me.textBoxVolume.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.textBoxVolume.Name = "textBoxVolume"
         Me.textBoxVolume.ReadOnly = True
-        Me.textBoxVolume.Size = New System.Drawing.Size(298, 25)
+        Me.textBoxVolume.Size = New System.Drawing.Size(397, 29)
         Me.textBoxVolume.TabIndex = 37
         '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.TableLayoutPanel3)
         Me.TabPage2.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabPage2.Location = New System.Drawing.Point(4, 32)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 38)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TabPage2.Size = New System.Drawing.Size(1024, 326)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage2.Size = New System.Drawing.Size(1368, 404)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Reserve"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -886,23 +863,23 @@ Partial Class Form1
         Me.TableLayoutPanel3.Controls.Add(Me.TextBox17, 3, 4)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(2, 2)
-        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 2)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 11
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1020, 322)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1362, 400)
         Me.TableLayoutPanel3.TabIndex = 1
         '
         'Label4
@@ -910,10 +887,9 @@ Partial Class Form1
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(197, 36)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(267, 44)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 23)
+        Me.Label4.Size = New System.Drawing.Size(68, 29)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "TITLE:"
         '
@@ -922,10 +898,9 @@ Partial Class Form1
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(160, 68)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Location = New System.Drawing.Point(220, 83)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(91, 23)
+        Me.Label11.Size = New System.Drawing.Size(115, 29)
         Me.Label11.TabIndex = 3
         Me.Label11.Text = "PUBLISHER:"
         '
@@ -934,10 +909,9 @@ Partial Class Form1
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(113, 100)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Location = New System.Drawing.Point(162, 122)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(138, 23)
+        Me.Label12.Size = New System.Drawing.Size(173, 29)
         Me.Label12.TabIndex = 4
         Me.Label12.Text = "PUBLISHING DATE:"
         '
@@ -946,10 +920,9 @@ Partial Class Form1
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(164, 132)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label13.Location = New System.Drawing.Point(225, 161)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(87, 23)
+        Me.Label13.Size = New System.Drawing.Size(110, 29)
         Me.Label13.TabIndex = 5
         Me.Label13.Text = "AUTHOR/S:"
         '
@@ -958,10 +931,9 @@ Partial Class Form1
         Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(162, 196)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label14.Location = New System.Drawing.Point(222, 239)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(89, 23)
+        Me.Label14.Size = New System.Drawing.Size(113, 29)
         Me.Label14.TabIndex = 7
         Me.Label14.Text = "LANGUAGE:"
         '
@@ -969,54 +941,54 @@ Partial Class Form1
         '
         Me.TextBox9.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox9.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(255, 3)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox9.Location = New System.Drawing.Point(341, 5)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(273, 25)
+        Me.TextBox9.Size = New System.Drawing.Size(364, 29)
         Me.TextBox9.TabIndex = 12
         '
         'TextBox10
         '
         Me.TextBox10.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox10.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(255, 35)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox10.Location = New System.Drawing.Point(341, 44)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(273, 25)
+        Me.TextBox10.Size = New System.Drawing.Size(364, 29)
         Me.TextBox10.TabIndex = 13
         '
         'TextBox11
         '
         Me.TextBox11.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox11.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(255, 67)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox11.Location = New System.Drawing.Point(341, 83)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(273, 25)
+        Me.TextBox11.Size = New System.Drawing.Size(364, 29)
         Me.TextBox11.TabIndex = 14
         '
         'TextBox12
         '
         Me.TextBox12.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox12.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(255, 99)
-        Me.TextBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox12.Location = New System.Drawing.Point(341, 122)
+        Me.TextBox12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.ReadOnly = True
-        Me.TextBox12.Size = New System.Drawing.Size(273, 25)
+        Me.TextBox12.Size = New System.Drawing.Size(364, 29)
         Me.TextBox12.TabIndex = 15
         '
         'TextBox13
         '
         Me.TextBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox13.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(255, 195)
-        Me.TextBox13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox13.Location = New System.Drawing.Point(341, 239)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.ReadOnly = True
-        Me.TextBox13.Size = New System.Drawing.Size(273, 25)
+        Me.TextBox13.Size = New System.Drawing.Size(364, 29)
         Me.TextBox13.TabIndex = 17
         '
         'Label16
@@ -1024,10 +996,9 @@ Partial Class Form1
         Me.Label16.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(174, 4)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label16.Location = New System.Drawing.Point(239, 5)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(77, 23)
+        Me.Label16.Size = New System.Drawing.Size(96, 29)
         Me.Label16.TabIndex = 29
         Me.Label16.Text = "SHELF ID:"
         '
@@ -1036,10 +1007,9 @@ Partial Class Form1
         Me.Label17.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(135, 260)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Location = New System.Drawing.Point(190, 317)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(116, 23)
+        Me.Label17.Size = New System.Drawing.Size(145, 29)
         Me.Label17.TabIndex = 30
         Me.Label17.Text = "RESERVE DATE:"
         '
@@ -1047,13 +1017,13 @@ Partial Class Form1
         '
         Me.TextBox14.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextBox14.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(255, 130)
-        Me.TextBox14.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox14.Location = New System.Drawing.Point(341, 158)
+        Me.TextBox14.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox14.Multiline = True
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.ReadOnly = True
         Me.TableLayoutPanel3.SetRowSpan(Me.TextBox14, 2)
-        Me.TextBox14.Size = New System.Drawing.Size(273, 60)
+        Me.TextBox14.Size = New System.Drawing.Size(364, 74)
         Me.TextBox14.TabIndex = 32
         '
         'DateTimePicker3
@@ -1061,65 +1031,65 @@ Partial Class Form1
         Me.DateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.TableLayoutPanel3.SetColumnSpan(Me.DateTimePicker3, 2)
         Me.DateTimePicker3.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Location = New System.Drawing.Point(255, 259)
-        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(341, 317)
+        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(261, 25)
+        Me.DateTimePicker3.Size = New System.Drawing.Size(347, 29)
         Me.DateTimePicker3.TabIndex = 33
         '
         'TextBox15
         '
         Me.TextBox15.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox15.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(720, 195)
-        Me.TextBox15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox15.Location = New System.Drawing.Point(962, 239)
+        Me.TextBox15.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.ReadOnly = True
-        Me.TextBox15.Size = New System.Drawing.Size(298, 25)
+        Me.TextBox15.Size = New System.Drawing.Size(397, 29)
         Me.TextBox15.TabIndex = 25
         '
         'TextBox16
         '
         Me.TextBox16.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox16.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(720, 163)
-        Me.TextBox16.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox16.Location = New System.Drawing.Point(962, 200)
+        Me.TextBox16.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.ReadOnly = True
-        Me.TextBox16.Size = New System.Drawing.Size(298, 25)
+        Me.TextBox16.Size = New System.Drawing.Size(397, 29)
         Me.TextBox16.TabIndex = 22
         '
         'TextBox18
         '
         Me.TextBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox18.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(720, 99)
-        Me.TextBox18.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox18.Location = New System.Drawing.Point(962, 122)
+        Me.TextBox18.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(298, 25)
+        Me.TextBox18.Size = New System.Drawing.Size(397, 29)
         Me.TextBox18.TabIndex = 20
         '
         'TextBox19
         '
         Me.TextBox19.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox19.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox19.Location = New System.Drawing.Point(720, 67)
-        Me.TextBox19.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox19.Location = New System.Drawing.Point(962, 83)
+        Me.TextBox19.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.ReadOnly = True
-        Me.TextBox19.Size = New System.Drawing.Size(298, 25)
+        Me.TextBox19.Size = New System.Drawing.Size(397, 29)
         Me.TextBox19.TabIndex = 19
         '
         'TextBox20
         '
         Me.TextBox20.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox20.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(720, 35)
-        Me.TextBox20.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox20.Location = New System.Drawing.Point(962, 44)
+        Me.TextBox20.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.ReadOnly = True
-        Me.TextBox20.Size = New System.Drawing.Size(298, 25)
+        Me.TextBox20.Size = New System.Drawing.Size(397, 29)
         Me.TextBox20.TabIndex = 18
         '
         'Label19
@@ -1127,10 +1097,9 @@ Partial Class Form1
         Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(651, 196)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label19.Location = New System.Drawing.Point(873, 239)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(65, 23)
+        Me.Label19.Size = New System.Drawing.Size(83, 29)
         Me.Label19.TabIndex = 24
         Me.Label19.Text = "STATUS:"
         '
@@ -1139,10 +1108,9 @@ Partial Class Form1
         Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(644, 164)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Location = New System.Drawing.Point(865, 200)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(72, 23)
+        Me.Label20.Size = New System.Drawing.Size(91, 29)
         Me.Label20.TabIndex = 11
         Me.Label20.Text = "EDITION:"
         '
@@ -1151,10 +1119,9 @@ Partial Class Form1
         Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(644, 132)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label21.Location = New System.Drawing.Point(864, 161)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(72, 23)
+        Me.Label21.Size = New System.Drawing.Size(92, 29)
         Me.Label21.TabIndex = 10
         Me.Label21.Text = "VOLUME:"
         '
@@ -1163,10 +1130,9 @@ Partial Class Form1
         Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(654, 100)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label22.Location = New System.Drawing.Point(877, 122)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(62, 23)
+        Me.Label22.Size = New System.Drawing.Size(79, 29)
         Me.Label22.TabIndex = 9
         Me.Label22.Text = "SERIES:"
         '
@@ -1175,10 +1141,9 @@ Partial Class Form1
         Me.Label23.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(670, 68)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label23.Location = New System.Drawing.Point(897, 83)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(46, 23)
+        Me.Label23.Size = New System.Drawing.Size(59, 29)
         Me.Label23.TabIndex = 8
         Me.Label23.Text = "ISBN:"
         '
@@ -1187,10 +1152,9 @@ Partial Class Form1
         Me.Label24.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(629, 36)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label24.Location = New System.Drawing.Point(846, 44)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(87, 23)
+        Me.Label24.Size = New System.Drawing.Size(110, 29)
         Me.Label24.TabIndex = 6
         Me.Label24.Text = "CATEGORY:"
         '
@@ -1198,10 +1162,10 @@ Partial Class Form1
         '
         Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(532, 2)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Location = New System.Drawing.Point(711, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(70, 28)
+        Me.Button4.Size = New System.Drawing.Size(93, 34)
         Me.Button4.TabIndex = 35
         Me.Button4.Text = "Search"
         Me.Button4.UseVisualStyleBackColor = True
@@ -1213,11 +1177,11 @@ Partial Class Form1
         Me.buttonReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.buttonReserve.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buttonReserve.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.buttonReserve.Location = New System.Drawing.Point(720, 258)
-        Me.buttonReserve.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.buttonReserve.Location = New System.Drawing.Point(962, 314)
+        Me.buttonReserve.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.buttonReserve.Name = "buttonReserve"
         Me.TableLayoutPanel3.SetRowSpan(Me.buttonReserve, 2)
-        Me.buttonReserve.Size = New System.Drawing.Size(298, 60)
+        Me.buttonReserve.Size = New System.Drawing.Size(397, 74)
         Me.buttonReserve.TabIndex = 36
         Me.buttonReserve.Text = "RESERVE BOOK"
         Me.buttonReserve.UseVisualStyleBackColor = False
@@ -1226,20 +1190,20 @@ Partial Class Form1
         '
         Me.TextBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox17.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(720, 131)
-        Me.TextBox17.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox17.Location = New System.Drawing.Point(962, 161)
+        Me.TextBox17.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox17.Name = "TextBox17"
         Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(298, 25)
+        Me.TextBox17.Size = New System.Drawing.Size(397, 29)
         Me.TextBox17.TabIndex = 21
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1032, 632)
+        Me.ClientSize = New System.Drawing.Size(1376, 778)
         Me.Controls.Add(Me.SplitContainer1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
