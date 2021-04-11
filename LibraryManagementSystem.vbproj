@@ -93,23 +93,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBook.Designer.vb">
-      <DependentUpon>AddBook.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AddBook.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User Controls\addBookUserControl.Designer.vb">
-      <DependentUpon>addBookUserControl.vb</DependentUpon>
-    </Compile>
-    <Compile Include="User Controls\addBookUserControl.vb">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="adminView.Designer.vb">
       <DependentUpon>adminView.vb</DependentUpon>
@@ -122,6 +110,12 @@
     </Compile>
     <Compile Include="advanceSearch.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\AddBookUserControl.Designer.vb">
+      <DependentUpon>AddBookUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\AddBookUserControl.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\bookControlAdmin.Designer.vb">
       <DependentUpon>bookControlAdmin.vb</DependentUpon>
@@ -187,23 +181,25 @@
     <Compile Include="Utilities\APIClientController\AuthorController.vb" />
     <Compile Include="Utilities\APIClientController\BookController.vb" />
     <Compile Include="Utilities\APIClientController\CategoryController.vb" />
+    <Compile Include="Utilities\APIClientController\CopyController.vb" />
     <Compile Include="Utilities\APIClientController\HTTPRequestController.vb" />
     <Compile Include="Utilities\APIClientController\ImageController.vb" />
     <Compile Include="Utilities\Authorization.vb" />
     <Compile Include="Utilities\DTOs\AuthorDTO.vb" />
     <Compile Include="Utilities\DTOs\BookDetailsDTO.vb" />
+    <Compile Include="Utilities\DTOs\BorrowDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
+    <Compile Include="Utilities\DTOs\BookCopyDTO.vb" />
+    <Compile Include="Utilities\DTOs\CollectionDTO.vb" />
+    <Compile Include="Utilities\DTOs\ReservationDTO.vb" />
+    <Compile Include="Utilities\DTOs\SectionDTO.vb" />
+    <Compile Include="Utilities\DTOs\UserDTO.vb" />
     <Compile Include="Utilities\methods\utils.vb" />
+    <Compile Include="Utilities\APIClientController\UserController.vb" />
     <Compile Include="viewBook.Designer.vb">
       <DependentUpon>viewBook.vb</DependentUpon>
     </Compile>
     <Compile Include="viewBook.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Utilities\Forms\TemporaryLogin.Designer.vb">
-      <DependentUpon>TemporaryLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Utilities\Forms\TemporaryLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User Controls\viewBookUserControl.Designer.vb">
@@ -214,20 +210,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddBook.resx">
-      <DependentUpon>AddBook.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\addBookUserControl.resx">
-      <DependentUpon>addBookUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="advanceSearch.resx">
       <DependentUpon>advanceSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\AddBookUserControl.resx">
+      <DependentUpon>AddBookUserControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\bookControlAdmin.resx">
       <DependentUpon>bookControlAdmin.vb</DependentUpon>
@@ -258,9 +251,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewBook.resx">
       <DependentUpon>viewBook.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Utilities\Forms\TemporaryLogin.resx">
-      <DependentUpon>TemporaryLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\viewBookUserControl.resx">
       <DependentUpon>viewBookUserControl.vb</DependentUpon>
@@ -383,6 +373,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewFolder1\" />
+    <Folder Include="Utilities\Forms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

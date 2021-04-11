@@ -32,31 +32,13 @@ Public Class bookDisplay
         Dim publisher = If(bkDTO.publisherAddress Is Nothing, "", "[" + bkDTO.publisherAddress + "]") + If(bkDTO.publisherName Is Nothing, "", " : " + bkDTO.publisherName)
         ' publisher = publisher + If(bkDTO.copyrightYear = 0, "", vbCrLf + "©" + bkDTO.copyrightYear.ToString) + If(bkDTO.copyrightName Is Nothing, " ", " " + bkDTO.copyrightName)
         bPublisher.Text = publisher
-        imageName = bkDTO.imageName
-        setCopies()
+        imageName = bkDTO.image
     End Sub
 
-    Public Sub setCopies()
-        If IsNothing(bkDTO.copies) Then
-            bkDTO.copies = CopyController.getCopies(bkDTO.bookId)
-            bkDTO.copies.Sort(Function(x, y) x.copy_num.CompareTo(y.copy_num))
-        End If
-
-        If bkDTO.copies.Any(Function(x) x.status.Equals("Available")) Then
-            bStatus.Text = "Available"
-            bStatus.ForeColor = Color.Lime
-        Else
-            bStatus.Text = "Unavailable"
-            bStatus.ForeColor = Color.Red
-        End If
-    End Sub
 
     Private Sub LinkLabel3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
-        viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider, Nothing, Nothing)
+        viewBook.setBkDTO(Me.bkDTO, Me.coverPcBx.Image, provider)
         Me.viewBook.ShowDialog()
     End Sub
 
-    Private Sub bookDisplay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

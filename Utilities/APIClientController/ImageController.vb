@@ -17,7 +17,6 @@ Module ImageController
             httpClient As New HttpClient
 
             form.Add(content, "file", id)
-            ' TODO: add authentication
             httpClient.DefaultRequestHeaders.Add("Authorization", Authorization.authToken)
             'httpClient.DefaultRequestHeaders.Add("name", id)
 
