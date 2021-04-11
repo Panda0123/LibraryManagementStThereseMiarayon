@@ -65,11 +65,6 @@ Partial Class viewBook
         Me.Label52 = New System.Windows.Forms.Label()
         Me.MoreInfoPage = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.copiesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.copy_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.checkOutCol = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.reserveCol = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.summaryRchTxtBx = New System.Windows.Forms.RichTextBox()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -78,6 +73,11 @@ Partial Class viewBook
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
+        Me.copiesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.copy_num = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.statusCol = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.checkOutCol = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.reserveCol = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.coverPcBx = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -107,9 +107,9 @@ Partial Class viewBook
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MoreInfoPage.SuspendLayout()
-        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -606,57 +606,12 @@ Partial Class viewBook
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Sitka Display", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(17, 128)
+        Me.Label10.Location = New System.Drawing.Point(17, 183)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(103, 43)
         Me.Label10.TabIndex = 31
         Me.Label10.Text = "Copies"
-        '
-        'copiesDataGridView
-        '
-        Me.copiesDataGridView.AllowUserToAddRows = False
-        Me.copiesDataGridView.AllowUserToDeleteRows = False
-        Me.copiesDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.copiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.copiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.copiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.copiesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.copy_num, Me.statusCol, Me.checkOutCol, Me.reserveCol})
-        Me.copiesDataGridView.Location = New System.Drawing.Point(20, 174)
-        Me.copiesDataGridView.Name = "copiesDataGridView"
-        Me.copiesDataGridView.ReadOnly = True
-        Me.copiesDataGridView.Size = New System.Drawing.Size(913, 391)
-        Me.copiesDataGridView.TabIndex = 30
-        '
-        'copy_num
-        '
-        Me.copy_num.HeaderText = "Copy #"
-        Me.copy_num.Name = "copy_num"
-        Me.copy_num.ReadOnly = True
-        Me.copy_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'statusCol
-        '
-        Me.statusCol.HeaderText = "Status"
-        Me.statusCol.Name = "statusCol"
-        Me.statusCol.ReadOnly = True
-        Me.statusCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'checkOutCol
-        '
-        Me.checkOutCol.HeaderText = "Checkout"
-        Me.checkOutCol.Name = "checkOutCol"
-        Me.checkOutCol.ReadOnly = True
-        Me.checkOutCol.Text = "Checkout"
-        Me.checkOutCol.UseColumnTextForButtonValue = True
-        '
-        'reserveCol
-        '
-        Me.reserveCol.HeaderText = "Reserve"
-        Me.reserveCol.Name = "reserveCol"
-        Me.reserveCol.ReadOnly = True
-        Me.reserveCol.Text = "Reserve"
-        Me.reserveCol.UseColumnTextForButtonValue = True
         '
         'summaryRchTxtBx
         '
@@ -744,6 +699,51 @@ Partial Class viewBook
         Me.Label43.Size = New System.Drawing.Size(555, 69)
         Me.Label43.TabIndex = 8
         Me.Label43.Text = "The Edge of the Unknown"
+        '
+        'copiesDataGridView
+        '
+        Me.copiesDataGridView.AllowUserToAddRows = False
+        Me.copiesDataGridView.AllowUserToDeleteRows = False
+        Me.copiesDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.copiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.copiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.copiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.copiesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.copy_num, Me.statusCol, Me.checkOutCol, Me.reserveCol})
+        Me.copiesDataGridView.Location = New System.Drawing.Point(20, 229)
+        Me.copiesDataGridView.Name = "copiesDataGridView"
+        Me.copiesDataGridView.ReadOnly = True
+        Me.copiesDataGridView.Size = New System.Drawing.Size(913, 391)
+        Me.copiesDataGridView.TabIndex = 30
+        '
+        'copy_num
+        '
+        Me.copy_num.HeaderText = "Copy #"
+        Me.copy_num.Name = "copy_num"
+        Me.copy_num.ReadOnly = True
+        Me.copy_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'statusCol
+        '
+        Me.statusCol.HeaderText = "Status"
+        Me.statusCol.Name = "statusCol"
+        Me.statusCol.ReadOnly = True
+        Me.statusCol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'checkOutCol
+        '
+        Me.checkOutCol.HeaderText = "Checkout"
+        Me.checkOutCol.Name = "checkOutCol"
+        Me.checkOutCol.ReadOnly = True
+        Me.checkOutCol.Text = "Checkout"
+        Me.checkOutCol.UseColumnTextForButtonValue = True
+        '
+        'reserveCol
+        '
+        Me.reserveCol.HeaderText = "Reserve"
+        Me.reserveCol.Name = "reserveCol"
+        Me.reserveCol.ReadOnly = True
+        Me.reserveCol.Text = "Reserve"
+        Me.reserveCol.UseColumnTextForButtonValue = True
         '
         'Panel1
         '
@@ -1065,9 +1065,9 @@ Partial Class viewBook
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MoreInfoPage.ResumeLayout(False)
         Me.MoreInfoPage.PerformLayout()
-        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.copiesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.coverPcBx, System.ComponentModel.ISupportInitialize).EndInit()

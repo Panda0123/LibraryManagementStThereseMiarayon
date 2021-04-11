@@ -60,3 +60,5 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
