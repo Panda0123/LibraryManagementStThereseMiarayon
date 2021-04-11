@@ -26,7 +26,7 @@ Partial Class Main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.mainPanel = New System.Windows.Forms.Panel()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.searchPcBx = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.advanceSearchLinkLbl = New System.Windows.Forms.LinkLabel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
@@ -37,9 +37,9 @@ Partial Class Main
         Me.loginBtn = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Button_Back = New System.Windows.Forms.LinkLabel()
+        Me.prevLnkLbl = New System.Windows.Forms.LinkLabel()
         Me.PageNumLabel = New System.Windows.Forms.Label()
-        Me.LinkLabel13 = New System.Windows.Forms.LinkLabel()
+        Me.nextLnkLbl = New System.Windows.Forms.LinkLabel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.leftMainScreenPanel = New System.Windows.Forms.Panel()
         Me.scrollablePanel = New System.Windows.Forms.Panel()
@@ -76,7 +76,7 @@ Partial Class Main
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.mainPanel.SuspendLayout()
         Me.TitleLogoSearchPanel.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,7 +109,7 @@ Partial Class Main
         '
         Me.TitleLogoSearchPanel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.TitleLogoSearchPanel.BackColor = System.Drawing.Color.White
-        Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox8)
+        Me.TitleLogoSearchPanel.Controls.Add(Me.searchPcBx)
         Me.TitleLogoSearchPanel.Controls.Add(Me.searchTextBox)
         Me.TitleLogoSearchPanel.Controls.Add(Me.advanceSearchLinkLbl)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox9)
@@ -125,18 +125,18 @@ Partial Class Main
         Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(620, 169)
         Me.TitleLogoSearchPanel.TabIndex = 18
         '
-        'PictureBox8
+        'searchPcBx
         '
-        Me.PictureBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.searchPcBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.PictureBox8.Location = New System.Drawing.Point(532, 95)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(32, 31)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 12
-        Me.PictureBox8.TabStop = False
+        Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
+        Me.searchPcBx.Location = New System.Drawing.Point(532, 95)
+        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4)
+        Me.searchPcBx.Name = "searchPcBx"
+        Me.searchPcBx.Size = New System.Drawing.Size(32, 31)
+        Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.searchPcBx.TabIndex = 12
+        Me.searchPcBx.TabStop = False
         '
         'searchTextBox
         '
@@ -172,7 +172,6 @@ Partial Class Main
         Me.PictureBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
         Me.PictureBox9.Location = New System.Drawing.Point(48, 89)
         Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox9.Name = "PictureBox9"
@@ -262,29 +261,29 @@ Partial Class Main
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.Button_Back)
+        Me.Panel3.Controls.Add(Me.prevLnkLbl)
         Me.Panel3.Controls.Add(Me.PageNumLabel)
-        Me.Panel3.Controls.Add(Me.LinkLabel13)
+        Me.Panel3.Controls.Add(Me.nextLnkLbl)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(360, 738)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1086, 54)
         Me.Panel3.TabIndex = 23
         '
-        'Button_Back
+        'prevLnkLbl
         '
-        Me.Button_Back.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.Button_Back.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button_Back.AutoSize = True
-        Me.Button_Back.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.Button_Back.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.Button_Back.Location = New System.Drawing.Point(416, 14)
-        Me.Button_Back.Name = "Button_Back"
-        Me.Button_Back.Size = New System.Drawing.Size(87, 25)
-        Me.Button_Back.TabIndex = 20
-        Me.Button_Back.TabStop = True
-        Me.Button_Back.Text = "Previous"
+        Me.prevLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.prevLnkLbl.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.prevLnkLbl.AutoSize = True
+        Me.prevLnkLbl.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.prevLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.prevLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.prevLnkLbl.Location = New System.Drawing.Point(416, 14)
+        Me.prevLnkLbl.Name = "prevLnkLbl"
+        Me.prevLnkLbl.Size = New System.Drawing.Size(87, 25)
+        Me.prevLnkLbl.TabIndex = 20
+        Me.prevLnkLbl.TabStop = True
+        Me.prevLnkLbl.Text = "Previous"
         '
         'PageNumLabel
         '
@@ -296,20 +295,20 @@ Partial Class Main
         Me.PageNumLabel.TabIndex = 17
         Me.PageNumLabel.Text = "Page 1"
         '
-        'LinkLabel13
+        'nextLnkLbl
         '
-        Me.LinkLabel13.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
-        Me.LinkLabel13.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LinkLabel13.AutoSize = True
-        Me.LinkLabel13.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel13.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel13.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.LinkLabel13.Location = New System.Drawing.Point(674, 13)
-        Me.LinkLabel13.Name = "LinkLabel13"
-        Me.LinkLabel13.Size = New System.Drawing.Size(53, 25)
-        Me.LinkLabel13.TabIndex = 21
-        Me.LinkLabel13.TabStop = True
-        Me.LinkLabel13.Text = "Next"
+        Me.nextLnkLbl.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
+        Me.nextLnkLbl.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.nextLnkLbl.AutoSize = True
+        Me.nextLnkLbl.Font = New System.Drawing.Font("Sitka Small", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nextLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.nextLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.nextLnkLbl.Location = New System.Drawing.Point(674, 13)
+        Me.nextLnkLbl.Name = "nextLnkLbl"
+        Me.nextLnkLbl.Size = New System.Drawing.Size(53, 25)
+        Me.nextLnkLbl.TabIndex = 21
+        Me.nextLnkLbl.TabStop = True
+        Me.nextLnkLbl.Text = "Next"
         '
         'FlowLayoutPanel1
         '
@@ -741,7 +740,7 @@ Partial Class Main
         Me.mainPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.ResumeLayout(False)
         Me.TitleLogoSearchPanel.PerformLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -774,7 +773,7 @@ Partial Class Main
     Friend WithEvents Timer4 As Timer
     Friend WithEvents loginBtn As Button
     Friend WithEvents TitleLogoSearchPanel As Panel
-    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents searchPcBx As PictureBox
     Friend WithEvents searchTextBox As TextBox
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label1 As Label
@@ -783,8 +782,8 @@ Partial Class Main
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PageNumLabel As Label
-    Friend WithEvents Button_Back As LinkLabel
-    Friend WithEvents LinkLabel13 As LinkLabel
+    Friend WithEvents prevLnkLbl As LinkLabel
+    Friend WithEvents nextLnkLbl As LinkLabel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents leftMainScreenPanel As Panel
     Friend WithEvents scrollablePanel As Panel
