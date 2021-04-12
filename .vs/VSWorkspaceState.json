@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bin",
-    "\\bin\\Debug",
-    "\\My Project",
-    "\\obj",
-    "\\packages",
-    "\\Resources"
+    "\\bin"
   ],
-  "SelectedNode": "\\login.vb",
+  "SelectedNode": "\\viewBook.Designer.vb",
   "PreviewInSolutionExplorer": false
 }
