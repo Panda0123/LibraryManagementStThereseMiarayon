@@ -104,10 +104,4 @@
         Next
         reservationListDataGrid.Refresh()
     End Sub
-
-    Private Sub TextBox22_TextChanged(sender As Object, e As EventArgs) Handles TextBox22.TextChanged
-
-    End Sub
-
-
 End Class
