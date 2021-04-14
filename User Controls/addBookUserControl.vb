@@ -3,8 +3,8 @@
 Public Class AddBookUserControl
     Private selectedBook As BookDetailsDTO
     Private adminView As adminView
-    Private classifications As List(Of ClassificationDTO)
-    Private classificationNames As New List(Of String)
+    'Private classifications As List(Of ClassificationDTO)
+    'Private classificationNames As New List(Of String)
     Private provider As CultureInfo = CultureInfo.InvariantCulture
 
     Private authors As New List(Of AuthorDTO)
@@ -25,14 +25,10 @@ Public Class AddBookUserControl
     End Sub
 
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If IsNothing(classifications) Then
-            classifications = CategoryController.getCategories()
-            classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
-            For Each classificationDto As ClassificationDTO In classifications
-                classificationNames.Add(classificationDto.name)
-            Next
-            classificationCmbBx.DataSource = classificationNames
+        If IsNothing(GlobalSource.classifications) Then
+            GlobalSource.setClass()
         End If
+        classificationCmbBx.DataSource = GlobalSource.classificationNames
         empty()
     End Sub
 

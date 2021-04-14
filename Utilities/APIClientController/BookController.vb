@@ -1,21 +1,36 @@
 ﻿Imports Newtonsoft.Json
 
 Module BookController
-    Private URL As String = "http://localhost:8080/api/v1/book"
+    Private URL As String = HttpRequestController.URL + "/book"
     Public Function getBooks() As List(Of BookDetailsDTO)
         Dim response As String = HttpRequestController.HttpRequestGet(URL + "/all")
         Dim responseDct As List(Of BookDetailsDTO) = JsonConvert.DeserializeObject(Of List(Of BookDetailsDTO))(response)
         Return responseDct
     End Function
 
-    Public Function getBooksPaginationSortBy(pageNum As Integer, pageSize As Integer, by As String, searchKey As String) As List(Of BookDetailsDTO)
-        Dim newURL = URL
+    Public Function getBooksPaginationSortBy(ByRef paginationDTO As PaginationDTO) As List(Of BookDetailsDTO)
+        Dim newURL = URL + "/all/pagination/?pageNum=" + paginationDTO.pageNum.ToString() + "&pageSize=" + paginationDTO.pageSize.ToString() + "&sortBy=" + paginationDTO.sortBy
 
-        If String.Compare(searchKey, String.Empty) = 0 Then
-            newURL += "/all/pagination/?pageNum=" + pageNum.ToString() + "&pageSize=" + pageSize.ToString() + "&sortBy=" + by
-        Else
-            newURL += "/all/pagination/?pageNum=" + pageNum.ToString() + "&pageSize=" + pageSize.ToString() + "&sortBy=" + by + "&searchKey=" + searchKey
+        If Not paginationDTO.searchKey.Equals(String.Empty) Then
+            newURL += "&searchKey=" + paginationDTO.searchKey
         End If
+
+        If Not paginationDTO.filterDateAdded.Equals(String.Empty) Then
+            newURL += "&filterDateAdded=" + paginationDTO.filterDateAdded
+        End If
+
+        If Not paginationDTO.filterFirstPublicationYear.Equals(String.Empty) Then
+            newURL += "&filterFirstPublicationYear=" + paginationDTO.filterFirstPublicationYear
+        End If
+
+        If Not paginationDTO.filterLastPublicationYear.Equals(String.Empty) Then
+            newURL += "&filterLastPublicationYear=" + paginationDTO.filterLastPublicationYear
+        End If
+
+        If Not paginationDTO.filterClassification.Equals(String.Empty) Then
+            newURL += "&filterClassification=" + paginationDTO.filterClassification
+        End If
+
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)
         Dim responseDct As List(Of BookDetailsDTO) = JsonConvert.DeserializeObject(Of List(Of BookDetailsDTO))(response)
         Return responseDct

@@ -2,7 +2,7 @@
 
 Module CopyController
 
-    Private URL As String = "http://localhost:8080/api/v1/book"
+    Private URL As String = HttpRequestController.URL + "/book"
     Public Function getCopies(ByRef bookId As Int64) As List(Of BookCopyDTO)
         Dim response As String = HttpRequestController.HttpRequestGet(URL + "/all/copies/" + bookId.ToString)
         Dim responseObj As List(Of BookCopyDTO) = JsonConvert.DeserializeObject(Of List(Of BookCopyDTO))(response)

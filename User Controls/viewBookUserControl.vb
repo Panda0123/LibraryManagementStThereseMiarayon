@@ -1,13 +1,11 @@
 ﻿Public Class viewBookUserControl
     Public adminBookDP As New List(Of bookControlAdmin)
+    Private paginationDTO As New PaginationDTO()
 
     Private numPage As Integer = 1
+    'Private searchKey As String = String.Empty
+    'Private PageIndex As Integer = 0
     Private totalResult As Integer = 0
-    Private searchKey As String = String.Empty
-
-    Private PageIndex As Integer = 0
-    Private BooksPerPage As Integer = 5 'number of books shown on each page
-
     Private viewBook As New viewBook
 
     Public Sub New(adminView)
@@ -23,15 +21,15 @@
 
     Public Sub setSearch(ByRef key As String)
         If Not key.Equals("Search...") Then
-            Me.searchKey = key.Replace(" ", "+")
+            paginationDTO.searchKey = key.Replace(" ", "+")
         End If
         setResult()
         initializeResult()
     End Sub
 
     Public Sub setResult()
-        PageIndex = 0
-        totalResult = BookController.getNumBkResult(searchKey)
+        paginationDTO.pageNum = 0
+        totalResult = BookController.getNumBkResult(paginationDTO.searchKey)
         numPage = totalResult / BooksPerPage
     End Sub
     Public Sub initializeResult()
@@ -44,22 +42,22 @@
 
     Private Sub prevLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles prevLnkLbl.LinkClicked
         ' LoadPage(False) 'false indicates to go back a page
-        If PageIndex > 0 Then
-            PageIndex -= 1
+        If paginationDTO.pageNum > 0 Then
+            paginationDTO.pageNum -= 1
             initializeResult()
         End If
     End Sub
 
     Private Sub nextLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles nextLnkLbl.LinkClicked
         ' LoadPage(True) 'true indicates to go forward a page
-        If PageIndex + 1 < numPage Then
-            PageIndex += 1
+        If paginationDTO.pageNum + 1 < paginationDTO.pageNum Then
+            paginationDTO.pageNum += 1
             initializeResult()
         End If
     End Sub
 
     Private Sub setBookDisplayResults()
-        Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(PageIndex, BooksPerPage, "Title", searchKey)
+        Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(paginationDTO)
 
         For idx As Integer = 0 To bkDTOs.Count - 1
             adminbookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
@@ -78,18 +76,18 @@
     End Sub
 
     Private Sub setPaginationControls()
-        If PageIndex + 1 >= numPage Then
+        If paginationDTO.pageNum + 1 >= numPage Then
             nextLnkLbl.Visible = False
         Else
             nextLnkLbl.Visible = True
         End If
 
-        If PageIndex <= 0 Then
+        If paginationDTO.pageNum <= 0 Then
             prevLnkLbl.Visible = False
         Else
             prevLnkLbl.Visible = True
         End If
-        PageNumLabel.Text = "Page " & (1 + PageIndex).ToString 'set the text to the Page Number
+        PageNumLabel.Text = "Page " & (1 + paginationDTO.pageNum).ToString 'set the text to the Page Number
     End Sub
 
 End Class

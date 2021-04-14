@@ -84,6 +84,7 @@
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
+    <Import Include="System.Configuration" />
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
@@ -135,6 +136,8 @@
     <Compile Include="User Controls\collectionsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Utilities\Design\Configurations.vb" />
+    <Compile Include="Utilities\Design\CustomColor.vb" />
     <Compile Include="Utilities\displayBookvb.vb" />
     <Compile Include="IssueBook.Designer.vb">
       <DependentUpon>IssueBook.vb</DependentUpon>
@@ -190,7 +193,9 @@
     <Compile Include="Utilities\DTOs\BorrowDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
     <Compile Include="Utilities\DTOs\BookCopyDTO.vb" />
+    <Compile Include="Utilities\Design\GlobalSource.vb" />
     <Compile Include="Utilities\DTOs\CollectionDTO.vb" />
+    <Compile Include="Utilities\DTOs\PaginationDTO.vb" />
     <Compile Include="Utilities\DTOs\ReservationDTO.vb" />
     <Compile Include="Utilities\DTOs\SectionDTO.vb" />
     <Compile Include="Utilities\DTOs\UserDTO.vb" />
@@ -373,7 +378,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewFolder1\" />
-    <Folder Include="Utilities\Forms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

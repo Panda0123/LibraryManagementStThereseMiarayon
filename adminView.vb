@@ -58,7 +58,6 @@ Public Class adminView
                 Main.Show()
                 Me.Close()
                 Authorization.authToken = String.Empty
-
         End Select
     End Sub
 
