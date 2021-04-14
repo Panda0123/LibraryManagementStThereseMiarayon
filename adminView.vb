@@ -78,11 +78,9 @@ Public Class adminView
         viewBookuserCtl.setSearch(searchTextBox.Text)
     End Sub
 
-    Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click, bokkAddBtn.Click
-        Dim found As Boolean = False
 
 
-
+    Private Sub searchTextBox_TextChanged(sender As Object, e As EventArgs) Handles searchTextBox.TextChanged
 
     End Sub
 End Class

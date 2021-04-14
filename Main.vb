@@ -276,4 +276,7 @@ Public Class Main
         PageNumLabel.Text = "Page " & (1 + PageIndex).ToString 'set the text to the Page Number
     End Sub
 
+    Private Sub searchTextBox_TextChanged(sender As Object, e As EventArgs) Handles searchTextBox.TextChanged
+
+    End Sub
 End Class

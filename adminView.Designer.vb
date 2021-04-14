@@ -75,7 +75,7 @@ Partial Class adminView
         TopPanel.Controls.Add(Me.ShapeContainer2)
         TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         TopPanel.Location = New System.Drawing.Point(0, 0)
-        TopPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        TopPanel.Margin = New System.Windows.Forms.Padding(5)
         TopPanel.Name = "TopPanel"
         TopPanel.Size = New System.Drawing.Size(2150, 226)
         TopPanel.TabIndex = 2
@@ -103,7 +103,7 @@ Partial Class adminView
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(2150, 6)
         Me.Panel3.TabIndex = 3
@@ -112,7 +112,7 @@ Partial Class adminView
         '
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 214)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(2150, 12)
         Me.Panel2.TabIndex = 2
@@ -130,7 +130,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
         Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(688, 14)
-        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(5)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(775, 211)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(775, 211)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
@@ -143,7 +143,7 @@ Partial Class adminView
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
         Me.searchPcBx.Location = New System.Drawing.Point(532, 95)
-        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4)
         Me.searchPcBx.Name = "searchPcBx"
         Me.searchPcBx.Size = New System.Drawing.Size(32, 31)
         Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -281,7 +281,7 @@ Partial Class adminView
         Me.backgroundPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.backgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.backgroundPanel.Location = New System.Drawing.Point(0, 226)
-        Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(5)
         Me.backgroundPanel.Name = "backgroundPanel"
         Me.backgroundPanel.Size = New System.Drawing.Size(2150, 706)
         Me.backgroundPanel.TabIndex = 3
@@ -292,7 +292,7 @@ Partial Class adminView
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -330,7 +330,7 @@ Partial Class adminView
         '
         Me.highlightPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.highlightPanel.Location = New System.Drawing.Point(0, 0)
-        Me.highlightPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.highlightPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.highlightPanel.Name = "highlightPanel"
         Me.highlightPanel.Size = New System.Drawing.Size(10, 91)
         Me.highlightPanel.TabIndex = 0
@@ -415,7 +415,7 @@ Partial Class adminView
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(225, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(237, Byte), Integer))
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(233, 226)
         Me.Panel1.TabIndex = 2
@@ -429,7 +429,7 @@ Partial Class adminView
         Me.ClientSize = New System.Drawing.Size(2388, 932)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.MinimumSize = New System.Drawing.Size(1918, 965)
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

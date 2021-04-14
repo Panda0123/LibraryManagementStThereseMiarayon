@@ -92,4 +92,7 @@
         PageNumLabel.Text = "Page " & (1 + PageIndex).ToString 'set the text to the Page Number
     End Sub
 
+    Private Sub bookDisplayFlowPanel_Paint(sender As Object, e As PaintEventArgs) Handles bookDisplayFlowPanel.Paint
+
+    End Sub
 End Class
