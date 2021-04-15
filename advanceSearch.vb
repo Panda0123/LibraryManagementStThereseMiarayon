@@ -36,7 +36,17 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, MyBase.Closed
+        Me.empty()
         Main.empty()
+    End Sub
+    Private Sub empty()
+        titleSearch.Text = String.Empty
+        classificationSearch.Text = String.Empty
+        publisherSearch.Text = String.Empty
+        ISBNsearch.Text = String.Empty
+        languageSearch.Text = String.Empty
+        firstPublicationYear.Text = String.Empty
+        lastPublicationYear.Text = String.Empty
     End Sub
 
 End Class
