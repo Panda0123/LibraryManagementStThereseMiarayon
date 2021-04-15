@@ -199,6 +199,7 @@
     <Compile Include="Utilities\DTOs\ReservationDTO.vb" />
     <Compile Include="Utilities\DTOs\SectionDTO.vb" />
     <Compile Include="Utilities\DTOs\UserDTO.vb" />
+    <Compile Include="Utilities\methods\Security.vb" />
     <Compile Include="Utilities\methods\utils.vb" />
     <Compile Include="Utilities\APIClientController\UserController.vb" />
     <Compile Include="viewBook.Designer.vb">

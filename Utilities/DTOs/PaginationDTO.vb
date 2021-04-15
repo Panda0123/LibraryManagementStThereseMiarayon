@@ -7,6 +7,7 @@
     Property filterFirstPublicationYear As String
     Property filterLastPublicationYear As String
     Property filterClassification As String
+    Property filterPublisher As String
 
     Public Sub New()
         Me.pageNum = 1
@@ -17,6 +18,7 @@
         Me.filterFirstPublicationYear = String.Empty
         Me.filterLastPublicationYear = String.Empty
         Me.filterClassification = String.Empty
+        Me.filterPublisher = String.Empty
     End Sub
 
     Public Sub setToDefault()
@@ -27,6 +29,7 @@
         Me.filterFirstPublicationYear = String.Empty
         Me.filterLastPublicationYear = String.Empty
         Me.filterClassification = String.Empty
+        Me.filterPublisher = String.Empty
     End Sub
 
 End Class

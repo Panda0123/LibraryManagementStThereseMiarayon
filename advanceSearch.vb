@@ -21,10 +21,10 @@
     End Sub
 
     Private Sub loginBtnLoginForm_Click(sender As Object, e As EventArgs) Handles loginBtnLoginForm.Click
-        paginationDTO.searchKey = titleSearch.Text.Trim
+        paginationDTO.searchKey = titleSearch.Text
         ' TODO: author
-        paginationDTO.filterClassification = classificationSearch.Text.Trim
-        ' TODO: publisher name
+        paginationDTO.filterClassification = classificationSearch.Text
+        paginationDTO.filterPublisher = publisherSearch.Text
         ' TODO: isbn
         ' TODO: language
         paginationDTO.filterFirstPublicationYear = firstPublicationYear.Text.Trim

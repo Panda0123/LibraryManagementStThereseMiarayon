@@ -12,7 +12,7 @@ Module BookController
         Dim newURL = URL + "/all/pagination/?pageNum=" + paginationDTO.pageNum.ToString() + "&pageSize=" + paginationDTO.pageSize.ToString() + "&sortBy=" + paginationDTO.sortBy
 
         If Not paginationDTO.searchKey.Equals(String.Empty) Then
-            newURL += "&searchKey=" + paginationDTO.searchKey
+            newURL += "&searchKey=" + Security.turnToValidStringQuery(paginationDTO.searchKey)
         End If
 
         If Not paginationDTO.filterDateAdded.Equals(String.Empty) Then
@@ -28,7 +28,11 @@ Module BookController
         End If
 
         If Not paginationDTO.filterClassification.Equals(String.Empty) Then
-            newURL += "&filterClassification=" + paginationDTO.filterClassification
+            newURL += "&filterClassification=" + Security.turnToValidStringQuery(paginationDTO.filterClassification)
+        End If
+
+        If Not paginationDTO.filterPublisher.Equals(String.Empty) Then
+            newURL += "&filterPublisher=" + Security.turnToValidStringQuery(paginationDTO.filterPublisher)
         End If
 
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)

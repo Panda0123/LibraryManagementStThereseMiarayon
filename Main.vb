@@ -225,7 +225,7 @@ Public Class Main
 
     Public Sub serchPcBx_Clicked(sender As Object, e As EventArgs) Handles searchPcBx.Click
         If Not searchTextBox.Text.Equals("Search...") Then
-            paginationDTO.searchKey = searchTextBox.Text.Replace(" ", "+")
+            paginationDTO.searchKey = searchTextBox.Text
         End If
         setResult()
     End Sub
@@ -319,7 +319,7 @@ Public Class Main
 
     ' CLASSIFICATION [FILTER]
     Private Sub searchClassification_clicked(sender As Object, e As EventArgs) Handles searchClassification.Click
-        paginationDTO.filterClassification = ComboBox2.Text.Trim
+        paginationDTO.filterClassification = ComboBox2.Text
         setResult()
     End Sub
 
