@@ -30,7 +30,6 @@ Partial Class advanceSearch
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.titleSearch = New System.Windows.Forms.TextBox()
         Me.authorSearch = New System.Windows.Forms.TextBox()
         Me.classificationSearch = New System.Windows.Forms.TextBox()
@@ -50,6 +49,7 @@ Partial Class advanceSearch
         Me.lastPublicationYear = New System.Windows.Forms.TextBox()
         Me.loginBtnLoginForm = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.languageSearch = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,25 +149,12 @@ Partial Class advanceSearch
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "ISBN"
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox2.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(236, 422)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox2.MaxDropDownItems = 4
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(395, 34)
-        Me.ComboBox2.TabIndex = 4
-        '
         'titleSearch
         '
         Me.titleSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.titleSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.titleSearch.Location = New System.Drawing.Point(236, 122)
-        Me.titleSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.titleSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.titleSearch.Name = "titleSearch"
         Me.titleSearch.Size = New System.Drawing.Size(394, 28)
         Me.titleSearch.TabIndex = 6
@@ -177,7 +164,7 @@ Partial Class advanceSearch
         Me.authorSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.authorSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.authorSearch.Location = New System.Drawing.Point(236, 180)
-        Me.authorSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.authorSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.authorSearch.Name = "authorSearch"
         Me.authorSearch.Size = New System.Drawing.Size(394, 28)
         Me.authorSearch.TabIndex = 6
@@ -187,7 +174,7 @@ Partial Class advanceSearch
         Me.classificationSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.classificationSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.classificationSearch.Location = New System.Drawing.Point(236, 247)
-        Me.classificationSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.classificationSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.classificationSearch.Name = "classificationSearch"
         Me.classificationSearch.Size = New System.Drawing.Size(394, 28)
         Me.classificationSearch.TabIndex = 6
@@ -197,7 +184,7 @@ Partial Class advanceSearch
         Me.publisherSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.publisherSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.publisherSearch.Location = New System.Drawing.Point(236, 307)
-        Me.publisherSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.publisherSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.publisherSearch.Name = "publisherSearch"
         Me.publisherSearch.Size = New System.Drawing.Size(394, 28)
         Me.publisherSearch.TabIndex = 6
@@ -207,7 +194,7 @@ Partial Class advanceSearch
         Me.ISBNsearch.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.ISBNsearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ISBNsearch.Location = New System.Drawing.Point(236, 370)
-        Me.ISBNsearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ISBNsearch.Margin = New System.Windows.Forms.Padding(2)
         Me.ISBNsearch.Name = "ISBNsearch"
         Me.ISBNsearch.Size = New System.Drawing.Size(394, 28)
         Me.ISBNsearch.TabIndex = 6
@@ -227,7 +214,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox7.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_18
         Me.PictureBox7.Location = New System.Drawing.Point(182, 474)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(188, 43)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -238,7 +225,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox6.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_861
         Me.PictureBox6.Location = New System.Drawing.Point(190, 418)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(486, 43)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -249,7 +236,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox5.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_861
         Me.PictureBox5.Location = New System.Drawing.Point(190, 362)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(486, 43)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -260,7 +247,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_861
         Me.PictureBox4.Location = New System.Drawing.Point(190, 299)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(486, 43)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -271,7 +258,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox3.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_861
         Me.PictureBox3.Location = New System.Drawing.Point(190, 238)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(486, 43)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -282,7 +269,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox2.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_861
         Me.PictureBox2.Location = New System.Drawing.Point(190, 173)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(486, 43)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -293,7 +280,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_861
         Me.PictureBox1.Location = New System.Drawing.Point(190, 114)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(486, 43)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -315,7 +302,7 @@ Partial Class advanceSearch
         '
         Me.PictureBox8.Image = Global.LibraryManagementSystem.My.Resources.Resources.Rectangle_18
         Me.PictureBox8.Location = New System.Drawing.Point(442, 474)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(188, 43)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -327,7 +314,7 @@ Partial Class advanceSearch
         Me.firstPublicationYear.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.firstPublicationYear.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.firstPublicationYear.Location = New System.Drawing.Point(206, 482)
-        Me.firstPublicationYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.firstPublicationYear.Margin = New System.Windows.Forms.Padding(2)
         Me.firstPublicationYear.Name = "firstPublicationYear"
         Me.firstPublicationYear.Size = New System.Drawing.Size(138, 28)
         Me.firstPublicationYear.TabIndex = 7
@@ -337,7 +324,7 @@ Partial Class advanceSearch
         Me.lastPublicationYear.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lastPublicationYear.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lastPublicationYear.Location = New System.Drawing.Point(471, 482)
-        Me.lastPublicationYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.lastPublicationYear.Margin = New System.Windows.Forms.Padding(2)
         Me.lastPublicationYear.Name = "lastPublicationYear"
         Me.lastPublicationYear.Size = New System.Drawing.Size(138, 28)
         Me.lastPublicationYear.TabIndex = 7
@@ -353,7 +340,7 @@ Partial Class advanceSearch
         Me.loginBtnLoginForm.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loginBtnLoginForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.loginBtnLoginForm.Location = New System.Drawing.Point(236, 546)
-        Me.loginBtnLoginForm.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.loginBtnLoginForm.Margin = New System.Windows.Forms.Padding(2)
         Me.loginBtnLoginForm.Name = "loginBtnLoginForm"
         Me.loginBtnLoginForm.Size = New System.Drawing.Size(172, 42)
         Me.loginBtnLoginForm.TabIndex = 16
@@ -373,7 +360,7 @@ Partial Class advanceSearch
         Me.Button1.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.Location = New System.Drawing.Point(419, 546)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(172, 42)
         Me.Button1.TabIndex = 17
@@ -382,6 +369,16 @@ Partial Class advanceSearch
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'languageSearch
+        '
+        Me.languageSearch.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.languageSearch.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.languageSearch.Location = New System.Drawing.Point(236, 425)
+        Me.languageSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.languageSearch.Name = "languageSearch"
+        Me.languageSearch.Size = New System.Drawing.Size(394, 28)
+        Me.languageSearch.TabIndex = 18
+        '
         'advanceSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -389,6 +386,7 @@ Partial Class advanceSearch
         Me.AutoSize = True
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(771, 598)
+        Me.Controls.Add(Me.languageSearch)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.loginBtnLoginForm)
         Me.Controls.Add(Me.lastPublicationYear)
@@ -398,7 +396,6 @@ Partial Class advanceSearch
         Me.Controls.Add(Me.classificationSearch)
         Me.Controls.Add(Me.authorSearch)
         Me.Controls.Add(Me.titleSearch)
-        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
@@ -417,12 +414,12 @@ Partial Class advanceSearch
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Movable = False
         Me.Name = "advanceSearch"
-        Me.Padding = New System.Windows.Forms.Padding(16, 48, 16, 16)
+        Me.Padding = New System.Windows.Forms.Padding(16, 60, 16, 16)
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "loginForm"
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -450,7 +447,6 @@ Partial Class advanceSearch
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents titleSearch As TextBox
     Friend WithEvents authorSearch As TextBox
@@ -465,4 +461,5 @@ Partial Class advanceSearch
     Friend WithEvents lastPublicationYear As TextBox
     Friend WithEvents loginBtnLoginForm As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents languageSearch As TextBox
 End Class
