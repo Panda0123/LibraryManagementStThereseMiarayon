@@ -8,6 +8,7 @@
     Property filterLastPublicationYear As String
     Property filterClassification As String
     Property filterPublisher As String
+    Property filterIsbn As String
 
     Public Sub New()
         Me.pageNum = 1
@@ -19,6 +20,7 @@
         Me.filterLastPublicationYear = String.Empty
         Me.filterClassification = String.Empty
         Me.filterPublisher = String.Empty
+        Me.filterIsbn = String.Empty
     End Sub
 
     Public Sub setToDefault()
@@ -30,6 +32,7 @@
         Me.filterLastPublicationYear = String.Empty
         Me.filterClassification = String.Empty
         Me.filterPublisher = String.Empty
+        Me.filterIsbn = String.Empty
     End Sub
 
 End Class

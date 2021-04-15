@@ -35,6 +35,10 @@ Module BookController
             newURL += "&filterPublisher=" + Security.turnToValidStringQuery(paginationDTO.filterPublisher)
         End If
 
+        If Not paginationDTO.filterIsbn.Equals(String.Empty) Then
+            newURL += "&filterIsbn=" + Security.turnToValidStringQuery(paginationDTO.filterIsbn)
+        End If
+
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)
         Dim responseDct As List(Of BookDetailsDTO) = JsonConvert.DeserializeObject(Of List(Of BookDetailsDTO))(response)
         Return responseDct

@@ -25,7 +25,7 @@
         ' TODO: author
         paginationDTO.filterClassification = classificationSearch.Text
         paginationDTO.filterPublisher = publisherSearch.Text
-        ' TODO: isbn
+        paginationDTO.filterIsbn = ISBNsearch.Text
         ' TODO: language
         paginationDTO.filterFirstPublicationYear = firstPublicationYear.Text.Trim
         paginationDTO.filterLastPublicationYear = lastPublicationYear.Text.Trim
