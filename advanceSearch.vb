@@ -26,7 +26,7 @@
         paginationDTO.filterClassification = classificationSearch.Text
         paginationDTO.filterPublisher = publisherSearch.Text
         paginationDTO.filterIsbn = ISBNsearch.Text
-        ' TODO: language
+        paginationDTO.filterLanguage = languageSearch.Text
         paginationDTO.filterFirstPublicationYear = firstPublicationYear.Text.Trim
         paginationDTO.filterLastPublicationYear = lastPublicationYear.Text.Trim
         ' TODO: empty other filters in paginationDTO and set the Main controls to the current paginationDTO
