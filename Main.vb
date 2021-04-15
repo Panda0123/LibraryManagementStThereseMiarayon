@@ -232,7 +232,8 @@ Public Class Main
 
     ' results
     Public Sub setResult()
-        totalResult = BookController.getNumBkResult(paginationDTO.searchKey)
+        totalResult = BookController.getNumBkResult(paginationDTO)
+        Debug.WriteLine(totalResult)
         numPage = totalResult / BooksPerPage
         paginationDTO.pageNum = 0
         initializeResult()

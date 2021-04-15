@@ -29,7 +29,7 @@
 
     Public Sub setResult()
         paginationDTO.pageNum = 0
-        totalResult = BookController.getNumBkResult(paginationDTO.searchKey)
+        totalResult = BookController.getNumBkResult(paginationDTO)
         numPage = totalResult / BooksPerPage
     End Sub
     Public Sub initializeResult()
