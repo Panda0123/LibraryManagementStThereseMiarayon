@@ -218,7 +218,6 @@ Public Class Main
         End Select
         If radio_click = 1 Then
             radio_click = 0
-            Debug.WriteLine(sender.name)
             initializeResult()
         End If
     End Sub
@@ -233,7 +232,6 @@ Public Class Main
     ' results
     Public Sub setResult()
         totalResult = BookController.getNumBkResult(paginationDTO)
-        Debug.WriteLine(totalResult)
         numPage = totalResult / BooksPerPage
         paginationDTO.pageNum = 0
         initializeResult()
@@ -309,6 +307,11 @@ Public Class Main
         LinkLabel3.LinkColor = CustomColor.LinkLabelDefaultColor
         paginationDTO.filterDateAdded = String.Empty
     End Sub
+    ' AUTHORS
+    Private Sub searchAuth_Clicked(sender As Object, e As EventArgs) Handles searchAuth.Click
+        paginationDTO.filterAuthor = ComboBox1.Text
+        setResult()
+    End Sub
 
     ' PULICATION YEAR [FILTER}
     Private Sub searchYear_Clicked(sender As Object, e As EventArgs) Handles searchYear.Click
@@ -332,13 +335,12 @@ Public Class Main
     End Sub
     Public Sub updateUIForCurPaginationDTO()
         searchTextBox.Text = paginationDTO.searchKey
-        ' TODO: author
+        ComboBox1.Text = paginationDTO.filterAuthor
         ComboBox2.Text = paginationDTO.filterClassification
         beforeYear.Text = paginationDTO.filterFirstPublicationYear
         afterYear.Text = paginationDTO.filterLastPublicationYear
         RadioButtonNewlyAdded.Checked = True
 
         resetNewTitle()
-        ComboBox2.Text = paginationDTO.filterClassification
     End Sub
 End Class

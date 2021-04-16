@@ -36,8 +36,13 @@ Module BookController
     Private Function getFilters(ByRef paginationDTO As PaginationDTO) As String
 
         Dim filters = ""
+
         If Not paginationDTO.searchKey.Equals(String.Empty) Then
             filters += "&searchKey=" + Security.turnToValidStringQuery(paginationDTO.searchKey)
+        End If
+
+        If Not paginationDTO.filterAuthor.Equals(String.Empty) Then
+            filters += "&filterAuthor=" + Security.turnToValidStringQuery(paginationDTO.filterAuthor)
         End If
 
         If Not paginationDTO.filterDateAdded.Equals(String.Empty) Then

@@ -22,14 +22,13 @@
 
     Private Sub loginBtnLoginForm_Click(sender As Object, e As EventArgs) Handles loginBtnLoginForm.Click
         paginationDTO.searchKey = titleSearch.Text
-        ' TODO: author
+        paginationDTO.filterAuthor = authorSearch.Text
         paginationDTO.filterClassification = classificationSearch.Text
         paginationDTO.filterPublisher = publisherSearch.Text
         paginationDTO.filterIsbn = ISBNsearch.Text
         paginationDTO.filterLanguage = languageSearch.Text
         paginationDTO.filterFirstPublicationYear = firstPublicationYear.Text.Trim
         paginationDTO.filterLastPublicationYear = lastPublicationYear.Text.Trim
-        ' TODO: empty other filters in paginationDTO and set the Main controls to the current paginationDTO
 
         Main.setResult()
         Main.updateUIForCurPaginationDTO()
@@ -41,6 +40,7 @@
     End Sub
     Private Sub empty()
         titleSearch.Text = String.Empty
+        authorSearch.Text = String.Empty
         classificationSearch.Text = String.Empty
         publisherSearch.Text = String.Empty
         ISBNsearch.Text = String.Empty

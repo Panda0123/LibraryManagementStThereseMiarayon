@@ -10,6 +10,7 @@
     Property filterPublisher As String
     Property filterIsbn As String
     Property filterLanguage As String
+    Property filterAuthor As String
 
     Public Sub New()
         Me.pageNum = 1
@@ -23,6 +24,7 @@
         Me.filterPublisher = String.Empty
         Me.filterIsbn = String.Empty
         Me.filterLanguage = String.Empty
+        Me.filterAuthor = String.Empty
     End Sub
 
     Public Sub setToDefault()
@@ -36,6 +38,7 @@
         Me.filterPublisher = String.Empty
         Me.filterIsbn = String.Empty
         Me.filterLanguage = String.Empty
+        Me.filterAuthor = String.Empty
     End Sub
 
 End Class
