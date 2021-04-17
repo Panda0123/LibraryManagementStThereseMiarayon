@@ -47,7 +47,7 @@ Partial Class advanceSearch
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.firstPublicationYear = New System.Windows.Forms.TextBox()
         Me.lastPublicationYear = New System.Windows.Forms.TextBox()
-        Me.loginBtnLoginForm = New System.Windows.Forms.Button()
+        Me.searchBtnForm = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.languageSearch = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -329,25 +329,25 @@ Partial Class advanceSearch
         Me.lastPublicationYear.Size = New System.Drawing.Size(138, 28)
         Me.lastPublicationYear.TabIndex = 7
         '
-        'loginBtnLoginForm
+        'searchBtnForm
         '
-        Me.loginBtnLoginForm.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.loginBtnLoginForm.BackColor = System.Drawing.Color.White
-        Me.loginBtnLoginForm.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-        Me.loginBtnLoginForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.loginBtnLoginForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
-        Me.loginBtnLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.loginBtnLoginForm.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loginBtnLoginForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.loginBtnLoginForm.Location = New System.Drawing.Point(236, 546)
-        Me.loginBtnLoginForm.Margin = New System.Windows.Forms.Padding(2)
-        Me.loginBtnLoginForm.Name = "loginBtnLoginForm"
-        Me.loginBtnLoginForm.Size = New System.Drawing.Size(172, 42)
-        Me.loginBtnLoginForm.TabIndex = 16
-        Me.loginBtnLoginForm.Text = "Search"
-        Me.loginBtnLoginForm.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.loginBtnLoginForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.loginBtnLoginForm.UseVisualStyleBackColor = False
+        Me.searchBtnForm.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.searchBtnForm.BackColor = System.Drawing.Color.White
+        Me.searchBtnForm.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.searchBtnForm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.searchBtnForm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.searchBtnForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.searchBtnForm.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchBtnForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.searchBtnForm.Location = New System.Drawing.Point(236, 546)
+        Me.searchBtnForm.Margin = New System.Windows.Forms.Padding(2)
+        Me.searchBtnForm.Name = "searchBtnForm"
+        Me.searchBtnForm.Size = New System.Drawing.Size(172, 42)
+        Me.searchBtnForm.TabIndex = 16
+        Me.searchBtnForm.Text = "Search"
+        Me.searchBtnForm.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.searchBtnForm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.searchBtnForm.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -388,7 +388,7 @@ Partial Class advanceSearch
         Me.ClientSize = New System.Drawing.Size(771, 598)
         Me.Controls.Add(Me.languageSearch)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.loginBtnLoginForm)
+        Me.Controls.Add(Me.searchBtnForm)
         Me.Controls.Add(Me.lastPublicationYear)
         Me.Controls.Add(Me.firstPublicationYear)
         Me.Controls.Add(Me.ISBNsearch)
@@ -459,7 +459,7 @@ Partial Class advanceSearch
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents firstPublicationYear As TextBox
     Friend WithEvents lastPublicationYear As TextBox
-    Friend WithEvents loginBtnLoginForm As Button
+    Friend WithEvents searchBtnForm As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents languageSearch As TextBox
 End Class

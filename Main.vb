@@ -155,7 +155,7 @@ Public Class Main
 
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
         'advanceSearch.Show()
-        Dim advSearch = New advanceSearch(paginationDTO)
+        Dim advSearch = New advanceSearch(paginationDTO, Me)
         advSearch.Show()
     End Sub
 

@@ -1,26 +1,17 @@
 ﻿Public Class advanceSearch
     Private paginationDTO As PaginationDTO
+    Private parent As Object
 
-    Public Sub New(ByRef paginationDTO As PaginationDTO)
+    Public Sub New(ByRef paginationDTO As PaginationDTO, ByRef parent As Object)
 
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         Me.paginationDTO = paginationDTO
+        Me.parent = parent
     End Sub
 
-    Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
-
-    End Sub
-
-    Private Sub loginBtnLoginForm_Click(sender As Object, e As EventArgs) Handles loginBtnLoginForm.Click
+    Private Sub searchBtnForm_Click(sender As Object, e As EventArgs) Handles searchBtnForm.Click
         paginationDTO.searchKey = titleSearch.Text
         paginationDTO.filterAuthor = authorSearch.Text
         paginationDTO.filterClassification = classificationSearch.Text
@@ -30,13 +21,26 @@
         paginationDTO.filterFirstPublicationYear = firstPublicationYear.Text.Trim
         paginationDTO.filterLastPublicationYear = lastPublicationYear.Text.Trim
 
-        Main.setResult()
-        Main.updateUIForCurPaginationDTO()
+        If parent.GetType.Equals(GetType(Main)) Then
+            Debug.WriteLine("Main")
+            CType(parent, Main).setResult()
+            CType(parent, Main).updateUIForCurPaginationDTO()
+        ElseIf parent.GetType.Equals(GetType(adminView)) Then
+            Debug.WriteLine("AdminView")
+            CType(parent, adminView).viewBookuserCtl.setResult()
+            CType(parent, adminView).viewBookuserCtl.updateUIForCurPaginationDTO()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, MyBase.Closed
         Me.empty()
-        Main.empty()
+        If parent.GetType.Equals(GetType(Main)) Then
+            Debug.WriteLine("Main")
+            CType(parent, Main).empty()
+        ElseIf parent.GetType.Equals(GetType(adminView)) Then
+            Debug.WriteLine("AdminView")
+            CType(parent, adminView).viewBookuserCtl.empty()
+        End If
     End Sub
     Private Sub empty()
         titleSearch.Text = String.Empty

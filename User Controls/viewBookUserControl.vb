@@ -1,6 +1,6 @@
 ﻿Public Class viewBookUserControl
     Public adminBookDP As New List(Of bookControlAdmin)
-    Private paginationDTO As New PaginationDTO()
+    Private paginationDTO As PaginationDTO
 
     Private numPage As Double = 1
     'Private searchKey As String = String.Empty
@@ -8,15 +8,15 @@
     Private totalResult As Integer = 0
     Private viewBook As New viewBook
 
-    Public Sub New(adminView)
+    Public Sub New(ByRef adminView As adminView, ByRef paginationDTO As PaginationDTO)
         InitializeComponent()
+        Me.paginationDTO = paginationDTO
 
         For x As Integer = 1 To BooksPerPage
             adminBookDP.Add(New bookControlAdmin(viewBook, adminView))
         Next
 
         setResult()
-        initializeResult()
     End Sub
 
     Public Sub setSearch(ByRef key As String)
@@ -24,17 +24,16 @@
             paginationDTO.searchKey = key.Replace(" ", "+")
         End If
         setResult()
-        initializeResult()
     End Sub
 
     Public Sub setResult()
         paginationDTO.pageNum = 0
         totalResult = BookController.getNumBkResult(paginationDTO)
         numPage = totalResult / BooksPerPage
+        initializeResult()
     End Sub
     Public Sub initializeResult()
         bookDisplayFlowPanel.Controls.Clear()
-
         setBookDisplayResults()
         loadImage()
         setPaginationControls()
@@ -90,4 +89,13 @@
         PageNumLabel.Text = "Page " & (1 + paginationDTO.pageNum).ToString 'set the text to the Page Number
     End Sub
 
+    Public Sub empty()
+        paginationDTO.setToDefault()
+        adminView.searchTextBox.Text = String.Empty
+        setResult()
+    End Sub
+
+    Public Sub updateUIForCurPaginationDTO()
+        adminView.searchTextBox.Text = paginationDTO.searchKey
+    End Sub
 End Class
