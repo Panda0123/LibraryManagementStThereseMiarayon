@@ -113,13 +113,18 @@ Module BookController
         Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
         Return JsonConvert.DeserializeObject(Of List(Of BorrowDTO))(response)
     End Function
+    Public Function getAllReturn() As List(Of BorrowDTO)
+        Dim newUrl = URL + "/all/return"
+        Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
+        Return JsonConvert.DeserializeObject(Of List(Of BorrowDTO))(response)
+    End Function
 
     Public Function getAllReservation() As List(Of ReservationDTO)
         Dim newUrl = URL + "/all/reservation"
         Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
         Return JsonConvert.DeserializeObject(Of List(Of ReservationDTO))(response)
     End Function
-    Public Sub deleteBorrow(ByRef borrowId As Long)
+    Public Sub returnBorrow(ByRef borrowId As Long)
         Dim newUrl = URL + "/admin/borrow/" + borrowId.ToString
         HttpRequestController.HttpRequestDelete(newUrl, Authorization.authToken)
     End Sub
