@@ -39,11 +39,11 @@ Public Class AddBookUserControl
 
         Dim newBook As New BookDetailsDTO
 
-        newBook.title = titleTxtBx.Text
-        newBook.isbn = isbnTxtBx.Text
-        newBook.language = languageTxtBx.Text
-        newBook.summary = summaryRichTxtBx.Text
-        newBook.edition = If(editionTxtBx.Text.Equals(""), 0, editionTxtBx.Text)
+        newBook.title = titleTxtBx.Text.Trim
+        newBook.isbn = If(isbnTxtBx.Text.Trim.Equals(""), Nothing, isbnTxtBx.Text.Trim)
+        newBook.language = languageTxtBx.Text.Trim
+        newBook.summary = summaryRichTxtBx.Text.Trim
+        newBook.edition = If(editionTxtBx.Text.Trim.Equals(""), 0, editionTxtBx.Text)
 
         If publishedDatePicker.Checked Then
             newBook.publishedDate = publishedDatePicker.Value.ToString("yyyy-MM-dd")
@@ -445,6 +445,7 @@ Public Class AddBookUserControl
 
         authors.Clear()
         authorsDataGrid.Rows.Clear()
+        quantityLbl.Text = 1
         copies.Clear()
         copiesDataGridView.Rows.Clear()
         copiesDataGridView.Rows.Add({1, status.Item(0)})

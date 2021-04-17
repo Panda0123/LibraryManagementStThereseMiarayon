@@ -13,7 +13,7 @@
     Property filterAuthor As String
 
     Public Sub New()
-        Me.pageNum = 1
+        Me.pageNum = 0
         Me.pageSize = Configurations.BooksPerPage
         Me.sortBy = "Date Added"
         Me.searchKey = String.Empty
@@ -28,7 +28,7 @@
     End Sub
 
     Public Sub setToDefault()
-        Me.pageNum = 1
+        Me.pageNum = 0
         Me.sortBy = "Date Added"
         Me.searchKey = String.Empty
         Me.filterDateAdded = String.Empty

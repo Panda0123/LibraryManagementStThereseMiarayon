@@ -9,7 +9,7 @@ Public Class Main
 
     'Private sortBy As String = "DateAdded"  ' defeault is date added
     Private provider As CultureInfo = CultureInfo.InvariantCulture
-    Private numPage As Integer = 1
+    Private numPage As Double = 1
     Private totalResult As Integer = 0
     Private classificationNames As New List(Of String)({String.Empty})
     Private authorFullNames As New List(Of String)({String.Empty})
@@ -56,7 +56,7 @@ Public Class Main
     Private Sub prevLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles prevLnkLbl.LinkClicked
         ' LoadPage(False) 'false indicates to go back a page
         If paginationDTO.pageNum > 0 Then
-            paginationDTO.pageNum += 1
+            paginationDTO.pageNum -= 1
             initializeResult()
         End If
     End Sub
@@ -116,7 +116,6 @@ Public Class Main
         If searchTextBox.Text.Equals("") Then
             searchTextBox.Text = "Search..."
             searchTextBox.ForeColor = Color.FromArgb(119, 117, 117)
-            ' searchKey = String.Empty
             paginationDTO.searchKey = String.Empty
         End If
     End Sub
@@ -273,6 +272,7 @@ Public Class Main
         Else
             prevLnkLbl.Visible = True
         End If
+        Debug.WriteLine(paginationDTO.pageNum.ToString + " " + numPage.ToString)
         PageNumLabel.Text = "Page " & (1 + paginationDTO.pageNum).ToString 'set the text to the Page Number
     End Sub
 

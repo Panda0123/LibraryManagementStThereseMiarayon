@@ -2,7 +2,7 @@
     Public adminBookDP As New List(Of bookControlAdmin)
     Private paginationDTO As New PaginationDTO()
 
-    Private numPage As Integer = 1
+    Private numPage As Double = 1
     'Private searchKey As String = String.Empty
     'Private PageIndex As Integer = 0
     Private totalResult As Integer = 0
@@ -44,15 +44,15 @@
         ' LoadPage(False) 'false indicates to go back a page
         If paginationDTO.pageNum > 0 Then
             paginationDTO.pageNum -= 1
-            initializeResult()
+            Me.initializeResult()
         End If
     End Sub
 
     Private Sub nextLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles nextLnkLbl.LinkClicked
         ' LoadPage(True) 'true indicates to go forward a page
-        If paginationDTO.pageNum + 1 < paginationDTO.pageNum Then
+        If paginationDTO.pageNum + 1 < numPage Then
             paginationDTO.pageNum += 1
-            initializeResult()
+            Me.initializeResult()
         End If
     End Sub
 
