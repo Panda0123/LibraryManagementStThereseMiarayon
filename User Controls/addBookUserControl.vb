@@ -392,6 +392,7 @@ Public Class AddBookUserControl
         bkPicBx.Image = img
         addPcBx.Visible = False
         savePcBx.Visible = True
+        isbnLbl_leave(Nothing, Nothing)
     End Sub
 
 
@@ -456,7 +457,7 @@ Public Class AddBookUserControl
 
         savePcBx.Visible = False
         addPcBx.Visible = True
-
+        isbnWarningLbl.Visible = False
 
         selectedBook = Nothing
 
@@ -526,6 +527,29 @@ Public Class AddBookUserControl
     Private Sub addHoverPcBx_Hover(sender As Object, e As EventArgs) Handles addHoverPcBx.MouseLeave
         addHoverPcBx.Visible = False
         addPcBx.Visible = True
+    End Sub
+
+    ' check if isbn exist
+    Private Sub isbnLbl_leave(sender As Object, e As EventArgs) Handles isbnTxtBx.Leave
+
+        ' check if admin is adding or updating book
+        Dim check = IsNothing(selectedBook)
+        check = If(check, Not isbnTxtBx.Text.Trim.Equals(""), If(IsNothing(selectedBook.isbn), Not isbnTxtBx.Text.Trim.Equals(""), Not selectedBook.isbn.Equals(isbnTxtBx.Text.Trim)))
+        Dim isbnExist = check AndAlso BookController.checkIsbn(isbnTxtBx.Text.Trim)
+
+        If isbnExist Then
+            isbnWarningLbl.Visible = True
+            addHoverPcBx.Enabled = False
+            addPcBx.Enabled = False
+            saveHoverPcBx.Enabled = False
+            savePcBx.Enabled = False
+        Else
+            isbnWarningLbl.Visible = False
+            addHoverPcBx.Enabled = True
+            addPcBx.Enabled = True
+            saveHoverPcBx.Enabled = True
+            savePcBx.Enabled = True
+        End If
     End Sub
 
 End Class

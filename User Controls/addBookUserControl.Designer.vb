@@ -31,6 +31,7 @@ Partial Class AddBookUserControl
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.layoutPanel = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.isbnWarningLbl = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.quantityLbl = New System.Windows.Forms.Label()
@@ -81,10 +82,10 @@ Partial Class AddBookUserControl
         Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
         Me.cancelPcBx = New System.Windows.Forms.PictureBox()
         Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.savePcBx = New System.Windows.Forms.PictureBox()
         Me.addPcBx = New System.Windows.Forms.PictureBox()
+        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.timerClearDataGrid = New System.Windows.Forms.Timer(Me.components)
         Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -100,10 +101,10 @@ Partial Class AddBookUserControl
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'layoutPanel
@@ -131,6 +132,7 @@ Partial Class AddBookUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.isbnWarningLbl)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Panel5)
         Me.Panel2.Controls.Add(Me.shelfTxtBx)
@@ -155,6 +157,18 @@ Partial Class AddBookUserControl
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(976, 1306)
         Me.Panel2.TabIndex = 0
+        '
+        'isbnWarningLbl
+        '
+        Me.isbnWarningLbl.AutoSize = True
+        Me.isbnWarningLbl.BackColor = System.Drawing.Color.Transparent
+        Me.isbnWarningLbl.ForeColor = System.Drawing.Color.Red
+        Me.isbnWarningLbl.Location = New System.Drawing.Point(63, 76)
+        Me.isbnWarningLbl.Name = "isbnWarningLbl"
+        Me.isbnWarningLbl.Size = New System.Drawing.Size(121, 13)
+        Me.isbnWarningLbl.TabIndex = 93
+        Me.isbnWarningLbl.Text = "Error: ISBN already exist"
+        Me.isbnWarningLbl.Visible = False
         '
         'Label1
         '
@@ -415,7 +429,7 @@ Partial Class AddBookUserControl
         Me.copyrightYearDTPckr.FontSize = MetroFramework.MetroDateTimeSize.Small
         Me.copyrightYearDTPckr.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.copyrightYearDTPckr.Location = New System.Drawing.Point(42, 45)
-        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(0, 25)
+        Me.copyrightYearDTPckr.MinimumSize = New System.Drawing.Size(4, 25)
         Me.copyrightYearDTPckr.Name = "copyrightYearDTPckr"
         Me.copyrightYearDTPckr.ShowCheckBox = True
         Me.copyrightYearDTPckr.Size = New System.Drawing.Size(67, 25)
@@ -793,18 +807,6 @@ Partial Class AddBookUserControl
         Me.cancelHoverPcBx.TabStop = False
         Me.cancelHoverPcBx.Visible = False
         '
-        'addHoverPcBx
-        '
-        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
-        Me.addHoverPcBx.Location = New System.Drawing.Point(166, 1604)
-        Me.addHoverPcBx.Name = "addHoverPcBx"
-        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addHoverPcBx.TabIndex = 4
-        Me.addHoverPcBx.TabStop = False
-        Me.addHoverPcBx.Visible = False
-        '
         'saveHoverPcBx
         '
         Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -840,6 +842,18 @@ Partial Class AddBookUserControl
         Me.addPcBx.TabIndex = 3
         Me.addPcBx.TabStop = False
         '
+        'addHoverPcBx
+        '
+        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
+        Me.addHoverPcBx.Location = New System.Drawing.Point(166, 1604)
+        Me.addHoverPcBx.Name = "addHoverPcBx"
+        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
+        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.addHoverPcBx.TabIndex = 4
+        Me.addHoverPcBx.TabStop = False
+        Me.addHoverPcBx.Visible = False
+        '
         'AddBookUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -868,10 +882,10 @@ Partial Class AddBookUserControl
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -933,4 +947,5 @@ Partial Class AddBookUserControl
     Friend WithEvents copyNumCol As DataGridViewTextBoxColumn
     Friend WithEvents statusCol As DataGridViewTextBoxColumn
     Friend WithEvents copiesDeleteCol As DataGridViewButtonColumn
+    Friend WithEvents isbnWarningLbl As Label
 End Class

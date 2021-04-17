@@ -138,4 +138,9 @@ Module BookController
         Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
         Return JsonConvert.DeserializeObject(Of List(Of CollectionDTO))(response)
     End Function
+    Public Function checkIsbn(ByRef isbn As String) As Boolean
+        Dim newUrl = URL + "/all/isbn/" + Security.turnToValidStringQuery(isbn)
+        Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
+        Return JsonConvert.DeserializeObject(Of Boolean)(response)
+    End Function
 End Module
