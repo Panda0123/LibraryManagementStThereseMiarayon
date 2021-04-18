@@ -446,10 +446,10 @@ Public Class AddBookUserControl
 
         authors.Clear()
         authorsDataGrid.Rows.Clear()
-        quantityLbl.Text = 1
         copies.Clear()
         copiesDataGridView.Rows.Clear()
         copiesDataGridView.Rows.Add({1, status.Item(0)})
+        quantityLbl.Text = 1
 
         bkPicBx.Image = My.Resources.default_book
         removeImgBtn.Visible = False
