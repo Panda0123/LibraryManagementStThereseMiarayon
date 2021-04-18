@@ -3,8 +3,8 @@
 Public Class AddBookUserControl
     Private selectedBook As BookDetailsDTO
     Private adminView As adminView
-    Private classifications As List(Of ClassificationDTO)
-    Private classificationNames As New List(Of String)
+    'Private classifications As List(Of ClassificationDTO)
+    'Private classificationNames As New List(Of String)
     Private provider As CultureInfo = CultureInfo.InvariantCulture
 
     Private authors As New List(Of AuthorDTO)
@@ -25,14 +25,10 @@ Public Class AddBookUserControl
     End Sub
 
     Private Sub AddBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If IsNothing(classifications) Then
-            classifications = CategoryController.getCategories()
-            classifications.Sort(Function(x, y) x.id.CompareTo(y.id))
-            For Each classificationDto As ClassificationDTO In classifications
-                classificationNames.Add(classificationDto.name)
-            Next
-            classificationCmbBx.DataSource = classificationNames
+        If IsNothing(GlobalSource.classifications) Then
+            GlobalSource.setClass()
         End If
+        classificationCmbBx.DataSource = GlobalSource.classificationNames
         empty()
     End Sub
 
@@ -43,11 +39,11 @@ Public Class AddBookUserControl
 
         Dim newBook As New BookDetailsDTO
 
-        newBook.title = titleTxtBx.Text
-        newBook.isbn = isbnTxtBx.Text
-        newBook.language = languageTxtBx.Text
-        newBook.summary = summaryRichTxtBx.Text
-        newBook.edition = If(editionTxtBx.Text.Equals(""), 0, editionTxtBx.Text)
+        newBook.title = titleTxtBx.Text.Trim
+        newBook.isbn = If(isbnTxtBx.Text.Trim.Equals(""), Nothing, isbnTxtBx.Text.Trim)
+        newBook.language = languageTxtBx.Text.Trim
+        newBook.summary = summaryRichTxtBx.Text.Trim
+        newBook.edition = If(editionTxtBx.Text.Trim.Equals(""), 0, editionTxtBx.Text)
 
         If publishedDatePicker.Checked Then
             newBook.publishedDate = publishedDatePicker.Value.ToString("yyyy-MM-dd")
@@ -396,6 +392,7 @@ Public Class AddBookUserControl
         bkPicBx.Image = img
         addPcBx.Visible = False
         savePcBx.Visible = True
+        isbnLbl_leave(Nothing, Nothing)
     End Sub
 
 
@@ -452,6 +449,7 @@ Public Class AddBookUserControl
         copies.Clear()
         copiesDataGridView.Rows.Clear()
         copiesDataGridView.Rows.Add({1, status.Item(0)})
+        quantityLbl.Text = 1
 
         bkPicBx.Image = My.Resources.default_book
         removeImgBtn.Visible = False
@@ -459,7 +457,7 @@ Public Class AddBookUserControl
 
         savePcBx.Visible = False
         addPcBx.Visible = True
-
+        isbnWarningLbl.Visible = False
 
         selectedBook = Nothing
 
@@ -529,6 +527,29 @@ Public Class AddBookUserControl
     Private Sub addHoverPcBx_Hover(sender As Object, e As EventArgs) Handles addHoverPcBx.MouseLeave
         addHoverPcBx.Visible = False
         addPcBx.Visible = True
+    End Sub
+
+    ' check if isbn exist
+    Private Sub isbnLbl_leave(sender As Object, e As EventArgs) Handles isbnTxtBx.Leave
+
+        ' check if admin is adding or updating book
+        Dim check = IsNothing(selectedBook)
+        check = If(check, Not isbnTxtBx.Text.Trim.Equals(""), If(IsNothing(selectedBook.isbn), Not isbnTxtBx.Text.Trim.Equals(""), Not selectedBook.isbn.Equals(isbnTxtBx.Text.Trim)))
+        Dim isbnExist = check AndAlso BookController.checkIsbn(isbnTxtBx.Text.Trim)
+
+        If isbnExist Then
+            isbnWarningLbl.Visible = True
+            addHoverPcBx.Enabled = False
+            addPcBx.Enabled = False
+            saveHoverPcBx.Enabled = False
+            savePcBx.Enabled = False
+        Else
+            isbnWarningLbl.Visible = False
+            addHoverPcBx.Enabled = True
+            addPcBx.Enabled = True
+            saveHoverPcBx.Enabled = True
+            savePcBx.Enabled = True
+        End If
     End Sub
 
 End Class

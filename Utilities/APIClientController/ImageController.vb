@@ -2,7 +2,7 @@
 Imports System.Net.Http
 
 Module ImageController
-    Private URL As String = "http://localhost:8080/api/v1/images"
+    Private URL As String = HttpRequestController.URL + "/images"
 
     Public Function uploadImage(imgFlNm As String, id As String) As String
         Dim newURL = URL + "/admin/upload/?file=" + id  ' set the filename

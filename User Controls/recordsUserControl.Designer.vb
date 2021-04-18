@@ -26,16 +26,6 @@ Partial Class recordsUserControl
         Me.borrowListTabPage = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.borrowListDataGrid = New System.Windows.Forms.DataGridView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.searchBorrowBtn = New System.Windows.Forms.Button()
-        Me.searchBorrowTxtBx = New System.Windows.Forms.TextBox()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.reserveListTabPage = New System.Windows.Forms.TabPage()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.reservationListDataGrid = New System.Windows.Forms.DataGridView()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.searchReservationBtn = New System.Windows.Forms.Button()
-        Me.searchReservationTxtBx = New System.Windows.Forms.TextBox()
         Me.Cover_Column = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Status_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BorrowDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,6 +35,26 @@ Partial Class recordsUserControl
         Me.ID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.borrowId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button_Column = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.searchBorrowBtn = New System.Windows.Forms.Button()
+        Me.searchBorrowTxtBx = New System.Windows.Forms.TextBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.returnListDataGrid = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.searchReturnBtn = New System.Windows.Forms.Button()
+        Me.searchReturnTxtBx = New System.Windows.Forms.TextBox()
+        Me.reserveListTabPage = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.reservationListDataGrid = New System.Windows.Forms.DataGridView()
         Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReserveDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -53,11 +63,17 @@ Partial Class recordsUserControl
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.reservationId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Complete_Column = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.searchReservationBtn = New System.Windows.Forms.Button()
+        Me.searchReservationTxtBx = New System.Windows.Forms.TextBox()
         Me.TabControl.SuspendLayout()
         Me.borrowListTabPage.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.borrowListDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.returnListDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
         Me.reserveListTabPage.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.reservationListDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,7 +88,7 @@ Partial Class recordsUserControl
         Me.TabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControl.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
         Me.TabControl.Size = New System.Drawing.Size(1292, 1219)
@@ -85,9 +101,9 @@ Partial Class recordsUserControl
         Me.borrowListTabPage.Controls.Add(Me.Panel1)
         Me.borrowListTabPage.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.borrowListTabPage.Location = New System.Drawing.Point(4, 32)
-        Me.borrowListTabPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.borrowListTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.borrowListTabPage.Name = "borrowListTabPage"
-        Me.borrowListTabPage.Padding = New System.Windows.Forms.Padding(2)
+        Me.borrowListTabPage.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.borrowListTabPage.Size = New System.Drawing.Size(1284, 1183)
         Me.borrowListTabPage.TabIndex = 0
         Me.borrowListTabPage.Text = "Borrow List"
@@ -98,7 +114,7 @@ Partial Class recordsUserControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.Controls.Add(Me.borrowListDataGrid)
         Me.Panel2.Location = New System.Drawing.Point(1, 54)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1286, 532)
         Me.Panel2.TabIndex = 1
@@ -110,133 +126,12 @@ Partial Class recordsUserControl
         Me.borrowListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.borrowListDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cover_Column, Me.Status_Column, Me.BorrowDate_Column, Me.DueDate_Column, Me.Title_Column, Me.ShelfID_Column, Me.ID_Column, Me.borrowId, Me.Button_Column})
         Me.borrowListDataGrid.Location = New System.Drawing.Point(1, 7)
-        Me.borrowListDataGrid.Margin = New System.Windows.Forms.Padding(2)
+        Me.borrowListDataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.borrowListDataGrid.Name = "borrowListDataGrid"
         Me.borrowListDataGrid.RowHeadersWidth = 51
         Me.borrowListDataGrid.RowTemplate.Height = 24
         Me.borrowListDataGrid.Size = New System.Drawing.Size(1286, 1087)
         Me.borrowListDataGrid.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.searchBorrowBtn)
-        Me.Panel1.Controls.Add(Me.searchBorrowTxtBx)
-        Me.Panel1.Location = New System.Drawing.Point(1, 1)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(562, 56)
-        Me.Panel1.TabIndex = 0
-        '
-        'searchBorrowBtn
-        '
-        Me.searchBorrowBtn.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.searchBorrowBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchBorrowBtn.Location = New System.Drawing.Point(238, 15)
-        Me.searchBorrowBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.searchBorrowBtn.Name = "searchBorrowBtn"
-        Me.searchBorrowBtn.Size = New System.Drawing.Size(70, 31)
-        Me.searchBorrowBtn.TabIndex = 20
-        Me.searchBorrowBtn.Text = "Search"
-        Me.searchBorrowBtn.UseVisualStyleBackColor = True
-        '
-        'searchBorrowTxtBx
-        '
-        Me.searchBorrowTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.searchBorrowTxtBx.Font = New System.Drawing.Font("Verdana", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchBorrowTxtBx.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchBorrowTxtBx.Location = New System.Drawing.Point(32, 16)
-        Me.searchBorrowTxtBx.Margin = New System.Windows.Forms.Padding(2)
-        Me.searchBorrowTxtBx.Multiline = True
-        Me.searchBorrowTxtBx.Name = "searchBorrowTxtBx"
-        Me.searchBorrowTxtBx.Size = New System.Drawing.Size(206, 31)
-        Me.searchBorrowTxtBx.TabIndex = 19
-        Me.searchBorrowTxtBx.Text = "Search ID number..."
-        '
-        'TabPage4
-        '
-        Me.TabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.TabPage4.Location = New System.Drawing.Point(4, 32)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage4.Size = New System.Drawing.Size(1284, 1183)
-        Me.TabPage4.TabIndex = 1
-        Me.TabPage4.Text = "Return List"
-        '
-        'reserveListTabPage
-        '
-        Me.reserveListTabPage.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.reserveListTabPage.Controls.Add(Me.Panel4)
-        Me.reserveListTabPage.Controls.Add(Me.Panel3)
-        Me.reserveListTabPage.Location = New System.Drawing.Point(4, 32)
-        Me.reserveListTabPage.Margin = New System.Windows.Forms.Padding(2)
-        Me.reserveListTabPage.Name = "reserveListTabPage"
-        Me.reserveListTabPage.Padding = New System.Windows.Forms.Padding(2)
-        Me.reserveListTabPage.Size = New System.Drawing.Size(1284, 1183)
-        Me.reserveListTabPage.TabIndex = 2
-        Me.reserveListTabPage.Text = "Reserve List"
-        '
-        'Panel4
-        '
-        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel4.Controls.Add(Me.reservationListDataGrid)
-        Me.Panel4.Location = New System.Drawing.Point(1, 54)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1076, 544)
-        Me.Panel4.TabIndex = 2
-        '
-        'reservationListDataGrid
-        '
-        Me.reservationListDataGrid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.reservationListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.reservationListDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn1, Me.DataGridViewTextBoxColumn1, Me.ReserveDate_Column, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.reservationId, Me.Complete_Column})
-        Me.reservationListDataGrid.Location = New System.Drawing.Point(1, 7)
-        Me.reservationListDataGrid.Margin = New System.Windows.Forms.Padding(2)
-        Me.reservationListDataGrid.Name = "reservationListDataGrid"
-        Me.reservationListDataGrid.RowHeadersWidth = 51
-        Me.reservationListDataGrid.RowTemplate.Height = 24
-        Me.reservationListDataGrid.Size = New System.Drawing.Size(1075, 525)
-        Me.reservationListDataGrid.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.searchReservationBtn)
-        Me.Panel3.Controls.Add(Me.searchReservationTxtBx)
-        Me.Panel3.Location = New System.Drawing.Point(1, 1)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(562, 56)
-        Me.Panel3.TabIndex = 1
-        '
-        'searchReservationBtn
-        '
-        Me.searchReservationBtn.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.searchReservationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchReservationBtn.Location = New System.Drawing.Point(238, 15)
-        Me.searchReservationBtn.Margin = New System.Windows.Forms.Padding(2)
-        Me.searchReservationBtn.Name = "searchReservationBtn"
-        Me.searchReservationBtn.Size = New System.Drawing.Size(70, 31)
-        Me.searchReservationBtn.TabIndex = 18
-        Me.searchReservationBtn.Text = "Search"
-        Me.searchReservationBtn.UseVisualStyleBackColor = True
-        '
-        'searchReservationTxtBx
-        '
-        Me.searchReservationTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.searchReservationTxtBx.Font = New System.Drawing.Font("Verdana", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchReservationTxtBx.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchReservationTxtBx.Location = New System.Drawing.Point(32, 16)
-        Me.searchReservationTxtBx.Margin = New System.Windows.Forms.Padding(2)
-        Me.searchReservationTxtBx.Multiline = True
-        Me.searchReservationTxtBx.Name = "searchReservationTxtBx"
-        Me.searchReservationTxtBx.Size = New System.Drawing.Size(206, 31)
-        Me.searchReservationTxtBx.TabIndex = 17
-        Me.searchReservationTxtBx.Text = "Search ID number..."
         '
         'Cover_Column
         '
@@ -296,8 +191,10 @@ Partial Class recordsUserControl
         'borrowId
         '
         Me.borrowId.HeaderText = "BorrowID"
+        Me.borrowId.MinimumWidth = 6
         Me.borrowId.Name = "borrowId"
         Me.borrowId.Visible = False
+        Me.borrowId.Width = 125
         '
         'Button_Column
         '
@@ -307,6 +204,215 @@ Partial Class recordsUserControl
         Me.Button_Column.Text = "Check In"
         Me.Button_Column.UseColumnTextForButtonValue = True
         Me.Button_Column.Width = 125
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.searchBorrowBtn)
+        Me.Panel1.Controls.Add(Me.searchBorrowTxtBx)
+        Me.Panel1.Location = New System.Drawing.Point(1, 1)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(562, 56)
+        Me.Panel1.TabIndex = 0
+        '
+        'searchBorrowBtn
+        '
+        Me.searchBorrowBtn.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.searchBorrowBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchBorrowBtn.Location = New System.Drawing.Point(238, 15)
+        Me.searchBorrowBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchBorrowBtn.Name = "searchBorrowBtn"
+        Me.searchBorrowBtn.Size = New System.Drawing.Size(70, 31)
+        Me.searchBorrowBtn.TabIndex = 20
+        Me.searchBorrowBtn.Text = "Search"
+        Me.searchBorrowBtn.UseVisualStyleBackColor = True
+        '
+        'searchBorrowTxtBx
+        '
+        Me.searchBorrowTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchBorrowTxtBx.Font = New System.Drawing.Font("Verdana", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchBorrowTxtBx.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.searchBorrowTxtBx.Location = New System.Drawing.Point(32, 16)
+        Me.searchBorrowTxtBx.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchBorrowTxtBx.Multiline = True
+        Me.searchBorrowTxtBx.Name = "searchBorrowTxtBx"
+        Me.searchBorrowTxtBx.Size = New System.Drawing.Size(206, 31)
+        Me.searchBorrowTxtBx.TabIndex = 19
+        Me.searchBorrowTxtBx.Text = "Search ID number..."
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TabPage4.Controls.Add(Me.returnListDataGrid)
+        Me.TabPage4.Controls.Add(Me.Panel5)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 32)
+        Me.TabPage4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage4.Size = New System.Drawing.Size(1284, 1183)
+        Me.TabPage4.TabIndex = 1
+        Me.TabPage4.Text = "Return List"
+        '
+        'returnListDataGrid
+        '
+        Me.returnListDataGrid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.returnListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.returnListDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn2, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewButtonColumn1})
+        Me.returnListDataGrid.Location = New System.Drawing.Point(0, 72)
+        Me.returnListDataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.returnListDataGrid.Name = "returnListDataGrid"
+        Me.returnListDataGrid.RowHeadersWidth = 51
+        Me.returnListDataGrid.RowTemplate.Height = 24
+        Me.returnListDataGrid.Size = New System.Drawing.Size(1286, 1064)
+        Me.returnListDataGrid.TabIndex = 3
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.HeaderText = "Cover"
+        Me.DataGridViewImageColumn2.MinimumWidth = 6
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.Width = 125
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Status"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 125
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Borrow Date"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 125
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Due Date"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 125
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Title"
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 250
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Copy #"
+        Me.DataGridViewTextBoxColumn9.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Width = 125
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.HeaderText = "ID No."
+        Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        Me.DataGridViewTextBoxColumn10.ReadOnly = True
+        Me.DataGridViewTextBoxColumn10.Width = 125
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.HeaderText = "BorrowID"
+        Me.DataGridViewTextBoxColumn11.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.Visible = False
+        Me.DataGridViewTextBoxColumn11.Width = 125
+        '
+        'DataGridViewButtonColumn1
+        '
+        Me.DataGridViewButtonColumn1.HeaderText = "Check In"
+        Me.DataGridViewButtonColumn1.MinimumWidth = 6
+        Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
+        Me.DataGridViewButtonColumn1.Text = "Check In"
+        Me.DataGridViewButtonColumn1.UseColumnTextForButtonValue = True
+        Me.DataGridViewButtonColumn1.Width = 125
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.searchReturnBtn)
+        Me.Panel5.Controls.Add(Me.searchReturnTxtBx)
+        Me.Panel5.Location = New System.Drawing.Point(1, 1)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(562, 56)
+        Me.Panel5.TabIndex = 2
+        '
+        'searchReturnBtn
+        '
+        Me.searchReturnBtn.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.searchReturnBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchReturnBtn.Location = New System.Drawing.Point(238, 15)
+        Me.searchReturnBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchReturnBtn.Name = "searchReturnBtn"
+        Me.searchReturnBtn.Size = New System.Drawing.Size(70, 31)
+        Me.searchReturnBtn.TabIndex = 18
+        Me.searchReturnBtn.Text = "Search"
+        Me.searchReturnBtn.UseVisualStyleBackColor = True
+        '
+        'searchReturnTxtBx
+        '
+        Me.searchReturnTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchReturnTxtBx.Font = New System.Drawing.Font("Verdana", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchReturnTxtBx.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.searchReturnTxtBx.Location = New System.Drawing.Point(32, 16)
+        Me.searchReturnTxtBx.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchReturnTxtBx.Multiline = True
+        Me.searchReturnTxtBx.Name = "searchReturnTxtBx"
+        Me.searchReturnTxtBx.Size = New System.Drawing.Size(206, 31)
+        Me.searchReturnTxtBx.TabIndex = 17
+        Me.searchReturnTxtBx.Text = "Search ID number..."
+        '
+        'reserveListTabPage
+        '
+        Me.reserveListTabPage.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.reserveListTabPage.Controls.Add(Me.Panel4)
+        Me.reserveListTabPage.Controls.Add(Me.Panel3)
+        Me.reserveListTabPage.Location = New System.Drawing.Point(4, 32)
+        Me.reserveListTabPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.reserveListTabPage.Name = "reserveListTabPage"
+        Me.reserveListTabPage.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.reserveListTabPage.Size = New System.Drawing.Size(1284, 1183)
+        Me.reserveListTabPage.TabIndex = 2
+        Me.reserveListTabPage.Text = "Reserve List"
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.Controls.Add(Me.reservationListDataGrid)
+        Me.Panel4.Location = New System.Drawing.Point(1, 54)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1076, 544)
+        Me.Panel4.TabIndex = 2
+        '
+        'reservationListDataGrid
+        '
+        Me.reservationListDataGrid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.reservationListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.reservationListDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewImageColumn1, Me.DataGridViewTextBoxColumn1, Me.ReserveDate_Column, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.reservationId, Me.Complete_Column})
+        Me.reservationListDataGrid.Location = New System.Drawing.Point(1, 7)
+        Me.reservationListDataGrid.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.reservationListDataGrid.Name = "reservationListDataGrid"
+        Me.reservationListDataGrid.RowHeadersWidth = 51
+        Me.reservationListDataGrid.RowTemplate.Height = 24
+        Me.reservationListDataGrid.Size = New System.Drawing.Size(1075, 525)
+        Me.reservationListDataGrid.TabIndex = 0
         '
         'DataGridViewImageColumn1
         '
@@ -359,9 +465,11 @@ Partial Class recordsUserControl
         'reservationId
         '
         Me.reservationId.HeaderText = "ReservationID"
+        Me.reservationId.MinimumWidth = 6
         Me.reservationId.Name = "reservationId"
         Me.reservationId.ReadOnly = True
         Me.reservationId.Visible = False
+        Me.reservationId.Width = 125
         '
         'Complete_Column
         '
@@ -372,12 +480,48 @@ Partial Class recordsUserControl
         Me.Complete_Column.UseColumnTextForButtonValue = True
         Me.Complete_Column.Width = 125
         '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.searchReservationBtn)
+        Me.Panel3.Controls.Add(Me.searchReservationTxtBx)
+        Me.Panel3.Location = New System.Drawing.Point(1, 1)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(562, 56)
+        Me.Panel3.TabIndex = 1
+        '
+        'searchReservationBtn
+        '
+        Me.searchReservationBtn.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.searchReservationBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchReservationBtn.Location = New System.Drawing.Point(238, 15)
+        Me.searchReservationBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchReservationBtn.Name = "searchReservationBtn"
+        Me.searchReservationBtn.Size = New System.Drawing.Size(70, 31)
+        Me.searchReservationBtn.TabIndex = 18
+        Me.searchReservationBtn.Text = "Search"
+        Me.searchReservationBtn.UseVisualStyleBackColor = True
+        '
+        'searchReservationTxtBx
+        '
+        Me.searchReservationTxtBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchReservationTxtBx.Font = New System.Drawing.Font("Verdana", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchReservationTxtBx.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
+        Me.searchReservationTxtBx.Location = New System.Drawing.Point(32, 16)
+        Me.searchReservationTxtBx.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.searchReservationTxtBx.Multiline = True
+        Me.searchReservationTxtBx.Name = "searchReservationTxtBx"
+        Me.searchReservationTxtBx.Size = New System.Drawing.Size(206, 31)
+        Me.searchReservationTxtBx.TabIndex = 17
+        Me.searchReservationTxtBx.Text = "Search ID number..."
+        '
         'recordsUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.TabControl)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "recordsUserControl"
         Me.Size = New System.Drawing.Size(1292, 1219)
         Me.TabControl.ResumeLayout(False)
@@ -386,6 +530,10 @@ Partial Class recordsUserControl
         CType(Me.borrowListDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        CType(Me.returnListDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.reserveListTabPage.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         CType(Me.reservationListDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -402,13 +550,9 @@ Partial Class recordsUserControl
     Friend WithEvents Panel1 As Panel
     Friend WithEvents searchBorrowBtn As Button
     Friend WithEvents searchBorrowTxtBx As TextBox
-    Friend WithEvents TabPage4 As TabPage
     Friend WithEvents reserveListTabPage As TabPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents reservationListDataGrid As DataGridView
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents searchReservationBtn As Button
-    Friend WithEvents searchReservationTxtBx As TextBox
     Friend WithEvents Cover_Column As DataGridViewImageColumn
     Friend WithEvents Status_Column As DataGridViewTextBoxColumn
     Friend WithEvents BorrowDate_Column As DataGridViewTextBoxColumn
@@ -426,4 +570,21 @@ Partial Class recordsUserControl
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents reservationId As DataGridViewTextBoxColumn
     Friend WithEvents Complete_Column As DataGridViewButtonColumn
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents searchReturnBtn As Button
+    Friend WithEvents searchReturnTxtBx As TextBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents searchReservationBtn As Button
+    Friend WithEvents searchReservationTxtBx As TextBox
+    Friend WithEvents returnListDataGrid As DataGridView
+    Friend WithEvents DataGridViewImageColumn2 As DataGridViewImageColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewButtonColumn1 As DataGridViewButtonColumn
 End Class

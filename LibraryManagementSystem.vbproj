@@ -84,6 +84,7 @@
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
+    <Import Include="System.Configuration" />
     <Import Include="System.Data" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
@@ -93,6 +94,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="adminView.Designer.vb">
       <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
@@ -129,6 +136,8 @@
     <Compile Include="User Controls\collectionsUserControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Utilities\Design\Configurations.vb" />
+    <Compile Include="Utilities\Design\CustomColor.vb" />
     <Compile Include="Utilities\displayBookvb.vb" />
     <Compile Include="IssueBook.Designer.vb">
       <DependentUpon>IssueBook.vb</DependentUpon>
@@ -184,10 +193,13 @@
     <Compile Include="Utilities\DTOs\BorrowDTO.vb" />
     <Compile Include="Utilities\DTOs\ClassificationDTO.vb" />
     <Compile Include="Utilities\DTOs\BookCopyDTO.vb" />
+    <Compile Include="Utilities\Design\GlobalSource.vb" />
     <Compile Include="Utilities\DTOs\CollectionDTO.vb" />
+    <Compile Include="Utilities\DTOs\PaginationDTO.vb" />
     <Compile Include="Utilities\DTOs\ReservationDTO.vb" />
     <Compile Include="Utilities\DTOs\SectionDTO.vb" />
     <Compile Include="Utilities\DTOs\UserDTO.vb" />
+    <Compile Include="Utilities\methods\Security.vb" />
     <Compile Include="Utilities\methods\utils.vb" />
     <Compile Include="Utilities\APIClientController\UserController.vb" />
     <Compile Include="viewBook.Designer.vb">
@@ -204,6 +216,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.vb</DependentUpon>
     </EmbeddedResource>
@@ -364,7 +379,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="NewFolder1\" />
-    <Folder Include="Utilities\Forms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

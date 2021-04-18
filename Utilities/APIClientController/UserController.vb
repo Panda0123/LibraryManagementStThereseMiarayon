@@ -1,6 +1,6 @@
 ﻿Imports Newtonsoft.Json
 Module UserController
-    Private URL As String = "http://localhost:8080/api/v1/user"
+    Private URL As String = HttpRequestController.URL + "/user"
     Public Function getUser(ByRef id As String) As UserDTO
         Dim newURL = URL + "/all/" + id
         Dim res = HttpRequestController.HttpRequestGet(newURL)

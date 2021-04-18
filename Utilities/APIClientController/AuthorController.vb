@@ -7,7 +7,7 @@ Imports Newtonsoft.Json.Linq
 Module AuthorController
 
 
-    Private URL As String = "http://localhost:8080/api/v1/author"
+    Private URL As String = HttpRequestController.URL + "/author"
 
 
     Public Function getAuthors() As List(Of AuthorDTO)

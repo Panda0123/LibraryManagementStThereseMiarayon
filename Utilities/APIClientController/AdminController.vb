@@ -2,7 +2,7 @@
 Imports Newtonsoft.Json
 
 Module AdminController
-    Dim URL As String = "http://localhost:8080"
+    Dim URL As String = HttpRequestController.URLWOPath
 
     Public Function login(credentials As Dictionary(Of String, String)) As String
         Dim newURL = URL + "/login"
