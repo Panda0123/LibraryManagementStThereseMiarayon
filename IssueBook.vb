@@ -19,9 +19,7 @@ Public Class IssueBook
         Me.bookControlAdmin = bookControlAdmin
     End Sub
     'End Sub
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
-    End Sub
 
     Private Sub buttonBorrow_MouseEnter(sender As Object, e As EventArgs)
         Me.buttonBorrow.BackColor = Color.DodgerBlue

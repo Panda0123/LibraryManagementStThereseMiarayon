@@ -59,8 +59,8 @@
         Dim bkDTOs As List(Of BookDetailsDTO) = BookController.getBooksPaginationSortBy(paginationDTO)
 
         For idx As Integer = 0 To bkDTOs.Count - 1
-            adminbookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
-            bookDisplayFlowPanel.Controls.Add(adminbookDP.Item(idx))
+            adminBookDP.Item(idx).setBkDTO(bkDTOs.Item(idx))
+            bookDisplayFlowPanel.Controls.Add(adminBookDP.Item(idx))
         Next
     End Sub
 
