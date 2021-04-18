@@ -1,9 +1,10 @@
 ﻿
 Public Class adminView
-    Public viewBookuserCtl As New viewBookUserControl(Me)
     Public addBookuserCtl As New AddBookUserControl(Me)
     Dim recorduserCtl As New recordsUserControl(Me)
     Dim collectionsuserCtl As New collectionsUserControl
+    Dim paginationDTO As New PaginationDTO()
+    Public viewBookuserCtl As New viewBookUserControl(Me, Me.paginationDTO)
 
     Public Sub New()
         ' This call is required by the designer.
@@ -58,7 +59,6 @@ Public Class adminView
                 Main.Show()
                 Me.Close()
                 Authorization.authToken = String.Empty
-
         End Select
     End Sub
 
@@ -74,13 +74,16 @@ Public Class adminView
     End Sub
 
     Private Sub searchPcBx_Click(sender As Object, e As EventArgs) Handles searchPcBx.Click
-        viewBookuserCtl.initializeResult()
         viewBookuserCtl.setSearch(searchTextBox.Text)
+        viewBookuserCtl.initializeResult()
     End Sub
 
+    Private Sub viewBookBtn_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click, bokkAddBtn.Click
+        Dim found As Boolean = False
+    End Sub
 
-
-    Private Sub searchTextBox_TextChanged(sender As Object, e As EventArgs) Handles searchTextBox.TextChanged
-
+    Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
+        Dim advSearch = New advanceSearch(paginationDTO, Me)
+        advSearch.Show()
     End Sub
 End Class
