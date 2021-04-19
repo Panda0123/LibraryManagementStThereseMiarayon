@@ -12,7 +12,6 @@
                                             CheckBox11, CheckBox12, CheckBox13, CheckBox14, CheckBox15,
                                             CheckBox16, CheckBox17, CheckBox18, CheckBox19, CheckBox20,
                                             CheckBox21})
-        Debug.WriteLine(checkBoxes.Count)
         For Each checkBox As CheckBox In checkBoxes
             AddHandler checkBox.Click, AddressOf checkBoxHandler
         Next
@@ -46,12 +45,7 @@
         bookDataGridView.Rows.Clear()
 
         For Each item As CollectionDTO In collectionLt
-            '    Dim newItem As New ListViewItem(item.title)
-            '    newItem.SubItems.Add(item.isbn)
-            '    newItem.SubItems.Add(item.language)
-            '    newItem.SubItems.Add(item.classification)
-            '    bookListView.Items.Add(newItem)
-            bookDataGridView.Rows.Add(New String() {item.title, item.isbn, item.edition, item.language, item.classification})
+            bookDataGridView.Rows.Add(New String() {item.title, item.isbn, item.edition, item.language, item.classification, item.id})
         Next
 
     End Sub
@@ -61,7 +55,9 @@
         If MessageBox.Show("Are you sure to delete this record : " & bookDataGridView.CurrentRow.Cells(0).Value _
                            & " ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             'Delete code here
+            BookController.deleteBookById(bookDataGridView.CurrentRow.Cells(5).Value)
             MessageBox.Show("Deleted!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            btnRefresh_Click(Nothing, Nothing)
         End If
     End Sub
 

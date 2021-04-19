@@ -196,11 +196,12 @@ Public Class IssueBook
             setUser()
         End If
         Dim newReservation As ReservationDTO = New ReservationDTO()
+        Dim reservedDate As String = reserveDateTimePicker.Value.ToString("yyyy-MM-dd")
         newReservation.reservationId = -1
         newReservation.bkCpyId = copies.Item(copyNumReserveCmbBx.SelectedIndex).id
-        'copies.Item(copyNumReserveCmbBx.SelectedIndex).status = "Reserved"
         newReservation.userDTO = Me.userDTO
-        newReservation.reservedDate = reserveDateTimePicker.Value.ToString("yyyy-MM-dd")
+        newReservation.reservedDate = reservedDate
+        copies.Item(copyNumReserveCmbBx.SelectedIndex).status = If(reservedDate.Equals(Date.Now().ToString("yyyy-MM-dd")), "Reserved", "Available")
         BookController.addReservation(newReservation)
         updateCopiesOfChild()
         MessageBox.Show("Book successfully reserved!!")

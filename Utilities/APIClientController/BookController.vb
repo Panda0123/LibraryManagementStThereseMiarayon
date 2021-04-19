@@ -143,4 +143,9 @@ Module BookController
         Dim response As String = HttpRequestController.HttpRequestGet(newUrl)
         Return JsonConvert.DeserializeObject(Of Boolean)(response)
     End Function
+
+    Public Sub deleteBookById(ByRef id As Long)
+        Dim newUrl = URL + "/admin/" + id.ToString
+        HttpRequestController.HttpRequestDelete(newUrl, Authorization.authToken)
+    End Sub
 End Module
