@@ -22,11 +22,10 @@ Partial Class collectionsUserControl
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.bookListView = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(collectionsUserControl))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CheckBox21 = New System.Windows.Forms.CheckBox()
         Me.CheckBox17 = New System.Windows.Forms.CheckBox()
@@ -51,46 +50,26 @@ Partial Class collectionsUserControl
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.bookDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TitleHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ISBNHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EditionHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LanguageHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClassificationHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.btnRefresh = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnDelete = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModeSelectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnMultiSelect = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnSingleSelect = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DGVSelectionModeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnFullRowSelect = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnCellSelect = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.bookDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'bookListView
-        '
-        Me.bookListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.bookListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.bookListView.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.bookListView.Font = New System.Drawing.Font("Sitka Subheading", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bookListView.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
-        Me.bookListView.GridLines = True
-        Me.bookListView.HideSelection = False
-        Me.bookListView.Location = New System.Drawing.Point(0, 214)
-        Me.bookListView.Margin = New System.Windows.Forms.Padding(2)
-        Me.bookListView.MultiSelect = False
-        Me.bookListView.Name = "bookListView"
-        Me.bookListView.Size = New System.Drawing.Size(1478, 1526)
-        Me.bookListView.TabIndex = 0
-        Me.bookListView.UseCompatibleStateImageBehavior = False
-        Me.bookListView.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Title"
-        Me.ColumnHeader1.Width = 518
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "ISBN"
-        Me.ColumnHeader2.Width = 320
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Language"
-        Me.ColumnHeader3.Width = 158
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Classification"
-        Me.ColumnHeader4.Width = 323
         '
         'Panel1
         '
@@ -121,7 +100,7 @@ Partial Class collectionsUserControl
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1478, 305)
+        Me.Panel1.Size = New System.Drawing.Size(1478, 202)
         Me.Panel1.TabIndex = 1
         '
         'CheckBox21
@@ -399,28 +378,161 @@ Partial Class collectionsUserControl
         Me.CheckBox5.Text = "History of Americas"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
+        'bookDataGridView
+        '
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Sitka Heading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.bookDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.bookDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TitleHeader, Me.ISBNHeader, Me.EditionHeader, Me.LanguageHeader, Me.ClassificationHeader})
+        Me.bookDataGridView.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.bookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bookDataGridView.Location = New System.Drawing.Point(0, 202)
+        Me.bookDataGridView.MultiSelect = False
+        Me.bookDataGridView.Name = "bookDataGridView"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.bookDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.bookDataGridView.RowHeadersWidth = 51
+        Me.bookDataGridView.RowTemplate.Height = 24
+        Me.bookDataGridView.Size = New System.Drawing.Size(1478, 1538)
+        Me.bookDataGridView.TabIndex = 3
+        '
+        'TitleHeader
+        '
+        Me.TitleHeader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TitleHeader.HeaderText = "Title"
+        Me.TitleHeader.MinimumWidth = 6
+        Me.TitleHeader.Name = "TitleHeader"
+        Me.TitleHeader.ReadOnly = True
+        Me.TitleHeader.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        '
+        'ISBNHeader
+        '
+        Me.ISBNHeader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ISBNHeader.HeaderText = "ISBN"
+        Me.ISBNHeader.MinimumWidth = 6
+        Me.ISBNHeader.Name = "ISBNHeader"
+        Me.ISBNHeader.ReadOnly = True
+        '
+        'EditionHeader
+        '
+        Me.EditionHeader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.EditionHeader.HeaderText = "Edition"
+        Me.EditionHeader.MinimumWidth = 6
+        Me.EditionHeader.Name = "EditionHeader"
+        Me.EditionHeader.ReadOnly = True
+        '
+        'LanguageHeader
+        '
+        Me.LanguageHeader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.LanguageHeader.HeaderText = "Language"
+        Me.LanguageHeader.MinimumWidth = 6
+        Me.LanguageHeader.Name = "LanguageHeader"
+        Me.LanguageHeader.ReadOnly = True
+        '
+        'ClassificationHeader
+        '
+        Me.ClassificationHeader.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ClassificationHeader.HeaderText = "Classification"
+        Me.ClassificationHeader.MinimumWidth = 6
+        Me.ClassificationHeader.Name = "ClassificationHeader"
+        Me.ClassificationHeader.ReadOnly = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRefresh, Me.btnDelete, Me.ModeSelectToolStripMenuItem, Me.DGVSelectionModeToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(221, 136)
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_refresh_24
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(220, 26)
+        Me.btnRefresh.Text = "Refresh"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_trash_24__1_
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(220, 26)
+        Me.btnDelete.Text = "Delete this record"
+        '
+        'ModeSelectToolStripMenuItem
+        '
+        Me.ModeSelectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMultiSelect, Me.btnSingleSelect})
+        Me.ModeSelectToolStripMenuItem.Name = "ModeSelectToolStripMenuItem"
+        Me.ModeSelectToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
+        Me.ModeSelectToolStripMenuItem.Text = "Mode Select"
+        '
+        'btnMultiSelect
+        '
+        Me.btnMultiSelect.Name = "btnMultiSelect"
+        Me.btnMultiSelect.Size = New System.Drawing.Size(224, 26)
+        Me.btnMultiSelect.Text = "Multi Select"
+        '
+        'btnSingleSelect
+        '
+        Me.btnSingleSelect.Name = "btnSingleSelect"
+        Me.btnSingleSelect.Size = New System.Drawing.Size(224, 26)
+        Me.btnSingleSelect.Text = "Single Select"
+        '
+        'DGVSelectionModeToolStripMenuItem
+        '
+        Me.DGVSelectionModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnFullRowSelect, Me.btnCellSelect})
+        Me.DGVSelectionModeToolStripMenuItem.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_cursor_24
+        Me.DGVSelectionModeToolStripMenuItem.Name = "DGVSelectionModeToolStripMenuItem"
+        Me.DGVSelectionModeToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
+        Me.DGVSelectionModeToolStripMenuItem.Text = "DGV Selection Mode"
+        '
+        'btnFullRowSelect
+        '
+        Me.btnFullRowSelect.Name = "btnFullRowSelect"
+        Me.btnFullRowSelect.Size = New System.Drawing.Size(224, 26)
+        Me.btnFullRowSelect.Text = "Full Row Select"
+        '
+        'btnCellSelect
+        '
+        Me.btnCellSelect.Name = "btnCellSelect"
+        Me.btnCellSelect.Size = New System.Drawing.Size(224, 26)
+        Me.btnCellSelect.Text = "Cell Select"
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "icons8-checkmark-24.png")
+        '
         'collectionsUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
-        Me.Controls.Add(Me.bookListView)
+        Me.Controls.Add(Me.bookDataGridView)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "collectionsUserControl"
         Me.Size = New System.Drawing.Size(1478, 1740)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.bookDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents bookListView As ListView
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
     Friend WithEvents moreClassCombobox As ComboBox
     Friend WithEvents CheckBox8 As CheckBox
     Friend WithEvents CheckBox4 As CheckBox
@@ -444,4 +556,20 @@ Partial Class collectionsUserControl
     Friend WithEvents CheckBox15 As CheckBox
     Friend WithEvents CheckBox16 As CheckBox
     Friend WithEvents CheckBox12 As CheckBox
+    Friend WithEvents bookDataGridView As DataGridView
+    Friend WithEvents TitleHeader As DataGridViewTextBoxColumn
+    Friend WithEvents ISBNHeader As DataGridViewTextBoxColumn
+    Friend WithEvents EditionHeader As DataGridViewTextBoxColumn
+    Friend WithEvents LanguageHeader As DataGridViewTextBoxColumn
+    Friend WithEvents ClassificationHeader As DataGridViewTextBoxColumn
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents btnRefresh As ToolStripMenuItem
+    Friend WithEvents btnDelete As ToolStripMenuItem
+    Friend WithEvents ModeSelectToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnMultiSelect As ToolStripMenuItem
+    Friend WithEvents btnSingleSelect As ToolStripMenuItem
+    Friend WithEvents DGVSelectionModeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnFullRowSelect As ToolStripMenuItem
+    Friend WithEvents btnCellSelect As ToolStripMenuItem
+    Friend WithEvents ImageList1 As ImageList
 End Class

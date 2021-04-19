@@ -138,7 +138,6 @@
     </Compile>
     <Compile Include="Utilities\Design\Configurations.vb" />
     <Compile Include="Utilities\Design\CustomColor.vb" />
-    <Compile Include="Utilities\displayBookvb.vb" />
     <Compile Include="IssueBook.Designer.vb">
       <DependentUpon>IssueBook.vb</DependentUpon>
     </Compile>
@@ -360,6 +359,11 @@
     <None Include="Resources\icons8-borrow-book-64.png" />
     <None Include="Resources\contract.png" />
     <None Include="Resources\Data-View-Details-icon.png" />
+    <None Include="Resources\icons8-refresh-24.png" />
+    <None Include="Resources\icons8-trash-24.png" />
+    <None Include="Resources\icons8-unavailable-24.png" />
+    <None Include="Resources\icons8-trash-24 %281%29.png" />
+    <None Include="Resources\icons8-cursor-24.png" />
     <Content Include="Resources\Log In Dialog Box.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\log-in.png" />
