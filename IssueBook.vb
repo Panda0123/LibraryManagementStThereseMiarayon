@@ -198,7 +198,7 @@ Public Class IssueBook
         Dim newReservation As ReservationDTO = New ReservationDTO()
         newReservation.reservationId = -1
         newReservation.bkCpyId = copies.Item(copyNumReserveCmbBx.SelectedIndex).id
-        copies.Item(copyNumReserveCmbBx.SelectedIndex).status = "Reserved"
+        'copies.Item(copyNumReserveCmbBx.SelectedIndex).status = "Reserved"
         newReservation.userDTO = Me.userDTO
         newReservation.reservedDate = reserveDateTimePicker.Value.ToString("yyyy-MM-dd")
         BookController.addReservation(newReservation)
