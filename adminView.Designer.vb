@@ -28,7 +28,6 @@ Partial Class adminView
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
-        Me.signOutBtn = New System.Windows.Forms.Button()
         Me.searchPcBx = New System.Windows.Forms.PictureBox()
         Me.searchTextBox = New System.Windows.Forms.TextBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
@@ -109,7 +108,6 @@ Partial Class adminView
         '
         Me.TitleLogoSearchPanel.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.TitleLogoSearchPanel.BackColor = System.Drawing.Color.White
-        Me.TitleLogoSearchPanel.Controls.Add(Me.signOutBtn)
         Me.TitleLogoSearchPanel.Controls.Add(Me.searchPcBx)
         Me.TitleLogoSearchPanel.Controls.Add(Me.searchTextBox)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox9)
@@ -125,24 +123,6 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
         Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(969, 264)
         Me.TitleLogoSearchPanel.TabIndex = 1
-        '
-        'signOutBtn
-        '
-        Me.signOutBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.signOutBtn.BackColor = System.Drawing.Color.White
-        Me.signOutBtn.FlatAppearance.BorderSize = 0
-        Me.signOutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.signOutBtn.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.signOutBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.logout
-        Me.signOutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.signOutBtn.Location = New System.Drawing.Point(630, 119)
-        Me.signOutBtn.Margin = New System.Windows.Forms.Padding(0)
-        Me.signOutBtn.Name = "signOutBtn"
-        Me.signOutBtn.Size = New System.Drawing.Size(186, 72)
-        Me.signOutBtn.TabIndex = 21
-        Me.signOutBtn.Text = " Sign Out"
-        Me.signOutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.signOutBtn.UseVisualStyleBackColor = False
         '
         'searchPcBx
         '
@@ -299,7 +279,7 @@ Partial Class adminView
         Me.MetroContextMenu1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MetroContextMenu1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnSignout, Me.UpdateAccountToolStripMenuItem})
         Me.MetroContextMenu1.Name = "MetroContextMenu1"
-        Me.MetroContextMenu1.Size = New System.Drawing.Size(215, 84)
+        Me.MetroContextMenu1.Size = New System.Drawing.Size(190, 56)
         '
         'btnSignout
         '
@@ -521,7 +501,6 @@ Partial Class adminView
     Friend WithEvents bokkAddBtn As Button
     Friend WithEvents viewBookBtn As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents signOutBtn As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents highlightPanel As Panel
