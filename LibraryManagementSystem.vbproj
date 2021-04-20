@@ -68,6 +68,7 @@
       <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
@@ -78,6 +79,9 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -94,12 +98,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="adminView.Designer.vb">
       <DependentUpon>adminView.vb</DependentUpon>
     </Compile>
@@ -111,6 +109,24 @@
     </Compile>
     <Compile Include="advanceSearch.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAccount.Designer.vb">
+      <DependentUpon>UpdateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Panel\pnlOne.Designer.vb">
+      <DependentUpon>pnlOne.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\pnlOne.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel\SlidePanel.Designer.vb">
+      <DependentUpon>SlidePanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Panel\SlidePanel.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\AddBookUserControl.Designer.vb">
       <DependentUpon>AddBookUserControl.vb</DependentUpon>
@@ -198,6 +214,7 @@
     <Compile Include="Utilities\DTOs\ReservationDTO.vb" />
     <Compile Include="Utilities\DTOs\SectionDTO.vb" />
     <Compile Include="Utilities\DTOs\UserDTO.vb" />
+    <Compile Include="Utilities\methods\verify.vb" />
     <Compile Include="Utilities\methods\Security.vb" />
     <Compile Include="Utilities\methods\utils.vb" />
     <Compile Include="Utilities\APIClientController\UserController.vb" />
@@ -215,14 +232,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="adminView.resx">
       <DependentUpon>adminView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="advanceSearch.resx">
       <DependentUpon>advanceSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAccount.resx">
+      <DependentUpon>UpdateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\pnlOne.resx">
+      <DependentUpon>pnlOne.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel\SlidePanel.resx">
+      <DependentUpon>SlidePanel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\AddBookUserControl.resx">
       <DependentUpon>AddBookUserControl.vb</DependentUpon>
@@ -364,6 +387,8 @@
     <None Include="Resources\icons8-unavailable-24.png" />
     <None Include="Resources\icons8-trash-24 %281%29.png" />
     <None Include="Resources\icons8-cursor-24.png" />
+    <None Include="Resources\icons8-eye-24.png" />
+    <None Include="Resources\icons8-hide-24.png" />
     <Content Include="Resources\Log In Dialog Box.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\log-in.png" />

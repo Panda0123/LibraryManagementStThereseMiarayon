@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bin"
+    "\\bin",
+    "\\Panel"
   ],
-  "SelectedNode": "\\viewBook.Designer.vb",
+  "SelectedNode": "\\Panel\\pnlOne.Designer.vb",
   "PreviewInSolutionExplorer": false
 }

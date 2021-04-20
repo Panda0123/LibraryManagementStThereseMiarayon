@@ -22,16 +22,16 @@ Partial Class login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape4 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape3 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.loginBtnLoginForm = New System.Windows.Forms.Button()
         Me.userNameTxtbox = New System.Windows.Forms.TextBox()
         Me.passTxtBox = New System.Windows.Forms.TextBox()
@@ -42,73 +42,13 @@ Partial Class login
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Sitka Subheading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(179, 41)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(237, 32)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Log In to Your Account"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.user__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(106, 152)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(38, 35)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox2.Image = Global.LibraryManagementSystem.My.Resources.Resources.padlock
-        Me.PictureBox2.Location = New System.Drawing.Point(106, 207)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(38, 35)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox3.Image = Global.LibraryManagementSystem.My.Resources.Resources.Username
-        Me.PictureBox3.Location = New System.Drawing.Point(166, 142)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(263, 55)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 1
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.Username
-        Me.PictureBox4.Location = New System.Drawing.Point(166, 202)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(263, 55)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 1
-        Me.PictureBox4.TabStop = False
-        '
         'ShapeContainer1
         '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(16, 60)
+        Me.ShapeContainer1.Location = New System.Drawing.Point(20, 75)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape4, Me.RectangleShape3, Me.RectangleShape2, Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(557, 318)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(696, 397)
         Me.ShapeContainer1.TabIndex = 2
         Me.ShapeContainer1.TabStop = False
         '
@@ -121,7 +61,7 @@ Partial Class login
         Me.RectangleShape4.FillGradientColor = System.Drawing.Color.White
         Me.RectangleShape4.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.BackwardDiagonal
         Me.RectangleShape4.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.RectangleShape4.Location = New System.Drawing.Point(465, -95)
+        Me.RectangleShape4.Location = New System.Drawing.Point(535, -55)
         Me.RectangleShape4.Name = "RectangleShape4"
         Me.RectangleShape4.Size = New System.Drawing.Size(339, 215)
         '
@@ -134,7 +74,7 @@ Partial Class login
         Me.RectangleShape3.FillGradientColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.RectangleShape3.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.BackwardDiagonal
         Me.RectangleShape3.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.RectangleShape3.Location = New System.Drawing.Point(-152, 273)
+        Me.RectangleShape3.Location = New System.Drawing.Point(-82, 313)
         Me.RectangleShape3.Name = "RectangleShape3"
         Me.RectangleShape3.Size = New System.Drawing.Size(339, 215)
         '
@@ -147,7 +87,7 @@ Partial Class login
         Me.RectangleShape2.FillGradientColor = System.Drawing.Color.White
         Me.RectangleShape2.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.ForwardDiagonal
         Me.RectangleShape2.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.RectangleShape2.Location = New System.Drawing.Point(-142, -105)
+        Me.RectangleShape2.Location = New System.Drawing.Point(-72, -65)
         Me.RectangleShape2.Name = "RectangleShape2"
         Me.RectangleShape2.Size = New System.Drawing.Size(255, 166)
         '
@@ -160,9 +100,69 @@ Partial Class login
         Me.RectangleShape1.FillGradientColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(146, Byte), Integer))
         Me.RectangleShape1.FillGradientStyle = Microsoft.VisualBasic.PowerPacks.FillGradientStyle.ForwardDiagonal
         Me.RectangleShape1.FillStyle = Microsoft.VisualBasic.PowerPacks.FillStyle.Solid
-        Me.RectangleShape1.Location = New System.Drawing.Point(385, 239)
+        Me.RectangleShape1.Location = New System.Drawing.Point(455, 279)
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(339, 215)
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Sitka Subheading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(224, 51)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(296, 40)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Log In to Your Account"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.user__1_
+        Me.PictureBox1.Location = New System.Drawing.Point(132, 190)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 44)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox2.Image = Global.LibraryManagementSystem.My.Resources.Resources.padlock
+        Me.PictureBox2.Location = New System.Drawing.Point(132, 259)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(48, 44)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox3.Image = Global.LibraryManagementSystem.My.Resources.Resources.Username
+        Me.PictureBox3.Location = New System.Drawing.Point(208, 178)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(329, 69)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 1
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.Username
+        Me.PictureBox4.Location = New System.Drawing.Point(208, 252)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(329, 69)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 1
+        Me.PictureBox4.TabStop = False
         '
         'loginBtnLoginForm
         '
@@ -174,10 +174,10 @@ Partial Class login
         Me.loginBtnLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.loginBtnLoginForm.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.loginBtnLoginForm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.loginBtnLoginForm.Location = New System.Drawing.Point(195, 272)
+        Me.loginBtnLoginForm.Location = New System.Drawing.Point(244, 340)
         Me.loginBtnLoginForm.Margin = New System.Windows.Forms.Padding(2)
         Me.loginBtnLoginForm.Name = "loginBtnLoginForm"
-        Me.loginBtnLoginForm.Size = New System.Drawing.Size(172, 42)
+        Me.loginBtnLoginForm.Size = New System.Drawing.Size(215, 52)
         Me.loginBtnLoginForm.TabIndex = 2
         Me.loginBtnLoginForm.Text = "Log In"
         Me.loginBtnLoginForm.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -189,10 +189,10 @@ Partial Class login
         Me.userNameTxtbox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.userNameTxtbox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.userNameTxtbox.Font = New System.Drawing.Font("Sitka Subheading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.userNameTxtbox.Location = New System.Drawing.Point(177, 155)
+        Me.userNameTxtbox.Location = New System.Drawing.Point(221, 194)
         Me.userNameTxtbox.Margin = New System.Windows.Forms.Padding(2)
         Me.userNameTxtbox.Name = "userNameTxtbox"
-        Me.userNameTxtbox.Size = New System.Drawing.Size(236, 28)
+        Me.userNameTxtbox.Size = New System.Drawing.Size(295, 34)
         Me.userNameTxtbox.TabIndex = 0
         '
         'passTxtBox
@@ -200,10 +200,10 @@ Partial Class login
         Me.passTxtBox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.passTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.passTxtBox.Font = New System.Drawing.Font("Sitka Subheading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passTxtBox.Location = New System.Drawing.Point(176, 214)
+        Me.passTxtBox.Location = New System.Drawing.Point(220, 268)
         Me.passTxtBox.Margin = New System.Windows.Forms.Padding(2)
         Me.passTxtBox.Name = "passTxtBox"
-        Me.passTxtBox.Size = New System.Drawing.Size(236, 28)
+        Me.passTxtBox.Size = New System.Drawing.Size(295, 34)
         Me.passTxtBox.TabIndex = 1
         Me.passTxtBox.UseSystemPasswordChar = True
         '
@@ -211,18 +211,19 @@ Partial Class login
         '
         Me.failedLoginLbl.AutoSize = True
         Me.failedLoginLbl.ForeColor = System.Drawing.Color.Red
-        Me.failedLoginLbl.Location = New System.Drawing.Point(210, 257)
+        Me.failedLoginLbl.Location = New System.Drawing.Point(262, 321)
+        Me.failedLoginLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.failedLoginLbl.Name = "failedLoginLbl"
-        Me.failedLoginLbl.Size = New System.Drawing.Size(157, 13)
+        Me.failedLoginLbl.Size = New System.Drawing.Size(210, 17)
         Me.failedLoginLbl.TabIndex = 17
         Me.failedLoginLbl.Text = "Login Failed: Wrong Credentials"
         Me.failedLoginLbl.Visible = False
         '
         'login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
-        Me.ClientSize = New System.Drawing.Size(589, 394)
+        Me.ClientSize = New System.Drawing.Size(736, 492)
         Me.Controls.Add(Me.failedLoginLbl)
         Me.Controls.Add(Me.passTxtBox)
         Me.Controls.Add(Me.userNameTxtbox)
@@ -238,7 +239,7 @@ Partial Class login
         Me.MinimizeBox = False
         Me.Movable = False
         Me.Name = "login"
-        Me.Padding = New System.Windows.Forms.Padding(16, 60, 16, 16)
+        Me.Padding = New System.Windows.Forms.Padding(20, 75, 20, 20)
         Me.Resizable = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -249,19 +250,19 @@ Partial Class login
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape3 As PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape4 As PowerPacks.RectangleShape
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
-    Friend WithEvents RectangleShape1 As PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape2 As PowerPacks.RectangleShape
-    Friend WithEvents RectangleShape3 As PowerPacks.RectangleShape
     Friend WithEvents loginBtnLoginForm As Button
     Friend WithEvents userNameTxtbox As TextBox
     Friend WithEvents passTxtBox As TextBox
-    Friend WithEvents RectangleShape4 As PowerPacks.RectangleShape
     Friend WithEvents failedLoginLbl As Label
 End Class
 
