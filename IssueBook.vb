@@ -4,10 +4,13 @@ Public Class IssueBook
     Dim userDTO As UserDTO
     Dim bookDetailsDTOBorrow As BookDetailsDTO
     Dim bookDetailsDTOReserve As BookDetailsDTO
+    Dim bookDetailsDTO As BookDetailsDTO
     Dim copies As New List(Of BookCopyDTO)
     Dim copyNum As New List(Of Integer)
     Dim viewBook As viewBook
     Dim bookControlAdmin As bookControlAdmin
+    Dim selectedCopy As BookCopyDTO
+    Dim provider As CultureInfo
 
     Public Sub New(ByRef viewBook As viewBook, ByRef bookControlAdmin As bookControlAdmin)
 
@@ -18,8 +21,6 @@ Public Class IssueBook
         Me.viewBook = viewBook
         Me.bookControlAdmin = bookControlAdmin
     End Sub
-    'End Sub
-
 
     Private Sub buttonBorrow_MouseEnter(sender As Object, e As EventArgs)
         Me.buttonBorrow.BackColor = Color.DodgerBlue
@@ -36,7 +37,6 @@ Public Class IssueBook
     Private Sub buttonReserve_MouseLeave(sender As Object, e As EventArgs)
         Me.buttonReserve.BackColor = Color.SlateGray
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles searchUserIdBtn.Click
         Try
             userDTO = UserController.getUser(textBoxId.Text.Trim)
@@ -49,55 +49,17 @@ Public Class IssueBook
         Catch ex As Exception
             If ex.Message.Equals("The remote server returned an error: (500) Internal Server Error.") Then
                 MessageBox.Show("UserID:" + textBoxId.Text + " is not registered")
-                Debug.WriteLine(ex.Message)
-                Debug.WriteLine(ex.ToString)
             End If
         End Try
     End Sub
 
-    Public Sub setBookDetailsDTOBorrow(ByRef bookDetailsDTO As BookDetailsDTO, ByRef provider As CultureInfo, ByRef image As Image, ByRef idxCopy As Integer)
+    Public Sub setBookDetailsDTO(ByRef bookDetailsDTO As BookDetailsDTO, ByRef provider As CultureInfo, ByRef image As Image, ByRef idxCopy As Integer, ByRef isBorrow As Boolean)
 
-        TabControl1.SelectedIndex = 0
         bookPcBx.Image = image
-        Me.bookDetailsDTOBorrow = bookDetailsDTO
+        Me.bookDetailsDTO = bookDetailsDTO
+        Me.provider = provider
+
         textBoxTitle.Text = bookDetailsDTO.title
-
-        ' authors
-        Dim authorsDisplay = ""
-        Dim authors = bookDetailsDTO.authors
-        If authors.Count <> 0 Then
-            authorsDisplay = authorsDisplay + authors(0).f_name + " " + authors(0).m_name + " " + authors(0).l_name + vbCrLf
-            For idx As Integer = 1 To authors.Count - 1
-                authorsDisplay = authorsDisplay + authors(idx).f_name + " " + authors(idx).m_name + " " + authors(idx).l_name + vbCrLf
-            Next
-        End If
-        textBoxAuthors.Text = authorsDisplay
-
-        ' publication.
-        Dim publisheDate = If(bookDetailsDTO.publishedDate Is Nothing,
-                "", Date.ParseExact(bookDetailsDTO.publishedDate, "yyyy-MM-dd", provider).Year.ToString())
-        Dim publisher = If(bookDetailsDTO.publisherAddress Is Nothing, "", "[" + bookDetailsDTO.publisherAddress + "]") + If(bookDetailsDTO.publisherName Is Nothing, "", " : " + bookDetailsDTO.publisherName) + ", " + publisheDate
-        textBoxPubDate.Text = publisheDate
-        textBoxPublisher.Text = publisher
-
-        ' edition
-        textBoxEdition.Text = If(bookDetailsDTO.edition = Nothing, "", bookDetailsDTO.edition.ToString)
-
-        ' isbn
-        textBoxISBN.Text = If(bookDetailsDTO.isbn Is Nothing, "", bookDetailsDTO.isbn)
-
-        ' classifcation
-        textBoxCategory.Text = If(bookDetailsDTO.categoryName Is Nothing, "", bookDetailsDTO.categoryName)
-        ' language
-        textBoxLanguage.Text = bookDetailsDTO.language
-        setCopies(bookDetailsDTO, True, idxCopy)
-    End Sub
-
-    Public Sub setBookDetailsDTOReservation(ByRef bookDetailsDTO As BookDetailsDTO, ByRef provider As CultureInfo, ByRef image As Image, ByRef idxCopy As Integer)
-
-        TabControl1.SelectedIndex = 1
-        bookPcBx.Image = image
-        Me.bookDetailsDTOReserve = bookDetailsDTO
         titleReserveTxtBx.Text = bookDetailsDTO.title
 
         ' authors
@@ -109,6 +71,7 @@ Public Class IssueBook
                 authorsDisplay = authorsDisplay + authors(idx).f_name + " " + authors(idx).m_name + " " + authors(idx).l_name + vbCrLf
             Next
         End If
+        textBoxAuthors.Text = authorsDisplay
         authorsReserveTxtBx.Text = authorsDisplay
 
         ' publication.
@@ -119,19 +82,33 @@ Public Class IssueBook
         publisherReserveTxtBx.Text = publisher
 
         ' edition
-        editionReserveTxtBx.Text = If(bookDetailsDTO.edition = Nothing, "", bookDetailsDTO.edition.ToString)
+        textBoxEdition.Text = bookDetailsDTO.edition
+        editionReserveTxtBx.Text = bookDetailsDTO.edition
 
         ' isbn
-        isbnReserveTxtBx.Text = If(bookDetailsDTO.isbn Is Nothing, "", bookDetailsDTO.isbn)
+        textBoxISBN.Text = bookDetailsDTO.isbn
+        isbnReserveTxtBx.Text = bookDetailsDTO.isbn
 
         ' classifcation
-        categoryReserveTxtBx.Text = If(bookDetailsDTO.categoryName Is Nothing, "", bookDetailsDTO.categoryName)
+        textBoxCategory.Text = bookDetailsDTO.categoryName
+        categoryReserveTxtBx.Text = bookDetailsDTO.categoryName
+
         ' language
+        textBoxLanguage.Text = bookDetailsDTO.language
         languageReserveTxtBx.Text = bookDetailsDTO.language
-        setCopies(bookDetailsDTO, False, idxCopy)
+        setCopies(bookDetailsDTO, idxCopy)
+
+        If isBorrow Then
+            TabControl1.SelectedIndex = 0
+        Else
+            TabControl1.SelectedIndex = 1
+        End If
+        issueDateTimePicker.Value = Date.Now()
+        dueDateTimePicker.MinDate = Date.Now()
+        reserveDateTimePicker.MinDate = Date.Now()
     End Sub
 
-    Private Sub setCopies(bkDTO As BookDetailsDTO, isBorrow As Boolean, idxCopy As Integer)
+    Private Sub setCopies(bkDTO As BookDetailsDTO, idxCopy As Integer)
 
         Me.userDTO = Nothing
         If IsNothing(bkDTO.copies) Then
@@ -146,31 +123,57 @@ Public Class IssueBook
             copyNum.Add(copyDTO.copy_num)
         Next
 
-        If isBorrow Then
-            copyNumCmbBx.DataSource = copyNum
-            copyNumCmbBx.SelectedIndex = idxCopy
-            textBoxStatus.Text = copies.Item(idxCopy).status
-        Else
-            copyNumReserveCmbBx.DataSource = copyNum
-            copyNumReserveCmbBx.SelectedIndex = idxCopy
-            statusReserveTxtBx.Text = copies.Item(idxCopy).status
-        End If
+        copyNumCmbBx.DataSource = copyNum
+        copyNumCmbBx.SelectedIndex = idxCopy
+        textBoxStatus.Text = copies.Item(idxCopy).status
+        copyNumReserveCmbBx.DataSource = copyNum
+        copyNumReserveCmbBx.SelectedIndex = idxCopy
+        statusReserveTxtBx.Text = copies.Item(idxCopy).status
     End Sub
 
-    Private Sub copyNumCmbBx_Changed(sender As Object, e As EventArgs) Handles copyNumCmbBx.SelectedIndexChanged
-        textBoxStatus.Text = copies.Item(copyNumCmbBx.SelectedIndex).status
-        If Not textBoxStatus.Text.Equals("Available") Then
-            buttonBorrow.Enabled = False
+    Private Sub copyNumCmbBx_Changed(sender As Object, e As EventArgs) Handles copyNumCmbBx.Leave, copyNumCmbBx.SelectedIndexChanged
+        Dim val As String = copyNumCmbBx.Text.Trim
+        Dim idx = If(IsNumeric(val), copies.IndexOf(New BookCopyDTO(-1, CType(val, Int32))), -1)
+
+        If idx <> -1 Then
+            selectedCopy = copies.Item(idx)
+            textBoxStatus.Text = selectedCopy.status
+            If Not textBoxStatus.Text.Equals("Available") Then
+                buttonBorrow.Enabled = False
+            Else
+                buttonBorrow.Enabled = True
+                dueDateTimePickerVaueChanged_Handler(Nothing, Nothing)
+            End If
         Else
-            buttonBorrow.Enabled = True
+            selectedCopy = Nothing
         End If
+
     End Sub
-    Private Sub copyNumReserveCmbBx_Changed(sender As Object, e As EventArgs) Handles copyNumReserveCmbBx.SelectedIndexChanged
-        statusReserveTxtBx.Text = copies.Item(copyNumReserveCmbBx.SelectedIndex).status
-        If Not statusReserveTxtBx.Text.Equals("Available") Then
-            buttonReserve.Enabled = False
+    Private Sub copyNumReserveCmbBx_Changed(sender As Object, e As EventArgs) Handles copyNumReserveCmbBx.Leave, copyNumReserveCmbBx.SelectedIndexChanged
+        Dim val As String = copyNumReserveCmbBx.Text.Trim
+        Dim idx = If(IsNumeric(val), copies.IndexOf(New BookCopyDTO(-1, CType(val, Int32))), -1)
+
+        If idx <> -1 Then
+            selectedCopy = copies.Item(idx)
+            statusReserveTxtBx.Text = selectedCopy.status
+            Dim isAvailable = statusReserveTxtBx.Text.Equals("Available")
+            If Not isAvailable Then
+                buttonReserve.Enabled = False
+            Else
+                buttonReserve.Enabled = True
+            End If
+
+            If Not IsNothing(selectedCopy.reserved_date) Then
+                buttonReserve.Enabled = False
+                ' only one person can reserve at a time and borrow
+                warningCopyReservedAlreadyLbl.Text = "Warning: Copy is already reserved on " + Date.ParseExact(selectedCopy.reserved_date, "yyyy-MM-dd", provider).ToString("MMM d, yyyy")
+                warningCopyReservedAlreadyLbl.Visible = True
+            Else
+                buttonReserve.Enabled = isAvailable
+                warningCopyReservedAlreadyLbl.Visible = False
+            End If
         Else
-            buttonReserve.Enabled = True
+            selectedCopy = Nothing
         End If
     End Sub
 
@@ -202,6 +205,7 @@ Public Class IssueBook
         newReservation.userDTO = Me.userDTO
         newReservation.reservedDate = reservedDate
         copies.Item(copyNumReserveCmbBx.SelectedIndex).status = If(reservedDate.Equals(Date.Now().ToString("yyyy-MM-dd")), "Reserved", "Available")
+        copies.Item(copyNumReserveCmbBx.SelectedIndex).reserved_date = reservedDate
         BookController.addReservation(newReservation)
         updateCopiesOfChild()
         MessageBox.Show("Book successfully reserved!!")
@@ -228,12 +232,17 @@ Public Class IssueBook
         userDTO.sectionDTO = sectionDTO
         userDTO.address = addressTxtBx.Text.Trim
     End Sub
-
-    Private Sub IssueBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
+    Private Sub dueDateTimePickerVaueChanged_Handler(sender As Object, e As EventArgs) Handles dueDateTimePicker.ValueChanged
+        If selectedCopy IsNot Nothing AndAlso selectedCopy.reserved_date IsNot Nothing Then
+            Dim reserved = Date.ParseExact(selectedCopy.reserved_date, "yyyy-MM-dd", provider)
+            If issueDateTimePicker.Value < reserved AndAlso reserved <= dueDateTimePicker.Value Then
+                warningCopyReservedLbl.Text = "Warning: Copy is reserved on " + reserved.ToString("MMM d, yyyy")
+                warningCopyReservedLbl.Visible = True
+                buttonBorrow.Enabled = False
+                Return
+            End If
+        End If
+        warningCopyReservedLbl.Visible = False
+        buttonBorrow.Enabled = If(textBoxStatus.Text.Trim.Equals("Available"), True, False)
     End Sub
 End Class
