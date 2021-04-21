@@ -19,7 +19,7 @@
     Property copyrightId As Int64
     Property copyrightName As String
 
-    Property copyrightYear As Int16
+    Property copyrightYear As Short?
     Property shelfId As Int16
     Property shelfName As String
     Property summary As String
