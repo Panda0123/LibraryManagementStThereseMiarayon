@@ -15,6 +15,28 @@ Module HttpRequestController
         Return sr.ReadToEnd()
     End Function
 
+    Public Function HttpRequestGet(URL As String, authToken As String) As String
+
+        Dim request As WebRequest
+        request = WebRequest.Create(URL)
+        request.Method = "Get"
+        If Not authToken Is Nothing Then
+            request.Headers.Add("Authorization", authToken)
+        End If
+
+        Dim stream As Stream = request.GetRequestStream()
+        Dim response = request.GetResponse()
+        Dim sr As New StreamReader(response.GetResponseStream())
+        Dim responseContent As String = String.Empty
+
+        Using res = DirectCast(request.GetResponse(), HttpWebResponse),
+            responseStream = res.GetResponseStream(),
+            reader = New StreamReader(responseStream)
+            responseContent = reader.ReadToEnd()
+        End Using
+        Return responseContent
+    End Function
+
     Public Function HttpRequestGetStream(URL As String) As Stream
         Dim request As WebRequest = WebRequest.Create(URL)
         Dim res = CType(request.GetResponse(), HttpWebResponse)
