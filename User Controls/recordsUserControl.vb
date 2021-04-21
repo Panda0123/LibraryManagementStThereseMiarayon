@@ -23,6 +23,7 @@
     Public Sub loadBorrow()
         borrows = BookController.getAllBorrow()
         setDataGrid(borrows, borrowListDataGrid, True)
+        borrowListDataGrid.ClearSelection()
     End Sub
     Private Sub loadReturn()
         returns = BookController.getAllReturn()
@@ -95,5 +96,10 @@
             listDataGrid.Rows.Add({My.Resources.default_book, status, item.issueDate, item.dueDate, item.title, item.bkCpyNum, item.userDTO.id, item.borrowId})
         Next
         listDataGrid.Refresh()
+    End Sub
+
+    Private Sub recordsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Me.Width = Screen.PrimaryScreen.WorkingArea.Width
+        ' Me.Height = Screen.PrimaryScreen.WorkingArea.Height
     End Sub
 End Class
