@@ -64,7 +64,7 @@ Public Class bookControlAdmin
 
     Private Sub checkOutLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles checkOutLnkLbl.LinkClicked
         Dim issueBk As New IssueBook(Nothing, Me)
-        issueBk.setBookDetailsDTOBorrow(Me.bkDTO, provider, Me.coverPcBx.Image, 0)
+        issueBk.setBookDetailsDTO(Me.bkDTO, provider, Me.coverPcBx.Image, 0, True)
         issueBk.TabControl1.TabPages.Remove(issueBk.TabPage2)
         issueBk.ShowDialog()
 
@@ -72,7 +72,7 @@ Public Class bookControlAdmin
 
     Private Sub reserveLnkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles reserveLnkLbl.LinkClicked
         Dim issueBk As New IssueBook(Nothing, Me)
-        issueBk.setBookDetailsDTOReservation(Me.bkDTO, provider, Me.coverPcBx.Image, 0)
+        issueBk.setBookDetailsDTO(Me.bkDTO, provider, Me.coverPcBx.Image, 0, False)
         issueBk.TabControl1.TabPages.Remove(issueBk.TabPage1)
         issueBk.ShowDialog()
     End Sub

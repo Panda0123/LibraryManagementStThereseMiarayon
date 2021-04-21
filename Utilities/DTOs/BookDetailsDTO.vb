@@ -4,7 +4,7 @@
     Property publishedDate As String
     Property dateAdded As String
     Property language As String
-    Property edition As Int16
+    Property edition As String
     Property isbn As String
     Property imageName As String
 
@@ -19,7 +19,7 @@
     Property copyrightId As Int64
     Property copyrightName As String
 
-    Property copyrightYear As Int16
+    Property copyrightYear As Short?
     Property shelfId As Int16
     Property shelfName As String
     Property summary As String

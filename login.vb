@@ -13,6 +13,8 @@
         Else
             failedLoginLbl.Visible = False
             Authorization.authToken = authToken
+            Authorization.username = userNameTxtbox.Text
+            Authorization.password = passTxtBox.Text
             adminView.Show()
             Me.Close()
             Main.Close()
@@ -49,17 +51,5 @@
             passTxtBox.Text = "Password"
             passTxtBox.ForeColor = Color.FromArgb(119, 117, 117)
         End If
-    End Sub
-
-    Private Sub userNameTxtbox_TextChanged_1(sender As Object, e As EventArgs) Handles userNameTxtbox.TextChanged
-
-    End Sub
-
-    Private Sub userNameTxtbox_TextChanged(sender As Object, e As KeyPressEventArgs)
-
-    End Sub
-
-    Private Sub passTxtBox_TextChanged(sender As Object, e As KeyPressEventArgs)
-
     End Sub
 End Class
