@@ -1,30 +1,39 @@
-﻿Public Class pnlOne
+﻿
+Public Class pnlOne
     Private click_eye As Integer = 0
+
     Private Sub pnlOne_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         currPassword.UseSystemPasswordChar = True
         newPassword.UseSystemPasswordChar = True
     End Sub
 
+
+
     Private Sub MetroButton1_Click(sender As Object, e As EventArgs) Handles MetroButton1.Click
 
-        If MessageBox.Show("Are you sure of this password : ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+        If MessageBox.Show("Are you sure of this Password?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
             If currPassword.Text.Equals("") And newPassword.Text.Equals("") Then
                 MessageBox.Show("blanks are not allowed!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 'if current != currPass.Text
                 'then mag message sya 
-                'else if sakto and dle blank verify dayon
+                'else if sakto and dle blank verify dayonS
                 If verify.checkPass(newPassword.Text) Then
-                    verify.setNewUsername(UpdateAccount.newUsername.Text)
-                    verify.setNewPassword(newPassword.Text)
-                    MessageBox.Show("Succesfully Updated", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    verify.setNewPassword(newPassword.Text
+                                          )
+                    ' Add to database verify.getNewUsername and verify.getNewPassword
+
+                    If MessageBox.Show("Succesfully Updated", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
+                        Me.Parent.Dispose()
+                    End If
+
                 Else
                     MessageBox.Show("Check your Password", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
             End If
-
-
-
+        Else
+            Exit Sub
         End If
 
 
@@ -44,5 +53,9 @@
             currPassword.UseSystemPasswordChar = True
             newPassword.UseSystemPasswordChar = True
         End If
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

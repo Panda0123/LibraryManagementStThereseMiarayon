@@ -5,7 +5,7 @@ Public Class adminView
     Dim collectionsuserCtl As New collectionsUserControl
     Dim paginationDTO As New PaginationDTO()
     Public viewBookuserCtl As New viewBookUserControl(Me, Me.paginationDTO)
-
+    Public updateAccFrm As New UpdateAccount
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -81,14 +81,16 @@ Public Class adminView
         advSearch.Show()
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-
-    End Sub
 
     Private Sub UpdateAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateAccountToolStripMenuItem.Click
         Dim updateAccFrm As New UpdateAccount
         updateAccFrm.ShowDialog()
+
     End Sub
+
+
+
+
 
     Private Sub btnSignout_Click(sender As Object, e As EventArgs) Handles btnSignout.Click
         ' Smooth Exit
