@@ -28,10 +28,12 @@
     Private Sub loadReturn()
         returns = BookController.getAllReturn()
         setDataGrid(returns, returnListDataGrid, False)
+
     End Sub
     Private Sub loadReserve()
         reservations = BookController.getAllReservation()
         setReserve(reservations)
+        reservationListDataGrid.ClearSelection()
     End Sub
     Private Sub borrowListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles borrowListDataGrid.CellContentClick
