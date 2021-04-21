@@ -55,4 +55,11 @@
 
     End Sub
 
+    Private Sub userNameTxtbox_TextChanged(sender As Object, e As KeyPressEventArgs)
+
+    End Sub
+
+    Private Sub passTxtBox_TextChanged(sender As Object, e As KeyPressEventArgs)
+
+    End Sub
 End Class

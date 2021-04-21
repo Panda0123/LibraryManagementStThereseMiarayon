@@ -12,7 +12,6 @@
                                             CheckBox11, CheckBox12, CheckBox13, CheckBox14, CheckBox15,
                                             CheckBox16, CheckBox17, CheckBox18, CheckBox19, CheckBox20,
                                             CheckBox21})
-        Debug.WriteLine(checkBoxes.Count)
         For Each checkBox As CheckBox In checkBoxes
             AddHandler checkBox.Click, AddressOf checkBoxHandler
         Next
@@ -35,36 +34,81 @@
     Private Sub MyBaseLoad(sender As Object, e As EventArgs) Handles Me.Load
         collection = BookController.getBookCollection()
         setCollection(collection)
+
+        btnFullRowSelect.Image = ImageList1.Images(0)
+        bookDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        btnSingleSelect.Image = ImageList1.Images(0)
     End Sub
 
     Private Sub setCollection(ByRef collectionLt As List(Of CollectionDTO))
-        bookListView.Items.Clear()
+        '   bookListView.Items.Clear()
+        bookDataGridView.Rows.Clear()
 
         For Each item As CollectionDTO In collectionLt
-            Dim newItem As New ListViewItem(item.title)
-            newItem.SubItems.Add(item.isbn)
-            newItem.SubItems.Add(item.language)
-            newItem.SubItems.Add(item.classification)
-            bookListView.Items.Add(newItem)
+            bookDataGridView.Rows.Add(New String() {item.title, item.isbn, item.edition, item.language, item.classification, item.id})
         Next
-    End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        'sample only
-        Dim newItem As New ListViewItem("Sample")
-        newItem.SubItems.Add("sample")
-        newItem.SubItems.Add("sample")
-        newItem.SubItems.Add("sample")
-        bookListView.Items.Add(newItem)
-    End Sub
-
-
-
-    Private Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles bookListView.ColumnWidthChanging
-        e.Cancel = True
-        e.NewWidth = bookListView.Columns(e.ColumnIndex).Width
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+
+    Sub deleteRecord()
+        If MessageBox.Show("Are you sure to delete this record : " & bookDataGridView.CurrentRow.Cells(0).Value _
+                           & " ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            'Delete code here
+            BookController.deleteBookById(bookDataGridView.CurrentRow.Cells(5).Value)
+            MessageBox.Show("Deleted!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            btnRefresh_Click(Nothing, Nothing)
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        deleteRecord()
+    End Sub
+
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        collection = BookController.getBookCollection()
+        setCollection(collection)
+    End Sub
+
+    Private Sub btnMultiSelect_Click(sender As Object, e As EventArgs) Handles btnMultiSelect.Click
+        bookDataGridView.MultiSelect = True
+        btnMultiSelect.Image = ImageList1.Images(0)
+        btnSingleSelect.Image = Nothing
+    End Sub
+
+    Private Sub btnSingleSelect_Click(sender As Object, e As EventArgs) Handles btnSingleSelect.Click
+        bookDataGridView.MultiSelect = False
+        btnMultiSelect.Image = Nothing
+        btnSingleSelect.Image = ImageList1.Images(0)
+    End Sub
+
+    Private Sub btnFullRowSelect_Click(sender As Object, e As EventArgs) Handles btnFullRowSelect.Click
+        btnFullRowSelect.Image = ImageList1.Images(0)
+        bookDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        btnCellSelect.Image = Nothing
+    End Sub
+
+    Private Sub btnCellSelect_Click(sender As Object, e As EventArgs) Handles btnCellSelect.Click
+        btnCellSelect.Image = ImageList1.Images(0)
+        bookDataGridView.SelectionMode = DataGridViewSelectionMode.CellSelect
+        btnFullRowSelect.Image = Nothing
+    End Sub
+
+
+
+
+
+
+    'rivate Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles bookDataGridView.ColumnWidthChanged
+
+    'e.Cancel = True
+    'e.NewWidth = bookListView.Columns(e.ColumnIndex).Width
+
+    'End Sub
+
+
+
+
+
+
 End Class

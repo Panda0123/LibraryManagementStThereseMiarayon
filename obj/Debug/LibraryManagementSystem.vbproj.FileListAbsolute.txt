@@ -8,7 +8,6 @@ G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bi
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
-G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Form1.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBookUserControl.resources
@@ -40,7 +39,6 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
-C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Form1.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBookUserControl.resources
@@ -62,3 +60,13 @@ C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\
 C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Transitions.dll
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\bin\Debug\Transitions.pdb
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.updateAccount.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pnlOne.resources
+C:\Users\Lance Parantar\Documents\GitHub\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.SlidePanel.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.UpdateAccount.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pnlOne.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.SlidePanel.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Transitions.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Transitions.pdb

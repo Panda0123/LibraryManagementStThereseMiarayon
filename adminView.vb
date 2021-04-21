@@ -5,7 +5,7 @@ Public Class adminView
     Dim collectionsuserCtl As New collectionsUserControl
     Dim paginationDTO As New PaginationDTO()
     Public viewBookuserCtl As New viewBookUserControl(Me, Me.paginationDTO)
-
+    Public updateAccFrm As New UpdateAccount
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -25,7 +25,7 @@ Public Class adminView
     End Sub
 
     Private Sub openUserControl_Click(sender As Object, e As EventArgs) Handles viewBookBtn.Click, bokkAddBtn.Click,
-        recordsBtn.Click, collectionsBtn.Click, signOutBtn.Click
+        recordsBtn.Click, collectionsBtn.Click
 
         '1. Responsive changing of color of LEFT panel
         viewBookBtn.BackColor = Color.FromArgb(225, 231, 237)
@@ -53,12 +53,6 @@ Public Class adminView
                 switchPanel(recorduserCtl)
             Case collectionsBtn.Name
                 switchPanel(collectionsuserCtl)
-            Case signOutBtn.Name
-                ' Smooth Exit
-                Me.Hide()
-                Main.Show()
-                Me.Close()
-                Authorization.authToken = String.Empty
         End Select
     End Sub
 
@@ -85,5 +79,24 @@ Public Class adminView
     Private Sub advanceSearchLinkLbl_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles advanceSearchLinkLbl.LinkClicked
         Dim advSearch = New advanceSearch(paginationDTO, Me)
         advSearch.Show()
+    End Sub
+
+
+    Private Sub UpdateAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateAccountToolStripMenuItem.Click
+        Dim updateAccFrm As New UpdateAccount
+        updateAccFrm.ShowDialog()
+
+    End Sub
+
+
+
+
+
+    Private Sub btnSignout_Click(sender As Object, e As EventArgs) Handles btnSignout.Click
+        ' Smooth Exit
+        Me.Hide()
+        Main.Show()
+        Me.Close()
+        Authorization.authToken = String.Empty
     End Sub
 End Class
