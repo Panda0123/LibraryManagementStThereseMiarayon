@@ -25,7 +25,6 @@ Partial Class IssueBook
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IssueBook))
         Me.labelISBN = New System.Windows.Forms.Label()
         Me.buttonBorrow = New System.Windows.Forms.Button()
-        Me.textBoxVolume = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,21 +40,17 @@ Partial Class IssueBook
         Me.Label17 = New System.Windows.Forms.Label()
         Me.authorsReserveTxtBx = New System.Windows.Forms.TextBox()
         Me.reserveDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.statusReserveTxtBx = New System.Windows.Forms.TextBox()
-        Me.editionReserveTxtBx = New System.Windows.Forms.TextBox()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.isbnReserveTxtBx = New System.Windows.Forms.TextBox()
         Me.categoryReserveTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.buttonReserve = New System.Windows.Forms.Button()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.copyNumReserveCmbBx = New System.Windows.Forms.ComboBox()
         Me.warningCopyReservedAlreadyLbl = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.editionReserveTxtBx = New System.Windows.Forms.TextBox()
+        Me.statusReserveTxtBx = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.groupBorrowerDetails = New System.Windows.Forms.GroupBox()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
@@ -71,10 +66,12 @@ Partial Class IssueBook
         Me.mNameTxtBx = New System.Windows.Forms.TextBox()
         Me.lNameTxtBx = New System.Windows.Forms.TextBox()
         Me.addressTxtBx = New System.Windows.Forms.TextBox()
-        Me.sectionTxtBx = New System.Windows.Forms.TextBox()
         Me.userTypeTxtBx = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.searchUserIdBtn = New System.Windows.Forms.Button()
+        Me.gradeLevelTxtBx = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.sectionTxtBx = New System.Windows.Forms.TextBox()
         Me.labelCategory = New System.Windows.Forms.Label()
         Me.textBoxPublisher = New System.Windows.Forms.TextBox()
         Me.textBoxPubDate = New System.Windows.Forms.TextBox()
@@ -95,17 +92,14 @@ Partial Class IssueBook
         Me.textBoxAuthors = New System.Windows.Forms.TextBox()
         Me.issueDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.dueDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.textBoxStatus = New System.Windows.Forms.TextBox()
-        Me.textBoxEdition = New System.Windows.Forms.TextBox()
-        Me.textBoxSeries = New System.Windows.Forms.TextBox()
         Me.textBoxISBN = New System.Windows.Forms.TextBox()
         Me.textBoxCategory = New System.Windows.Forms.TextBox()
-        Me.labelStatus = New System.Windows.Forms.Label()
-        Me.labelEdition = New System.Windows.Forms.Label()
-        Me.labelVolume = New System.Windows.Forms.Label()
-        Me.labelSeries = New System.Windows.Forms.Label()
         Me.copyNumCmbBx = New System.Windows.Forms.ComboBox()
         Me.warningCopyReservedLbl = New System.Windows.Forms.Label()
+        Me.labelEdition = New System.Windows.Forms.Label()
+        Me.textBoxEdition = New System.Windows.Forms.TextBox()
+        Me.labelStatus = New System.Windows.Forms.Label()
+        Me.textBoxStatus = New System.Windows.Forms.TextBox()
         Me.TabPage2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.groupBorrowerDetails.SuspendLayout()
@@ -146,19 +140,9 @@ Partial Class IssueBook
         Me.buttonBorrow.Name = "buttonBorrow"
         Me.TableLayoutPanel1.SetRowSpan(Me.buttonBorrow, 2)
         Me.buttonBorrow.Size = New System.Drawing.Size(361, 74)
-        Me.buttonBorrow.TabIndex = 36
+        Me.buttonBorrow.TabIndex = 2
         Me.buttonBorrow.Text = "BORROW BOOK"
         Me.buttonBorrow.UseVisualStyleBackColor = False
-        '
-        'textBoxVolume
-        '
-        Me.textBoxVolume.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.textBoxVolume.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxVolume.Location = New System.Drawing.Point(879, 167)
-        Me.textBoxVolume.Name = "textBoxVolume"
-        Me.textBoxVolume.ReadOnly = True
-        Me.textBoxVolume.Size = New System.Drawing.Size(361, 25)
-        Me.textBoxVolume.TabIndex = 37
         '
         'TabPage2
         '
@@ -194,21 +178,17 @@ Partial Class IssueBook
         Me.TableLayoutPanel3.Controls.Add(Me.Label17, 0, 8)
         Me.TableLayoutPanel3.Controls.Add(Me.authorsReserveTxtBx, 1, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.reserveDateTimePicker, 1, 8)
-        Me.TableLayoutPanel3.Controls.Add(Me.statusReserveTxtBx, 3, 6)
-        Me.TableLayoutPanel3.Controls.Add(Me.editionReserveTxtBx, 3, 5)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox18, 3, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.isbnReserveTxtBx, 3, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.categoryReserveTxtBx, 3, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label19, 2, 6)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label20, 2, 5)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label21, 2, 4)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label22, 2, 3)
         Me.TableLayoutPanel3.Controls.Add(Me.Label23, 2, 2)
         Me.TableLayoutPanel3.Controls.Add(Me.Label24, 2, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.buttonReserve, 3, 8)
-        Me.TableLayoutPanel3.Controls.Add(Me.TextBox17, 3, 4)
         Me.TableLayoutPanel3.Controls.Add(Me.copyNumReserveCmbBx, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.warningCopyReservedAlreadyLbl, 3, 7)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label20, 2, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label19, 2, 4)
+        Me.TableLayoutPanel3.Controls.Add(Me.editionReserveTxtBx, 3, 3)
+        Me.TableLayoutPanel3.Controls.Add(Me.statusReserveTxtBx, 3, 4)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
@@ -368,36 +348,6 @@ Partial Class IssueBook
         Me.reserveDateTimePicker.Size = New System.Drawing.Size(347, 25)
         Me.reserveDateTimePicker.TabIndex = 33
         '
-        'statusReserveTxtBx
-        '
-        Me.statusReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.statusReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.statusReserveTxtBx.Location = New System.Drawing.Point(879, 247)
-        Me.statusReserveTxtBx.Name = "statusReserveTxtBx"
-        Me.statusReserveTxtBx.ReadOnly = True
-        Me.statusReserveTxtBx.Size = New System.Drawing.Size(361, 25)
-        Me.statusReserveTxtBx.TabIndex = 25
-        '
-        'editionReserveTxtBx
-        '
-        Me.editionReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.editionReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.editionReserveTxtBx.Location = New System.Drawing.Point(879, 207)
-        Me.editionReserveTxtBx.Name = "editionReserveTxtBx"
-        Me.editionReserveTxtBx.ReadOnly = True
-        Me.editionReserveTxtBx.Size = New System.Drawing.Size(361, 25)
-        Me.editionReserveTxtBx.TabIndex = 22
-        '
-        'TextBox18
-        '
-        Me.TextBox18.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox18.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox18.Location = New System.Drawing.Point(879, 127)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.ReadOnly = True
-        Me.TextBox18.Size = New System.Drawing.Size(361, 25)
-        Me.TextBox18.TabIndex = 20
-        '
         'isbnReserveTxtBx
         '
         Me.isbnReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -417,50 +367,6 @@ Partial Class IssueBook
         Me.categoryReserveTxtBx.ReadOnly = True
         Me.categoryReserveTxtBx.Size = New System.Drawing.Size(361, 25)
         Me.categoryReserveTxtBx.TabIndex = 18
-        '
-        'Label19
-        '
-        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(808, 248)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(65, 23)
-        Me.Label19.TabIndex = 24
-        Me.Label19.Text = "STATUS:"
-        '
-        'Label20
-        '
-        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(801, 208)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(72, 23)
-        Me.Label20.TabIndex = 11
-        Me.Label20.Text = "EDITION:"
-        '
-        'Label21
-        '
-        Me.Label21.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(801, 168)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(72, 23)
-        Me.Label21.TabIndex = 10
-        Me.Label21.Text = "VOLUME:"
-        '
-        'Label22
-        '
-        Me.Label22.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(811, 128)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(62, 23)
-        Me.Label22.TabIndex = 9
-        Me.Label22.Text = "SERIES:"
         '
         'Label23
         '
@@ -499,16 +405,6 @@ Partial Class IssueBook
         Me.buttonReserve.Text = "RESERVE BOOK"
         Me.buttonReserve.UseVisualStyleBackColor = False
         '
-        'TextBox17
-        '
-        Me.TextBox17.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox17.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(879, 167)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.ReadOnly = True
-        Me.TextBox17.Size = New System.Drawing.Size(361, 25)
-        Me.TextBox17.TabIndex = 21
-        '
         'copyNumReserveCmbBx
         '
         Me.copyNumReserveCmbBx.Font = New System.Drawing.Font("Verdana", 11.25!)
@@ -530,6 +426,48 @@ Partial Class IssueBook
         Me.warningCopyReservedAlreadyLbl.TabIndex = 40
         Me.warningCopyReservedAlreadyLbl.Text = "Warning: Copy is reserved already on"
         Me.warningCopyReservedAlreadyLbl.Visible = False
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(801, 128)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(72, 23)
+        Me.Label20.TabIndex = 11
+        Me.Label20.Text = "EDITION:"
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(808, 168)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(65, 23)
+        Me.Label19.TabIndex = 24
+        Me.Label19.Text = "STATUS:"
+        '
+        'editionReserveTxtBx
+        '
+        Me.editionReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.editionReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.editionReserveTxtBx.Location = New System.Drawing.Point(879, 127)
+        Me.editionReserveTxtBx.Name = "editionReserveTxtBx"
+        Me.editionReserveTxtBx.ReadOnly = True
+        Me.editionReserveTxtBx.Size = New System.Drawing.Size(361, 25)
+        Me.editionReserveTxtBx.TabIndex = 22
+        '
+        'statusReserveTxtBx
+        '
+        Me.statusReserveTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.statusReserveTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.statusReserveTxtBx.Location = New System.Drawing.Point(879, 167)
+        Me.statusReserveTxtBx.Name = "statusReserveTxtBx"
+        Me.statusReserveTxtBx.ReadOnly = True
+        Me.statusReserveTxtBx.Size = New System.Drawing.Size(361, 25)
+        Me.statusReserveTxtBx.TabIndex = 25
         '
         'Label7
         '
@@ -600,11 +538,13 @@ Partial Class IssueBook
         Me.TableLayoutPanel2.Controls.Add(Me.mNameTxtBx, 1, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.lNameTxtBx, 1, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.addressTxtBx, 1, 4)
-        Me.TableLayoutPanel2.Controls.Add(Me.sectionTxtBx, 3, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.userTypeTxtBx, 3, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label8, 2, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 2, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.searchUserIdBtn, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.gradeLevelTxtBx, 3, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label15, 2, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label8, 2, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.sectionTxtBx, 3, 3)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(0, 0)
@@ -682,7 +622,7 @@ Partial Class IssueBook
         Me.textBoxId.Location = New System.Drawing.Point(269, 7)
         Me.textBoxId.Name = "textBoxId"
         Me.textBoxId.Size = New System.Drawing.Size(269, 25)
-        Me.textBoxId.TabIndex = 5
+        Me.textBoxId.TabIndex = 0
         '
         'fNameTxtBx
         '
@@ -691,7 +631,7 @@ Partial Class IssueBook
         Me.fNameTxtBx.Location = New System.Drawing.Point(269, 47)
         Me.fNameTxtBx.Name = "fNameTxtBx"
         Me.fNameTxtBx.Size = New System.Drawing.Size(269, 25)
-        Me.fNameTxtBx.TabIndex = 6
+        Me.fNameTxtBx.TabIndex = 2
         '
         'mNameTxtBx
         '
@@ -700,7 +640,7 @@ Partial Class IssueBook
         Me.mNameTxtBx.Location = New System.Drawing.Point(269, 87)
         Me.mNameTxtBx.Name = "mNameTxtBx"
         Me.mNameTxtBx.Size = New System.Drawing.Size(269, 25)
-        Me.mNameTxtBx.TabIndex = 7
+        Me.mNameTxtBx.TabIndex = 3
         '
         'lNameTxtBx
         '
@@ -709,7 +649,7 @@ Partial Class IssueBook
         Me.lNameTxtBx.Location = New System.Drawing.Point(269, 127)
         Me.lNameTxtBx.Name = "lNameTxtBx"
         Me.lNameTxtBx.Size = New System.Drawing.Size(269, 25)
-        Me.lNameTxtBx.TabIndex = 8
+        Me.lNameTxtBx.TabIndex = 4
         '
         'addressTxtBx
         '
@@ -721,16 +661,7 @@ Partial Class IssueBook
         Me.addressTxtBx.Name = "addressTxtBx"
         Me.TableLayoutPanel2.SetRowSpan(Me.addressTxtBx, 2)
         Me.addressTxtBx.Size = New System.Drawing.Size(489, 74)
-        Me.addressTxtBx.TabIndex = 14
-        '
-        'sectionTxtBx
-        '
-        Me.sectionTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.sectionTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sectionTxtBx.Location = New System.Drawing.Point(764, 87)
-        Me.sectionTxtBx.Name = "sectionTxtBx"
-        Me.sectionTxtBx.Size = New System.Drawing.Size(272, 25)
-        Me.sectionTxtBx.TabIndex = 13
+        Me.addressTxtBx.TabIndex = 5
         '
         'userTypeTxtBx
         '
@@ -739,18 +670,7 @@ Partial Class IssueBook
         Me.userTypeTxtBx.Location = New System.Drawing.Point(764, 47)
         Me.userTypeTxtBx.Name = "userTypeTxtBx"
         Me.userTypeTxtBx.Size = New System.Drawing.Size(272, 25)
-        Me.userTypeTxtBx.TabIndex = 12
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(684, 88)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(74, 23)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "SECTION:"
+        Me.userTypeTxtBx.TabIndex = 6
         '
         'searchUserIdBtn
         '
@@ -759,9 +679,49 @@ Partial Class IssueBook
         Me.searchUserIdBtn.Location = New System.Drawing.Point(544, 3)
         Me.searchUserIdBtn.Name = "searchUserIdBtn"
         Me.searchUserIdBtn.Size = New System.Drawing.Size(93, 33)
-        Me.searchUserIdBtn.TabIndex = 15
+        Me.searchUserIdBtn.TabIndex = 1
         Me.searchUserIdBtn.Text = "Search"
         Me.searchUserIdBtn.UseVisualStyleBackColor = True
+        '
+        'gradeLevelTxtBx
+        '
+        Me.gradeLevelTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gradeLevelTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gradeLevelTxtBx.Location = New System.Drawing.Point(764, 87)
+        Me.gradeLevelTxtBx.Name = "gradeLevelTxtBx"
+        Me.gradeLevelTxtBx.Size = New System.Drawing.Size(272, 25)
+        Me.gradeLevelTxtBx.TabIndex = 7
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(650, 88)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(108, 23)
+        Me.Label15.TabIndex = 12
+        Me.Label15.Text = "GRADE LEVEL:"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(684, 128)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(74, 23)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "SECTION:"
+        '
+        'sectionTxtBx
+        '
+        Me.sectionTxtBx.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.sectionTxtBx.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sectionTxtBx.Location = New System.Drawing.Point(764, 127)
+        Me.sectionTxtBx.Name = "sectionTxtBx"
+        Me.sectionTxtBx.Size = New System.Drawing.Size(272, 25)
+        Me.sectionTxtBx.TabIndex = 8
         '
         'labelCategory
         '
@@ -902,21 +862,17 @@ Partial Class IssueBook
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxAuthors, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.issueDateTimePicker, 1, 8)
         Me.TableLayoutPanel1.Controls.Add(Me.dueDateTimePicker, 1, 9)
-        Me.TableLayoutPanel1.Controls.Add(Me.textBoxStatus, 3, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.textBoxEdition, 3, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.textBoxSeries, 3, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxISBN, 3, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.textBoxCategory, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.labelStatus, 2, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.labelEdition, 2, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.labelVolume, 2, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.labelSeries, 2, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.labelISBN, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.labelCategory, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.buttonBorrow, 3, 8)
-        Me.TableLayoutPanel1.Controls.Add(Me.textBoxVolume, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.copyNumCmbBx, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.warningCopyReservedLbl, 3, 7)
+        Me.TableLayoutPanel1.Controls.Add(Me.labelEdition, 2, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.textBoxEdition, 3, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.labelStatus, 2, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.textBoxStatus, 3, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 3)
@@ -1024,7 +980,7 @@ Partial Class IssueBook
         Me.issueDateTimePicker.Location = New System.Drawing.Point(312, 327)
         Me.issueDateTimePicker.Name = "issueDateTimePicker"
         Me.issueDateTimePicker.Size = New System.Drawing.Size(347, 25)
-        Me.issueDateTimePicker.TabIndex = 33
+        Me.issueDateTimePicker.TabIndex = 0
         '
         'dueDateTimePicker
         '
@@ -1033,37 +989,7 @@ Partial Class IssueBook
         Me.dueDateTimePicker.Location = New System.Drawing.Point(312, 363)
         Me.dueDateTimePicker.Name = "dueDateTimePicker"
         Me.dueDateTimePicker.Size = New System.Drawing.Size(347, 25)
-        Me.dueDateTimePicker.TabIndex = 34
-        '
-        'textBoxStatus
-        '
-        Me.textBoxStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.textBoxStatus.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxStatus.Location = New System.Drawing.Point(879, 247)
-        Me.textBoxStatus.Name = "textBoxStatus"
-        Me.textBoxStatus.ReadOnly = True
-        Me.textBoxStatus.Size = New System.Drawing.Size(361, 25)
-        Me.textBoxStatus.TabIndex = 25
-        '
-        'textBoxEdition
-        '
-        Me.textBoxEdition.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.textBoxEdition.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxEdition.Location = New System.Drawing.Point(879, 207)
-        Me.textBoxEdition.Name = "textBoxEdition"
-        Me.textBoxEdition.ReadOnly = True
-        Me.textBoxEdition.Size = New System.Drawing.Size(361, 25)
-        Me.textBoxEdition.TabIndex = 22
-        '
-        'textBoxSeries
-        '
-        Me.textBoxSeries.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.textBoxSeries.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.textBoxSeries.Location = New System.Drawing.Point(879, 127)
-        Me.textBoxSeries.Name = "textBoxSeries"
-        Me.textBoxSeries.ReadOnly = True
-        Me.textBoxSeries.Size = New System.Drawing.Size(361, 25)
-        Me.textBoxSeries.TabIndex = 20
+        Me.dueDateTimePicker.TabIndex = 1
         '
         'textBoxISBN
         '
@@ -1084,50 +1010,6 @@ Partial Class IssueBook
         Me.textBoxCategory.ReadOnly = True
         Me.textBoxCategory.Size = New System.Drawing.Size(361, 25)
         Me.textBoxCategory.TabIndex = 18
-        '
-        'labelStatus
-        '
-        Me.labelStatus.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.labelStatus.AutoSize = True
-        Me.labelStatus.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelStatus.Location = New System.Drawing.Point(808, 248)
-        Me.labelStatus.Name = "labelStatus"
-        Me.labelStatus.Size = New System.Drawing.Size(65, 23)
-        Me.labelStatus.TabIndex = 24
-        Me.labelStatus.Text = "STATUS:"
-        '
-        'labelEdition
-        '
-        Me.labelEdition.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.labelEdition.AutoSize = True
-        Me.labelEdition.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelEdition.Location = New System.Drawing.Point(801, 208)
-        Me.labelEdition.Name = "labelEdition"
-        Me.labelEdition.Size = New System.Drawing.Size(72, 23)
-        Me.labelEdition.TabIndex = 11
-        Me.labelEdition.Text = "EDITION:"
-        '
-        'labelVolume
-        '
-        Me.labelVolume.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.labelVolume.AutoSize = True
-        Me.labelVolume.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelVolume.Location = New System.Drawing.Point(801, 168)
-        Me.labelVolume.Name = "labelVolume"
-        Me.labelVolume.Size = New System.Drawing.Size(72, 23)
-        Me.labelVolume.TabIndex = 10
-        Me.labelVolume.Text = "VOLUME:"
-        '
-        'labelSeries
-        '
-        Me.labelSeries.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.labelSeries.AutoSize = True
-        Me.labelSeries.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelSeries.Location = New System.Drawing.Point(811, 128)
-        Me.labelSeries.Name = "labelSeries"
-        Me.labelSeries.Size = New System.Drawing.Size(62, 23)
-        Me.labelSeries.TabIndex = 9
-        Me.labelSeries.Text = "SERIES:"
         '
         'copyNumCmbBx
         '
@@ -1150,6 +1032,48 @@ Partial Class IssueBook
         Me.warningCopyReservedLbl.TabIndex = 39
         Me.warningCopyReservedLbl.Text = "Warning: Copy is reserved on "
         Me.warningCopyReservedLbl.Visible = False
+        '
+        'labelEdition
+        '
+        Me.labelEdition.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.labelEdition.AutoSize = True
+        Me.labelEdition.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelEdition.Location = New System.Drawing.Point(801, 128)
+        Me.labelEdition.Name = "labelEdition"
+        Me.labelEdition.Size = New System.Drawing.Size(72, 23)
+        Me.labelEdition.TabIndex = 11
+        Me.labelEdition.Text = "EDITION:"
+        '
+        'textBoxEdition
+        '
+        Me.textBoxEdition.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.textBoxEdition.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBoxEdition.Location = New System.Drawing.Point(879, 127)
+        Me.textBoxEdition.Name = "textBoxEdition"
+        Me.textBoxEdition.ReadOnly = True
+        Me.textBoxEdition.Size = New System.Drawing.Size(361, 25)
+        Me.textBoxEdition.TabIndex = 22
+        '
+        'labelStatus
+        '
+        Me.labelStatus.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.labelStatus.AutoSize = True
+        Me.labelStatus.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelStatus.Location = New System.Drawing.Point(808, 168)
+        Me.labelStatus.Name = "labelStatus"
+        Me.labelStatus.Size = New System.Drawing.Size(65, 23)
+        Me.labelStatus.TabIndex = 24
+        Me.labelStatus.Text = "STATUS:"
+        '
+        'textBoxStatus
+        '
+        Me.textBoxStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.textBoxStatus.Font = New System.Drawing.Font("Verdana", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.textBoxStatus.Location = New System.Drawing.Point(879, 167)
+        Me.textBoxStatus.Name = "textBoxStatus"
+        Me.textBoxStatus.ReadOnly = True
+        Me.textBoxStatus.Size = New System.Drawing.Size(361, 25)
+        Me.textBoxStatus.TabIndex = 25
         '
         'IssueBook
         '
@@ -1210,15 +1134,11 @@ Partial Class IssueBook
     Friend WithEvents dueDateTimePicker As DateTimePicker
     Friend WithEvents textBoxStatus As TextBox
     Friend WithEvents textBoxEdition As TextBox
-    Friend WithEvents textBoxSeries As TextBox
     Friend WithEvents textBoxISBN As TextBox
     Friend WithEvents textBoxCategory As TextBox
     Friend WithEvents labelStatus As Label
     Friend WithEvents labelEdition As Label
-    Friend WithEvents labelVolume As Label
-    Friend WithEvents labelSeries As Label
     Friend WithEvents labelCategory As Label
-    Friend WithEvents textBoxVolume As TextBox
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents Label4 As Label
@@ -1236,17 +1156,13 @@ Partial Class IssueBook
     Friend WithEvents reserveDateTimePicker As DateTimePicker
     Friend WithEvents statusReserveTxtBx As TextBox
     Friend WithEvents editionReserveTxtBx As TextBox
-    Friend WithEvents TextBox18 As TextBox
     Friend WithEvents isbnReserveTxtBx As TextBox
     Friend WithEvents categoryReserveTxtBx As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents buttonReserve As Button
-    Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents groupBorrowerDetails As GroupBox
     Friend WithEvents SplitContainer2 As SplitContainer
@@ -1273,4 +1189,6 @@ Partial Class IssueBook
     Friend WithEvents copyNumReserveCmbBx As ComboBox
     Friend WithEvents warningCopyReservedLbl As Label
     Friend WithEvents warningCopyReservedAlreadyLbl As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents gradeLevelTxtBx As TextBox
 End Class

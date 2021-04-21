@@ -44,8 +44,9 @@ Public Class IssueBook
             mNameTxtBx.Text = userDTO.mName
             lNameTxtBx.Text = userDTO.lName
             userTypeTxtBx.Text = userDTO.type
-            sectionTxtBx.Text = userDTO.sectionDTO.name
             addressTxtBx.Text = userDTO.address
+            sectionTxtBx.Text = userDTO.sectionDTO.name
+            gradeLevelTxtBx.Text = userDTO.gradeLevelDTO.level
         Catch ex As Exception
             If ex.Message.Equals("The remote server returned an error: (500) Internal Server Error.") Then
                 MessageBox.Show("UserID:" + textBoxId.Text + " is not registered")
@@ -78,6 +79,8 @@ Public Class IssueBook
         Dim publisheDate = If(bookDetailsDTO.publishedDate Is Nothing,
                 "", Date.ParseExact(bookDetailsDTO.publishedDate, "yyyy-MM-dd", provider).Year.ToString())
         Dim publisher = If(bookDetailsDTO.publisherAddress Is Nothing, "", "[" + bookDetailsDTO.publisherAddress + "]") + If(bookDetailsDTO.publisherName Is Nothing, "", " : " + bookDetailsDTO.publisherName) + ", " + publisheDate
+        textBoxPubDate.Text = publisheDate
+        textBoxPublisher.Text = publisher
         publisherDateReserveTxtBx.Text = publisheDate
         publisherReserveTxtBx.Text = publisher
 
@@ -178,9 +181,7 @@ Public Class IssueBook
     End Sub
 
     Private Sub buttonBorrow_Click(sender As Object, e As EventArgs) Handles buttonBorrow.Click
-        If IsNothing(Me.userDTO) Then
-            setUser()
-        End If
+        setUser()
         Dim newBorrow As BorrowDTO = New BorrowDTO()
         newBorrow.borrowId = -1
         newBorrow.bkCpyId = copies.Item(copyNumCmbBx.SelectedIndex).id
@@ -195,9 +196,7 @@ Public Class IssueBook
     End Sub
 
     Private Sub buttonReserve_Click(sender As Object, e As EventArgs) Handles buttonReserve.Click
-        If IsNothing(Me.userDTO) Then
-            setUser()
-        End If
+        setUser()
         Dim newReservation As ReservationDTO = New ReservationDTO()
         Dim reservedDate As String = reserveDateTimePicker.Value.ToString("yyyy-MM-dd")
         newReservation.reservationId = -1
@@ -227,10 +226,21 @@ Public Class IssueBook
         userDTO.mName = mNameTxtBx.Text.Trim
         userDTO.lName = lNameTxtBx.Text.Trim
         userDTO.type = userTypeTxtBx.Text.Trim
+        userDTO.address = addressTxtBx.Text.Trim
+
         Dim sectionDTO As New SectionDTO()
         sectionDTO.name = sectionTxtBx.Text.Trim
+
+        Dim gradeLevelDTO As New GradeLevelDTO()
+        If Not IsNumeric(gradeLevelTxtBx.Text.Trim) Then
+            MessageBox.Show("Gradelevel must be a number.")
+            Me.userDTO = Nothing
+            Return
+        End If
+        gradeLevelDTO.level = CType(gradeLevelTxtBx.Text.Trim, Integer)
+        userDTO.gradeLevelDTO = gradeLevelDTO
+
         userDTO.sectionDTO = sectionDTO
-        userDTO.address = addressTxtBx.Text.Trim
     End Sub
     Private Sub dueDateTimePickerVaueChanged_Handler(sender As Object, e As EventArgs) Handles dueDateTimePicker.ValueChanged
         If selectedCopy IsNot Nothing AndAlso selectedCopy.reserved_date IsNot Nothing Then

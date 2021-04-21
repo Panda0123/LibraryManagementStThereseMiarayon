@@ -33,9 +33,12 @@ Public Class AddBookUserControl
     End Sub
 
     '  EVENT HANDLERS
-
     ' books
     Private Sub addBookBtn_Click(sender As Object, e As EventArgs) Handles addHoverPcBx.Click
+
+        If Not checks() Then
+            Return
+        End If
 
         Dim newBook As New BookDetailsDTO
 
@@ -43,35 +46,32 @@ Public Class AddBookUserControl
         newBook.isbn = If(isbnTxtBx.Text.Trim.Equals(""), Nothing, isbnTxtBx.Text.Trim)
         newBook.language = languageTxtBx.Text.Trim
         newBook.summary = summaryRichTxtBx.Text.Trim
-        newBook.edition = If(editionTxtBx.Text.Trim.Equals(""), 0, editionTxtBx.Text)
+
+        newBook.edition = If(editionTxtBx.Text.Trim.Equals(""), Nothing, editionTxtBx.Text)
 
         If publishedDatePicker.Checked Then
             newBook.publishedDate = publishedDatePicker.Value.ToString("yyyy-MM-dd")
         End If
-
-        If String.Compare(publisherNameTxtBx.Text.Trim, "") <> 0 Then
+        If Not publisherNameTxtBx.Text.Trim.Equals("") Then
             newBook.publisherName = publisherNameTxtBx.Text.Trim
         End If
-        If String.Compare(publisherAddrTxtBx.Text.Trim, "") <> 0 Then
+        If Not publisherAddrTxtBx.Text.Trim.Equals("") Then
             newBook.publisherAddress = publisherAddrTxtBx.Text
         End If
-
-
-        If String.Compare(copyrightNameTxtBx.Text.Trim, "") <> 0 Then
+        If Not copyrightNameTxtBx.Text.Trim.Equals("") Then
             newBook.copyrightName = copyrightNameTxtBx.Text
         End If
-
         If copyrightYearDTPckr.Checked Then
             newBook.copyrightYear = copyrightYearDTPckr.Value.ToString("yyyy")
         End If
 
         newBook.categoryId = classificationCmbBx.SelectedIndex + 1
-        newBook.shelfName = shelfTxtBx.Text
+        newBook.shelfName = shelfTxtBx.Text.Trim
 
         Dim hasImg As Boolean = False
         Dim ext = ""
         ' image
-        If String.Compare(imgFlName, "") <> 0 Then
+        If Not imgFlName.Equals("") Then
             hasImg = True
             Dim strt = imgFlName.LastIndexOf(".")
             ext = imgFlName.Substring(strt, imgFlName.Length - strt)
@@ -102,21 +102,26 @@ Public Class AddBookUserControl
 
 
     Private Sub savePcBx_Click(sender As Object, e As EventArgs) Handles saveHoverPcBx.Click
+        If Not checks() Then
+            Return
+        End If
 
         Dim attrs As New Dictionary(Of String, String)
-        If String.Compare(selectedBook.title.Trim, selectedBook.title) <> 0 Then
+        If Not selectedBook.title.Trim.Equals(selectedBook.title) Then
             attrs.Add("title", selectedBook.title.Trim)
         End If
-        If String.Compare(isbnTxtBx.Text.Trim, selectedBook.isbn) <> 0 Then
+        If Not isbnTxtBx.Text.Trim.Equals(selectedBook.isbn) Then
             attrs.Add("isbn", isbnTxtBx.Text.Trim)
         End If
-        If String.Compare(languageTxtBx.Text.Trim, selectedBook.language) <> 0 Then
+        If Not languageTxtBx.Text.Trim.Equals(selectedBook.language) Then
             attrs.Add("language", languageTxtBx.Text.Trim)
         End If
-        If String.Compare(summaryRichTxtBx.Text.Trim, selectedBook.summary) <> 0 Then
+        If Not summaryRichTxtBx.Text.Trim.Equals(selectedBook.summary) Then
             attrs.Add("summary", summaryRichTxtBx.Text.Trim)
         End If
-        If String.Compare(editionTxtBx.Text.Trim, selectedBook.edition.ToString) <> 0 Then
+        If selectedBook.edition IsNot Nothing AndAlso Not editionTxtBx.Text.Trim.Equals(selectedBook.edition.ToString) Then
+            attrs.Add("edition", editionTxtBx.Text.Trim)
+        ElseIf selectedBook.edition Is Nothing AndAlso Not editionTxtBx.Text.Trim.Equals("") Then
             attrs.Add("edition", editionTxtBx.Text.Trim)
         End If
 
@@ -128,21 +133,21 @@ Public Class AddBookUserControl
             attrs.Add("publishedDate", Nothing)
         End If
 
-        If String.Compare(publisherNameTxtBx.Text.Trim, selectedBook.publisherName) <> 0 Then
+        If Not publisherNameTxtBx.Text.Trim.Equals(selectedBook.publisherName) Then
             If String.Compare(publisherNameTxtBx.Text.Trim, "") <> 0 Then
                 attrs.Add("publisherName", publisherNameTxtBx.Text.Trim)
             Else
                 attrs.Add("publisherName", Nothing)
             End If
         End If
-        If String.Compare(publisherAddrTxtBx.Text.Trim, selectedBook.publisherAddress) <> 0 Then
+        If Not publisherAddrTxtBx.Text.Trim.Equals(selectedBook.publisherAddress) Then
             If String.Compare(publisherAddrTxtBx.Text.Trim, "") <> 0 Then
                 attrs.Add("publisherAddress", publisherAddrTxtBx.Text.Trim)
             Else
                 attrs.Add("publisherAddress", Nothing)
             End If
         End If
-        If String.Compare(copyrightNameTxtBx.Text.Trim, selectedBook.copyrightName) <> 0 Then
+        If Not copyrightNameTxtBx.Text.Trim.Equals(selectedBook.copyrightName) Then
             If String.Compare(copyrightNameTxtBx.Text.Trim, "") <> 0 Then
                 attrs.Add("copyrightName", copyrightNameTxtBx.Text.Trim)
             Else
@@ -150,7 +155,7 @@ Public Class AddBookUserControl
             End If
         End If
         If copyrightYearDTPckr.Checked Then
-            If String.Compare(copyrightYearDTPckr.Value.ToString("yyyy"), selectedBook.copyrightYear) <> 0 Then
+            If Not copyrightYearDTPckr.Value.ToString("yyyy").Equals(selectedBook.copyrightYear) Then
                 attrs.Add("copyrightYear", copyrightYearDTPckr.Value.ToString("yyyy"))
             End If
         Else
@@ -162,8 +167,8 @@ Public Class AddBookUserControl
             attrs.Add("categoryId", classificationCmbBx.SelectedIndex + 1)
         End If
 
-        If String.Compare(shelfTxtBx.Text.Trim, selectedBook.shelfName) <> 0 Then
-            If String.Compare(shelfTxtBx.Text.Trim, "") <> 0 Then
+        If Not shelfTxtBx.Text.Trim.Equals(selectedBook.shelfName) Then
+            If Not shelfTxtBx.Text.Trim.Equals("") Then
                 attrs.Add("shelfName", shelfTxtBx.Text.Trim)
             Else
                 attrs.Add("shelfName", Nothing)
@@ -332,7 +337,7 @@ Public Class AddBookUserControl
         titleTxtBx.Text = selectedBook.title
         isbnTxtBx.Text = selectedBook.isbn
         languageTxtBx.Text = selectedBook.language
-        editionTxtBx.Text = selectedBook.edition
+        editionTxtBx.Text = If(selectedBook.edition Is Nothing, "", selectedBook.edition)
         'numAvailableLbl.Text = selectedBook.numAvailable
 
         publisherNameTxtBx.Text = selectedBook.publisherName
@@ -360,12 +365,10 @@ Public Class AddBookUserControl
         authors = New List(Of AuthorDTO)
         For Each author As AuthorDTO In selectedBook.authors
             authors.Add(New AuthorDTO(author.id, author.f_name, author.m_name, author.l_name))
-            ' removeAuthorBtn.Visible = True
         Next
         populateAuthors()
 
         ' load copies
-        ' TODO: separate thread
         If IsNothing(selectedBook.copies) Then
             copies = CopyController.getCopies(selectedBook.bookId)
         Else
@@ -551,5 +554,15 @@ Public Class AddBookUserControl
             savePcBx.Enabled = True
         End If
     End Sub
+
+    Private Function checks() As Boolean
+        If languageTxtBx.Text.Trim.Length > 100 Then
+            MessageBox.Show("Language not valid: Exceeded 100 characterss")
+            Return False
+        End If
+
+        'Return Security.isValuePositiveShort(editionTxtBx.Text, "Edition")
+        Return True
+    End Function
 
 End Class

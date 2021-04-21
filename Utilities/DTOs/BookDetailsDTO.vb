@@ -4,7 +4,7 @@
     Property publishedDate As String
     Property dateAdded As String
     Property language As String
-    Property edition As Int16
+    Property edition As String
     Property isbn As String
     Property imageName As String
 
