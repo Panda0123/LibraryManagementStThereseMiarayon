@@ -18,7 +18,8 @@ Public Class SlidePanel
 
     End Sub
 
-      Public Sub swipe(Optional ByVal show As Boolean = False)
+
+    Public Sub swipe(Optional ByVal show As Boolean = False)
         Me.Visible = True
         Dim _transasition As Transition = New Transitions.Transition(New TransitionType_EaseInEaseOut(500))
         _transasition.add(Me, "Left", IIf(show, 0, Me.Width))

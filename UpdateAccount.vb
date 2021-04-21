@@ -2,6 +2,8 @@
 
 Public Class UpdateAccount
 
+
+
     Private Sub metroButton1_Click_1(sender As Object, e As EventArgs) Handles nxtBtn.Click
         Dim _pnl As New pnlOne(Me)
         AddHandler _pnl.Closed, AddressOf pnl_Closed
@@ -12,7 +14,7 @@ Public Class UpdateAccount
             If newUsername.Text.Equals("") Then
                 MessageBox.Show("blank is not allowed!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-
+                verify.setNewUsername(newUsername.Text)
                 nxtBtn.Enabled = False
                 _pnl.swipe(True)
 
@@ -25,6 +27,7 @@ Public Class UpdateAccount
     Private Sub pnl_Closed(sender As Object, e As EventArgs)
         nxtBtn.Enabled = True
     End Sub
+
 
     Private Sub pnl_Shown(sender As Object, e As EventArgs)
 
