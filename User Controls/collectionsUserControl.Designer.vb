@@ -415,7 +415,7 @@ Partial Class collectionsUserControl
         Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRefresh, Me.btnDelete, Me.ModeSelectToolStripMenuItem, Me.DGVSelectionModeToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(187, 108)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(221, 108)
         '
         'btnRefresh
         '
@@ -441,13 +441,13 @@ Partial Class collectionsUserControl
         'btnMultiSelect
         '
         Me.btnMultiSelect.Name = "btnMultiSelect"
-        Me.btnMultiSelect.Size = New System.Drawing.Size(140, 22)
+        Me.btnMultiSelect.Size = New System.Drawing.Size(177, 26)
         Me.btnMultiSelect.Text = "Multi Select"
         '
         'btnSingleSelect
         '
         Me.btnSingleSelect.Name = "btnSingleSelect"
-        Me.btnSingleSelect.Size = New System.Drawing.Size(140, 22)
+        Me.btnSingleSelect.Size = New System.Drawing.Size(177, 26)
         Me.btnSingleSelect.Text = "Single Select"
         '
         'DGVSelectionModeToolStripMenuItem
@@ -461,13 +461,13 @@ Partial Class collectionsUserControl
         'btnFullRowSelect
         '
         Me.btnFullRowSelect.Name = "btnFullRowSelect"
-        Me.btnFullRowSelect.Size = New System.Drawing.Size(153, 22)
+        Me.btnFullRowSelect.Size = New System.Drawing.Size(192, 26)
         Me.btnFullRowSelect.Text = "Full Row Select"
         '
         'btnCellSelect
         '
         Me.btnCellSelect.Name = "btnCellSelect"
-        Me.btnCellSelect.Size = New System.Drawing.Size(153, 22)
+        Me.btnCellSelect.Size = New System.Drawing.Size(192, 26)
         Me.btnCellSelect.Text = "Cell Select"
         '
         'ImageList1
