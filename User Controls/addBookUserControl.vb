@@ -3,8 +3,6 @@
 Public Class AddBookUserControl
     Private selectedBook As BookDetailsDTO
     Private adminView As adminView
-    'Private classifications As List(Of ClassificationDTO)
-    'Private classificationNames As New List(Of String)
     Private provider As CultureInfo = CultureInfo.InvariantCulture
 
     Private authors As New List(Of AuthorDTO)
@@ -14,11 +12,9 @@ Public Class AddBookUserControl
     Private status As New List(Of String)({"Available", "Borrowed", "Reserved"})
 
     Public Sub New(ByRef adminView As adminView)
-
         ' This call is required by the designer.
         InitializeComponent()
         Me.adminView = adminView
-
         ' Add any initialization after the InitializeComponent() call.
         AddBook_Load(Nothing, Nothing)
 
@@ -65,7 +61,13 @@ Public Class AddBookUserControl
             newBook.copyrightYear = copyrightYearDTPckr.Value.ToString("yyyy")
         End If
 
-        newBook.categoryId = classificationCmbBx.SelectedIndex + 1
+        Dim idx = classificationNames.FindIndex(Function(name) name.Equals(classificationCmbBx.Text.Trim))
+        If idx <> -1 Then
+            newBook.categoryId = idx + 1
+        Else
+            MessageBox.Show("Classification not valid: choose one of the existing classification.")
+            Return
+        End If
         newBook.shelfName = shelfTxtBx.Text.Trim
 
         Dim hasImg As Boolean = False
@@ -102,6 +104,7 @@ Public Class AddBookUserControl
 
 
     Private Sub savePcBx_Click(sender As Object, e As EventArgs) Handles saveHoverPcBx.Click
+
         If Not checks() Then
             Return
         End If
@@ -111,7 +114,7 @@ Public Class AddBookUserControl
             attrs.Add("title", selectedBook.title.Trim)
         End If
         If Not isbnTxtBx.Text.Trim.Equals(selectedBook.isbn) Then
-            attrs.Add("isbn", isbnTxtBx.Text.Trim)
+            attrs.Add("isbn", If(isbnTxtBx.Text.Trim.Equals(""), Nothing, isbnTxtBx.Text.Trim))
         End If
         If Not languageTxtBx.Text.Trim.Equals(selectedBook.language) Then
             attrs.Add("language", languageTxtBx.Text.Trim)
@@ -162,9 +165,12 @@ Public Class AddBookUserControl
             attrs.Add("copyrightYear", Nothing)
         End If
 
-        If (classificationCmbBx.SelectedIndex + 1) <> selectedBook.categoryId Then
-            ' TODO: check if the selected name exist
-            attrs.Add("categoryId", classificationCmbBx.SelectedIndex + 1)
+        Dim idx = classificationNames.FindIndex(Function(name) name.Equals(classificationCmbBx.Text.Trim))
+        If idx <> -1 Then
+            attrs.Add("categoryId", idx + 1)
+        Else
+            MessageBox.Show("Classification not valid: choose one of the existing classification.")
+            Return
         End If
 
         If Not shelfTxtBx.Text.Trim.Equals(selectedBook.shelfName) Then
@@ -248,14 +254,12 @@ Public Class AddBookUserControl
     End Sub
 
     Private Sub cancelHoverBtn_Click(sender As Object, e As EventArgs) Handles cancelHoverPcBx.Click
-        ' TODO: go back to previous selected tab?
         empty()
     End Sub
 
     ' authors
     Private Sub setAuthors()
         authors.Clear()
-        'For Each row As DataGridViewRow In authorsDataGrid.Rows - 1
         For idx As Integer = 0 To authorsDataGrid.Rows.Count - 2
             Dim newAuthor As New AuthorDTO
             Dim f_name = If(IsNothing(authorsDataGrid.Item(0, idx).Value), "", authorsDataGrid.Item(0, idx).Value.ToString().Trim)
@@ -281,9 +285,7 @@ Public Class AddBookUserControl
             End If
             authors.Add(newAuthor)
         Next
-
         If authors.Count = 0 Then
-            ' no author of the book
             authors.Add(New AuthorDTO(-1, Nothing, Nothing, Nothing))
         End If
     End Sub
@@ -306,7 +308,6 @@ Public Class AddBookUserControl
         Next
     End Sub
 
-
     ' image
     Private Sub addImgBtn_click(sender As Object, e As EventArgs) Handles bkPicBx.Click
         Dim fileDialog = New OpenFileDialog()
@@ -324,7 +325,6 @@ Public Class AddBookUserControl
         imgFlName = ""
         removeImgBtn.Visible = False
     End Sub
-
 
     ' HELPER FUNCTIONS/SUBS
     Private Sub populate(bookId As String)
@@ -426,46 +426,33 @@ Public Class AddBookUserControl
     End Sub
 
     Private Sub empty()
-
         selectedBook = Nothing
         titleTxtBx.Text = String.Empty
         isbnTxtBx.Text = String.Empty
-        languageTxtBx.Text = String.Empty
-        editionTxtBx.Text = String.Empty
-
         publisherNameTxtBx.Text = String.Empty
         publisherAddrTxtBx.Text = String.Empty
-
         publishedDatePicker.Value = Date.Now()
         publishedDatePicker.Checked = True
-
         classificationCmbBx.SelectedIndex = 0
         copyrightNameTxtBx.Text = String.Empty
         copyrightYearDTPckr.Value = Date.Now()
         copyrightYearDTPckr.Checked = True
-
         shelfTxtBx.Text = String.Empty
         summaryRichTxtBx.Text = String.Empty
-
         authors.Clear()
         authorsDataGrid.Rows.Clear()
         copies.Clear()
         copiesDataGridView.Rows.Clear()
         copiesDataGridView.Rows.Add({1, status.Item(0)})
         quantityLbl.Text = 1
-
         bkPicBx.Image = My.Resources.default_book
         removeImgBtn.Visible = False
-
-
         savePcBx.Visible = False
         addPcBx.Visible = True
         isbnWarningLbl.Visible = False
-
         selectedBook = Nothing
-
         imgFlName = String.Empty
-
+        editionTxtBx.Text = String.Empty
         populateAuthors()
     End Sub
 
@@ -533,35 +520,36 @@ Public Class AddBookUserControl
     End Sub
 
     ' check if isbn exist
-    Private Sub isbnLbl_leave(sender As Object, e As EventArgs) Handles isbnTxtBx.Leave
+    Private Function isbnLbl_leave(sender As Object, e As EventArgs) As Boolean Handles isbnTxtBx.Leave
 
         ' check if admin is adding or updating book
         Dim check = IsNothing(selectedBook)
-        check = If(check, Not isbnTxtBx.Text.Trim.Equals(""), If(IsNothing(selectedBook.isbn), Not isbnTxtBx.Text.Trim.Equals(""), Not selectedBook.isbn.Equals(isbnTxtBx.Text.Trim)))
+        check = If(check, Not isbnTxtBx.Text.Trim.Equals(""), If(IsNothing(selectedBook.isbn), Not isbnTxtBx.Text.Trim.Equals(""), Not isbnTxtBx.Text.Trim.Equals("") AndAlso Not selectedBook.isbn.Equals(isbnTxtBx.Text.Trim)))
         Dim isbnExist = check AndAlso BookController.checkIsbn(isbnTxtBx.Text.Trim)
 
         If isbnExist Then
             isbnWarningLbl.Visible = True
-            addHoverPcBx.Enabled = False
-            addPcBx.Enabled = False
-            saveHoverPcBx.Enabled = False
-            savePcBx.Enabled = False
+            Return True
         Else
             isbnWarningLbl.Visible = False
-            addHoverPcBx.Enabled = True
-            addPcBx.Enabled = True
-            saveHoverPcBx.Enabled = True
-            savePcBx.Enabled = True
+            Return False
         End If
-    End Sub
+    End Function
 
     Private Function checks() As Boolean
         If languageTxtBx.Text.Trim.Length > 100 Then
             MessageBox.Show("Language not valid: Exceeded 100 characterss")
             Return False
         End If
-
-        'Return Security.isValuePositiveShort(editionTxtBx.Text, "Edition")
+        Dim isbn = isbnTxtBx.Text.Trim
+        If isbn.Length > 17 Then
+            MessageBox.Show("ISBN not valid: Exceeded 17 characters")
+            Return False
+        End If
+        If isbnLbl_leave(Nothing, Nothing) Then
+            MessageBox.Show("ISBN not valid: already exist")
+            Return False
+        End If
         Return True
     End Function
 
