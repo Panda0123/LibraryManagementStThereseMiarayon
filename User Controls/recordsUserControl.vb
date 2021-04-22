@@ -23,30 +23,40 @@
     Public Sub loadBorrow()
         borrows = BookController.getAllBorrow()
         setDataGrid(borrows, borrowListDataGrid, True)
-        borrowListDataGrid.ClearSelection()
     End Sub
     Private Sub loadReturn()
         returns = BookController.getAllReturn()
         setDataGrid(returns, returnListDataGrid, False)
-
     End Sub
     Private Sub loadReserve()
         reservations = BookController.getAllReservation()
         setReserve(reservations)
-        reservationListDataGrid.ClearSelection()
     End Sub
     Private Sub borrowListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles borrowListDataGrid.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
-            If e.ColumnIndex = 8 Then
-                Dim copyId As Integer = borrowListDataGrid.Item("borrowId", e.RowIndex).Value
-                BookController.returnBorrow(copyId)
-                MessageBox.Show("Successfully Check In Borrow.")
-                loadBorrow()
-                adminView.viewBookuserCtl.initializeResult()
+        Dim colname As String = borrowListDataGrid.Columns(e.ColumnIndex).Name
+        'Dim senderGrid = DirectCast(sender, DataGridView)
+
+
+        If colname.Equals("CheckIn_Column") Then
+            If MsgBox("Do you want to return book?", vbQuestion + vbYesNo) = vbYes Then
+
+            Else
+
             End If
         End If
+
+
+
+        'If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
+        'If e.ColumnIndex = 8 Then
+        'Dim copyId As Integer = borrowListDataGrid.Item("borrowId", e.RowIndex).Value
+        'BookController.returnBorrow(copyId)
+        'MessageBox.Show("Successfully Check In Borrow.")
+        'loadBorrow()
+        'adminView.viewBookuserCtl.initializeResult()
+        'End If
+        'End If
     End Sub
 
     Private Sub reservationListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
@@ -104,4 +114,5 @@
         'Me.Width = Screen.PrimaryScreen.WorkingArea.Width
         ' Me.Height = Screen.PrimaryScreen.WorkingArea.Height
     End Sub
+
 End Class

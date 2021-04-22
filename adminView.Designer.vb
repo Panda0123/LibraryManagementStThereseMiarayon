@@ -82,7 +82,7 @@ Partial Class adminView
         TopPanel.Location = New System.Drawing.Point(0, 0)
         TopPanel.Margin = New System.Windows.Forms.Padding(6)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(2150, 226)
+        TopPanel.Size = New System.Drawing.Size(1702, 190)
         TopPanel.TabIndex = 2
         '
         'Panel3
@@ -92,16 +92,16 @@ Partial Class adminView
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(2150, 6)
+        Me.Panel3.Size = New System.Drawing.Size(1702, 6)
         Me.Panel3.TabIndex = 3
         '
         'Panel2
         '
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 214)
+        Me.Panel2.Location = New System.Drawing.Point(0, 178)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(2150, 12)
+        Me.Panel2.Size = New System.Drawing.Size(1702, 12)
         Me.Panel2.TabIndex = 2
         '
         'TitleLogoSearchPanel
@@ -116,7 +116,7 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(890, 18)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(442, 17)
         Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(969, 264)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(969, 264)
@@ -235,7 +235,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(2150, 226)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1702, 190)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -245,7 +245,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1496, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(1047, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -256,7 +256,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1494, 11)
+        Me.btn_white.Location = New System.Drawing.Point(1045, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -267,7 +267,7 @@ Partial Class adminView
         Me.PictureBox4.ContextMenuStrip = Me.MetroContextMenu1
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox4.Location = New System.Drawing.Point(64, 75)
+        Me.PictureBox4.Location = New System.Drawing.Point(56, 57)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(70, 70)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -285,14 +285,14 @@ Partial Class adminView
         '
         Me.btnSignout.Image = Global.LibraryManagementSystem.My.Resources.Resources.log_in
         Me.btnSignout.Name = "btnSignout"
-        Me.btnSignout.Size = New System.Drawing.Size(214, 26)
+        Me.btnSignout.Size = New System.Drawing.Size(189, 26)
         Me.btnSignout.Text = "Sign Out"
         '
         'UpdateAccountToolStripMenuItem
         '
         Me.UpdateAccountToolStripMenuItem.Image = Global.LibraryManagementSystem.My.Resources.Resources.server_storage
         Me.UpdateAccountToolStripMenuItem.Name = "UpdateAccountToolStripMenuItem"
-        Me.UpdateAccountToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
+        Me.UpdateAccountToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
         Me.UpdateAccountToolStripMenuItem.Text = "Update Account"
         '
         'backgroundPanel
@@ -301,10 +301,10 @@ Partial Class adminView
         Me.backgroundPanel.BackColor = System.Drawing.SystemColors.Window
         Me.backgroundPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.backgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.backgroundPanel.Location = New System.Drawing.Point(0, 226)
+        Me.backgroundPanel.Location = New System.Drawing.Point(0, 190)
         Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.backgroundPanel.Name = "backgroundPanel"
-        Me.backgroundPanel.Size = New System.Drawing.Size(2150, 932)
+        Me.backgroundPanel.Size = New System.Drawing.Size(1702, 865)
         Me.backgroundPanel.TabIndex = 3
         '
         'SplitContainer1
@@ -326,8 +326,8 @@ Partial Class adminView
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.backgroundPanel)
         Me.SplitContainer1.Panel2.Controls.Add(TopPanel)
-        Me.SplitContainer1.Size = New System.Drawing.Size(2388, 1158)
-        Me.SplitContainer1.SplitterDistance = 233
+        Me.SplitContainer1.Size = New System.Drawing.Size(1924, 1055)
+        Me.SplitContainer1.SplitterDistance = 217
         Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 21
         '
@@ -340,11 +340,11 @@ Partial Class adminView
         Me.LeftSidePanel.Controls.Add(Me.bokkAddBtn)
         Me.LeftSidePanel.Controls.Add(Me.viewBookBtn)
         Me.LeftSidePanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LeftSidePanel.Location = New System.Drawing.Point(0, 226)
+        Me.LeftSidePanel.Location = New System.Drawing.Point(0, 190)
         Me.LeftSidePanel.Margin = New System.Windows.Forms.Padding(0)
         Me.LeftSidePanel.Name = "LeftSidePanel"
         Me.LeftSidePanel.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.LeftSidePanel.Size = New System.Drawing.Size(233, 932)
+        Me.LeftSidePanel.Size = New System.Drawing.Size(217, 865)
         Me.LeftSidePanel.TabIndex = 1
         '
         'highlightPanel
@@ -368,7 +368,7 @@ Partial Class adminView
         Me.recordsBtn.Location = New System.Drawing.Point(10, 273)
         Me.recordsBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.recordsBtn.Name = "recordsBtn"
-        Me.recordsBtn.Size = New System.Drawing.Size(223, 91)
+        Me.recordsBtn.Size = New System.Drawing.Size(207, 91)
         Me.recordsBtn.TabIndex = 12
         Me.recordsBtn.Text = " Records"
         Me.recordsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -386,7 +386,7 @@ Partial Class adminView
         Me.collectionsBtn.Location = New System.Drawing.Point(10, 182)
         Me.collectionsBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.collectionsBtn.Name = "collectionsBtn"
-        Me.collectionsBtn.Size = New System.Drawing.Size(223, 91)
+        Me.collectionsBtn.Size = New System.Drawing.Size(207, 91)
         Me.collectionsBtn.TabIndex = 13
         Me.collectionsBtn.Text = " Collections"
         Me.collectionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -405,7 +405,7 @@ Partial Class adminView
         Me.bokkAddBtn.Location = New System.Drawing.Point(10, 91)
         Me.bokkAddBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.bokkAddBtn.Name = "bokkAddBtn"
-        Me.bokkAddBtn.Size = New System.Drawing.Size(223, 91)
+        Me.bokkAddBtn.Size = New System.Drawing.Size(207, 91)
         Me.bokkAddBtn.TabIndex = 9
         Me.bokkAddBtn.Text = " Add"
         Me.bokkAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -424,7 +424,7 @@ Partial Class adminView
         Me.viewBookBtn.Location = New System.Drawing.Point(10, 0)
         Me.viewBookBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.viewBookBtn.Name = "viewBookBtn"
-        Me.viewBookBtn.Size = New System.Drawing.Size(223, 91)
+        Me.viewBookBtn.Size = New System.Drawing.Size(207, 91)
         Me.viewBookBtn.TabIndex = 8
         Me.viewBookBtn.Text = " View Book"
         Me.viewBookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -439,7 +439,7 @@ Partial Class adminView
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(233, 226)
+        Me.Panel1.Size = New System.Drawing.Size(217, 190)
         Me.Panel1.TabIndex = 2
         '
         'adminView
@@ -448,11 +448,11 @@ Partial Class adminView
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(2388, 1158)
+        Me.ClientSize = New System.Drawing.Size(1924, 1055)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(6)
-        Me.MinimumSize = New System.Drawing.Size(1918, 1040)
+        Me.MinimumSize = New System.Drawing.Size(1918, 1028)
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administrator View"

@@ -56,7 +56,5 @@ Public Class bookDisplay
         Me.viewBook.ShowDialog()
     End Sub
 
-    Private Sub bookDisplay_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 End Class
