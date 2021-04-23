@@ -5,9 +5,8 @@ Imports System.Text
 Module HttpRequestController
     Private address = Convert.ToString(System.Configuration.ConfigurationSettings.AppSettings("address")).Trim
     Private port = Convert.ToString(System.Configuration.ConfigurationSettings.AppSettings("port")).Trim
-    Private version = Convert.ToString(System.Configuration.ConfigurationSettings.AppSettings("version")).Trim
     Public URLWOPath = "http://" + address + ":" + port
-    Public URL As String = URLWOPath + "/api/v" + version
+    Public URL As String = URLWOPath + "/api/v" + 1.ToString
     Public Function HttpRequestGet(URL As String) As String
         Dim request As WebRequest = WebRequest.Create(URL)
         Dim dataStream As Stream = request.GetResponse.GetResponseStream()
