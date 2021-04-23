@@ -56,7 +56,6 @@ Partial Class Main
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.RadioButtonTitle = New System.Windows.Forms.RadioButton()
         Me.RadioButtonPublicationDate = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonAuthor = New System.Windows.Forms.RadioButton()
         Me.RadioButtonNewlyAdded = New System.Windows.Forms.RadioButton()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TitleLogoSearchPanel = New System.Windows.Forms.Panel()
@@ -215,7 +214,7 @@ Partial Class Main
         Me.Panel2.Controls.Add(Me.pbBtn)
         Me.Panel2.Controls.Add(Me.newTitlePanel)
         Me.Panel2.Controls.Add(Me.publisherBtn)
-        Me.Panel2.Location = New System.Drawing.Point(6, 152)
+        Me.Panel2.Location = New System.Drawing.Point(6, 114)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(250, 185)
@@ -511,13 +510,12 @@ Partial Class Main
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.RadioButtonTitle)
         Me.Panel4.Controls.Add(Me.RadioButtonPublicationDate)
-        Me.Panel4.Controls.Add(Me.RadioButtonAuthor)
         Me.Panel4.Controls.Add(Me.RadioButtonNewlyAdded)
         Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Location = New System.Drawing.Point(6, 2)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(250, 145)
+        Me.Panel4.Size = New System.Drawing.Size(250, 108)
         Me.Panel4.TabIndex = 0
         '
         'RadioButtonTitle
@@ -525,7 +523,7 @@ Partial Class Main
         Me.RadioButtonTitle.AutoSize = True
         Me.RadioButtonTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.RadioButtonTitle.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonTitle.Location = New System.Drawing.Point(0, 103)
+        Me.RadioButtonTitle.Location = New System.Drawing.Point(0, 70)
         Me.RadioButtonTitle.Name = "RadioButtonTitle"
         Me.RadioButtonTitle.Padding = New System.Windows.Forms.Padding(6, 4, 0, 4)
         Me.RadioButtonTitle.Size = New System.Drawing.Size(250, 33)
@@ -539,7 +537,7 @@ Partial Class Main
         Me.RadioButtonPublicationDate.AutoSize = True
         Me.RadioButtonPublicationDate.Dock = System.Windows.Forms.DockStyle.Top
         Me.RadioButtonPublicationDate.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonPublicationDate.Location = New System.Drawing.Point(0, 70)
+        Me.RadioButtonPublicationDate.Location = New System.Drawing.Point(0, 37)
         Me.RadioButtonPublicationDate.Name = "RadioButtonPublicationDate"
         Me.RadioButtonPublicationDate.Padding = New System.Windows.Forms.Padding(6, 4, 0, 4)
         Me.RadioButtonPublicationDate.Size = New System.Drawing.Size(250, 33)
@@ -547,20 +545,6 @@ Partial Class Main
         Me.RadioButtonPublicationDate.TabStop = True
         Me.RadioButtonPublicationDate.Text = "Sort By Publication Date"
         Me.RadioButtonPublicationDate.UseVisualStyleBackColor = True
-        '
-        'RadioButtonAuthor
-        '
-        Me.RadioButtonAuthor.AutoSize = True
-        Me.RadioButtonAuthor.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RadioButtonAuthor.Font = New System.Drawing.Font("Malgun Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonAuthor.Location = New System.Drawing.Point(0, 37)
-        Me.RadioButtonAuthor.Name = "RadioButtonAuthor"
-        Me.RadioButtonAuthor.Padding = New System.Windows.Forms.Padding(6, 4, 0, 4)
-        Me.RadioButtonAuthor.Size = New System.Drawing.Size(250, 33)
-        Me.RadioButtonAuthor.TabIndex = 11
-        Me.RadioButtonAuthor.TabStop = True
-        Me.RadioButtonAuthor.Text = "Sort By Author"
-        Me.RadioButtonAuthor.UseVisualStyleBackColor = True
         '
         'RadioButtonNewlyAdded
         '
@@ -599,7 +583,7 @@ Partial Class Main
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
         Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(337, 3)
-        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(496, 135)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
@@ -612,7 +596,7 @@ Partial Class Main
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
         Me.searchPcBx.Location = New System.Drawing.Point(426, 76)
-        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4)
         Me.searchPcBx.Name = "searchPcBx"
         Me.searchPcBx.Size = New System.Drawing.Size(26, 25)
         Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -828,7 +812,6 @@ Partial Class Main
     Friend WithEvents Panel4 As Panel
     Friend WithEvents RadioButtonTitle As RadioButton
     Friend WithEvents RadioButtonPublicationDate As RadioButton
-    Friend WithEvents RadioButtonAuthor As RadioButton
     Friend WithEvents RadioButtonNewlyAdded As RadioButton
     Friend WithEvents Panel5 As Panel
 End Class

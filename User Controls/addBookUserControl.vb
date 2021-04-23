@@ -466,7 +466,10 @@ Public Class AddBookUserControl
        e.RowIndex >= 0 Then
             If (e.ColumnIndex = 3) Then
                 ' delete clicked
-                authorsDataGrid.Rows.RemoveAt(e.RowIndex)
+                Try
+                    authorsDataGrid.Rows.RemoveAt(e.RowIndex)
+                Catch ex As Exception
+                End Try
             End If
         End If
     End Sub
@@ -478,8 +481,12 @@ Public Class AddBookUserControl
        e.RowIndex >= 0 Then
             If (e.ColumnIndex = 2) Then
                 ' delete clicked
-                copiesDataGridView.Rows.RemoveAt(e.RowIndex)
-                quantityLbl.Text = copiesDataGridView.Rows.Count() - 1
+                Try
+                    copiesDataGridView.Rows.RemoveAt(e.RowIndex)
+                    quantityLbl.Text = copiesDataGridView.Rows.Count() - 1
+                Catch ex As Exception
+
+                End Try
             End If
         End If
     End Sub
@@ -550,6 +557,7 @@ Public Class AddBookUserControl
             MessageBox.Show("ISBN not valid: already exist")
             Return False
         End If
+
         Return True
     End Function
 
