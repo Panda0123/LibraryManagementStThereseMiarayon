@@ -1,5 +1,4 @@
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.vbprojAssemblyReference.cache
-G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.Form1.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.adminView.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.advanceSearch.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.AddBookUserControl.resources
@@ -30,3 +29,8 @@ G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\ob
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.exe
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.xml
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Release\Transitions.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Release\Transitions.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.UpdateAccount.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.pnlOne.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Release\LibraryManagementSystem.SlidePanel.resources

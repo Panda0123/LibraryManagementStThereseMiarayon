@@ -10,4 +10,9 @@
     Property bkCpyNum As Integer
     Property title As String
     Property originalBookId As Long
+    Property isbn As String
+    Property edition As String
+    Property imageName As String
+    Property cover As Image
+
 End Class

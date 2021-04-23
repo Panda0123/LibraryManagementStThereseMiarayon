@@ -181,7 +181,9 @@ Public Class IssueBook
     End Sub
 
     Private Sub buttonBorrow_Click(sender As Object, e As EventArgs) Handles buttonBorrow.Click
-        setUser()
+        If Not setUser() Then
+            Return
+        End If
         Dim newBorrow As BorrowDTO = New BorrowDTO()
         newBorrow.borrowId = -1
         newBorrow.bkCpyId = copies.Item(copyNumCmbBx.SelectedIndex).id
@@ -196,7 +198,10 @@ Public Class IssueBook
     End Sub
 
     Private Sub buttonReserve_Click(sender As Object, e As EventArgs) Handles buttonReserve.Click
-        setUser()
+
+        If Not setUser() Then
+            Return
+        End If
         Dim newReservation As ReservationDTO = New ReservationDTO()
         Dim reservedDate As String = reserveDateTimePicker.Value.ToString("yyyy-MM-dd")
         newReservation.reservationId = -1
@@ -219,7 +224,18 @@ Public Class IssueBook
             Me.bookControlAdmin.setCopies()
         End If
     End Sub
-    Private Sub setUser()
+    Private Function setUser() As Boolean
+        If textBoxId.Text.Trim.Equals("") Then
+            MessageBox.Show("ID Number invalid: must not be empty.")
+            Me.userDTO = Nothing
+            Return False
+        End If
+        If Not IsNumeric(gradeLevelTxtBx.Text.Trim) Then
+            MessageBox.Show("Grade Level invalid: must be a number.")
+            Me.userDTO = Nothing
+            Return False
+        End If
+
         Me.userDTO = New UserDTO()
         userDTO.id = textBoxId.Text.Trim
         userDTO.fName = fNameTxtBx.Text.Trim
@@ -232,16 +248,12 @@ Public Class IssueBook
         sectionDTO.name = sectionTxtBx.Text.Trim
 
         Dim gradeLevelDTO As New GradeLevelDTO()
-        If Not IsNumeric(gradeLevelTxtBx.Text.Trim) Then
-            MessageBox.Show("Gradelevel must be a number.")
-            Me.userDTO = Nothing
-            Return
-        End If
         gradeLevelDTO.level = CType(gradeLevelTxtBx.Text.Trim, Integer)
         userDTO.gradeLevelDTO = gradeLevelDTO
 
         userDTO.sectionDTO = sectionDTO
-    End Sub
+        Return True
+    End Function
     Private Sub dueDateTimePickerVaueChanged_Handler(sender As Object, e As EventArgs) Handles dueDateTimePicker.ValueChanged
         If selectedCopy IsNot Nothing AndAlso selectedCopy.reserved_date IsNot Nothing Then
             Dim reserved = Date.ParseExact(selectedCopy.reserved_date, "yyyy-MM-dd", provider)
