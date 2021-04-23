@@ -226,12 +226,12 @@ Public Class IssueBook
     End Sub
     Private Function setUser() As Boolean
         If textBoxId.Text.Trim.Equals("") Then
-            MessageBox.Show("ID must not be empty.")
+            MessageBox.Show("ID Number invalid: must not be empty.")
             Me.userDTO = Nothing
             Return False
         End If
         If Not IsNumeric(gradeLevelTxtBx.Text.Trim) Then
-            MessageBox.Show("Gradelevel must be a number.")
+            MessageBox.Show("Grade Level invalid: must be a number.")
             Me.userDTO = Nothing
             Return False
         End If

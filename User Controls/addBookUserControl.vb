@@ -65,7 +65,7 @@ Public Class AddBookUserControl
         If idx <> -1 Then
             newBook.categoryId = idx + 1
         Else
-            MessageBox.Show("Classification not valid: choose one of the existing classification.")
+            MessageBox.Show("Classification invalid: choose one of the existing classification.")
             Return
         End If
         newBook.shelfName = shelfTxtBx.Text.Trim
@@ -169,7 +169,7 @@ Public Class AddBookUserControl
         If idx <> -1 Then
             attrs.Add("categoryId", idx + 1)
         Else
-            MessageBox.Show("Classification not valid: choose one of the existing classification.")
+            MessageBox.Show("Classification invalid: choose one of the existing classification.")
             Return
         End If
 
@@ -545,16 +545,16 @@ Public Class AddBookUserControl
 
     Private Function checks() As Boolean
         If languageTxtBx.Text.Trim.Length > 100 Then
-            MessageBox.Show("Language not valid: Exceeded 100 characterss")
+            MessageBox.Show("Language invalid: Exceeded 100 characterss")
             Return False
         End If
         Dim isbn = isbnTxtBx.Text.Trim
         If isbn.Length > 17 Then
-            MessageBox.Show("ISBN not valid: Exceeded 17 characters")
+            MessageBox.Show("ISBN invalid: Exceeded 17 characters")
             Return False
         End If
         If isbnLbl_leave(Nothing, Nothing) Then
-            MessageBox.Show("ISBN not valid: already exist")
+            MessageBox.Show("ISBN invalid: already exist")
             Return False
         End If
 
