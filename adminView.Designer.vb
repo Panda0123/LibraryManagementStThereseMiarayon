@@ -301,7 +301,6 @@ Partial Class adminView
         Me.backgroundPanel.AutoScroll = True
         Me.backgroundPanel.BackColor = System.Drawing.SystemColors.Window
         Me.backgroundPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.backgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.backgroundPanel.Location = New System.Drawing.Point(0, 190)
         Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.backgroundPanel.Name = "backgroundPanel"
