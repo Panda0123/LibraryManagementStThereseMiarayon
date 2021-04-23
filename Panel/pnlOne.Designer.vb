@@ -132,7 +132,7 @@ Partial Class pnlOne
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(27, 210)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(384, 85)
+        Me.Label2.Size = New System.Drawing.Size(420, 106)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = resources.GetString("Label2.Text")
         '
