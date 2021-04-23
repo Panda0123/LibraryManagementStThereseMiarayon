@@ -39,7 +39,7 @@
 
 
         If colname.Equals("CheckIn_Column") Then
-            If MsgBox("Do you want to return book?", vbQuestion + vbYesNo) = vbYes Then
+            If MsgBox("Do you want to return book?", vbQuestion + vbYesNo, "Check In") = vbYes Then
 
             Else
 
@@ -66,7 +66,7 @@
         Dim colname As String = reservationListDataGrid.Columns(e.ColumnIndex).Name
 
         If colname.Equals("Complete_Column") Then
-            If MsgBox("Do you want to complete reservation?", vbQuestion + vbYesNo) = vbYes Then
+            If MsgBox("Do you want to complete reservation?", vbQuestion + vbYesNo, "Complete Reservation") = vbYes Then
 
             Else
 
@@ -135,7 +135,7 @@
         Dim colname As String = returnListDataGrid.Columns(e.ColumnIndex).Name
 
         If colname.Equals("Ret_UpdateStatus_Column") Then
-            If MsgBox("Do you want to update payment status?", vbQuestion + vbYesNo) = vbYes Then
+            If MsgBox("Do you want to update payment status?", vbQuestion + vbYesNo, "Update Payment Status") = vbYes Then
 
             Else
 

@@ -32,6 +32,15 @@ Partial Class recordsUserControl
         Me.borrowListTabPage = New System.Windows.Forms.TabPage()
         Me.PanelDataGridViewBorrowList = New System.Windows.Forms.Panel()
         Me.borrowListDataGrid = New System.Windows.Forms.DataGridView()
+        Me.B_Cover_Column = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.B_BorrowDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.B_DueDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.B_ISBN_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.B_Title_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.B_Edition_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.B_ShelfID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.B_BowID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CheckIn_Column = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.searchBorrowBtn = New System.Windows.Forms.Button()
@@ -60,15 +69,6 @@ Partial Class recordsUserControl
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.searchReservationBtn = New System.Windows.Forms.Button()
         Me.searchReservationTxtBx = New System.Windows.Forms.TextBox()
-        Me.B_Cover_Column = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.B_BorrowDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.B_DueDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.B_ISBN_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.B_Title_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.B_Edition_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.B_ShelfID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.B_BowID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CheckIn_Column = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Ret_Cover_Column = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Ret_PaymentStatus_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ret_BorrowDate_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -80,7 +80,7 @@ Partial Class recordsUserControl
         Me.Ret_Edition_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ret_ShelfID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Ret_BowID_Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Ret_UpdateStatus_Column = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Ret_UpdatePStatus_Column = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabControl.SuspendLayout()
         Me.borrowListTabPage.SuspendLayout()
         Me.PanelDataGridViewBorrowList.SuspendLayout()
@@ -174,6 +174,89 @@ Partial Class recordsUserControl
         Me.borrowListDataGrid.Size = New System.Drawing.Size(1736, 663)
         Me.borrowListDataGrid.TabIndex = 0
         '
+        'B_Cover_Column
+        '
+        Me.B_Cover_Column.HeaderText = "Cover"
+        Me.B_Cover_Column.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
+        Me.B_Cover_Column.MinimumWidth = 6
+        Me.B_Cover_Column.Name = "B_Cover_Column"
+        Me.B_Cover_Column.ReadOnly = True
+        Me.B_Cover_Column.Width = 67
+        '
+        'B_BorrowDate_Column
+        '
+        Me.B_BorrowDate_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_BorrowDate_Column.HeaderText = "Borrow Date"
+        Me.B_BorrowDate_Column.MinimumWidth = 6
+        Me.B_BorrowDate_Column.Name = "B_BorrowDate_Column"
+        Me.B_BorrowDate_Column.ReadOnly = True
+        Me.B_BorrowDate_Column.Width = 149
+        '
+        'B_DueDate_Column
+        '
+        Me.B_DueDate_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_DueDate_Column.HeaderText = "Due Date"
+        Me.B_DueDate_Column.MinimumWidth = 6
+        Me.B_DueDate_Column.Name = "B_DueDate_Column"
+        Me.B_DueDate_Column.ReadOnly = True
+        Me.B_DueDate_Column.Width = 119
+        '
+        'B_ISBN_Column
+        '
+        Me.B_ISBN_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_ISBN_Column.HeaderText = "ISBN"
+        Me.B_ISBN_Column.MinimumWidth = 6
+        Me.B_ISBN_Column.Name = "B_ISBN_Column"
+        Me.B_ISBN_Column.ReadOnly = True
+        Me.B_ISBN_Column.Width = 86
+        '
+        'B_Title_Column
+        '
+        Me.B_Title_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_Title_Column.HeaderText = "Title"
+        Me.B_Title_Column.MinimumWidth = 6
+        Me.B_Title_Column.Name = "B_Title_Column"
+        Me.B_Title_Column.ReadOnly = True
+        Me.B_Title_Column.Width = 82
+        '
+        'B_Edition_Column
+        '
+        Me.B_Edition_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_Edition_Column.HeaderText = "Edition"
+        Me.B_Edition_Column.MinimumWidth = 6
+        Me.B_Edition_Column.Name = "B_Edition_Column"
+        Me.B_Edition_Column.ReadOnly = True
+        Me.B_Edition_Column.Width = 105
+        '
+        'B_ShelfID_Column
+        '
+        Me.B_ShelfID_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_ShelfID_Column.HeaderText = "Copy #"
+        Me.B_ShelfID_Column.MinimumWidth = 6
+        Me.B_ShelfID_Column.Name = "B_ShelfID_Column"
+        Me.B_ShelfID_Column.ReadOnly = True
+        Me.B_ShelfID_Column.Width = 101
+        '
+        'B_BowID_Column
+        '
+        Me.B_BowID_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.B_BowID_Column.HeaderText = "Borrower ID"
+        Me.B_BowID_Column.MinimumWidth = 6
+        Me.B_BowID_Column.Name = "B_BowID_Column"
+        Me.B_BowID_Column.ReadOnly = True
+        Me.B_BowID_Column.Width = 147
+        '
+        'CheckIn_Column
+        '
+        Me.CheckIn_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.CheckIn_Column.HeaderText = "Check In"
+        Me.CheckIn_Column.MinimumWidth = 6
+        Me.CheckIn_Column.Name = "CheckIn_Column"
+        Me.CheckIn_Column.ReadOnly = True
+        Me.CheckIn_Column.Text = "Check In"
+        Me.CheckIn_Column.UseColumnTextForButtonValue = True
+        Me.CheckIn_Column.Width = 91
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.Panel2)
@@ -260,7 +343,7 @@ Partial Class recordsUserControl
         Me.returnListDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.returnListDataGrid.ColumnHeadersHeight = 29
         Me.returnListDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.returnListDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Ret_Cover_Column, Me.Ret_PaymentStatus_Column, Me.Ret_BorrowDate_Column, Me.Ret_DueDate_Column, Me.Ret_DateReturned_Column, Me.Ret_Penalty_Column, Me.Ret_ISBN_Column, Me.Ret_Title_Column, Me.Ret_Edition_Column, Me.Ret_ShelfID_Column, Me.Ret_BowID_Column, Me.Ret_UpdateStatus_Column})
+        Me.returnListDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Ret_Cover_Column, Me.Ret_PaymentStatus_Column, Me.Ret_BorrowDate_Column, Me.Ret_DueDate_Column, Me.Ret_DateReturned_Column, Me.Ret_Penalty_Column, Me.Ret_ISBN_Column, Me.Ret_Title_Column, Me.Ret_Edition_Column, Me.Ret_ShelfID_Column, Me.Ret_BowID_Column, Me.Ret_UpdatePStatus_Column})
         Me.returnListDataGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.returnListDataGrid.EnableHeadersVisualStyles = False
         Me.returnListDataGrid.Location = New System.Drawing.Point(0, 0)
@@ -531,89 +614,6 @@ Partial Class recordsUserControl
         Me.searchReservationTxtBx.TabIndex = 17
         Me.searchReservationTxtBx.Text = "Search ID number..."
         '
-        'B_Cover_Column
-        '
-        Me.B_Cover_Column.HeaderText = "Cover"
-        Me.B_Cover_Column.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom
-        Me.B_Cover_Column.MinimumWidth = 6
-        Me.B_Cover_Column.Name = "B_Cover_Column"
-        Me.B_Cover_Column.ReadOnly = True
-        Me.B_Cover_Column.Width = 67
-        '
-        'B_BorrowDate_Column
-        '
-        Me.B_BorrowDate_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_BorrowDate_Column.HeaderText = "Borrow Date"
-        Me.B_BorrowDate_Column.MinimumWidth = 6
-        Me.B_BorrowDate_Column.Name = "B_BorrowDate_Column"
-        Me.B_BorrowDate_Column.ReadOnly = True
-        Me.B_BorrowDate_Column.Width = 149
-        '
-        'B_DueDate_Column
-        '
-        Me.B_DueDate_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_DueDate_Column.HeaderText = "Due Date"
-        Me.B_DueDate_Column.MinimumWidth = 6
-        Me.B_DueDate_Column.Name = "B_DueDate_Column"
-        Me.B_DueDate_Column.ReadOnly = True
-        Me.B_DueDate_Column.Width = 119
-        '
-        'B_ISBN_Column
-        '
-        Me.B_ISBN_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_ISBN_Column.HeaderText = "ISBN"
-        Me.B_ISBN_Column.MinimumWidth = 6
-        Me.B_ISBN_Column.Name = "B_ISBN_Column"
-        Me.B_ISBN_Column.ReadOnly = True
-        Me.B_ISBN_Column.Width = 86
-        '
-        'B_Title_Column
-        '
-        Me.B_Title_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_Title_Column.HeaderText = "Title"
-        Me.B_Title_Column.MinimumWidth = 6
-        Me.B_Title_Column.Name = "B_Title_Column"
-        Me.B_Title_Column.ReadOnly = True
-        Me.B_Title_Column.Width = 82
-        '
-        'B_Edition_Column
-        '
-        Me.B_Edition_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_Edition_Column.HeaderText = "Edition"
-        Me.B_Edition_Column.MinimumWidth = 6
-        Me.B_Edition_Column.Name = "B_Edition_Column"
-        Me.B_Edition_Column.ReadOnly = True
-        Me.B_Edition_Column.Width = 105
-        '
-        'B_ShelfID_Column
-        '
-        Me.B_ShelfID_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_ShelfID_Column.HeaderText = "Copy #"
-        Me.B_ShelfID_Column.MinimumWidth = 6
-        Me.B_ShelfID_Column.Name = "B_ShelfID_Column"
-        Me.B_ShelfID_Column.ReadOnly = True
-        Me.B_ShelfID_Column.Width = 101
-        '
-        'B_BowID_Column
-        '
-        Me.B_BowID_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.B_BowID_Column.HeaderText = "Borrower ID"
-        Me.B_BowID_Column.MinimumWidth = 6
-        Me.B_BowID_Column.Name = "B_BowID_Column"
-        Me.B_BowID_Column.ReadOnly = True
-        Me.B_BowID_Column.Width = 147
-        '
-        'CheckIn_Column
-        '
-        Me.CheckIn_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.CheckIn_Column.HeaderText = "Check In"
-        Me.CheckIn_Column.MinimumWidth = 6
-        Me.CheckIn_Column.Name = "CheckIn_Column"
-        Me.CheckIn_Column.ReadOnly = True
-        Me.CheckIn_Column.Text = "Check In"
-        Me.CheckIn_Column.UseColumnTextForButtonValue = True
-        Me.CheckIn_Column.Width = 91
-        '
         'Ret_Cover_Column
         '
         Me.Ret_Cover_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
@@ -717,16 +717,16 @@ Partial Class recordsUserControl
         Me.Ret_BowID_Column.ReadOnly = True
         Me.Ret_BowID_Column.Width = 151
         '
-        'Ret_UpdateStatus_Column
+        'Ret_UpdatePStatus_Column
         '
-        Me.Ret_UpdateStatus_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Ret_UpdateStatus_Column.HeaderText = "Update Status"
-        Me.Ret_UpdateStatus_Column.MinimumWidth = 6
-        Me.Ret_UpdateStatus_Column.Name = "Ret_UpdateStatus_Column"
-        Me.Ret_UpdateStatus_Column.ReadOnly = True
-        Me.Ret_UpdateStatus_Column.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Ret_UpdateStatus_Column.Text = "Update Status"
-        Me.Ret_UpdateStatus_Column.Width = 139
+        Me.Ret_UpdatePStatus_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Ret_UpdatePStatus_Column.HeaderText = "Update Payment Status"
+        Me.Ret_UpdatePStatus_Column.MinimumWidth = 6
+        Me.Ret_UpdatePStatus_Column.Name = "Ret_UpdatePStatus_Column"
+        Me.Ret_UpdatePStatus_Column.ReadOnly = True
+        Me.Ret_UpdatePStatus_Column.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Ret_UpdatePStatus_Column.Text = "Update Payment Status"
+        Me.Ret_UpdatePStatus_Column.Width = 222
         '
         'recordsUserControl
         '
@@ -808,5 +808,5 @@ Partial Class recordsUserControl
     Friend WithEvents Ret_Edition_Column As DataGridViewTextBoxColumn
     Friend WithEvents Ret_ShelfID_Column As DataGridViewTextBoxColumn
     Friend WithEvents Ret_BowID_Column As DataGridViewTextBoxColumn
-    Friend WithEvents Ret_UpdateStatus_Column As DataGridViewButtonColumn
+    Friend WithEvents Ret_UpdatePStatus_Column As DataGridViewButtonColumn
 End Class
