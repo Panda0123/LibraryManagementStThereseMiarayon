@@ -61,16 +61,31 @@
 
     Private Sub reservationListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles reservationListDataGrid.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
-            If e.ColumnIndex = 7 Then
-                Dim copyId As Integer = reservationListDataGrid.Item("reservationId", e.RowIndex).Value
-                BookController.deleteReservation(copyId)
-                MessageBox.Show("Successfully Completed Reservation.")
-                loadReserve()
-                adminView.viewBookuserCtl.initializeResult()
+
+
+        Dim colname As String = reservationListDataGrid.Columns(e.ColumnIndex).Name
+
+        If colname.Equals("Complete_Column") Then
+            If MsgBox("Do you want to complete reservation?", vbQuestion + vbYesNo) = vbYes Then
+
+            Else
+
             End If
         End If
+
+
+
+
+        ' Dim senderGrid = DirectCast(sender, DataGridView)
+        ' If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
+        ' If e.ColumnIndex = 7 Then
+        'Dim copyId As Integer = reservationListDataGrid.Item("reservationId", e.RowIndex).Value
+        'BookController.deleteReservation(copyId)
+        'MessageBox.Show("Successfully Completed Reservation.")
+        'loadReserve()
+        'adminView.viewBookuserCtl.initializeResult()
+        'End If
+        'End If
     End Sub
 
     Private Sub searchBorrowOrReturnBtn_Click(sender As Object, e As EventArgs) Handles searchBorrowBtn.Click, searchReturnBtn.Click
@@ -115,4 +130,16 @@
         ' Me.Height = Screen.PrimaryScreen.WorkingArea.Height
     End Sub
 
+    Private Sub returnListDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles returnListDataGrid.CellContentClick
+
+        Dim colname As String = returnListDataGrid.Columns(e.ColumnIndex).Name
+
+        If colname.Equals("Ret_UpdateStatus_Column") Then
+            If MsgBox("Do you want to update payment status?", vbQuestion + vbYesNo) = vbYes Then
+
+            Else
+
+            End If
+        End If
+    End Sub
 End Class
