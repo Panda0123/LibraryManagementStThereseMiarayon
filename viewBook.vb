@@ -155,12 +155,12 @@ Public Class viewBook
             If (e.ColumnIndex = 2) Then
                 ' checkout clicked
                 Dim issueBk As New IssueBook(Me, Me.bookControlAdmin)
-                issueBk.setBookDetailsDTOBorrow(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex)
+                issueBk.setBookDetailsDTO(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex, True)
                 issueBk.ShowDialog()
             ElseIf (e.ColumnIndex = 3) Then
                 ' reserved clicked
                 Dim issueBk As New IssueBook(Me, Me.bookControlAdmin)
-                issueBk.setBookDetailsDTOReservation(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex)
+                issueBk.setBookDetailsDTO(Me.bkDTO, Me.provider, Me.coverPcBx.Image, e.RowIndex, False)
                 issueBk.ShowDialog()
             End If
         End If

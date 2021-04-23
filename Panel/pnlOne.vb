@@ -18,14 +18,22 @@ Public Class pnlOne
             Else
                 'if current != currPass.Text
                 'then mag message sya 
+                ' get id
                 'else if sakto and dle blank verify dayonS
+                Dim id = verify.checkCurrentPass(currPassword.Text)
+                If id = -1 Then
+                    MessageBox.Show("Current password is wrong.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Return
+                End If
                 If verify.checkPass(newPassword.Text) Then
-                    verify.setNewPassword(newPassword.Text
-                                          )
+                    verify.setNewPassword(newPassword.Text)
                     ' Add to database verify.getNewUsername and verify.getNewPassword
-
-                    If MessageBox.Show("Succesfully Updated", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
-                        Me.Parent.Dispose()
+                    If verify.update(id) Then
+                        If MessageBox.Show("Succesfully Updated", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information) = DialogResult.OK Then
+                            Authorization.password = newPassword.Text
+                            Authorization.username = UpdateAccount.newUsername.Text
+                            Me.Parent.Dispose()
+                        End If
                     End If
 
                 Else
