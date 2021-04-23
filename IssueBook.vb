@@ -267,4 +267,8 @@ Public Class IssueBook
         warningCopyReservedLbl.Visible = False
         buttonBorrow.Enabled = If(textBoxStatus.Text.Trim.Equals("Available"), True, False)
     End Sub
+
+    Private Sub IssueBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        textBoxStatus.ForeColor = Color.Green
+    End Sub
 End Class

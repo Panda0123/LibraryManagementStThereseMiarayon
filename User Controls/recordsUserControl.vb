@@ -173,4 +173,16 @@
             End If
         End If
     End Sub
+
+    Private Sub searchBorrowTxtBx_TextChanged(sender As Object, e As EventArgs) Handles searchBorrowTxtBx.KeyPress, searchBorrowTxtBx.Click
+        If searchBorrowTxtBx.Text.Equals("Search ID number...") Then
+            searchBorrowTxtBx.Text = ""
+        End If
+    End Sub
+
+    Private Sub searchBorrowTxtBx_LostFocus(sender As Object, e As EventArgs) Handles searchBorrowTxtBx.LostFocus
+        If searchBorrowTxtBx.Text.Equals("") Then
+            searchBorrowTxtBx.Text = "Search ID number..."
+        End If
+    End Sub
 End Class
