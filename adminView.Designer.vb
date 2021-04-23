@@ -128,6 +128,7 @@ Partial Class adminView
         '
         Me.searchPcBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchPcBx.Cursor = System.Windows.Forms.Cursors.Hand
         Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
         Me.searchPcBx.Location = New System.Drawing.Point(532, 96)
         Me.searchPcBx.Margin = New System.Windows.Forms.Padding(5)
@@ -147,7 +148,7 @@ Partial Class adminView
         Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
         Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(349, 26)
+        Me.searchTextBox.Size = New System.Drawing.Size(456, 26)
         Me.searchTextBox.TabIndex = 8
         Me.searchTextBox.Text = "Search..."
         '

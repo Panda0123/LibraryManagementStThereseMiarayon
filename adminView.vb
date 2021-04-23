@@ -97,4 +97,17 @@ Public Class adminView
         Authorization.username = String.Empty
         Authorization.password = String.Empty
     End Sub
+
+
+    Private Sub searchTextBox_keyPress(sender As Object, e As EventArgs) Handles searchTextBox.KeyPress, searchTextBox.Click
+        If searchTextBox.Text.Equals("Search...") Then
+            searchTextBox.Text = ""
+        End If
+    End Sub
+
+    Private Sub searchTextBox_LostFocus(sender As Object, e As EventArgs) Handles searchTextBox.LostFocus
+        If searchTextBox.Text.Equals("") Then
+            searchTextBox.Text = "Search..."
+        End If
+    End Sub
 End Class

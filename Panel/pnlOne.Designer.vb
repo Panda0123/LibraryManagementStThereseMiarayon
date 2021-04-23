@@ -33,7 +33,7 @@ Partial Class pnlOne
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pnlOne))
+        Me.components = New System.ComponentModel.Container()
         Me.MetroLabel1 = New MetroFramework.Controls.MetroLabel()
         Me.MetroLabel2 = New MetroFramework.Controls.MetroLabel()
         Me.currPassword = New System.Windows.Forms.TextBox()
@@ -41,10 +41,10 @@ Partial Class pnlOne
         Me.MetroButton1 = New MetroFramework.Controls.MetroButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MetroLabel1
@@ -89,7 +89,7 @@ Partial Class pnlOne
         '
         Me.MetroButton1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroButton1.Location = New System.Drawing.Point(440, 210)
+        Me.MetroButton1.Location = New System.Drawing.Point(207, 212)
         Me.MetroButton1.Name = "MetroButton1"
         Me.MetroButton1.Size = New System.Drawing.Size(119, 50)
         Me.MetroButton1.TabIndex = 6
@@ -100,8 +100,6 @@ Partial Class pnlOne
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.MetroLabel2)
         Me.Panel1.Controls.Add(Me.MetroLabel1)
         Me.Panel1.Controls.Add(Me.MetroButton1)
@@ -124,30 +122,9 @@ Partial Class pnlOne
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'Label2
+        'ErrorProvider1
         '
-        Me.Label2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 210)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(420, 106)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = resources.GetString("Label2.Text")
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(27, 193)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 17)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Password must be:"
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'pnlOne
         '
@@ -160,6 +137,7 @@ Partial Class pnlOne
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -170,7 +148,6 @@ Partial Class pnlOne
     Friend WithEvents newPassword As TextBox
     Friend WithEvents MetroButton1 As MetroFramework.Controls.MetroButton
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

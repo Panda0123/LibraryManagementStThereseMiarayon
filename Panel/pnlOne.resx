@@ -117,12 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>At least one digit [0-9]
-At least one lowercase character [a-z]
-At least one uppercase character [A-Z]
-At least one special character [@#$%^&amp;+_=]
-At least 8 characters in length, but no more than 32.
-</value>
-  </data>
+  <metadata name="ErrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -37,7 +37,13 @@ Public Class pnlOne
                     End If
 
                 Else
-                    MessageBox.Show("Check your Password", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    ErrorProvider1.SetError(Me.newPassword, "PASSWORD MUST BE:
+At least one digit [0-9]
+At least one lowercase character [a-z]
+At least one uppercase character [A-Z]
+At least one special character [@#$%^&+_=]
+At least 8 characters in length, but no more than 32.
+")
                 End If
             End If
         Else
