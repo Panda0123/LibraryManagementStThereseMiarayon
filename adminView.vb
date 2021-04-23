@@ -88,15 +88,13 @@ Public Class adminView
 
     End Sub
 
-
-
-
-
     Private Sub btnSignout_Click(sender As Object, e As EventArgs) Handles btnSignout.Click
         ' Smooth Exit
         Me.Hide()
         Main.Show()
         Me.Close()
         Authorization.authToken = String.Empty
+        Authorization.username = String.Empty
+        Authorization.password = String.Empty
     End Sub
 End Class

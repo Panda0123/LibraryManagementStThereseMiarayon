@@ -84,10 +84,10 @@ Partial Class AddBookUserControl
         Me.summaryRichTxtBx = New System.Windows.Forms.RichTextBox()
         Me.cancelPcBx = New System.Windows.Forms.PictureBox()
         Me.cancelHoverPcBx = New System.Windows.Forms.PictureBox()
-        Me.addPcBx = New System.Windows.Forms.PictureBox()
-        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.saveHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.savePcBx = New System.Windows.Forms.PictureBox()
+        Me.addPcBx = New System.Windows.Forms.PictureBox()
+        Me.addHoverPcBx = New System.Windows.Forms.PictureBox()
         Me.timerClearDataGrid = New System.Windows.Forms.Timer(Me.components)
         Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -103,10 +103,10 @@ Partial Class AddBookUserControl
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'layoutPanel
@@ -219,14 +219,14 @@ Partial Class AddBookUserControl
         Me.copiesDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.copiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.copiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.copiesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.copiesDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.copiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.copiesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.copyNumCol, Me.statusCol, Me.copiesDeleteCol})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -324,14 +324,14 @@ Partial Class AddBookUserControl
         Me.authorsDataGrid.BackgroundColor = System.Drawing.Color.White
         Me.authorsDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.authorsDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.authorsDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Sitka Display", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.authorsDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.authorsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.authorsDataGrid.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.authorFirstName, Me.authorMiddleName, Me.authorLastName, Me.deleteCol})
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -829,29 +829,6 @@ Partial Class AddBookUserControl
         Me.cancelHoverPcBx.TabStop = False
         Me.cancelHoverPcBx.Visible = False
         '
-        'addPcBx
-        '
-        Me.addPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addBookBtn
-        Me.addPcBx.Location = New System.Drawing.Point(166, 1604)
-        Me.addPcBx.Name = "addPcBx"
-        Me.addPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addPcBx.TabIndex = 3
-        Me.addPcBx.TabStop = False
-        '
-        'addHoverPcBx
-        '
-        Me.addHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.addHoverPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.addHover
-        Me.addHoverPcBx.Location = New System.Drawing.Point(166, 1604)
-        Me.addHoverPcBx.Name = "addHoverPcBx"
-        Me.addHoverPcBx.Size = New System.Drawing.Size(260, 41)
-        Me.addHoverPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.addHoverPcBx.TabIndex = 4
-        Me.addHoverPcBx.TabStop = False
-        Me.addHoverPcBx.Visible = False
-        '
         'saveHoverPcBx
         '
         Me.saveHoverPcBx.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -933,10 +910,10 @@ Partial Class AddBookUserControl
         CType(Me.bkPicBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cancelPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cancelHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.saveHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.savePcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addPcBx, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.addHoverPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -34,30 +34,58 @@
     End Sub
     Private Sub borrowListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles borrowListDataGrid.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
-            If e.ColumnIndex = 8 Then
-                Dim copyId As Integer = borrowListDataGrid.Item("borrowId", e.RowIndex).Value
-                BookController.returnBorrow(copyId)
-                MessageBox.Show("Successfully Check In Borrow.")
-                loadBorrow()
-                adminView.viewBookuserCtl.initializeResult()
+        Dim colname As String = borrowListDataGrid.Columns(e.ColumnIndex).Name
+        'Dim senderGrid = DirectCast(sender, DataGridView)
+
+
+        If colname.Equals("CheckIn_Column") Then
+            If MsgBox("Do you want to return book?", vbQuestion + vbYesNo, "Check In") = vbYes Then
+
+            Else
+
             End If
         End If
+
+
+
+        'If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
+        'If e.ColumnIndex = 8 Then
+        'Dim copyId As Integer = borrowListDataGrid.Item("borrowId", e.RowIndex).Value
+        'BookController.returnBorrow(copyId)
+        'MessageBox.Show("Successfully Check In Borrow.")
+        'loadBorrow()
+        'adminView.viewBookuserCtl.initializeResult()
+        'End If
+        'End If
     End Sub
 
     Private Sub reservationListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles reservationListDataGrid.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
-            If e.ColumnIndex = 7 Then
-                Dim copyId As Integer = reservationListDataGrid.Item("reservationId", e.RowIndex).Value
-                BookController.deleteReservation(copyId)
-                MessageBox.Show("Successfully Completed Reservation.")
-                loadReserve()
-                adminView.viewBookuserCtl.initializeResult()
+
+
+        Dim colname As String = reservationListDataGrid.Columns(e.ColumnIndex).Name
+
+        If colname.Equals("Complete_Column") Then
+            If MsgBox("Do you want to complete reservation?", vbQuestion + vbYesNo, "Complete Reservation") = vbYes Then
+
+            Else
+
             End If
         End If
+
+
+
+
+        ' Dim senderGrid = DirectCast(sender, DataGridView)
+        ' If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
+        ' If e.ColumnIndex = 7 Then
+        'Dim copyId As Integer = reservationListDataGrid.Item("reservationId", e.RowIndex).Value
+        'BookController.deleteReservation(copyId)
+        'MessageBox.Show("Successfully Completed Reservation.")
+        'loadReserve()
+        'adminView.viewBookuserCtl.initializeResult()
+        'End If
+        'End If
     End Sub
 
     Private Sub searchBorrowOrReturnBtn_Click(sender As Object, e As EventArgs) Handles searchBorrowBtn.Click, searchReturnBtn.Click
@@ -97,4 +125,21 @@
         listDataGrid.Refresh()
     End Sub
 
+    Private Sub recordsUserControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Me.Width = Screen.PrimaryScreen.WorkingArea.Width
+        ' Me.Height = Screen.PrimaryScreen.WorkingArea.Height
+    End Sub
+
+    Private Sub returnListDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles returnListDataGrid.CellContentClick
+
+        Dim colname As String = returnListDataGrid.Columns(e.ColumnIndex).Name
+
+        If colname.Equals("Ret_UpdateStatus_Column") Then
+            If MsgBox("Do you want to update payment status?", vbQuestion + vbYesNo, "Update Payment Status") = vbYes Then
+
+            Else
+
+            End If
+        End If
+    End Sub
 End Class
