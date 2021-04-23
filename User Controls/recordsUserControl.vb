@@ -3,6 +3,8 @@
     Dim returns As List(Of BorrowDTO)
     Dim reservations As List(Of ReservationDTO)
     Dim adminView As adminView
+    Private imageNames As New List(Of String)
+    Private images As New List(Of Image)
 
     Public Sub New(ByRef adminView As adminView)
         ' This call is required by the designer.
@@ -22,15 +24,49 @@
     End Sub
     Public Sub loadBorrow()
         borrows = BookController.getAllBorrow()
+        loadImages(borrows)
         setDataGrid(borrows, borrowListDataGrid, True)
     End Sub
     Private Sub loadReturn()
         returns = BookController.getAllReturn()
+        loadImages(returns)
         setDataGrid(returns, returnListDataGrid, False)
     End Sub
     Private Sub loadReserve()
         reservations = BookController.getAllReservation()
+        loadImages(reservations)
         setReserve(reservations)
+    End Sub
+
+    Private Sub loadImages(ByRef items As List(Of BorrowDTO))
+        Dim img As Image
+        For Each item In items
+            If Not item.imageName.Equals("empty") Then
+                If Not imageNames.Contains(item.imageName) Then
+                    imageNames.Add(item.imageName)
+                    img = ImageController.getImage(item.imageName)
+                    item.cover = img
+                    images.Add(img)
+                Else
+                    item.cover = images.Item(imageNames.IndexOf(item.imageName))
+                End If
+            End If
+        Next
+    End Sub
+    Private Sub loadImages(ByRef items As List(Of ReservationDTO))
+        Dim img As Image
+        For Each item In items
+            If Not item.imageName.Equals("empty") Then
+                If Not imageNames.Contains(item.imageName) Then
+                    imageNames.Add(item.imageName)
+                    img = ImageController.getImage(item.imageName)
+                    item.cover = img
+                    images.Add(img)
+                Else
+                    item.cover = images.Item(imageNames.IndexOf(item.imageName))
+                End If
+            End If
+        Next
     End Sub
     Private Sub borrowListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
                                            Handles borrowListDataGrid.CellContentClick
@@ -40,23 +76,15 @@
 
         If colname.Equals("CheckIn_Column") Then
             If MsgBox("Do you want to return book?", vbQuestion + vbYesNo, "Check In") = vbYes Then
-
+                Dim copyId As Integer = borrowListDataGrid.Item("borrowId", e.RowIndex).Value
+                BookController.returnBorrow(copyId)
+                MessageBox.Show("Successfully Check In Borrow.")
+                loadBorrow()
+                adminView.viewBookuserCtl.initializeResult()
             Else
 
             End If
         End If
-
-
-
-        'If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
-        'If e.ColumnIndex = 8 Then
-        'Dim copyId As Integer = borrowListDataGrid.Item("borrowId", e.RowIndex).Value
-        'BookController.returnBorrow(copyId)
-        'MessageBox.Show("Successfully Check In Borrow.")
-        'loadBorrow()
-        'adminView.viewBookuserCtl.initializeResult()
-        'End If
-        'End If
     End Sub
 
     Private Sub reservationListDataGridView_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) _
@@ -67,25 +95,17 @@
 
         If colname.Equals("Complete_Column") Then
             If MsgBox("Do you want to complete reservation?", vbQuestion + vbYesNo, "Complete Reservation") = vbYes Then
-
+                Dim copyId As Integer = reservationListDataGrid.Item("reservationId", e.RowIndex).Value
+                BookController.deleteReservation(copyId)
+                MessageBox.Show("Successfully Completed Reservation.")
+                loadReserve()
+                adminView.viewBookuserCtl.initializeResult()
             Else
 
             End If
         End If
 
 
-
-
-        ' Dim senderGrid = DirectCast(sender, DataGridView)
-        ' If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
-        ' If e.ColumnIndex = 7 Then
-        'Dim copyId As Integer = reservationListDataGrid.Item("reservationId", e.RowIndex).Value
-        'BookController.deleteReservation(copyId)
-        'MessageBox.Show("Successfully Completed Reservation.")
-        'loadReserve()
-        'adminView.viewBookuserCtl.initializeResult()
-        'End If
-        'End If
     End Sub
 
     Private Sub searchBorrowOrReturnBtn_Click(sender As Object, e As EventArgs) Handles searchBorrowBtn.Click, searchReturnBtn.Click
@@ -110,18 +130,29 @@
     End Sub
     Private Sub setReserve(ByRef reserveList As List(Of ReservationDTO))
         reservationListDataGrid.Rows.Clear()
+        Dim img As Image
         For Each reservation In reserveList
             Dim status As String = "Reserve"
-            reservationListDataGrid.Rows.Add({My.Resources.default_book, status, reservation.reservedDate, reservation.title, reservation.bkCpyNum, reservation.userDTO.id, reservation.reservationId})
+            img = If(reservation.imageName.Equals("empty"), My.Resources.default_book, reservation.cover)
+            reservationListDataGrid.Rows.Add({img, status, reservation.reservedDate, reservation.isbn, reservation.title, reservation.edition, reservation.bkCpyNum, reservation.userDTO.id, reservation.reservationId})
         Next
         reservationListDataGrid.Refresh()
     End Sub
     Private Sub setDataGrid(ByRef items As List(Of BorrowDTO), ByRef listDataGrid As DataGridView, ByRef isBorrow As Boolean)
         listDataGrid.Rows.Clear()
         Dim status = If(isBorrow, "Borrowed", "Returned")
-        For Each item In items
-            listDataGrid.Rows.Add({My.Resources.default_book, status, item.issueDate, item.dueDate, item.title, item.bkCpyNum, item.userDTO.id, item.borrowId})
-        Next
+        Dim img As Image
+        If isBorrow Then
+            For Each item In items
+                img = If(item.imageName.Equals("empty"), My.Resources.default_book, item.cover)
+                listDataGrid.Rows.Add({img, item.issueDate, item.dueDate, item.isbn, item.title, item.edition, item.bkCpyNum, item.userDTO.id, item.borrowId})
+            Next
+        Else
+            For Each item In items
+                img = If(item.imageName.Equals("empty"), My.Resources.default_book, item.cover)
+                listDataGrid.Rows.Add({img, item.issueDate, item.dueDate, item.returnedDate, item.isbn, item.title, item.edition, item.bkCpyNum, item.userDTO.id, item.borrowId})
+            Next
+        End If
         listDataGrid.Refresh()
     End Sub
 

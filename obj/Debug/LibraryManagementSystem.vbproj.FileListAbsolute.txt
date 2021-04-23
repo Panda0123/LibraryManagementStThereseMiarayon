@@ -8,7 +8,6 @@ G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bi
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.dll
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Newtonsoft.Json.xml
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.vbprojAssemblyReference.cache
-G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.Form1.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.adminView.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.advanceSearch.resources
 G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.AddBookUserControl.resources
@@ -101,3 +100,8 @@ D:\Documents\GitHub\Philip\LibraryManagementStThereseMiarayon\obj\Debug\LibraryM
 D:\Documents\GitHub\Philip\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.exe
 D:\Documents\GitHub\Philip\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.xml
 D:\Documents\GitHub\Philip\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Transitions.dll
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\bin\Debug\Transitions.pdb
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.UpdateAccount.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.pnlOne.resources
+G:\source\project\itccLibrary\branch1Clone\LibraryManagementStThereseMiarayon\obj\Debug\LibraryManagementSystem.SlidePanel.resources
