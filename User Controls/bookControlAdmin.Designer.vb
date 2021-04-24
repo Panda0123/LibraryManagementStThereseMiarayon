@@ -187,10 +187,10 @@ Partial Class bookControlAdmin
         Me.checkOutLnkLbl.Location = New System.Drawing.Point(632, 136)
         Me.checkOutLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.checkOutLnkLbl.Name = "checkOutLnkLbl"
-        Me.checkOutLnkLbl.Size = New System.Drawing.Size(94, 28)
+        Me.checkOutLnkLbl.Size = New System.Drawing.Size(87, 28)
         Me.checkOutLnkLbl.TabIndex = 18
         Me.checkOutLnkLbl.TabStop = True
-        Me.checkOutLnkLbl.Text = "Check Out"
+        Me.checkOutLnkLbl.Text = "Checkout"
         '
         'reserveLnkLbl
         '
@@ -214,13 +214,13 @@ Partial Class bookControlAdmin
         Me.viewBookLnkLbl.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.viewBookLnkLbl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.viewBookLnkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.viewBookLnkLbl.Location = New System.Drawing.Point(879, 75)
+        Me.viewBookLnkLbl.Location = New System.Drawing.Point(937, 75)
         Me.viewBookLnkLbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.viewBookLnkLbl.Name = "viewBookLnkLbl"
-        Me.viewBookLnkLbl.Size = New System.Drawing.Size(111, 32)
+        Me.viewBookLnkLbl.Size = New System.Drawing.Size(60, 32)
         Me.viewBookLnkLbl.TabIndex = 18
         Me.viewBookLnkLbl.TabStop = True
-        Me.viewBookLnkLbl.Text = "View Book"
+        Me.viewBookLnkLbl.Text = "View"
         '
         'bookControlAdmin
         '

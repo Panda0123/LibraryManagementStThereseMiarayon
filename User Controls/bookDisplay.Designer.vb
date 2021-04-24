@@ -183,13 +183,13 @@ Partial Class bookDisplay
         Me.LinkLabel3.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
         Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(811, 79)
+        Me.LinkLabel3.Location = New System.Drawing.Point(846, 79)
         Me.LinkLabel3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(111, 32)
+        Me.LinkLabel3.Size = New System.Drawing.Size(60, 32)
         Me.LinkLabel3.TabIndex = 19
         Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "View Book"
+        Me.LinkLabel3.Text = "View"
         '
         'bookDisplay
         '

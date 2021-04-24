@@ -41,13 +41,10 @@
     End Sub
 
     Private Sub setCollection(ByRef collectionLt As List(Of CollectionDTO))
-        '   bookListView.Items.Clear()
         bookDataGridView.Rows.Clear()
-
         For Each item As CollectionDTO In collectionLt
             bookDataGridView.Rows.Add(New String() {item.title, item.isbn, item.edition, item.language, item.classification, item.id})
         Next
-
     End Sub
 
 

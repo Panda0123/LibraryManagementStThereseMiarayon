@@ -13,7 +13,6 @@ Module HttpRequestController
         Dim sr As New StreamReader(dataStream)
         Return sr.ReadToEnd()
     End Function
-
     Public Function HttpRequestGet(URL As String, authToken As String) As String
 
         Dim request As WebRequest

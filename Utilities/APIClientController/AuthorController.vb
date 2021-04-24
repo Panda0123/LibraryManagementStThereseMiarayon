@@ -5,11 +5,7 @@ Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
 Module AuthorController
-
-
     Private URL As String = HttpRequestController.URL + "/author"
-
-
     Public Function getAuthors() As List(Of AuthorDTO)
         Dim response As String = HttpRequestController.HttpRequestGet(URL + "/all")
         Dim output = JsonConvert.DeserializeObject(Of List(Of AuthorDTO))(response)
@@ -19,10 +15,8 @@ Module AuthorController
 
     Public Function getAuthor(authorId As String) As AuthorDTO
         Dim newURL As String = URL + "/all/" + authorId
-
         Dim response As String = HttpRequestController.HttpRequestGet(newURL)
         Return JsonConvert.DeserializeObject(Of AuthorDTO)(response)
-
     End Function
 
     Function getFullName(entity As JObject) As Dictionary(Of
@@ -64,4 +58,3 @@ Module AuthorController
     End Sub
 
 End Module
-
