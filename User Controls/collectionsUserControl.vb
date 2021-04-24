@@ -41,13 +41,10 @@
     End Sub
 
     Private Sub setCollection(ByRef collectionLt As List(Of CollectionDTO))
-        '   bookListView.Items.Clear()
         bookDataGridView.Rows.Clear()
-
         For Each item As CollectionDTO In collectionLt
             bookDataGridView.Rows.Add(New String() {item.title, item.isbn, item.edition, item.language, item.classification, item.id})
         Next
-
     End Sub
 
 
@@ -93,22 +90,4 @@
         bookDataGridView.SelectionMode = DataGridViewSelectionMode.CellSelect
         btnFullRowSelect.Image = Nothing
     End Sub
-
-
-
-
-
-
-    'rivate Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles bookDataGridView.ColumnWidthChanged
-
-    'e.Cancel = True
-    'e.NewWidth = bookListView.Columns(e.ColumnIndex).Width
-
-    'End Sub
-
-
-
-
-
-
 End Class
