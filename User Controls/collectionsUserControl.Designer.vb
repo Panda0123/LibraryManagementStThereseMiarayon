@@ -66,6 +66,7 @@ Partial Class collectionsUserControl
         Me.btnFullRowSelect = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnCellSelect = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.MetroContextMenu1 = New MetroFramework.Controls.MetroContextMenu(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.bookDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -510,6 +511,11 @@ Partial Class collectionsUserControl
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "icons8-checkmark-24.png")
         '
+        'MetroContextMenu1
+        '
+        Me.MetroContextMenu1.Name = "MetroContextMenu1"
+        Me.MetroContextMenu1.Size = New System.Drawing.Size(61, 4)
+        '
         'collectionsUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -567,4 +573,5 @@ Partial Class collectionsUserControl
     Friend WithEvents LanguageHeader As DataGridViewTextBoxColumn
     Friend WithEvents ClassificationHeader As DataGridViewTextBoxColumn
     Friend WithEvents bookId As DataGridViewTextBoxColumn
+    Friend WithEvents MetroContextMenu1 As MetroFramework.Controls.MetroContextMenu
 End Class
