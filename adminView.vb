@@ -17,6 +17,10 @@ Public Class adminView
         recorduserCtl.Hide()
         addBookuserCtl.Hide()
         collectionsuserCtl.Hide()
+
+        For Each c As Control In backgroundPanel.Controls
+            c.Dock = DockStyle.Fill
+        Next
     End Sub
 
     Private Sub adminView_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -110,4 +114,6 @@ Public Class adminView
             searchTextBox.Text = "Search..."
         End If
     End Sub
+
+
 End Class
