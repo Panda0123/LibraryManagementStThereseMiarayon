@@ -181,8 +181,6 @@ Public Class AddBookUserControl
             End If
         End If
 
-        ' check if there is changes in authors
-        ' authorsDataGrid.ClearSelection()
         authorsDataGrid.CurrentCell = Nothing
         setAuthors()
         Dim updateAuthor As Boolean = False
@@ -197,7 +195,6 @@ Public Class AddBookUserControl
             Next
         End If
 
-        ' check if there is changes in copies
         copiesDataGridView.CurrentCell = Nothing
         setCopies()
         Dim updateCopies As Boolean = False

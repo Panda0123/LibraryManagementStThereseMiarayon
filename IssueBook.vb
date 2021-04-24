@@ -1,6 +1,5 @@
 ﻿Imports System.Globalization
 Public Class IssueBook
-    'Private Sub IssueBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     Dim userDTO As UserDTO
     Dim bookDetailsDTOBorrow As BookDetailsDTO
     Dim bookDetailsDTOReserve As BookDetailsDTO
@@ -112,7 +111,6 @@ Public Class IssueBook
     End Sub
 
     Private Sub setCopies(bkDTO As BookDetailsDTO, idxCopy As Integer)
-
         Me.userDTO = Nothing
         If IsNothing(bkDTO.copies) Then
             copies = CopyController.getCopies(bkDTO.bookId)
@@ -121,11 +119,9 @@ Public Class IssueBook
         Else
             copies = bkDTO.copies
         End If
-
         For Each copyDTO As BookCopyDTO In copies
             copyNum.Add(copyDTO.copy_num)
         Next
-
         copyNumCmbBx.DataSource = copyNum
         copyNumCmbBx.SelectedIndex = idxCopy
         textBoxStatus.Text = copies.Item(idxCopy).status
@@ -137,7 +133,6 @@ Public Class IssueBook
     Private Sub copyNumCmbBx_Changed(sender As Object, e As EventArgs) Handles copyNumCmbBx.Leave, copyNumCmbBx.SelectedIndexChanged
         Dim val As String = copyNumCmbBx.Text.Trim
         Dim idx = If(IsNumeric(val), copies.IndexOf(New BookCopyDTO(-1, CType(val, Int32))), -1)
-
         If idx <> -1 Then
             selectedCopy = copies.Item(idx)
             textBoxStatus.Text = selectedCopy.status
@@ -155,7 +150,6 @@ Public Class IssueBook
     Private Sub copyNumReserveCmbBx_Changed(sender As Object, e As EventArgs) Handles copyNumReserveCmbBx.Leave, copyNumReserveCmbBx.SelectedIndexChanged
         Dim val As String = copyNumReserveCmbBx.Text.Trim
         Dim idx = If(IsNumeric(val), copies.IndexOf(New BookCopyDTO(-1, CType(val, Int32))), -1)
-
         If idx <> -1 Then
             selectedCopy = copies.Item(idx)
             statusReserveTxtBx.Text = selectedCopy.status
@@ -165,7 +159,6 @@ Public Class IssueBook
             Else
                 buttonReserve.Enabled = True
             End If
-
             If Not IsNothing(selectedCopy.reserved_date) Then
                 buttonReserve.Enabled = False
                 ' only one person can reserve at a time and borrow
@@ -198,7 +191,6 @@ Public Class IssueBook
     End Sub
 
     Private Sub buttonReserve_Click(sender As Object, e As EventArgs) Handles buttonReserve.Click
-
         If Not setUser() Then
             Return
         End If
@@ -235,7 +227,6 @@ Public Class IssueBook
             Me.userDTO = Nothing
             Return False
         End If
-
         Me.userDTO = New UserDTO()
         userDTO.id = textBoxId.Text.Trim
         userDTO.fName = fNameTxtBx.Text.Trim
@@ -243,14 +234,11 @@ Public Class IssueBook
         userDTO.lName = lNameTxtBx.Text.Trim
         userDTO.type = userTypeTxtBx.Text.Trim
         userDTO.address = addressTxtBx.Text.Trim
-
         Dim sectionDTO As New SectionDTO()
         sectionDTO.name = sectionTxtBx.Text.Trim
-
         Dim gradeLevelDTO As New GradeLevelDTO()
         gradeLevelDTO.level = CType(gradeLevelTxtBx.Text.Trim, Integer)
         userDTO.gradeLevelDTO = gradeLevelDTO
-
         userDTO.sectionDTO = sectionDTO
         Return True
     End Function

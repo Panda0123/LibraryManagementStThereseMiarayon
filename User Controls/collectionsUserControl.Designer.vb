@@ -37,7 +37,6 @@ Partial Class collectionsUserControl
         Me.CheckBox15 = New System.Windows.Forms.CheckBox()
         Me.CheckBox16 = New System.Windows.Forms.CheckBox()
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.moreClassCombobox = New System.Windows.Forms.ComboBox()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox10 = New System.Windows.Forms.CheckBox()
@@ -51,6 +50,12 @@ Partial Class collectionsUserControl
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.bookDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TitleHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ISBNHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EditionHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LanguageHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClassificationHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.bookId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.btnRefresh = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnDelete = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,12 +66,6 @@ Partial Class collectionsUserControl
         Me.btnFullRowSelect = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnCellSelect = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.TitleHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ISBNHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EditionHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LanguageHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClassificationHeader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.bookId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.bookDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -84,7 +83,6 @@ Partial Class collectionsUserControl
         Me.Panel1.Controls.Add(Me.CheckBox15)
         Me.Panel1.Controls.Add(Me.CheckBox16)
         Me.Panel1.Controls.Add(Me.CheckBox12)
-        Me.Panel1.Controls.Add(Me.moreClassCombobox)
         Me.Panel1.Controls.Add(Me.CheckBox8)
         Me.Panel1.Controls.Add(Me.CheckBox4)
         Me.Panel1.Controls.Add(Me.CheckBox10)
@@ -223,17 +221,6 @@ Partial Class collectionsUserControl
         Me.CheckBox12.TabIndex = 3
         Me.CheckBox12.Text = "Music"
         Me.CheckBox12.UseVisualStyleBackColor = True
-        '
-        'moreClassCombobox
-        '
-        Me.moreClassCombobox.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.moreClassCombobox.FormattingEnabled = True
-        Me.moreClassCombobox.Location = New System.Drawing.Point(962, 110)
-        Me.moreClassCombobox.Margin = New System.Windows.Forms.Padding(2)
-        Me.moreClassCombobox.Name = "moreClassCombobox"
-        Me.moreClassCombobox.Size = New System.Drawing.Size(207, 40)
-        Me.moreClassCombobox.TabIndex = 2
-        Me.moreClassCombobox.Text = "Others"
         '
         'CheckBox8
         '
@@ -394,7 +381,7 @@ Partial Class collectionsUserControl
         Me.bookDataGridView.ContextMenuStrip = Me.ContextMenuStrip1
         Me.bookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.bookDataGridView.Location = New System.Drawing.Point(0, 162)
-        Me.bookDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.bookDataGridView.Margin = New System.Windows.Forms.Padding(2)
         Me.bookDataGridView.MultiSelect = False
         Me.bookDataGridView.Name = "bookDataGridView"
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -409,72 +396,6 @@ Partial Class collectionsUserControl
         Me.bookDataGridView.RowTemplate.Height = 24
         Me.bookDataGridView.Size = New System.Drawing.Size(1182, 1230)
         Me.bookDataGridView.TabIndex = 3
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRefresh, Me.btnDelete, Me.ModeSelectToolStripMenuItem, Me.DGVSelectionModeToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(221, 108)
-        '
-        'btnRefresh
-        '
-        Me.btnRefresh.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_refresh_24
-        Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(186, 26)
-        Me.btnRefresh.Text = "Refresh"
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_trash_24__1_
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(186, 26)
-        Me.btnDelete.Text = "Delete this record"
-        '
-        'ModeSelectToolStripMenuItem
-        '
-        Me.ModeSelectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMultiSelect, Me.btnSingleSelect})
-        Me.ModeSelectToolStripMenuItem.Name = "ModeSelectToolStripMenuItem"
-        Me.ModeSelectToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
-        Me.ModeSelectToolStripMenuItem.Text = "Mode Select"
-        '
-        'btnMultiSelect
-        '
-        Me.btnMultiSelect.Name = "btnMultiSelect"
-        Me.btnMultiSelect.Size = New System.Drawing.Size(177, 26)
-        Me.btnMultiSelect.Text = "Multi Select"
-        '
-        'btnSingleSelect
-        '
-        Me.btnSingleSelect.Name = "btnSingleSelect"
-        Me.btnSingleSelect.Size = New System.Drawing.Size(177, 26)
-        Me.btnSingleSelect.Text = "Single Select"
-        '
-        'DGVSelectionModeToolStripMenuItem
-        '
-        Me.DGVSelectionModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnFullRowSelect, Me.btnCellSelect})
-        Me.DGVSelectionModeToolStripMenuItem.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_cursor_24
-        Me.DGVSelectionModeToolStripMenuItem.Name = "DGVSelectionModeToolStripMenuItem"
-        Me.DGVSelectionModeToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
-        Me.DGVSelectionModeToolStripMenuItem.Text = "DGV Selection Mode"
-        '
-        'btnFullRowSelect
-        '
-        Me.btnFullRowSelect.Name = "btnFullRowSelect"
-        Me.btnFullRowSelect.Size = New System.Drawing.Size(192, 26)
-        Me.btnFullRowSelect.Text = "Full Row Select"
-        '
-        'btnCellSelect
-        '
-        Me.btnCellSelect.Name = "btnCellSelect"
-        Me.btnCellSelect.Size = New System.Drawing.Size(192, 26)
-        Me.btnCellSelect.Text = "Cell Select"
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "icons8-checkmark-24.png")
         '
         'TitleHeader
         '
@@ -523,6 +444,72 @@ Partial Class collectionsUserControl
         Me.bookId.Name = "bookId"
         Me.bookId.Visible = False
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnRefresh, Me.btnDelete, Me.ModeSelectToolStripMenuItem, Me.DGVSelectionModeToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(187, 108)
+        '
+        'btnRefresh
+        '
+        Me.btnRefresh.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_refresh_24
+        Me.btnRefresh.Name = "btnRefresh"
+        Me.btnRefresh.Size = New System.Drawing.Size(186, 26)
+        Me.btnRefresh.Text = "Refresh"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_trash_24__1_
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(186, 26)
+        Me.btnDelete.Text = "Delete this record"
+        '
+        'ModeSelectToolStripMenuItem
+        '
+        Me.ModeSelectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMultiSelect, Me.btnSingleSelect})
+        Me.ModeSelectToolStripMenuItem.Name = "ModeSelectToolStripMenuItem"
+        Me.ModeSelectToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.ModeSelectToolStripMenuItem.Text = "Mode Select"
+        '
+        'btnMultiSelect
+        '
+        Me.btnMultiSelect.Name = "btnMultiSelect"
+        Me.btnMultiSelect.Size = New System.Drawing.Size(140, 22)
+        Me.btnMultiSelect.Text = "Multi Select"
+        '
+        'btnSingleSelect
+        '
+        Me.btnSingleSelect.Name = "btnSingleSelect"
+        Me.btnSingleSelect.Size = New System.Drawing.Size(140, 22)
+        Me.btnSingleSelect.Text = "Single Select"
+        '
+        'DGVSelectionModeToolStripMenuItem
+        '
+        Me.DGVSelectionModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnFullRowSelect, Me.btnCellSelect})
+        Me.DGVSelectionModeToolStripMenuItem.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_cursor_24
+        Me.DGVSelectionModeToolStripMenuItem.Name = "DGVSelectionModeToolStripMenuItem"
+        Me.DGVSelectionModeToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.DGVSelectionModeToolStripMenuItem.Text = "DGV Selection Mode"
+        '
+        'btnFullRowSelect
+        '
+        Me.btnFullRowSelect.Name = "btnFullRowSelect"
+        Me.btnFullRowSelect.Size = New System.Drawing.Size(153, 22)
+        Me.btnFullRowSelect.Text = "Full Row Select"
+        '
+        'btnCellSelect
+        '
+        Me.btnCellSelect.Name = "btnCellSelect"
+        Me.btnCellSelect.Size = New System.Drawing.Size(153, 22)
+        Me.btnCellSelect.Text = "Cell Select"
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "icons8-checkmark-24.png")
+        '
         'collectionsUserControl
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
@@ -541,7 +528,6 @@ Partial Class collectionsUserControl
 
     End Sub
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents moreClassCombobox As ComboBox
     Friend WithEvents CheckBox8 As CheckBox
     Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox10 As CheckBox
