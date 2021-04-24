@@ -27,6 +27,8 @@ Partial Class collectionsUserControl
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(collectionsUserControl))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.searchPcBx = New System.Windows.Forms.PictureBox()
+        Me.searchCollection = New System.Windows.Forms.TextBox()
         Me.CheckBox21 = New System.Windows.Forms.CheckBox()
         Me.CheckBox17 = New System.Windows.Forms.CheckBox()
         Me.CheckBox18 = New System.Windows.Forms.CheckBox()
@@ -67,12 +69,15 @@ Partial Class collectionsUserControl
         Me.btnCellSelect = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Panel1.SuspendLayout()
+        CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bookDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.searchPcBx)
+        Me.Panel1.Controls.Add(Me.searchCollection)
         Me.Panel1.Controls.Add(Me.CheckBox21)
         Me.Panel1.Controls.Add(Me.CheckBox17)
         Me.Panel1.Controls.Add(Me.CheckBox18)
@@ -99,8 +104,31 @@ Partial Class collectionsUserControl
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1478, 202)
+        Me.Panel1.Size = New System.Drawing.Size(1478, 276)
         Me.Panel1.TabIndex = 1
+        '
+        'searchPcBx
+        '
+        Me.searchPcBx.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.searchPcBx.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
+        Me.searchPcBx.Location = New System.Drawing.Point(363, 225)
+        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(5)
+        Me.searchPcBx.Name = "searchPcBx"
+        Me.searchPcBx.Size = New System.Drawing.Size(32, 31)
+        Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.searchPcBx.TabIndex = 14
+        Me.searchPcBx.TabStop = False
+        '
+        'searchCollection
+        '
+        Me.searchCollection.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchCollection.Location = New System.Drawing.Point(3, 225)
+        Me.searchCollection.Name = "searchCollection"
+        Me.searchCollection.Size = New System.Drawing.Size(352, 36)
+        Me.searchCollection.TabIndex = 13
+        Me.searchCollection.Text = "Search"
         '
         'CheckBox21
         '
@@ -380,7 +408,7 @@ Partial Class collectionsUserControl
         Me.bookDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TitleHeader, Me.ISBNHeader, Me.EditionHeader, Me.LanguageHeader, Me.ClassificationHeader, Me.bookId})
         Me.bookDataGridView.ContextMenuStrip = Me.ContextMenuStrip1
         Me.bookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bookDataGridView.Location = New System.Drawing.Point(0, 202)
+        Me.bookDataGridView.Location = New System.Drawing.Point(0, 276)
         Me.bookDataGridView.Margin = New System.Windows.Forms.Padding(2)
         Me.bookDataGridView.MultiSelect = False
         Me.bookDataGridView.Name = "bookDataGridView"
@@ -394,7 +422,7 @@ Partial Class collectionsUserControl
         Me.bookDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.bookDataGridView.RowHeadersWidth = 51
         Me.bookDataGridView.RowTemplate.Height = 24
-        Me.bookDataGridView.Size = New System.Drawing.Size(1478, 1538)
+        Me.bookDataGridView.Size = New System.Drawing.Size(1478, 1464)
         Me.bookDataGridView.TabIndex = 3
         '
         'TitleHeader
@@ -524,6 +552,7 @@ Partial Class collectionsUserControl
         Me.Size = New System.Drawing.Size(1478, 1740)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bookDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -569,4 +598,6 @@ Partial Class collectionsUserControl
     Friend WithEvents LanguageHeader As DataGridViewTextBoxColumn
     Friend WithEvents ClassificationHeader As DataGridViewTextBoxColumn
     Friend WithEvents bookId As DataGridViewTextBoxColumn
+    Friend WithEvents searchCollection As TextBox
+    Friend WithEvents searchPcBx As PictureBox
 End Class

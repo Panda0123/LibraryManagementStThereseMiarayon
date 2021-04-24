@@ -96,19 +96,19 @@
 
 
 
+    Private Sub searchPcBx_Click(sender As Object, e As EventArgs) Handles searchPcBx.Click
+        bookDataGridView.Rows.Clear()
+    End Sub
 
+    Private Sub searchCollection_TextChanged(sender As Object, e As EventArgs) Handles searchCollection.KeyPress, searchCollection.Click
+        If searchCollection.Text.Equals("Search") Then
+            searchCollection.Text = ""
+        End If
+    End Sub
 
-
-    'rivate Sub ListView1_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles bookDataGridView.ColumnWidthChanged
-
-    'e.Cancel = True
-    'e.NewWidth = bookListView.Columns(e.ColumnIndex).Width
-
-    'End Sub
-
-
-
-
-
-
+    Private Sub searchCollection_LostFocus(sender As Object, e As EventArgs) Handles searchCollection.LostFocus
+        If searchCollection.Text.Equals("") Then
+            searchCollection.Text = "Search"
+        End If
+    End Sub
 End Class
