@@ -114,18 +114,18 @@
         Select Case sender.name
             Case searchBorrowBtn.Name
                 searchKey = searchBorrowTxtBx.Text.Trim()
-                listDTO = If(searchKey.Equals(""), borrows, borrows.FindAll(Function(ret) ret.userDTO.id.Equals(searchKey)))
+                listDTO = If(searchKey.Equals("") Or searchKey.Equals("Search ID number..."), borrows, borrows.FindAll(Function(bor) bor.userDTO.id.Equals(searchKey)))
                 setDataGrid(listDTO, borrowListDataGrid, True)
             Case searchReturnBtn.Name
                 searchKey = searchReturnTxtBx.Text.Trim()
-                listDTO = If(searchKey.Equals(""), returns, returns.FindAll(Function(ret) ret.userDTO.id.Equals(searchKey)))
+                listDTO = If(searchKey.Equals("") Or searchKey.Equals("Search ID number..."), returns, returns.FindAll(Function(ret) ret.userDTO.id.Equals(searchKey)))
                 setDataGrid(listDTO, returnListDataGrid, False)
         End Select
     End Sub
 
     Private Sub searchReservationBtn_Click(sender As Object, e As EventArgs) Handles searchReservationBtn.Click
         Dim searchKey = searchReservationTxtBx.Text.Trim()
-        Dim reservationList = If(searchKey.Equals(""), reservations, reservations.FindAll(Function(reservation) reservation.userDTO.id.Equals(searchKey)))
+        Dim reservationList = If(searchKey.Equals("") Or searchKey.Equals("Search ID number..."), reservations, reservations.FindAll(Function(reservation) reservation.userDTO.id.Equals(searchKey)))
         setReserve(reservationList)
     End Sub
     Private Sub setReserve(ByRef reserveList As List(Of ReservationDTO))
