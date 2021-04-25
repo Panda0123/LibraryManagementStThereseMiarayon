@@ -3,8 +3,6 @@
     Private paginationDTO As PaginationDTO
 
     Private numPage As Double = 1
-    'Private searchKey As String = String.Empty
-    'Private PageIndex As Integer = 0
     Private totalResult As Integer = 0
     Private viewBook As New viewBook
 
@@ -27,9 +25,9 @@
     End Sub
 
     Public Sub setResult()
-        paginationDTO.pageNum = 0
         totalResult = BookController.getNumBkResult(paginationDTO)
         numPage = totalResult / BooksPerPage
+        paginationDTO.pageNum = 0
         initializeResult()
     End Sub
     Public Sub initializeResult()

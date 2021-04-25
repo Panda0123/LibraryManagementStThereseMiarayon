@@ -1,5 +1,6 @@
 ﻿Public Class collectionsUserControl
     Dim collection As List(Of CollectionDTO)
+    Dim filteredCollection As List(Of CollectionDTO)
     Dim checkBoxes As List(Of CheckBox)
 
 
@@ -13,23 +14,28 @@
                                             CheckBox16, CheckBox17, CheckBox18, CheckBox19, CheckBox20,
                                             CheckBox21})
         For Each checkBox As CheckBox In checkBoxes
-            AddHandler checkBox.Click, AddressOf checkBoxHandler
+            AddHandler checkBox.Click, AddressOf filtersHandler
         Next
         CheckBox0.Checked = True
     End Sub
-    Private Sub checkBoxHandler()
-        If CheckBox0.Checked Then
-            setCollection(collection)
-            Return
+    Private Sub filtersHandler() Handles searchPcBx.Click
+        filteredCollection = collection
+        ' checkbox
+        If Not CheckBox0.Checked Then
+            Dim checkBoxClassification As New List(Of String)
+            For Each checkBox In checkBoxes
+                If checkBox.Checked Then
+                    checkBoxClassification.Add(checkBox.Text)
+                End If
+            Next
+            filteredCollection = filteredCollection.FindAll(Function(item) checkBoxClassification.Contains(item.classification))
         End If
-        Dim checkBoxClassification As New List(Of String)
-        For Each checkBox In checkBoxes
-            If checkBox.Checked Then
-                checkBoxClassification.Add(checkBox.Text)
-            End If
-        Next
-        Dim filteredCollections = collection.FindAll(Function(item) checkBoxClassification.Contains(item.classification))
-        setCollection(filteredCollections)
+        ' seachkey
+        Dim searchKey = searchCollection.Text
+        If Not (searchKey.Equals("Search Title") Or searchKey.Equals("")) Then
+            filteredCollection = filteredCollection.FindAll(Function(item) item.title.ToLower.Contains(searchKey.ToLower))
+        End If
+        setCollection(filteredCollection)
     End Sub
     Private Sub MyBaseLoad(sender As Object, e As EventArgs) Handles Me.Load
         collection = BookController.getBookCollection()
@@ -90,22 +96,19 @@
         bookDataGridView.SelectionMode = DataGridViewSelectionMode.CellSelect
         btnFullRowSelect.Image = Nothing
     End Sub
-
-
-
-    Private Sub searchPcBx_Click(sender As Object, e As EventArgs) Handles searchPcBx.Click
-        bookDataGridView.Rows.Clear()
-    End Sub
-
-    Private Sub searchCollection_TextChanged(sender As Object, e As EventArgs) Handles searchCollection.KeyPress, searchCollection.Click
-        If searchCollection.Text.Equals("Search") Then
+    ' search
+    Private Sub searchCollection_TextChanged(sender As Object, e As EventArgs) Handles searchCollection.KeyUp
+        If searchCollection.Text.Trim.Equals("Search Title") Then
             searchCollection.Text = ""
+        End If
+        If searchCollection.Text.Trim.Equals("") Then
+            filtersHandler()
         End If
     End Sub
 
     Private Sub searchCollection_LostFocus(sender As Object, e As EventArgs) Handles searchCollection.LostFocus
-        If searchCollection.Text.Equals("") Then
-            searchCollection.Text = "Search"
+        If searchCollection.Text.Equals("Search Title") Then
+            searchCollection.Text = ""
         End If
     End Sub
 End Class

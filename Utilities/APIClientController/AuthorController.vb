@@ -5,9 +5,9 @@ Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
 Module AuthorController
-    Private URL As String = HttpRequestController.URL + "/author"
+    Private URL As String = HttpRequestMethods.URL + "/author"
     Public Function getAuthors() As List(Of AuthorDTO)
-        Dim response As String = HttpRequestController.HttpRequestGet(URL + "/all")
+        Dim response As String = HttpRequestMethods.HttpRequestGet(URL + "/all")
         Dim output = JsonConvert.DeserializeObject(Of List(Of AuthorDTO))(response)
 
         Return output
@@ -15,7 +15,7 @@ Module AuthorController
 
     Public Function getAuthor(authorId As String) As AuthorDTO
         Dim newURL As String = URL + "/all/" + authorId
-        Dim response As String = HttpRequestController.HttpRequestGet(newURL)
+        Dim response As String = HttpRequestMethods.HttpRequestGet(newURL)
         Return JsonConvert.DeserializeObject(Of AuthorDTO)(response)
     End Function
 
@@ -31,7 +31,7 @@ Module AuthorController
     End Function
 
     Sub addAuthor(mes As String)
-        HttpRequestController.HttpRequestPost(URL + "/admin", mes, Authorization.authToken)
+        HttpRequestMethods.HttpRequestPost(URL + "/admin", mes, Authorization.authToken)
     End Sub
 
     Function findAuthorByName(attrs As Dictionary(Of
@@ -40,7 +40,7 @@ Module AuthorController
         For Each key As String In attrs.Keys
             newUrl = newUrl + key + "=" + attrs.Item(key) + "&"
         Next
-        Return JsonConvert.DeserializeObject(Of AuthorDTO)(HttpRequestController.HttpRequestGet(newUrl))
+        Return JsonConvert.DeserializeObject(Of AuthorDTO)(HttpRequestMethods.HttpRequestGet(newUrl))
     End Function
 
     Sub updateAuthor(id As String, attrs As Dictionary(Of
@@ -49,12 +49,12 @@ Module AuthorController
         For Each key As String In attrs.Keys
             newUrl = newUrl + key + "=" + attrs.Item(key) + "&"
         Next
-        HttpRequestController.HttpRequestPut(newUrl)
+        HttpRequestMethods.HttpRequestPut(newUrl)
     End Sub
 
     Sub deleteAuthor(id As String)
         Dim newURL As String = URL + "/admin/" + id
-        HttpRequestController.HttpRequestDelete(newURL, Authorization.authToken)
+        HttpRequestMethods.HttpRequestDelete(newURL, Authorization.authToken)
     End Sub
 
 End Module

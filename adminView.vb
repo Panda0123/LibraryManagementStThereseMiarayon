@@ -84,14 +84,11 @@ Public Class adminView
         Dim advSearch = New advanceSearch(paginationDTO, Me)
         advSearch.Show()
     End Sub
-
-
     Private Sub UpdateAccountToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateAccountToolStripMenuItem.Click
         Dim updateAccFrm As New UpdateAccount
         updateAccFrm.ShowDialog()
 
     End Sub
-
     Private Sub btnSignout_Click(sender As Object, e As EventArgs) Handles btnSignout.Click
         ' Smooth Exit
         Me.Hide()

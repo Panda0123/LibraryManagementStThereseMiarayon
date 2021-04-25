@@ -4,7 +4,6 @@
         query = query.Trim
         query = query.Replace(" ", "+")
         query = query.Replace("'", "''")  ' replace single quote to double quote
-        Debug.WriteLine(query)
         Return query
     End Function
     Public Function isValuePositiveShort(ByVal value As String, ByVal name As String) As Boolean

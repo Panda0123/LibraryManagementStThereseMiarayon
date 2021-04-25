@@ -23,8 +23,8 @@ Partial Class collectionsUserControl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(collectionsUserControl))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.searchPcBx = New System.Windows.Forms.PictureBox()
@@ -104,17 +104,17 @@ Partial Class collectionsUserControl
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1478, 276)
+        Me.Panel1.Size = New System.Drawing.Size(1182, 221)
         Me.Panel1.TabIndex = 1
         '
         'searchPcBx
         '
         Me.searchPcBx.Cursor = System.Windows.Forms.Cursors.Hand
         Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.searchPcBx.Location = New System.Drawing.Point(363, 225)
-        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(5)
+        Me.searchPcBx.Location = New System.Drawing.Point(290, 180)
+        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.searchPcBx.Name = "searchPcBx"
-        Me.searchPcBx.Size = New System.Drawing.Size(32, 31)
+        Me.searchPcBx.Size = New System.Drawing.Size(26, 25)
         Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.searchPcBx.TabIndex = 14
         Me.searchPcBx.TabStop = False
@@ -122,20 +122,21 @@ Partial Class collectionsUserControl
         'searchCollection
         '
         Me.searchCollection.Font = New System.Drawing.Font("Sitka Display", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.searchCollection.Location = New System.Drawing.Point(3, 225)
+        Me.searchCollection.Location = New System.Drawing.Point(2, 180)
+        Me.searchCollection.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.searchCollection.Name = "searchCollection"
-        Me.searchCollection.Size = New System.Drawing.Size(352, 36)
+        Me.searchCollection.Size = New System.Drawing.Size(282, 31)
         Me.searchCollection.TabIndex = 13
-        Me.searchCollection.Text = "Search"
+        Me.searchCollection.Text = "Search Title"
         '
         'CheckBox21
         '
         Me.CheckBox21.AutoSize = True
         Me.CheckBox21.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox21.Location = New System.Drawing.Point(1184, 10)
+        Me.CheckBox21.Location = New System.Drawing.Point(947, 8)
         Me.CheckBox21.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox21.Name = "CheckBox21"
-        Me.CheckBox21.Size = New System.Drawing.Size(269, 33)
+        Me.CheckBox21.Size = New System.Drawing.Size(213, 27)
         Me.CheckBox21.TabIndex = 12
         Me.CheckBox21.Text = "Bibliography, Library Science"
         Me.CheckBox21.UseVisualStyleBackColor = True
@@ -144,10 +145,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox17.AutoSize = True
         Me.CheckBox17.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox17.Location = New System.Drawing.Point(1025, 159)
+        Me.CheckBox17.Location = New System.Drawing.Point(820, 127)
         Me.CheckBox17.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox17.Name = "CheckBox17"
-        Me.CheckBox17.Size = New System.Drawing.Size(145, 33)
+        Me.CheckBox17.Size = New System.Drawing.Size(114, 27)
         Me.CheckBox17.TabIndex = 11
         Me.CheckBox17.Text = "Naval Science"
         Me.CheckBox17.UseVisualStyleBackColor = True
@@ -156,10 +157,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox18.AutoSize = True
         Me.CheckBox18.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox18.Location = New System.Drawing.Point(1026, 88)
+        Me.CheckBox18.Location = New System.Drawing.Point(821, 70)
         Me.CheckBox18.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox18.Name = "CheckBox18"
-        Me.CheckBox18.Size = New System.Drawing.Size(126, 33)
+        Me.CheckBox18.Size = New System.Drawing.Size(101, 27)
         Me.CheckBox18.TabIndex = 8
         Me.CheckBox18.Text = "Technology"
         Me.CheckBox18.UseVisualStyleBackColor = True
@@ -168,10 +169,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox19.AutoSize = True
         Me.CheckBox19.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox19.Location = New System.Drawing.Point(1025, 122)
+        Me.CheckBox19.Location = New System.Drawing.Point(820, 98)
         Me.CheckBox19.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox19.Name = "CheckBox19"
-        Me.CheckBox19.Size = New System.Drawing.Size(163, 33)
+        Me.CheckBox19.Size = New System.Drawing.Size(128, 27)
         Me.CheckBox19.TabIndex = 9
         Me.CheckBox19.Text = "Military Science"
         Me.CheckBox19.UseVisualStyleBackColor = True
@@ -180,10 +181,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox20.AutoSize = True
         Me.CheckBox20.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox20.Location = New System.Drawing.Point(1025, 49)
+        Me.CheckBox20.Location = New System.Drawing.Point(820, 39)
         Me.CheckBox20.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox20.Name = "CheckBox20"
-        Me.CheckBox20.Size = New System.Drawing.Size(124, 33)
+        Me.CheckBox20.Size = New System.Drawing.Size(100, 27)
         Me.CheckBox20.TabIndex = 10
         Me.CheckBox20.Text = "Agriculture"
         Me.CheckBox20.UseVisualStyleBackColor = True
@@ -192,10 +193,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox13.AutoSize = True
         Me.CheckBox13.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox13.Location = New System.Drawing.Point(1026, 10)
+        Me.CheckBox13.Location = New System.Drawing.Point(821, 8)
         Me.CheckBox13.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox13.Name = "CheckBox13"
-        Me.CheckBox13.Size = New System.Drawing.Size(108, 33)
+        Me.CheckBox13.Size = New System.Drawing.Size(85, 27)
         Me.CheckBox13.TabIndex = 7
         Me.CheckBox13.Text = "Medicine"
         Me.CheckBox13.UseVisualStyleBackColor = True
@@ -204,10 +205,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox14.AutoSize = True
         Me.CheckBox14.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox14.Location = New System.Drawing.Point(781, 122)
+        Me.CheckBox14.Location = New System.Drawing.Point(625, 98)
         Me.CheckBox14.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox14.Name = "CheckBox14"
-        Me.CheckBox14.Size = New System.Drawing.Size(231, 33)
+        Me.CheckBox14.Size = New System.Drawing.Size(184, 27)
         Me.CheckBox14.TabIndex = 4
         Me.CheckBox14.Text = "Language and Literature"
         Me.CheckBox14.UseVisualStyleBackColor = True
@@ -216,10 +217,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox15.AutoSize = True
         Me.CheckBox15.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox15.Location = New System.Drawing.Point(781, 159)
+        Me.CheckBox15.Location = New System.Drawing.Point(625, 127)
         Me.CheckBox15.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox15.Name = "CheckBox15"
-        Me.CheckBox15.Size = New System.Drawing.Size(95, 33)
+        Me.CheckBox15.Size = New System.Drawing.Size(75, 27)
         Me.CheckBox15.TabIndex = 5
         Me.CheckBox15.Text = "Science"
         Me.CheckBox15.UseVisualStyleBackColor = True
@@ -228,10 +229,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox16.AutoSize = True
         Me.CheckBox16.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox16.Location = New System.Drawing.Point(781, 88)
+        Me.CheckBox16.Location = New System.Drawing.Point(625, 70)
         Me.CheckBox16.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox16.Name = "CheckBox16"
-        Me.CheckBox16.Size = New System.Drawing.Size(108, 33)
+        Me.CheckBox16.Size = New System.Drawing.Size(86, 27)
         Me.CheckBox16.TabIndex = 6
         Me.CheckBox16.Text = "Fine Arts"
         Me.CheckBox16.UseVisualStyleBackColor = True
@@ -240,10 +241,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox12.AutoSize = True
         Me.CheckBox12.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox12.Location = New System.Drawing.Point(781, 49)
+        Me.CheckBox12.Location = New System.Drawing.Point(625, 39)
         Me.CheckBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(82, 33)
+        Me.CheckBox12.Size = New System.Drawing.Size(65, 27)
         Me.CheckBox12.TabIndex = 3
         Me.CheckBox12.Text = "Music"
         Me.CheckBox12.UseVisualStyleBackColor = True
@@ -252,10 +253,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox8.AutoSize = True
         Me.CheckBox8.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox8.Location = New System.Drawing.Point(436, 88)
+        Me.CheckBox8.Location = New System.Drawing.Point(349, 70)
         Me.CheckBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(155, 33)
+        Me.CheckBox8.Size = New System.Drawing.Size(122, 27)
         Me.CheckBox8.TabIndex = 1
         Me.CheckBox8.Text = "Social Sciences"
         Me.CheckBox8.UseVisualStyleBackColor = True
@@ -264,10 +265,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(88, 122)
+        Me.CheckBox4.Location = New System.Drawing.Point(70, 98)
         Me.CheckBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(339, 33)
+        Me.CheckBox4.Size = New System.Drawing.Size(270, 27)
         Me.CheckBox4.TabIndex = 1
         Me.CheckBox4.Text = "World History and History of Asia, etc"
         Me.CheckBox4.UseVisualStyleBackColor = True
@@ -276,10 +277,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox10.AutoSize = True
         Me.CheckBox10.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox10.Location = New System.Drawing.Point(436, 159)
+        Me.CheckBox10.Location = New System.Drawing.Point(349, 127)
         Me.CheckBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(68, 33)
+        Me.CheckBox10.Size = New System.Drawing.Size(55, 27)
         Me.CheckBox10.TabIndex = 1
         Me.CheckBox10.Text = "Law"
         Me.CheckBox10.UseVisualStyleBackColor = True
@@ -288,10 +289,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox11.AutoSize = True
         Me.CheckBox11.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox11.Location = New System.Drawing.Point(781, 10)
+        Me.CheckBox11.Location = New System.Drawing.Point(625, 8)
         Me.CheckBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(115, 33)
+        Me.CheckBox11.Size = New System.Drawing.Size(92, 27)
         Me.CheckBox11.TabIndex = 1
         Me.CheckBox11.Text = "Education"
         Me.CheckBox11.UseVisualStyleBackColor = True
@@ -300,10 +301,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox7.AutoSize = True
         Me.CheckBox7.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox7.Location = New System.Drawing.Point(436, 49)
+        Me.CheckBox7.Location = New System.Drawing.Point(349, 39)
         Me.CheckBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(336, 33)
+        Me.CheckBox7.Size = New System.Drawing.Size(266, 27)
         Me.CheckBox7.TabIndex = 1
         Me.CheckBox7.Text = "Geography, Anthropology, Recreation"
         Me.CheckBox7.UseVisualStyleBackColor = True
@@ -312,10 +313,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox9.AutoSize = True
         Me.CheckBox9.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox9.Location = New System.Drawing.Point(436, 122)
+        Me.CheckBox9.Location = New System.Drawing.Point(349, 98)
         Me.CheckBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(163, 33)
+        Me.CheckBox9.Size = New System.Drawing.Size(129, 27)
         Me.CheckBox9.TabIndex = 1
         Me.CheckBox9.Text = "Political Science"
         Me.CheckBox9.UseVisualStyleBackColor = True
@@ -324,10 +325,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox0.AutoSize = True
         Me.CheckBox0.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox0.Location = New System.Drawing.Point(2, 10)
+        Me.CheckBox0.Location = New System.Drawing.Point(2, 8)
         Me.CheckBox0.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox0.Name = "CheckBox0"
-        Me.CheckBox0.Size = New System.Drawing.Size(56, 33)
+        Me.CheckBox0.Size = New System.Drawing.Size(46, 27)
         Me.CheckBox0.TabIndex = 1
         Me.CheckBox0.Text = "All"
         Me.CheckBox0.UseVisualStyleBackColor = True
@@ -336,10 +337,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(88, 88)
+        Me.CheckBox3.Location = New System.Drawing.Point(70, 70)
         Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(264, 33)
+        Me.CheckBox3.Size = New System.Drawing.Size(209, 27)
         Me.CheckBox3.TabIndex = 1
         Me.CheckBox3.Text = "Auxiliary Sciences of History"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -348,10 +349,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(436, 10)
+        Me.CheckBox6.Location = New System.Drawing.Point(349, 8)
         Me.CheckBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(271, 33)
+        Me.CheckBox6.Size = New System.Drawing.Size(216, 27)
         Me.CheckBox6.TabIndex = 1
         Me.CheckBox6.Text = "Local History of the Americas"
         Me.CheckBox6.UseVisualStyleBackColor = True
@@ -360,10 +361,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(88, 49)
+        Me.CheckBox2.Location = New System.Drawing.Point(70, 39)
         Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(294, 33)
+        Me.CheckBox2.Size = New System.Drawing.Size(234, 27)
         Me.CheckBox2.TabIndex = 1
         Me.CheckBox2.Text = "Philosophy. Psychology. Religion"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -372,10 +373,10 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(88, 10)
+        Me.CheckBox1.Location = New System.Drawing.Point(70, 8)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(156, 33)
+        Me.CheckBox1.Size = New System.Drawing.Size(123, 27)
         Me.CheckBox1.TabIndex = 1
         Me.CheckBox1.Text = "General Works"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -384,43 +385,43 @@ Partial Class collectionsUserControl
         '
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.Font = New System.Drawing.Font("Sitka Display", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(88, 159)
+        Me.CheckBox5.Location = New System.Drawing.Point(70, 127)
         Me.CheckBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(194, 33)
+        Me.CheckBox5.Size = New System.Drawing.Size(155, 27)
         Me.CheckBox5.TabIndex = 1
         Me.CheckBox5.Text = "History of Americas"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'bookDataGridView
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Sitka Heading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.bookDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Sitka Heading", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.bookDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.bookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.bookDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TitleHeader, Me.ISBNHeader, Me.EditionHeader, Me.LanguageHeader, Me.ClassificationHeader, Me.bookId})
         Me.bookDataGridView.ContextMenuStrip = Me.ContextMenuStrip1
         Me.bookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bookDataGridView.Location = New System.Drawing.Point(0, 276)
+        Me.bookDataGridView.Location = New System.Drawing.Point(0, 221)
         Me.bookDataGridView.Margin = New System.Windows.Forms.Padding(2)
         Me.bookDataGridView.MultiSelect = False
         Me.bookDataGridView.Name = "bookDataGridView"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.bookDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Sitka Display", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.bookDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.bookDataGridView.RowHeadersWidth = 51
         Me.bookDataGridView.RowTemplate.Height = 24
-        Me.bookDataGridView.Size = New System.Drawing.Size(1478, 1464)
+        Me.bookDataGridView.Size = New System.Drawing.Size(1182, 1171)
         Me.bookDataGridView.TabIndex = 3
         '
         'TitleHeader
@@ -483,21 +484,21 @@ Partial Class collectionsUserControl
         '
         Me.btnRefresh.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_refresh_24
         Me.btnRefresh.Name = "btnRefresh"
-        Me.btnRefresh.Size = New System.Drawing.Size(220, 26)
+        Me.btnRefresh.Size = New System.Drawing.Size(186, 26)
         Me.btnRefresh.Text = "Refresh"
         '
         'btnDelete
         '
         Me.btnDelete.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_trash_24__1_
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(220, 26)
+        Me.btnDelete.Size = New System.Drawing.Size(186, 26)
         Me.btnDelete.Text = "Delete this record"
         '
         'ModeSelectToolStripMenuItem
         '
         Me.ModeSelectToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnMultiSelect, Me.btnSingleSelect})
         Me.ModeSelectToolStripMenuItem.Name = "ModeSelectToolStripMenuItem"
-        Me.ModeSelectToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
+        Me.ModeSelectToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.ModeSelectToolStripMenuItem.Text = "Mode Select"
         '
         'btnMultiSelect
@@ -517,7 +518,7 @@ Partial Class collectionsUserControl
         Me.DGVSelectionModeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnFullRowSelect, Me.btnCellSelect})
         Me.DGVSelectionModeToolStripMenuItem.Image = Global.LibraryManagementSystem.My.Resources.Resources.icons8_cursor_24
         Me.DGVSelectionModeToolStripMenuItem.Name = "DGVSelectionModeToolStripMenuItem"
-        Me.DGVSelectionModeToolStripMenuItem.Size = New System.Drawing.Size(220, 26)
+        Me.DGVSelectionModeToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.DGVSelectionModeToolStripMenuItem.Text = "DGV Selection Mode"
         '
         'btnFullRowSelect
@@ -540,14 +541,14 @@ Partial Class collectionsUserControl
         '
         'collectionsUserControl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
         Me.Controls.Add(Me.bookDataGridView)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "collectionsUserControl"
-        Me.Size = New System.Drawing.Size(1478, 1740)
+        Me.Size = New System.Drawing.Size(1182, 1392)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.searchPcBx, System.ComponentModel.ISupportInitialize).EndInit()

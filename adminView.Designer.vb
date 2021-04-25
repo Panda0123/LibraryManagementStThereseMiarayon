@@ -80,9 +80,9 @@ Partial Class adminView
         TopPanel.Controls.Add(Me.ShapeContainer2)
         TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         TopPanel.Location = New System.Drawing.Point(0, 0)
-        TopPanel.Margin = New System.Windows.Forms.Padding(6)
+        TopPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New System.Drawing.Size(1702, 190)
+        TopPanel.Size = New System.Drawing.Size(1318, 152)
         TopPanel.TabIndex = 2
         '
         'Panel3
@@ -90,18 +90,18 @@ Partial Class adminView
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1702, 6)
+        Me.Panel3.Size = New System.Drawing.Size(1318, 5)
         Me.Panel3.TabIndex = 3
         '
         'Panel2
         '
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 178)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel2.Location = New System.Drawing.Point(0, 142)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1702, 12)
+        Me.Panel2.Size = New System.Drawing.Size(1318, 10)
         Me.Panel2.TabIndex = 2
         '
         'TitleLogoSearchPanel
@@ -116,12 +116,12 @@ Partial Class adminView
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox3)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox2)
         Me.TitleLogoSearchPanel.Controls.Add(Me.PictureBox1)
-        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(442, 17)
-        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(6)
-        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(969, 264)
-        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(969, 264)
+        Me.TitleLogoSearchPanel.Location = New System.Drawing.Point(310, 14)
+        Me.TitleLogoSearchPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.TitleLogoSearchPanel.MaximumSize = New System.Drawing.Size(775, 211)
+        Me.TitleLogoSearchPanel.MinimumSize = New System.Drawing.Size(775, 211)
         Me.TitleLogoSearchPanel.Name = "TitleLogoSearchPanel"
-        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(969, 264)
+        Me.TitleLogoSearchPanel.Size = New System.Drawing.Size(775, 211)
         Me.TitleLogoSearchPanel.TabIndex = 1
         '
         'searchPcBx
@@ -130,10 +130,10 @@ Partial Class adminView
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.searchPcBx.Cursor = System.Windows.Forms.Cursors.Hand
         Me.searchPcBx.Image = Global.LibraryManagementSystem.My.Resources.Resources.magnifying_glass
-        Me.searchPcBx.Location = New System.Drawing.Point(532, 96)
-        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(5)
+        Me.searchPcBx.Location = New System.Drawing.Point(426, 77)
+        Me.searchPcBx.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.searchPcBx.Name = "searchPcBx"
-        Me.searchPcBx.Size = New System.Drawing.Size(32, 31)
+        Me.searchPcBx.Size = New System.Drawing.Size(26, 25)
         Me.searchPcBx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.searchPcBx.TabIndex = 12
         Me.searchPcBx.TabStop = False
@@ -145,10 +145,10 @@ Partial Class adminView
         Me.searchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.searchTextBox.Font = New System.Drawing.Font("Sitka Subheading", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.searchTextBox.Location = New System.Drawing.Point(69, 96)
+        Me.searchTextBox.Location = New System.Drawing.Point(52, 77)
         Me.searchTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.searchTextBox.Name = "searchTextBox"
-        Me.searchTextBox.Size = New System.Drawing.Size(456, 26)
+        Me.searchTextBox.Size = New System.Drawing.Size(365, 21)
         Me.searchTextBox.TabIndex = 8
         Me.searchTextBox.Text = "Search..."
         '
@@ -158,10 +158,10 @@ Partial Class adminView
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(48, 89)
+        Me.PictureBox9.Location = New System.Drawing.Point(38, 71)
         Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(536, 48)
+        Me.PictureBox9.Size = New System.Drawing.Size(429, 38)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 6
         Me.PictureBox9.TabStop = False
@@ -172,10 +172,10 @@ Partial Class adminView
         Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.Font = New System.Drawing.Font("Maiandra GD", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(145, 6)
+        Me.Label1.Location = New System.Drawing.Point(116, 5)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(392, 74)
+        Me.Label1.Size = New System.Drawing.Size(314, 59)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "St. Therese School of Miarayon" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Library Management System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -187,10 +187,9 @@ Partial Class adminView
         Me.advanceSearchLinkLbl.BackColor = System.Drawing.Color.Transparent
         Me.advanceSearchLinkLbl.Font = New System.Drawing.Font("Sitka Subheading", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.advanceSearchLinkLbl.LinkColor = System.Drawing.Color.FromArgb(CType(CType(119, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(117, Byte), Integer))
-        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(219, 128)
-        Me.advanceSearchLinkLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.advanceSearchLinkLbl.Location = New System.Drawing.Point(175, 102)
         Me.advanceSearchLinkLbl.Name = "advanceSearchLinkLbl"
-        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(156, 32)
+        Me.advanceSearchLinkLbl.Size = New System.Drawing.Size(125, 26)
         Me.advanceSearchLinkLbl.TabIndex = 11
         Me.advanceSearchLinkLbl.TabStop = True
         Me.advanceSearchLinkLbl.Text = "Advance Search"
@@ -198,10 +197,10 @@ Partial Class adminView
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Location = New System.Drawing.Point(500, 100)
+        Me.PictureBox3.Location = New System.Drawing.Point(400, 80)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(39, 22)
+        Me.PictureBox3.Size = New System.Drawing.Size(31, 18)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 10
         Me.PictureBox3.TabStop = False
@@ -210,10 +209,10 @@ Partial Class adminView
         '
         Me.PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Location = New System.Drawing.Point(48, 92)
+        Me.PictureBox2.Location = New System.Drawing.Point(38, 74)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(504, 44)
+        Me.PictureBox2.Size = New System.Drawing.Size(403, 35)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 9
         Me.PictureBox2.TabStop = False
@@ -222,10 +221,10 @@ Partial Class adminView
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.LibraryManagementSystem.My.Resources.Resources.St__Therese_School_of_Miarayon_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(38, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(108, 82)
+        Me.PictureBox1.Size = New System.Drawing.Size(86, 66)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
@@ -236,7 +235,7 @@ Partial Class adminView
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
         Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.btn_blk, Me.btn_white})
-        Me.ShapeContainer2.Size = New System.Drawing.Size(1702, 190)
+        Me.ShapeContainer2.Size = New System.Drawing.Size(1318, 152)
         Me.ShapeContainer2.TabIndex = 0
         Me.ShapeContainer2.TabStop = False
         '
@@ -246,7 +245,7 @@ Partial Class adminView
         Me.btn_blk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_blk.BorderColor = System.Drawing.Color.White
         Me.btn_blk.CornerRadius = 20
-        Me.btn_blk.Location = New System.Drawing.Point(1047, 7)
+        Me.btn_blk.Location = New System.Drawing.Point(663, 7)
         Me.btn_blk.Name = "btn_blk"
         Me.btn_blk.SelectionColor = System.Drawing.Color.White
         Me.btn_blk.Size = New System.Drawing.Size(70, 60)
@@ -257,7 +256,7 @@ Partial Class adminView
         Me.btn_white.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btn_white.BorderColor = System.Drawing.Color.White
         Me.btn_white.CornerRadius = 20
-        Me.btn_white.Location = New System.Drawing.Point(1045, 11)
+        Me.btn_white.Location = New System.Drawing.Point(661, 11)
         Me.btn_white.Name = "btn_white"
         Me.btn_white.SelectionColor = System.Drawing.Color.White
         Me.btn_white.Size = New System.Drawing.Size(70, 55)
@@ -268,7 +267,8 @@ Partial Class adminView
         Me.PictureBox4.ContextMenuStrip = Me.MetroContextMenu1
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Image = Global.LibraryManagementSystem.My.Resources.Resources.AdminIcon
-        Me.PictureBox4.Location = New System.Drawing.Point(56, 57)
+        Me.PictureBox4.Location = New System.Drawing.Point(66, 46)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(70, 70)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -280,20 +280,20 @@ Partial Class adminView
         Me.MetroContextMenu1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MetroContextMenu1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnSignout, Me.UpdateAccountToolStripMenuItem})
         Me.MetroContextMenu1.Name = "MetroContextMenu1"
-        Me.MetroContextMenu1.Size = New System.Drawing.Size(190, 56)
+        Me.MetroContextMenu1.Size = New System.Drawing.Size(165, 56)
         '
         'btnSignout
         '
         Me.btnSignout.Image = Global.LibraryManagementSystem.My.Resources.Resources.log_in
         Me.btnSignout.Name = "btnSignout"
-        Me.btnSignout.Size = New System.Drawing.Size(189, 26)
+        Me.btnSignout.Size = New System.Drawing.Size(164, 26)
         Me.btnSignout.Text = "Sign Out"
         '
         'UpdateAccountToolStripMenuItem
         '
         Me.UpdateAccountToolStripMenuItem.Image = Global.LibraryManagementSystem.My.Resources.Resources.server_storage
         Me.UpdateAccountToolStripMenuItem.Name = "UpdateAccountToolStripMenuItem"
-        Me.UpdateAccountToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
+        Me.UpdateAccountToolStripMenuItem.Size = New System.Drawing.Size(164, 26)
         Me.UpdateAccountToolStripMenuItem.Text = "Update Account"
         '
         'backgroundPanel
@@ -302,10 +302,10 @@ Partial Class adminView
         Me.backgroundPanel.BackColor = System.Drawing.SystemColors.Window
         Me.backgroundPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.backgroundPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.backgroundPanel.Location = New System.Drawing.Point(0, 190)
-        Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(6)
+        Me.backgroundPanel.Location = New System.Drawing.Point(0, 152)
+        Me.backgroundPanel.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.backgroundPanel.Name = "backgroundPanel"
-        Me.backgroundPanel.Size = New System.Drawing.Size(1702, 865)
+        Me.backgroundPanel.Size = New System.Drawing.Size(1318, 692)
         Me.backgroundPanel.TabIndex = 3
         '
         'SplitContainer1
@@ -314,7 +314,7 @@ Partial Class adminView
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(5)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -327,9 +327,8 @@ Partial Class adminView
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.backgroundPanel)
         Me.SplitContainer1.Panel2.Controls.Add(TopPanel)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1924, 1055)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1539, 844)
         Me.SplitContainer1.SplitterDistance = 217
-        Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 21
         '
         'LeftSidePanel
@@ -341,20 +340,20 @@ Partial Class adminView
         Me.LeftSidePanel.Controls.Add(Me.bokkAddBtn)
         Me.LeftSidePanel.Controls.Add(Me.viewBookBtn)
         Me.LeftSidePanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LeftSidePanel.Location = New System.Drawing.Point(0, 190)
+        Me.LeftSidePanel.Location = New System.Drawing.Point(0, 152)
         Me.LeftSidePanel.Margin = New System.Windows.Forms.Padding(0)
         Me.LeftSidePanel.Name = "LeftSidePanel"
-        Me.LeftSidePanel.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.LeftSidePanel.Size = New System.Drawing.Size(217, 865)
+        Me.LeftSidePanel.Padding = New System.Windows.Forms.Padding(8, 0, 0, 0)
+        Me.LeftSidePanel.Size = New System.Drawing.Size(217, 692)
         Me.LeftSidePanel.TabIndex = 1
         '
         'highlightPanel
         '
         Me.highlightPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(99, Byte), Integer))
         Me.highlightPanel.Location = New System.Drawing.Point(0, 0)
-        Me.highlightPanel.Margin = New System.Windows.Forms.Padding(5)
+        Me.highlightPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.highlightPanel.Name = "highlightPanel"
-        Me.highlightPanel.Size = New System.Drawing.Size(10, 91)
+        Me.highlightPanel.Size = New System.Drawing.Size(8, 73)
         Me.highlightPanel.TabIndex = 0
         '
         'recordsBtn
@@ -366,10 +365,10 @@ Partial Class adminView
         Me.recordsBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.recordsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.contract
         Me.recordsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.recordsBtn.Location = New System.Drawing.Point(10, 273)
+        Me.recordsBtn.Location = New System.Drawing.Point(8, 219)
         Me.recordsBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.recordsBtn.Name = "recordsBtn"
-        Me.recordsBtn.Size = New System.Drawing.Size(207, 91)
+        Me.recordsBtn.Size = New System.Drawing.Size(209, 73)
         Me.recordsBtn.TabIndex = 12
         Me.recordsBtn.Text = " Records"
         Me.recordsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -384,10 +383,10 @@ Partial Class adminView
         Me.collectionsBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.collectionsBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.server_storage
         Me.collectionsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.collectionsBtn.Location = New System.Drawing.Point(10, 182)
+        Me.collectionsBtn.Location = New System.Drawing.Point(8, 146)
         Me.collectionsBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.collectionsBtn.Name = "collectionsBtn"
-        Me.collectionsBtn.Size = New System.Drawing.Size(207, 91)
+        Me.collectionsBtn.Size = New System.Drawing.Size(209, 73)
         Me.collectionsBtn.TabIndex = 13
         Me.collectionsBtn.Text = " Collections"
         Me.collectionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -403,10 +402,10 @@ Partial Class adminView
         Me.bokkAddBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bokkAddBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.add
         Me.bokkAddBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.bokkAddBtn.Location = New System.Drawing.Point(10, 91)
+        Me.bokkAddBtn.Location = New System.Drawing.Point(8, 73)
         Me.bokkAddBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.bokkAddBtn.Name = "bokkAddBtn"
-        Me.bokkAddBtn.Size = New System.Drawing.Size(207, 91)
+        Me.bokkAddBtn.Size = New System.Drawing.Size(209, 73)
         Me.bokkAddBtn.TabIndex = 9
         Me.bokkAddBtn.Text = " Add"
         Me.bokkAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -422,10 +421,10 @@ Partial Class adminView
         Me.viewBookBtn.Font = New System.Drawing.Font("Century Gothic", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.viewBookBtn.Image = Global.LibraryManagementSystem.My.Resources.Resources.Data_View_Details_icon
         Me.viewBookBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.viewBookBtn.Location = New System.Drawing.Point(10, 0)
+        Me.viewBookBtn.Location = New System.Drawing.Point(8, 0)
         Me.viewBookBtn.Margin = New System.Windows.Forms.Padding(0)
         Me.viewBookBtn.Name = "viewBookBtn"
-        Me.viewBookBtn.Size = New System.Drawing.Size(207, 91)
+        Me.viewBookBtn.Size = New System.Drawing.Size(209, 73)
         Me.viewBookBtn.TabIndex = 8
         Me.viewBookBtn.Text = " View Book"
         Me.viewBookBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -438,22 +437,22 @@ Partial Class adminView
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(5)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(217, 190)
+        Me.Panel1.Size = New System.Drawing.Size(217, 152)
         Me.Panel1.TabIndex = 2
         '
         'adminView
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.ClientSize = New System.Drawing.Size(1539, 844)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(6)
-        Me.MinimumSize = New System.Drawing.Size(1918, 1028)
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.MinimumSize = New System.Drawing.Size(1538, 830)
         Me.Name = "adminView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administrator View"

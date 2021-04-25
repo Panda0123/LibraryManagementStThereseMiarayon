@@ -223,7 +223,6 @@ Public Class Main
         Else
             prevLnkLbl.Visible = True
         End If
-        Debug.WriteLine(paginationDTO.pageNum.ToString + " " + numPage.ToString)
         PageNumLabel.Text = "Page " & (1 + paginationDTO.pageNum).ToString 'set the text to the Page Number
     End Sub
 

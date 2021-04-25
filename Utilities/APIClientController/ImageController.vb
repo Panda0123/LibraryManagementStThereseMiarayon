@@ -2,7 +2,7 @@
 Imports System.Net.Http
 
 Module ImageController
-    Private URL As String = HttpRequestController.URL + "/images"
+    Private URL As String = HttpRequestMethods.URL + "/images"
 
     Public Function uploadImage(imgFlNm As String, id As String) As String
         Dim newURL = URL + "/admin/upload/?file=" + id  ' set the filename
@@ -28,13 +28,13 @@ Module ImageController
 
     Public Function getImage(fName As String) As Image
         Dim newURL = URL + "/all/getImage/" + fName
-        Dim img = Image.FromStream(HttpRequestController.HttpRequestGetStream(newURL))
+        Dim img = Image.FromStream(HttpRequestMethods.HttpRequestGetStream(newURL))
         Return img
     End Function
 
     Public Sub removeImage(fName As String)
         Dim newURL = URL + "/admin/" + fName
-        HttpRequestController.HttpRequestDelete(newURL, Authorization.authToken)
+        HttpRequestMethods.HttpRequestDelete(newURL, Authorization.authToken)
     End Sub
 
 End Module

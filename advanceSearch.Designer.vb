@@ -415,9 +415,6 @@ Partial Class advanceSearch
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Movable = False
         Me.Name = "advanceSearch"
         Me.Padding = New System.Windows.Forms.Padding(16, 60, 16, 16)
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
